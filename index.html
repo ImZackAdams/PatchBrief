@@ -7,6 +7,19 @@
       name="description"
       content="PatchBrief turns public vulnerability advisories into source-linked weekly briefs for small IT teams, consultants, and MSPs."
     />
+    <meta name="theme-color" content="#17212b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PatchBrief | Source-linked weekly advisory briefs" />
+    <meta
+      property="og:description"
+      content="Weekly advisory briefs for small IT teams and MSPs that need source-linked, review-before-send reporting."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PatchBrief | Source-linked weekly advisory briefs" />
+    <meta
+      name="twitter:description"
+      content="Turn public vulnerability advisory noise into credible weekly briefs for small IT teams and MSPs."
+    />
     <title>PatchBrief | Source-linked weekly advisory briefs</title>
     <style>
       :root {
@@ -44,6 +57,7 @@
 
       body {
         margin: 0;
+        min-height: 100vh;
         background: var(--page);
         color: var(--ink);
         font-family:
@@ -55,6 +69,11 @@
 
       a {
         color: inherit;
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--teal);
+        outline-offset: 3px;
       }
 
       .wrap {
@@ -137,7 +156,6 @@
       nav a:focus-visible {
         background: rgba(255, 255, 255, 0.08);
         color: #ffffff;
-        outline: none;
       }
 
       h1,
@@ -244,7 +262,6 @@
       .button:hover,
       .button:focus-visible {
         transform: translateY(-1px);
-        outline: none;
       }
 
       .button.primary {
@@ -433,6 +450,7 @@
         text-align: center;
         font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 0.84rem;
+        overflow-wrap: anywhere;
       }
 
       .section {
@@ -636,6 +654,16 @@
         font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 0.9rem;
         line-height: 1.62;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+          transition-delay: 0ms !important;
+        }
       }
 
       .boundary {
