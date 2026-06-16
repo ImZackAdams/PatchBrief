@@ -444,6 +444,11 @@
         background: var(--paper);
       }
 
+      .section.compact {
+        background: #eef3f1;
+        padding: 2.4rem 0;
+      }
+
       .section-head {
         max-width: 760px;
         margin-bottom: 1.45rem;
@@ -457,6 +462,7 @@
       }
 
       .section-head p,
+      .answer p,
       .panel p,
       .step p,
       .audience p,
@@ -466,6 +472,7 @@
       }
 
       .two-col,
+      .answer-grid,
       .workflow-grid,
       .audience-grid,
       .roadmap-grid,
@@ -477,6 +484,10 @@
 
       .two-col {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      }
+
+      .answer-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
       }
 
       .workflow-grid {
@@ -497,6 +508,7 @@
       }
 
       .panel,
+      .answer,
       .step,
       .audience,
       .roadmap,
@@ -506,6 +518,41 @@
         border-radius: var(--radius);
         background: var(--paper);
         padding: 1rem;
+      }
+
+      .answer {
+        min-height: 8.8rem;
+      }
+
+      .answer strong {
+        display: block;
+        margin-bottom: 0.35rem;
+        color: var(--ink);
+      }
+
+      .answer p {
+        margin: 0;
+        font-size: 0.93rem;
+      }
+
+      .answer:nth-child(1) {
+        border-top: 4px solid var(--teal);
+      }
+
+      .answer:nth-child(2) {
+        border-top: 4px solid var(--blue);
+      }
+
+      .answer:nth-child(3) {
+        border-top: 4px solid var(--amber);
+      }
+
+      .answer:nth-child(4) {
+        border-top: 4px solid var(--red);
+      }
+
+      .answer:nth-child(5) {
+        border-top: 4px solid var(--navy-2);
       }
 
       .panel.accent {
@@ -667,6 +714,7 @@
           grid-template-columns: 1fr;
         }
 
+        .answer-grid,
         .workflow-grid,
         .audience-grid,
         .boundary-grid {
@@ -711,6 +759,7 @@
 
         .hero-metrics,
         .summary-table,
+        .answer-grid,
         .workflow-grid,
         .audience-grid,
         .boundary-grid,
@@ -762,6 +811,7 @@
           <span>PatchBrief</span>
         </a>
         <nav>
+          <a href="#answers">Answers</a>
           <a href="#why">Why</a>
           <a href="#workflow">Workflow</a>
           <a href="#sample">Sample</a>
@@ -863,6 +913,37 @@
           <span class="source-pill">Microsoft</span>
           <span class="source-pill">GitHub</span>
           <span class="source-pill">Vendor feeds</span>
+        </div>
+      </section>
+
+      <section class="section compact" id="answers">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">What the brief answers</p>
+            <h2>A weekly report should make the next review obvious.</h2>
+          </div>
+          <div class="answer-grid">
+            <div class="answer">
+              <strong>What changed?</strong>
+              <p>New public advisories and exploited-vulnerability updates from the last cycle.</p>
+            </div>
+            <div class="answer">
+              <strong>Why do we care?</strong>
+              <p>Matches against products, vendors, technologies, and client stacks on your watchlist.</p>
+            </div>
+            <div class="answer">
+              <strong>What should we review?</strong>
+              <p>A short priority list with suggested checks and affected-version notes.</p>
+            </div>
+            <div class="answer">
+              <strong>What supports it?</strong>
+              <p>Source links to vendor advisories, CISA KEV, GitHub advisories, or other public records.</p>
+            </div>
+            <div class="answer">
+              <strong>What can we send?</strong>
+              <p>A readable brief for a client, manager, internal team, or recurring service package.</p>
+            </div>
+          </div>
         </div>
       </section>
 
