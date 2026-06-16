@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="PatchBrief creates weekly, source-linked vulnerability advisory briefs for small IT teams, consultants, and MSPs."
+    />
+    <title>PatchBrief | Weekly advisory briefs for small IT teams</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #f6f7f8;
+        --surface: #ffffff;
+        --surface-muted: #eef3f4;
+        --ink: #18222d;
+        --muted: #526172;
+        --soft: #728092;
+        --line: #d8e0e6;
+        --line-strong: #b9c5ce;
+        --accent: #0f766e;
+        --accent-dark: #0b4f4a;
+        --accent-soft: #dcefed;
+        --amber: #966c16;
+        --amber-soft: #f5ead0;
+        --danger-soft: #f3e4e1;
+        --danger: #8f3d32;
+        --code: #111a22;
+        --code-muted: #94a3b8;
+        --max: 1120px;
+        --radius: 8px;
+        --shadow: 0 18px 45px rgba(30, 43, 56, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:hover {
+        color: var(--accent-dark);
+      }
+
+      .wrap {
+        width: min(calc(100% - 32px), var(--max));
+        margin: 0 auto;
+      }
+
+      .skip {
+        position: absolute;
+        left: -9999px;
+        top: 1rem;
+      }
+
+      .skip:focus {
+        left: 1rem;
+        z-index: 30;
+        padding: 0.7rem 0.95rem;
+        border: 2px solid var(--accent);
+        border-radius: var(--radius);
+        background: var(--surface);
+        color: var(--ink);
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid var(--line);
+        background: rgba(246, 247, 248, 0.92);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.9rem 0;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--ink);
+        font-weight: 760;
+        text-decoration: none;
+      }
+
+      .mark {
+        display: grid;
+        width: 2.2rem;
+        height: 2.2rem;
+        place-items: center;
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius);
+        background: var(--surface);
+        color: var(--accent-dark);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.85rem;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.4rem;
+      }
+
+      nav a {
+        padding: 0.45rem 0.65rem;
+        border-radius: var(--radius);
+        color: var(--muted);
+        font-size: 0.94rem;
+        text-decoration: none;
+      }
+
+      nav a:hover,
+      nav a:focus-visible {
+        background: var(--surface-muted);
+        color: var(--ink);
+        outline: none;
+      }
+
+      main {
+        overflow: hidden;
+      }
+
+      .hero {
+        padding: 4rem 0 2.8rem;
+        border-bottom: 1px solid var(--line);
+        background:
+          linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 72%),
+          var(--page);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .eyebrow,
+      .tag,
+      .source-tag {
+        display: inline-flex;
+        align-items: center;
+        border-radius: var(--radius);
+        font-weight: 650;
+      }
+
+      .eyebrow {
+        width: fit-content;
+        margin: 0 0 1rem;
+        padding: 0.35rem 0.55rem;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--accent-dark);
+        font-size: 0.92rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 0.75rem;
+        font-size: 4.25rem;
+        line-height: 0.98;
+      }
+
+      .headline {
+        max-width: 13ch;
+        margin: 0 0 1rem;
+        color: #253241;
+        font-size: 2.1rem;
+        line-height: 1.13;
+        font-weight: 760;
+      }
+
+      .lede {
+        max-width: 66ch;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .cta-row,
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .cta-row {
+        margin: 1.45rem 0 0.85rem;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 2.8rem;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        padding: 0.72rem 0.95rem;
+        font-weight: 720;
+        text-decoration: none;
+        transition:
+          background-color 150ms ease,
+          border-color 150ms ease,
+          color 150ms ease,
+          transform 150ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-1px);
+        outline: none;
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: #ffffff;
+      }
+
+      .button.primary:hover,
+      .button.primary:focus-visible {
+        background: var(--accent-dark);
+        color: #ffffff;
+      }
+
+      .button.secondary {
+        border-color: var(--line-strong);
+        background: var(--surface);
+        color: var(--ink);
+      }
+
+      .button.secondary:hover,
+      .button.secondary:focus-visible {
+        border-color: var(--accent);
+        color: var(--accent-dark);
+      }
+
+      .note {
+        margin: 0;
+        color: var(--soft);
+        font-size: 0.95rem;
+      }
+
+      .hero-facts {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.65rem;
+        margin-top: 1.7rem;
+      }
+
+      .fact {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        padding: 0.85rem;
+      }
+
+      .fact strong {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-size: 1.3rem;
+      }
+
+      .fact span {
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .brief-artifact {
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .artifact-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        border-bottom: 1px solid var(--line);
+        background: #f9fafb;
+        padding: 0.8rem 0.95rem;
+      }
+
+      .artifact-title {
+        margin: 0;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.86rem;
+        font-weight: 700;
+      }
+
+      .artifact-status {
+        border: 1px solid #c9dedb;
+        border-radius: var(--radius);
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+        padding: 0.22rem 0.45rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .artifact-body {
+        padding: 1rem;
+      }
+
+      .artifact-body h2 {
+        margin-bottom: 0.4rem;
+        font-size: 1.05rem;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.55rem;
+        margin: 0.9rem 0 1rem;
+      }
+
+      .summary-grid div {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 0.65rem;
+      }
+
+      .summary-grid strong {
+        display: block;
+        font-size: 1.35rem;
+      }
+
+      .summary-grid span {
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .review-list {
+        display: grid;
+        gap: 0.65rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .review-item {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 0.75rem;
+      }
+
+      .review-item strong {
+        display: block;
+      }
+
+      .review-item p {
+        margin: 0.25rem 0 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .source-tag {
+        margin-top: 0.65rem;
+        padding: 0.25rem 0.45rem;
+        background: var(--surface-muted);
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.78rem;
+      }
+
+      .band {
+        padding: 3.1rem 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .band.alt {
+        background: var(--surface);
+      }
+
+      .section-head {
+        max-width: 780px;
+        margin-bottom: 1.4rem;
+      }
+
+      .kicker {
+        margin-bottom: 0.35rem;
+        color: var(--accent-dark);
+        font-size: 0.9rem;
+        font-weight: 760;
+      }
+
+      h2 {
+        margin-bottom: 0.7rem;
+        font-size: 2rem;
+        line-height: 1.16;
+      }
+
+      h3 {
+        margin-bottom: 0.45rem;
+        font-size: 1.05rem;
+      }
+
+      .section-head p,
+      .text-grid p,
+      .card p,
+      .roadmap p,
+      .callout p {
+        color: var(--muted);
+      }
+
+      .text-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 1.2rem;
+      }
+
+      .list-grid,
+      .audience-grid,
+      .roadmap-grid,
+      .not-grid {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .list-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .audience-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .roadmap-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .not-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card,
+      .roadmap,
+      .callout,
+      .not-item {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        padding: 1rem;
+      }
+
+      .card.highlight {
+        border-color: #c4dcd9;
+        background: var(--accent-soft);
+      }
+
+      .card.warn {
+        border-color: #e6d1a5;
+        background: var(--amber-soft);
+      }
+
+      .tag {
+        margin-bottom: 0.65rem;
+        padding: 0.25rem 0.45rem;
+        border: 1px solid var(--line-strong);
+        background: #f9fafb;
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.78rem;
+      }
+
+      ul {
+        margin: 0.75rem 0 0;
+        padding-left: 1.15rem;
+      }
+
+      li {
+        color: var(--muted);
+      }
+
+      li + li {
+        margin-top: 0.32rem;
+      }
+
+      .code-brief {
+        border: 1px solid #263442;
+        border-radius: var(--radius);
+        background: var(--code);
+        color: #e7edf4;
+        overflow: hidden;
+      }
+
+      .code-brief header {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        border: 0;
+        border-bottom: 1px solid #263442;
+        background: #16212b;
+        padding: 0.75rem 1rem;
+      }
+
+      .code-brief header span {
+        color: var(--code-muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.82rem;
+      }
+
+      pre {
+        margin: 0;
+        padding: 1rem;
+        overflow: auto;
+        color: #d8e2ee;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.9rem;
+        line-height: 1.65;
+      }
+
+      .example-note {
+        margin: 0.9rem 0 0;
+        color: var(--muted);
+      }
+
+      .not-item {
+        display: flex;
+        min-height: 4.25rem;
+        align-items: center;
+        border-color: #ead1ce;
+        background: var(--danger-soft);
+        color: var(--danger);
+        font-weight: 720;
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .callout {
+        border-color: #c4dcd9;
+        background:
+          linear-gradient(180deg, rgba(220, 239, 237, 0.7), rgba(255, 255, 255, 0.96)),
+          var(--surface);
+      }
+
+      .contact-actions {
+        margin-top: 1.2rem;
+      }
+
+      .contact-card strong {
+        display: block;
+      }
+
+      .contact-card a {
+        color: var(--accent-dark);
+        font-weight: 720;
+      }
+
+      .contact-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      footer {
+        padding: 2rem 0 2.5rem;
+        background: #202a34;
+        color: #dce4ec;
+      }
+
+      .footer-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      footer a {
+        color: #ffffff;
+      }
+
+      .fineprint {
+        max-width: 78ch;
+        margin: 0;
+        color: #b8c5d0;
+        font-size: 0.93rem;
+      }
+
+      @media (max-width: 960px) {
+        .hero-grid,
+        .text-grid,
+        .contact-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .list-grid,
+        .audience-grid,
+        .roadmap-grid,
+        .not-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .hero {
+          padding-top: 3rem;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .wrap {
+          width: min(calc(100% - 24px), var(--max));
+        }
+
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        nav {
+          justify-content: flex-start;
+        }
+
+        h1 {
+          font-size: 3.05rem;
+        }
+
+        .headline {
+          max-width: 100%;
+          font-size: 1.55rem;
+        }
+
+        .hero-facts,
+        .summary-grid,
+        .list-grid,
+        .audience-grid,
+        .roadmap-grid,
+        .not-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .artifact-top {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 0.55rem;
+        }
+
+        pre {
+          font-size: 0.82rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+
+    <header>
+      <div class="wrap nav" aria-label="Primary navigation">
+        <a class="brand" href="#top">
+          <span class="mark" aria-hidden="true">PB</span>
+          <span>PatchBrief</span>
+        </a>
+        <nav>
+          <a href="#problem">Problem</a>
+          <a href="#how">How it works</a>
+          <a href="#example">Example</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero" id="top">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="eyebrow">Early validation stage. Built for feedback, not hype.</p>
+            <h1>PatchBrief</h1>
+            <p class="headline">Weekly vulnerability advisory briefs for small IT teams and MSPs.</p>
+            <p class="lede">
+              PatchBrief matches public advisories from sources like CISA KEV, Microsoft, GitHub,
+              and vendor feeds against the products you care about, then turns the matches into
+              short, source-linked reports.
+            </p>
+            <div class="cta-row" aria-label="Primary actions">
+              <a
+                class="button primary"
+                href="mailto:hello@patchbrief.org?subject=Request%20a%20sample%20PatchBrief"
+              >
+                Request a sample brief
+              </a>
+              <a
+                class="button secondary"
+                href="mailto:hello@patchbrief.org?subject=PatchBrief%20founder%20question"
+              >
+                Email the founder
+              </a>
+            </div>
+            <p class="note">
+              Not a scanner. Not a SIEM. A lightweight reporting layer for public advisory changes.
+            </p>
+            <div class="hero-facts" aria-label="PatchBrief focus areas">
+              <div class="fact">
+                <strong>Watchlist</strong>
+                <span>Products, vendors, and client stacks you care about.</span>
+              </div>
+              <div class="fact">
+                <strong>Sources</strong>
+                <span>CISA KEV, MSRC, GitHub, and vendor advisories.</span>
+              </div>
+              <div class="fact">
+                <strong>Output</strong>
+                <span>Markdown, HTML email, PDF, CSV, or JSON.</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="brief-artifact" aria-label="Example PatchBrief report preview">
+            <div class="artifact-top">
+              <p class="artifact-title">weekly-patchbrief-example.md</p>
+              <span class="artifact-status">review before send</span>
+            </div>
+            <div class="artifact-body">
+              <h2>Weekly PatchBrief - Example Client</h2>
+              <p class="note">Public advisory changes matched against a Windows-heavy watchlist.</p>
+              <div class="summary-grid" aria-label="Example brief summary">
+                <div>
+                  <strong>38</strong>
+                  <span>advisories reviewed</span>
+                </div>
+                <div>
+                  <strong>3</strong>
+                  <span>watchlist matches</span>
+                </div>
+                <div>
+                  <strong>1</strong>
+                  <span>known exploited match</span>
+                </div>
+              </div>
+              <ul class="review-list">
+                <li class="review-item">
+                  <strong>Microsoft Windows Server</strong>
+                  <p>Verify patch status and review affected versions.</p>
+                  <span class="source-tag">Source: CISA KEV</span>
+                </li>
+                <li class="review-item">
+                  <strong>Google Chrome</strong>
+                  <p>Confirm auto-update coverage for managed endpoints.</p>
+                  <span class="source-tag">Source: vendor advisory</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="band" id="problem">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Problem</p>
+            <h2>Security advisories move fast. Small teams still have to explain what matters.</h2>
+            <p>
+              MSPs, consultants, and internal IT teams already juggle CISA KEV, Microsoft updates,
+              vendor bulletins, GitHub advisories, scanner output, email threads, spreadsheets, and
+              client questions.
+            </p>
+          </div>
+          <div class="text-grid">
+            <div class="card">
+              <h3>The hard part is not finding more alerts.</h3>
+              <p>
+                The hard part is turning advisory noise into something relevant, readable, and
+                useful enough to review or communicate.
+              </p>
+            </div>
+            <div class="card highlight">
+              <h3>PatchBrief focuses on the public advisory layer.</h3>
+              <p>
+                Scanners can tell you what is vulnerable in your environment. PatchBrief focuses on
+                what changed this week, what matches your watchlist, and what should be reviewed
+                before someone sends a report.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band alt" id="how">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">How it works</p>
+            <h2>A simple advisory-to-brief workflow.</h2>
+            <p>
+              PatchBrief is designed to complement your scanner, RMM, patching platform, and
+              official advisories. It gives the communication layer a repeatable shape.
+            </p>
+          </div>
+          <div class="list-grid">
+            <div class="card">
+              <span class="tag">1. Track public sources</span>
+              <h3>Monitor advisory feeds</h3>
+              <ul>
+                <li>CISA KEV</li>
+                <li>Microsoft advisories</li>
+                <li>GitHub advisories</li>
+                <li>Vendor security bulletins</li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="tag">2. Match your watchlist</span>
+              <h3>Filter for relevance</h3>
+              <ul>
+                <li>Products</li>
+                <li>Vendors</li>
+                <li>Technologies</li>
+                <li>Client stacks</li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="tag">3. Generate a brief</span>
+              <h3>Review and send</h3>
+              <ul>
+                <li>Plain-English context</li>
+                <li>Source links</li>
+                <li>Suggested review actions</li>
+                <li>Markdown, HTML, PDF, CSV, or JSON</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="example">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Example brief</p>
+            <h2>The goal is not to produce more alerts.</h2>
+            <p>
+              The goal is a short weekly brief someone can actually read, verify, and forward to a
+              client, manager, or internal team.
+            </p>
+          </div>
+          <article class="code-brief" aria-label="Sample report markdown">
+            <header>
+              <span>Markdown preview</span>
+              <span>Example data</span>
+            </header>
+            <pre><code># Weekly PatchBrief - Example Client
+
+## Summary
+
+New public advisories reviewed: 38
+Watchlist matches: 3
+Known exploited matches: 1
+Recommended review actions: 2
+
+## Immediate Review
+
+### Microsoft Windows Server
+Reason: Matches client watchlist
+Source: [CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+Suggested action: Verify patch status and review affected versions.
+
+### Google Chrome
+Reason: Browser watchlist match
+Source: [Chrome Releases](https://chromereleases.googleblog.com/)
+Suggested action: Confirm auto-update coverage.
+
+### GitHub package advisory
+Reason: Development dependency match
+Source: [GitHub Advisory Database](https://github.com/advisories)
+Suggested action: Review impacted projects and dependency versions.
+
+## No Relevant Changes
+
+- Fortinet
+- Veeam
+- VMware</code></pre>
+          </article>
+          <p class="example-note">
+            Sample data is fictional. The format is meant to be reviewed before sending, not treated
+            as automatic remediation guidance.
+          </p>
+        </div>
+      </section>
+
+      <section class="band alt" id="audience">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Who it is for</p>
+            <h2>Built for people who need advisory monitoring to become a repeatable report.</h2>
+          </div>
+          <div class="audience-grid">
+            <div class="card">
+              <h3>MSPs</h3>
+              <p>Create repeatable client-facing advisory summaries without rewriting public alerts.</p>
+            </div>
+            <div class="card">
+              <h3>Solo admins</h3>
+              <p>Stay aware of relevant advisories without living in five dashboards and a spreadsheet.</p>
+            </div>
+            <div class="card">
+              <h3>Small IT teams</h3>
+              <p>Give managers and stakeholders a short summary of what changed and what needs review.</p>
+            </div>
+            <div class="card">
+              <h3>Consultants</h3>
+              <p>Package advisory monitoring into a simple recurring service for clients.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="not">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">What PatchBrief is not</p>
+            <h2>A clear boundary is part of the product.</h2>
+            <p>
+              PatchBrief is a reporting and communication layer. Use it alongside your scanner, RMM,
+              patching system, and official vendor sources.
+            </p>
+          </div>
+          <div class="not-grid" role="list" aria-label="PatchBrief limitations">
+            <div class="not-item" role="listitem">Not a vulnerability scanner</div>
+            <div class="not-item" role="listitem">Not a patch management system</div>
+            <div class="not-item" role="listitem">Not a SIEM</div>
+            <div class="not-item" role="listitem">Not a replacement for official advisories</div>
+            <div class="not-item" role="listitem">Not a guarantee of complete coverage</div>
+            <div class="not-item" role="listitem">Not a fear-based security product</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band alt" id="roadmap">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Roadmap</p>
+            <h2>Planned scope, stated plainly.</h2>
+            <p>
+              PatchBrief is still in validation. The first version should prove whether small teams
+              want weekly advisory briefs before expanding into a larger workflow.
+            </p>
+          </div>
+          <div class="roadmap-grid">
+            <div class="roadmap">
+              <span class="tag">MVP</span>
+              <h3>Core validation build</h3>
+              <ul>
+                <li>CISA KEV ingestion</li>
+                <li>Product and vendor watchlist</li>
+                <li>Markdown and HTML reports</li>
+                <li>Source links</li>
+                <li>Manual review workflow</li>
+              </ul>
+            </div>
+            <div class="roadmap">
+              <span class="tag">Later</span>
+              <h3>Possible expansion if users ask for it</h3>
+              <ul>
+                <li>Microsoft, GitHub, and vendor feed support</li>
+                <li>Client-specific briefs</li>
+                <li>White-label MSP reports</li>
+                <li>Scheduled email delivery</li>
+                <li>CSV and JSON exports</li>
+                <li>Teams or Slack summaries</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="contact">
+        <div class="wrap contact-layout">
+          <div class="callout">
+            <p class="kicker">Early access</p>
+            <h2>Request a sample brief or share how you handle advisory noise today.</h2>
+            <p>
+              If you manage IT or security for clients or a small team, I would like to hear what
+              your current weekly advisory workflow looks like, where it breaks down, and what a
+              useful brief would need to include.
+            </p>
+            <div class="contact-actions" aria-label="Contact actions">
+              <a
+                class="button primary"
+                href="mailto:hello@patchbrief.org?subject=Request%20a%20sample%20PatchBrief"
+              >
+                Request a sample brief
+              </a>
+              <a
+                class="button secondary"
+                href="mailto:hello@patchbrief.org?subject=Join%20PatchBrief%20early%20access"
+              >
+                Join early access
+              </a>
+              <a
+                class="button secondary"
+                href="mailto:hello@patchbrief.org?subject=PatchBrief%20discovery%20conversation"
+              >
+                Book a short conversation
+              </a>
+            </div>
+          </div>
+          <aside class="card contact-card" aria-label="Contact details">
+            <h3>Contact</h3>
+            <p>
+              <strong>Email</strong>
+              <a href="mailto:hello@patchbrief.org">hello@patchbrief.org</a>
+            </p>
+            <p>
+              <strong>X / Twitter</strong>
+              <span>@patchbrief</span>
+            </p>
+            <p>
+              <strong>Best fit right now</strong>
+              MSPs, solo consultants, Windows-heavy admins, and small internal IT teams.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-top">
+          <strong>PatchBrief</strong>
+          <a href="mailto:hello@patchbrief.org">hello@patchbrief.org</a>
+        </div>
+        <p class="fineprint">
+          PatchBrief is a decision-support and reporting tool. Always verify findings against
+          official vendor advisories, your scanner, and your environment.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
