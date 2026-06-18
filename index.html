@@ -14,12 +14,15 @@
       property="og:description"
       content="Get a short weekly brief that matches public vulnerability advisories to the products and vendors your team tracks."
     />
+    <meta property="og:image" content="assets/patchbrief-hero.png" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="PatchBrief | Weekly vulnerability briefs" />
     <meta
       name="twitter:description"
       content="Source-linked weekly vulnerability advisory briefs for small IT teams, consultants, and MSPs."
     />
+    <meta name="twitter:image" content="assets/patchbrief-hero.png" />
+    <link rel="preload" href="assets/patchbrief-hero.webp" as="image" type="image/webp" />
     <title>PatchBrief | Weekly vulnerability briefs</title>
     <style>
       :root {
@@ -200,10 +203,17 @@
 
       .hero {
         background:
-          linear-gradient(115deg, rgba(21, 33, 31, 0.98), rgba(21, 33, 31, 0.86)),
+          linear-gradient(
+            100deg,
+            rgba(21, 33, 31, 0.98) 0%,
+            rgba(21, 33, 31, 0.94) 43%,
+            rgba(21, 33, 31, 0.62) 68%,
+            rgba(21, 33, 31, 0.28) 100%
+          ),
+          url("assets/patchbrief-hero.webp") center right / cover no-repeat,
           var(--charcoal);
         color: #e8efec;
-        padding: 4.35rem 0 3.2rem;
+        padding: 4.7rem 0 3.45rem;
       }
 
       .hero-copy {
@@ -637,7 +647,8 @@
         }
 
         .hero {
-          padding: 3rem 0 2.4rem;
+          background-position: 58% center;
+          padding: 3.2rem 0 2.5rem;
         }
 
         .button {
