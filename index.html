@@ -294,6 +294,12 @@
         background: #82ead8;
       }
 
+      .button:disabled {
+        cursor: progress;
+        opacity: 0.76;
+        transform: none;
+      }
+
       .button.secondary {
         border-color: rgba(255, 255, 255, 0.28);
         color: #ffffff;
@@ -635,6 +641,35 @@
         margin: 0;
         color: var(--muted);
         font-size: 0.86rem;
+      }
+
+      .form-status {
+        display: none;
+        border-radius: var(--radius);
+        padding: 0.76rem 0.85rem;
+        font-size: 0.92rem;
+        font-weight: 760;
+      }
+
+      .form-status.active {
+        display: block;
+        border: 1px solid #cbd5cf;
+        background: #f8faf8;
+        color: var(--soft-ink);
+      }
+
+      .form-status.success {
+        display: block;
+        border: 1px solid #b9d7d1;
+        background: var(--mint-soft);
+        color: #0b504a;
+      }
+
+      .form-status.error {
+        display: block;
+        border: 1px solid #e0bbb4;
+        background: #f8e9e6;
+        color: var(--red);
       }
 
       .signup .button.secondary {
@@ -1023,6 +1058,7 @@
               </div>
 
               <button class="button primary" type="submit">Get the first sample brief</button>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
               <p class="form-note">
                 The form sends to <a href="mailto:patchbrief@gmail.com">patchbrief@gmail.com</a>.
               </p>
@@ -1040,6 +1076,82 @@
         Get the first sample brief
       </a>
     </div>
+
+    <script>
+      (() => {
+        const form = document.querySelector("#signup-form");
+
+        if (!form || !window.fetch || !window.FormData) {
+          return;
+        }
+
+        const status = form.querySelector("[data-form-status]");
+        const submit = form.querySelector('button[type="submit"]');
+        const defaultSubmitText = submit ? submit.textContent : "";
+
+        const setStatus = (state, message) => {
+          if (!status) {
+            return;
+          }
+
+          status.className = `form-status ${state}`;
+          status.textContent = message;
+        };
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          if (!form.reportValidity()) {
+            return;
+          }
+
+          const endpoint = form.action.replace("https://formsubmit.co/", "https://formsubmit.co/ajax/");
+          const data = new FormData(form);
+
+          if (submit) {
+            submit.disabled = true;
+            submit.textContent = "Sending...";
+          }
+
+          setStatus("active", "Sending your signup...");
+
+          try {
+            const response = await fetch(endpoint, {
+              method: "POST",
+              body: data,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (!response.ok) {
+              throw new Error("Signup request failed");
+            }
+
+            form.reset();
+            form.dataset.submitted = "true";
+            setStatus(
+              "success",
+              "You're on the list. Check your inbox for a confirmation or sample brief follow-up."
+            );
+
+            if (submit) {
+              submit.textContent = "You're on the list";
+            }
+          } catch (error) {
+            setStatus(
+              "error",
+              "The form could not submit. Please email patchbrief@gmail.com and we'll add you manually."
+            );
+
+            if (submit) {
+              submit.disabled = false;
+              submit.textContent = defaultSubmitText;
+            }
+          }
+        });
+      })();
+    </script>
 
     <footer>
       <div class="wrap footer-row">
