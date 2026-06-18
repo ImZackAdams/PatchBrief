@@ -219,7 +219,8 @@
       }
 
       .cta-row,
-      .feedback-actions {
+      .feedback-actions,
+      .signal-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 0.75rem;
@@ -326,6 +327,42 @@
         margin: 0;
         color: var(--muted);
         font-size: 0.94rem;
+      }
+
+      .signal-box {
+        border-top: 1px solid var(--line);
+        background: #f8faf8;
+        padding: 1rem;
+      }
+
+      .signal-box strong {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .signal-actions {
+        gap: 0.5rem;
+      }
+
+      .signal-link {
+        display: inline-flex;
+        min-height: 2.35rem;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--paper);
+        color: var(--ink);
+        padding: 0.5rem 0.65rem;
+        font-size: 0.9rem;
+        font-weight: 760;
+        text-decoration: none;
+      }
+
+      .signal-link:hover,
+      .signal-link:focus-visible {
+        border-color: var(--teal);
+        color: var(--teal);
       }
 
       .strip {
@@ -561,6 +598,10 @@
         margin-top: 1rem;
       }
 
+      .feedback-panel .signal-link {
+        margin-top: 0.45rem;
+      }
+
       .feedback .button.secondary {
         background: transparent;
       }
@@ -633,6 +674,10 @@
           width: 100%;
         }
 
+        .signal-link {
+          width: 100%;
+        }
+
         .sample-top {
           align-items: flex-start;
           flex-direction: column;
@@ -682,7 +727,7 @@
                 Request a sample
               </a>
             </div>
-            <p class="note">No platform pitch yet. The goal is to learn if the weekly brief is useful.</p>
+            <p class="note">A blunt yes or no is useful. The goal is to learn before building more.</p>
           </div>
 
           <aside class="question-card" aria-label="PatchBrief validation questions">
@@ -704,6 +749,29 @@
                 <p>MSPs, consultants, and small IT teams may pay for a cleaner weekly workflow.</p>
               </li>
             </ul>
+            <div class="signal-box" aria-label="Fast feedback choices">
+              <strong>Fastest useful reply</strong>
+              <div class="signal-actions">
+                <a
+                  class="signal-link"
+                  href="mailto:hello@patchbrief.org?subject=Yes%20to%20PatchBrief&body=Yes%2C%20a%20weekly%20source-linked%20advisory%20brief%20would%20help.%0A%0ACurrent%20workflow%3A%0AMust-have%20source%20or%20format%3A"
+                >
+                  Yes, send sample
+                </a>
+                <a
+                  class="signal-link"
+                  href="mailto:hello@patchbrief.org?subject=Maybe%20on%20PatchBrief&body=Maybe.%20I%20would%20need%20to%20see%3A%0A%0ACurrent%20workflow%3A%0ABiggest%20concern%3A"
+                >
+                  Maybe, explain more
+                </a>
+                <a
+                  class="signal-link"
+                  href="mailto:hello@patchbrief.org?subject=No%20to%20PatchBrief&body=No%2C%20this%20would%20not%20help%20because%3A%0A%0AWhat%20we%20use%20instead%3A"
+                >
+                  No, not useful
+                </a>
+              </div>
+            </div>
           </aside>
         </div>
       </section>
@@ -847,7 +915,7 @@
             <h2>Tell me if this would help your team.</h2>
             <p>
               A useful reply can be short: what you do today, whether this would save time, and what
-              would make the idea a clear yes or a clear no.
+              would make the idea a clear yes or a clear no. Negative feedback is welcome.
             </p>
             <div class="feedback-actions" aria-label="Feedback actions">
               <a
@@ -874,6 +942,12 @@
               <strong>Best early conversations</strong><br />
               MSP owners, solo consultants, Windows admins, and small internal IT teams.
             </p>
+            <a
+              class="signal-link"
+              href="mailto:hello@patchbrief.org?subject=No%20to%20PatchBrief&body=No%2C%20I%20would%20not%20use%20PatchBrief%20because%3A%0A%0AWhat%20I%20use%20instead%3A"
+            >
+              Send a quick no
+            </a>
           </aside>
         </div>
       </section>
