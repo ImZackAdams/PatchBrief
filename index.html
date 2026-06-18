@@ -795,7 +795,8 @@
           <a href="#fit">Who it helps</a>
           <a
             class="nav-cta"
-            href="mailto:patchbrief@gmail.com?subject=Join%20PatchBrief%20early%20access%20-%20header&body=I%27d%20like%20to%20join%20PatchBrief%20early%20access.%0A%0ASignup%20source%3A%20header%0ATeam%20or%20company%3A%0AProducts%20or%20vendors%20to%20watch%3A"
+            href="#signup-form"
+            data-signup-source="header"
           >
             Join early access
           </a>
@@ -816,7 +817,8 @@
             <div class="cta-row" aria-label="Primary actions">
               <a
                 class="button primary"
-                href="mailto:patchbrief@gmail.com?subject=Join%20PatchBrief%20early%20access%20-%20hero&body=I%27d%20like%20to%20join%20PatchBrief%20early%20access.%0A%0ASignup%20source%3A%20hero%0ATeam%20or%20company%3A%0AProducts%20or%20vendors%20to%20watch%3A%0APreferred%20brief%20format%3A"
+                href="#signup-form"
+                data-signup-source="hero"
               >
                 Get the first sample brief
               </a>
@@ -930,7 +932,8 @@
             <div class="sample-cta">
               <a
                 class="button primary"
-                href="mailto:patchbrief@gmail.com?subject=Join%20PatchBrief%20early%20access%20-%20sample&body=I%27d%20like%20to%20join%20PatchBrief%20early%20access.%0A%0ASignup%20source%3A%20sample%0ATeam%20or%20company%3A%0AProducts%20or%20vendors%20to%20watch%3A"
+                href="#signup-form"
+                data-signup-source="sample"
               >
                 Get a sample like this
               </a>
@@ -1071,7 +1074,8 @@
     <div class="mobile-signup" aria-label="Mobile signup action">
       <a
         class="button primary"
-        href="mailto:patchbrief@gmail.com?subject=Join%20PatchBrief%20early%20access%20-%20mobile&body=I%27d%20like%20to%20join%20PatchBrief%20early%20access.%0A%0ASignup%20source%3A%20mobile%20sticky%0ATeam%20or%20company%3A%0AProducts%20or%20vendors%20to%20watch%3A"
+        href="#signup-form"
+        data-signup-source="mobile sticky"
       >
         Get the first sample brief
       </a>
@@ -1087,6 +1091,8 @@
 
         const status = form.querySelector("[data-form-status]");
         const submit = form.querySelector('button[type="submit"]');
+        const emailField = form.querySelector("#signup-email");
+        const sourceField = form.querySelector('input[name="signup_source"]');
         const defaultSubmitText = submit ? submit.textContent : "";
 
         const setStatus = (state, message) => {
@@ -1097,6 +1103,20 @@
           status.className = `form-status ${state}`;
           status.textContent = message;
         };
+
+        document.querySelectorAll("[data-signup-source]").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (sourceField && link.dataset.signupSource) {
+              sourceField.value = link.dataset.signupSource;
+            }
+
+            window.setTimeout(() => {
+              if (emailField && !form.dataset.submitted) {
+                emailField.focus({ preventScroll: true });
+              }
+            }, 350);
+          });
+        });
 
         form.addEventListener("submit", async (event) => {
           event.preventDefault();
