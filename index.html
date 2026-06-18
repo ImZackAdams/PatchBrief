@@ -1199,6 +1199,7 @@
               <input type="hidden" name="_subject" value="New PatchBrief early access signup" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://www.patchbrief.org/?signup=sent#signup-form" />
               <input type="hidden" name="signup_source" value="bottom form" />
               <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" />
 
@@ -1268,7 +1269,7 @@
       (() => {
         const form = document.querySelector("#signup-form");
 
-        if (!form || !window.fetch || !window.FormData) {
+        if (!form) {
           return;
         }
 
@@ -1279,7 +1280,6 @@
         const watchlistField = form.querySelector("#signup-watchlist");
         const sourceField = form.querySelector('input[name="signup_source"]');
         const fallbackLinks = form.querySelectorAll("[data-fallback-email]");
-        const defaultSubmitText = submit ? submit.textContent : "";
 
         const buildFallbackHref = () => {
           const source = sourceField && sourceField.value ? sourceField.value : "signup form";
@@ -1316,6 +1316,15 @@
         form.addEventListener("input", refreshFallbackLinks);
         form.addEventListener("change", refreshFallbackLinks);
 
+        if (new URLSearchParams(window.location.search).get("signup") === "sent") {
+          form.dataset.submitted = "true";
+          setStatus("success", "Signup sent. Check your inbox for a confirmation or sample brief follow up.");
+
+          if (submit) {
+            submit.textContent = "Signup sent";
+          }
+        }
+
         document.querySelectorAll("[data-signup-source]").forEach((link) => {
           link.addEventListener("click", () => {
             if (sourceField && link.dataset.signupSource) {
@@ -1331,17 +1340,10 @@
           });
         });
 
-        form.addEventListener("submit", async (event) => {
-          event.preventDefault();
-
+        form.addEventListener("submit", () => {
           if (!form.reportValidity()) {
             return;
           }
-
-          const endpoint = form.action.replace("https://formsubmit.co/", "https://formsubmit.co/ajax/");
-          const data = new FormData(form);
-          const controller = window.AbortController ? new AbortController() : null;
-          const timeout = controller ? window.setTimeout(() => controller.abort(), 10000) : null;
 
           if (submit) {
             submit.disabled = true;
@@ -1349,56 +1351,6 @@
           }
 
           setStatus("active", "Sending your signup...");
-
-          try {
-            const response = await fetch(endpoint, {
-              method: "POST",
-              body: data,
-              signal: controller ? controller.signal : undefined,
-              headers: {
-                Accept: "application/json",
-              },
-            });
-
-            if (timeout) {
-              window.clearTimeout(timeout);
-            }
-
-            if (!response.ok) {
-              throw new Error("Signup request failed");
-            }
-
-            form.reset();
-            form.dataset.submitted = "true";
-            setStatus(
-              "success",
-              "You're on the list. Check your inbox for a confirmation or sample brief follow up."
-            );
-
-            if (submit) {
-              submit.textContent = "You're on the list";
-            }
-          } catch (error) {
-            if (timeout) {
-              window.clearTimeout(timeout);
-            }
-            refreshFallbackLinks();
-            fallbackLinks.forEach((link) => {
-              if (link.classList.contains("email-fallback")) {
-                link.classList.add("visible");
-              }
-            });
-
-            setStatus(
-              "error",
-              "The form could not submit automatically. Use the email button below and we'll add you manually."
-            );
-
-            if (submit) {
-              submit.disabled = false;
-              submit.textContent = defaultSubmitText;
-            }
-          }
         });
       })();
     </script>
