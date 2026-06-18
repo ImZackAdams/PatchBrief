@@ -597,6 +597,10 @@
         color: #ffffff;
       }
 
+      .mobile-signup {
+        display: none;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
@@ -653,6 +657,23 @@
 
         .button {
           width: 100%;
+        }
+
+        body {
+          padding-bottom: 4.8rem;
+        }
+
+        .mobile-signup {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 35;
+          display: block;
+          border-top: 1px solid rgba(255, 255, 255, 0.16);
+          background: rgba(21, 33, 31, 0.97);
+          padding: 0.75rem 12px;
+          backdrop-filter: blur(12px);
         }
 
         .sample-top {
@@ -924,6 +945,15 @@
         </div>
       </section>
     </main>
+
+    <div class="mobile-signup" aria-label="Mobile signup action">
+      <a
+        class="button primary"
+        href="mailto:patchbrief@gmail.com?subject=Join%20PatchBrief%20early%20access%20-%20mobile&body=I%27d%20like%20to%20join%20PatchBrief%20early%20access.%0A%0ASignup%20source%3A%20mobile%20sticky%0ATeam%20or%20company%3A%0AProducts%20or%20vendors%20to%20watch%3A"
+      >
+        Get the first sample brief
+      </a>
+    </div>
 
     <footer>
       <div class="wrap footer-row">
