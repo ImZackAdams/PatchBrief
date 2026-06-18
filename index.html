@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="PatchBrief turns public vulnerability advisory overload into source-backed weekly review lists for small IT teams, consultants, and MSPs."
+      content="PatchBrief turns public vulnerability advisory overload into source backed weekly review lists for small IT teams, consultants, and MSPs."
     />
     <meta name="theme-color" content="#15211f" />
     <meta property="og:type" content="website" />
@@ -19,7 +19,7 @@
     <meta name="twitter:title" content="PatchBrief | Weekly vulnerability briefs" />
     <meta
       name="twitter:description"
-      content="Source-backed weekly vulnerability review lists for small IT teams, consultants, and MSPs."
+      content="Source backed weekly vulnerability review lists for small IT teams, consultants, and MSPs."
     />
     <meta name="twitter:image" content="assets/patchbrief-hero.png" />
     <link rel="preload" href="assets/patchbrief-hero.webp" as="image" type="image/webp" />
@@ -516,6 +516,64 @@
         font-size: 0.94rem;
       }
 
+      .brief-meta {
+        display: grid;
+        gap: 0.45rem;
+        margin: 0.75rem 0;
+      }
+
+      .brief-meta div {
+        display: grid;
+        grid-template-columns: minmax(120px, 0.35fr) minmax(0, 1fr);
+        gap: 0.55rem;
+      }
+
+      .brief-meta dt {
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .brief-meta dd {
+        margin: 0;
+        color: var(--soft-ink);
+        font-size: 0.92rem;
+      }
+
+      .brief-checks {
+        margin-top: 0.65rem;
+      }
+
+      .brief-checks li {
+        color: var(--soft-ink);
+        font-size: 0.9rem;
+      }
+
+      .source-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+      }
+
+      .source-links a {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #f8faf8;
+        color: var(--teal);
+        padding: 0.34rem 0.48rem;
+        font-size: 0.84rem;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .source-links a:hover,
+      .source-links a:focus-visible {
+        border-color: var(--teal);
+        background: var(--mint-soft);
+      }
+
       .pill {
         background: var(--gold-soft);
         color: var(--gold);
@@ -819,7 +877,7 @@
             <p class="eyebrow">Weekly advisory triage for lean IT teams</p>
             <h1>Know which vulnerability advisories actually matter this week.</h1>
             <p class="lede">
-              PatchBrief turns public vulnerability advisory overload into one source-backed review
+              PatchBrief turns public vulnerability advisory overload into one source backed review
               list for the products, vendors, and client stacks you already support.
             </p>
             <div class="cta-row" aria-label="Primary actions">
@@ -847,7 +905,7 @@
         <div class="wrap bar-grid">
           <div class="bar-item">
             <strong>Stop rereading the same feeds</strong>
-            <span>PatchBrief filters public advisory noise into a short watchlist-matched brief.</span>
+            <span>PatchBrief filters public advisory noise into a short watchlist matched brief.</span>
           </div>
           <div class="bar-item">
             <strong>See the reason for every match</strong>
@@ -855,7 +913,7 @@
           </div>
           <div class="bar-item">
             <strong>Share a credible weekly update</strong>
-            <span>Send clients or managers a plain-English summary backed by public sources.</span>
+            <span>Send clients or managers a plain English summary backed by public sources.</span>
           </div>
         </div>
       </section>
@@ -899,7 +957,7 @@
 
           <article class="sample" aria-label="Example PatchBrief weekly brief">
             <div class="sample-top">
-              <span>weekly-patchbrief-example</span>
+              <span>weekly PatchBrief example</span>
               <span>fictional sample data</span>
             </div>
             <div class="sample-body">
@@ -921,19 +979,87 @@
               </div>
               <ul class="sample-list">
                 <li>
-                  <strong>Microsoft Windows Server</strong>
-                  <p>Known exploited match. Confirm affected versions and patch status.</p>
-                  <span class="pill">Source: CISA KEV</span>
+                  <strong>Palo Alto GlobalProtect</strong>
+                  <p>Critical match for internet exposed firewall services. Treat as immediate review.</p>
+                  <span class="pill">CVE 2024 3400</span>
+                  <dl class="brief-meta">
+                    <div>
+                      <dt>Affected services</dt>
+                      <dd>GlobalProtect portal and gateway on PAN OS 10.2, 11.0, and 11.1.</dd>
+                    </div>
+                    <div>
+                      <dt>Why it matters</dt>
+                      <dd>Unauthenticated command injection can allow code execution with root privileges on the firewall.</dd>
+                    </div>
+                    <div>
+                      <dt>Review next</dt>
+                      <dd>Confirm GlobalProtect exposure, check fixed PAN OS versions, and review logs for suspicious session values.</dd>
+                    </div>
+                  </dl>
+                  <ul class="brief-checks">
+                    <li>Verify whether GlobalProtect portal or gateway is enabled.</li>
+                    <li>Confirm current PAN OS version against the fixed release list.</li>
+                    <li>Apply vulnerability protection to the GlobalProtect interface where available.</li>
+                  </ul>
+                  <div class="source-links">
+                    <a href="https://security.paloaltonetworks.com/CVE-2024-3400">Palo Alto advisory</a>
+                    <a href="https://unit42.paloaltonetworks.com/cve-2024-3400/">Unit 42 brief</a>
+                  </div>
                 </li>
                 <li>
-                  <strong>Google Chrome</strong>
-                  <p>Browser watchlist match. Check managed endpoint update coverage.</p>
-                  <span class="pill">Source: vendor advisory</span>
+                  <strong>Google Chrome desktop</strong>
+                  <p>Browser watchlist match with known exploitation noted by Google.</p>
+                  <span class="pill">CVE 2024 7971</span>
+                  <dl class="brief-meta">
+                    <div>
+                      <dt>Affected services</dt>
+                      <dd>Chrome desktop browser on Windows, macOS, and Linux. Review managed endpoint update coverage.</dd>
+                    </div>
+                    <div>
+                      <dt>Why it matters</dt>
+                      <dd>Type confusion in V8. Google noted exploitation in the wild for this CVE.</dd>
+                    </div>
+                    <div>
+                      <dt>Review next</dt>
+                      <dd>Confirm Chrome stable channel version, managed browser policy status, and auto update completion.</dd>
+                    </div>
+                  </dl>
+                  <ul class="brief-checks">
+                    <li>Check browser fleet versions against Chrome 128.0.6613.84 or later.</li>
+                    <li>Verify update policy for laptops that are often off network.</li>
+                    <li>Flag unmanaged browsers for manual follow up.</li>
+                  </ul>
+                  <div class="source-links">
+                    <a href="https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop_21.html">Chrome release note</a>
+                  </div>
                 </li>
                 <li>
-                  <strong>GitHub package advisory</strong>
-                  <p>Dependency watchlist match. Review impacted projects and package versions.</p>
-                  <span class="pill">Source: GitHub advisory</span>
+                  <strong>Microsoft Message Queuing</strong>
+                  <p>Windows server watchlist match for environments that still expose MSMQ.</p>
+                  <span class="pill">CVE 2024 30080</span>
+                  <dl class="brief-meta">
+                    <div>
+                      <dt>Affected services</dt>
+                      <dd>Microsoft Message Queuing service on Windows hosts where MSMQ is installed or enabled.</dd>
+                    </div>
+                    <div>
+                      <dt>Why it matters</dt>
+                      <dd>NVD lists this as a remote code execution vulnerability with a critical Microsoft score.</dd>
+                    </div>
+                    <div>
+                      <dt>Review next</dt>
+                      <dd>Find servers with MSMQ enabled, confirm patch status, and verify whether TCP port 1801 is reachable.</dd>
+                    </div>
+                  </dl>
+                  <ul class="brief-checks">
+                    <li>Inventory hosts with Message Queuing installed.</li>
+                    <li>Prioritize internet reachable or cross network queue services.</li>
+                    <li>Confirm June security updates are installed before closing the item.</li>
+                  </ul>
+                  <div class="source-links">
+                    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-30080">NVD entry</a>
+                    <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30080">MSRC page</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -965,7 +1091,7 @@
                 updates, management notes, weekly patch review, or recurring security work.
               </p>
               <ul>
-                <li>Client-facing advisory summaries</li>
+                <li>Client facing advisory summaries</li>
                 <li>Internal weekly patch review</li>
                 <li>Product and vendor watchlists</li>
               </ul>
@@ -999,11 +1125,11 @@
               <p>Map public advisories to the vendors, products, technologies, and clients you support.</p>
             </div>
             <div class="card">
-              <h3>Review-ready summaries</h3>
+              <h3>Ready for review summaries</h3>
               <p>See what changed, why it matters, and what to verify before making noise about it.</p>
             </div>
             <div class="card">
-              <h3>Source-linked output</h3>
+              <h3>Linked to sources output</h3>
               <p>Use Markdown or HTML output that stays connected to the public records behind it.</p>
             </div>
           </div>
@@ -1204,7 +1330,7 @@
             form.dataset.submitted = "true";
             setStatus(
               "success",
-              "You're on the list. Check your inbox for a confirmation or sample brief follow-up."
+              "You're on the list. Check your inbox for a confirmation or sample brief follow up."
             );
 
             if (submit) {
