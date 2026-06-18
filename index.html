@@ -72,7 +72,11 @@
         color: inherit;
       }
 
-      a:focus-visible {
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
         outline: 2px solid var(--mint);
         outline-offset: 3px;
       }
@@ -264,6 +268,8 @@
         border: 1px solid transparent;
         border-radius: var(--radius);
         padding: 0.78rem 1rem;
+        cursor: pointer;
+        font: inherit;
         font-weight: 820;
         text-decoration: none;
         transition:
@@ -574,6 +580,61 @@
 
       .signup-actions {
         margin-top: 1rem;
+      }
+
+      .signup-form {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .field {
+        display: grid;
+        gap: 0.35rem;
+      }
+
+      .field label {
+        color: var(--soft-ink);
+        font-size: 0.9rem;
+        font-weight: 800;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        border: 1px solid #cbd5cf;
+        border-radius: var(--radius);
+        background: #fbfcfa;
+        color: var(--ink);
+        font: inherit;
+        padding: 0.78rem 0.8rem;
+      }
+
+      .field textarea {
+        min-height: 6.5rem;
+        resize: vertical;
+      }
+
+      .field input::placeholder,
+      .field textarea::placeholder {
+        color: #87938e;
+      }
+
+      .field-hint {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .honeypot {
+        position: absolute;
+        left: -9999px;
+      }
+
+      .form-note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.86rem;
       }
 
       .signup .button.secondary {
@@ -909,38 +970,63 @@
             <p class="kicker">Early access</p>
             <h2>Join the founding list and get the first sample brief.</h2>
             <p>
-              Send the products or vendors you want watched. PatchBrief will reply with a sample
-              brief format and early access updates.
+              Leave an email and PatchBrief will send the first sample brief when early access
+              opens. Add watchlist details now if you already know what you want tracked.
             </p>
-            <div class="signup-actions" aria-label="Signup actions">
-              <a
-                class="button primary"
-                href="mailto:patchbrief@gmail.com?subject=Join%20PatchBrief%20early%20access%20-%20bottom&body=I%27d%20like%20to%20join%20PatchBrief%20early%20access.%0A%0ASignup%20source%3A%20bottom%0ATeam%20or%20company%3A%0AProducts%20or%20vendors%20to%20watch%3A%0APreferred%20brief%20format%3A"
-              >
-                Join early access
-              </a>
-              <a
-                class="button secondary"
-                href="mailto:patchbrief@gmail.com?subject=Request%20a%20sample%20PatchBrief%20-%20bottom&body=Please%20send%20me%20a%20sample%20PatchBrief.%0A%0ASignup%20source%3A%20bottom%20sample%0ATeam%20or%20company%3A"
-              >
-                Request sample by email
-              </a>
-            </div>
+            <p class="note">One required field. No account. No sales call required.</p>
           </div>
-          <aside class="signup-panel" aria-label="Contact details">
-            <h3>Contact</h3>
-            <p>
-              <strong>Email</strong><br />
-              <a href="mailto:patchbrief@gmail.com">patchbrief@gmail.com</a>
-            </p>
-            <p>
-              <strong>Best early users</strong><br />
-              MSP owners, solo consultants, Windows admins, and small internal IT teams.
-            </p>
-            <p>
-              <strong>Helpful signup detail</strong><br />
-              Include 3-10 products or vendors you want watched first.
-            </p>
+          <aside class="signup-panel" aria-label="Early access signup form">
+            <form
+              id="signup-form"
+              class="signup-form"
+              action="https://formsubmit.co/patchbrief@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New PatchBrief early access signup" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="signup_source" value="bottom form" />
+              <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+
+              <div class="field">
+                <label for="signup-email">Work email</label>
+                <input
+                  id="signup-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@company.com"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="signup-role">What best describes you?</label>
+                <select id="signup-role" name="role">
+                  <option value="">Choose one</option>
+                  <option>MSP owner or operator</option>
+                  <option>Solo consultant</option>
+                  <option>Internal IT team</option>
+                  <option>Security team</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="signup-watchlist">Products or vendors to watch</label>
+                <textarea
+                  id="signup-watchlist"
+                  name="watchlist"
+                  placeholder="Example: Microsoft, Chrome, GitHub, Veeam, Fortinet"
+                ></textarea>
+                <p class="field-hint">Optional, but it helps shape the sample brief.</p>
+              </div>
+
+              <button class="button primary" type="submit">Get the first sample brief</button>
+              <p class="form-note">
+                The form sends to <a href="mailto:patchbrief@gmail.com">patchbrief@gmail.com</a>.
+              </p>
+            </form>
           </aside>
         </div>
       </section>
