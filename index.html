@@ -219,7 +219,7 @@
       }
 
       .cta-row,
-      .feedback-actions {
+      .signup-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 0.75rem;
@@ -278,7 +278,7 @@
         font-size: 0.94rem;
       }
 
-      .question-card {
+      .product-card {
         border: 1px solid rgba(255, 255, 255, 0.16);
         border-radius: var(--radius);
         background: #ffffff;
@@ -287,22 +287,22 @@
         overflow: hidden;
       }
 
-      .question-top {
+      .product-top {
         border-bottom: 1px solid var(--line);
         background: #f8faf8;
         padding: 0.85rem 1rem;
       }
 
-      .question-top strong {
+      .product-top strong {
         display: block;
       }
 
-      .question-top span {
+      .product-top span {
         color: var(--muted);
         font-size: 0.92rem;
       }
 
-      .question-list {
+      .product-list {
         display: grid;
         gap: 0.75rem;
         margin: 0;
@@ -310,19 +310,19 @@
         list-style: none;
       }
 
-      .question-list li {
+      .product-list li {
         border: 1px solid var(--line);
         border-left: 4px solid var(--teal);
         border-radius: var(--radius);
         padding: 0.8rem;
       }
 
-      .question-list strong {
+      .product-list strong {
         display: block;
         margin-bottom: 0.25rem;
       }
 
-      .question-list p {
+      .product-list p {
         margin: 0;
         color: var(--muted);
         font-size: 0.94rem;
@@ -378,7 +378,7 @@
 
       .section-head p,
       .card p,
-      .feedback-panel p {
+      .signup-panel p {
         color: var(--muted);
       }
 
@@ -398,7 +398,7 @@
 
       .card,
       .sample,
-      .feedback-panel {
+      .signup-panel {
         border: 1px solid var(--line);
         border-radius: var(--radius);
         background: var(--paper);
@@ -524,44 +524,44 @@
         font-size: 0.78rem;
       }
 
-      .feedback {
+      .signup {
         background: var(--dark);
         color: #ffffff;
       }
 
-      .feedback-grid {
+      .signup-grid {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
         gap: 1rem;
         align-items: start;
       }
 
-      .feedback h2 {
+      .signup h2 {
         color: #ffffff;
       }
 
-      .feedback .kicker {
+      .signup .kicker {
         color: #9fe8dc;
       }
 
-      .feedback p {
+      .signup p {
         color: #c4ced7;
       }
 
-      .feedback-panel {
+      .signup-panel {
         background: #ffffff;
         color: var(--ink);
       }
 
-      .feedback-panel p {
+      .signup-panel p {
         margin-bottom: 0.7rem;
       }
 
-      .feedback-actions {
+      .signup-actions {
         margin-top: 1rem;
       }
 
-      .feedback .button.secondary {
+      .signup .button.secondary {
         background: transparent;
       }
 
@@ -596,7 +596,7 @@
         .hero-grid,
         .sample-body,
         .fit-grid,
-        .feedback-grid {
+        .signup-grid {
           grid-template-columns: 1fr;
         }
 
@@ -686,12 +686,12 @@
             <p class="note">A concise review list, plain-language context, and links back to the source.</p>
           </div>
 
-          <aside class="question-card" aria-label="How PatchBrief works">
-            <div class="question-top">
+          <aside class="product-card" aria-label="How PatchBrief works">
+            <div class="product-top">
               <strong>What PatchBrief sends each week</strong>
               <span>A brief your team can review, verify, and forward.</span>
             </div>
-            <ul class="question-list">
+            <ul class="product-list">
               <li>
                 <strong>Relevant advisory changes</strong>
                 <p>Public advisories filtered against the products, vendors, and clients you track.</p>
@@ -841,8 +841,8 @@
         </div>
       </section>
 
-      <section class="section feedback" id="signup">
-        <div class="wrap feedback-grid">
+      <section class="section signup" id="signup">
+        <div class="wrap signup-grid">
           <div>
             <p class="kicker">Early access</p>
             <h2>Sign up for the first PatchBrief briefs.</h2>
@@ -850,7 +850,7 @@
               Join the early list to receive a sample brief, share the products you want watched,
               and get updates as the service comes online.
             </p>
-            <div class="feedback-actions" aria-label="Signup actions">
+            <div class="signup-actions" aria-label="Signup actions">
               <a
                 class="button primary"
                 href="mailto:hello@patchbrief.org?subject=Join%20PatchBrief%20early%20access&body=I%27d%20like%20to%20join%20PatchBrief%20early%20access.%0A%0ATeam%20or%20company%3A%0AProducts%20or%20vendors%20to%20watch%3A%0APreferred%20brief%20format%3A"
@@ -865,7 +865,7 @@
               </a>
             </div>
           </div>
-          <aside class="feedback-panel" aria-label="Contact details">
+          <aside class="signup-panel" aria-label="Contact details">
             <h3>Contact</h3>
             <p>
               <strong>Email</strong><br />
