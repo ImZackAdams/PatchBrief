@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="PatchBrief public feed: short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity." />
+    <meta name="theme-color" content="#15211f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PatchBrief public feed | Security briefs for operators" />
+    <meta property="og:description" content="Short source-backed briefs on public vulnerability advisories, exploited vulnerabilities, vendor updates, and threat activity." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PatchBrief public feed | Security briefs for operators" />
+    <meta name="twitter:description" content="Short source-backed briefs on public vulnerability advisories, exploited vulnerabilities, vendor updates, and threat activity." />
+    <link rel="alternate" type="application/rss+xml" title="PatchBrief RSS" href="/rss.xml" />
+    <title>Public feed | PatchBrief</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #fbfbf8;
+        --paper: #ffffff;
+        --ink: #111816;
+        --soft-ink: #2e3936;
+        --muted: #66706d;
+        --line: #e2e5df;
+        --line-strong: #cdd3cc;
+        --accent: #0f766e;
+        --accent-soft: #edf7f4;
+        --red: #913f32;
+        --red-soft: #fdf0ee;
+        --amber: #8a5c0f;
+        --amber-soft: #fdf5e6;
+        --max: 860px;
+        --radius: 6px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      a { color: inherit; }
+      a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { margin-bottom: 0.75rem; font-size: clamp(1.9rem, 5vw, 2.8rem); font-weight: 760; line-height: 1.05; }
+      h2 { margin-bottom: 0.35rem; font-size: 1rem; font-weight: 760; }
+      p { margin-bottom: 0.8rem; }
+      .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+      header { border-bottom: 1px solid var(--line); background: rgba(251,251,248,0.96); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 10; }
+      .nav { display: flex; min-height: 4rem; align-items: center; justify-content: space-between; gap: 1rem; }
+      .brand { display: inline-flex; align-items: center; gap: 0.65rem; font-weight: 760; text-decoration: none; color: var(--ink); }
+      .mark { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.78rem; font-weight: 800; }
+      nav { display: flex; align-items: center; gap: 0.2rem; }
+      nav a { border-radius: var(--radius); color: var(--muted); padding: 0.45rem 0.6rem; font-size: 0.92rem; text-decoration: none; }
+      nav a:hover, nav a:focus-visible { color: var(--ink); }
+      nav a.active { color: var(--ink); font-weight: 760; }
+      .nav-cta { border: 1px solid var(--line-strong); background: var(--paper); color: var(--ink) !important; font-weight: 760; }
+      .hero { border-bottom: 1px solid var(--line); background: var(--paper); padding: 3.5rem 0 2.5rem; }
+      .eyebrow { margin-bottom: 0.65rem; color: var(--accent); font-size: 0.82rem; font-weight: 760; letter-spacing: 0.03em; text-transform: uppercase; }
+      .hero-lede { max-width: 60ch; color: var(--soft-ink); font-size: clamp(1rem, 2vw, 1.15rem); margin-bottom: 0; }
+      .sample-notice { margin: 1.5rem 0 0; padding: 0.7rem 0.9rem; border: 1px solid var(--line-strong); border-left: 3px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); color: var(--accent); font-size: 0.88rem; }
+      .filter-bar { border-bottom: 1px solid var(--line); background: var(--page); padding: 0.85rem 0; }
+      .filter-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+      .chip { display: inline-flex; align-items: center; border: 1px solid var(--line-strong); border-radius: 99px; background: var(--paper); color: var(--soft-ink); padding: 0.3rem 0.75rem; font-size: 0.82rem; font-weight: 720; cursor: default; user-select: none; }
+      .chip.active { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+      .feed-section { padding: 2rem 0 3rem; }
+      .feed-list { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+      .feed-item { background: var(--paper); padding: 1.25rem; }
+      .feed-item:hover { background: #fafaf8; }
+      .feed-item-top { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.6rem; }
+      .feed-item-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
+      .feed-date { color: var(--muted); font-size: 0.82rem; }
+      .type-badge { display: inline-flex; align-items: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--page); color: var(--soft-ink); padding: 0.15rem 0.45rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.73rem; font-weight: 700; }
+      .signal-badge { display: inline-flex; align-items: center; border-radius: var(--radius); padding: 0.15rem 0.45rem; font-size: 0.73rem; font-weight: 760; }
+      .signal-badge.exploited { background: var(--accent-soft); color: var(--accent); }
+      .signal-badge.critical { background: var(--red-soft); color: var(--red); }
+      .signal-badge.patch { background: var(--amber-soft); color: var(--amber); }
+      .signal-badge.threat { background: #f0eefb; color: #5a3f9e; }
+      .cve-tag { color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.73rem; }
+      .feed-item-title { margin: 0 0 0.4rem; font-size: 1rem; font-weight: 760; line-height: 1.3; }
+      .feed-item-title a { color: var(--ink); text-decoration: none; }
+      .feed-item-title a:hover { color: var(--accent); }
+      .feed-vendor { margin-bottom: 0.5rem; color: var(--muted); font-size: 0.86rem; }
+      .feed-summary { color: var(--soft-ink); font-size: 0.93rem; margin-bottom: 0.65rem; }
+      .feed-check { border-top: 1px solid var(--line); padding-top: 0.6rem; margin-top: 0.6rem; }
+      .feed-check-label { color: var(--muted); font-size: 0.76rem; font-weight: 760; letter-spacing: 0.03em; text-transform: uppercase; margin-bottom: 0.2rem; }
+      .feed-check p { color: var(--soft-ink); font-size: 0.88rem; margin-bottom: 0.5rem; }
+      .feed-sources { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+      .feed-sources a { color: var(--accent); font-size: 0.83rem; font-weight: 760; text-decoration: none; border-bottom: 1px solid currentColor; }
+      .feed-sources a:hover { color: var(--ink); }
+      .feed-read-link { display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 0.65rem; color: var(--accent); font-size: 0.88rem; font-weight: 760; text-decoration: none; border-bottom: 1px solid transparent; }
+      .feed-read-link:hover { border-bottom-color: currentColor; }
+      .newsletter-section { border-top: 1px solid var(--line); background: var(--paper); padding: 2.5rem 0; }
+      .newsletter-inner h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 760; margin-bottom: 0.5rem; }
+      .newsletter-inner p { color: var(--soft-ink); max-width: 55ch; margin-bottom: 1rem; }
+      .newsletter-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+      .newsletter-row input[type="email"] { flex: 1; min-width: 200px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--page); color: var(--ink); font: inherit; padding: 0.72rem 0.8rem; }
+      .newsletter-row input[type="email"]::placeholder { color: #89928f; }
+      .newsletter-row input[type="email"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+      .button { display: inline-flex; min-height: 2.8rem; align-items: center; justify-content: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); padding: 0.72rem 0.95rem; cursor: pointer; color: var(--ink); font: inherit; font-weight: 760; text-decoration: none; white-space: nowrap; }
+      .button:hover, .button:focus-visible { border-color: var(--ink); }
+      .button.primary { border-color: var(--ink); background: var(--ink); color: #ffffff; }
+      .button.primary:hover, .button.primary:focus-visible { background: var(--accent); border-color: var(--accent); }
+      footer { border-top: 1px solid var(--line); padding: 1.5rem 0; }
+      .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--muted); font-size: 0.9rem; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+      .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+      .footer-links a:hover { color: var(--ink); }
+      footer strong { color: var(--ink); }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+      @media (max-width: 720px) {
+        .wrap { width: min(calc(100% - 24px), var(--max)); }
+        .nav { min-height: auto; align-items: flex-start; flex-direction: column; padding: 0.85rem 0; }
+        nav { width: 100%; overflow-x: auto; padding-bottom: 0.15rem; }
+        nav a { white-space: nowrap; }
+        .hero { padding: 2.5rem 0 2rem; }
+        .button { width: 100%; }
+        .newsletter-row { flex-direction: column; }
+        .newsletter-row input[type="email"], .newsletter-row .button { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+
+    <header>
+      <div class="wrap nav" aria-label="Primary navigation">
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">PB</span>
+          <span>PatchBrief</span>
+        </a>
+        <nav>
+          <a href="feed.html" class="active">Feed</a>
+          <a href="sample-brief.html">Sample brief</a>
+          <a href="roadmap.html">Roadmap</a>
+          <a class="nav-cta" href="/#signup-form">Watchlist</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Public feed</p>
+          <h1>Short security briefs for public vulnerability and threat signals.</h1>
+          <p class="hero-lede">
+            PatchBrief tracks public advisories, exploited vulnerabilities, vendor updates,
+            and threat activity, then summarizes what operators may want to check.
+          </p>
+          <p class="sample-notice" role="note">Sample feed while PatchBrief is in pilot. Items are examples of format and source style, not live intelligence.</p>
+        </div>
+      </section>
+
+      <div class="filter-bar">
+        <div class="wrap">
+          <div class="filter-chips" role="list" aria-label="Content type filters (visual only)">
+            <span class="chip active" role="listitem">All</span>
+            <span class="chip" role="listitem">KEV</span>
+            <span class="chip" role="listitem">Vendor advisory</span>
+            <span class="chip" role="listitem">Patch Tuesday</span>
+            <span class="chip" role="listitem">Ransomware</span>
+            <span class="chip" role="listitem">Exploit activity</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="feed-section">
+        <div class="wrap">
+          <div class="feed-list" aria-label="PatchBrief security feed (8 items)">
+            
+            <article class="feed-item">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2024</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2024-7971</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/chrome-zero-day-kev-2024-7971.html">CISA KEV adds actively exploited Chrome V8 type confusion zero-day</a>
+              </h2>
+              <p class="feed-vendor">Google · Chrome (desktop)</p>
+              <p class="feed-summary">Google confirmed exploitation in the wild for CVE-2024-7971, a type confusion vulnerability in the V8 JavaScript engine. CISA added it to the KEV catalog. All desktop Chrome versions before 128.0.6613.84 are affected.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check browser fleet versions against Chrome 128.0.6613.84 or later. Verify update policy for laptops frequently off-network. Flag unmanaged browsers for manual follow-up.</p>
+                <div class="feed-sources"><a href="https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop_21.html">Chrome release note</a><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7971">NVD entry</a></div>
+              </div>
+              <a class="feed-read-link" href="items/chrome-zero-day-kev-2024-7971.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jun 11, 2024</span>
+                  <span class="type-badge">Patch Tuesday</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2024-30080</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/microsoft-patch-tuesday-msmq-2024-30080.html">Microsoft Patch Tuesday: critical RCE in Message Queuing (MSMQ)</a>
+              </h2>
+              <p class="feed-vendor">Microsoft · Windows (MSMQ)</p>
+              <p class="feed-summary">June 2024 Patch Tuesday includes CVE-2024-30080, a critical remote code execution vulnerability in Microsoft Message Queuing. NVD rates this CVSS 9.8. Environments that still expose MSMQ to the network should prioritize installation.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Inventory hosts with Message Queuing installed. Prioritize internet-reachable or cross-network queue services. Confirm June security updates are installed.</p>
+                <div class="feed-sources"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30080">MSRC advisory</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-30080">NVD entry</a></div>
+              </div>
+              <a class="feed-read-link" href="items/microsoft-patch-tuesday-msmq-2024-30080.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Apr 12, 2024</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2024-3400</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/paloalto-globalprotect-kev-2024-3400.html">CISA KEV adds exploited Palo Alto GlobalProtect command injection</a>
+              </h2>
+              <p class="feed-vendor">Palo Alto Networks · GlobalProtect (PAN-OS)</p>
+              <p class="feed-summary">CISA added CVE-2024-3400 to the Known Exploited Vulnerabilities catalog. Unauthenticated command injection in GlobalProtect allows root-level code execution on exposed portal and gateway interfaces. Active exploitation observed in the wild.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Confirm whether GlobalProtect portal or gateway is enabled, check current PAN-OS version against the fixed release list, and apply vendor-recommended mitigations to internet-exposed interfaces.</p>
+                <div class="feed-sources"><a href="https://security.paloaltonetworks.com/CVE-2024-3400">Palo Alto advisory</a><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://unit42.paloaltonetworks.com/cve-2024-3400/">Unit 42 threat brief</a></div>
+              </div>
+              <a class="feed-read-link" href="items/paloalto-globalprotect-kev-2024-3400.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Mar 18, 2024</span>
+                  <span class="type-badge">Exploit activity</span>
+                  <span class="signal-badge threat">Threat activity</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/fortinet-ssl-vpn-exploitation-2024.html">Ransomware groups actively targeting unpatched Fortinet SSL-VPN devices</a>
+              </h2>
+              <p class="feed-vendor">Fortinet · FortiGate (FortiOS SSL-VPN)</p>
+              <p class="feed-summary">Threat reporting indicates ransomware operators are opportunistically scanning for and compromising Fortinet SSL-VPN devices running versions with known authentication bypass issues. Organizations with internet-exposed FortiGate management interfaces should review patch status immediately.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Confirm FortiOS version against Fortinet&#x27;s patch advisory. Review VPN access logs for unusual authentication patterns. Confirm management interfaces are not internet-exposed.</p>
+                <div class="feed-sources"><a href="https://www.fortinet.com/blog/psirt-blogs">Fortinet PSIRT blog</a><a href="https://www.cisa.gov/news-events/cybersecurity-advisories">CISA cybersecurity advisories</a></div>
+              </div>
+              <a class="feed-read-link" href="items/fortinet-ssl-vpn-exploitation-2024.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Mar 4, 2024</span>
+                  <span class="type-badge">Ransomware</span>
+                  <span class="signal-badge threat">Threat activity</span>
+                  <span class="cve-tag">CVE-2021-21974</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/vmware-esxi-ransomware-cve-2021-21974.html">VMware ESXi heap overflow — ransomware campaigns targeting unpatched hypervisors</a>
+              </h2>
+              <p class="feed-vendor">VMware · ESXi</p>
+              <p class="feed-summary">Ransomware operators continue to target ESXi hypervisors through CVE-2021-21974, a heap overflow in the OpenSLP service. Despite the patch being available since 2021, many environments remain exposed. Successful exploitation allows code execution as root.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Confirm ESXi patch level. Disable SLP service if not required. Verify management interfaces are not internet-exposed. Confirm backup integrity given ransomware targeting.</p>
+                <div class="feed-sources"><a href="https://www.vmware.com/security/advisories/VMSA-2021-0002.html">VMware advisory VMSA-2021-0002</a><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+              </div>
+              <a class="feed-read-link" href="items/vmware-esxi-ransomware-cve-2021-21974.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Feb 14, 2024</span>
+                  <span class="type-badge">Ransomware</span>
+                  <span class="signal-badge threat">Threat activity</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/alphv-blackcat-healthcare-vpn-2024.html">ALPHV/BlackCat ransomware targets healthcare sector via unpatched VPN appliances</a>
+              </h2>
+              <p class="feed-vendor">Multiple · VPN appliances (Citrix, Cisco, Fortinet)</p>
+              <p class="feed-summary">CISA and the FBI issued a joint advisory on ALPHV/BlackCat ransomware following healthcare sector intrusions through unpatched VPN appliances. The group has exploited known vulnerabilities in Citrix NetScaler, Cisco ASA, and Fortinet devices as initial access vectors.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review VPN appliance patch levels against CISA&#x27;s advisory. Enable multi-factor authentication on all remote access. Review VPN logs for unusual access patterns. Confirm incident response contacts are current.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-353a">CISA/FBI joint advisory AA23-353A</a><a href="https://www.hhs.gov/sites/default/files/blackcat-ransomware-analyst-note-tlpclear.pdf">HHS analyst note</a></div>
+              </div>
+              <a class="feed-read-link" href="items/alphv-blackcat-healthcare-vpn-2024.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jan 10, 2024</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2023-46805 / CVE-2024-21887</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/ivanti-connect-secure-advisory-2024.html">Ivanti Connect Secure authentication bypass and command injection — active exploitation</a>
+              </h2>
+              <p class="feed-vendor">Ivanti · Connect Secure, Policy Secure</p>
+              <p class="feed-summary">Ivanti disclosed CVE-2023-46805 (authentication bypass) and CVE-2024-21887 (command injection) affecting Connect Secure and Policy Secure. When chained, they allow unauthenticated remote code execution. CISA issued an emergency directive requiring federal agencies to act.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply Ivanti&#x27;s mitigation XML immediately if patches are not yet available. Audit VPN device logs. Review CISA&#x27;s emergency directive for recovery steps if compromise is suspected.</p>
+                <div class="feed-sources"><a href="https://forums.ivanti.com/s/article/KB-CVE-2023-46805-Authentication-Bypass-CVE-2024-21887-Command-Injection-for-Ivanti-Connect-Secure-and-Ivanti-Policy-Secure-Gateways">Ivanti advisory (KB article)</a><a href="https://www.cisa.gov/news-events/directives/ed-24-01">CISA Emergency Directive ED-24-01</a><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+              </div>
+              <a class="feed-read-link" href="items/ivanti-connect-secure-advisory-2024.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 16, 2023</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2023-20198</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/cisco-ios-xe-webui-kev-2023-20198.html">CISA KEV: Cisco IOS XE Web UI privilege escalation — zero-day mass exploitation</a>
+              </h2>
+              <p class="feed-vendor">Cisco · IOS XE</p>
+              <p class="feed-summary">Cisco disclosed CVE-2023-20198, a critical zero-day in IOS XE allowing unauthenticated attackers to create a privilege level 15 account via the Web UI feature. Mass exploitation was observed within hours of disclosure, with thousands of devices implanted with a backdoor.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Disable the HTTP Server feature on all internet-facing IOS XE systems immediately. Check for unauthorized accounts and the presence of the implant as described in Cisco&#x27;s advisory.</p>
+                <div class="feed-sources"><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-webui-privesc-j22SaA4z">Cisco advisory</a><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+              </div>
+              <a class="feed-read-link" href="items/cisco-ios-xe-webui-kev-2023-20198.html">Read brief →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter-section" id="newsletter" aria-label="Newsletter signup">
+        <div class="wrap">
+          <div class="newsletter-inner">
+            <h2>Get the public PatchBrief feed by email.</h2>
+            <p>Receive short public-source briefs for exploited vulnerabilities, vendor advisories, and high-signal threat activity. Watchlist filtering will be tested during the pilot.</p>
+            <form
+              id="newsletter-form"
+              action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New PatchBrief newsletter signup" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
+              <input type="hidden" name="_next" value="https://www.patchbrief.org/?subscribed=1" />
+              <input type="hidden" name="interest_type" value="Public feed / newsletter" />
+              <div class="newsletter-row">
+                <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+                <button class="button primary" type="submit">Subscribe to public feed</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-row">
+        <strong>PatchBrief</strong>
+        <div class="footer-links">
+          <a href="feed.html">Feed</a>
+          <a href="rss.xml">RSS</a>
+          <a href="roadmap.html">Roadmap</a>
+          <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

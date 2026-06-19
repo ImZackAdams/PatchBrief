@@ -1,0 +1,36 @@
+id: alphv-blackcat-healthcare-vpn-2024
+slug: alphv-blackcat-healthcare-vpn-2024
+date: "2024-02-14"
+type: Ransomware
+signal: Threat activity
+title: "ALPHV/BlackCat ransomware targets healthcare sector via unpatched VPN appliances"
+summary: >
+  CISA and the FBI issued a joint advisory on ALPHV/BlackCat ransomware following
+  healthcare sector intrusions through unpatched VPN appliances.
+  The group has exploited known vulnerabilities in Citrix NetScaler, Cisco ASA,
+  and Fortinet devices as initial access vectors.
+vendor: Multiple
+product: VPN appliances (Citrix, Cisco, Fortinet)
+cve: null
+operator_check: >
+  Review VPN appliance patch levels against CISA's advisory.
+  Enable multi-factor authentication on all remote access.
+  Review VPN logs for unusual access patterns.
+  Confirm incident response contacts are current.
+why_it_matters: >
+  A joint CISA/FBI advisory targeting a specific sector is a credible signal.
+  Healthcare organizations with internet-exposed VPN appliances running known
+  unpatched vulnerabilities are the described target. The advisory includes indicators
+  of compromise and recommended mitigations.
+sources:
+  - title: CISA/FBI joint advisory AA23-353A
+    url: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-353a
+  - title: HHS analyst note
+    url: https://www.hhs.gov/sites/default/files/blackcat-ransomware-analyst-note-tlpclear.pdf
+tags:
+  - ransomware
+  - healthcare
+  - vpn
+  - threat-activity
+  - CISA-advisory
+is_sample: true

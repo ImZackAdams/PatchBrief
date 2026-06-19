@@ -1,0 +1,35 @@
+id: paloalto-globalprotect-kev-2024-3400
+slug: paloalto-globalprotect-kev-2024-3400
+date: "2024-04-12"
+type: KEV
+signal: Known exploited
+title: "CISA KEV adds exploited Palo Alto GlobalProtect command injection"
+summary: >
+  CISA added CVE-2024-3400 to the Known Exploited Vulnerabilities catalog.
+  Unauthenticated command injection in GlobalProtect allows root-level code execution
+  on exposed portal and gateway interfaces. Active exploitation observed in the wild.
+vendor: Palo Alto Networks
+product: GlobalProtect (PAN-OS)
+cve: CVE-2024-3400
+operator_check: >
+  Confirm whether GlobalProtect portal or gateway is enabled, check current PAN-OS version
+  against the fixed release list, and apply vendor-recommended mitigations to
+  internet-exposed interfaces.
+why_it_matters: >
+  Active exploitation means this is not a theoretical risk. CISA set a remediation deadline
+  for federal agencies. The attack surface includes any internet-exposed GlobalProtect interface.
+  CVSS 10.0 — unauthenticated, remote, root-level code execution.
+sources:
+  - title: Palo Alto advisory
+    url: https://security.paloaltonetworks.com/CVE-2024-3400
+  - title: CISA KEV catalog
+    url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+  - title: Unit 42 threat brief
+    url: https://unit42.paloaltonetworks.com/cve-2024-3400/
+tags:
+  - KEV
+  - firewall
+  - critical
+  - command-injection
+  - palo-alto
+is_sample: true

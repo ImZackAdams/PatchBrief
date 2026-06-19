@@ -1,0 +1,35 @@
+id: chrome-zero-day-kev-2024-7971
+slug: chrome-zero-day-kev-2024-7971
+date: "2024-08-21"
+type: KEV
+signal: Known exploited
+title: "CISA KEV adds actively exploited Chrome V8 type confusion zero-day"
+summary: >
+  Google confirmed exploitation in the wild for CVE-2024-7971, a type confusion
+  vulnerability in the V8 JavaScript engine. CISA added it to the KEV catalog.
+  All desktop Chrome versions before 128.0.6613.84 are affected.
+vendor: Google
+product: Chrome (desktop)
+cve: CVE-2024-7971
+operator_check: >
+  Check browser fleet versions against Chrome 128.0.6613.84 or later.
+  Verify update policy for laptops frequently off-network.
+  Flag unmanaged browsers for manual follow-up.
+why_it_matters: >
+  Zero-day with active exploitation and a CISA KEV addition is a strong signal.
+  Browser vulnerabilities affect every endpoint in a fleet. Unmanaged or infrequently
+  updated endpoints are the primary risk surface.
+sources:
+  - title: Chrome release note
+    url: https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop_21.html
+  - title: CISA KEV catalog
+    url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+  - title: NVD entry
+    url: https://nvd.nist.gov/vuln/detail/CVE-2024-7971
+tags:
+  - KEV
+  - browser
+  - critical
+  - zero-day
+  - chrome
+is_sample: true

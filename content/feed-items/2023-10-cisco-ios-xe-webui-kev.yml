@@ -1,0 +1,34 @@
+id: cisco-ios-xe-webui-kev-2023-20198
+slug: cisco-ios-xe-webui-kev-2023-20198
+date: "2023-10-16"
+type: KEV
+signal: Known exploited
+title: "CISA KEV: Cisco IOS XE Web UI privilege escalation — zero-day mass exploitation"
+summary: >
+  Cisco disclosed CVE-2023-20198, a critical zero-day in IOS XE allowing unauthenticated
+  attackers to create a privilege level 15 account via the Web UI feature.
+  Mass exploitation was observed within hours of disclosure, with thousands of devices
+  implanted with a backdoor.
+vendor: Cisco
+product: IOS XE
+cve: CVE-2023-20198
+operator_check: >
+  Disable the HTTP Server feature on all internet-facing IOS XE systems immediately.
+  Check for unauthorized accounts and the presence of the implant as described in Cisco's advisory.
+why_it_matters: >
+  Zero-day with confirmed mass exploitation hours after disclosure. Any internet-exposed
+  IOS XE device with the Web UI feature enabled is high risk. Cisco also issued CVE-2023-20273
+  shortly after for related exploitation.
+sources:
+  - title: Cisco advisory
+    url: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-webui-privesc-j22SaA4z
+  - title: CISA KEV catalog
+    url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+tags:
+  - KEV
+  - cisco
+  - network
+  - zero-day
+  - critical
+  - mass-exploitation
+is_sample: true

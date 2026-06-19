@@ -1,0 +1,36 @@
+id: ivanti-connect-secure-advisory-2024
+slug: ivanti-connect-secure-advisory-2024
+date: "2024-01-10"
+type: Vendor advisory
+signal: Critical vendor advisory
+title: "Ivanti Connect Secure authentication bypass and command injection — active exploitation"
+summary: >
+  Ivanti disclosed CVE-2023-46805 (authentication bypass) and CVE-2024-21887 (command injection)
+  affecting Connect Secure and Policy Secure. When chained, they allow unauthenticated remote
+  code execution. CISA issued an emergency directive requiring federal agencies to act.
+vendor: Ivanti
+product: Connect Secure, Policy Secure
+cve: CVE-2023-46805 / CVE-2024-21887
+operator_check: >
+  Apply Ivanti's mitigation XML immediately if patches are not yet available.
+  Audit VPN device logs. Review CISA's emergency directive for recovery steps if
+  compromise is suspected.
+why_it_matters: >
+  An authentication bypass chained with command injection on an internet-facing VPN appliance
+  is a high-severity combination. CISA's emergency directive signals active exploitation
+  and elevated risk for organizations that have not mitigated.
+sources:
+  - title: Ivanti advisory (KB article)
+    url: https://forums.ivanti.com/s/article/KB-CVE-2023-46805-Authentication-Bypass-CVE-2024-21887-Command-Injection-for-Ivanti-Connect-Secure-and-Ivanti-Policy-Secure-Gateways
+  - title: CISA Emergency Directive ED-24-01
+    url: https://www.cisa.gov/news-events/directives/ed-24-01
+  - title: CISA KEV catalog
+    url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+tags:
+  - vendor-advisory
+  - ivanti
+  - vpn
+  - authentication-bypass
+  - critical
+  - CISA-directive
+is_sample: true

@@ -1,0 +1,33 @@
+id: microsoft-patch-tuesday-msmq-2024-30080
+slug: microsoft-patch-tuesday-msmq-2024-30080
+date: "2024-06-11"
+type: Patch Tuesday
+signal: Critical vendor advisory
+title: "Microsoft Patch Tuesday: critical RCE in Message Queuing (MSMQ)"
+summary: >
+  June 2024 Patch Tuesday includes CVE-2024-30080, a critical remote code execution
+  vulnerability in Microsoft Message Queuing. NVD rates this CVSS 9.8.
+  Environments that still expose MSMQ to the network should prioritize installation.
+vendor: Microsoft
+product: Windows (MSMQ)
+cve: CVE-2024-30080
+operator_check: >
+  Inventory hosts with Message Queuing installed.
+  Prioritize internet-reachable or cross-network queue services.
+  Confirm June security updates are installed.
+why_it_matters: >
+  MSMQ is an older Windows feature that is sometimes forgotten in patching workflows.
+  A CVSS 9.8 unauthenticated RCE on a service that may be network-accessible warrants
+  prompt review even if it is not a known-exploited signal.
+sources:
+  - title: MSRC advisory
+    url: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30080
+  - title: NVD entry
+    url: https://nvd.nist.gov/vuln/detail/CVE-2024-30080
+tags:
+  - patch-tuesday
+  - microsoft
+  - rce
+  - critical
+  - windows
+is_sample: true
