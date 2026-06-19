@@ -880,15 +880,15 @@
             </article>
             <article class="pricing-card" aria-label="Individual watchlist tier">
               <h3>Individual Watchlist</h3>
-              <strong class="price" style="font-size:clamp(1.6rem,5vw,2.4rem);">Planned: $9/mo</strong>
-              <p>For operators who want lightweight monitoring for a personal or small team stack.</p>
+              <strong class="price" style="font-size:clamp(1.6rem,5vw,2.4rem);">$9/mo</strong>
+              <p>For operators who want lightweight monitoring for a personal or small-team stack.</p>
               <ul>
                 <li>Saved watchlist</li>
                 <li>Important-match alerts</li>
                 <li>Weekly summary option</li>
                 <li>Source links and suggested checks</li>
               </ul>
-              <a class="button" href="#signup-form" data-pilot-source="pricing-individual">Join pilot</a>
+              <a class="button primary" href="#signup-form" data-pilot-source="pricing-individual">Get started — $9/mo</a>
             </article>
             <article class="pricing-card" aria-label="Team and MSP tier">
               <h3>Team / MSP</h3>
@@ -909,14 +909,14 @@
       <section class="section signup" id="signup">
         <div class="wrap signup-grid">
           <div>
-            <p class="kicker">Pilot</p>
-            <h2>Create your PatchBrief watchlist.</h2>
+            <p class="kicker">Get started</p>
+            <h2>Create your watchlist.</h2>
             <p>
-              Join the pilot and share up to 10 vendors, products, or technologies you want
-              monitored. PatchBrief will use public advisory sources to generate short
-              source backed briefs when something deserves review.
+              Enter up to 10 vendors, products, or technologies you want monitored.
+              PatchBrief watches public advisory sources and delivers short source-backed
+              briefs when something deserves review.
             </p>
-            <p class="note">No account required during the pilot.</p>
+            <p class="note">$9/mo after checkout. Cancel any time.</p>
             <p class="note">PatchBrief uses public advisory sources. It does not scan your environment, verify exposure, or replace vendor guidance.</p>
           </div>
           <aside class="signup-panel" aria-label="Watchlist pilot signup form">
@@ -1007,7 +1007,7 @@
                 ></textarea>
               </div>
 
-              <button class="button primary" type="submit">Join the watchlist pilot</button>
+              <button class="button primary" type="submit">Continue to checkout — $9/mo</button>
               <p class="form-status" data-form-status role="status" aria-live="polite"></p>
             </form>
           </aside>
@@ -1017,6 +1017,11 @@
 
     <script>
       (() => {
+        // Paste your Stripe Payment Link here after creating a $9/mo product in Stripe.
+        // Dashboard → Products → Create → Add price ($9, recurring) → Payment Links → Copy URL
+        const STRIPE_PAYMENT_LINK = "REPLACE_WITH_STRIPE_PAYMENT_LINK";
+        const FALLBACK_URL = "https://www.patchbrief.org/?pilot=requested#signup-form";
+
         const form = document.querySelector("#signup-form");
 
         if (!form) {
@@ -1027,6 +1032,7 @@
         const submit = form.querySelector('button[type="submit"]');
         const emailField = form.querySelector("#signup-email");
         const watchlistField = form.querySelector("#signup-watchlist");
+        const nextField = form.querySelector("#form-next-url");
         const sourceField = form.querySelector('input[name="pilot_source"]');
 
         const setStatus = (state, message) => {
@@ -1058,13 +1064,15 @@
           return "";
         };
 
-        const pilotState = new URLSearchParams(window.location.search).get("pilot");
+        const params = new URLSearchParams(window.location.search);
 
-        if (pilotState === "requested") {
+        if (params.get("pilot") === "requested") {
           form.dataset.submitted = "true";
           submit.disabled = true;
           submit.textContent = "Watchlist submitted";
-          setStatus("success", "Watchlist received. We'll follow up with pilot access and sample brief details.");
+          setStatus("success", "Watchlist received. Continuing to checkout…");
+        } else if (params.get("payment") === "cancelled") {
+          setStatus("error", "Checkout was cancelled. Your card was not charged. You can try again below.");
         }
 
         document.querySelectorAll("[data-pilot-source]").forEach((link) => {
@@ -1106,9 +1114,16 @@
             return;
           }
 
+          if (nextField) {
+            nextField.value =
+              STRIPE_PAYMENT_LINK !== "REPLACE_WITH_STRIPE_PAYMENT_LINK"
+                ? STRIPE_PAYMENT_LINK
+                : FALLBACK_URL;
+          }
+
           submit.disabled = true;
-          submit.textContent = "Submitting...";
-          setStatus("active", "Submitting your watchlist...");
+          submit.textContent = "Saving watchlist…";
+          setStatus("active", "Saving your watchlist and opening checkout…");
         });
       })();
     </script>

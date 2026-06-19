@@ -5,46 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="PatchBrief checkout cancellation page for on demand vulnerability reports."
+      content="PatchBrief checkout cancelled. Your card was not charged."
     />
     <meta name="theme-color" content="#15211f" />
     <title>Checkout cancelled | PatchBrief</title>
     <style>
       :root {
         color-scheme: light;
-        --page: #f7f5ee;
+        --page: #fbfbf8;
         --paper: #ffffff;
-        --ink: #16201e;
-        --muted: #66746f;
-        --line: #d9ddd4;
-        --charcoal: #15211f;
-        --teal: #0f766e;
-        --mint: #55d6bd;
-        --mint-soft: #e4f4ef;
-        --radius: 8px;
-        --shadow: 0 20px 48px rgba(21, 33, 31, 0.16);
+        --ink: #111816;
+        --muted: #66706d;
+        --line: #e2e5df;
+        --line-strong: #cdd3cc;
+        --accent: #0f766e;
+        --radius: 6px;
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
 
       body {
         margin: 0;
         min-height: 100vh;
         background: var(--page);
         color: var(--ink);
-        font-family:
-          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.55;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
       }
 
       a:focus-visible {
-        outline: 2px solid var(--mint);
+        outline: 2px solid var(--accent);
         outline-offset: 3px;
       }
+
+      h1, p { margin-top: 0; }
 
       .page {
         display: grid;
@@ -53,82 +49,43 @@
       }
 
       header {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        background: var(--charcoal);
-        color: #ffffff;
+        border-bottom: 1px solid var(--line);
+        background: rgba(251, 251, 248, 0.96);
+        backdrop-filter: blur(10px);
       }
 
       .wrap {
-        width: min(calc(100% - 32px), 1080px);
+        width: min(calc(100% - 32px), 1040px);
         margin: 0 auto;
       }
 
       .nav {
         display: flex;
-        min-height: 4.25rem;
+        min-height: 4rem;
         align-items: center;
       }
 
       .brand {
         display: inline-flex;
         align-items: center;
-        gap: 0.68rem;
-        color: #ffffff;
-        font-weight: 800;
+        gap: 0.65rem;
+        color: var(--ink);
+        font-weight: 760;
         text-decoration: none;
       }
 
       .mark {
-        position: relative;
         display: grid;
-        width: 2.35rem;
-        height: 2.35rem;
+        width: 2rem;
+        height: 2rem;
         place-items: center;
-        overflow: hidden;
-        border: 1px solid rgba(159, 232, 220, 0.5);
+        border: 1px solid var(--line-strong);
         border-radius: var(--radius);
-        background:
-          radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.34), transparent 26%),
-          linear-gradient(135deg, #8df0dd 0%, #55d6bd 44%, #0f766e 100%);
-        box-shadow:
-          inset 0 1px 0 rgba(255, 255, 255, 0.45),
-          0 10px 24px rgba(15, 118, 110, 0.26);
-        color: #071f1c;
+        background: var(--paper);
+        color: var(--accent);
         font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-        font-size: 0.86rem;
-        font-weight: 900;
-        line-height: 1;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
-      }
-
-      .mark::before,
-      .mark::after {
-        position: absolute;
-        content: "";
-        pointer-events: none;
-      }
-
-      .mark::before {
-        inset: 0.32rem;
-        border: 1px solid rgba(7, 31, 28, 0.24);
-        border-radius: 6px;
-        background:
-          linear-gradient(rgba(7, 31, 28, 0.26), rgba(7, 31, 28, 0.26)) 50% 38% / 58% 1px
-            no-repeat,
-          linear-gradient(rgba(7, 31, 28, 0.2), rgba(7, 31, 28, 0.2)) 50% 58% / 42% 1px
-            no-repeat;
-        opacity: 0.7;
-      }
-
-      .mark::after {
-        right: 0.28rem;
-        bottom: 0.28rem;
-        width: 0.42rem;
-        height: 0.42rem;
-        border-top: 1px solid rgba(7, 31, 28, 0.46);
-        border-left: 1px solid rgba(7, 31, 28, 0.46);
-        background: rgba(255, 255, 255, 0.38);
-        transform: rotate(45deg);
+        font-size: 0.78rem;
+        font-weight: 800;
       }
 
       main {
@@ -138,72 +95,79 @@
       }
 
       .panel {
-        max-width: 680px;
+        max-width: 560px;
         border: 1px solid var(--line);
         border-radius: var(--radius);
         background: var(--paper);
         padding: clamp(1.25rem, 4vw, 2rem);
-        box-shadow: var(--shadow);
       }
 
       .kicker {
         display: inline-flex;
-        margin: 0 0 1rem;
-        border: 1px solid #b9d7d1;
+        align-items: center;
+        margin-bottom: 0.75rem;
         border-radius: var(--radius);
-        background: var(--mint-soft);
-        color: var(--teal);
-        padding: 0.34rem 0.55rem;
-        font-size: 0.9rem;
-        font-weight: 800;
+        background: var(--page);
+        color: var(--muted);
+        padding: 0.3rem 0.55rem;
+        font-size: 0.8rem;
+        font-weight: 760;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        border: 1px solid var(--line-strong);
       }
 
       h1 {
-        margin: 0 0 0.8rem;
-        font-size: clamp(2.1rem, 8vw, 3.5rem);
-        line-height: 1;
+        margin-bottom: 0.5rem;
+        font-size: clamp(1.8rem, 6vw, 2.8rem);
+        font-weight: 760;
+        line-height: 1.05;
       }
 
-      p {
-        margin: 0 0 0.9rem;
-        color: var(--muted);
-      }
+      p { color: var(--muted); }
 
       .button {
         display: inline-flex;
-        min-height: 2.95rem;
+        min-height: 2.8rem;
         align-items: center;
         justify-content: center;
-        border: 1px solid transparent;
+        border: 1px solid var(--line-strong);
         border-radius: var(--radius);
-        background: var(--mint);
-        color: #06221e;
-        padding: 0.78rem 1rem;
-        font-weight: 820;
+        background: var(--paper);
+        padding: 0.72rem 0.95rem;
+        color: var(--ink);
+        font: inherit;
+        font-weight: 760;
         text-decoration: none;
-        transition:
-          background-color 150ms ease,
-          transform 150ms ease;
       }
 
-      .button:hover,
-      .button:focus-visible {
-        background: #82ead8;
-        transform: translateY(-1px);
+      .button:hover, .button:focus-visible { border-color: var(--ink); }
+
+      .button.primary {
+        border-color: var(--ink);
+        background: var(--ink);
+        color: #ffffff;
+      }
+
+      .button.primary:hover, .button.primary:focus-visible {
+        background: var(--accent);
+        border-color: var(--accent);
       }
 
       .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
         margin-top: 1.35rem;
       }
 
       @media (max-width: 720px) {
-        .wrap {
-          width: min(calc(100% - 24px), 1080px);
-        }
+        .wrap { width: min(calc(100% - 24px), 1040px); }
+        .button { width: 100%; }
+      }
 
-        .button {
-          width: 100%;
-        }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; }
       }
     </style>
   </head>
@@ -220,14 +184,16 @@
 
       <main>
         <div class="wrap">
-          <section class="panel" aria-labelledby="payment-cancelled-title">
-            <p class="kicker">Checkout</p>
-            <h1 id="payment-cancelled-title">Checkout cancelled.</h1>
+          <section class="panel" aria-labelledby="cancelled-title">
+            <p class="kicker">Checkout cancelled</p>
+            <h1 id="cancelled-title">No charge made.</h1>
             <p>
-              Your card was not charged. You can return to PatchBrief and run a report when you’re ready.
+              Your card was not charged. You can return to PatchBrief and subscribe
+              when you're ready.
             </p>
             <div class="actions">
-              <a class="button" href="/#signup-form">Return to report form</a>
+              <a class="button primary" href="/?payment=cancelled#signup-form">Try again</a>
+              <a class="button" href="/">Back to PatchBrief</a>
             </div>
           </section>
         </div>
