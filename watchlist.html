@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="PatchBrief Watchlist — get email alerts when vulnerabilities affecting your specific vendors and products appear in the feed." />
+    <meta name="theme-color" content="#15211f" />
+    <title>Vendor Watchlist | PatchBrief</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #fbfbf8;
+        --paper: #ffffff;
+        --ink: #111816;
+        --soft-ink: #2e3936;
+        --muted: #66706d;
+        --line: #e2e5df;
+        --line-strong: #cdd3cc;
+        --accent: #0f766e;
+        --accent-soft: #edf7f4;
+        --red: #913f32;
+        --red-soft: #fdf0ee;
+        --max: 860px;
+        --radius: 6px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--page); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+      a { color: inherit; }
+      a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+      h1, h2, h3, p { margin-top: 0; }
+      p { margin-bottom: 0.9rem; }
+      .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+      header { border-bottom: 1px solid var(--line); background: rgba(251,251,248,0.96); backdrop-filter: blur(10px); }
+      .nav { display: flex; min-height: 4rem; align-items: center; justify-content: space-between; gap: 1rem; }
+      .brand { display: inline-flex; align-items: center; gap: 0.65rem; font-weight: 760; text-decoration: none; color: var(--ink); }
+      .mark { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.78rem; font-weight: 800; }
+      nav { display: flex; align-items: center; gap: 0.2rem; }
+      nav a { border-radius: var(--radius); color: var(--muted); padding: 0.45rem 0.6rem; font-size: 0.92rem; text-decoration: none; }
+      nav a:hover { color: var(--ink); }
+      .nav-cta { border: 1px solid var(--line-strong); background: var(--ink) !important; color: #fff !important; font-weight: 760; padding: 0.45rem 0.85rem !important; }
+
+      .button { display: inline-flex; min-height: 2.8rem; align-items: center; justify-content: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); padding: 0.72rem 1.1rem; cursor: pointer; color: var(--ink); font: inherit; font-size: 0.93rem; font-weight: 760; text-decoration: none; white-space: nowrap; }
+      .button:hover { border-color: var(--ink); }
+      .button.primary { border-color: var(--ink); background: var(--ink); color: #fff; }
+      .button.primary:hover { background: var(--accent); border-color: var(--accent); }
+
+      .hero { border-bottom: 1px solid var(--line); background: var(--paper); padding: 4.5rem 0 3rem; }
+      .eyebrow { color: var(--accent); font-size: 0.8rem; font-weight: 760; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.7rem; }
+      .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 780; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 0.9rem; max-width: 16ch; }
+      .hero-lede { max-width: 52ch; color: var(--soft-ink); font-size: 1.05rem; margin-bottom: 0; }
+
+      .how-section { border-bottom: 1px solid var(--line); padding: 3.5rem 0; }
+      .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--line); overflow: hidden; }
+      .how-step { background: var(--paper); padding: 1.4rem; }
+      .step-num { font-size: 1.4rem; font-weight: 780; color: var(--accent); margin-bottom: 0.5rem; }
+      .how-step h3 { font-size: 0.97rem; font-weight: 760; margin-bottom: 0.35rem; }
+      .how-step p { color: var(--muted); font-size: 0.88rem; margin: 0; }
+
+      .vendor-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1.25rem 0; }
+      .vendor-chip { border: 1px solid var(--line-strong); border-radius: 99px; background: var(--paper); color: var(--soft-ink); padding: 0.25rem 0.7rem; font-size: 0.82rem; cursor: pointer; user-select: none; transition: border-color 0.1s, background 0.1s; }
+      .vendor-chip.selected { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+      .vendor-chip:hover { border-color: var(--accent); }
+
+      .form-section { background: var(--paper); border-bottom: 1px solid var(--line); padding: 3.5rem 0; }
+      .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+      .form-shell { border: 1px solid var(--line); border-radius: var(--radius); background: var(--page); padding: 1.75rem; }
+      .form-shell h2 { font-size: 1.1rem; font-weight: 760; margin-bottom: 0.35rem; }
+      .form-shell > p { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.5rem; }
+      .field { margin-bottom: 1.1rem; }
+      .field label { display: block; font-size: 0.83rem; font-weight: 760; margin-bottom: 0.3rem; color: var(--soft-ink); }
+      .field input[type="email"],
+      .field input[type="text"],
+      .field textarea {
+        width: 100%;
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius);
+        background: var(--paper);
+        color: var(--ink);
+        font: inherit;
+        font-size: 0.9rem;
+        padding: 0.65rem 0.75rem;
+        resize: vertical;
+      }
+      .field input:focus, .field textarea:focus { outline: 2px solid var(--accent); outline-offset: 2px; border-color: transparent; }
+      .field-hint { color: var(--muted); font-size: 0.8rem; margin-top: 0.3rem; margin-bottom: 0; }
+      .plan-upsell { border: 1px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); padding: 1.25rem; margin-top: 0.25rem; }
+      .plan-upsell h3 { font-size: 0.95rem; font-weight: 760; color: var(--accent); margin-bottom: 0.35rem; }
+      .plan-upsell p { font-size: 0.86rem; color: var(--accent); opacity: 0.85; margin-bottom: 0.75rem; }
+      .plan-upsell .button { background: var(--accent); border-color: var(--accent); color: #fff; width: 100%; }
+      .plan-upsell .button:hover { background: #0d6560; border-color: #0d6560; }
+
+      .vendor-list-section { padding: 3.5rem 0; }
+      .vendor-list-section h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 760; margin-bottom: 0.6rem; }
+      .vendor-list-section p { color: var(--soft-ink); margin-bottom: 1.5rem; }
+      .vendor-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+      .vendor-pill { border: 1px solid var(--line-strong); border-radius: 99px; background: var(--paper); color: var(--muted); padding: 0.3rem 0.8rem; font-size: 0.82rem; }
+
+      footer { border-top: 1px solid var(--line); padding: 2rem 0; }
+      .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--muted); font-size: 0.88rem; }
+      .footer-links { display: flex; gap: 0.85rem; }
+      .footer-links a { color: var(--muted); text-decoration: none; }
+      .footer-links a:hover { color: var(--ink); }
+
+      @media (max-width: 720px) {
+        .wrap { width: min(calc(100% - 24px), var(--max)); }
+        .nav { min-height: auto; align-items: flex-start; flex-direction: column; padding: 0.85rem 0; }
+        nav { width: 100%; overflow-x: auto; }
+        nav a { white-space: nowrap; }
+        .how-grid, .form-grid { grid-template-columns: 1fr; }
+        .button { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">PB</span>
+          <span>PatchBrief</span>
+        </a>
+        <nav>
+          <a href="feed.html">Feed</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="watchlist.html" style="color:var(--ink);font-weight:760;">Watchlist</a>
+          <a class="nav-cta" href="pricing.html#pro">Get Pro</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Vendor watchlist</p>
+          <h1>Get alerted when your vendors appear.</h1>
+          <p class="hero-lede">
+            Instead of reading every brief, tell us which vendors you run — Cisco, Fortinet, Microsoft,
+            Ivanti — and we'll alert you the moment a new exploit or advisory is published for them.
+          </p>
+        </div>
+      </section>
+
+      <section class="how-section">
+        <div class="wrap">
+          <div class="how-grid">
+            <div class="how-step">
+              <div class="step-num">1</div>
+              <h3>Pick your vendors</h3>
+              <p>Select from common vendors below, or type any vendor name. We track everything in CISA KEV and NVD.</p>
+            </div>
+            <div class="how-step">
+              <div class="step-num">2</div>
+              <h3>Submit your watchlist</h3>
+              <p>Enter your email and the vendors you care about. Upgrade to Pro to activate automated alerts.</p>
+            </div>
+            <div class="how-step">
+              <div class="step-num">3</div>
+              <h3>Get targeted alerts</h3>
+              <p>When a new brief for a watched vendor is published, we send you a direct alert — not the full feed.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section" id="signup">
+        <div class="wrap">
+          <div class="form-grid">
+
+            <div class="form-shell">
+              <h2>Set up your watchlist</h2>
+              <p>Submit your vendors and we'll be in touch to confirm your alert preferences.</p>
+
+              <form
+                action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="PatchBrief watchlist signup" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
+                <input type="hidden" name="_next" value="https://www.patchbrief.org/watchlist.html?submitted=1" />
+                <input type="hidden" name="interest_type" value="Vendor watchlist" />
+
+                <div class="field">
+                  <label for="wl-email">Work email</label>
+                  <input id="wl-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+                </div>
+
+                <div class="field">
+                  <label>Common vendors — click to select</label>
+                  <div class="vendor-chips" id="vendor-chips">
+                    <button type="button" class="vendor-chip" data-vendor="Microsoft">Microsoft</button>
+                    <button type="button" class="vendor-chip" data-vendor="Cisco">Cisco</button>
+                    <button type="button" class="vendor-chip" data-vendor="Fortinet">Fortinet</button>
+                    <button type="button" class="vendor-chip" data-vendor="Ivanti">Ivanti</button>
+                    <button type="button" class="vendor-chip" data-vendor="Palo Alto Networks">Palo Alto Networks</button>
+                    <button type="button" class="vendor-chip" data-vendor="Juniper">Juniper</button>
+                    <button type="button" class="vendor-chip" data-vendor="VMware">VMware</button>
+                    <button type="button" class="vendor-chip" data-vendor="Citrix">Citrix</button>
+                    <button type="button" class="vendor-chip" data-vendor="F5">F5</button>
+                    <button type="button" class="vendor-chip" data-vendor="SolarWinds">SolarWinds</button>
+                    <button type="button" class="vendor-chip" data-vendor="Google">Google</button>
+                    <button type="button" class="vendor-chip" data-vendor="Apple">Apple</button>
+                    <button type="button" class="vendor-chip" data-vendor="Adobe">Adobe</button>
+                    <button type="button" class="vendor-chip" data-vendor="Apache">Apache</button>
+                    <button type="button" class="vendor-chip" data-vendor="Splunk">Splunk</button>
+                    <button type="button" class="vendor-chip" data-vendor="Check Point">Check Point</button>
+                    <button type="button" class="vendor-chip" data-vendor="Oracle">Oracle</button>
+                    <button type="button" class="vendor-chip" data-vendor="Linux">Linux</button>
+                  </div>
+                  <input type="hidden" name="selected_vendors" id="selected-vendors-input" />
+                </div>
+
+                <div class="field">
+                  <label for="wl-other">Other vendors not listed above</label>
+                  <input id="wl-other" name="other_vendors" type="text" placeholder="e.g. Aruba, MikroTik, Veeam" />
+                  <p class="field-hint">Comma-separated. We track any vendor that appears in CISA KEV or NVD.</p>
+                </div>
+
+                <div class="field">
+                  <label for="wl-note">Anything else? (optional)</label>
+                  <textarea id="wl-note" name="notes" rows="2" placeholder="e.g. we specifically care about network edge devices"></textarea>
+                </div>
+
+                <button class="button primary" type="submit" style="width:100%">Submit watchlist &rarr;</button>
+              </form>
+            </div>
+
+            <div>
+              <div class="plan-upsell">
+                <h3>Watchlist alerts require Pro</h3>
+                <p>Automated per-vendor email alerts are a Pro feature ($9/month). The form above captures your preferences — upgrade to activate them.</p>
+                <a class="button" href="pricing.html#pro">See Pro plan &rarr;</a>
+              </div>
+
+              <div style="margin-top:1.5rem;border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;background:var(--paper);">
+                <h3 style="font-size:0.95rem;font-weight:760;margin-bottom:0.75rem;">What watchlist alerts include</h3>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
+                  <li style="font-size:0.88rem;color:var(--soft-ink);">&#x2713;&nbsp; CVE ID and severity</li>
+                  <li style="font-size:0.88rem;color:var(--soft-ink);">&#x2713;&nbsp; What the vulnerability is</li>
+                  <li style="font-size:0.88rem;color:var(--soft-ink);">&#x2713;&nbsp; Specific operator check for your product</li>
+                  <li style="font-size:0.88rem;color:var(--soft-ink);">&#x2713;&nbsp; CISA remediation deadline (if KEV)</li>
+                  <li style="font-size:0.88rem;color:var(--soft-ink);">&#x2713;&nbsp; Direct link to vendor advisory</li>
+                  <li style="font-size:0.88rem;color:var(--soft-ink);">&#x2713;&nbsp; Delivered within hours of publication</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="vendor-list-section">
+        <div class="wrap">
+          <h2>Vendors currently tracked</h2>
+          <p>Every vendor that has appeared in CISA KEV or NVD critical CVEs in the past 90 days.</p>
+          <div class="vendor-list">
+            <span class="vendor-pill">Microsoft</span>
+            <span class="vendor-pill">Cisco</span>
+            <span class="vendor-pill">Fortinet</span>
+            <span class="vendor-pill">Ivanti</span>
+            <span class="vendor-pill">Palo Alto Networks</span>
+            <span class="vendor-pill">Google</span>
+            <span class="vendor-pill">Adobe</span>
+            <span class="vendor-pill">Splunk</span>
+            <span class="vendor-pill">SolarWinds</span>
+            <span class="vendor-pill">Mozilla</span>
+            <span class="vendor-pill">Apache</span>
+            <span class="vendor-pill">Oracle</span>
+            <span class="vendor-pill">F5</span>
+            <span class="vendor-pill">Check Point</span>
+            <span class="vendor-pill">Citrix</span>
+            <span class="vendor-pill">Android</span>
+            <span class="vendor-pill">Linux</span>
+            <span class="vendor-pill">D-Link</span>
+            <span class="vendor-pill">JetBrains</span>
+            <span class="vendor-pill">LiteSpeed</span>
+            <span class="vendor-pill">Drupal</span>
+            <span class="vendor-pill">ConnectWise</span>
+            <span class="vendor-pill">SimpleHelp</span>
+            <span class="vendor-pill">Samsung</span>
+            <span class="vendor-pill">Trend Micro</span>
+            <span class="vendor-pill">Arista</span>
+            <span class="vendor-pill">Quest</span>
+            <span class="vendor-pill">Langflow</span>
+            <span class="vendor-pill">Ruby on Rails</span>
+            <span class="vendor-pill">MantisBT</span>
+            <span class="vendor-pill">PaperCut</span>
+            <span class="vendor-pill">SimplySign</span>
+            <span class="vendor-pill">NX</span>
+            <span class="vendor-pill">TrueConf</span>
+            <span class="vendor-pill">Kentico</span>
+            <span class="vendor-pill">Synacor</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="wrap footer-row">
+        <strong>PatchBrief</strong>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="feed.html">Feed</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="rss.xml">RSS</a>
+          <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+    (function () {
+      var chips = document.querySelectorAll('.vendor-chip');
+      var hiddenInput = document.getElementById('selected-vendors-input');
+      var selected = [];
+
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var vendor = chip.getAttribute('data-vendor');
+          var idx = selected.indexOf(vendor);
+          if (idx === -1) {
+            selected.push(vendor);
+            chip.classList.add('selected');
+          } else {
+            selected.splice(idx, 1);
+            chip.classList.remove('selected');
+          }
+          hiddenInput.value = selected.join(', ');
+        });
+      });
+
+      // Show submitted state
+      if (window.location.search.indexOf('submitted=1') !== -1) {
+        var form = document.querySelector('form');
+        if (form) {
+          form.innerHTML = '<div style="padding:2rem;text-align:center;"><p style="font-size:1.1rem;font-weight:760;color:var(--accent)">Watchlist received.</p><p style="color:var(--muted)">We\'ll be in touch to confirm your alert preferences and upgrade options.</p><a class="button" href="feed.html" style="display:inline-flex;margin-top:0.5rem;">Go to feed</a></div>';
+        }
+      }
+    })();
+    </script>
+  </body>
+</html>

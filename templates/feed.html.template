@@ -127,18 +127,34 @@
       .feed-read-link { display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 0.65rem; color: var(--accent); font-size: 0.88rem; font-weight: 760; text-decoration: none; border-bottom: 1px solid transparent; }
       .feed-read-link:hover { border-bottom-color: currentColor; }
 
-      /* Newsletter */
-      .newsletter-section { border-top: 1px solid var(--line); background: var(--paper); padding: 2.5rem 0; }
-      .newsletter-inner h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 760; margin-bottom: 0.5rem; }
-      .newsletter-inner p { color: var(--soft-ink); max-width: 55ch; margin-bottom: 1rem; }
+      /* Upgrade section */
+      .upgrade-section { border-top: 1px solid var(--line); background: var(--paper); padding: 2.5rem 0; }
+      .upgrade-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--line); overflow: hidden; }
+      .upgrade-panel { background: var(--paper); padding: 1.75rem; }
+      .upgrade-panel.upgrade-pro { background: var(--ink); color: #fff; }
+      .upgrade-label { font-size: 0.75rem; font-weight: 760; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+      .upgrade-pro .upgrade-label { color: rgba(255,255,255,0.45); }
+      .upgrade-heading { font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-weight: 760; margin-bottom: 0.5rem; line-height: 1.25; }
+      .upgrade-pro .upgrade-heading { color: #fff; }
+      .upgrade-desc { font-size: 0.9rem; color: var(--soft-ink); margin-bottom: 1rem; max-width: 44ch; }
+      .upgrade-pro .upgrade-desc { color: rgba(255,255,255,0.65); }
       .newsletter-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-      .newsletter-row input[type="email"] { flex: 1; min-width: 200px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--page); color: var(--ink); font: inherit; padding: 0.72rem 0.8rem; }
+      .newsletter-row input[type="email"] { flex: 1; min-width: 180px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--page); color: var(--ink); font: inherit; font-size: 0.9rem; padding: 0.65rem 0.8rem; }
       .newsletter-row input[type="email"]::placeholder { color: #89928f; }
       .newsletter-row input[type="email"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+      /* In-feed promo card */
+      .feed-promo { background: var(--ink); padding: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+      .feed-promo-text { flex: 1; min-width: 200px; }
+      .feed-promo-text p { margin: 0; font-size: 0.88rem; font-weight: 760; color: #fff; }
+      .feed-promo-text span { font-size: 0.82rem; color: rgba(255,255,255,0.55); font-weight: 400; }
       .button { display: inline-flex; min-height: 2.8rem; align-items: center; justify-content: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); padding: 0.72rem 0.95rem; cursor: pointer; color: var(--ink); font: inherit; font-weight: 760; text-decoration: none; white-space: nowrap; }
       .button:hover, .button:focus-visible { border-color: var(--ink); }
       .button.primary { border-color: var(--ink); background: var(--ink); color: #ffffff; }
       .button.primary:hover, .button.primary:focus-visible { background: var(--accent); border-color: var(--accent); }
+      .button.button-white { border-color: #fff; background: #fff; color: var(--ink); }
+      .button.button-white:hover { background: var(--accent-soft); border-color: var(--accent-soft); }
+      .button.button-ghost { border-color: rgba(255,255,255,0.35); background: transparent; color: #fff; font-size: 0.85rem; min-height: 2.4rem; padding: 0.5rem 0.9rem; }
+      .button.button-ghost:hover { border-color: #fff; }
       footer { border-top: 1px solid var(--line); padding: 1.5rem 0; }
       .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--muted); font-size: 0.9rem; }
       .footer-links { display: flex; flex-wrap: wrap; gap: 0.85rem; }
@@ -158,6 +174,7 @@
         .search-input { width: 100%; }
         .filter-row { flex-direction: column; align-items: flex-start; }
         .search-wrap { width: 100%; }
+        .upgrade-grid { grid-template-columns: 1fr; }
       }
     </style>
   </head>
@@ -172,8 +189,9 @@
         </a>
         <nav>
           <a href="feed.html" class="active">Feed</a>
+          <a href="pricing.html">Pricing</a>
           <a href="rss.xml">RSS</a>
-          <a class="nav-cta" href="/#newsletter">Subscribe</a>
+          <a class="nav-cta" href="pricing.html#pro">Get Pro</a>
         </nav>
       </div>
     </header>
@@ -230,26 +248,34 @@
         </div>
       </section>
 
-      <section class="newsletter-section" id="newsletter" aria-label="Newsletter signup">
+      <section class="upgrade-section" id="newsletter" aria-label="Subscribe or upgrade">
         <div class="wrap">
-          <div class="newsletter-inner">
-            <h2>Get the public PatchBrief feed by email.</h2>
-            <p>Receive short public-source briefs for exploited vulnerabilities, vendor advisories, and high-signal threat activity.</p>
-            <form
-              id="newsletter-form"
-              action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
-              method="POST"
-            >
-              <input type="hidden" name="_subject" value="New PatchBrief newsletter signup" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
-              <input type="hidden" name="_next" value="https://www.patchbrief.org/?subscribed=1" />
-              <input type="hidden" name="interest_type" value="Public feed / newsletter" />
-              <div class="newsletter-row">
-                <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
-                <button class="button primary" type="submit">Subscribe to public feed</button>
-              </div>
-            </form>
+          <div class="upgrade-grid">
+            <div class="upgrade-panel">
+              <p class="upgrade-label">Free</p>
+              <h2 class="upgrade-heading">Get the weekly digest by email.</h2>
+              <p class="upgrade-desc">Top 5 exploited CVEs and critical advisories from the past week, every Monday.</p>
+              <form
+                action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="New PatchBrief newsletter signup" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
+                <input type="hidden" name="_next" value="https://www.patchbrief.org/?subscribed=1#newsletter" />
+                <input type="hidden" name="interest_type" value="Free weekly digest" />
+                <div class="newsletter-row">
+                  <input name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+                  <button class="button primary" type="submit">Subscribe free</button>
+                </div>
+              </form>
+            </div>
+            <div class="upgrade-panel upgrade-pro">
+              <p class="upgrade-label">Pro &mdash; $9/mo</p>
+              <h2 class="upgrade-heading">Daily digest + vendor watchlist alerts.</h2>
+              <p class="upgrade-desc">Get this feed delivered every morning and receive targeted alerts when vulnerabilities hit vendors you run.</p>
+              <a class="button button-white" href="pricing.html#pro">Upgrade to Pro &rarr;</a>
+            </div>
           </div>
         </div>
       </section>
@@ -326,6 +352,20 @@
           searchQuery = searchInput.value;
           applyFilters();
         });
+      }
+
+      // Inject a Pro upgrade card after the 10th feed item
+      if (items.length > 10) {
+        var promo = document.createElement('div');
+        promo.className = 'feed-promo';
+        promo.setAttribute('data-promo', '1');
+        promo.innerHTML =
+          '<div class="feed-promo-text">' +
+          '<p>Get daily digests + alerts for vendors you run.</p>' +
+          '<span>PatchBrief Pro &mdash; $9/month</span>' +
+          '</div>' +
+          '<a class="button button-ghost" href="pricing.html#pro">Upgrade to Pro &rarr;</a>';
+        items[9].after(promo);
       }
     })();
     </script>
