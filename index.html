@@ -3,25 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="PatchBrief is a public security intelligence feed tracking exploited vulnerabilities, vendor advisories, patch releases, and high-signal threat activity."
-    />
+    <meta name="description" content="PatchBrief delivers short operator-ready security briefs on exploited CVEs, vendor advisories, and threat activity — updated daily from CISA KEV and NVD." />
     <meta name="theme-color" content="#15211f" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PatchBrief | Security intel feed" />
-    <meta
-      property="og:description"
-      content="Short source-backed security briefs for public vulnerability and threat signals."
-    />
+    <meta property="og:title" content="PatchBrief | Security intel feed for operators" />
+    <meta property="og:description" content="Daily briefs on exploited vulnerabilities, critical vendor advisories, and high-signal threat activity. Built for security operators who don't have time to read everything." />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="PatchBrief | Security intel feed" />
-    <meta
-      name="twitter:description"
-      content="Short source-backed security briefs for public vulnerability and threat signals."
-    />
+    <meta name="twitter:title" content="PatchBrief | Security intel feed for operators" />
+    <meta name="twitter:description" content="Daily briefs on exploited vulnerabilities, critical vendor advisories, and high-signal threat activity." />
     <link rel="alternate" type="application/rss+xml" title="PatchBrief RSS" href="/rss.xml" />
-    <title>PatchBrief | Security intel feed</title>
+    <title>PatchBrief | Security intel feed for operators</title>
     <style>
       :root {
         color-scheme: light;
@@ -34,269 +25,151 @@
         --line-strong: #cdd3cc;
         --accent: #0f766e;
         --accent-soft: #edf7f4;
+        --red: #913f32;
+        --red-soft: #fdf0ee;
+        --amber: #8a5c0f;
+        --amber-soft: #fdf5e6;
         --max: 1040px;
-        --measure: 690px;
+        --measure: 680px;
         --radius: 6px;
       }
-
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        background: var(--page);
-        color: var(--ink);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.6;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-      }
+      body { margin: 0; background: var(--page); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
       a { color: inherit; }
-      a:focus-visible,
-      button:focus-visible,
-      input:focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 3px;
-      }
+      a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
       h1, h2, h3, p { margin-top: 0; }
-      h1 {
-        max-width: 12ch;
-        margin-bottom: 1rem;
-        font-size: clamp(3rem, 8vw, 6.2rem);
-        font-weight: 760;
-        letter-spacing: 0;
-        line-height: 0.96;
-      }
-      h2 {
-        max-width: 16ch;
-        margin-bottom: 0.8rem;
-        font-size: clamp(1.8rem, 4vw, 3rem);
-        font-weight: 720;
-        letter-spacing: 0;
-        line-height: 1;
-      }
-      h3 { margin-bottom: 0.35rem; font-size: 1rem; font-weight: 760; }
       p { margin-bottom: 0.95rem; }
       .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
       .skip { position: absolute; top: 1rem; left: -9999px; }
-      .skip:focus {
-        left: 1rem;
-        z-index: 40;
-        border: 1px solid var(--line-strong);
-        border-radius: var(--radius);
-        background: var(--paper);
-        padding: 0.65rem 0.8rem;
-      }
-      header {
-        border-bottom: 1px solid var(--line);
-        background: rgba(251, 251, 248, 0.96);
-        backdrop-filter: blur(10px);
-      }
-      .nav {
-        display: flex;
-        min-height: 4rem;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-      }
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.65rem;
-        color: var(--ink);
-        font-weight: 760;
-        text-decoration: none;
-      }
-      .mark {
-        display: grid;
-        width: 2rem;
-        height: 2rem;
-        place-items: center;
-        border: 1px solid var(--line-strong);
-        border-radius: var(--radius);
-        background: var(--paper);
-        color: var(--accent);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-        font-size: 0.78rem;
-        font-weight: 800;
-      }
-      nav { display: flex; align-items: center; justify-content: flex-end; gap: 0.2rem; }
-      nav a {
-        border-radius: var(--radius);
-        color: var(--muted);
-        padding: 0.45rem 0.6rem;
-        font-size: 0.92rem;
-        text-decoration: none;
-      }
-      nav a:hover,
-      nav a:focus-visible,
-      .nav-cta { color: var(--ink); }
-      .nav-cta {
-        border: 1px solid var(--line-strong);
-        background: var(--paper);
-        font-weight: 760;
-      }
-      .hero {
-        border-bottom: 1px solid var(--line);
-        background: var(--paper);
-        padding: 5.25rem 0 3.5rem;
-      }
-      .hero-copy,
-      .section-head { max-width: var(--measure); }
-      .eyebrow,
-      .kicker {
-        margin-bottom: 0.75rem;
-        color: var(--accent);
-        font-size: 0.82rem;
-        font-weight: 760;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-      }
-      .lede {
-        max-width: var(--measure);
-        color: var(--soft-ink);
-        font-size: clamp(1.08rem, 2vw, 1.28rem);
-      }
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.7rem;
-        margin: 1.55rem 0 1rem;
-      }
-      .button {
-        display: inline-flex;
-        min-height: 2.8rem;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid var(--line-strong);
-        border-radius: var(--radius);
-        background: var(--paper);
-        padding: 0.72rem 0.95rem;
-        cursor: pointer;
-        color: var(--ink);
-        font: inherit;
-        font-weight: 760;
-        text-decoration: none;
-      }
-      .button:hover,
-      .button:focus-visible { border-color: var(--ink); }
-      .button.primary {
-        border-color: var(--ink);
-        background: var(--ink);
-        color: #ffffff;
-      }
-      .button.primary:hover,
-      .button.primary:focus-visible {
-        border-color: var(--accent);
-        background: var(--accent);
-      }
-      .note { margin: 0; color: var(--muted); font-size: 0.92rem; }
-      .section {
-        border-bottom: 1px solid var(--line);
-        padding: 4rem 0;
-      }
-      .section.alt,
-      .signup { background: var(--paper); }
-      .section-head { margin-bottom: 1.5rem; }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--line);
-        overflow: hidden;
-      }
-      .panel {
-        background: var(--paper);
-        padding: 1.15rem;
-      }
-      .panel p,
-      .section-head p,
-      li { color: var(--muted); }
-      .feed-preview {
-        display: grid;
-        gap: 1px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--line);
-        overflow: hidden;
-      }
-      .feed-item {
-        display: grid;
-        gap: 0.45rem;
-        background: var(--paper);
-        padding: 1.1rem;
-      }
-      .feed-item a {
-        color: var(--ink);
-        font-weight: 760;
-        text-decoration: none;
-      }
-      .feed-item a:hover { color: var(--accent); }
-      .meta {
-        color: var(--muted);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-        font-size: 0.76rem;
-      }
-      .signup-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.72fr);
-        gap: 2rem;
-      }
-      .signup-panel {
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--paper);
-        padding: 1rem;
-      }
-      .newsletter-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-      .newsletter-row input[type="email"] {
-        flex: 1;
-        min-width: 210px;
-        border: 1px solid var(--line-strong);
-        border-radius: var(--radius);
-        background: var(--paper);
-        color: var(--ink);
-        font: inherit;
-        padding: 0.78rem 0.8rem;
-      }
-      .newsletter-row input[type="email"]::placeholder { color: #89928f; }
-      footer { padding: 1.7rem 0 2rem; }
-      .footer-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 1rem;
-        color: var(--muted);
-      }
+      .skip:focus { left: 1rem; z-index: 40; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); padding: 0.65rem 0.8rem; }
+
+      /* Nav */
+      header { border-bottom: 1px solid var(--line); background: rgba(251,251,248,0.96); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 20; }
+      .nav { display: flex; min-height: 4rem; align-items: center; justify-content: space-between; gap: 1rem; }
+      .brand { display: inline-flex; align-items: center; gap: 0.65rem; font-weight: 760; text-decoration: none; color: var(--ink); }
+      .mark { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.78rem; font-weight: 800; }
+      nav { display: flex; align-items: center; gap: 0.2rem; }
+      nav a { border-radius: var(--radius); color: var(--muted); padding: 0.45rem 0.6rem; font-size: 0.92rem; text-decoration: none; }
+      nav a:hover { color: var(--ink); }
+      .nav-cta { border: 1px solid var(--line-strong); background: var(--ink) !important; color: #fff !important; font-weight: 760; padding: 0.45rem 0.85rem !important; }
+      .nav-cta:hover { background: var(--accent) !important; border-color: var(--accent) !important; }
+
+      /* Buttons */
+      .button { display: inline-flex; min-height: 2.8rem; align-items: center; justify-content: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); padding: 0.72rem 1.1rem; cursor: pointer; color: var(--ink); font: inherit; font-size: 0.95rem; font-weight: 760; text-decoration: none; white-space: nowrap; transition: border-color 0.12s, background 0.12s; }
+      .button:hover { border-color: var(--ink); }
+      .button.primary { border-color: var(--ink); background: var(--ink); color: #ffffff; }
+      .button.primary:hover { background: var(--accent); border-color: var(--accent); }
+      .button.accent { border-color: var(--accent); background: var(--accent); color: #ffffff; }
+      .button.accent:hover { background: #0d6560; border-color: #0d6560; }
+      .button.lg { min-height: 3.2rem; padding: 0.9rem 1.4rem; font-size: 1rem; }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
+
+      /* Hero */
+      .hero { border-bottom: 1px solid var(--line); background: var(--paper); padding: 5.5rem 0 4rem; }
+      .eyebrow { margin-bottom: 0.75rem; color: var(--accent); font-size: 0.82rem; font-weight: 760; letter-spacing: 0.04em; text-transform: uppercase; }
+      .hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 780; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 1.25rem; max-width: 14ch; }
+      .hero-lede { max-width: 54ch; color: var(--soft-ink); font-size: clamp(1.05rem, 2.5vw, 1.22rem); line-height: 1.55; margin-bottom: 0; }
+      .hero-note { margin-top: 1.2rem; margin-bottom: 0; color: var(--muted); font-size: 0.88rem; }
+
+      /* Stats bar */
+      .stats-bar { border-bottom: 1px solid var(--line); background: var(--page); padding: 0.9rem 0; }
+      .stats-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 2rem; }
+      .stat { display: flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.88rem; }
+      .stat strong { color: var(--ink); font-weight: 760; }
+      .stat-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+
+      /* Sections */
+      .section { border-bottom: 1px solid var(--line); padding: 4.5rem 0; }
+      .section.alt { background: var(--paper); }
+      .section-eyebrow { color: var(--accent); font-size: 0.8rem; font-weight: 760; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.6rem; }
+      .section h2 { font-size: clamp(1.7rem, 4vw, 2.8rem); font-weight: 760; letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 0.8rem; max-width: 18ch; }
+      .section-lede { max-width: 55ch; color: var(--soft-ink); font-size: 1.02rem; margin-bottom: 2rem; }
+
+      /* Feature grid */
+      .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--line); overflow: hidden; }
+      .feature-card { background: var(--paper); padding: 1.4rem; }
+      .feature-icon { font-size: 1.25rem; margin-bottom: 0.7rem; }
+      .feature-card h3 { font-size: 0.97rem; font-weight: 760; margin-bottom: 0.35rem; }
+      .feature-card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+      /* Feed preview */
+      .feed-preview { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+      .preview-item { background: var(--paper); padding: 1.1rem 1.25rem; border-bottom: 1px solid var(--line); }
+      .preview-item:last-child { border-bottom: 0; }
+      .preview-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-bottom: 0.45rem; }
+      .preview-badge { display: inline-flex; align-items: center; border-radius: 4px; padding: 0.12rem 0.4rem; font-size: 0.7rem; font-weight: 760; }
+      .badge-kev { background: var(--accent-soft); color: var(--accent); }
+      .badge-critical { background: var(--red-soft); color: var(--red); }
+      .badge-patch { background: var(--amber-soft); color: var(--amber); }
+      .preview-date { color: var(--muted); font-size: 0.78rem; }
+      .preview-item h3 { font-size: 0.95rem; font-weight: 760; margin-bottom: 0.3rem; }
+      .preview-item h3 a { color: var(--ink); text-decoration: none; }
+      .preview-item h3 a:hover { color: var(--accent); }
+      .preview-item p { color: var(--muted); font-size: 0.86rem; margin: 0; }
+
+      /* Pricing */
+      .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--line); overflow: hidden; margin-bottom: 1rem; }
+      .plan { background: var(--paper); padding: 1.75rem 1.5rem; display: flex; flex-direction: column; }
+      .plan.featured { background: var(--ink); color: #fff; }
+      .plan-name { font-size: 0.78rem; font-weight: 760; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--muted); }
+      .plan.featured .plan-name { color: rgba(255,255,255,0.55); }
+      .plan-price { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 780; letter-spacing: -0.02em; line-height: 1; margin-bottom: 0.2rem; }
+      .plan-price sub { font-size: 0.95rem; font-weight: 500; letter-spacing: 0; }
+      .plan-period { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.1rem; }
+      .plan.featured .plan-period { color: rgba(255,255,255,0.5); }
+      .plan-desc { font-size: 0.9rem; color: var(--soft-ink); margin-bottom: 1.25rem; flex: 1; }
+      .plan.featured .plan-desc { color: rgba(255,255,255,0.75); }
+      .plan-features { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.55rem; }
+      .plan-features li { font-size: 0.88rem; color: var(--soft-ink); display: flex; align-items: flex-start; gap: 0.5rem; }
+      .plan.featured .plan-features li { color: rgba(255,255,255,0.8); }
+      .plan-features li::before { content: "✓"; color: var(--accent); font-weight: 760; flex-shrink: 0; margin-top: 0.05rem; }
+      .plan.featured .plan-features li::before { color: #5eead4; }
+      .plan-cta { margin-top: auto; }
+      .plan-cta .button { width: 100%; }
+      .plan.featured .button { border-color: #fff; background: #fff; color: var(--ink); }
+      .plan.featured .button:hover { background: var(--accent-soft); border-color: var(--accent-soft); }
+      .pricing-note { color: var(--muted); font-size: 0.85rem; text-align: center; }
+
+      /* FAQ */
+      .faq-list { display: grid; gap: 1px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--line); overflow: hidden; }
+      .faq-item { background: var(--paper); padding: 1.25rem; }
+      .faq-item h3 { font-size: 0.97rem; font-weight: 760; margin-bottom: 0.4rem; }
+      .faq-item p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+      /* Newsletter / signup */
+      .signup-section { background: var(--paper); border-bottom: 1px solid var(--line); padding: 4.5rem 0; }
+      .signup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+      .signup-panel { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; background: var(--page); }
+      .signup-panel h3 { font-size: 1rem; font-weight: 760; margin-bottom: 0.35rem; }
+      .signup-panel p { color: var(--muted); font-size: 0.88rem; margin-bottom: 1rem; }
+      .email-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+      .email-row input[type="email"] { flex: 1; min-width: 180px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--ink); font: inherit; font-size: 0.9rem; padding: 0.65rem 0.75rem; }
+      .email-row input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: 2px; border-color: transparent; }
+
+      /* Footer */
+      footer { padding: 2rem 0; }
+      .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--muted); font-size: 0.88rem; }
       .footer-links { display: flex; flex-wrap: wrap; gap: 0.85rem; }
-      footer a { color: var(--ink); }
-      @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after { scroll-behavior: auto !important; }
-      }
-      @media (max-width: 900px) {
-        .grid,
-        .signup-grid { grid-template-columns: 1fr; }
+      .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; }
+      .footer-links a:hover { color: var(--ink); }
+      footer strong { color: var(--ink); }
+
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+      @media (max-width: 860px) {
+        .feature-grid, .pricing-grid { grid-template-columns: 1fr; }
+        .signup-grid { grid-template-columns: 1fr; gap: 1.5rem; }
       }
       @media (max-width: 720px) {
         .wrap { width: min(calc(100% - 24px), var(--max)); }
-        .nav {
-          min-height: auto;
-          align-items: flex-start;
-          flex-direction: column;
-          padding: 0.85rem 0;
-        }
-        nav {
-          width: 100%;
-          justify-content: flex-start;
-          overflow-x: auto;
-          padding-bottom: 0.15rem;
-        }
+        .nav { min-height: auto; align-items: flex-start; flex-direction: column; padding: 0.85rem 0; }
+        nav { width: 100%; overflow-x: auto; padding-bottom: 0.1rem; }
         nav a { white-space: nowrap; }
-        .hero { padding: 3.4rem 0 2.6rem; }
+        .hero { padding: 3.5rem 0 2.8rem; }
         .section { padding: 3rem 0; }
-        .button,
-        .newsletter-row input[type="email"] { width: 100%; }
+        .button { width: 100%; }
+        .email-row input[type="email"], .email-row .button { width: 100%; }
+        .stats-row { gap: 0.75rem 1.5rem; }
       }
     </style>
   </head>
@@ -305,131 +178,271 @@
 
     <header>
       <div class="wrap nav" aria-label="Primary navigation">
-        <a class="brand" href="#top">
+        <a class="brand" href="/">
           <span class="mark" aria-hidden="true">PB</span>
           <span>PatchBrief</span>
         </a>
         <nav>
           <a href="feed.html">Feed</a>
-          <a href="rss.xml">RSS</a>
-          <a class="nav-cta" href="#newsletter">Subscribe</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="watchlist.html">Watchlist</a>
+          <a class="nav-cta" href="pricing.html#pro">Get Pro</a>
         </nav>
       </div>
     </header>
 
     <main id="content">
-      <section class="hero" id="top">
+
+      <!-- HERO -->
+      <section class="hero" aria-label="Hero">
         <div class="wrap">
-          <div class="hero-copy">
-            <p class="eyebrow">Security intel feed</p>
-            <h1>Track public security signals worth reading.</h1>
-            <p class="lede">
-              PatchBrief follows exploited vulnerabilities, vendor advisories, patch releases,
-              and high-signal threat activity, then turns them into short source-backed briefs.
-            </p>
-            <div class="cta-row" aria-label="Primary actions">
-              <a class="button primary" href="feed.html">Read the feed</a>
-              <a class="button" href="#newsletter">Get updates</a>
-            </div>
-            <p class="note">Public sources only. No scanning, exposure claims, or dashboard sprawl.</p>
+          <p class="eyebrow">Security intelligence feed</p>
+          <h1>Security intel that actually updates.</h1>
+          <p class="hero-lede">
+            PatchBrief delivers short, source-backed briefs on actively exploited CVEs,
+            critical vendor advisories, and high-signal threat activity — pulled daily
+            from CISA KEV and NVD so you don't have to watch both yourself.
+          </p>
+          <div class="cta-row">
+            <a class="button primary lg" href="feed.html">Read the live feed</a>
+            <a class="button lg" href="pricing.html">See pricing</a>
           </div>
+          <p class="hero-note">Public sources only. No scanner, no dashboard, no vendor lock-in.</p>
         </div>
       </section>
 
-      <section class="section" aria-label="Feed scope">
+      <!-- STATS BAR -->
+      <div class="stats-bar" aria-label="Feed statistics">
         <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">MVP scope</p>
-            <h2>A focused public feed first.</h2>
-            <p>
-              The current product is a free security intel feed. Monetization comes later,
-              after the publishing cadence, source quality, and reader demand are clearer.
-            </p>
+          <div class="stats-row">
+            <span class="stat"><span class="stat-dot"></span> <strong>100+</strong> briefs published</span>
+            <span class="stat"><span class="stat-dot"></span> <strong>CISA KEV</strong> monitored daily</span>
+            <span class="stat"><span class="stat-dot"></span> <strong>NVD Critical</strong> monitored daily</span>
+            <span class="stat"><span class="stat-dot"></span> Updated every <strong>24 hours</strong></span>
+            <span class="stat"><span class="stat-dot"></span> Free tier forever</span>
           </div>
-          <div class="grid">
-            <article class="panel">
-              <h3>Exploited vulnerabilities</h3>
-              <p>CISA KEV additions and credible public exploitation reports.</p>
+        </div>
+      </div>
+
+      <!-- WHAT YOU GET -->
+      <section class="section alt" aria-labelledby="features-heading">
+        <div class="wrap">
+          <p class="section-eyebrow">What you get</p>
+          <h2 id="features-heading">The signals that matter, already summarized.</h2>
+          <p class="section-lede">Stop watching five feeds and three vendor portals. PatchBrief tracks the high-signal sources and converts them into short, actionable briefs.</p>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">&#x26A0;&#xFE0F;</div>
+              <h3>Known Exploited Vulnerabilities</h3>
+              <p>Every CISA KEV addition, summarized with vendor, product, required action, and remediation deadline.</p>
             </article>
-            <article class="panel">
-              <h3>Vendor advisories</h3>
-              <p>Critical updates from vendors common in operator environments.</p>
+            <article class="feature-card">
+              <div class="feature-icon">&#x1F4CB;</div>
+              <h3>Critical vendor advisories</h3>
+              <p>CVSS critical CVEs from NVD, filtered to reduce noise. Vendor, product, and operator check included.</p>
             </article>
-            <article class="panel">
+            <article class="feature-card">
+              <div class="feature-icon">&#x1F6E1;&#xFE0F;</div>
               <h3>Threat activity</h3>
-              <p>High-signal ransomware and campaign reporting with public sources.</p>
+              <p>Ransomware campaigns, Patch Tuesday summaries, and exploit activity with public source links.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">&#x2705;</div>
+              <h3>Operator check on every brief</h3>
+              <p>Each item tells you exactly what to verify or patch — not just that a vulnerability exists.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">&#x1F4E1;</div>
+              <h3>RSS + JSON API</h3>
+              <p>Subscribe in any RSS reader or pull structured JSON into your SIEM, Slack bot, or ticketing system.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">&#x1F4E7;</div>
+              <h3>Email digest</h3>
+              <p>Get a curated digest of the week's top exploited CVEs and critical advisories delivered to your inbox.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt" aria-label="Recent feed examples">
+      <!-- FEED PREVIEW -->
+      <section class="section" aria-labelledby="preview-heading">
         <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Feed format</p>
-            <h2>Short briefs with source links.</h2>
-            <p>Each item explains what happened, why it matters, what operators may want to check, and where the claims came from.</p>
-          </div>
+          <p class="section-eyebrow">Feed format</p>
+          <h2 id="preview-heading">Short briefs with source links.</h2>
+          <p class="section-lede">Each item includes what happened, why it matters, what to check, and where the claim came from.</p>
           <div class="feed-preview">
-            <article class="feed-item">
-              <span class="meta">KEV · Known exploited · CVE-2024-7971</span>
-              <a href="items/chrome-zero-day-kev-2024-7971.html">CISA KEV adds actively exploited Chrome V8 type confusion zero-day</a>
-              <p class="note">Chrome desktop update coverage and unmanaged browser follow-up.</p>
+            <article class="preview-item">
+              <div class="preview-meta">
+                <span class="preview-badge badge-kev">KEV</span>
+                <span class="preview-badge badge-kev">Known exploited</span>
+                <span class="preview-date">Jun 18, 2026 &middot; CVE-2026-20253</span>
+              </div>
+              <h3><a href="items/2026-06-splunk-cve-2026-20253.html">Splunk Enterprise Missing Authentication for Critical Function Vulnerability</a></h3>
+              <p>Confirm Splunk Enterprise is patched. Apply mitigations per vendor instructions and CISA BOD 26-04 guidance. Remediation deadline: Jun 21, 2026.</p>
             </article>
-            <article class="feed-item">
-              <span class="meta">Patch Tuesday · Critical vendor advisory</span>
-              <a href="items/microsoft-patch-tuesday-msmq-2024-30080.html">Microsoft Patch Tuesday: critical RCE in Message Queuing</a>
-              <p class="note">MSMQ inventory, exposure review, and June update status.</p>
+            <article class="preview-item">
+              <div class="preview-meta">
+                <span class="preview-badge badge-kev">KEV</span>
+                <span class="preview-badge badge-kev">Known exploited</span>
+                <span class="preview-date">Jun 15, 2026 &middot; CVE-2026-11645</span>
+              </div>
+              <h3><a href="items/2026-06-google-cve-2026-11645.html">Google Chromium V8 Type Confusion Vulnerability</a></h3>
+              <p>Verify Chrome/Chromium is updated across managed endpoints. Check unmanaged devices and browser deployment policy.</p>
             </article>
-            <article class="feed-item">
-              <span class="meta">Threat activity · Ransomware</span>
-              <a href="items/alphv-blackcat-healthcare-vpn-2024.html">ALPHV/BlackCat ransomware targets healthcare via unpatched VPN appliances</a>
-              <p class="note">VPN patch levels, MFA coverage, and remote access log review.</p>
+            <article class="preview-item">
+              <div class="preview-meta">
+                <span class="preview-badge badge-critical">Vendor advisory</span>
+                <span class="preview-badge badge-critical">Critical</span>
+                <span class="preview-date">Jun 2026 &middot; CVE-2026-4688</span>
+              </div>
+              <h3><a href="items/2026-03-mozilla-cve-2026-4688.html">Mozilla Firefox Critical Security Update — June 2026</a></h3>
+              <p>Apply the latest Firefox update across all managed systems. Verify auto-update is enabled for unmanaged devices.</p>
             </article>
           </div>
           <div class="cta-row">
-            <a class="button primary" href="feed.html">Open full feed</a>
+            <a class="button primary" href="feed.html">Open full feed (100+ items)</a>
+            <a class="button" href="rss.xml">Subscribe via RSS</a>
           </div>
         </div>
       </section>
 
-      <section class="section signup" id="newsletter" aria-label="Newsletter signup">
-        <div class="wrap signup-grid">
-          <div>
-            <p class="kicker">Subscribe</p>
-            <h2>Get the feed by email.</h2>
-            <p>
-              Join the interest list for public-source PatchBrief updates. Early monetization experiments
-              may include sponsorships, premium archives, or paid feed options later.
-            </p>
-            <p class="note">No account. No scanner. Just the feed and occasional product updates.</p>
-          </div>
-          <aside class="signup-panel" aria-label="Newsletter signup form">
-            <form
-              id="newsletter-form"
-              action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
-              method="POST"
-            >
-              <input type="hidden" name="_subject" value="New PatchBrief newsletter signup" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
-              <input type="hidden" name="_next" value="https://www.patchbrief.org/?subscribed=1#newsletter" />
-              <input type="hidden" name="interest_type" value="Public security intel feed" />
-              <div class="newsletter-row">
-                <input
-                  id="newsletter-email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  placeholder="you@company.com"
-                  required
-                />
-                <button class="button primary" type="submit">Subscribe</button>
+      <!-- PRICING -->
+      <section class="section alt" id="pricing" aria-labelledby="pricing-heading">
+        <div class="wrap">
+          <p class="section-eyebrow">Pricing</p>
+          <h2 id="pricing-heading">Start free. Upgrade when you need more.</h2>
+          <p class="section-lede">The public feed is always free. Pro and Team unlock daily email digests, vendor watchlists, and API access.</p>
+
+          <div class="pricing-grid">
+
+            <!-- Free -->
+            <div class="plan">
+              <p class="plan-name">Free</p>
+              <p class="plan-price">$0</p>
+              <p class="plan-period">forever</p>
+              <p class="plan-desc">Full public feed with real-time KEV and CVE data. No account required.</p>
+              <ul class="plan-features">
+                <li>Live public feed (100+ briefs)</li>
+                <li>RSS subscription</li>
+                <li>JSON API feed</li>
+                <li>30-day history</li>
+                <li>Filter by type and signal</li>
+              </ul>
+              <div class="plan-cta">
+                <a class="button" href="feed.html">Read the feed</a>
               </div>
-            </form>
-          </aside>
+            </div>
+
+            <!-- Pro (featured) -->
+            <div class="plan featured" id="pro">
+              <p class="plan-name">Pro</p>
+              <p class="plan-price">$9<sub>/mo</sub></p>
+              <p class="plan-period">or $79/year &mdash; save 27%</p>
+              <p class="plan-desc">Everything you need to stay ahead of exploited vulnerabilities without checking the feed manually.</p>
+              <ul class="plan-features">
+                <li>Everything in Free</li>
+                <li>Daily email digest (top 5 items)</li>
+                <li>Weekly curated brief</li>
+                <li>Vendor watchlist — up to 10 vendors</li>
+                <li>Full 365-day history</li>
+                <li>Priority signal filtering</li>
+              </ul>
+              <div class="plan-cta">
+                <!-- Replace href values with your Stripe Payment Links -->
+                <a class="button" href="mailto:patchbrief@protonmail.com?subject=PatchBrief Pro subscription">Get Pro &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Team -->
+            <div class="plan">
+              <p class="plan-name">Team</p>
+              <p class="plan-price">$49<sub>/mo</sub></p>
+              <p class="plan-period">or $399/year &mdash; save 32%</p>
+              <p class="plan-desc">API access, team seats, and custom watchlists for security teams that need to integrate intel into their workflow.</p>
+              <ul class="plan-features">
+                <li>Everything in Pro</li>
+                <li>JSON API access (structured data)</li>
+                <li>5 team seats</li>
+                <li>Unlimited vendor watchlists</li>
+                <li>CSV export</li>
+                <li>Priority support</li>
+              </ul>
+              <div class="plan-cta">
+                <!-- Replace href values with your Stripe Payment Links -->
+                <a class="button primary" href="mailto:patchbrief@protonmail.com?subject=PatchBrief Team subscription">Get Team &rarr;</a>
+              </div>
+            </div>
+
+          </div>
+          <p class="pricing-note">All plans include a 14-day refund policy. <a href="pricing.html" style="color:var(--accent)">Full pricing details &rarr;</a></p>
         </div>
       </section>
+
+      <!-- FAQ -->
+      <section class="section" aria-labelledby="faq-heading">
+        <div class="wrap">
+          <p class="section-eyebrow">FAQ</p>
+          <h2 id="faq-heading">Common questions.</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>Where does the data come from?</h3>
+              <p>CISA's Known Exploited Vulnerabilities catalog and NVD (NIST National Vulnerability Database). Both are authoritative public sources. PatchBrief does not manufacture or score vulnerabilities — it summarizes and links directly to the source.</p>
+            </div>
+            <div class="faq-item">
+              <h3>How is this different from just watching the CISA KEV feed?</h3>
+              <p>CISA KEV tells you a CVE exists. PatchBrief adds context: what it is, why it matters now, what specifically operators should check, and direct links to vendor advisories. It also consolidates KEV, NVD critical CVEs, and threat activity into one place.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What does the vendor watchlist do?</h3>
+              <p>Pro and Team subscribers can specify the vendors they care about (Cisco, Fortinet, Microsoft, etc.) and receive targeted alerts when a new brief is published for those vendors — instead of reading everything.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Can I integrate this into my SIEM or ticketing system?</h3>
+              <p>Yes. The JSON API feed (<code>patchbrief.org/feed.json</code>) is machine-readable and includes all brief fields. Team subscribers get full structured access. The RSS feed works with any RSS-compatible integration.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Does PatchBrief scan my environment?</h3>
+              <p>No. PatchBrief is an intel feed based on public sources. It does not scan networks, access systems, or verify exposure. Every brief links to the public source it is based on.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="signup-section" id="newsletter" aria-label="Subscribe">
+        <div class="wrap">
+          <p class="section-eyebrow">Subscribe</p>
+          <h2 style="font-size:clamp(1.7rem,4vw,2.4rem);font-weight:760;letter-spacing:-0.01em;line-height:1.1;margin-bottom:0.75rem;">Get the feed delivered.</h2>
+          <p style="color:var(--soft-ink);max-width:52ch;margin-bottom:2rem;">Subscribe free to receive weekly digests of the top exploited CVEs and critical advisories. Upgrade to Pro for daily delivery and vendor alerts.</p>
+          <div class="signup-grid">
+            <div class="signup-panel">
+              <h3>Free weekly digest</h3>
+              <p>Top 5 items from the week, every Monday morning.</p>
+              <form
+                action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="New PatchBrief newsletter signup" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
+                <input type="hidden" name="_next" value="https://www.patchbrief.org/?subscribed=1#newsletter" />
+                <input type="hidden" name="interest_type" value="Free weekly digest" />
+                <div class="email-row">
+                  <input name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+                  <button class="button primary" type="submit">Subscribe free</button>
+                </div>
+              </form>
+            </div>
+            <div class="signup-panel" style="border-color:var(--accent);background:var(--accent-soft);">
+              <h3 style="color:var(--accent);">Pro — daily digest + watchlist alerts</h3>
+              <p style="color:var(--accent);opacity:0.8;">Get exploited CVE alerts for your specific vendors, every day.</p>
+              <a class="button accent" href="pricing.html#pro" style="width:100%;justify-content:center;">See Pro &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <footer>
@@ -437,6 +450,8 @@
         <strong>PatchBrief</strong>
         <div class="footer-links">
           <a href="feed.html">Feed</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="watchlist.html">Watchlist</a>
           <a href="rss.xml">RSS</a>
           <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
         </div>

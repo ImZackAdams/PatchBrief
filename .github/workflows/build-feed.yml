@@ -2,16 +2,22 @@ name: Build feed
 
 on:
   schedule:
-    # Daily at 09:00 UTC — fetches new KEV + NVD entries and rebuilds.
+    # Daily at 09:00 UTC — ingest + build
     - cron: "0 9 * * *"
+    # Weekly digest every Monday at 10:00 UTC (after daily build)
+    - cron: "0 10 * * 1"
   workflow_dispatch:
     inputs:
       days:
-        description: "Look-back window in days (default: 3 for scheduled runs)"
+        description: "Ingest look-back window in days"
         default: "3"
         required: false
       kev_only:
         description: "Only ingest CISA KEV (skip NVD)"
+        type: boolean
+        default: false
+      digest_only:
+        description: "Generate digest only, skip ingest + build"
         type: boolean
         default: false
   push:
@@ -40,7 +46,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # -----------------------------------------------------------------------
+      # Ingest — runs on schedule and manual dispatch (not on content pushes)
+      # -----------------------------------------------------------------------
       - name: Ingest new vulnerabilities
+        if: >
+          github.event_name == 'schedule' && github.event.schedule == '0 9 * * *' ||
+          github.event_name == 'workflow_dispatch' && github.event.inputs.digest_only != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
@@ -51,17 +63,48 @@ jobs:
             KEV_FLAG="--kev-only"
           fi
           python -m patchbrief.cli ingest --days "$DAYS" $KEV_FLAG
-        # Only run ingest on scheduled/manual triggers, not on push to content files.
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
 
+      # -----------------------------------------------------------------------
+      # Build — always runs except digest-only dispatch
+      # -----------------------------------------------------------------------
       - name: Build feed
+        if: github.event.inputs.digest_only != 'true'
         run: python -m patchbrief.cli build-feed
 
+      # -----------------------------------------------------------------------
+      # Weekly digest — runs every Monday and on manual trigger
+      # -----------------------------------------------------------------------
+      - name: Generate weekly digest
+        if: >
+          github.event_name == 'schedule' && github.event.schedule == '0 10 * * 1' ||
+          github.event_name == 'workflow_dispatch' && github.event.inputs.digest_only == 'true'
+        run: |
+          # Derive issue number from weeks since epoch
+          ISSUE=$(python3 -c "import datetime; print((datetime.date.today() - datetime.date(2025,1,1)).days // 7 + 1)")
+          python -m patchbrief.cli digest \
+            --days 7 \
+            --max-items 8 \
+            --issue "$ISSUE" \
+            --label "Weekly" \
+            --output "digest-latest.html"
+          echo "Generated digest-latest.html (issue $ISSUE)"
+
+      # -----------------------------------------------------------------------
+      # Commit all generated files
+      # -----------------------------------------------------------------------
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add feed.html rss.xml items/ content/feed-items/ content/processed-state.json
+          git add \
+            feed.html \
+            rss.xml \
+            feed.json \
+            items/ \
+            content/feed-items/ \
+            content/processed-state.json \
+            digest-latest.html \
+            2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

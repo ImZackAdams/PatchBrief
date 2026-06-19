@@ -14,7 +14,8 @@ This document covers everything needed to run, maintain, and extend the PatchBri
 6. [Secret Configuration](#secret-configuration)
 7. [Writing Feed Items by Hand](#writing-feed-items-by-hand)
 8. [Feed Item Field Reference](#feed-item-field-reference)
-9. [Troubleshooting](#troubleshooting)
+9. [Monetization Setup](#monetization-setup)
+10. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -362,6 +363,143 @@ git push
 ```
 
 GitHub Pages picks up changes within a few minutes.
+
+---
+
+## Monetization Setup
+
+PatchBrief uses a three-tier model: Free (public feed), Pro ($9/month), Team ($49/month). The public feed is already live. This section explains what you need to do to start accepting payment and fulfilling subscriptions.
+
+### Revenue model overview
+
+| Tier | Price | Product | Fulfillment |
+|---|---|---|---|
+| Free | $0 | Public feed, RSS, `feed.json` | Nothing — it's already live |
+| Pro | $9/mo or $79/yr | Daily digest email, vendor watchlist alerts | Stripe + email platform |
+| Team | $49/mo or $399/yr | API access, 5 seats, CSV export, priority support | Stripe + email platform |
+
+---
+
+### Step 1 — Set up Stripe Payment Links
+
+Stripe Payment Links let you accept cards with no code and no backend. Create them at [dashboard.stripe.com/payment-links](https://dashboard.stripe.com/payment-links).
+
+Create four links (monthly + yearly for each paid tier) and set the product name, price, and billing cycle. Once created, each link is a URL like `https://buy.stripe.com/abc123`.
+
+Then open `pricing.html` and replace the placeholder `href` values in the Pro and Team plan CTA buttons:
+
+```html
+<!-- Find these two comment blocks in pricing.html and replace the href -->
+<!-- REPLACE THESE href VALUES WITH YOUR STRIPE PAYMENT LINKS -->
+<a class="button button-white full" href="https://buy.stripe.com/YOUR_PRO_MONTHLY">Get Pro monthly →</a>
+<a class="button button-white full" href="https://buy.stripe.com/YOUR_PRO_YEARLY">Get Pro yearly →</a>
+```
+
+Do the same for the Team plan buttons directly below. Also update the matching buttons in `index.html` under the `#pricing` section.
+
+After replacing, rebuild and push:
+
+```bash
+python -m patchbrief.cli build-feed
+git add index.html pricing.html feed.html items/ feed.json rss.xml
+git commit -m "add Stripe payment links"
+git push
+```
+
+---
+
+### Step 2 — Choose an email platform
+
+The `digest` command generates a self-contained HTML email file (`digest-latest.html`). You paste or import that into your email platform to send it.
+
+**Recommended platforms (all have free tiers):**
+
+| Platform | Free tier | Why use it |
+|---|---|---|
+| [Beehiiv](https://beehiiv.com) | 2,500 subscribers | Built-in paid newsletter tiers, no transaction fee |
+| [Mailchimp](https://mailchimp.com) | 500 subscribers | Familiar, good automation |
+| [ConvertKit](https://convertkit.com) | 1,000 subscribers | Strong for segmentation (free vs. paid subscribers) |
+| [Resend](https://resend.com) | 3,000/mo free | Developer-friendly API, great for automation |
+
+**Beehiiv is the best fit** because it has a native paid subscription tier — subscribers can pay directly through Beehiiv, which eliminates the need for Stripe until you outgrow it.
+
+---
+
+### Step 3 — Send the weekly digest
+
+The weekly digest is generated automatically every Monday at 10:00 UTC by GitHub Actions and saved as `digest-latest.html` in the repo root.
+
+**To send it:**
+
+1. Open `digest-latest.html` in a browser to preview it
+2. Copy the HTML source
+3. In your email platform, create a new campaign → paste HTML
+4. Send to your free subscriber list
+
+**To generate it manually:**
+
+```bash
+python -m patchbrief.cli digest --days 7 --issue 12 --output digest-latest.html
+```
+
+Increment `--issue` by 1 each week. GitHub Actions auto-calculates the issue number from weeks since launch.
+
+---
+
+### Step 4 — Fulfill Pro subscribers (vendor watchlists)
+
+When someone upgrades to Pro via Stripe:
+
+1. **Stripe sends you an email** when a payment succeeds. You can also set up a Stripe webhook to notify a Slack channel or email alias.
+2. **Add them to a "Pro" segment** in your email platform.
+3. **Switch their digest frequency to daily.** Run `digest --days 1 --label Daily` each morning in the GitHub Actions schedule (the daily run already does this via cron at 09:00 UTC).
+4. **Set up watchlist filtering.** Ask the subscriber which vendors they want to track (the `watchlist.html` form collects this). Then in your email platform, create an automation that sends them a one-off email whenever a new item for that vendor is published.
+
+For now, watchlist fulfillment is manual. As volume grows, the right automation depends on your email platform — Beehiiv and ConvertKit both support tag-based automations that can trigger on new subscriber tags.
+
+---
+
+### Step 5 — JSON API access for Team subscribers
+
+The JSON API feed is at `https://www.patchbrief.org/feed.json`. It is publicly accessible now — no auth. The Team plan sells:
+- **Priority access** (the public feed has no SLA; Team subscribers get a direct contact)
+- **Structured integration help** (setting up SIEM/Slack/ticketing connectors)
+- **Full history** (the public JSON is always the current build; Team subscribers get access to archived builds)
+
+To add basic auth in future, the simplest approach is to move the feed to Cloudflare Pages with a Cloudflare Access rule, or to a private GitHub Pages repo. Document that as a follow-on when you have your first paying Team subscriber.
+
+---
+
+### Step 6 — Track revenue and growth
+
+**Key numbers to watch weekly:**
+
+- Stripe dashboard: MRR, new subscribers, churn
+- Email platform: subscriber count, open rate, click rate on the upgrade CTA
+- GitHub Actions logs: confirm daily ingest ran and committed new items
+- `feed.json` → `total_items`: confirm the feed is growing
+
+**Upgrade funnel:**
+
+```
+Visitor → reads feed.html → sees in-feed Pro card (item 11) → pricing.html → Stripe
+Visitor → reads feed.html → subscribes to free digest → receives upgrade CTA in email → Stripe
+Visitor → fills out watchlist.html → told watchlist requires Pro → Stripe
+```
+
+---
+
+### Step 7 — Replace mailto links with Stripe (when ready)
+
+The Pro and Team CTAs currently link to `mailto:` as a safe default. Once you have Stripe Payment Links, replace them in three places:
+
+1. `pricing.html` — the four CTA buttons (monthly/yearly × Pro/Team)
+2. `index.html` — the two plan buttons in the `#pricing` section
+3. `index.html` — the "See Pro" button in the newsletter section
+
+Search for `mailto:patchbrief@protonmail.com?subject=PatchBrief` in both files to find all occurrences.
+
+---
 
 ### Resetting the processed state (start fresh)
 

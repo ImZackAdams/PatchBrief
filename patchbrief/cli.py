@@ -17,6 +17,8 @@ STATE_FILE = "content/processed-state.json"
 # ---------------------------------------------------------------------------
 
 def cmd_build_feed(args: argparse.Namespace) -> None:
+    import json as _json
+    from datetime import datetime, timezone
     from patchbrief.feed import load_feed_items
     from patchbrief.render.feed import render_feed, render_item_page, render_rss
 
@@ -34,26 +36,60 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
 
     print(f"  Loaded {len(items)} items")
 
+    base_url = args.base_url.rstrip("/")
+
     feed_html = render_feed(items)
-    feed_path = Path("feed.html")
-    feed_path.write_text(feed_html, encoding="utf-8")
-    print(f"Generated: {feed_path}")
+    Path("feed.html").write_text(feed_html, encoding="utf-8")
+    print("Generated: feed.html")
 
     items_dir = Path("items")
     items_dir.mkdir(exist_ok=True)
     for item in items:
         item_html = render_item_page(item)
-        item_path = items_dir / f"{item.slug}.html"
-        item_path.write_text(item_html, encoding="utf-8")
-        print(f"Generated: {item_path}")
+        (items_dir / f"{item.slug}.html").write_text(item_html, encoding="utf-8")
+        print(f"Generated: items/{item.slug}.html")
 
-    base_url = args.base_url.rstrip("/")
     rss_xml = render_rss(items, base_url)
-    rss_path = Path("rss.xml")
-    rss_path.write_text(rss_xml, encoding="utf-8")
-    print(f"Generated: {rss_path}")
+    Path("rss.xml").write_text(rss_xml, encoding="utf-8")
+    print("Generated: rss.xml")
 
-    print(f"\nBuild complete: {len(items)} items, feed.html, rss.xml")
+    # JSON API feed — the Team-tier product, free tier public preview
+    now = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    feed_data = {
+        "version": "1.0",
+        "title": "PatchBrief Security Intelligence Feed",
+        "home_page_url": f"{base_url}/feed.html",
+        "feed_url": f"{base_url}/feed.json",
+        "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
+        "generated": now,
+        "total_items": len(items),
+        "items": [
+            {
+                "id": item.id,
+                "slug": item.slug,
+                "url": f"{base_url}/items/{item.slug}.html",
+                "date": item.date,
+                "type": item.type,
+                "signal": item.signal,
+                "title": item.title,
+                "summary": item.summary,
+                "vendor": item.vendor,
+                "product": item.product,
+                "cve": item.cve,
+                "operator_check": item.operator_check,
+                "why_it_matters": item.why_it_matters,
+                "tags": item.tags,
+                "sources": [{"title": s.title, "url": s.url} for s in item.sources],
+            }
+            for item in items
+        ],
+    }
+    Path("feed.json").write_text(
+        _json.dumps(feed_data, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    print("Generated: feed.json")
+
+    print(f"\nBuild complete: {len(items)} items → feed.html, rss.xml, feed.json")
 
 
 # ---------------------------------------------------------------------------
@@ -172,6 +208,46 @@ def cmd_ingest(args: argparse.Namespace) -> None:
 
     state.save()
     print(f"\nIngest complete: {generated} new briefs created")
+
+
+# ---------------------------------------------------------------------------
+# digest command
+# ---------------------------------------------------------------------------
+
+def cmd_digest(args: argparse.Namespace) -> None:
+    from datetime import date, timedelta
+    from patchbrief.feed import load_feed_items
+    from patchbrief.generate.digest import render_digest
+
+    content_dir = Path(args.content_dir)
+    if not content_dir.is_dir():
+        print(f"Error: content directory not found: {content_dir}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        all_items = load_feed_items(content_dir)
+    except ValueError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        sys.exit(1)
+
+    cutoff = (date.today() - timedelta(days=args.days)).isoformat()
+    items = [it for it in all_items if it.date >= cutoff]
+
+    if not items:
+        print(f"No items found in the last {args.days} days. Try --days 30.")
+        sys.exit(0)
+
+    html = render_digest(
+        items,
+        issue=args.issue,
+        base_url=args.base_url.rstrip("/"),
+        max_items=args.max_items,
+        label=args.label,
+    )
+
+    out = Path(args.output)
+    out.write_text(html, encoding="utf-8")
+    print(f"Digest generated: {out}  ({len(items)} items in window, {min(len(items), args.max_items)} included)")
 
 
 # ---------------------------------------------------------------------------
@@ -320,6 +396,58 @@ def build_parser() -> argparse.ArgumentParser:
         help="Maximum NVD results per run (default: 20).",
     )
     p_ingest.set_defaults(func=cmd_ingest)
+
+    # digest
+    p_digest = subparsers.add_parser(
+        "digest",
+        help="Generate an HTML email digest from recent feed items.",
+    )
+    p_digest.add_argument(
+        "--content-dir",
+        default="content/feed-items",
+        metavar="PATH",
+        help="Directory containing YAML feed item files (default: content/feed-items).",
+    )
+    p_digest.add_argument(
+        "--days",
+        type=int,
+        default=7,
+        metavar="N",
+        help="Include items published in the last N days (default: 7).",
+    )
+    p_digest.add_argument(
+        "--max-items",
+        type=int,
+        default=8,
+        metavar="N",
+        help="Maximum number of items to include (default: 8).",
+    )
+    p_digest.add_argument(
+        "--issue",
+        type=int,
+        default=1,
+        metavar="N",
+        help="Issue number shown in the digest header (default: 1).",
+    )
+    p_digest.add_argument(
+        "--label",
+        default="Weekly",
+        metavar="LABEL",
+        help="Digest label, e.g. Weekly or Daily (default: Weekly).",
+    )
+    p_digest.add_argument(
+        "--output",
+        default="digest.html",
+        metavar="PATH",
+        help="Output file path (default: digest.html).",
+    )
+    p_digest.add_argument(
+        "--base-url",
+        default=SITE_BASE_URL,
+        metavar="URL",
+        help=f"Site base URL for links (default: {SITE_BASE_URL}).",
+    )
+    p_digest.set_defaults(func=cmd_digest)
 
     return parser
 
