@@ -1,0 +1,69 @@
+name: Send Weekly Briefs
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # Mondays 7 AM UTC
+  workflow_dispatch: {}
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout public repo (code)
+        uses: actions/checkout@v4
+
+      - name: Checkout subscriber watchlists (private)
+        uses: actions/checkout@v4
+        with:
+          repository: ImZackAdams/PatchBrief-internal
+          token: ${{ secrets.INTERNAL_REPO_TOKEN }}
+          path: internal
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Ingest CISA KEV
+        run: python -m patchbrief.cli ingest-cisa-kev
+
+      - name: Send briefs to all subscribers
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: |
+          sent=0
+          skipped=0
+          errors=0
+
+          for wl in internal/watchlists/*.yml; do
+            [ -f "$wl" ] || continue
+
+            # Skip monthly subscribers unless it's the first Monday of the month
+            cadence=$(python -c "import yaml; d=yaml.safe_load(open('$wl')); print(d.get('cadence',''))" 2>/dev/null)
+            if [ "$cadence" = "monthly" ]; then
+              day=$(date +%d)
+              if [ "$day" -gt 7 ]; then
+                echo "Skipping monthly watchlist $wl (not first Monday of month)"
+                skipped=$((skipped+1))
+                continue
+              fi
+            fi
+
+            if python -m patchbrief.cli send-brief \
+              --watchlist "$wl" \
+              --source data/normalized/cisa-kev.json \
+              --from-email "briefs@patchbrief.org"; then
+              sent=$((sent+1))
+            else
+              errors=$((errors+1))
+              echo "Error sending brief for $wl" >&2
+            fi
+          done
+
+          echo ""
+          echo "Results — sent: $sent | skipped: $skipped | errors: $errors"
+          [ "$errors" -eq 0 ] || exit 1

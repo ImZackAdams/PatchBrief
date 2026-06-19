@@ -140,6 +140,92 @@ def cmd_ingest_cisa_kev(args: argparse.Namespace) -> None:
     print(f"  Total records: {len(normalized)}")
 
 
+def cmd_send_brief(args: argparse.Namespace) -> None:
+    import os
+
+    from patchbrief.advisories import filter_by_cadence, load_advisories, match_advisories
+    from patchbrief.email import send_brief
+    from patchbrief.models import Brief
+    from patchbrief.render.html import render_brief
+    from patchbrief.watchlist import load_watchlist
+
+    api_key = args.resend_key or os.environ.get("RESEND_API_KEY", "")
+    if not api_key:
+        print("Error: --resend-key or RESEND_API_KEY env var required.", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        watchlist = load_watchlist(args.watchlist)
+    except (ValueError, FileNotFoundError, OSError) as exc:
+        print(f"Error loading watchlist: {exc}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        advisories = load_advisories(args.source)
+    except (FileNotFoundError, OSError, json.JSONDecodeError) as exc:
+        print(f"Error loading advisories: {exc}", file=sys.stderr)
+        sys.exit(1)
+
+    all_matches = match_advisories(watchlist, advisories)
+    included, omitted = filter_by_cadence(all_matches, watchlist.cadence)
+
+    if not included:
+        print(f"No matches for {watchlist.owner_email} (cadence: {watchlist.cadence}) — skipping.")
+        return
+
+    brief = Brief(
+        generated_at=datetime.now(),
+        watchlist=watchlist,
+        advisories_reviewed=len(advisories),
+        matches=included,
+        source_names=list({m.advisory.source for m in included}),
+    )
+    html = render_brief(brief, omitted=omitted)
+
+    count = len(included)
+    subject = f"PatchBrief — {count} advisor{'y' if count == 1 else 'ies'} matched your watchlist"
+
+    try:
+        result = send_brief(
+            html=html,
+            to=watchlist.owner_email,
+            subject=subject,
+            from_address=args.from_email,
+            api_key=api_key,
+        )
+    except RuntimeError as exc:
+        print(f"Error sending email: {exc}", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"Sent to {watchlist.owner_email}: {result.get('id', 'ok')}")
+
+
+def cmd_create_watchlist(args: argparse.Namespace) -> None:
+    import yaml
+
+    terms = [t.strip() for t in args.terms.split(",") if t.strip()]
+    if not terms:
+        print("Error: --terms must include at least one term.", file=sys.stderr)
+        sys.exit(1)
+
+    data = {
+        "name": args.name,
+        "owner_email": args.email,
+        "cadence": args.cadence,
+        "terms": terms,
+    }
+
+    out_path = Path(args.out)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+    print(f"Watchlist written to {out_path}")
+    print(f"  Owner: {args.email}")
+    print(f"  Terms: {', '.join(terms)}")
+    print(f"  Cadence: {args.cadence}")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="patchbrief",
@@ -178,6 +264,34 @@ def build_parser() -> argparse.ArgumentParser:
         help="Fetch and normalize the CISA Known Exploited Vulnerabilities catalog.",
     )
     p_ingest.set_defaults(func=cmd_ingest_cisa_kev)
+
+    # send-brief
+    p_send = subparsers.add_parser(
+        "send-brief",
+        help="Generate a brief and email it to the watchlist owner via Resend.",
+    )
+    p_send.add_argument("--watchlist", required=True, metavar="PATH")
+    p_send.add_argument("--source", required=True, metavar="PATH")
+    p_send.add_argument("--resend-key", default=None, metavar="KEY",
+                        help="Resend API key (or set RESEND_API_KEY env var).")
+    p_send.add_argument("--from-email", default="briefs@patchbrief.org", metavar="EMAIL")
+    p_send.set_defaults(func=cmd_send_brief)
+
+    # create-watchlist
+    p_create = subparsers.add_parser(
+        "create-watchlist",
+        help="Write a subscriber watchlist YAML from CLI arguments.",
+    )
+    p_create.add_argument("--name", required=True, metavar="SLUG",
+                          help="Watchlist slug, e.g. acme-corp")
+    p_create.add_argument("--email", required=True, metavar="EMAIL")
+    p_create.add_argument("--terms", required=True, metavar="TERMS",
+                          help="Comma-separated watchlist terms.")
+    p_create.add_argument("--cadence", required=True,
+                          choices=["important_only", "weekly", "monthly"])
+    p_create.add_argument("--out", required=True, metavar="PATH",
+                          help="Output path for the YAML file.")
+    p_create.set_defaults(func=cmd_create_watchlist)
 
     return parser
 
