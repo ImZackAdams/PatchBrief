@@ -732,12 +732,6 @@
         font-size: 0.84rem;
       }
 
-      .form-note {
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.86rem;
-      }
-
       .form-status {
         display: none;
         border-radius: var(--radius);
@@ -765,14 +759,6 @@
         border: 1px solid #e0bbb4;
         background: #f8e9e6;
         color: var(--red);
-      }
-
-      .email-fallback {
-        display: none;
-      }
-
-      .email-fallback.visible {
-        display: inline-flex;
       }
 
       .signup .button.secondary {
@@ -1233,16 +1219,6 @@
 
               <button class="button primary" type="submit">Get the first sample brief</button>
               <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-              <p class="form-note">
-                Having trouble? <a data-fallback-email href="mailto:patchbrief@protonmail.com">Email directly instead</a>.
-              </p>
-              <a
-                class="button secondary email-fallback"
-                data-fallback-email
-                href="mailto:patchbrief@protonmail.com"
-              >
-                Send by email instead
-              </a>
             </form>
           </aside>
         </div>
@@ -1270,33 +1246,7 @@
         const status = form.querySelector("[data-form-status]");
         const submit = form.querySelector('button[type="submit"]');
         const emailField = form.querySelector("#signup-email");
-        const roleField = form.querySelector("#signup-role");
-        const watchlistField = form.querySelector("#signup-watchlist");
         const sourceField = form.querySelector('input[name="signup_source"]');
-        const fallbackLinks = form.querySelectorAll("[data-fallback-email]");
-
-        const buildFallbackHref = () => {
-          const source = sourceField && sourceField.value ? sourceField.value : "signup form";
-          const lines = [
-            "I would like to join PatchBrief early access.",
-            "",
-            `Signup source: ${source}`,
-            `Email: ${emailField ? emailField.value : ""}`,
-            `Role: ${roleField ? roleField.value : ""}`,
-            `Products or vendors to watch: ${watchlistField ? watchlistField.value : ""}`,
-          ];
-
-          return `mailto:patchbrief@protonmail.com?subject=${encodeURIComponent(
-            "Join PatchBrief early access"
-          )}&body=${encodeURIComponent(lines.join("\n"))}`;
-        };
-
-        const refreshFallbackLinks = () => {
-          fallbackLinks.forEach((link) => {
-            link.href = buildFallbackHref();
-          });
-        };
-
         const setStatus = (state, message) => {
           if (!status) {
             return;
@@ -1305,10 +1255,6 @@
           status.className = `form-status ${state}`;
           status.textContent = message;
         };
-
-        refreshFallbackLinks();
-        form.addEventListener("input", refreshFallbackLinks);
-        form.addEventListener("change", refreshFallbackLinks);
 
         if (new URLSearchParams(window.location.search).get("signup") === "sent") {
           form.dataset.submitted = "true";
@@ -1323,7 +1269,6 @@
           link.addEventListener("click", () => {
             if (sourceField && link.dataset.signupSource) {
               sourceField.value = link.dataset.signupSource;
-              refreshFallbackLinks();
             }
 
             window.setTimeout(() => {
@@ -1338,8 +1283,6 @@
           if (!form.reportValidity()) {
             return;
           }
-
-          refreshFallbackLinks();
 
           if (submit) {
             submit.disabled = true;
