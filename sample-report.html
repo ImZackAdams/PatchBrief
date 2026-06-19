@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sample PatchBrief on-demand vulnerability report format for a vendor, product, and technology watchlist."
+    />
+    <meta name="theme-color" content="#15211f" />
+    <title>Sample PatchBrief Report</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #f7f5ee;
+        --paper: #ffffff;
+        --ink: #16201e;
+        --soft-ink: #334541;
+        --muted: #66746f;
+        --line: #d9ddd4;
+        --charcoal: #15211f;
+        --teal: #0f766e;
+        --mint: #55d6bd;
+        --mint-soft: #e4f4ef;
+        --blue: #2f6388;
+        --blue-soft: #e8eff4;
+        --gold: #9d6a16;
+        --gold-soft: #f6ead1;
+        --red: #913f32;
+        --radius: 8px;
+        --shadow: 0 20px 48px rgba(21, 33, 31, 0.16);
+        --max: 1080px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--mint);
+        outline-offset: 3px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 12ch;
+        margin-bottom: 0.75rem;
+        color: #ffffff;
+        font-size: clamp(2.7rem, 8vw, 5rem);
+        line-height: 0.96;
+      }
+
+      h2 {
+        margin-bottom: 0.7rem;
+        font-size: clamp(1.55rem, 4vw, 2.2rem);
+        line-height: 1.08;
+      }
+
+      h3 {
+        margin-bottom: 0.35rem;
+        font-size: 1.08rem;
+      }
+
+      p {
+        margin-bottom: 0.9rem;
+      }
+
+      .wrap {
+        width: min(calc(100% - 32px), var(--max));
+        margin: 0 auto;
+      }
+
+      header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        background: var(--charcoal);
+        color: #ffffff;
+      }
+
+      .nav {
+        display: flex;
+        min-height: 4.25rem;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.68rem;
+        color: #ffffff;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .mark {
+        position: relative;
+        display: grid;
+        width: 2.35rem;
+        height: 2.35rem;
+        place-items: center;
+        overflow: hidden;
+        border: 1px solid rgba(159, 232, 220, 0.5);
+        border-radius: var(--radius);
+        background:
+          radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.34), transparent 26%),
+          linear-gradient(135deg, #8df0dd 0%, #55d6bd 44%, #0f766e 100%);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.45),
+          0 10px 24px rgba(15, 118, 110, 0.26);
+        color: #071f1c;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.86rem;
+        font-weight: 900;
+        line-height: 1;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+      }
+
+      .mark::before,
+      .mark::after {
+        position: absolute;
+        content: "";
+        pointer-events: none;
+      }
+
+      .mark::before {
+        inset: 0.32rem;
+        border: 1px solid rgba(7, 31, 28, 0.24);
+        border-radius: 6px;
+        background:
+          linear-gradient(rgba(7, 31, 28, 0.26), rgba(7, 31, 28, 0.26)) 50% 38% / 58% 1px
+            no-repeat,
+          linear-gradient(rgba(7, 31, 28, 0.2), rgba(7, 31, 28, 0.2)) 50% 58% / 42% 1px
+            no-repeat;
+        opacity: 0.7;
+      }
+
+      .mark::after {
+        right: 0.28rem;
+        bottom: 0.28rem;
+        width: 0.42rem;
+        height: 0.42rem;
+        border-top: 1px solid rgba(7, 31, 28, 0.46);
+        border-left: 1px solid rgba(7, 31, 28, 0.46);
+        background: rgba(255, 255, 255, 0.38);
+        transform: rotate(45deg);
+      }
+
+      nav {
+        display: flex;
+        gap: 0.45rem;
+      }
+
+      nav a {
+        border-radius: var(--radius);
+        color: #d6e0dc;
+        padding: 0.45rem 0.62rem;
+        font-size: 0.94rem;
+        text-decoration: none;
+      }
+
+      nav a:hover,
+      nav a:focus-visible {
+        background: rgba(255, 255, 255, 0.08);
+        color: #ffffff;
+      }
+
+      .hero {
+        background:
+          linear-gradient(100deg, rgba(21, 33, 31, 0.98) 0%, rgba(21, 33, 31, 0.9) 58%, rgba(21, 33, 31, 0.78) 100%),
+          var(--charcoal);
+        color: #e8efec;
+        padding: 4rem 0 3rem;
+      }
+
+      .eyebrow,
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        border-radius: var(--radius);
+        font-weight: 780;
+      }
+
+      .eyebrow {
+        margin-bottom: 1rem;
+        border: 1px solid rgba(159, 232, 220, 0.35);
+        background: rgba(15, 118, 110, 0.2);
+        color: #a9efe0;
+        padding: 0.34rem 0.55rem;
+        font-size: 0.9rem;
+      }
+
+      .subtitle {
+        max-width: 64ch;
+        color: #cfdbd7;
+        font-size: 1.15rem;
+      }
+
+      .report-shell {
+        padding: 2rem 0 3.25rem;
+      }
+
+      .report {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--paper);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .report-head,
+      .report-section,
+      .disclaimer {
+        padding: 1rem;
+      }
+
+      .report-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.4fr);
+        gap: 1rem;
+        border-bottom: 1px solid var(--line);
+        background: #fbfcfa;
+      }
+
+      .meta {
+        display: grid;
+        gap: 0.45rem;
+        margin: 0;
+      }
+
+      .meta div {
+        display: grid;
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 0.55rem;
+      }
+
+      .meta dt {
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .meta dd {
+        margin: 0;
+        color: var(--soft-ink);
+      }
+
+      .watchlist {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+      }
+
+      .watchlist span,
+      .pill {
+        border: 1px solid var(--line);
+        background: #f8faf8;
+        color: var(--teal);
+        padding: 0.28rem 0.5rem;
+        font-size: 0.84rem;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1px;
+        background: var(--line);
+      }
+
+      .summary-card {
+        background: var(--blue-soft);
+        padding: 1rem;
+      }
+
+      .summary-card span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .summary-card strong {
+        display: block;
+        margin-top: 0.2rem;
+        color: var(--ink);
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .matches {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .match {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1rem;
+      }
+
+      .match-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-bottom: 0.65rem;
+      }
+
+      .match p,
+      .match li {
+        color: var(--muted);
+      }
+
+      .detail-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+        margin-top: 0.85rem;
+      }
+
+      .detail {
+        border-top: 1px solid var(--line);
+        padding-top: 0.75rem;
+      }
+
+      .detail strong {
+        display: block;
+        margin-bottom: 0.22rem;
+        color: var(--soft-ink);
+        font-size: 0.9rem;
+      }
+
+      ul {
+        margin: 0.55rem 0 0;
+        padding-left: 1.15rem;
+      }
+
+      li + li {
+        margin-top: 0.32rem;
+      }
+
+      .source-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.85rem;
+      }
+
+      .source-links a {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #f8faf8;
+        color: var(--teal);
+        padding: 0.34rem 0.48rem;
+        font-size: 0.84rem;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .source-links a:hover,
+      .source-links a:focus-visible {
+        border-color: var(--teal);
+        background: var(--mint-soft);
+      }
+
+      .disclaimer {
+        border-top: 1px solid var(--line);
+        background: var(--gold-soft);
+        color: #5a410f;
+        margin: 0;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 2.95rem;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        background: var(--mint);
+        color: #06221e;
+        padding: 0.78rem 1rem;
+        font-weight: 820;
+        text-decoration: none;
+        transition:
+          background-color 150ms ease,
+          transform 150ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        background: #82ead8;
+        transform: translateY(-1px);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+      }
+
+      @media (max-width: 900px) {
+        .report-head,
+        .detail-grid,
+        .summary-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .wrap {
+          width: min(calc(100% - 24px), var(--max));
+        }
+
+        .nav {
+          min-height: auto;
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 0.85rem 0;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .meta div {
+          grid-template-columns: 1fr;
+          gap: 0.05rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">PB</span>
+          <span>PatchBrief</span>
+        </a>
+        <nav aria-label="Sample report navigation">
+          <a href="/">Home</a>
+          <a href="/#signup-form">Run report</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Example on-demand report format</p>
+          <h1>Sample PatchBrief Report</h1>
+          <p class="subtitle">
+            A realistic static example of the short, source-linked report a buyer receives after
+            submitting a $5 watchlist request.
+          </p>
+        </div>
+      </section>
+
+      <section class="report-shell">
+        <div class="wrap">
+          <article class="report" aria-label="Sample PatchBrief report">
+            <div class="report-head">
+              <div>
+                <h2>Example watchlist review</h2>
+                <p>
+                  This sample shows how PatchBrief summarizes public advisory matches, known
+                  exploited signals, and suggested follow-up checks.
+                </p>
+                <div class="watchlist" aria-label="Watchlist">
+                  <span>Microsoft</span>
+                  <span>Chrome</span>
+                  <span>GitHub</span>
+                  <span>Fortinet</span>
+                  <span>Veeam</span>
+                </div>
+              </div>
+              <dl class="meta">
+                <div>
+                  <dt>Generated</dt>
+                  <dd>June 18, 2026, 9:00 PM ET</dd>
+                </div>
+                <div>
+                  <dt>Report type</dt>
+                  <dd>On-demand watchlist review</dd>
+                </div>
+                <div>
+                  <dt>Fulfillment</dt>
+                  <dd>Generated and emailed after processing</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="summary-grid" aria-label="Report summary">
+              <div class="summary-card">
+                <span>Advisories reviewed</span>
+                <strong>38</strong>
+              </div>
+              <div class="summary-card">
+                <span>Watchlist matches</span>
+                <strong>3</strong>
+              </div>
+              <div class="summary-card">
+                <span>Known exploited matches</span>
+                <strong>2</strong>
+              </div>
+              <div class="summary-card">
+                <span>Priority review items</span>
+                <strong>1</strong>
+              </div>
+            </div>
+
+            <section class="report-section" aria-labelledby="matched-items-title">
+              <h2 id="matched-items-title">Matched items</h2>
+              <div class="matches">
+                <article class="match">
+                  <div class="match-top">
+                    <div>
+                      <h3>Palo Alto GlobalProtect</h3>
+                      <p>Why it matched: critical match for internet exposed firewall services.</p>
+                    </div>
+                    <span class="pill">CVE 2024 3400</span>
+                  </div>
+                  <div class="detail-grid">
+                    <div class="detail">
+                      <strong>Why it matters</strong>
+                      <p>
+                        Unauthenticated command injection can allow code execution with root
+                        privileges on the firewall. Treat as immediate review.
+                      </p>
+                    </div>
+                    <div class="detail">
+                      <strong>Suggested checks</strong>
+                      <ul>
+                        <li>Verify whether GlobalProtect portal or gateway is enabled.</li>
+                        <li>Confirm current PAN OS version against the fixed release list.</li>
+                        <li>Apply vulnerability protection to the GlobalProtect interface where available.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="source-links">
+                    <a href="https://security.paloaltonetworks.com/CVE-2024-3400">Palo Alto advisory</a>
+                    <a href="https://unit42.paloaltonetworks.com/cve-2024-3400/">Unit 42 brief</a>
+                  </div>
+                </article>
+
+                <article class="match">
+                  <div class="match-top">
+                    <div>
+                      <h3>Google Chrome desktop</h3>
+                      <p>Why it matched: browser watchlist match with known exploitation noted by Google.</p>
+                    </div>
+                    <span class="pill">CVE 2024 7971</span>
+                  </div>
+                  <div class="detail-grid">
+                    <div class="detail">
+                      <strong>Why it matters</strong>
+                      <p>
+                        Type confusion in V8. Google noted exploitation in the wild for this CVE,
+                        so managed browser update coverage should be checked.
+                      </p>
+                    </div>
+                    <div class="detail">
+                      <strong>Suggested checks</strong>
+                      <ul>
+                        <li>Check browser fleet versions against Chrome 128.0.6613.84 or later.</li>
+                        <li>Verify update policy for laptops that are often off network.</li>
+                        <li>Flag unmanaged browsers for manual follow up.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="source-links">
+                    <a href="https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop_21.html">Chrome release note</a>
+                  </div>
+                </article>
+
+                <article class="match">
+                  <div class="match-top">
+                    <div>
+                      <h3>Microsoft Message Queuing</h3>
+                      <p>Why it matched: Windows server watchlist match for environments that still expose MSMQ.</p>
+                    </div>
+                    <span class="pill">CVE 2024 30080</span>
+                  </div>
+                  <div class="detail-grid">
+                    <div class="detail">
+                      <strong>Why it matters</strong>
+                      <p>
+                        NVD lists this as a remote code execution vulnerability with a critical
+                        Microsoft score.
+                      </p>
+                    </div>
+                    <div class="detail">
+                      <strong>Suggested checks</strong>
+                      <ul>
+                        <li>Inventory hosts with Message Queuing installed.</li>
+                        <li>Prioritize internet reachable or cross network queue services.</li>
+                        <li>Confirm June security updates are installed before closing the item.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="source-links">
+                    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-30080">NVD entry</a>
+                    <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30080">MSRC page</a>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <p class="disclaimer">
+              This sample uses fictionalized report formatting and public-source style examples.
+              PatchBrief does not scan your environment, verify exposure, or replace vendor guidance.
+            </p>
+          </article>
+
+          <div class="actions">
+            <a class="button" href="/#signup-form">Run a $5 report</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
