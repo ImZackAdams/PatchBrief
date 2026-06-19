@@ -726,7 +726,6 @@
         <nav>
           <a href="#how">How it works</a>
           <a href="sample-report.html">Sample</a>
-          <a href="#fit">Who it helps</a>
           <a
             class="nav-cta"
             href="#signup-form"
@@ -743,11 +742,10 @@
         <div class="wrap">
           <div class="hero-copy">
             <p class="eyebrow">On demand vulnerability reports</p>
-            <h1>Find the vulnerabilities your watchlist cannot afford to miss.</h1>
+            <h1>A short vulnerability report for your watchlist.</h1>
             <p class="lede">
-              Enter the vendors, products, or technologies you care about. PatchBrief generates a
-              short report showing relevant public vulnerability advisories, known exploited items,
-              and suggested next checks.
+              Send up to 10 vendors, products, or technologies. Get public advisory matches,
+              known exploited callouts, source links, and suggested next checks.
             </p>
             <div class="cta-row" aria-label="Primary actions">
               <a
@@ -759,7 +757,7 @@
               </a>
               <a class="button secondary" href="sample-report.html">View sample report</a>
             </div>
-            <p class="note">No scan. No exposure verification. No dashboard. Just a short report backed by public sources.</p>
+            <p class="note">No scan. No dashboard. Just a focused report for $5.</p>
             <div class="source-row" aria-label="Example advisory sources">
               <span class="source-pill">CISA KEV</span>
               <span class="source-pill">Microsoft</span>
@@ -770,44 +768,27 @@
         </div>
       </section>
 
-      <section class="bar" aria-label="PatchBrief value summary">
-        <div class="wrap bar-grid">
-          <div class="bar-item">
-            <strong>Request a focused check</strong>
-            <span>Enter up to 10 vendors, products, or technologies for a point in time report.</span>
-          </div>
-          <div class="bar-item">
-            <strong>See the reason for every match</strong>
-            <span>Each item includes the source, affected area, exploitation signal, and next check.</span>
-          </div>
-          <div class="bar-item">
-            <strong>Receive a usable report</strong>
-            <span>Get a plain English summary you can use for review, triage, or client follow up.</span>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="how">
         <div class="wrap">
           <div class="section-head">
             <p class="kicker">How it works</p>
-            <h2>From scattered advisory sources to one short report.</h2>
+            <h2>Three steps.</h2>
           </div>
           <div class="step-grid">
             <div class="step">
               <strong>01</strong>
-              <h3>Enter your watchlist</h3>
-              <p>Share up to 10 vendors, products, or technologies you want checked.</p>
+              <h3>Send your list</h3>
+              <p>Up to 10 items.</p>
             </div>
             <div class="step">
               <strong>02</strong>
-              <h3>PatchBrief checks public sources</h3>
-              <p>Public advisories, vendor notes, and known exploited vulnerability signals are reviewed for relevant matches.</p>
+              <h3>PatchBrief checks sources</h3>
+              <p>Public advisories and known exploited signals.</p>
             </div>
             <div class="step">
               <strong>03</strong>
-              <h3>Receive a short report</h3>
-              <p>Get source links, priority items, and suggested next checks by email.</p>
+              <h3>Get the report</h3>
+              <p>Matches, links, and next checks by email.</p>
             </div>
           </div>
         </div>
@@ -817,11 +798,8 @@
         <div class="wrap">
           <div class="section-head">
             <p class="kicker">Sample report</p>
-            <h2>Built to answer the question: what needs attention?</h2>
-            <p>
-              Each report is short enough to scan, specific enough to assign, and linked back to the
-              original sources before anyone takes action.
-            </p>
+            <h2>See the format.</h2>
+            <p>A compact report with matches, source links, and suggested checks.</p>
           </div>
 
           <article class="sample" aria-label="Example PatchBrief on demand report">
@@ -849,85 +827,26 @@
               <ul class="sample-list">
                 <li>
                   <strong>Palo Alto GlobalProtect</strong>
-                  <p>Critical match for internet exposed firewall services. Treat as immediate review.</p>
+                  <p>Known exploited firewall issue. Review exposed GlobalProtect services.</p>
                   <span class="pill">CVE 2024 3400</span>
-                  <dl class="brief-meta">
-                    <div>
-                      <dt>Affected services</dt>
-                      <dd>GlobalProtect portal and gateway on PAN OS 10.2, 11.0, and 11.1.</dd>
-                    </div>
-                    <div>
-                      <dt>Why it matters</dt>
-                      <dd>Unauthenticated command injection can allow code execution with root privileges on the firewall.</dd>
-                    </div>
-                    <div>
-                      <dt>Review next</dt>
-                      <dd>Confirm GlobalProtect exposure, check fixed PAN OS versions, and review logs for suspicious session values.</dd>
-                    </div>
-                  </dl>
-                  <ul class="brief-checks">
-                    <li>Verify whether GlobalProtect portal or gateway is enabled.</li>
-                    <li>Confirm current PAN OS version against the fixed release list.</li>
-                    <li>Apply vulnerability protection to the GlobalProtect interface where available.</li>
-                  </ul>
                   <div class="source-links">
                     <a href="https://security.paloaltonetworks.com/CVE-2024-3400">Palo Alto advisory</a>
-                    <a href="https://unit42.paloaltonetworks.com/cve-2024-3400/">Unit 42 brief</a>
                   </div>
                 </li>
                 <li>
                   <strong>Google Chrome desktop</strong>
-                  <p>Browser watchlist match with known exploitation noted by Google.</p>
+                  <p>Known exploited browser issue. Confirm managed update coverage.</p>
                   <span class="pill">CVE 2024 7971</span>
-                  <dl class="brief-meta">
-                    <div>
-                      <dt>Affected services</dt>
-                      <dd>Chrome desktop browser on Windows, macOS, and Linux. Review managed endpoint update coverage.</dd>
-                    </div>
-                    <div>
-                      <dt>Why it matters</dt>
-                      <dd>Type confusion in V8. Google noted exploitation in the wild for this CVE.</dd>
-                    </div>
-                    <div>
-                      <dt>Review next</dt>
-                      <dd>Confirm Chrome stable channel version, managed browser policy status, and auto update completion.</dd>
-                    </div>
-                  </dl>
-                  <ul class="brief-checks">
-                    <li>Check browser fleet versions against Chrome 128.0.6613.84 or later.</li>
-                    <li>Verify update policy for laptops that are often off network.</li>
-                    <li>Flag unmanaged browsers for manual follow up.</li>
-                  </ul>
                   <div class="source-links">
                     <a href="https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop_21.html">Chrome release note</a>
                   </div>
                 </li>
                 <li>
                   <strong>Microsoft Message Queuing</strong>
-                  <p>Windows server watchlist match for environments that still expose MSMQ.</p>
+                  <p>Windows server match. Check MSMQ exposure and patch status.</p>
                   <span class="pill">CVE 2024 30080</span>
-                  <dl class="brief-meta">
-                    <div>
-                      <dt>Affected services</dt>
-                      <dd>Microsoft Message Queuing service on Windows hosts where MSMQ is installed or enabled.</dd>
-                    </div>
-                    <div>
-                      <dt>Why it matters</dt>
-                      <dd>NVD lists this as a remote code execution vulnerability with a critical Microsoft score.</dd>
-                    </div>
-                    <div>
-                      <dt>Review next</dt>
-                      <dd>Find servers with MSMQ enabled, confirm patch status, and verify whether TCP port 1801 is reachable.</dd>
-                    </div>
-                  </dl>
-                  <ul class="brief-checks">
-                    <li>Inventory hosts with Message Queuing installed.</li>
-                    <li>Prioritize internet reachable or cross network queue services.</li>
-                    <li>Confirm June security updates are installed before closing the item.</li>
-                  </ul>
                   <div class="source-links">
                     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-30080">NVD entry</a>
-                    <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30080">MSRC page</a>
                   </div>
                 </li>
               </ul>
@@ -944,83 +863,20 @@
         </div>
       </section>
 
-      <section class="section" id="fit">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Who it helps</p>
-            <h2>For teams that own patch conversations, not just patch tools.</h2>
-          </div>
-          <div class="fit-grid">
-            <div class="card highlight">
-              <span class="tag">Best fit</span>
-              <h3>Teams with recurring review or reporting work</h3>
-              <p>
-                PatchBrief is especially useful for teams that turn advisory awareness into client
-                updates, management notes, patch review, or point in time security work.
-              </p>
-              <ul>
-                <li>Client facing advisory summaries</li>
-                <li>Internal patch review</li>
-                <li>Product and vendor watchlists</li>
-              </ul>
-            </div>
-            <div class="card">
-              <span class="tag">Clear boundary</span>
-              <h3>A report, not a scanner</h3>
-              <p>
-                PatchBrief sits beside scanners, patch management, RMM, and official advisories. It
-                helps decide what deserves review without scanning your environment or verifying exposure.
-              </p>
-              <ul>
-                <li>No environment scanning</li>
-                <li>No exposure verification</li>
-                <li>No replacement for vendor guidance</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" aria-label="What PatchBrief includes">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">What is included</p>
-            <h2>A reporting layer for the messy space between advisory and action.</h2>
-          </div>
-          <div class="card-grid">
-            <div class="card">
-              <h3>Watchlist matching</h3>
-              <p>Map public advisories to the vendors, products, and technologies you ask PatchBrief to check.</p>
-            </div>
-            <div class="card">
-              <h3>Ready for review summaries</h3>
-              <p>See what changed, why it matters, and what to verify before making noise about it.</p>
-            </div>
-            <div class="card">
-              <h3>Source linked report output</h3>
-              <p>Receive a short report that stays connected to the public records behind it.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section" aria-label="PatchBrief pricing">
         <div class="wrap pricing-grid">
           <div class="section-head">
             <p class="kicker">Pricing</p>
-            <h2>Simple pay per report pricing.</h2>
-            <p>
-              Run a one time PatchBrief report for $5. No account, no subscription, and no dashboard required.
-            </p>
+            <h2>$5 per report.</h2>
+            <p>No account. No subscription.</p>
           </div>
           <article class="card pricing-card" aria-label="On demand report pricing">
             <h3>On demand report</h3>
             <strong class="price">$5</strong>
             <ul>
               <li>Up to 10 vendors, products, or technologies</li>
-              <li>Public advisory source review</li>
               <li>Known exploited vulnerability callouts</li>
-              <li>Matched items with source links</li>
+              <li>Public source links</li>
               <li>Suggested next checks</li>
               <li>Delivered by email</li>
             </ul>
@@ -1040,13 +896,11 @@
         <div class="wrap signup-grid">
           <div>
             <p class="kicker">Run report</p>
-            <h2>Run an on demand PatchBrief report.</h2>
+            <h2>Request a report.</h2>
             <p>
-              For $5, enter up to 10 vendors, products, or technologies and receive a short
-              source backed vulnerability report by email.
+              Submit your watchlist first. Then continue to checkout.
             </p>
-            <p class="note">PatchBrief uses public advisory sources. It does not scan your environment, verify exposure, or replace vendor guidance.</p>
-            <p class="note">No account. No subscription required.</p>
+            <p class="note">PatchBrief uses public sources. It does not scan your environment or verify exposure.</p>
           </div>
           <aside class="signup-panel" aria-label="Report request form">
             <form
