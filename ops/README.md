@@ -1,6 +1,7 @@
 # Ops
 
-This directory contains pilot operations templates and tooling.
+This directory contains lightweight pilot operations templates for the public
+feed and watchlist-filtering research.
 
 ## Pilot tracker
 
@@ -12,6 +13,7 @@ Customer/user data files belong in `ops/customer-data/` (also gitignored).
 
 ## Email templates
 
-Reusable Markdown templates for pilot communication are in `ops/email-templates/`.
+Reusable Markdown templates for manual pilot communication are in
+`ops/email-templates/`.
 
 Fill in `{{placeholder}}` values before sending.
