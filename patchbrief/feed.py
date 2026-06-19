@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional
@@ -55,7 +54,7 @@ class FeedItem:
     @property
     def rfc822_date(self) -> str:
         try:
-            from datetime import date, datetime, timezone
+            from datetime import datetime, timezone
             parts = self.date.split("-")
             d = datetime(int(parts[0]), int(parts[1]), int(parts[2]), tzinfo=timezone.utc)
             return d.strftime("%a, %d %b %Y %H:%M:%S +0000")

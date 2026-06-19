@@ -66,14 +66,6 @@ python -m patchbrief.cli build-feed \
   --base-url https://www.patchbrief.org
 ```
 
-### Ingest CISA KEV
-
-```bash
-python -m patchbrief.cli ingest-cisa-kev
-```
-
-Saves raw and normalized data to `data/`.
-
 ## Triggering the build workflow
 
 The GitHub Actions workflow at `.github/workflows/build-feed.yml` runs automatically on
@@ -89,20 +81,15 @@ Generated files (`feed.html`, `rss.xml`, `items/`) are uploaded as a build artif
 
 ## Roadmap
 
-See [docs/source-ingestion-plan.md](docs/source-ingestion-plan.md) for the planned ingestion implementation order.
-
 Short version:
 
 - [x] Static site and public feed
-- [x] CISA KEV ingestion CLI
 - [x] Structured feed content format
 - [x] Static feed generator
 - [x] RSS generation
-- [ ] Automated ingestion pipeline
 - [ ] Newsletter publishing workflow
 - [ ] Monetization experiment
 
 ## Docs
 
 - [docs/feed-item-format.md](docs/feed-item-format.md) — Feed item YAML schema and field reference
-- [docs/source-ingestion-plan.md](docs/source-ingestion-plan.md) — Planned ingestion sources and order
