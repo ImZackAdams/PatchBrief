@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="PatchBrief tracks public vulnerability advisories, known exploited vulnerabilities, and threat activity, then turns the noise into short operator-ready briefs."
+      content="PatchBrief is a public security intelligence feed tracking exploited vulnerabilities, vendor advisories, patch releases, and high-signal threat activity."
     />
     <meta name="theme-color" content="#15211f" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PatchBrief | Cybersecurity signal for operators" />
+    <meta property="og:title" content="PatchBrief | Security intel feed" />
     <meta
       property="og:description"
-      content="PatchBrief tracks public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity. Short source-backed briefs for operators."
+      content="Short source-backed security briefs for public vulnerability and threat signals."
     />
     <meta property="og:image" content="assets/patchbrief-hero.png" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="PatchBrief | Cybersecurity signal for operators" />
+    <meta name="twitter:title" content="PatchBrief | Security intel feed" />
     <meta
       name="twitter:description"
-      content="PatchBrief tracks public vulnerability advisories, known exploited vulnerabilities, and threat activity, then turns the noise into short operator-ready briefs."
+      content="Short source-backed security briefs for public vulnerability and threat signals."
     />
     <meta name="twitter:image" content="assets/patchbrief-hero.png" />
     <link rel="alternate" type="application/rss+xml" title="PatchBrief RSS" href="/rss.xml" />
-    <title>PatchBrief | Cybersecurity signal for operators</title>
+    <title>PatchBrief | Security intel feed</title>
     <style>
       :root {
         color-scheme: light;
@@ -36,91 +36,50 @@
         --line-strong: #cdd3cc;
         --accent: #0f766e;
         --accent-soft: #edf7f4;
-        --red: #913f32;
         --max: 1040px;
-        --measure: 680px;
+        --measure: 690px;
         --radius: 6px;
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
-        min-height: 100vh;
         background: var(--page);
         color: var(--ink);
-        font-family:
-          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         line-height: 1.6;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
       }
-
-      a {
-        color: inherit;
-      }
-
+      a { color: inherit; }
       a:focus-visible,
       button:focus-visible,
-      input:focus-visible,
-      select:focus-visible,
-      textarea:focus-visible {
+      input:focus-visible {
         outline: 2px solid var(--accent);
         outline-offset: 3px;
       }
-
-      h1,
-      h2,
-      h3,
-      p {
-        margin-top: 0;
-      }
-
+      h1, h2, h3, p { margin-top: 0; }
       h1 {
-        max-width: 13ch;
+        max-width: 12ch;
         margin-bottom: 1rem;
-        font-size: clamp(3.1rem, 8vw, 6.4rem);
+        font-size: clamp(3rem, 8vw, 6.2rem);
         font-weight: 760;
         letter-spacing: 0;
         line-height: 0.96;
       }
-
       h2 {
-        max-width: 13ch;
+        max-width: 16ch;
         margin-bottom: 0.8rem;
-        font-size: clamp(1.9rem, 4vw, 3.2rem);
+        font-size: clamp(1.8rem, 4vw, 3rem);
         font-weight: 720;
         letter-spacing: 0;
         line-height: 1;
       }
-
-      h3 {
-        margin-bottom: 0.35rem;
-        font-size: 1rem;
-        font-weight: 760;
-      }
-
-      p {
-        margin-bottom: 0.95rem;
-      }
-
-      .wrap {
-        width: min(calc(100% - 32px), var(--max));
-        margin: 0 auto;
-      }
-
-      .skip {
-        position: absolute;
-        top: 1rem;
-        left: -9999px;
-      }
-
+      h3 { margin-bottom: 0.35rem; font-size: 1rem; font-weight: 760; }
+      p { margin-bottom: 0.95rem; }
+      .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+      .skip { position: absolute; top: 1rem; left: -9999px; }
       .skip:focus {
         left: 1rem;
         z-index: 40;
@@ -129,13 +88,11 @@
         background: var(--paper);
         padding: 0.65rem 0.8rem;
       }
-
       header {
         border-bottom: 1px solid var(--line);
         background: rgba(251, 251, 248, 0.96);
         backdrop-filter: blur(10px);
       }
-
       .nav {
         display: flex;
         min-height: 4rem;
@@ -143,15 +100,14 @@
         justify-content: space-between;
         gap: 1rem;
       }
-
       .brand {
         display: inline-flex;
         align-items: center;
         gap: 0.65rem;
+        color: var(--ink);
         font-weight: 760;
         text-decoration: none;
       }
-
       .mark {
         display: grid;
         width: 2rem;
@@ -165,14 +121,7 @@
         font-size: 0.78rem;
         font-weight: 800;
       }
-
-      nav {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 0.2rem;
-      }
-
+      nav { display: flex; align-items: center; justify-content: flex-end; gap: 0.2rem; }
       nav a {
         border-radius: var(--radius);
         color: var(--muted);
@@ -180,40 +129,21 @@
         font-size: 0.92rem;
         text-decoration: none;
       }
-
       nav a:hover,
       nav a:focus-visible,
-      .nav-cta {
-        color: var(--ink);
-      }
-
+      .nav-cta { color: var(--ink); }
       .nav-cta {
         border: 1px solid var(--line-strong);
         background: var(--paper);
         font-weight: 760;
       }
-
       .hero {
         border-bottom: 1px solid var(--line);
         background: var(--paper);
         padding: 5.25rem 0 3.5rem;
       }
-
       .hero-copy,
-      .section-head {
-        max-width: var(--measure);
-      }
-
-      .eyebrow,
-      .source-pill,
-      .pill,
-      .tag {
-        display: inline-flex;
-        align-items: center;
-        border-radius: var(--radius);
-        font-weight: 720;
-      }
-
+      .section-head { max-width: var(--measure); }
       .eyebrow,
       .kicker {
         margin-bottom: 0.75rem;
@@ -223,24 +153,17 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
       }
-
       .lede {
         max-width: var(--measure);
         color: var(--soft-ink);
         font-size: clamp(1.08rem, 2vw, 1.28rem);
       }
-
-      .cta-row,
-      .signup-actions {
+      .cta-row {
         display: flex;
         flex-wrap: wrap;
         gap: 0.7rem;
-      }
-
-      .cta-row {
         margin: 1.55rem 0 1rem;
       }
-
       .button {
         display: inline-flex;
         min-height: 2.8rem;
@@ -256,379 +179,82 @@
         font-weight: 760;
         text-decoration: none;
       }
-
       .button:hover,
-      .button:focus-visible {
-        border-color: var(--ink);
-      }
-
+      .button:focus-visible { border-color: var(--ink); }
       .button.primary {
         border-color: var(--ink);
         background: var(--ink);
         color: #ffffff;
       }
-
       .button.primary:hover,
       .button.primary:focus-visible {
-        background: var(--accent);
         border-color: var(--accent);
+        background: var(--accent);
       }
-
-      .button:disabled {
-        cursor: progress;
-        opacity: 0.7;
-      }
-
-      .note,
-      .field-hint {
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      .source-row {
-        display: none;
-      }
-
-      .bar,
+      .note { margin: 0; color: var(--muted); font-size: 0.92rem; }
       .section {
         border-bottom: 1px solid var(--line);
+        padding: 4rem 0;
       }
-
-      .bar {
-        background: var(--page);
-      }
-
-      .bar-grid,
-      .step-grid,
-      .card-grid {
+      .section.alt,
+      .signup { background: var(--paper); }
+      .section-head { margin-bottom: 1.5rem; }
+      .grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1px;
-      }
-
-      .bar-grid {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
         background: var(--line);
+        overflow: hidden;
       }
-
-      .bar-item {
-        background: var(--page);
-        padding: 1.2rem 0;
-      }
-
-      .bar-item + .bar-item {
-        padding-left: 1.2rem;
-      }
-
-      .bar-item strong {
-        display: block;
-        margin-bottom: 0.22rem;
-      }
-
-      .bar-item span,
-      .section-head p,
-      .card p,
-      .step p,
-      .signup-panel p,
-      li {
-        color: var(--muted);
-      }
-
-      .section {
-        padding: 4rem 0;
-      }
-
-      .section.alt,
-      .signup {
+      .panel {
         background: var(--paper);
+        padding: 1.15rem;
       }
-
-      .section-head {
-        margin-bottom: 1.5rem;
+      .panel p,
+      .section-head p,
+      li { color: var(--muted); }
+      .feed-preview {
+        display: grid;
+        gap: 1px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--line);
+        overflow: hidden;
       }
-
-      .fit-grid,
-      .pricing-grid,
+      .feed-item {
+        display: grid;
+        gap: 0.45rem;
+        background: var(--paper);
+        padding: 1.1rem;
+      }
+      .feed-item a {
+        color: var(--ink);
+        font-weight: 760;
+        text-decoration: none;
+      }
+      .feed-item a:hover { color: var(--accent); }
+      .meta {
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.76rem;
+      }
       .signup-grid {
         display: grid;
         grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.72fr);
         gap: 2rem;
       }
-
-      .card,
-      .step,
-      .sample,
-      .signup-panel {
-        border-top: 1px solid var(--line);
-        padding: 1rem 0 0;
-      }
-
-      .card p,
-      .step p {
-        margin-bottom: 0;
-      }
-
-      .step strong,
-      .sample-top span,
-      .tag,
-      .pill {
-        color: var(--muted);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-        font-size: 0.76rem;
-      }
-
-      .sample {
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--paper);
-        padding: 0;
-        overflow: hidden;
-      }
-
-      .sample-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        border-bottom: 1px solid var(--line);
-        padding: 0.8rem 1rem;
-      }
-
-      .sample-body {
-        display: grid;
-        grid-template-columns: minmax(0, 0.5fr) minmax(0, 1fr);
-      }
-
-      .sample-summary {
-        border-right: 1px solid var(--line);
-        padding: 1rem;
-      }
-
-      .sample-summary dl {
-        display: grid;
-        gap: 0.8rem;
-        margin: 0;
-      }
-
-      .sample-summary dt {
-        color: var(--muted);
-        font-size: 0.74rem;
-        font-weight: 760;
-        text-transform: uppercase;
-      }
-
-      .sample-summary dd {
-        margin: 0.1rem 0 0;
-        font-size: 1.9rem;
-        font-weight: 760;
-        line-height: 1;
-      }
-
-      .sample-list {
-        display: grid;
-        gap: 0;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .sample-list li {
-        padding: 1rem;
-      }
-
-      .sample-list li + li {
-        border-top: 1px solid var(--line);
-        margin-top: 0;
-      }
-
-      .sample-list strong {
-        display: block;
-        margin-bottom: 0.2rem;
-        color: var(--ink);
-      }
-
-      .sample-list p {
-        margin-bottom: 0.55rem;
-      }
-
-      .brief-meta {
-        display: grid;
-        gap: 0.45rem;
-        margin: 0.75rem 0;
-      }
-
-      .brief-meta div {
-        display: grid;
-        grid-template-columns: minmax(120px, 0.34fr) minmax(0, 1fr);
-        gap: 0.55rem;
-      }
-
-      .brief-meta dt {
-        color: var(--muted);
-        font-size: 0.74rem;
-        font-weight: 760;
-        text-transform: uppercase;
-      }
-
-      .brief-meta dd {
-        margin: 0;
-        color: var(--soft-ink);
-        font-size: 0.92rem;
-      }
-
-      .brief-checks {
-        margin-top: 0.65rem;
-      }
-
-      .source-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 0.75rem;
-      }
-
-      .source-links a {
-        border-bottom: 1px solid currentColor;
-        color: var(--accent);
-        font-size: 0.88rem;
-        font-weight: 760;
-        text-decoration: none;
-      }
-
-      .pill {
-        color: var(--accent);
-      }
-
-      .sample-cta {
-        border-top: 1px solid var(--line);
-        padding: 1rem;
-      }
-
-      .pricing-card {
-        display: grid;
-        gap: 0.9rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        padding: 1.1rem;
-      }
-
-      .pricing-card h3,
-      .pricing-card ul,
-      .pricing-card p {
-        margin: 0;
-      }
-
-      .price {
-        font-size: clamp(3rem, 8vw, 4.8rem);
-        font-weight: 760;
-        line-height: 0.95;
-      }
-
-      .pricing-card .note {
-        border-top: 1px solid var(--line);
-        padding-top: 0.85rem;
-      }
-
-      .tag {
-        margin-bottom: 0.65rem;
-      }
-
-      ul {
-        margin: 0.75rem 0 0;
-        padding-left: 1.15rem;
-      }
-
-      li + li {
-        margin-top: 0.32rem;
-      }
-
       .signup-panel {
         border: 1px solid var(--line);
         border-radius: var(--radius);
         background: var(--paper);
         padding: 1rem;
       }
-
-      .signup-form {
-        display: grid;
-        gap: 0.85rem;
-      }
-
-      .field {
-        display: grid;
-        gap: 0.35rem;
-      }
-
-      .field label {
-        color: var(--soft-ink);
-        font-size: 0.9rem;
-        font-weight: 760;
-      }
-
-      .field input,
-      .field select,
-      .field textarea {
-        width: 100%;
-        border: 1px solid var(--line-strong);
-        border-radius: var(--radius);
-        background: var(--paper);
-        color: var(--ink);
-        font: inherit;
-        padding: 0.78rem 0.8rem;
-      }
-
-      .field textarea {
-        min-height: 7rem;
-        resize: vertical;
-      }
-
-      .field input::placeholder,
-      .field textarea::placeholder {
-        color: #89928f;
-      }
-
-      .form-status {
-        display: none;
-        border-radius: var(--radius);
-        padding: 0.76rem 0.85rem;
-        font-size: 0.92rem;
-        font-weight: 760;
-      }
-
-      .form-status.active {
-        display: block;
-        border: 1px solid var(--line-strong);
-        background: var(--page);
-        color: var(--soft-ink);
-      }
-
-      .form-status.success {
-        display: block;
-        border: 1px solid #b9d7d1;
-        background: var(--accent-soft);
-        color: #0b504a;
-      }
-
-      .form-status.error {
-        display: block;
-        border: 1px solid #e0bbb4;
-        background: #f8e9e6;
-        color: var(--red);
-      }
-
-      .newsletter-section .section-head p {
-        color: var(--soft-ink);
-      }
-
-      .newsletter-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-      }
-
+      .newsletter-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
       .newsletter-row input[type="email"] {
         flex: 1;
-        min-width: 200px;
+        min-width: 210px;
         border: 1px solid var(--line-strong);
         border-radius: var(--radius);
         background: var(--paper);
@@ -636,20 +262,8 @@
         font: inherit;
         padding: 0.78rem 0.8rem;
       }
-
-      .newsletter-row input[type="email"]::placeholder {
-        color: #89928f;
-      }
-
-      .newsletter-row input[type="email"]:focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 3px;
-      }
-
-      footer {
-        padding: 1.7rem 0 2rem;
-      }
-
+      .newsletter-row input[type="email"]::placeholder { color: #89928f; }
+      footer { padding: 1.7rem 0 2rem; }
       .footer-row {
         display: flex;
         flex-wrap: wrap;
@@ -657,91 +271,34 @@
         gap: 1rem;
         color: var(--muted);
       }
-
-      footer a {
-        color: var(--ink);
-      }
-
+      .footer-links { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+      footer a { color: var(--ink); }
       @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-          scroll-behavior: auto !important;
-        }
+        *, *::before, *::after { scroll-behavior: auto !important; }
       }
-
       @media (max-width: 900px) {
-        .step-grid,
-        .card-grid,
-        .bar-grid,
-        .sample-body,
-        .fit-grid,
-        .pricing-grid,
-        .signup-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .bar-grid {
-          background: transparent;
-          gap: 0;
-        }
-
-        .bar-item,
-        .bar-item + .bar-item {
-          border-top: 1px solid var(--line);
-          padding: 1rem 0;
-        }
-
-        .sample-summary {
-          border-right: 0;
-          border-bottom: 1px solid var(--line);
-        }
+        .grid,
+        .signup-grid { grid-template-columns: 1fr; }
       }
-
       @media (max-width: 720px) {
-        .wrap {
-          width: min(calc(100% - 24px), var(--max));
-        }
-
+        .wrap { width: min(calc(100% - 24px), var(--max)); }
         .nav {
           min-height: auto;
           align-items: flex-start;
           flex-direction: column;
           padding: 0.85rem 0;
         }
-
         nav {
           width: 100%;
           justify-content: flex-start;
           overflow-x: auto;
           padding-bottom: 0.15rem;
         }
-
-        nav a {
-          white-space: nowrap;
-        }
-
-        .hero {
-          padding: 3.4rem 0 2.6rem;
-        }
-
-        .section {
-          padding: 3rem 0;
-        }
-
-        .button {
-          width: 100%;
-        }
-
-        .sample-top {
-          align-items: flex-start;
-          flex-direction: column;
-          gap: 0.35rem;
-        }
-
-        .brief-meta div {
-          grid-template-columns: 1fr;
-        }
+        nav a { white-space: nowrap; }
+        .hero { padding: 3.4rem 0 2.6rem; }
+        .section { padding: 3rem 0; }
+        .button,
+        .newsletter-row input[type="email"] { width: 100%; }
       }
     </style>
   </head>
@@ -756,15 +313,8 @@
         </a>
         <nav>
           <a href="feed.html">Feed</a>
-          <a href="sample-brief.html">Sample brief</a>
-          <a href="roadmap.html">Roadmap</a>
-          <a
-            class="nav-cta"
-            href="#signup-form"
-            data-pilot-source="header"
-          >
-            Watchlist
-          </a>
+          <a href="rss.xml">RSS</a>
+          <a class="nav-cta" href="#newsletter">Subscribe</a>
         </nav>
       </div>
     </header>
@@ -773,188 +323,100 @@
       <section class="hero" id="top">
         <div class="wrap">
           <div class="hero-copy">
-            <p class="eyebrow">Cybersecurity signal for operators</p>
-            <h1>Track the public security signals worth acting on.</h1>
+            <p class="eyebrow">Security intel feed</p>
+            <h1>Track public security signals worth reading.</h1>
             <p class="lede">
-              PatchBrief follows public vulnerability advisories, known exploited vulnerabilities,
-              vendor updates, and threat activity, then turns the noise into short source-backed briefs.
+              PatchBrief follows exploited vulnerabilities, vendor advisories, patch releases,
+              and high-signal threat activity, then turns them into short source-backed briefs.
             </p>
             <div class="cta-row" aria-label="Primary actions">
-              <a
-                class="button primary"
-                href="feed.html"
-                data-pilot-source="hero"
-              >
-                Read the feed
-              </a>
-              <a class="button" href="#signup-form">Create a watchlist</a>
-            </div>
-            <p class="note">No panic feed. No scanner claims. Just short, source-backed briefs with practical next checks.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="how">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">How it works</p>
-            <h2>How it works.</h2>
-          </div>
-          <div class="step-grid">
-            <div class="step">
-              <strong>01</strong>
-              <h3>Add your watchlist</h3>
-              <p>Up to 10 vendors, products, or technologies.</p>
-            </div>
-            <div class="step">
-              <strong>02</strong>
-              <h3>PatchBrief monitors sources</h3>
-              <p>Public advisories and known exploited signals.</p>
-            </div>
-            <div class="step">
-              <strong>03</strong>
-              <h3>Get a brief when it matches</h3>
-              <p>Matches, source links, and suggested checks by email.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="sample">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Sample brief</p>
-            <h2>See the format.</h2>
-            <p>A compact watchlist brief with matches, source links, and suggested checks.</p>
-          </div>
-
-          <article class="sample" aria-label="Example PatchBrief watchlist brief">
-            <div class="sample-top">
-              <span>PatchBrief watchlist brief example</span>
-              <span>fictional sample data</span>
-            </div>
-            <div class="sample-body">
-              <div class="sample-summary" aria-label="Example brief counts">
-                <dl>
-                  <div>
-                    <dt>Advisories reviewed</dt>
-                    <dd>38</dd>
-                  </div>
-                  <div>
-                    <dt>Watchlist matches</dt>
-                    <dd>3</dd>
-                  </div>
-                  <div>
-                    <dt>Priority reviews</dt>
-                    <dd>1</dd>
-                  </div>
-                </dl>
-              </div>
-              <ul class="sample-list">
-                <li>
-                  <strong>Palo Alto GlobalProtect</strong>
-                  <p>Known exploited firewall issue. Review exposed GlobalProtect services.</p>
-                  <span class="pill">CVE 2024 3400</span>
-                  <div class="source-links">
-                    <a href="https://security.paloaltonetworks.com/CVE-2024-3400">Palo Alto advisory</a>
-                  </div>
-                </li>
-                <li>
-                  <strong>Google Chrome desktop</strong>
-                  <p>Known exploited browser issue. Confirm managed update coverage.</p>
-                  <span class="pill">CVE 2024 7971</span>
-                  <div class="source-links">
-                    <a href="https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop_21.html">Chrome release note</a>
-                  </div>
-                </li>
-                <li>
-                  <strong>Microsoft Message Queuing</strong>
-                  <p>Windows server match. Check MSMQ exposure and patch status.</p>
-                  <span class="pill">CVE 2024 30080</span>
-                  <div class="source-links">
-                    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-30080">NVD entry</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="sample-cta">
-              <a
-                class="button primary"
-                href="sample-brief.html"
-              >
-                View sample brief
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" aria-label="PatchBrief model" id="pricing">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Model</p>
-            <h2>Public feed, optional watchlist filtering later.</h2>
-            <p>PatchBrief starts as a free public feed. Watchlist filtering is being shaped through the pilot with early users.</p>
-          </div>
-          <div class="card-grid" style="gap:1.25rem;">
-            <article class="pricing-card" aria-label="Public feed">
-              <h3>Public feed</h3>
-              <strong class="price" style="font-size:clamp(1.4rem,4vw,2rem);">Free</strong>
-              <p>Browse and subscribe to the public security brief feed. No account required to read.</p>
-              <ul>
-                <li>Public vulnerability and threat briefs</li>
-                <li>KEV signals, vendor advisories, patch coverage</li>
-                <li>Short operator-ready summaries</li>
-                <li>Source links with every item</li>
-              </ul>
               <a class="button primary" href="feed.html">Read the feed</a>
+              <a class="button" href="#newsletter">Get updates</a>
+            </div>
+            <p class="note">Public sources only. No scanning, exposure claims, or dashboard sprawl.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Feed scope">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">MVP scope</p>
+            <h2>A focused public feed first.</h2>
+            <p>
+              The current product is a free security intel feed. Monetization comes later,
+              after the publishing cadence, source quality, and reader demand are clearer.
+            </p>
+          </div>
+          <div class="grid">
+            <article class="panel">
+              <h3>Exploited vulnerabilities</h3>
+              <p>CISA KEV additions and credible public exploitation reports.</p>
             </article>
-            <article class="pricing-card" aria-label="Watchlist pilot">
-              <h3>Watchlist pilot</h3>
-              <strong class="price" style="font-size:clamp(1.4rem,4vw,2rem);">Free during pilot</strong>
-              <p>Join the pilot to share a small watchlist and help shape filtered brief delivery.</p>
-              <ul>
-                <li>Up to 10 vendors, products, or technologies</li>
-                <li>Filtered briefs matched to your watchlist</li>
-                <li>Public advisory and KEV matching</li>
-                <li>Feedback-driven format and cadence</li>
-              </ul>
-              <a class="button primary" href="#signup-form" data-pilot-source="pricing-pilot">Join pilot</a>
+            <article class="panel">
+              <h3>Vendor advisories</h3>
+              <p>Critical updates from vendors common in operator environments.</p>
             </article>
-            <article class="pricing-card" aria-label="Future paid tiers">
-              <h3>Paid watchlist filtering</h3>
-              <strong class="price" style="font-size:clamp(1.4rem,4vw,2rem);">Planned</strong>
-              <p>Paid tiers are being shaped by pilot feedback. Share what would be useful in the signup form.</p>
-              <ul>
-                <li>Personal watchlist monitoring</li>
-                <li>Team or MSP watchlists</li>
-                <li>Client-ready brief language</li>
-                <li>Alert cadence options</li>
-              </ul>
-              <a class="button" href="#signup-form" data-pilot-source="pricing-future">Share interest</a>
+            <article class="panel">
+              <h3>Threat activity</h3>
+              <p>High-signal ransomware and campaign reporting with public sources.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt newsletter-section" id="newsletter" aria-label="Newsletter signup">
+      <section class="section alt" aria-label="Recent feed examples">
         <div class="wrap">
-          <div class="newsletter-inner">
-            <div class="section-head" style="margin-bottom:1rem;">
-              <h2>Get the public PatchBrief feed by email.</h2>
-              <p>Receive short public-source briefs for exploited vulnerabilities, vendor advisories, and high-signal threat activity. Watchlist filtering will be tested during the pilot.</p>
-            </div>
+          <div class="section-head">
+            <p class="kicker">Feed format</p>
+            <h2>Short briefs with source links.</h2>
+            <p>Each item explains what happened, why it matters, what operators may want to check, and where the claims came from.</p>
+          </div>
+          <div class="feed-preview">
+            <article class="feed-item">
+              <span class="meta">KEV · Known exploited · CVE-2024-7971</span>
+              <a href="items/chrome-zero-day-kev-2024-7971.html">CISA KEV adds actively exploited Chrome V8 type confusion zero-day</a>
+              <p class="note">Chrome desktop update coverage and unmanaged browser follow-up.</p>
+            </article>
+            <article class="feed-item">
+              <span class="meta">Patch Tuesday · Critical vendor advisory</span>
+              <a href="items/microsoft-patch-tuesday-msmq-2024-30080.html">Microsoft Patch Tuesday: critical RCE in Message Queuing</a>
+              <p class="note">MSMQ inventory, exposure review, and June update status.</p>
+            </article>
+            <article class="feed-item">
+              <span class="meta">Threat activity · Ransomware</span>
+              <a href="items/alphv-blackcat-healthcare-vpn-2024.html">ALPHV/BlackCat ransomware targets healthcare via unpatched VPN appliances</a>
+              <p class="note">VPN patch levels, MFA coverage, and remote access log review.</p>
+            </article>
+          </div>
+          <div class="cta-row">
+            <a class="button primary" href="feed.html">Open full feed</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section signup" id="newsletter" aria-label="Newsletter signup">
+        <div class="wrap signup-grid">
+          <div>
+            <p class="kicker">Subscribe</p>
+            <h2>Get the feed by email.</h2>
+            <p>
+              Join the interest list for public-source PatchBrief updates. Early monetization experiments
+              may include sponsorships, premium archives, or paid feed options later.
+            </p>
+            <p class="note">No account. No scanner. Just the feed and occasional product updates.</p>
+          </div>
+          <aside class="signup-panel" aria-label="Newsletter signup form">
             <form
               id="newsletter-form"
-              class="newsletter-form"
               action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
               method="POST"
             >
               <input type="hidden" name="_subject" value="New PatchBrief newsletter signup" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
-              <input type="hidden" name="_next" value="https://www.patchbrief.org/?subscribed=1" />
-              <input type="hidden" name="interest_type" value="Public feed / newsletter" />
+              <input type="hidden" name="_next" value="https://www.patchbrief.org/?subscribed=1#newsletter" />
+              <input type="hidden" name="interest_type" value="Public security intel feed" />
               <div class="newsletter-row">
                 <input
                   id="newsletter-email"
@@ -964,213 +426,20 @@
                   placeholder="you@company.com"
                   required
                 />
-                <button class="button primary" type="submit">Subscribe to public feed</button>
+                <button class="button primary" type="submit">Subscribe</button>
               </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section class="section signup" id="signup">
-        <div class="wrap signup-grid">
-          <div>
-            <p class="kicker">Watchlist pilot</p>
-            <h2>Filter PatchBrief to the vendors and products you care about.</h2>
-            <p>
-              Join the pilot to share a small watchlist and help shape PatchBrief's filtered briefs.
-              The public feed stays broad; watchlists are for matching signal to your stack.
-            </p>
-            <p class="note">PatchBrief uses public advisory sources. It does not scan your environment, verify exposure, or replace vendor guidance.</p>
-          </div>
-          <aside class="signup-panel" aria-label="Feed and watchlist signup form">
-            <form
-              id="signup-form"
-              class="signup-form"
-              action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
-              method="POST"
-            >
-              <input type="hidden" name="_subject" value="New PatchBrief feed/watchlist signup" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
-              <input
-                id="form-next-url"
-                type="hidden"
-                name="_next"
-                value="https://www.patchbrief.org/?pilot=requested#signup-form"
-              />
-              <input type="hidden" name="signup_source" value="bottom form" />
-
-              <div class="field">
-                <label for="signup-email">Email</label>
-                <input
-                  id="signup-email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  placeholder="you@company.com"
-                  required
-                />
-              </div>
-
-              <div class="field">
-                <label for="signup-interest">What do you want?</label>
-                <select id="signup-interest" name="interest_type" required>
-                  <option value="">Choose one</option>
-                  <option>Public feed / newsletter</option>
-                  <option>Personal vendor watchlist</option>
-                  <option>Team watchlist</option>
-                  <option>MSP/client watchlists</option>
-                  <option>Not sure yet</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="signup-watchlist">Vendors, products, or technologies to monitor</label>
-                <textarea
-                  id="signup-watchlist"
-                  name="watchlist"
-                  placeholder="Example: Microsoft, Chrome, GitHub, Fortinet, Veeam"
-                  maxlength="600"
-                ></textarea>
-                <p class="field-hint">Optional for the public feed. For watchlists, add up to 10 items separated by commas or new lines.</p>
-              </div>
-
-              <div class="field">
-                <label for="signup-cadence">Preferred cadence</label>
-                <select id="signup-cadence" name="cadence">
-                  <option value="">Choose one</option>
-                  <option>Important-only alerts</option>
-                  <option>Weekly brief</option>
-                  <option>Monthly summary</option>
-                  <option>Not sure yet</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="signup-pricing">Which paid version would be most realistic later?</label>
-                <select id="signup-pricing" name="pricing_interest">
-                  <option value="">Choose one</option>
-                  <option>Free public feed only</option>
-                  <option>$9/mo personal watchlist</option>
-                  <option>$29/mo small team</option>
-                  <option>$99/mo MSP/client watchlists</option>
-                  <option>I would not pay for this</option>
-                  <option>Not sure yet</option>
-                </select>
-              </div>
-
-              <button class="button primary" type="submit">Join pilot</button>
-              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
             </form>
           </aside>
         </div>
       </section>
     </main>
 
-    <script>
-      (() => {
-        const form = document.querySelector("#signup-form");
-        if (!form) return;
-
-        const status = form.querySelector("[data-form-status]");
-        const submit = form.querySelector('button[type="submit"]');
-        const emailField = form.querySelector("#signup-email");
-        const watchlistField = form.querySelector("#signup-watchlist");
-        const interestField = form.querySelector("#signup-interest");
-        const sourceField = form.querySelector('input[name="signup_source"]');
-
-        const setStatus = (state, message) => {
-          status.className = `form-status ${state}`;
-          status.textContent = message;
-        };
-
-        const parseWatchlist = () =>
-          watchlistField.value
-            .split(/[,\n]/)
-            .map((item) => item.trim())
-            .filter(Boolean);
-
-        const isWatchlistInterest = () => {
-          const v = interestField ? interestField.value : "";
-          return v && v !== "Public feed / newsletter" && v !== "Not sure yet";
-        };
-
-        const getWatchlistError = () => {
-          if (!isWatchlistInterest()) return "";
-
-          const items = parseWatchlist();
-
-          if (!items.length) {
-            return "Add at least one vendor, product, or technology for your watchlist.";
-          }
-
-          if (items.length > 10) {
-            return "Use 10 items or fewer for your watchlist.";
-          }
-
-          if (items.some((item) => item.length > 60)) {
-            return "Keep each watchlist item under 60 characters.";
-          }
-
-          return "";
-        };
-
-        const params = new URLSearchParams(window.location.search);
-
-        if (params.get("pilot") === "requested") {
-          form.dataset.submitted = "true";
-          submit.disabled = true;
-          submit.textContent = "Signup received";
-          setStatus("success", "Signup received. We’ll follow up as the public feed and watchlist pilot develop.");
-        }
-
-        document.querySelectorAll("[data-pilot-source]").forEach((link) => {
-          link.addEventListener("click", () => {
-            if (sourceField && link.dataset.pilotSource) {
-              sourceField.value = link.dataset.pilotSource;
-            }
-
-            window.setTimeout(() => {
-              if (!form.dataset.submitted) {
-                emailField.focus({ preventScroll: true });
-              }
-            }, 350);
-          });
-        });
-
-        form.addEventListener("submit", (event) => {
-          if (form.dataset.submitted === "true") {
-            event.preventDefault();
-            return;
-          }
-
-          const watchlistError = getWatchlistError();
-
-          if (watchlistError) {
-            event.preventDefault();
-            setStatus("error", watchlistError);
-            watchlistField.focus();
-            return;
-          }
-
-          if (!form.reportValidity()) {
-            return;
-          }
-
-          submit.disabled = true;
-          submit.textContent = "Saving…";
-          setStatus("active", "Sending your signup…");
-        });
-      })();
-    </script>
-
     <footer>
       <div class="wrap footer-row">
         <strong>PatchBrief</strong>
-        <div style="display:flex;flex-wrap:wrap;gap:0.85rem;">
+        <div class="footer-links">
           <a href="feed.html">Feed</a>
           <a href="rss.xml">RSS</a>
-          <a href="roadmap.html">Roadmap</a>
           <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
         </div>
       </div>

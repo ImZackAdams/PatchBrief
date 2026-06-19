@@ -3,7 +3,7 @@
 How PatchBrief plans to ingest public vulnerability and threat intelligence sources.
 
 This document defines the sources, their value, expected data format, planned use, and risks.
-The goal is to avoid ingesting everything at once and preserve the public feed-first strategy.
+The goal is to avoid ingesting everything at once and preserve the public feed MVP.
 
 ---
 
@@ -66,8 +66,8 @@ by days or weeks. Not a real-time source.
 **What it provides:** Microsoft's official security advisory feed, including Patch Tuesday releases.
 Structured JSON/XML via MSRC API or CVRF feed.
 
-**Why it matters:** Microsoft products (Windows, Office, Exchange, Azure) appear in most operator
-watchlists. Patch Tuesday is a predictable monthly event worth summarizing.
+**Why it matters:** Microsoft products (Windows, Office, Exchange, Azure) appear in many operator
+environments. Patch Tuesday is a predictable monthly event worth summarizing.
 
 **Data format:** CVRF/CSAF feed and REST API at `https://api.msrc.microsoft.com/`
 
@@ -90,11 +90,11 @@ in dependencies. GHSA covers these with structured data.
 **Data format:** GraphQL API and REST API at `https://api.github.com/advisories`. Also available
 as OSV-format exports.
 
-**Expected use:** Supplement feed for ecosystem-specific advisories when a package has significant
-user base and active exploitation.
+**Expected use:** Supplement feed for ecosystem-specific advisories when a package has a significant
+user base, high severity, or credible active exploitation.
 
 **Risk/limitation:** Very high volume. Needs aggressive filtering. Most advisories are low-signal.
-Best used selectively when a specific package appears in watchlists.
+Best used selectively when a package is widely deployed or exploitation is confirmed.
 
 ---
 

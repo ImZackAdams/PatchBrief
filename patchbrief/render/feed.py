@@ -87,8 +87,7 @@ def render_feed(items: list[FeedItem]) -> str:
     is_sample = any(item.is_sample for item in items)
     sample_notice = (
         '<p class="sample-notice" role="note">'
-        "Sample feed while PatchBrief is in pilot. "
-        "Items are examples of format and source style, not live intelligence."
+        "Preview feed. Items are examples of format and source style, not live intelligence."
         "</p>"
         if is_sample
         else ""
@@ -116,7 +115,7 @@ def render_item_page(item: FeedItem) -> str:
     sources_html = _render_item_sources_html(item)
     sample_notice = (
         '<span class="sample-notice" role="note">'
-        "Sample brief — example format, not live intelligence"
+        "Preview brief — example format, not live intelligence"
         "</span>"
         if item.is_sample
         else ""

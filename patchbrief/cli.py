@@ -3,62 +3,10 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime
 from pathlib import Path
 
 CISA_KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 SITE_BASE_URL = "https://www.patchbrief.org"
-
-
-def cmd_generate_brief(args: argparse.Namespace) -> None:
-    from patchbrief.advisories import filter_by_cadence, load_advisories, match_advisories
-    from patchbrief.models import Brief
-    from patchbrief.render.html import render_brief
-    from patchbrief.watchlist import load_watchlist
-
-    # Load watchlist
-    try:
-        watchlist = load_watchlist(args.watchlist)
-    except (ValueError, FileNotFoundError, OSError) as exc:
-        print(f"Error loading watchlist: {exc}", file=sys.stderr)
-        sys.exit(1)
-
-    matches: list = []
-    omitted: list = []
-    advisories_reviewed = 0
-    source_names: list[str] = []
-
-    if args.source:
-        try:
-            advisories = load_advisories(args.source)
-        except (FileNotFoundError, OSError, json.JSONDecodeError) as exc:
-            print(f"Error loading advisories: {exc}", file=sys.stderr)
-            sys.exit(1)
-
-        advisories_reviewed = len(advisories)
-        source_names = list({a.source for a in advisories})
-        all_matches = match_advisories(watchlist, advisories)
-        matches, omitted = filter_by_cadence(all_matches, watchlist.cadence)
-
-    brief = Brief(
-        generated_at=datetime.now(),
-        watchlist=watchlist,
-        advisories_reviewed=advisories_reviewed,
-        matches=matches,
-        source_names=source_names,
-    )
-
-    html = render_brief(brief, omitted=omitted)
-
-    out_path = Path(args.out)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(html, encoding="utf-8")
-
-    print(f"Brief written to: {out_path}")
-    print(f"  Advisories reviewed: {advisories_reviewed}")
-    print(f"  Matches included:    {len(matches)}")
-    if omitted:
-        print(f"  Matches omitted:     {len(omitted)} (cadence: {watchlist.cadence})")
 
 
 def cmd_ingest_cisa_kev(args: argparse.Namespace) -> None:
@@ -141,92 +89,6 @@ def cmd_ingest_cisa_kev(args: argparse.Namespace) -> None:
     print(f"  Total records: {len(normalized)}")
 
 
-def cmd_send_brief(args: argparse.Namespace) -> None:
-    import os
-
-    from patchbrief.advisories import filter_by_cadence, load_advisories, match_advisories
-    from patchbrief.email import send_brief
-    from patchbrief.models import Brief
-    from patchbrief.render.html import render_brief
-    from patchbrief.watchlist import load_watchlist
-
-    api_key = args.resend_key or os.environ.get("RESEND_API_KEY", "")
-    if not api_key:
-        print("Error: --resend-key or RESEND_API_KEY env var required.", file=sys.stderr)
-        sys.exit(1)
-
-    try:
-        watchlist = load_watchlist(args.watchlist)
-    except (ValueError, FileNotFoundError, OSError) as exc:
-        print(f"Error loading watchlist: {exc}", file=sys.stderr)
-        sys.exit(1)
-
-    try:
-        advisories = load_advisories(args.source)
-    except (FileNotFoundError, OSError, json.JSONDecodeError) as exc:
-        print(f"Error loading advisories: {exc}", file=sys.stderr)
-        sys.exit(1)
-
-    all_matches = match_advisories(watchlist, advisories)
-    included, omitted = filter_by_cadence(all_matches, watchlist.cadence)
-
-    if not included:
-        print(f"No matches for {watchlist.owner_email} (cadence: {watchlist.cadence}) — skipping.")
-        return
-
-    brief = Brief(
-        generated_at=datetime.now(),
-        watchlist=watchlist,
-        advisories_reviewed=len(advisories),
-        matches=included,
-        source_names=list({m.advisory.source for m in included}),
-    )
-    html = render_brief(brief, omitted=omitted)
-
-    count = len(included)
-    subject = f"PatchBrief — {count} advisor{'y' if count == 1 else 'ies'} matched your watchlist"
-
-    try:
-        result = send_brief(
-            html=html,
-            to=watchlist.owner_email,
-            subject=subject,
-            from_address=args.from_email,
-            api_key=api_key,
-        )
-    except RuntimeError as exc:
-        print(f"Error sending email: {exc}", file=sys.stderr)
-        sys.exit(1)
-
-    print(f"Sent to {watchlist.owner_email}: {result.get('id', 'ok')}")
-
-
-def cmd_create_watchlist(args: argparse.Namespace) -> None:
-    import yaml
-
-    terms = [t.strip() for t in args.terms.split(",") if t.strip()]
-    if not terms:
-        print("Error: --terms must include at least one term.", file=sys.stderr)
-        sys.exit(1)
-
-    data = {
-        "name": args.name,
-        "owner_email": args.email,
-        "cadence": args.cadence,
-        "terms": terms,
-    }
-
-    out_path = Path(args.out)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(out_path, "w", encoding="utf-8") as f:
-        yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
-
-    print(f"Watchlist written to {out_path}")
-    print(f"  Owner: {args.email}")
-    print(f"  Terms: {', '.join(terms)}")
-    print(f"  Cadence: {args.cadence}")
-
-
 def cmd_build_feed(args: argparse.Namespace) -> None:
     from patchbrief.feed import load_feed_items
     from patchbrief.render.feed import render_feed, render_item_page, render_rss
@@ -273,34 +135,9 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="patchbrief",
-        description="PatchBrief public feed and watchlist tooling",
+        description="PatchBrief security intel feed tooling",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
-
-    # generate-brief
-    p_gen = subparsers.add_parser(
-        "generate-brief",
-        help="Generate an HTML brief from a watchlist and optional advisory source.",
-    )
-    p_gen.add_argument(
-        "--watchlist",
-        required=True,
-        metavar="PATH",
-        help="Path to the YAML watchlist file.",
-    )
-    p_gen.add_argument(
-        "--source",
-        metavar="PATH",
-        default=None,
-        help="Path to a normalized advisories JSON file (optional).",
-    )
-    p_gen.add_argument(
-        "--out",
-        required=True,
-        metavar="PATH",
-        help="Output path for the generated HTML brief.",
-    )
-    p_gen.set_defaults(func=cmd_generate_brief)
 
     # ingest-cisa-kev
     p_ingest = subparsers.add_parser(
@@ -308,18 +145,6 @@ def build_parser() -> argparse.ArgumentParser:
         help="Fetch and normalize the CISA Known Exploited Vulnerabilities catalog.",
     )
     p_ingest.set_defaults(func=cmd_ingest_cisa_kev)
-
-    # send-brief
-    p_send = subparsers.add_parser(
-        "send-brief",
-        help="Generate a brief and email it to the watchlist owner via Resend.",
-    )
-    p_send.add_argument("--watchlist", required=True, metavar="PATH")
-    p_send.add_argument("--source", required=True, metavar="PATH")
-    p_send.add_argument("--resend-key", default=None, metavar="KEY",
-                        help="Resend API key (or set RESEND_API_KEY env var).")
-    p_send.add_argument("--from-email", default="briefs@patchbrief.org", metavar="EMAIL")
-    p_send.set_defaults(func=cmd_send_brief)
 
     # build-feed
     p_feed = subparsers.add_parser(
@@ -339,22 +164,6 @@ def build_parser() -> argparse.ArgumentParser:
         help=f"Site base URL for RSS links (default: {SITE_BASE_URL}).",
     )
     p_feed.set_defaults(func=cmd_build_feed)
-
-    # create-watchlist
-    p_create = subparsers.add_parser(
-        "create-watchlist",
-        help="Write a subscriber watchlist YAML from CLI arguments.",
-    )
-    p_create.add_argument("--name", required=True, metavar="SLUG",
-                          help="Watchlist slug, e.g. acme-corp")
-    p_create.add_argument("--email", required=True, metavar="EMAIL")
-    p_create.add_argument("--terms", required=True, metavar="TERMS",
-                          help="Comma-separated watchlist terms.")
-    p_create.add_argument("--cadence", required=True,
-                          choices=["important_only", "weekly", "monthly"])
-    p_create.add_argument("--out", required=True, metavar="PATH",
-                          help="Output path for the YAML file.")
-    p_create.set_defaults(func=cmd_create_watchlist)
 
     return parser
 

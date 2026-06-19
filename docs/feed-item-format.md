@@ -50,7 +50,7 @@ is_sample: true   # set to false for real published items
 | `why_it_matters` | yes | Explanation of the signal. Why this brief was written. |
 | `sources` | yes | List of source objects with `title` and `url`. At least one required. |
 | `tags` | no | List of lowercase kebab-case tag strings. Used for filtering. |
-| `is_sample` | yes | `true` for pilot sample items. `false` for real published items. |
+| `is_sample` | yes | `true` for preview/example items. `false` for real published items. |
 
 ## Type values
 

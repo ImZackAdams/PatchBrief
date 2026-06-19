@@ -2,7 +2,7 @@
 
 ## What is PatchBrief?
 
-PatchBrief is a public cyber intelligence feed and future watchlist filtering product for operators.
+PatchBrief is a public security intelligence feed for operators.
 
 It tracks public vulnerability advisories, known exploited vulnerabilities, vendor security updates,
 and high-signal threat activity, then turns them into short source-backed briefs.
@@ -11,10 +11,10 @@ and high-signal threat activity, then turns them into short source-backed briefs
 
 | Layer | Status |
 |---|---|
-| **Public feed** | Active — static, sample items during pilot |
-| **RSS / newsletter** | Building — generator and delivery in progress |
-| **Watchlist pilot** | Active — FormSubmit signup, manual matching |
-| **Paid watchlist filtering** | Planned — shaped by pilot feedback |
+| **Public feed** | Active MVP |
+| **RSS** | Active |
+| **Newsletter interest list** | Active via FormSubmit |
+| **Monetization** | Later — sponsor, subscription, or premium feed experiments |
 
 ## Boundaries
 
@@ -33,11 +33,9 @@ Static GitHub Pages site at `https://www.patchbrief.org`
 
 | Page | Purpose |
 |---|---|
-| `index.html` | Homepage: public feed intro, newsletter signup, watchlist pilot form |
-| `feed.html` | Public feed: sample security briefs |
+| `index.html` | Homepage: public feed intro and newsletter signup |
+| `feed.html` | Public security intel feed |
 | `items/` | Individual brief pages |
-| `sample-brief.html` | Sample watchlist-filtered brief |
-| `roadmap.html` | Product roadmap |
 
 ## Content model
 
@@ -68,14 +66,6 @@ python -m patchbrief.cli build-feed \
   --base-url https://www.patchbrief.org
 ```
 
-### Run the watchlist brief generator
-
-```bash
-python -m patchbrief.cli generate-brief \
-  --watchlist watchlists/sample-watchlist.yml \
-  --out reports/sample-brief.html
-```
-
 ### Ingest CISA KEV
 
 ```bash
@@ -99,25 +89,20 @@ Generated files (`feed.html`, `rss.xml`, `items/`) are uploaded as a build artif
 
 ## Roadmap
 
-See [roadmap.html](roadmap.html) for the public-facing roadmap and [docs/source-ingestion-plan.md](docs/source-ingestion-plan.md)
-for the planned ingestion implementation order.
+See [docs/source-ingestion-plan.md](docs/source-ingestion-plan.md) for the planned ingestion implementation order.
 
 Short version:
 
-- [x] Static site and sample briefs
+- [x] Static site and public feed
 - [x] CISA KEV ingestion CLI
-- [x] Watchlist matching CLI
-- [x] Email brief delivery via Resend
 - [x] Structured feed content format
 - [x] Static feed generator
 - [x] RSS generation
 - [ ] Automated ingestion pipeline
-- [ ] Saved watchlist delivery to pilot users
-- [ ] Paid watchlist filtering tiers
+- [ ] Newsletter publishing workflow
+- [ ] Monetization experiment
 
 ## Docs
 
 - [docs/feed-item-format.md](docs/feed-item-format.md) — Feed item YAML schema and field reference
-- [docs/pilot-metrics.md](docs/pilot-metrics.md) — How to judge whether the pilot is working
 - [docs/source-ingestion-plan.md](docs/source-ingestion-plan.md) — Planned ingestion sources and order
-- [docs/watchlist-format.md](docs/watchlist-format.md) — Watchlist YAML schema
