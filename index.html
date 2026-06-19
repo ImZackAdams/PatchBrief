@@ -1188,12 +1188,10 @@
             <form
               id="signup-form"
               class="signup-form"
-              action="https://formsubmit.co/patchbrief@protonmail.com"
-              method="POST"
+              action="mailto:patchbrief@protonmail.com?subject=Join%20PatchBrief%20early%20access"
+              method="post"
+              enctype="text/plain"
             >
-              <input type="hidden" name="_subject" value="New PatchBrief early access signup" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_next" value="https://www.patchbrief.org/?signup=sent#signup-form" />
               <input type="hidden" name="signup_source" value="bottom form" />
 
               <div class="field">
@@ -1309,15 +1307,6 @@
         form.addEventListener("input", refreshFallbackLinks);
         form.addEventListener("change", refreshFallbackLinks);
 
-        if (new URLSearchParams(window.location.search).get("signup") === "sent") {
-          form.dataset.submitted = "true";
-          setStatus("success", "Signup sent. Check your inbox for a confirmation or sample brief follow up.");
-
-          if (submit) {
-            submit.textContent = "Signup sent";
-          }
-        }
-
         document.querySelectorAll("[data-signup-source]").forEach((link) => {
           link.addEventListener("click", () => {
             if (sourceField && link.dataset.signupSource) {
@@ -1333,17 +1322,29 @@
           });
         });
 
-        form.addEventListener("submit", () => {
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+
           if (!form.reportValidity()) {
             return;
           }
 
+          const href = buildFallbackHref();
+          refreshFallbackLinks();
+
           if (submit) {
-            submit.disabled = true;
-            submit.textContent = "Sending...";
+            submit.textContent = "Opening email app";
           }
 
-          setStatus("active", "Sending your signup...");
+          fallbackLinks.forEach((link) => {
+            if (link.classList.contains("email-fallback")) {
+              link.classList.add("visible");
+            }
+          });
+
+          form.dataset.submitted = "true";
+          setStatus("active", "Your email app should open with the signup ready. Press send to finish.");
+          window.location.href = href;
         });
       })();
     </script>
