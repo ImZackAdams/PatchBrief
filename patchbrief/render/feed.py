@@ -56,9 +56,12 @@ def render_feed_item_card(item: FeedItem) -> str:
     cve_tag = _render_cve_tag(item)
     sources_html = _render_sources_html(item)
     item_url = f"items/{_esc(item.slug)}.html"
+    cve_attr = f' data-cve="{_esc(item.cve)}"' if item.cve else ""
+    title_attr = _esc(item.title)
+    vendor_attr = _esc(item.vendor)
 
     return f"""
-            <article class="feed-item">
+            <article class="feed-item" data-type="{_esc(item.type)}" data-signal="{_esc(item.signal_class)}" data-title="{title_attr}" data-vendor="{vendor_attr}"{cve_attr}>
               <div class="feed-item-top">
                 <div class="feed-item-meta">
                   <span class="feed-date">{_esc(item.display_date)}</span>

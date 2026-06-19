@@ -63,10 +63,42 @@
       .eyebrow { margin-bottom: 0.65rem; color: var(--accent); font-size: 0.82rem; font-weight: 760; letter-spacing: 0.03em; text-transform: uppercase; }
       .hero-lede { max-width: 60ch; color: var(--soft-ink); font-size: clamp(1rem, 2vw, 1.15rem); margin-bottom: 0; }
       .sample-notice { margin: 1.5rem 0 0; padding: 0.7rem 0.9rem; border: 1px solid var(--line-strong); border-left: 3px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); color: var(--accent); font-size: 0.88rem; }
-      .filter-bar { border-bottom: 1px solid var(--line); background: var(--page); padding: 0.85rem 0; }
-      .filter-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-      .chip { display: inline-flex; align-items: center; border: 1px solid var(--line-strong); border-radius: 99px; background: var(--paper); color: var(--soft-ink); padding: 0.3rem 0.75rem; font-size: 0.82rem; font-weight: 720; cursor: default; user-select: none; }
+
+      /* Filter + search bar */
+      .filter-bar { border-bottom: 1px solid var(--line); background: var(--page); padding: 0.75rem 0; }
+      .filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem; }
+      .filter-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; flex: 1; }
+      .chip {
+        display: inline-flex; align-items: center;
+        border: 1px solid var(--line-strong); border-radius: 99px;
+        background: var(--paper); color: var(--soft-ink);
+        padding: 0.3rem 0.75rem; font-size: 0.82rem; font-weight: 720;
+        cursor: pointer; user-select: none;
+        transition: border-color 0.1s, background 0.1s, color 0.1s;
+      }
+      .chip:hover { border-color: var(--accent); color: var(--accent); }
       .chip.active { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+      .search-wrap { position: relative; flex-shrink: 0; }
+      .search-input {
+        border: 1px solid var(--line-strong); border-radius: var(--radius);
+        background: var(--paper); color: var(--ink);
+        font: inherit; font-size: 0.88rem;
+        padding: 0.35rem 0.7rem 0.35rem 2rem;
+        width: 200px; transition: border-color 0.15s;
+      }
+      .search-input:focus { border-color: var(--accent); outline: none; }
+      .search-icon {
+        position: absolute; left: 0.55rem; top: 50%; transform: translateY(-50%);
+        color: var(--muted); pointer-events: none; font-size: 0.85rem;
+      }
+
+      /* Feed count row */
+      .feed-meta-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+      .feed-count { color: var(--muted); font-size: 0.85rem; }
+
+      /* Empty state */
+      .feed-empty { display: none; padding: 3rem 1.25rem; text-align: center; color: var(--muted); font-size: 0.95rem; }
+
       .feed-section { padding: 2rem 0 3rem; }
       .feed-list { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
       .feed-item { background: var(--paper); padding: 1.25rem; }
@@ -94,6 +126,8 @@
       .feed-sources a:hover { color: var(--ink); }
       .feed-read-link { display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 0.65rem; color: var(--accent); font-size: 0.88rem; font-weight: 760; text-decoration: none; border-bottom: 1px solid transparent; }
       .feed-read-link:hover { border-bottom-color: currentColor; }
+
+      /* Newsletter */
       .newsletter-section { border-top: 1px solid var(--line); background: var(--paper); padding: 2.5rem 0; }
       .newsletter-inner h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 760; margin-bottom: 0.5rem; }
       .newsletter-inner p { color: var(--soft-ink); max-width: 55ch; margin-bottom: 1rem; }
@@ -111,7 +145,7 @@
       .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
       .footer-links a:hover { color: var(--ink); }
       footer strong { color: var(--ink); }
-      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
       @media (max-width: 720px) {
         .wrap { width: min(calc(100% - 24px), var(--max)); }
         .nav { min-height: auto; align-items: flex-start; flex-direction: column; padding: 0.85rem 0; }
@@ -121,6 +155,9 @@
         .button { width: 100%; }
         .newsletter-row { flex-direction: column; }
         .newsletter-row input[type="email"], .newsletter-row .button { width: 100%; }
+        .search-input { width: 100%; }
+        .filter-row { flex-direction: column; align-items: flex-start; }
+        .search-wrap { width: 100%; }
       }
     </style>
   </head>
@@ -156,21 +193,39 @@
 
       <div class="filter-bar">
         <div class="wrap">
-          <div class="filter-chips" role="list" aria-label="Content type filters (visual only)">
-            <span class="chip active" role="listitem">All</span>
-            <span class="chip" role="listitem">KEV</span>
-            <span class="chip" role="listitem">Vendor advisory</span>
-            <span class="chip" role="listitem">Patch Tuesday</span>
-            <span class="chip" role="listitem">Ransomware</span>
-            <span class="chip" role="listitem">Exploit activity</span>
+          <div class="filter-row">
+            <div class="filter-chips" role="list" aria-label="Filter by type">
+              <button class="chip active" data-filter="all" role="listitem" aria-pressed="true">All</button>
+              <button class="chip" data-filter="KEV" role="listitem" aria-pressed="false">KEV</button>
+              <button class="chip" data-filter="Vendor advisory" role="listitem" aria-pressed="false">Vendor advisory</button>
+              <button class="chip" data-filter="Patch Tuesday" role="listitem" aria-pressed="false">Patch Tuesday</button>
+              <button class="chip" data-filter="Ransomware" role="listitem" aria-pressed="false">Ransomware</button>
+              <button class="chip" data-filter="Exploit activity" role="listitem" aria-pressed="false">Exploit activity</button>
+            </div>
+            <div class="search-wrap">
+              <span class="search-icon" aria-hidden="true">&#9906;</span>
+              <input
+                class="search-input"
+                id="feed-search"
+                type="search"
+                placeholder="Search briefs&hellip;"
+                aria-label="Search feed"
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       <section class="feed-section">
         <div class="wrap">
-          <div class="feed-list" aria-label="PatchBrief security feed (${ITEM_COUNT} items)">
+          <div class="feed-meta-row">
+            <span class="feed-count" id="feed-count" aria-live="polite">${ITEM_COUNT} items</span>
+          </div>
+          <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             ${ITEMS_HTML}
+            <div class="feed-empty" id="feed-empty" role="status">No briefs match this filter.</div>
           </div>
         </div>
       </section>
@@ -210,5 +265,69 @@
         </div>
       </div>
     </footer>
+
+    <script>
+    (function () {
+      var chips = document.querySelectorAll('.chip[data-filter]');
+      var searchInput = document.getElementById('feed-search');
+      var countEl = document.getElementById('feed-count');
+      var emptyEl = document.getElementById('feed-empty');
+      var feedList = document.getElementById('feed-list');
+      var items = feedList ? feedList.querySelectorAll('.feed-item') : [];
+
+      var activeFilter = 'all';
+      var searchQuery = '';
+
+      function applyFilters() {
+        var visible = 0;
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          var itemType = item.getAttribute('data-type') || '';
+          var itemTitle = (item.getAttribute('data-title') || '').toLowerCase();
+          var itemVendor = (item.getAttribute('data-vendor') || '').toLowerCase();
+          var itemCve = (item.getAttribute('data-cve') || '').toLowerCase();
+
+          var typeMatch = activeFilter === 'all' || itemType === activeFilter;
+          var q = searchQuery.toLowerCase();
+          var textMatch = !q ||
+            itemTitle.indexOf(q) !== -1 ||
+            itemVendor.indexOf(q) !== -1 ||
+            itemCve.indexOf(q) !== -1;
+
+          var show = typeMatch && textMatch;
+          item.style.display = show ? '' : 'none';
+          if (show) visible++;
+        }
+
+        if (countEl) {
+          countEl.textContent = visible + (visible === 1 ? ' item' : ' items');
+        }
+
+        if (emptyEl) {
+          emptyEl.style.display = visible === 0 ? 'block' : 'none';
+        }
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) {
+            c.classList.remove('active');
+            c.setAttribute('aria-pressed', 'false');
+          });
+          chip.classList.add('active');
+          chip.setAttribute('aria-pressed', 'true');
+          activeFilter = chip.getAttribute('data-filter');
+          applyFilters();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function () {
+          searchQuery = searchInput.value;
+          applyFilters();
+        });
+      }
+    })();
+    </script>
   </body>
 </html>

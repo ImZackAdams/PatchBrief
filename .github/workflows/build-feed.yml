@@ -1,7 +1,19 @@
 name: Build feed
 
 on:
+  schedule:
+    # Daily at 09:00 UTC — fetches new KEV + NVD entries and rebuilds.
+    - cron: "0 9 * * *"
   workflow_dispatch:
+    inputs:
+      days:
+        description: "Look-back window in days (default: 3 for scheduled runs)"
+        default: "3"
+        required: false
+      kev_only:
+        description: "Only ingest CISA KEV (skip NVD)"
+        type: boolean
+        default: false
   push:
     branches:
       - main
@@ -28,6 +40,20 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Ingest new vulnerabilities
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        run: |
+          DAYS="${{ github.event.inputs.days || '3' }}"
+          KEV_FLAG=""
+          if [ "${{ github.event.inputs.kev_only }}" = "true" ]; then
+            KEV_FLAG="--kev-only"
+          fi
+          python -m patchbrief.cli ingest --days "$DAYS" $KEV_FLAG
+        # Only run ingest on scheduled/manual triggers, not on push to content files.
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+
       - name: Build feed
         run: python -m patchbrief.cli build-feed
 
@@ -35,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add feed.html rss.xml items/
+          git add feed.html rss.xml items/ content/feed-items/ content/processed-state.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
