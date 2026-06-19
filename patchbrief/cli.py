@@ -20,7 +20,12 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
     import json as _json
     from datetime import datetime, timezone
     from patchbrief.feed import load_feed_items
-    from patchbrief.render.feed import render_feed, render_item_page, render_rss
+    from patchbrief.render.feed import (
+        render_feed,
+        render_item_page,
+        render_rss,
+        render_sitemap,
+    )
 
     content_dir = Path(args.content_dir)
     if not content_dir.is_dir():
@@ -52,6 +57,10 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
     rss_xml = render_rss(items, base_url)
     Path("rss.xml").write_text(rss_xml, encoding="utf-8")
     print("Generated: rss.xml")
+
+    sitemap_xml = render_sitemap(items, base_url)
+    Path("sitemap.xml").write_text(sitemap_xml, encoding="utf-8")
+    print("Generated: sitemap.xml")
 
     # JSON API feed — the Team-tier product, free tier public preview
     now = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -89,7 +98,7 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
     )
     print("Generated: feed.json")
 
-    print(f"\nBuild complete: {len(items)} items → feed.html, rss.xml, feed.json")
+    print(f"\nBuild complete: {len(items)} items → feed.html, rss.xml, feed.json, sitemap.xml")
 
 
 # ---------------------------------------------------------------------------

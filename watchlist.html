@@ -125,7 +125,7 @@
           <a href="feed.html">Feed</a>
           <a href="pricing.html">Pricing</a>
           <a href="watchlist.html" style="color:var(--ink);font-weight:760;">Watchlist</a>
-          <a class="nav-cta" href="pricing.html#pro">Get Pro</a>
+          <a class="nav-cta" href="checkout.html?plan=pro&amp;billing=yearly&amp;source=watchlist-nav">Get Pro</a>
         </nav>
       </div>
     </header>
@@ -232,7 +232,7 @@
               <div class="plan-upsell">
                 <h3>Watchlist alerts require Pro</h3>
                 <p>Automated per-vendor email alerts are a Pro feature ($9/month). The form above captures your preferences — upgrade to activate them.</p>
-                <a class="button" href="pricing.html#pro">See Pro plan &rarr;</a>
+                <a class="button" href="checkout.html?plan=pro&amp;billing=yearly&amp;source=watchlist-upsell">Get Pro &rarr;</a>
               </div>
 
               <div style="margin-top:1.5rem;border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;background:var(--paper);">
@@ -306,6 +306,7 @@
           <a href="/">Home</a>
           <a href="feed.html">Feed</a>
           <a href="pricing.html">Pricing</a>
+          <a href="checkout.html">Checkout</a>
           <a href="rss.xml">RSS</a>
           <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
         </div>
@@ -337,7 +338,7 @@
       if (window.location.search.indexOf('submitted=1') !== -1) {
         var form = document.querySelector('form');
         if (form) {
-          form.innerHTML = '<div style="padding:2rem;text-align:center;"><p style="font-size:1.1rem;font-weight:760;color:var(--accent)">Watchlist received.</p><p style="color:var(--muted)">We\'ll be in touch to confirm your alert preferences and upgrade options.</p><a class="button" href="feed.html" style="display:inline-flex;margin-top:0.5rem;">Go to feed</a></div>';
+          form.innerHTML = '<div style="padding:2rem;text-align:center;"><p style="font-size:1.1rem;font-weight:760;color:var(--accent)">Watchlist received.</p><p style="color:var(--muted)">Upgrade to Pro to activate automated vendor alerts.</p><a class="button primary" href="checkout.html?plan=pro&amp;billing=yearly&amp;source=watchlist-submitted" style="display:inline-flex;margin-top:0.5rem;">Get Pro</a></div>';
         }
       }
     })();

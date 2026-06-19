@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="PatchBrief paid onboarding for Pro watchlists, daily digests, and Team integration details." />
+    <meta name="theme-color" content="#15211f" />
+    <title>Onboarding | PatchBrief</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #fbfbf8;
+        --paper: #ffffff;
+        --ink: #111816;
+        --soft-ink: #2e3936;
+        --muted: #66706d;
+        --line: #e2e5df;
+        --line-strong: #cdd3cc;
+        --accent: #0f766e;
+        --accent-soft: #edf7f4;
+        --max: 940px;
+        --radius: 6px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--page); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+      a { color: inherit; }
+      a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+      h1, h2, h3, p { margin-top: 0; }
+      p { margin-bottom: 0.9rem; }
+      .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+      header { border-bottom: 1px solid var(--line); background: rgba(251,251,248,0.96); backdrop-filter: blur(10px); }
+      .nav { display: flex; min-height: 4rem; align-items: center; justify-content: space-between; gap: 1rem; }
+      .brand { display: inline-flex; align-items: center; gap: 0.65rem; font-weight: 760; text-decoration: none; color: var(--ink); }
+      .mark { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.78rem; font-weight: 800; }
+      nav { display: flex; align-items: center; gap: 0.2rem; }
+      nav a { border-radius: var(--radius); color: var(--muted); padding: 0.45rem 0.6rem; font-size: 0.92rem; text-decoration: none; }
+      nav a:hover { color: var(--ink); }
+      .nav-cta { border: 1px solid var(--line-strong); background: var(--ink) !important; color: #fff !important; font-weight: 760; padding: 0.45rem 0.85rem !important; }
+
+      .button { display: inline-flex; min-height: 2.8rem; align-items: center; justify-content: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); padding: 0.72rem 1.1rem; cursor: pointer; color: var(--ink); font: inherit; font-size: 0.94rem; font-weight: 760; text-decoration: none; white-space: nowrap; }
+      .button:hover { border-color: var(--ink); }
+      .button.primary { border-color: var(--ink); background: var(--ink); color: #fff; }
+      .button.primary:hover { background: var(--accent); border-color: var(--accent); }
+
+      .hero { border-bottom: 1px solid var(--line); background: var(--paper); padding: 4rem 0 2.8rem; }
+      .eyebrow { color: var(--accent); font-size: 0.8rem; font-weight: 760; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.7rem; }
+      .hero h1 { font-size: clamp(2rem, 5vw, 3.3rem); font-weight: 780; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 0.9rem; max-width: 16ch; }
+      .hero-lede { max-width: 58ch; color: var(--soft-ink); font-size: 1.05rem; margin-bottom: 0; }
+
+      .main-section { padding: 3rem 0 4rem; }
+      .success-banner { display: none; margin-bottom: 1rem; border: 1px solid var(--accent); border-left: 3px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); color: var(--accent); padding: 0.85rem 1rem; font-size: 0.92rem; font-weight: 700; }
+      .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 1px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--line); overflow: hidden; }
+      .panel { background: var(--paper); padding: 1.75rem; }
+      .panel h2 { font-size: 1.1rem; font-weight: 760; margin-bottom: 0.4rem; }
+      .panel-lede { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.35rem; }
+      .field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+      .field { margin-bottom: 1rem; }
+      .field.full { grid-column: 1 / -1; }
+      .field label { display: block; color: var(--soft-ink); font-size: 0.82rem; font-weight: 760; margin-bottom: 0.3rem; }
+      .field input, .field select, .field textarea { width: 100%; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--ink); font: inherit; font-size: 0.9rem; padding: 0.65rem 0.75rem; }
+      .field textarea { min-height: 6rem; resize: vertical; }
+      .field-hint { color: var(--muted); font-size: 0.78rem; margin: 0.25rem 0 0; }
+      .side-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.7rem; }
+      .side-list li { color: var(--soft-ink); font-size: 0.88rem; display: flex; gap: 0.5rem; }
+      .side-list li::before { content: "✓"; color: var(--accent); font-weight: 800; flex: 0 0 auto; }
+      .side-note { margin-top: 1.25rem; border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: 0.83rem; }
+
+      footer { border-top: 1px solid var(--line); padding: 2rem 0; }
+      .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--muted); font-size: 0.88rem; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+      .footer-links a { color: var(--muted); text-decoration: none; }
+      .footer-links a:hover { color: var(--ink); }
+      footer strong { color: var(--ink); }
+
+      @media (max-width: 820px) {
+        .layout, .field-grid { grid-template-columns: 1fr; }
+        .field.full { grid-column: auto; }
+      }
+      @media (max-width: 720px) {
+        .wrap { width: min(calc(100% - 24px), var(--max)); }
+        .nav { min-height: auto; align-items: flex-start; flex-direction: column; padding: 0.85rem 0; }
+        nav { width: 100%; overflow-x: auto; }
+        nav a { white-space: nowrap; }
+        .button { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav" aria-label="Primary navigation">
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">PB</span>
+          <span>PatchBrief</span>
+        </a>
+        <nav>
+          <a href="feed.html">Feed</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="watchlist.html">Watchlist</a>
+          <a class="nav-cta" href="checkout.html?plan=pro&amp;billing=yearly&amp;source=onboarding-nav">Get Pro</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Paid onboarding</p>
+          <h1>Activate your watchlists.</h1>
+          <p class="hero-lede">
+            Send the details needed to provision daily digests, watched-vendor alerts, and Team integration support.
+          </p>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <div class="wrap">
+          <div class="success-banner" id="success-banner" role="status">
+            Onboarding received. We'll confirm delivery and watchlist settings by email.
+          </div>
+
+          <div class="layout">
+            <section class="panel" aria-labelledby="onboarding-heading">
+              <h2 id="onboarding-heading">Subscriber details</h2>
+              <p class="panel-lede">Use the same email used at checkout so the subscription and delivery settings can be matched cleanly.</p>
+
+              <form action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7" method="POST">
+                <input type="hidden" name="_subject" value="PatchBrief paid onboarding" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
+                <input type="hidden" name="_next" id="next-input" value="https://www.patchbrief.org/onboarding.html?submitted=1" />
+                <input type="hidden" name="interest_type" value="Paid onboarding" />
+
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="email">Checkout email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="company">Company or team</label>
+                    <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name" />
+                  </div>
+
+                  <div class="field">
+                    <label for="plan">Plan</label>
+                    <select id="plan" name="plan">
+                      <option value="pro">Pro</option>
+                      <option value="team">Team</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="delivery">Digest delivery</label>
+                    <select id="delivery" name="delivery">
+                      <option value="daily">Daily digest</option>
+                      <option value="weekly">Weekly only</option>
+                      <option value="both">Daily + weekly</option>
+                    </select>
+                  </div>
+
+                  <div class="field full">
+                    <label for="vendors">Watched vendors</label>
+                    <textarea id="vendors" name="vendors" placeholder="Cisco, Fortinet, Microsoft, Ivanti, Palo Alto Networks"></textarea>
+                    <p class="field-hint">Pro includes up to 10 watched vendors. Team includes unlimited watchlists.</p>
+                  </div>
+
+                  <div class="field full">
+                    <label for="integrations">Team integrations or routing</label>
+                    <textarea id="integrations" name="integrations" placeholder="Slack channel, SIEM, ticketing queue, shared mailbox, CSV export needs"></textarea>
+                  </div>
+                </div>
+
+                <button class="button primary" type="submit">Send onboarding details</button>
+              </form>
+            </section>
+
+            <aside class="panel" aria-labelledby="what-next-heading">
+              <h2 id="what-next-heading">What happens next</h2>
+              <p class="panel-lede">Paid delivery is intentionally lightweight so it can be activated without installing anything.</p>
+              <ul class="side-list">
+                <li>Subscriber email is matched to the paid plan.</li>
+                <li>Digest cadence and vendor watchlists are provisioned.</li>
+                <li>Team buyers get API, CSV, or integration details by email.</li>
+              </ul>
+              <p class="side-note">PatchBrief uses public sources only and does not scan or verify your environment.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-row">
+        <strong>PatchBrief</strong>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="feed.html">Feed</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="checkout.html">Checkout</a>
+          <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var plan = params.get('plan');
+      var planSelect = document.getElementById('plan');
+      var nextInput = document.getElementById('next-input');
+      var successBanner = document.getElementById('success-banner');
+
+      if ((plan === 'pro' || plan === 'team') && planSelect) {
+        planSelect.value = plan;
+      }
+      if (nextInput) {
+        nextInput.value = 'https://www.patchbrief.org/onboarding.html?submitted=1' + (plan ? '&plan=' + encodeURIComponent(plan) : '');
+      }
+      if (params.get('submitted') === '1' && successBanner) {
+        successBanner.style.display = 'block';
+      }
+    })();
+    </script>
+  </body>
+</html>
