@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="PatchBrief creates $5 on demand vulnerability reports for vendor, product, and technology watchlists using public advisory sources."
+      content="PatchBrief monitors vendor, product, and technology watchlists against public vulnerability advisory sources and sends short source backed briefs when something deserves review."
     />
     <meta name="theme-color" content="#15211f" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PatchBrief | On demand vulnerability reports" />
+    <meta property="og:title" content="PatchBrief | Vulnerability watchlist monitoring" />
     <meta
       property="og:description"
-      content="Run a short source backed vulnerability report for the vendors, products, or technologies you care about."
+      content="Add the vendors, products, and technologies you care about. PatchBrief watches public advisory sources and sends short source backed briefs when something deserves review."
     />
     <meta property="og:image" content="assets/patchbrief-hero.png" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="PatchBrief | On demand vulnerability reports" />
+    <meta name="twitter:title" content="PatchBrief | Vulnerability watchlist monitoring" />
     <meta
       name="twitter:description"
-      content="$5 source backed vulnerability reports for public advisory review and suggested next checks."
+      content="Watchlist-based vulnerability advisory monitoring for small IT teams, consultants, and MSPs. Source-backed briefs when something deserves review."
     />
     <meta name="twitter:image" content="assets/patchbrief-hero.png" />
-    <title>PatchBrief | On demand vulnerability reports</title>
+    <title>PatchBrief | Vulnerability watchlist monitoring</title>
     <style>
       :root {
         color-scheme: light;
@@ -725,13 +725,13 @@
         </a>
         <nav>
           <a href="#how">How it works</a>
-          <a href="sample-report.html">Sample</a>
+          <a href="sample-brief.html">Sample brief</a>
           <a
             class="nav-cta"
             href="#signup-form"
-            data-report-source="header"
+            data-pilot-source="header"
           >
-            Run report
+            Create watchlist
           </a>
         </nav>
       </div>
@@ -741,29 +741,24 @@
       <section class="hero" id="top">
         <div class="wrap">
           <div class="hero-copy">
-            <p class="eyebrow">On demand vulnerability reports</p>
-            <h1>Know which vulnerabilities matter to your stack.</h1>
+            <p class="eyebrow">Vulnerability watchlist monitoring</p>
+            <h1>Know when public vulnerability advisories matter to your stack.</h1>
             <p class="lede">
-              PatchBrief turns up to 10 vendors, products, or technologies into a prioritized
-              report with exploited vulnerability callouts, source links, and next checks.
+              Add the vendors, products, and technologies you care about. PatchBrief watches
+              public advisory sources and sends short source backed briefs when something
+              deserves review.
             </p>
             <div class="cta-row" aria-label="Primary actions">
               <a
                 class="button primary"
                 href="#signup-form"
-                data-report-source="hero"
+                data-pilot-source="hero"
               >
-                Run a $5 report
+                Create a watchlist
               </a>
-              <a class="button secondary" href="sample-report.html">View sample report</a>
+              <a class="button" href="sample-brief.html">View sample brief</a>
             </div>
-            <p class="note">No scanner noise. No dashboard. One focused report for $5.</p>
-            <div class="source-row" aria-label="Example advisory sources">
-              <span class="source-pill">CISA KEV</span>
-              <span class="source-pill">Microsoft</span>
-              <span class="source-pill">GitHub</span>
-              <span class="source-pill">Vendor advisories</span>
-            </div>
+            <p class="note">No scan. No exposure verification. No dashboard required. Just watchlist advisory triage.</p>
           </div>
         </div>
       </section>
@@ -772,23 +767,23 @@
         <div class="wrap">
           <div class="section-head">
             <p class="kicker">How it works</p>
-            <h2>Three steps.</h2>
+            <h2>How it works.</h2>
           </div>
           <div class="step-grid">
             <div class="step">
               <strong>01</strong>
-              <h3>Send your list</h3>
-              <p>Up to 10 items.</p>
+              <h3>Add your watchlist</h3>
+              <p>Up to 10 vendors, products, or technologies.</p>
             </div>
             <div class="step">
               <strong>02</strong>
-              <h3>PatchBrief checks sources</h3>
+              <h3>PatchBrief monitors sources</h3>
               <p>Public advisories and known exploited signals.</p>
             </div>
             <div class="step">
               <strong>03</strong>
-              <h3>Get the report</h3>
-              <p>Matches, links, and next checks by email.</p>
+              <h3>Get a brief when it matches</h3>
+              <p>Matches, source links, and suggested checks by email.</p>
             </div>
           </div>
         </div>
@@ -797,18 +792,18 @@
       <section class="section alt" id="sample">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">Sample report</p>
+            <p class="kicker">Sample brief</p>
             <h2>See the format.</h2>
-            <p>A compact report with matches, source links, and suggested checks.</p>
+            <p>A compact watchlist brief with matches, source links, and suggested checks.</p>
           </div>
 
-          <article class="sample" aria-label="Example PatchBrief on demand report">
+          <article class="sample" aria-label="Example PatchBrief watchlist brief">
             <div class="sample-top">
-              <span>on demand PatchBrief example</span>
+              <span>PatchBrief watchlist brief example</span>
               <span>fictional sample data</span>
             </div>
             <div class="sample-body">
-              <div class="sample-summary" aria-label="Example report counts">
+              <div class="sample-summary" aria-label="Example brief counts">
                 <dl>
                   <div>
                     <dt>Advisories reviewed</dt>
@@ -854,74 +849,96 @@
             <div class="sample-cta">
               <a
                 class="button primary"
-                href="sample-report.html"
+                href="sample-brief.html"
               >
-                View sample report
+                View sample brief
               </a>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section" aria-label="PatchBrief pricing">
-        <div class="wrap pricing-grid">
+      <section class="section" aria-label="PatchBrief pricing" id="pricing">
+        <div class="wrap">
           <div class="section-head">
             <p class="kicker">Pricing</p>
-            <h2>$5 per report.</h2>
-            <p>No account. No subscription.</p>
+            <h2>Start with a focused watchlist. Upgrade when it saves time.</h2>
+            <p>PatchBrief is being tested as a lightweight monitoring service for public vulnerability advisories. During the pilot, early users can help shape the brief format, source coverage, and alert cadence.</p>
           </div>
-          <article class="card pricing-card" aria-label="On demand report pricing">
-            <h3>On demand report</h3>
-            <strong class="price">$5</strong>
-            <ul>
-              <li>Up to 10 vendors, products, or technologies</li>
-              <li>Known exploited vulnerability callouts</li>
-              <li>Public source links</li>
-              <li>Suggested next checks</li>
-              <li>Delivered by email</li>
-            </ul>
-            <p class="note">PatchBrief does not scan your environment, verify exposure, or replace vendor guidance.</p>
-            <a
-              class="button primary"
-              href="#signup-form"
-              data-report-source="pricing"
-            >
-              Continue to report request
-            </a>
-          </article>
+          <div class="card-grid" style="gap:1.25rem;">
+            <article class="pricing-card" aria-label="Pilot tier">
+              <h3>Pilot</h3>
+              <strong class="price">Free during pilot</strong>
+              <p>Create a small watchlist and receive sample briefs as PatchBrief is developed.</p>
+              <ul>
+                <li>Up to 10 vendors, products, or technologies</li>
+                <li>Sample source backed briefs</li>
+                <li>Public advisory matching</li>
+                <li>Feedback-driven format</li>
+              </ul>
+              <a class="button primary" href="#signup-form" data-pilot-source="pricing-pilot">Join pilot</a>
+            </article>
+            <article class="pricing-card" aria-label="Individual watchlist tier">
+              <h3>Individual Watchlist</h3>
+              <strong class="price" style="font-size:clamp(1.6rem,5vw,2.4rem);">Planned: $9/mo</strong>
+              <p>For operators who want lightweight monitoring for a personal or small team stack.</p>
+              <ul>
+                <li>Saved watchlist</li>
+                <li>Important-match alerts</li>
+                <li>Weekly summary option</li>
+                <li>Source links and suggested checks</li>
+              </ul>
+              <a class="button" href="#signup-form" data-pilot-source="pricing-individual">Join pilot</a>
+            </article>
+            <article class="pricing-card" aria-label="Team and MSP tier">
+              <h3>Team / MSP</h3>
+              <strong class="price" style="font-size:clamp(1.4rem,4vw,2rem);">Planned: $29 to $99/mo</strong>
+              <p>For teams or consultants who need multiple watchlists or client ready summaries.</p>
+              <ul>
+                <li>Multiple watchlists</li>
+                <li>Client or team summary language</li>
+                <li>Priority review sections</li>
+                <li>Recurring brief delivery</li>
+              </ul>
+              <a class="button" href="#signup-form" data-pilot-source="pricing-team">Join pilot</a>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="section signup" id="signup">
         <div class="wrap signup-grid">
           <div>
-            <p class="kicker">Run report</p>
-            <h2>Request a report.</h2>
+            <p class="kicker">Pilot</p>
+            <h2>Create your PatchBrief watchlist.</h2>
             <p>
-              Submit your watchlist first. Then continue to checkout.
+              Join the pilot and share up to 10 vendors, products, or technologies you want
+              monitored. PatchBrief will use public advisory sources to generate short
+              source backed briefs when something deserves review.
             </p>
-            <p class="note">PatchBrief uses public sources. It does not scan your environment or verify exposure.</p>
+            <p class="note">No account required during the pilot.</p>
+            <p class="note">PatchBrief uses public advisory sources. It does not scan your environment, verify exposure, or replace vendor guidance.</p>
           </div>
-          <aside class="signup-panel" aria-label="Report request form">
+          <aside class="signup-panel" aria-label="Watchlist pilot signup form">
             <form
               id="signup-form"
               class="signup-form"
               action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
               method="POST"
             >
-              <input type="hidden" name="_subject" value="New PatchBrief report request" />
+              <input type="hidden" name="_subject" value="New PatchBrief watchlist pilot signup" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
               <input
                 id="form-next-url"
                 type="hidden"
                 name="_next"
-                value="https://www.patchbrief.org/?report=requested#signup-form"
+                value="https://www.patchbrief.org/?pilot=requested#signup-form"
               />
-              <input type="hidden" name="report_source" value="bottom form" />
+              <input type="hidden" name="pilot_source" value="bottom form" />
 
               <div class="field">
-                <label for="signup-email">Email for report delivery</label>
+                <label for="signup-email">Email</label>
                 <input
                   id="signup-email"
                   name="email"
@@ -930,6 +947,18 @@
                   placeholder="you@company.com"
                   required
                 />
+              </div>
+
+              <div class="field">
+                <label for="signup-watchlist">Vendors, products, or technologies to monitor</label>
+                <textarea
+                  id="signup-watchlist"
+                  name="watchlist"
+                  placeholder="Example: Microsoft, Chrome, GitHub, Fortinet, Veeam"
+                  maxlength="600"
+                  required
+                ></textarea>
+                <p class="field-hint">Up to 10 items. Separate each item with a comma or a new line.</p>
               </div>
 
               <div class="field">
@@ -945,19 +974,40 @@
               </div>
 
               <div class="field">
-                <label for="signup-watchlist">Vendors, products, or technologies to check</label>
-                <textarea
-                  id="signup-watchlist"
-                  name="watchlist"
-                  placeholder="Example: Microsoft, Chrome, GitHub, Veeam, Fortinet"
-                  maxlength="600"
-                  required
-                ></textarea>
-                <p class="field-hint">Up to 10 items. Separate each item with a comma or a new line.</p>
+                <label for="signup-cadence">How often would this be useful?</label>
+                <select id="signup-cadence" name="cadence">
+                  <option value="">Choose one</option>
+                  <option>Only when something important matches</option>
+                  <option>Weekly brief</option>
+                  <option>Monthly summary</option>
+                  <option>Not sure yet</option>
+                </select>
               </div>
 
-              <p class="field-hint">You’ll submit your watchlist first, then continue to the $5 checkout.</p>
-              <button class="button primary" type="submit">Continue to $5 report</button>
+              <div class="field">
+                <label for="signup-pricing">Which paid version would be most realistic?</label>
+                <select id="signup-pricing" name="pricing_interest">
+                  <option value="">Choose one</option>
+                  <option>$9/mo for one saved watchlist</option>
+                  <option>$29/mo for small team monitoring</option>
+                  <option>$99/mo for MSP/client-stack monitoring</option>
+                  <option>One-time reports only</option>
+                  <option>I would not pay for this</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="signup-use-case">What would you use this for?</label>
+                <textarea
+                  id="signup-use-case"
+                  name="use_case"
+                  placeholder="Example: internal patch review, client updates, vendor monitoring, weekly triage"
+                  maxlength="400"
+                ></textarea>
+              </div>
+
+              <button class="button primary" type="submit">Join the watchlist pilot</button>
               <p class="form-status" data-form-status role="status" aria-live="polite"></p>
             </form>
           </aside>
@@ -967,8 +1017,6 @@
 
     <script>
       (() => {
-        const STRIPE_PAYMENT_LINK = "REPLACE_WITH_STRIPE_PAYMENT_LINK";
-        const FALLBACK_NEXT_URL = "https://www.patchbrief.org/?report=requested#signup-form";
         const form = document.querySelector("#signup-form");
 
         if (!form) {
@@ -979,26 +1027,19 @@
         const submit = form.querySelector('button[type="submit"]');
         const emailField = form.querySelector("#signup-email");
         const watchlistField = form.querySelector("#signup-watchlist");
-        const nextField = form.querySelector("#form-next-url");
-        const sourceField = form.querySelector('input[name="report_source"]');
-        const setStatus = (state, message) => {
-          if (!status) {
-            return;
-          }
+        const sourceField = form.querySelector('input[name="pilot_source"]');
 
+        const setStatus = (state, message) => {
           status.className = `form-status ${state}`;
           status.textContent = message;
         };
-        const parseWatchlist = () => {
-          if (!watchlistField) {
-            return [];
-          }
 
-          return watchlistField.value
+        const parseWatchlist = () =>
+          watchlistField.value
             .split(/[,\n]/)
             .map((item) => item.trim())
             .filter(Boolean);
-        };
+
         const getWatchlistError = () => {
           const items = parseWatchlist();
 
@@ -1007,7 +1048,7 @@
           }
 
           if (items.length > 10) {
-            return "Use 10 items or fewer for this report.";
+            return "Use 10 items or fewer for your watchlist.";
           }
 
           if (items.some((item) => item.length > 60)) {
@@ -1017,59 +1058,47 @@
           return "";
         };
 
-        const reportState = new URLSearchParams(window.location.search).get("report");
+        const pilotState = new URLSearchParams(window.location.search).get("pilot");
 
-        if (reportState === "requested") {
+        if (pilotState === "requested") {
           form.dataset.submitted = "true";
-          setStatus("success", "Report request sent. Continue to checkout to complete your order.");
-
-          if (submit) {
-            submit.textContent = "Report requested";
-          }
-        } else if (reportState === "paid") {
-          form.dataset.submitted = "true";
-          setStatus("success", "Payment received. Your PatchBrief report will be generated and emailed after processing.");
-
-          if (submit) {
-            submit.textContent = "Order received";
-          }
-        } else if (reportState === "cancelled") {
-          setStatus("error", "Checkout was cancelled. Your card was not charged.");
+          submit.disabled = true;
+          submit.textContent = "Watchlist submitted";
+          setStatus("success", "Watchlist received. We'll follow up with pilot access and sample brief details.");
         }
 
-        document.querySelectorAll("[data-report-source]").forEach((link) => {
+        document.querySelectorAll("[data-pilot-source]").forEach((link) => {
           link.addEventListener("click", () => {
-            if (sourceField && link.dataset.reportSource) {
-              sourceField.value = link.dataset.reportSource;
+            if (sourceField && link.dataset.pilotSource) {
+              sourceField.value = link.dataset.pilotSource;
             }
 
             window.setTimeout(() => {
-              if (emailField && !form.dataset.submitted) {
+              if (!form.dataset.submitted) {
                 emailField.focus({ preventScroll: true });
               }
             }, 350);
           });
         });
 
-        if (watchlistField) {
-          watchlistField.addEventListener("invalid", () => {
-            if (!parseWatchlist().length) {
-              setStatus("error", "Add at least one vendor, product, or technology.");
-            }
-          });
-        }
+        watchlistField.addEventListener("invalid", () => {
+          if (!parseWatchlist().length) {
+            setStatus("error", "Add at least one vendor, product, or technology.");
+          }
+        });
 
         form.addEventListener("submit", (event) => {
+          if (form.dataset.submitted === "true") {
+            event.preventDefault();
+            return;
+          }
+
           const watchlistError = getWatchlistError();
 
           if (watchlistError) {
             event.preventDefault();
             setStatus("error", watchlistError);
-
-            if (watchlistField) {
-              watchlistField.focus();
-            }
-
+            watchlistField.focus();
             return;
           }
 
@@ -1077,19 +1106,9 @@
             return;
           }
 
-          if (nextField) {
-            nextField.value =
-              STRIPE_PAYMENT_LINK === "REPLACE_WITH_STRIPE_PAYMENT_LINK"
-                ? FALLBACK_NEXT_URL
-                : STRIPE_PAYMENT_LINK;
-          }
-
-          if (submit) {
-            submit.disabled = true;
-            submit.textContent = "Sending...";
-          }
-
-          setStatus("active", "Saving your report request and opening checkout...");
+          submit.disabled = true;
+          submit.textContent = "Submitting...";
+          setStatus("active", "Submitting your watchlist...");
         });
       })();
     </script>
