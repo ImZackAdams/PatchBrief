@@ -1,0 +1,34 @@
+id: vmware-esxi-ransomware-cve-2021-21974
+slug: vmware-esxi-ransomware-cve-2021-21974
+date: "2024-03-04"
+type: Ransomware
+signal: Threat activity
+title: "VMware ESXi heap overflow — ransomware campaigns targeting unpatched hypervisors"
+summary: >
+  Ransomware operators continue to target ESXi hypervisors through CVE-2021-21974,
+  a heap overflow in the OpenSLP service. Despite the patch being available since 2021,
+  many environments remain exposed. Successful exploitation allows code execution as root.
+vendor: VMware
+product: ESXi
+cve: CVE-2021-21974
+operator_check: >
+  Confirm ESXi patch level. Disable SLP service if not required.
+  Verify management interfaces are not internet-exposed.
+  Confirm backup integrity given ransomware targeting.
+why_it_matters: >
+  Ransomware groups continue to revisit known vulnerabilities in unpatched environments.
+  ESXi hypervisors are high-value targets because encrypting a hypervisor can take down
+  multiple VMs at once. A 2021 patch being actively exploited in 2024 highlights the
+  patching gap in virtualization infrastructure.
+sources:
+  - title: VMware advisory VMSA-2021-0002
+    url: https://www.vmware.com/security/advisories/VMSA-2021-0002.html
+  - title: CISA KEV catalog
+    url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+tags:
+  - ransomware
+  - vmware
+  - esxi
+  - virtualization
+  - threat-activity
+is_sample: true

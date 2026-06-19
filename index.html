@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="PatchBrief monitors vendor, product, and technology watchlists against public vulnerability advisory sources and sends short source backed briefs when something deserves review."
+      content="PatchBrief tracks public vulnerability advisories, known exploited vulnerabilities, and threat activity, then turns the noise into short operator-ready briefs."
     />
     <meta name="theme-color" content="#15211f" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PatchBrief | Vulnerability watchlist monitoring" />
+    <meta property="og:title" content="PatchBrief | Cybersecurity signal for operators" />
     <meta
       property="og:description"
-      content="Add the vendors, products, and technologies you care about. PatchBrief watches public advisory sources and sends short source backed briefs when something deserves review."
+      content="PatchBrief tracks public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity. Short source-backed briefs for operators."
     />
     <meta property="og:image" content="assets/patchbrief-hero.png" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="PatchBrief | Vulnerability watchlist monitoring" />
+    <meta name="twitter:title" content="PatchBrief | Cybersecurity signal for operators" />
     <meta
       name="twitter:description"
-      content="Watchlist-based vulnerability advisory monitoring for small IT teams, consultants, and MSPs. Source-backed briefs when something deserves review."
+      content="PatchBrief tracks public vulnerability advisories, known exploited vulnerabilities, and threat activity, then turns the noise into short operator-ready briefs."
     />
     <meta name="twitter:image" content="assets/patchbrief-hero.png" />
-    <title>PatchBrief | Vulnerability watchlist monitoring</title>
+    <link rel="alternate" type="application/rss+xml" title="PatchBrief RSS" href="/rss.xml" />
+    <title>PatchBrief | Cybersecurity signal for operators</title>
     <style>
       :root {
         color-scheme: light;
@@ -615,6 +616,36 @@
         color: var(--red);
       }
 
+      .newsletter-section .section-head p {
+        color: var(--soft-ink);
+      }
+
+      .newsletter-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      .newsletter-row input[type="email"] {
+        flex: 1;
+        min-width: 200px;
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius);
+        background: var(--paper);
+        color: var(--ink);
+        font: inherit;
+        padding: 0.78rem 0.8rem;
+      }
+
+      .newsletter-row input[type="email"]::placeholder {
+        color: #89928f;
+      }
+
+      .newsletter-row input[type="email"]:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
       footer {
         padding: 1.7rem 0 2rem;
       }
@@ -724,14 +755,15 @@
           <span>PatchBrief</span>
         </a>
         <nav>
-          <a href="#how">How it works</a>
+          <a href="feed.html">Feed</a>
           <a href="sample-brief.html">Sample brief</a>
+          <a href="roadmap.html">Roadmap</a>
           <a
             class="nav-cta"
             href="#signup-form"
             data-pilot-source="header"
           >
-            Create watchlist
+            Watchlist
           </a>
         </nav>
       </div>
@@ -741,24 +773,23 @@
       <section class="hero" id="top">
         <div class="wrap">
           <div class="hero-copy">
-            <p class="eyebrow">Vulnerability watchlist monitoring</p>
-            <h1>Know when public vulnerability advisories matter to your stack.</h1>
+            <p class="eyebrow">Cybersecurity signal for operators</p>
+            <h1>Track the public security signals worth acting on.</h1>
             <p class="lede">
-              Add the vendors, products, and technologies you care about. PatchBrief watches
-              public advisory sources and sends short source backed briefs when something
-              deserves review.
+              PatchBrief follows public vulnerability advisories, known exploited vulnerabilities,
+              vendor updates, and threat activity, then turns the noise into short source-backed briefs.
             </p>
             <div class="cta-row" aria-label="Primary actions">
               <a
                 class="button primary"
-                href="#signup-form"
+                href="feed.html"
                 data-pilot-source="hero"
               >
-                Create a watchlist
+                Read the feed
               </a>
-              <a class="button" href="sample-brief.html">View sample brief</a>
+              <a class="button" href="#signup-form">Create a watchlist</a>
             </div>
-            <p class="note">No scan. No exposure verification. No dashboard required. Just watchlist advisory triage.</p>
+            <p class="note">No panic feed. No scanner claims. Just short, source-backed briefs with practical next checks.</p>
           </div>
         </div>
       </section>
@@ -858,50 +889,84 @@
         </div>
       </section>
 
-      <section class="section" aria-label="PatchBrief pricing" id="pricing">
+      <section class="section" aria-label="PatchBrief model" id="pricing">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">Pricing</p>
-            <h2>Start with a focused watchlist. Upgrade when it saves time.</h2>
-            <p>PatchBrief is being tested as a lightweight monitoring service for public vulnerability advisories. During the pilot, early users can help shape the brief format, source coverage, and alert cadence.</p>
+            <p class="kicker">Model</p>
+            <h2>Public feed, optional watchlist filtering later.</h2>
+            <p>PatchBrief starts as a free public feed. Watchlist filtering is being shaped through the pilot with early users.</p>
           </div>
           <div class="card-grid" style="gap:1.25rem;">
-            <article class="pricing-card" aria-label="Pilot tier">
-              <h3>Pilot</h3>
-              <strong class="price">Free during pilot</strong>
-              <p>Create a small watchlist and receive sample briefs as PatchBrief is developed.</p>
+            <article class="pricing-card" aria-label="Public feed">
+              <h3>Public feed</h3>
+              <strong class="price" style="font-size:clamp(1.4rem,4vw,2rem);">Free</strong>
+              <p>Browse and subscribe to the public security brief feed. No account required to read.</p>
+              <ul>
+                <li>Public vulnerability and threat briefs</li>
+                <li>KEV signals, vendor advisories, patch coverage</li>
+                <li>Short operator-ready summaries</li>
+                <li>Source links with every item</li>
+              </ul>
+              <a class="button primary" href="feed.html">Read the feed</a>
+            </article>
+            <article class="pricing-card" aria-label="Watchlist pilot">
+              <h3>Watchlist pilot</h3>
+              <strong class="price" style="font-size:clamp(1.4rem,4vw,2rem);">Free during pilot</strong>
+              <p>Join the pilot to share a small watchlist and help shape filtered brief delivery.</p>
               <ul>
                 <li>Up to 10 vendors, products, or technologies</li>
-                <li>Sample source backed briefs</li>
-                <li>Public advisory matching</li>
-                <li>Feedback-driven format</li>
+                <li>Filtered briefs matched to your watchlist</li>
+                <li>Public advisory and KEV matching</li>
+                <li>Feedback-driven format and cadence</li>
               </ul>
               <a class="button primary" href="#signup-form" data-pilot-source="pricing-pilot">Join pilot</a>
             </article>
-            <article class="pricing-card" aria-label="Individual watchlist tier">
-              <h3>Individual Watchlist</h3>
-              <strong class="price" style="font-size:clamp(1.6rem,5vw,2.4rem);">$9/mo</strong>
-              <p>For operators who want lightweight monitoring for a personal or small-team stack.</p>
+            <article class="pricing-card" aria-label="Future paid tiers">
+              <h3>Paid watchlist filtering</h3>
+              <strong class="price" style="font-size:clamp(1.4rem,4vw,2rem);">Planned</strong>
+              <p>Paid tiers are being shaped by pilot feedback. Share what would be useful in the signup form.</p>
               <ul>
-                <li>Saved watchlist</li>
-                <li>Important-match alerts</li>
-                <li>Weekly summary option</li>
-                <li>Source links and suggested checks</li>
+                <li>Personal watchlist monitoring</li>
+                <li>Team or MSP watchlists</li>
+                <li>Client-ready brief language</li>
+                <li>Alert cadence options</li>
               </ul>
-              <a class="button primary" href="#signup-form" data-pilot-source="pricing-individual">Get started — $9/mo</a>
+              <a class="button" href="#signup-form" data-pilot-source="pricing-future">Share interest</a>
             </article>
-            <article class="pricing-card" aria-label="Team and MSP tier">
-              <h3>Team / MSP</h3>
-              <strong class="price" style="font-size:clamp(1.4rem,4vw,2rem);">Planned: $29 to $99/mo</strong>
-              <p>For teams or consultants who need multiple watchlists or client ready summaries.</p>
-              <ul>
-                <li>Multiple watchlists</li>
-                <li>Client or team summary language</li>
-                <li>Priority review sections</li>
-                <li>Recurring brief delivery</li>
-              </ul>
-              <a class="button" href="#signup-form" data-pilot-source="pricing-team">Join pilot</a>
-            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt newsletter-section" id="newsletter" aria-label="Newsletter signup">
+        <div class="wrap">
+          <div class="newsletter-inner">
+            <div class="section-head" style="margin-bottom:1rem;">
+              <h2>Get the public PatchBrief feed by email.</h2>
+              <p>Receive short public-source briefs for exploited vulnerabilities, vendor advisories, and high-signal threat activity. Watchlist filtering will be tested during the pilot.</p>
+            </div>
+            <form
+              id="newsletter-form"
+              class="newsletter-form"
+              action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New PatchBrief newsletter signup" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
+              <input type="hidden" name="_next" value="https://www.patchbrief.org/?subscribed=1" />
+              <input type="hidden" name="interest_type" value="Public feed / newsletter" />
+              <div class="newsletter-row">
+                <input
+                  id="newsletter-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@company.com"
+                  required
+                />
+                <button class="button primary" type="submit">Subscribe to public feed</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -909,24 +974,22 @@
       <section class="section signup" id="signup">
         <div class="wrap signup-grid">
           <div>
-            <p class="kicker">Get started</p>
-            <h2>Create your watchlist.</h2>
+            <p class="kicker">Watchlist pilot</p>
+            <h2>Filter PatchBrief to the vendors and products you care about.</h2>
             <p>
-              Enter up to 10 vendors, products, or technologies you want monitored.
-              PatchBrief watches public advisory sources and delivers short source-backed
-              briefs when something deserves review.
+              Join the pilot to share a small watchlist and help shape PatchBrief's filtered briefs.
+              The public feed stays broad; watchlists are for matching signal to your stack.
             </p>
-            <p class="note">$9/mo after checkout. Cancel any time.</p>
             <p class="note">PatchBrief uses public advisory sources. It does not scan your environment, verify exposure, or replace vendor guidance.</p>
           </div>
-          <aside class="signup-panel" aria-label="Watchlist pilot signup form">
+          <aside class="signup-panel" aria-label="Feed and watchlist signup form">
             <form
               id="signup-form"
               class="signup-form"
               action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
               method="POST"
             >
-              <input type="hidden" name="_subject" value="New PatchBrief watchlist pilot signup" />
+              <input type="hidden" name="_subject" value="New PatchBrief feed/watchlist signup" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
               <input
@@ -935,7 +998,7 @@
                 name="_next"
                 value="https://www.patchbrief.org/?pilot=requested#signup-form"
               />
-              <input type="hidden" name="pilot_source" value="bottom form" />
+              <input type="hidden" name="signup_source" value="bottom form" />
 
               <div class="field">
                 <label for="signup-email">Email</label>
@@ -950,34 +1013,33 @@
               </div>
 
               <div class="field">
+                <label for="signup-interest">What do you want?</label>
+                <select id="signup-interest" name="interest_type" required>
+                  <option value="">Choose one</option>
+                  <option>Public feed / newsletter</option>
+                  <option>Personal vendor watchlist</option>
+                  <option>Team watchlist</option>
+                  <option>MSP/client watchlists</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="field">
                 <label for="signup-watchlist">Vendors, products, or technologies to monitor</label>
                 <textarea
                   id="signup-watchlist"
                   name="watchlist"
                   placeholder="Example: Microsoft, Chrome, GitHub, Fortinet, Veeam"
                   maxlength="600"
-                  required
                 ></textarea>
-                <p class="field-hint">Up to 10 items. Separate each item with a comma or a new line.</p>
+                <p class="field-hint">Optional for the public feed. For watchlists, add up to 10 items separated by commas or new lines.</p>
               </div>
 
               <div class="field">
-                <label for="signup-role">What best describes you?</label>
-                <select id="signup-role" name="role">
-                  <option value="">Choose one</option>
-                  <option>MSP owner or operator</option>
-                  <option>Solo consultant</option>
-                  <option>Internal IT team</option>
-                  <option>Security team</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="signup-cadence">How often would this be useful?</label>
+                <label for="signup-cadence">Preferred cadence</label>
                 <select id="signup-cadence" name="cadence">
                   <option value="">Choose one</option>
-                  <option>Only when something important matches</option>
+                  <option>Important-only alerts</option>
                   <option>Weekly brief</option>
                   <option>Monthly summary</option>
                   <option>Not sure yet</option>
@@ -985,29 +1047,19 @@
               </div>
 
               <div class="field">
-                <label for="signup-pricing">Which paid version would be most realistic?</label>
+                <label for="signup-pricing">Which paid version would be most realistic later?</label>
                 <select id="signup-pricing" name="pricing_interest">
                   <option value="">Choose one</option>
-                  <option>$9/mo for one saved watchlist</option>
-                  <option>$29/mo for small team monitoring</option>
-                  <option>$99/mo for MSP/client-stack monitoring</option>
-                  <option>One-time reports only</option>
+                  <option>Free public feed only</option>
+                  <option>$9/mo personal watchlist</option>
+                  <option>$29/mo small team</option>
+                  <option>$99/mo MSP/client watchlists</option>
                   <option>I would not pay for this</option>
                   <option>Not sure yet</option>
                 </select>
               </div>
 
-              <div class="field">
-                <label for="signup-use-case">What would you use this for?</label>
-                <textarea
-                  id="signup-use-case"
-                  name="use_case"
-                  placeholder="Example: internal patch review, client updates, vendor monitoring, weekly triage"
-                  maxlength="400"
-                ></textarea>
-              </div>
-
-              <button class="button primary" type="submit">Continue to checkout — $9/mo</button>
+              <button class="button primary" type="submit">Join pilot</button>
               <p class="form-status" data-form-status role="status" aria-live="polite"></p>
             </form>
           </aside>
@@ -1017,23 +1069,15 @@
 
     <script>
       (() => {
-        // Paste your Stripe Payment Link here after creating a $9/mo product in Stripe.
-        // Dashboard → Products → Create → Add price ($9, recurring) → Payment Links → Copy URL
-        const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/test_dRm28t3C43dQfwk2q25gc00";
-        const FALLBACK_URL = "https://www.patchbrief.org/?pilot=requested#signup-form";
-
         const form = document.querySelector("#signup-form");
-
-        if (!form) {
-          return;
-        }
+        if (!form) return;
 
         const status = form.querySelector("[data-form-status]");
         const submit = form.querySelector('button[type="submit"]');
         const emailField = form.querySelector("#signup-email");
         const watchlistField = form.querySelector("#signup-watchlist");
-        const nextField = form.querySelector("#form-next-url");
-        const sourceField = form.querySelector('input[name="pilot_source"]');
+        const interestField = form.querySelector("#signup-interest");
+        const sourceField = form.querySelector('input[name="signup_source"]');
 
         const setStatus = (state, message) => {
           status.className = `form-status ${state}`;
@@ -1046,11 +1090,18 @@
             .map((item) => item.trim())
             .filter(Boolean);
 
+        const isWatchlistInterest = () => {
+          const v = interestField ? interestField.value : "";
+          return v && v !== "Public feed / newsletter" && v !== "Not sure yet";
+        };
+
         const getWatchlistError = () => {
+          if (!isWatchlistInterest()) return "";
+
           const items = parseWatchlist();
 
           if (!items.length) {
-            return "Add at least one vendor, product, or technology.";
+            return "Add at least one vendor, product, or technology for your watchlist.";
           }
 
           if (items.length > 10) {
@@ -1069,10 +1120,8 @@
         if (params.get("pilot") === "requested") {
           form.dataset.submitted = "true";
           submit.disabled = true;
-          submit.textContent = "Watchlist submitted";
-          setStatus("success", "Watchlist received. Continuing to checkout…");
-        } else if (params.get("payment") === "cancelled") {
-          setStatus("error", "Checkout was cancelled. Your card was not charged. You can try again below.");
+          submit.textContent = "Signup received";
+          setStatus("success", "Signup received. We’ll follow up as the public feed and watchlist pilot develop.");
         }
 
         document.querySelectorAll("[data-pilot-source]").forEach((link) => {
@@ -1087,12 +1136,6 @@
               }
             }, 350);
           });
-        });
-
-        watchlistField.addEventListener("invalid", () => {
-          if (!parseWatchlist().length) {
-            setStatus("error", "Add at least one vendor, product, or technology.");
-          }
         });
 
         form.addEventListener("submit", (event) => {
@@ -1114,16 +1157,9 @@
             return;
           }
 
-          if (nextField) {
-            nextField.value =
-              STRIPE_PAYMENT_LINK !== "REPLACE_WITH_STRIPE_PAYMENT_LINK"
-                ? STRIPE_PAYMENT_LINK
-                : FALLBACK_URL;
-          }
-
           submit.disabled = true;
-          submit.textContent = "Saving watchlist…";
-          setStatus("active", "Saving your watchlist and opening checkout…");
+          submit.textContent = "Saving…";
+          setStatus("active", "Sending your signup…");
         });
       })();
     </script>
@@ -1131,7 +1167,12 @@
     <footer>
       <div class="wrap footer-row">
         <strong>PatchBrief</strong>
-        <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
+        <div style="display:flex;flex-wrap:wrap;gap:0.85rem;">
+          <a href="feed.html">Feed</a>
+          <a href="rss.xml">RSS</a>
+          <a href="roadmap.html">Roadmap</a>
+          <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
+        </div>
       </div>
     </footer>
   </body>

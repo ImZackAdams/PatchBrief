@@ -1,0 +1,40 @@
+name: Build feed
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "content/feed-items/**"
+      - "templates/**"
+      - "patchbrief/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build feed
+        run: python -m patchbrief.cli build-feed
+
+      - name: Upload generated site files
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-site
+          path: |
+            feed.html
+            rss.xml
+            items/
+          retention-days: 30

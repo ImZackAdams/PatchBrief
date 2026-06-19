@@ -1,29 +1,55 @@
 # Pilot Metrics
 
-## What counts as strong signal
+How to judge whether the new direction is working.
 
-- User submits a real vendor/product watchlist (not a test or empty list)
-- User replies to a sample brief with corrections or feedback
-- User asks for recurring delivery
-- User chooses a paid tier in the pricing interest field
-- User introduces another operator, MSP, or consultant
-- User asks for client-ready summaries
+## Strong signals
 
-## What does not count as strong signal
+- People subscribe to the public feed (newsletter signups with real emails)
+- People submit real watchlists (named vendors, not "test" or empty)
+- People ask for RSS or email delivery of the public feed
+- People ask for alerts on specific vendors or products
+- People choose a paid tier in the pricing interest field ($9, $29, or $99)
+- MSPs or consultants ask for client-ready brief summaries
+- People reply to sample briefs with corrections, additions, or source suggestions
+- People share feed items or brief pages
 
-- Likes or social shares
-- Generic "cool idea" replies
-- Empty or obviously fake watchlists
-- Free-only interest with no engagement
-- Vague "maybe I'd use this" without specifics
+## Weak signals
+
+- Likes, shares, or social engagement without any signup
+- Generic "cool idea" replies with no specific use case
+- Empty watchlist submissions or obviously fake entries
+- No repeat visits from feed subscribers
+- Nobody asks for alerts, watchlist filtering, or delivery
+- No one chooses a paid tier in the pricing field
 
 ## Decision rules
 
-- If users want recurring delivery → prioritize monitoring infrastructure
-- If users want client summaries → prioritize MSP/client brief mode
-- If users only want one-off reports → consider automated report tool instead
-- If nobody submits real watchlists → fix positioning before building more
+| Signal | Action |
+|---|---|
+| Feed subscribers grow but watchlists don't | Focus on public feed and newsletter, not watchlist filtering |
+| Watchlists come in with specific vendors | Build watchlist matching and filtered brief delivery |
+| MSPs respond with client stacks | Build client-ready summary language |
+| People ask for Slack or Teams integrations | Consider webhook delivery after paid tier ships |
+| Nobody submits real watchlists after 60 days | Fix positioning or pivot away from watchlist model |
+| Nobody chooses a paid tier | Extend free pilot before charging |
 
 ## Pilot goal
 
-Get 5–10 real watchlists from operators and send 3–5 sample briefs. Use feedback to decide what to build next.
+| Metric | Target |
+|---|---|
+| Public feed subscribers | 10 |
+| Real watchlists submitted | 5 |
+| Sample briefs sent to pilot users | 3 |
+| Signups selecting a paid tier | 2 |
+
+## What a good week looks like
+
+- One or more new watchlist signups with real vendor terms
+- At least one reply or question about brief format, sources, or cadence
+- At least one visit to a feed item page from a non-bot referral
+
+## What a bad week looks like
+
+- Only bot or empty-referral traffic
+- Signups with no watchlist terms ("not sure yet" only)
+- No replies, questions, or corrections to sample briefs
