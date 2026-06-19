@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import html
 import string
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
+from xml.sax.saxutils import escape as xml_escape
 
 from patchbrief.feed import FeedItem
 
@@ -136,4 +138,39 @@ def render_item_page(item: FeedItem) -> str:
         OPERATOR_CHECK=_esc(item.operator_check),
         SOURCES_HTML=sources_html,
         SAMPLE_NOTICE=sample_notice,
+    )
+
+
+def render_rss(items: list[FeedItem], base_url: str) -> str:
+    build_time = datetime.now(tz=timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+    normalized_base_url = base_url.rstrip("/")
+    channel_link = f"{normalized_base_url}/feed.html"
+
+    item_blocks = []
+    for item in items:
+        item_url = f"{normalized_base_url}/items/{item.slug}.html"
+        item_blocks.append(
+            f"    <item>\n"
+            f"      <title>{xml_escape(item.title)}</title>\n"
+            f"      <link>{xml_escape(item_url)}</link>\n"
+            f"      <guid isPermaLink=\"true\">{xml_escape(item_url)}</guid>\n"
+            f"      <pubDate>{xml_escape(item.rfc822_date)}</pubDate>\n"
+            f"      <description>{xml_escape(item.summary)}</description>\n"
+            f"    </item>"
+        )
+
+    items_xml = "\n".join(item_blocks)
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0">\n'
+        "  <channel>\n"
+        "    <title>PatchBrief</title>\n"
+        f"    <link>{xml_escape(channel_link)}</link>\n"
+        "    <description>Short operator-ready briefs on public vulnerability advisories, "
+        "known exploited vulnerabilities, vendor updates, and threat activity.</description>\n"
+        f"    <lastBuildDate>{build_time}</lastBuildDate>\n"
+        "    <language>en</language>\n"
+        f"{items_xml}\n"
+        "  </channel>\n"
+        "</rss>\n"
     )

@@ -3,9 +3,8 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
-from xml.sax.saxutils import escape as xml_escape
 
 CISA_KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 SITE_BASE_URL = "https://www.patchbrief.org"
@@ -228,45 +227,9 @@ def cmd_create_watchlist(args: argparse.Namespace) -> None:
     print(f"  Cadence: {args.cadence}")
 
 
-def _build_rss(items: list, base_url: str) -> str:
-    from patchbrief.feed import FeedItem  # type: ignore[attr-defined]
-
-    build_time = datetime.now(tz=timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
-    channel_link = f"{base_url}/feed.html"
-
-    item_blocks = []
-    for item in items:
-        item_url = f"{base_url}/items/{item.slug}.html"
-        item_blocks.append(
-            f"    <item>\n"
-            f"      <title>{xml_escape(item.title)}</title>\n"
-            f"      <link>{xml_escape(item_url)}</link>\n"
-            f"      <guid isPermaLink=\"true\">{xml_escape(item_url)}</guid>\n"
-            f"      <pubDate>{xml_escape(item.rfc822_date)}</pubDate>\n"
-            f"      <description>{xml_escape(item.summary)}</description>\n"
-            f"    </item>"
-        )
-
-    items_xml = "\n".join(item_blocks)
-    return (
-        '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<rss version="2.0">\n'
-        "  <channel>\n"
-        "    <title>PatchBrief</title>\n"
-        f"    <link>{xml_escape(channel_link)}</link>\n"
-        "    <description>Short operator-ready briefs on public vulnerability advisories, "
-        "known exploited vulnerabilities, vendor updates, and threat activity.</description>\n"
-        f"    <lastBuildDate>{build_time}</lastBuildDate>\n"
-        "    <language>en</language>\n"
-        f"{items_xml}\n"
-        "  </channel>\n"
-        "</rss>\n"
-    )
-
-
 def cmd_build_feed(args: argparse.Namespace) -> None:
     from patchbrief.feed import load_feed_items
-    from patchbrief.render.feed import render_feed, render_item_page
+    from patchbrief.render.feed import render_feed, render_item_page, render_rss
 
     content_dir = Path(args.content_dir)
     if not content_dir.is_dir():
@@ -299,7 +262,7 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
 
     # Generate rss.xml
     base_url = args.base_url.rstrip("/")
-    rss_xml = _build_rss(items, base_url)
+    rss_xml = render_rss(items, base_url)
     rss_path = Path("rss.xml")
     rss_path.write_text(rss_xml, encoding="utf-8")
     print(f"Generated: {rss_path}")
@@ -310,7 +273,7 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="patchbrief",
-        description="PatchBrief — vulnerability watchlist monitoring tool",
+        description="PatchBrief public feed and watchlist tooling",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
