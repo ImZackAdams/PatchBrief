@@ -191,7 +191,7 @@
           <a href="feed.html" class="active">Feed</a>
           <a href="pricing.html">Pricing</a>
           <a href="rss.xml">RSS</a>
-          <a class="nav-cta" href="pricing.html#pro">Get Pro</a>
+          <a class="nav-cta" href="${PRO_YEARLY_URL}">Get Pro</a>
         </nav>
       </div>
     </header>
@@ -274,7 +274,7 @@
               <p class="upgrade-label">Pro &mdash; $9/mo</p>
               <h2 class="upgrade-heading">Daily digest + vendor watchlist alerts.</h2>
               <p class="upgrade-desc">Get this feed delivered every morning and receive targeted alerts when vulnerabilities hit vendors you run.</p>
-              <a class="button button-white" href="pricing.html#pro">Upgrade to Pro &rarr;</a>
+              <a class="button button-white" href="${PRO_YEARLY_URL}">Upgrade to Pro &rarr;</a>
             </div>
           </div>
         </div>
@@ -286,6 +286,8 @@
         <strong>PatchBrief</strong>
         <div class="footer-links">
           <a href="feed.html">Feed</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="watchlist.html">Watchlist</a>
           <a href="rss.xml">RSS</a>
           <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
         </div>
@@ -364,7 +366,7 @@
           '<p>Get daily digests + alerts for vendors you run.</p>' +
           '<span>PatchBrief Pro &mdash; $9/month</span>' +
           '</div>' +
-          '<a class="button button-ghost" href="pricing.html#pro">Upgrade to Pro &rarr;</a>';
+          '<a class="button button-ghost" href="${PRO_MONTHLY_URL}">Upgrade to Pro &rarr;</a>';
         items[9].after(promo);
       }
     })();

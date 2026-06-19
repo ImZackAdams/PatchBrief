@@ -7,7 +7,13 @@ from pathlib import Path
 import pytest
 
 from patchbrief.feed import FeedItem, load_feed_item
-from patchbrief.render.feed import render_feed_item_card, render_rss
+from patchbrief.monetization import checkout_url, paid_cta_url
+from patchbrief.render.feed import (
+    render_feed_item_card,
+    render_item_page,
+    render_rss,
+    render_sitemap,
+)
 
 
 def _write_item(
@@ -98,3 +104,44 @@ def test_rss_escapes_titles_and_links(tmp_path: Path):
     assert "<title>Example &amp; item</title>" in rss
     assert "<description>Summary with &lt;angle brackets&gt;.</description>" in rss
     assert "https://patchbrief.test/items/sample.html" in rss
+
+
+def test_checkout_url_encodes_plan_billing_and_source():
+    url = checkout_url("team", "monthly", "pricing card")
+
+    assert url == "/checkout.html?plan=team&billing=monthly&source=pricing+card"
+
+
+def test_paid_cta_url_uses_configured_payment_link(monkeypatch: pytest.MonkeyPatch):
+    monkeypatch.setenv("PATCHBRIEF_STRIPE_PRO_YEARLY_URL", "https://buy.stripe.test/pro-yearly")
+
+    assert paid_cta_url("pro", "yearly", "test") == "https://buy.stripe.test/pro-yearly"
+
+
+def test_paid_cta_url_falls_back_to_checkout(monkeypatch: pytest.MonkeyPatch):
+    monkeypatch.delenv("PATCHBRIEF_STRIPE_TEAM_MONTHLY_URL", raising=False)
+
+    assert (
+        paid_cta_url("team", "monthly", "test")
+        == "/checkout.html?plan=team&billing=monthly&source=test"
+    )
+
+
+def test_item_page_has_paid_alert_cta(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
+    monkeypatch.delenv("PATCHBRIEF_STRIPE_PRO_YEARLY_URL", raising=False)
+    item = _load_test_item(tmp_path)
+
+    html = render_item_page(item)
+
+    assert "Get Pro alerts" in html
+    assert "/checkout.html?plan=pro&amp;billing=yearly&amp;source=brief" in html
+
+
+def test_sitemap_includes_revenue_and_item_pages(tmp_path: Path):
+    item = _load_test_item(tmp_path)
+
+    sitemap = render_sitemap([item], "https://patchbrief.test/")
+
+    assert "<loc>https://patchbrief.test/pricing.html</loc>" in sitemap
+    assert "<loc>https://patchbrief.test/checkout.html</loc>" in sitemap
+    assert "<loc>https://patchbrief.test/items/sample.html</loc>" in sitemap

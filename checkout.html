@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Subscribe to PatchBrief Pro or Team for daily security digests, vendor watchlist alerts, and API access." />
+    <meta name="theme-color" content="#15211f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Checkout | PatchBrief" />
+    <meta property="og:description" content="Upgrade to PatchBrief Pro or Team for daily digests, vendor alerts, and structured security feed access." />
+    <title>Checkout | PatchBrief</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #fbfbf8;
+        --paper: #ffffff;
+        --ink: #111816;
+        --soft-ink: #2e3936;
+        --muted: #66706d;
+        --line: #e2e5df;
+        --line-strong: #cdd3cc;
+        --accent: #0f766e;
+        --accent-soft: #edf7f4;
+        --red: #913f32;
+        --red-soft: #fdf0ee;
+        --max: 1060px;
+        --radius: 6px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--page); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+      a { color: inherit; }
+      a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+      h1, h2, h3, p { margin-top: 0; }
+      p { margin-bottom: 0.9rem; }
+      .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+      header { border-bottom: 1px solid var(--line); background: rgba(251,251,248,0.96); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 10; }
+      .nav { display: flex; min-height: 4rem; align-items: center; justify-content: space-between; gap: 1rem; }
+      .brand { display: inline-flex; align-items: center; gap: 0.65rem; font-weight: 760; text-decoration: none; color: var(--ink); }
+      .mark { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.78rem; font-weight: 800; }
+      nav { display: flex; align-items: center; gap: 0.2rem; }
+      nav a { border-radius: var(--radius); color: var(--muted); padding: 0.45rem 0.6rem; font-size: 0.92rem; text-decoration: none; }
+      nav a:hover { color: var(--ink); }
+      .nav-cta { border: 1px solid var(--line-strong); background: var(--ink) !important; color: #fff !important; font-weight: 760; padding: 0.45rem 0.85rem !important; }
+
+      .button { display: inline-flex; min-height: 2.8rem; align-items: center; justify-content: center; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); padding: 0.72rem 1.1rem; cursor: pointer; color: var(--ink); font: inherit; font-size: 0.94rem; font-weight: 760; text-decoration: none; white-space: nowrap; }
+      .button:hover { border-color: var(--ink); }
+      .button.primary { border-color: var(--ink); background: var(--ink); color: #fff; }
+      .button.primary:hover { background: var(--accent); border-color: var(--accent); }
+      .button.accent { border-color: var(--accent); background: var(--accent); color: #fff; }
+      .button.accent:hover { background: #0d6560; border-color: #0d6560; }
+      .button.full { width: 100%; }
+
+      .hero { border-bottom: 1px solid var(--line); background: var(--paper); padding: 4.5rem 0 3rem; }
+      .eyebrow { color: var(--accent); font-size: 0.8rem; font-weight: 760; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.7rem; }
+      .hero h1 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 780; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 0.9rem; max-width: 14ch; }
+      .hero-lede { max-width: 58ch; color: var(--soft-ink); font-size: 1.05rem; margin-bottom: 0; }
+
+      .checkout-section { padding: 3rem 0 4rem; }
+      .success-banner { display: none; margin-bottom: 1rem; border: 1px solid var(--accent); border-left: 3px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); color: var(--accent); padding: 0.85rem 1rem; font-size: 0.92rem; font-weight: 700; }
+      .checkout-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr); gap: 1px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--line); overflow: hidden; }
+      .panel { background: var(--paper); padding: 1.75rem; }
+      .panel h2 { font-size: 1.1rem; font-weight: 760; margin-bottom: 0.4rem; }
+      .panel-lede { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.35rem; }
+
+      .option-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.7rem; margin-bottom: 1.25rem; }
+      .plan-option { min-height: 8.5rem; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--page); text-align: left; padding: 1rem; cursor: pointer; font: inherit; color: var(--ink); }
+      .plan-option:hover, .plan-option.active { border-color: var(--accent); background: var(--accent-soft); }
+      .plan-option-name { display: block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.35rem; }
+      .plan-option.active .plan-option-name { color: var(--accent); }
+      .plan-option-price { display: block; font-size: 1.75rem; font-weight: 780; letter-spacing: -0.01em; line-height: 1; margin-bottom: 0.4rem; }
+      .plan-option-desc { display: block; color: var(--muted); font-size: 0.84rem; line-height: 1.45; }
+
+      .billing-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.35rem; }
+      .billing-button { flex: 1; min-width: 130px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--soft-ink); cursor: pointer; font: inherit; font-size: 0.9rem; font-weight: 760; padding: 0.65rem 0.9rem; }
+      .billing-button.active { border-color: var(--ink); background: var(--ink); color: #fff; }
+
+      .offer-box { border: 1px solid var(--line); border-radius: var(--radius); background: var(--page); padding: 1.25rem; margin-bottom: 1.25rem; }
+      .offer-top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.6rem; }
+      .offer-plan { color: var(--muted); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+      .offer-price { font-size: clamp(2rem, 5vw, 3rem); font-weight: 780; letter-spacing: -0.02em; line-height: 1; }
+      .offer-save { display: inline-flex; border-radius: 99px; background: var(--accent-soft); color: var(--accent); padding: 0.16rem 0.55rem; font-size: 0.74rem; font-weight: 760; }
+      .offer-desc { color: var(--soft-ink); font-size: 0.9rem; margin-bottom: 0; }
+      .benefit-list { list-style: none; padding: 0; margin: 0 0 1.35rem; display: grid; gap: 0.55rem; }
+      .benefit-list li { display: flex; gap: 0.5rem; color: var(--soft-ink); font-size: 0.9rem; }
+      .benefit-list li::before { content: "✓"; color: var(--accent); font-weight: 800; flex: 0 0 auto; }
+      .checkout-note { color: var(--muted); font-size: 0.83rem; margin: 0.75rem 0 0; }
+
+      .field { margin-bottom: 1rem; }
+      .field label { display: block; color: var(--soft-ink); font-size: 0.82rem; font-weight: 760; margin-bottom: 0.3rem; }
+      .field input, .field select, .field textarea { width: 100%; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--ink); font: inherit; font-size: 0.9rem; padding: 0.65rem 0.75rem; }
+      .field textarea { min-height: 5.8rem; resize: vertical; }
+      .field-hint { color: var(--muted); font-size: 0.78rem; margin: 0.25rem 0 0; }
+      .privacy-note { color: var(--muted); font-size: 0.82rem; margin: 0.8rem 0 0; }
+
+      .assurance-section { border-top: 1px solid var(--line); background: var(--paper); padding: 2.5rem 0; }
+      .assurance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--line); overflow: hidden; }
+      .assurance-item { background: var(--page); padding: 1.2rem; }
+      .assurance-item h3 { font-size: 0.95rem; font-weight: 760; margin-bottom: 0.35rem; }
+      .assurance-item p { color: var(--muted); font-size: 0.86rem; margin: 0; }
+
+      footer { border-top: 1px solid var(--line); padding: 2rem 0; }
+      .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--muted); font-size: 0.88rem; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+      .footer-links a { color: var(--muted); text-decoration: none; }
+      .footer-links a:hover { color: var(--ink); }
+      footer strong { color: var(--ink); }
+
+      @media (max-width: 860px) {
+        .checkout-layout, .assurance-grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 720px) {
+        .wrap { width: min(calc(100% - 24px), var(--max)); }
+        .nav { min-height: auto; align-items: flex-start; flex-direction: column; padding: 0.85rem 0; }
+        nav { width: 100%; overflow-x: auto; }
+        nav a { white-space: nowrap; }
+        .hero { padding: 3rem 0 2.2rem; }
+        .option-grid { grid-template-columns: 1fr; }
+        .button { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav" aria-label="Primary navigation">
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">PB</span>
+          <span>PatchBrief</span>
+        </a>
+        <nav>
+          <a href="feed.html">Feed</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="watchlist.html">Watchlist</a>
+          <a class="nav-cta" href="checkout.html?plan=pro&amp;billing=yearly&amp;source=checkout-nav">Get Pro</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Checkout</p>
+          <h1>Turn the feed into alerts.</h1>
+          <p class="hero-lede">
+            Upgrade for daily delivery, vendor-specific watchlists, and structured security feed access built for operator workflows.
+          </p>
+        </div>
+      </section>
+
+      <section class="checkout-section">
+        <div class="wrap">
+          <div class="success-banner" id="success-banner" role="status">
+            Checkout request received. We'll reply with the right payment or invoice path.
+          </div>
+
+          <div class="checkout-layout">
+            <section class="panel" aria-labelledby="choose-plan-heading">
+              <h2 id="choose-plan-heading">Choose a plan</h2>
+              <p class="panel-lede">Yearly billing is selected by default because most teams want fewer procurement touches and the lowest annual cost.</p>
+
+              <div class="option-grid" role="group" aria-label="Plan">
+                <button class="plan-option" type="button" data-plan="pro">
+                  <span class="plan-option-name">Pro</span>
+                  <span class="plan-option-price" data-plan-price="pro">$79/yr</span>
+                  <span class="plan-option-desc">Daily digest, weekly brief, and up to 10 vendor watchlist alerts.</span>
+                </button>
+                <button class="plan-option" type="button" data-plan="team">
+                  <span class="plan-option-name">Team</span>
+                  <span class="plan-option-price" data-plan-price="team">$399/yr</span>
+                  <span class="plan-option-desc">Team seats, unlimited watchlists, CSV export, and structured API support.</span>
+                </button>
+              </div>
+
+              <div class="billing-row" role="group" aria-label="Billing frequency">
+                <button class="billing-button" type="button" data-billing="yearly">Yearly <span id="save-label">save $29</span></button>
+                <button class="billing-button" type="button" data-billing="monthly">Monthly</button>
+              </div>
+
+              <div class="offer-box">
+                <div class="offer-top">
+                  <div>
+                    <span class="offer-plan" id="offer-plan">Pro yearly</span>
+                    <div class="offer-price" id="offer-price">$79/yr</div>
+                  </div>
+                  <span class="offer-save" id="offer-save">Best value</span>
+                </div>
+                <p class="offer-desc" id="offer-desc">Daily vulnerability digest plus watched-vendor alerts for individual operators.</p>
+              </div>
+
+              <ul class="benefit-list" id="benefit-list">
+                <li>Daily email digest with the top operator-relevant items</li>
+                <li>Vendor watchlist alerts for products you actually run</li>
+                <li>365-day history and priority signal filtering</li>
+              </ul>
+
+              <a class="button primary full" id="payment-link" href="#checkout-request">Continue</a>
+              <p class="checkout-note" id="checkout-note">Secure checkout opens when payment links are configured. Until then, the request form captures paid intent for manual activation.</p>
+            </section>
+
+            <section class="panel" id="checkout-request" aria-labelledby="request-heading">
+              <h2 id="request-heading">Need an invoice or checkout link?</h2>
+              <p class="panel-lede">Send the plan details and we will reply with the correct payment path, invoice, or Team onboarding step.</p>
+
+              <form action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7" method="POST">
+                <input type="hidden" name="_subject" value="PatchBrief checkout request" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_cc" value="patchbrief@protonmail.com" />
+                <input type="hidden" name="_next" id="next-input" value="https://www.patchbrief.org/checkout.html?submitted=1" />
+                <input type="hidden" name="interest_type" value="Paid checkout request" />
+                <input type="hidden" name="selected_plan" id="selected-plan-input" value="pro" />
+                <input type="hidden" name="selected_billing" id="selected-billing-input" value="yearly" />
+                <input type="hidden" name="source" id="source-input" value="direct" />
+                <input type="hidden" name="utm_source" id="utm-source-input" />
+                <input type="hidden" name="utm_medium" id="utm-medium-input" />
+                <input type="hidden" name="utm_campaign" id="utm-campaign-input" />
+                <input type="hidden" name="checkout_link_configured" id="configured-input" value="false" />
+
+                <div class="field">
+                  <label for="email">Work email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+                </div>
+
+                <div class="field">
+                  <label for="company">Company or team</label>
+                  <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name" />
+                </div>
+
+                <div class="field">
+                  <label for="purchase-path">Purchase path</label>
+                  <select id="purchase-path" name="purchase_path">
+                    <option value="card">Card checkout</option>
+                    <option value="invoice">Invoice / purchase order</option>
+                    <option value="trial">Short evaluation</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="vendors">Vendors you care about</label>
+                  <textarea id="vendors" name="vendors" placeholder="Cisco, Fortinet, Microsoft, Ivanti, Palo Alto Networks"></textarea>
+                  <p class="field-hint">This seeds Pro watchlists and Team onboarding.</p>
+                </div>
+
+                <button class="button accent full" type="submit">Send checkout request</button>
+                <p class="privacy-note">PatchBrief uses this only to complete purchase and fulfillment. No scanning, no agent install, no exposure verification.</p>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="assurance-section" aria-label="Purchase terms">
+        <div class="wrap">
+          <div class="assurance-grid">
+            <article class="assurance-item">
+              <h3>14-day refund policy</h3>
+              <p>Try the paid workflow with room to reverse course if it is not useful.</p>
+            </article>
+            <article class="assurance-item">
+              <h3>Manual activation backup</h3>
+              <p>Every paid request reaches the operator inbox, so payment-link gaps do not strand buyers.</p>
+            </article>
+            <article class="assurance-item">
+              <h3>Public-source boundary</h3>
+              <p>PatchBrief summarizes public advisories and signals. It does not scan environments or replace vendor guidance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-row">
+        <strong>PatchBrief</strong>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="feed.html">Feed</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="watchlist.html">Watchlist</a>
+          <a href="onboarding.html">Onboarding</a>
+          <a href="mailto:patchbrief@protonmail.com">patchbrief@protonmail.com</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="checkout-config.js"></script>
+    <script>
+    (function () {
+      var config = window.PATCHBRIEF_CHECKOUT_LINKS || {};
+      var params = new URLSearchParams(window.location.search);
+      var validPlans = { pro: true, team: true };
+      var validBilling = { monthly: true, yearly: true };
+      var state = {
+        plan: validPlans[params.get('plan')] ? params.get('plan') : 'pro',
+        billing: validBilling[params.get('billing')] ? params.get('billing') : 'yearly',
+        source: params.get('source') || 'direct'
+      };
+
+      var planData = {
+        pro: {
+          name: 'Pro',
+          monthly: '$9/mo',
+          yearly: '$79/yr',
+          save: 'save $29',
+          yearlyBadge: 'Best value',
+          monthlyBadge: 'Cancel any time',
+          desc: 'Daily vulnerability digest plus watched-vendor alerts for individual operators.',
+          benefits: [
+            'Daily email digest with the top operator-relevant items',
+            'Vendor watchlist alerts for up to 10 vendors',
+            '365-day history and priority signal filtering'
+          ]
+        },
+        team: {
+          name: 'Team',
+          monthly: '$49/mo',
+          yearly: '$399/yr',
+          save: 'save $189',
+          yearlyBadge: 'Procurement friendly',
+          monthlyBadge: 'Team access',
+          desc: 'Structured access, shared workflow, and watchlists for security teams.',
+          benefits: [
+            'Everything in Pro for 5 seats',
+            'Unlimited vendor watchlists and CSV export',
+            'Structured API support for SIEM, Slack, and ticketing workflows'
+          ]
+        }
+      };
+
+      var planButtons = document.querySelectorAll('[data-plan]');
+      var billingButtons = document.querySelectorAll('[data-billing]');
+      var planPrices = document.querySelectorAll('[data-plan-price]');
+      var offerPlan = document.getElementById('offer-plan');
+      var offerPrice = document.getElementById('offer-price');
+      var offerSave = document.getElementById('offer-save');
+      var offerDesc = document.getElementById('offer-desc');
+      var saveLabel = document.getElementById('save-label');
+      var benefitList = document.getElementById('benefit-list');
+      var paymentLink = document.getElementById('payment-link');
+      var checkoutNote = document.getElementById('checkout-note');
+      var planInput = document.getElementById('selected-plan-input');
+      var billingInput = document.getElementById('selected-billing-input');
+      var sourceInput = document.getElementById('source-input');
+      var configuredInput = document.getElementById('configured-input');
+      var nextInput = document.getElementById('next-input');
+      var successBanner = document.getElementById('success-banner');
+      var utmSourceInput = document.getElementById('utm-source-input');
+      var utmMediumInput = document.getElementById('utm-medium-input');
+      var utmCampaignInput = document.getElementById('utm-campaign-input');
+
+      function getPaymentUrl() {
+        return config[state.plan] && config[state.plan][state.billing] ? config[state.plan][state.billing] : '';
+      }
+
+      function updateUrl() {
+        var url = new URL(window.location.href);
+        url.searchParams.set('plan', state.plan);
+        url.searchParams.set('billing', state.billing);
+        url.searchParams.set('source', state.source);
+        window.history.replaceState({}, '', url);
+      }
+
+      function rememberAttribution() {
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (key) {
+          var incoming = params.get(key);
+          if (incoming) {
+            try { window.localStorage.setItem('patchbrief_' + key, incoming); } catch (e) {}
+          }
+        });
+      }
+
+      function getAttribution(key) {
+        try { return params.get(key) || window.localStorage.getItem('patchbrief_' + key) || ''; } catch (e) {}
+        return params.get(key) || '';
+      }
+
+      function render() {
+        var data = planData[state.plan];
+        var paymentUrl = getPaymentUrl();
+
+        planButtons.forEach(function (button) {
+          var active = button.getAttribute('data-plan') === state.plan;
+          button.classList.toggle('active', active);
+          button.setAttribute('aria-pressed', String(active));
+        });
+        billingButtons.forEach(function (button) {
+          var active = button.getAttribute('data-billing') === state.billing;
+          button.classList.toggle('active', active);
+          button.setAttribute('aria-pressed', String(active));
+        });
+        planPrices.forEach(function (el) {
+          var plan = el.getAttribute('data-plan-price');
+          el.textContent = planData[plan][state.billing];
+        });
+
+        offerPlan.textContent = data.name + ' ' + state.billing;
+        offerPrice.textContent = data[state.billing];
+        offerSave.textContent = state.billing === 'yearly' ? data.yearlyBadge : data.monthlyBadge;
+        offerDesc.textContent = data.desc;
+        saveLabel.textContent = data.save;
+        benefitList.innerHTML = data.benefits.map(function (benefit) {
+          return '<li>' + benefit + '</li>';
+        }).join('');
+
+        paymentLink.href = paymentUrl || '#checkout-request';
+        paymentLink.textContent = paymentUrl ? 'Continue to secure checkout' : 'Request checkout link';
+        checkoutNote.textContent = paymentUrl
+          ? 'Secure checkout is configured for this plan. Paid activation starts from the onboarding form after purchase.'
+          : 'No live payment link is configured for this plan yet. The request form captures paid intent for manual checkout or invoicing.';
+
+        planInput.value = state.plan;
+        billingInput.value = state.billing;
+        sourceInput.value = state.source;
+        configuredInput.value = paymentUrl ? 'true' : 'false';
+        utmSourceInput.value = getAttribution('utm_source');
+        utmMediumInput.value = getAttribution('utm_medium');
+        utmCampaignInput.value = getAttribution('utm_campaign');
+        nextInput.value = 'https://www.patchbrief.org/checkout.html?submitted=1&plan=' + encodeURIComponent(state.plan) + '&billing=' + encodeURIComponent(state.billing);
+        updateUrl();
+      }
+
+      planButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          state.plan = button.getAttribute('data-plan');
+          render();
+        });
+      });
+
+      billingButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          state.billing = button.getAttribute('data-billing');
+          render();
+        });
+      });
+
+      rememberAttribution();
+      if (params.get('submitted') === '1' && successBanner) {
+        successBanner.style.display = 'block';
+      }
+      render();
+    })();
+    </script>
+  </body>
+</html>

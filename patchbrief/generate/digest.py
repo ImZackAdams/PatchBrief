@@ -15,6 +15,8 @@ import html as html_mod
 from datetime import date
 from typing import TYPE_CHECKING
 
+from patchbrief.monetization import paid_cta_url
+
 if TYPE_CHECKING:
     from patchbrief.feed import FeedItem
 
@@ -130,6 +132,15 @@ def _wrap(
     base_url: str,
     label: str,
 ) -> str:
+    pro_checkout_url = paid_cta_url(
+        "pro",
+        "yearly",
+        "email-digest",
+        root_relative=False,
+        base_url=base_url,
+    )
+    pro_checkout_href = _e(pro_checkout_url)
+
     return f"""<!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -209,7 +220,7 @@ def _wrap(
                     <p style="margin:0 0 6px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.5);letter-spacing:0.04em;text-transform:uppercase;">PatchBrief Pro</p>
                     <p style="margin:0 0 12px;font-size:17px;font-weight:700;color:#ffffff;line-height:1.3;">Get daily digests and vendor watchlist alerts.</p>
                     <p style="margin:0 0 16px;font-size:13px;color:rgba(255,255,255,0.65);line-height:1.5;">Pro subscribers get this digest daily (not just weekly), plus targeted alerts when vulnerabilities affect vendors they run. $9/month or $79/year.</p>
-                    <a href="{base_url}/pricing.html#pro" style="display:inline-block;background:#0f766e;color:#ffffff;font-size:13px;font-weight:700;text-decoration:none;padding:10px 20px;border-radius:6px;">Upgrade to Pro &rarr;</a>
+                    <a href="{pro_checkout_href}" style="display:inline-block;background:#0f766e;color:#ffffff;font-size:13px;font-weight:700;text-decoration:none;padding:10px 20px;border-radius:6px;">Upgrade to Pro &rarr;</a>
                   </td>
                 </tr>
               </table>

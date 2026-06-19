@@ -386,22 +386,39 @@ Stripe Payment Links let you accept cards with no code and no backend. Create th
 
 Create four links (monthly + yearly for each paid tier) and set the product name, price, and billing cycle. Once created, each link is a URL like `https://buy.stripe.com/abc123`.
 
-Then open `pricing.html` and replace the placeholder `href` values in the Pro and Team plan CTA buttons:
+Then configure the static checkout page in `checkout-config.js`:
 
-```html
-<!-- Find these two comment blocks in pricing.html and replace the href -->
-<!-- REPLACE THESE href VALUES WITH YOUR STRIPE PAYMENT LINKS -->
-<a class="button button-white full" href="https://buy.stripe.com/YOUR_PRO_MONTHLY">Get Pro monthly →</a>
-<a class="button button-white full" href="https://buy.stripe.com/YOUR_PRO_YEARLY">Get Pro yearly →</a>
+```js
+window.PATCHBRIEF_CHECKOUT_LINKS = {
+  pro: {
+    monthly: "https://buy.stripe.com/YOUR_PRO_MONTHLY",
+    yearly: "https://buy.stripe.com/YOUR_PRO_YEARLY"
+  },
+  team: {
+    monthly: "https://buy.stripe.com/YOUR_TEAM_MONTHLY",
+    yearly: "https://buy.stripe.com/YOUR_TEAM_YEARLY"
+  }
+};
 ```
 
-Do the same for the Team plan buttons directly below. Also update the matching buttons in `index.html` under the `#pricing` section.
+The checkout page works even before these are set: it captures a paid checkout/invoice request through FormSubmit so high-intent buyers are not lost.
 
-After replacing, rebuild and push:
+For generated surfaces (`feed.html`, `items/*.html`, and `digest-latest.html`), add the same links as GitHub Actions secrets:
+
+| Secret | Purpose |
+|---|---|
+| `PATCHBRIEF_STRIPE_PRO_MONTHLY_URL` | Pro monthly checkout |
+| `PATCHBRIEF_STRIPE_PRO_YEARLY_URL` | Pro yearly checkout |
+| `PATCHBRIEF_STRIPE_TEAM_MONTHLY_URL` | Team monthly checkout |
+| `PATCHBRIEF_STRIPE_TEAM_YEARLY_URL` | Team yearly checkout |
+
+Set the Stripe Payment Link success URL to `https://www.patchbrief.org/onboarding.html` so paid subscribers can submit watchlist and delivery details immediately after purchase.
+
+After configuring links, rebuild and push:
 
 ```bash
 python -m patchbrief.cli build-feed
-git add index.html pricing.html feed.html items/ feed.json rss.xml
+git add checkout-config.js feed.html items/ feed.json rss.xml digest-latest.html
 git commit -m "add Stripe payment links"
 git push
 ```
@@ -489,15 +506,14 @@ Visitor → fills out watchlist.html → told watchlist requires Pro → Stripe
 
 ---
 
-### Step 7 — Replace mailto links with Stripe (when ready)
+### Step 7 — Keep the checkout fallback healthy
 
-The Pro and Team CTAs currently link to `mailto:` as a safe default. Once you have Stripe Payment Links, replace them in three places:
+Paid CTAs route to `checkout.html` unless a generated page receives Stripe URLs from environment secrets. Keep the FormSubmit route active because it handles:
 
-1. `pricing.html` — the four CTA buttons (monthly/yearly × Pro/Team)
-2. `index.html` — the two plan buttons in the `#pricing` section
-3. `index.html` — the "See Pro" button in the newsletter section
-
-Search for `mailto:patchbrief@protonmail.com?subject=PatchBrief` in both files to find all occurrences.
+- invoice or purchase-order requests
+- buyers who prefer manual checkout
+- payment-link outages or missing Stripe configuration
+- Team prospects who need integration scoping before purchase
 
 ---
 

@@ -14,7 +14,7 @@ and high-signal threat activity, then turns them into short source-backed briefs
 | **Public feed** | Active MVP |
 | **RSS** | Active |
 | **Newsletter interest list** | Active via FormSubmit |
-| **Monetization** | Later — sponsor, subscription, or premium feed experiments |
+| **Monetization** | Active — checkout funnel, paid watchlist onboarding, Stripe link config |
 
 ## Boundaries
 
@@ -35,12 +35,15 @@ Static GitHub Pages site at `https://www.patchbrief.org`
 |---|---|
 | `index.html` | Homepage: public feed intro and newsletter signup |
 | `feed.html` | Public security intel feed |
+| `pricing.html` | Free / Pro / Team pricing and plan comparison |
+| `checkout.html` | Static paid checkout handoff with Stripe-link and invoice-request fallback |
+| `onboarding.html` | Paid subscriber onboarding for watchlists, delivery, and integrations |
 | `items/` | Individual brief pages |
 
 ## Content model
 
 Feed items are YAML files in `content/feed-items/`. The static generator reads them
-and produces `feed.html`, `items/{slug}.html`, and `rss.xml`.
+and produces `feed.html`, `items/{slug}.html`, `rss.xml`, `feed.json`, and `sitemap.xml`.
 
 See [docs/feed-item-format.md](docs/feed-item-format.md) for the full field reference.
 
@@ -57,6 +60,8 @@ This reads `content/feed-items/*.yml` and generates:
 - `feed.html`
 - `items/{slug}.html` for each item
 - `rss.xml`
+- `feed.json`
+- `sitemap.xml`
 
 Optional flags:
 
@@ -88,7 +93,8 @@ Short version:
 - [x] Static feed generator
 - [x] RSS generation
 - [ ] Newsletter publishing workflow
-- [ ] Monetization experiment
+- [x] Monetization funnel
+- [ ] Fully automated paid subscriber fulfillment
 
 ## Docs
 

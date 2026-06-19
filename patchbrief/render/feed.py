@@ -8,6 +8,7 @@ from typing import Optional
 from xml.sax.saxutils import escape as xml_escape
 
 from patchbrief.feed import FeedItem
+from patchbrief.monetization import paid_cta_url
 
 _TEMPLATES_DIR = Path(__file__).parent.parent.parent / "templates"
 
@@ -99,6 +100,9 @@ def render_feed(items: list[FeedItem]) -> str:
         ITEMS_HTML=items_html,
         SAMPLE_NOTICE=sample_notice,
         ITEM_COUNT=str(len(items)),
+        PRO_YEARLY_URL=_esc(paid_cta_url("pro", "yearly", "feed")),
+        PRO_MONTHLY_URL=_esc(paid_cta_url("pro", "monthly", "feed")),
+        TEAM_YEARLY_URL=_esc(paid_cta_url("team", "yearly", "feed")),
     )
 
 
@@ -140,6 +144,7 @@ def render_item_page(item: FeedItem) -> str:
         OPERATOR_CHECK=_esc(item.operator_check),
         SOURCES_HTML=sources_html,
         SAMPLE_NOTICE=sample_notice,
+        PRO_YEARLY_URL=_esc(paid_cta_url("pro", "yearly", "brief")),
     )
 
 
@@ -175,4 +180,40 @@ def render_rss(items: list[FeedItem], base_url: str) -> str:
         f"{items_xml}\n"
         "  </channel>\n"
         "</rss>\n"
+    )
+
+
+def render_sitemap(items: list[FeedItem], base_url: str) -> str:
+    normalized_base_url = base_url.rstrip("/")
+    static_paths = [
+        ("", "1.0"),
+        ("feed.html", "0.9"),
+        ("pricing.html", "0.9"),
+        ("checkout.html", "0.8"),
+        ("watchlist.html", "0.8"),
+        ("onboarding.html", "0.5"),
+    ]
+    url_blocks = [
+        _render_sitemap_url(f"{normalized_base_url}/{path}", priority)
+        for path, priority in static_paths
+    ]
+    url_blocks.extend(
+        _render_sitemap_url(f"{normalized_base_url}/items/{item.slug}.html", "0.7", item.date)
+        for item in items
+    )
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(url_blocks)
+        + "\n</urlset>\n"
+    )
+
+
+def _render_sitemap_url(url: str, priority: str, lastmod: str | None = None) -> str:
+    lastmod_xml = f"\n    <lastmod>{xml_escape(lastmod)}</lastmod>" if lastmod else ""
+    return (
+        "  <url>\n"
+        f"    <loc>{xml_escape(url)}</loc>{lastmod_xml}\n"
+        f"    <priority>{priority}</priority>\n"
+        "  </url>"
     )

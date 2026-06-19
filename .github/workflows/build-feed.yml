@@ -69,6 +69,11 @@ jobs:
       # -----------------------------------------------------------------------
       - name: Build feed
         if: github.event.inputs.digest_only != 'true'
+        env:
+          PATCHBRIEF_STRIPE_PRO_MONTHLY_URL: ${{ secrets.PATCHBRIEF_STRIPE_PRO_MONTHLY_URL }}
+          PATCHBRIEF_STRIPE_PRO_YEARLY_URL: ${{ secrets.PATCHBRIEF_STRIPE_PRO_YEARLY_URL }}
+          PATCHBRIEF_STRIPE_TEAM_MONTHLY_URL: ${{ secrets.PATCHBRIEF_STRIPE_TEAM_MONTHLY_URL }}
+          PATCHBRIEF_STRIPE_TEAM_YEARLY_URL: ${{ secrets.PATCHBRIEF_STRIPE_TEAM_YEARLY_URL }}
         run: python -m patchbrief.cli build-feed
 
       # -----------------------------------------------------------------------
@@ -78,6 +83,11 @@ jobs:
         if: >
           github.event_name == 'schedule' && github.event.schedule == '0 10 * * 1' ||
           github.event_name == 'workflow_dispatch' && github.event.inputs.digest_only == 'true'
+        env:
+          PATCHBRIEF_STRIPE_PRO_MONTHLY_URL: ${{ secrets.PATCHBRIEF_STRIPE_PRO_MONTHLY_URL }}
+          PATCHBRIEF_STRIPE_PRO_YEARLY_URL: ${{ secrets.PATCHBRIEF_STRIPE_PRO_YEARLY_URL }}
+          PATCHBRIEF_STRIPE_TEAM_MONTHLY_URL: ${{ secrets.PATCHBRIEF_STRIPE_TEAM_MONTHLY_URL }}
+          PATCHBRIEF_STRIPE_TEAM_YEARLY_URL: ${{ secrets.PATCHBRIEF_STRIPE_TEAM_YEARLY_URL }}
         run: |
           # Derive issue number from weeks since epoch
           ISSUE=$(python3 -c "import datetime; print((datetime.date.today() - datetime.date(2025,1,1)).days // 7 + 1)")
@@ -99,6 +109,7 @@ jobs:
           git add \
             feed.html \
             rss.xml \
+            sitemap.xml \
             feed.json \
             items/ \
             content/feed-items/ \
