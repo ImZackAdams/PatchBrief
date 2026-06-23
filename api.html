@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Use the PatchBrief JSON API to pull source-backed vulnerability briefs into internal tools, dashboards, SIEMs, and ticketing workflows." />
+    <meta name="description" content="Use the PatchBrief JSON API to route source-backed vulnerability briefs into dashboards, SIEMs, ticketing queues, and patch workflows." />
     <meta name="theme-color" content="#15211f" />
     <title>API | PatchBrief</title>
     <style>
@@ -107,10 +107,10 @@
       <section class="hero">
         <div class="wrap">
           <p class="eyebrow">PatchBrief API</p>
-          <h1>Pull vulnerability briefs into your workflow.</h1>
+          <h1>Put PatchBrief where work already happens.</h1>
           <p class="hero-lede">
-            Use the live JSON feed to route PatchBrief records into dashboards, SIEM enrichment,
-            Slack alerts, ticket queues, or internal patch reporting.
+            Use the live JSON feed to move source-backed vulnerability briefs into dashboards,
+            SIEM enrichment, Slack alerts, ticket queues, and patch reports.
           </p>
           <div class="cta-row">
             <a class="button primary" href="checkout.html?plan=team&amp;billing=yearly&amp;source=api-hero">Get Team API access</a>
@@ -122,7 +122,7 @@
       <section class="section alt" aria-labelledby="quickstart-heading">
         <div class="wrap">
           <h2 id="quickstart-heading">Quickstart</h2>
-          <p class="section-lede">The launch API is a static JSON endpoint, so it works with curl, scheduled jobs, serverless functions, and no SDK.</p>
+          <p class="section-lede">The launch API is a static JSON endpoint. It works with curl, scheduled jobs, serverless functions, and no SDK.</p>
           <div class="endpoint">
             <span class="method">GET</span>
             <span class="url">https://www.patchbrief.org/feed.json</span>
@@ -133,8 +133,8 @@
 
       <section class="section" aria-labelledby="fields-heading">
         <div class="wrap">
-          <h2 id="fields-heading">What you get</h2>
-          <p class="section-lede">Each response includes feed metadata, source health, and normalized brief records.</p>
+          <h2 id="fields-heading">Fields built for routing</h2>
+          <p class="section-lede">Each response includes feed metadata, source health, and normalized brief records that are easy to filter downstream.</p>
           <table class="field-table">
             <thead>
               <tr>
@@ -143,11 +143,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td><code>pipeline.sources</code></td><td>Show source health for CISA KEV, MSRC, NVD, GitHub, CERT/CC, Exploit-DB, and EPSS.</td></tr>
+              <tr><td><code>pipeline.sources</code></td><td>Monitor source health for CISA KEV, MSRC, NVD, GitHub, CERT/CC, Exploit-DB, and EPSS.</td></tr>
               <tr><td><code>items[].type</code></td><td>Filter by KEV, Patch Tuesday, vendor advisory, coordinated disclosure, or exploit activity.</td></tr>
               <tr><td><code>items[].signal</code></td><td>Route known exploited, critical advisory, patch review, or threat activity items differently.</td></tr>
               <tr><td><code>items[].vendor</code></td><td>Match briefs to vendor watchlists or asset owners.</td></tr>
-              <tr><td><code>items[].operator_check</code></td><td>Populate ticket descriptions with the next practical verification step.</td></tr>
+              <tr><td><code>items[].operator_check</code></td><td>Populate tickets with the next practical verification step.</td></tr>
               <tr><td><code>items[].sources</code></td><td>Keep every downstream record linked to the public source claim.</td></tr>
             </tbody>
           </table>
@@ -156,20 +156,20 @@
 
       <section class="section alt" aria-labelledby="team-heading">
         <div class="wrap">
-          <h2 id="team-heading">Premium API offer</h2>
-          <p class="section-lede">The public endpoint is open during launch. Team is the paid API tier for teams that need this feed to become a dependable integration.</p>
+          <h2 id="team-heading">Make it a supported integration</h2>
+          <p class="section-lede">The endpoint is open during launch. Team is the paid API tier for teams that need PatchBrief to become a dependable workflow.</p>
           <div class="grid">
             <article class="card">
               <h3>Integration support</h3>
-              <p>Help mapping fields into Slack, SIEM, ticketing, dashboards, or internal patch reports.</p>
+              <p>Help mapping fields into Slack, SIEM, ticketing, dashboards, and patch reports.</p>
             </article>
             <article class="card">
               <h3>CSV and archive help</h3>
-              <p>Simple exports and historical feed support for reporting, pilots, and workflow setup.</p>
+              <p>Simple exports and historical feed support for reporting, pilots, and team rollout.</p>
             </article>
             <article class="card">
               <h3>Priority API support</h3>
-              <p>Direct support when the feed powers an operational workflow or buyer evaluation.</p>
+              <p>Direct support when the feed powers an operational workflow or evaluation.</p>
             </article>
           </div>
           <p class="note" style="margin-top:1rem;">Future private API keys can be added behind Cloudflare Access or a lightweight API gateway when paid usage justifies it.</p>

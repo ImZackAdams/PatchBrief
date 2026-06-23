@@ -157,7 +157,7 @@ def test_item_page_has_paid_alert_cta(tmp_path: Path, monkeypatch: pytest.Monkey
 
     html = render_item_page(item)
 
-    assert "Get Pro alerts" in html
+    assert "Get watched-vendor alerts" in html
     assert "/checkout.html?plan=pro&amp;billing=yearly&amp;source=brief" in html
 
 
