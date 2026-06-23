@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-06-23T17:46:31Z",
-  "total_items": 96,
+  "generated": "2026-06-23T19:58:33Z",
+  "total_items": 99,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-06-23T17:46:31Z",
+    "generated": "2026-06-23T19:58:33Z",
     "source_count": 4,
     "sources": [
       {
@@ -78,6 +78,108 @@
         {
           "title": "NVD — CVE-2026-20253",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20253"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-apache-cve-2026-32966",
+      "slug": "2026-06-apache-cve-2026-32966",
+      "url": "https://www.patchbrief.org/items/2026-06-apache-cve-2026-32966.html",
+      "date": "2026-06-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Dolphinscheduler — CVE-2026-32966 (Critical)",
+      "summary": "DataSource API Missing Authorization Check Leads to Arbitrary Data Source Metadata Disclosure in Apache DolphinScheduler.\n\nThis issue affects Apache DolphinScheduler: before 3.4.2.\n\nUsers are recommended to upgrade to version 3.4.2, which fixes the issue.",
+      "vendor": "Apache",
+      "product": "Dolphinscheduler",
+      "cve": "CVE-2026-32966",
+      "operator_check": "Review CVE-2026-32966 in your asset inventory. Apply patches per vendor guidance and verify Dolphinscheduler is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Apache Dolphinscheduler. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-32966",
+        "vendor-advisory",
+        "apache"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-32966",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32966"
+        },
+        {
+          "title": "Vendor reference",
+          "url": "https://lists.apache.org/thread/4f1fojpj26z9y5nd1ko845gcknpn75g2"
+        },
+        {
+          "title": "Vendor reference",
+          "url": "http://www.openwall.com/lists/oss-security/2026/06/17/2"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-apache-cve-2026-32967",
+      "slug": "2026-06-apache-cve-2026-32967",
+      "url": "https://www.patchbrief.org/items/2026-06-apache-cve-2026-32967.html",
+      "date": "2026-06-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Dolphinscheduler — CVE-2026-32967 (Critical)",
+      "summary": "Incorrect Authorization vulnerability of `/v2` experimental interface in Apache DolphinScheduler.\n\nThis issue affects Apache DolphinScheduler: before 3.4.2.\n\nUsers are recommended to upgrade to version 3.4.2, which fixes the issue.",
+      "vendor": "Apache",
+      "product": "Dolphinscheduler",
+      "cve": "CVE-2026-32967",
+      "operator_check": "Review CVE-2026-32967 in your asset inventory. Apply patches per vendor guidance and verify Dolphinscheduler is not exposed. CVSS score: 9.1.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Apache Dolphinscheduler. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-32967",
+        "vendor-advisory",
+        "apache"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-32967",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32967"
+        },
+        {
+          "title": "Vendor reference",
+          "url": "https://lists.apache.org/thread/5o5jrg1snkmrto96wg015wgbh7hyckzc"
+        },
+        {
+          "title": "Vendor reference",
+          "url": "http://www.openwall.com/lists/oss-security/2026/06/17/3"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-apache-cve-2026-49268",
+      "slug": "2026-06-apache-cve-2026-49268",
+      "url": "https://www.patchbrief.org/items/2026-06-apache-cve-2026-49268.html",
+      "date": "2026-06-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Shiro — CVE-2026-49268 (Critical)",
+      "summary": "A remote attacker can inject LDAP special characters into the Distinguished Name (DN) construction in DefaultLdapRealm class. User-supplied username input is directly concatenated into the LDAP DN template without any escaping of RFC 2253 special characters. This allows an attacker to manipulate the DN structure used for LDAP bind authentication, potentially bypassing authentication or impersonating other users.\n\nThis issue affects all Apache Shiro versions through 2.2.0, and 3.0.0-alpha-1 when using DefaultLdapRealm\nUpgrade to Apache Shiro 2.2.1 or 3.0.0-alpha-2 or later, which fixes the issu",
+      "vendor": "Apache",
+      "product": "Shiro",
+      "cve": "CVE-2026-49268",
+      "operator_check": "Review CVE-2026-49268 in your asset inventory. Apply patches per vendor guidance and verify Shiro is not exposed. CVSS score: 9.1.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Apache Shiro. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-49268",
+        "vendor-advisory",
+        "apache"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-49268",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49268"
+        },
+        {
+          "title": "Vendor reference",
+          "url": "https://lists.apache.org/thread/svszql3od8td7hn6conyj2oq70v53b5s"
+        },
+        {
+          "title": "Vendor reference",
+          "url": "http://www.openwall.com/lists/oss-security/2026/06/17/8"
         }
       ]
     },
