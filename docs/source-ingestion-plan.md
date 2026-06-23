@@ -7,8 +7,11 @@ PatchBrief prioritizes public sources that are useful to operators and stable en
 | Source | Connector | Role | Default |
 |---|---|---|---|
 | CISA Known Exploited Vulnerabilities | `cisa_kev` | Confirmed exploitation and remediation deadlines | On |
+| Microsoft Security Update Guide | `msrc` | Patch Tuesday and Microsoft high-signal CVEs | On |
 | NVD CVE API | `nvd` | Newly published critical CVEs | On |
 | GitHub Security Advisories | `github_advisory` | Reviewed open-source package advisories | On |
+| CERT/CC Vulnerability Notes | `cert_vu` | Coordinated disclosures and multi-vendor notes | On |
+| Exploit-DB | `exploitdb` | Verified public exploit entries | On |
 | FIRST EPSS | `epss` | CVE exploitation-likelihood enrichment | On |
 
 ## Source priority
@@ -16,8 +19,11 @@ PatchBrief prioritizes public sources that are useful to operators and stable en
 When two sources describe the same CVE, PatchBrief keeps one item using this priority:
 
 1. `cisa_kev` because known exploitation is the strongest operator signal.
-2. `github_advisory` because package-level advisory data can be more actionable for application teams.
-3. `nvd` because it provides broad CVE coverage and severity metadata.
+2. `msrc` because Microsoft Patch Tuesday signals drive urgent enterprise patch cycles.
+3. `github_advisory` because package-level advisory data can be more actionable for application teams.
+4. `nvd` because it provides broad CVE coverage and severity metadata.
+5. `cert_vu` because coordinated disclosures often add context but may overlap with CVE sources.
+6. `exploitdb` because public exploit availability is valuable but should not override authoritative vulnerability records.
 
 EPSS does not create feed items. It enriches CVE-backed records with probability and percentile.
 
@@ -51,7 +57,7 @@ Add a new source only when it meets all of these:
 - Stable API, RSS, JSON, or machine-readable format.
 - Clear timestamp field for incremental ingest.
 - Clear upstream URL for every generated item.
-- Adds signal not already covered by CISA KEV, NVD, GitHub, or EPSS.
+- Adds signal not already covered by the active source mix.
 
 ## Candidate future sources
 
@@ -59,5 +65,5 @@ Add a new source only when it meets all of these:
 |---|---|---|
 | Vendor PSIRT feeds | Faster vendor-specific context | Start with vendors that buyers watch most. |
 | CISA advisories/RSS | Campaign and product-specific advisories | Add after confirming stable machine-readable feed URLs. |
-| Microsoft Security Update Guide | Better Patch Tuesday fidelity | Requires dedicated parser and duplicate controls. |
 | AttackerKB or exploit-intel APIs | Exploitability context | Only if licensing and source attribution are clean. |
+| Ransomware campaign feeds | Ransomware-specific coverage | Add only after confirming reliable JSON/RSS access and clean attribution. |

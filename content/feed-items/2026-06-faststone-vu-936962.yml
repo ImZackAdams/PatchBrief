@@ -1,0 +1,37 @@
+id: 2026-06-faststone-vu-936962
+slug: 2026-06-faststone-vu-936962
+external_id: VU-936962
+source: cert_vu
+date: '2026-06-22'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#936962: Multiple file parsing vulnerabilities in FastStone Image Viewer
+  8.3.0.0'
+summary: 'Overview Two vulnerabilities have been identified in FastStone Image Viewer
+  8.3 that may allow remote code execution or control-flow corruption when processing
+  specially crafted image files. The affected components include the JPEG 2000 (JP2)
+  parser and the PSD file parser. An attacker can exploit these vulnerabilities by
+  causing the application to automatically or interactively process malicious image
+  files. Description FastStone Image Viewer is a software tool for browsing, editing,
+  and managing images, offering features like full‑screen viewing, batch processing,
+  red‑eye removal, and a wide range of editing effects. It supports virtually all
+  major image and RAW formats and includes conveniences like slideshows, comparison
+  tools, scanner support, and screen capture. CVE-2026-30040 A critical heap-based
+  buffer overflow vulnerability... Related CVEs: CVE-2026-30040, CVE-2026-30041.'
+vendor: FastStone
+product: Image Viewer 8.3.0.0
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Image Viewer 8.3.0.0 where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#936962
+  url: https://kb.cert.org/vuls/id/936962
+tags:
+- vu-936962
+- coordinated-disclosure
+- faststone
+- cert-vu
+is_sample: false

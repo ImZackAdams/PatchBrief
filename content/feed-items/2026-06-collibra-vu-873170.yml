@@ -1,0 +1,37 @@
+id: 2026-06-collibra-vu-873170
+slug: 2026-06-collibra-vu-873170
+external_id: VU-873170
+source: cert_vu
+date: '2026-06-02'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#873170: Collibra Agent contains improper authentication and path traversal
+  vulnerabilities'
+summary: 'Overview The Collibra Platform Agent contains vulnerabilities that can be
+  chained by a remote, unauthenticated attacker to achieve remote code execution.
+  An attacker can exploit these issues by uploading a crafted ZIP archive that writes
+  attacker-controlled files to arbitrary locations on the server once extracted, resulting
+  in code execution. Description Collibra Platform (CP) and Collibra Platform Self-Hosted
+  (CPSH), an enterprise grade, cloud-based platform designed to help organizations
+  locate, understand, trust, and manage their data assets. The Collibra Agent of CP
+  and CPSH that is installed on the host system is an independent service that listens
+  on different port than the web interface and have the following vulnerabilities.
+  CVE-2026-10622 Privileged REST endpoints exposed under /rest/* do not properly enforce
+  authentication or... Related CVEs: CVE-2026-10621, CVE-2026-10622.'
+vendor: Collibra
+product: Agent
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Agent where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#873170
+  url: https://kb.cert.org/vuls/id/873170
+tags:
+- vu-873170
+- coordinated-disclosure
+- collibra
+- cert-vu
+is_sample: false

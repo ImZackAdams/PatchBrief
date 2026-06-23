@@ -31,6 +31,7 @@ _VALID_TYPES = {
     "Patch Tuesday",
     "Ransomware",
     "Exploit activity",
+    "Coordinated disclosure",
 }
 
 
@@ -52,8 +53,8 @@ Return a JSON object with EXACTLY these keys (no extras, no markdown fences):
   "summary": "<2-3 sentences: what the vulnerability is, how it works, who is affected>",
   "operator_check": "<2-4 sentences: specific actions for security operators to verify or patch>",
   "why_it_matters": "<1-2 sentences: impact and exploitability context>",
-  "signal": "<one of: Known exploited | Critical vendor advisory | Patch review | Threat activity>",
-  "type": "<one of: KEV | Vendor advisory | Patch Tuesday | Ransomware | Exploit activity>"
+  "signal": "<one of: Known exploited | Critical vendor advisory | High-risk advisory | Patch review | Threat activity>",
+  "type": "<one of: KEV | Vendor advisory | Patch Tuesday | Ransomware | Exploit activity | Coordinated disclosure>"
 }}"""
 
     response = client.messages.create(
@@ -135,6 +136,45 @@ def generate_raw_brief(vuln: "RawVuln") -> dict:
         )
         signal = "Critical vendor advisory" if (vuln.cvss_score or 0) >= 9 else "High-risk advisory"
         type_ = "Vendor advisory"
+    elif vuln.source == "msrc":
+        title = vuln.vulnerability_name or f"Microsoft {vuln.product} — {vuln.cve_id}"
+        summary = vuln.description or f"{vuln.cve_id} affects Microsoft {vuln.product}."
+        score_note = f" CVSS score: {vuln.cvss_score}." if vuln.cvss_score else ""
+        epss_note = _epss_sentence(vuln)
+        operator_check = (
+            f"Review the Microsoft Security Update Guide entry for {vuln.cve_id}. "
+            f"Confirm whether {vuln.product} is deployed, then apply the current security update or documented mitigation.{score_note}{epss_note}"
+        )
+        why_it_matters = (
+            f"Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates."
+            + (f" EPSS percentile: {vuln.epss_percentile:.0%}." if vuln.epss_percentile is not None else "")
+        )
+        signal = "Critical vendor advisory" if (vuln.cvss_score or 0) >= 9 else "High-risk advisory"
+        type_ = "Patch Tuesday"
+    elif vuln.source == "cert_vu":
+        title = vuln.vulnerability_name or f"CERT/CC note for {vuln.product}"
+        summary = vuln.description or f"CERT/CC published a Vulnerability Note for {vuln.product}."
+        operator_check = (
+            f"Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. "
+            f"Apply vendor fixes or compensating controls for {vuln.product} where available."
+        )
+        why_it_matters = (
+            "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing."
+        )
+        signal = "Patch review"
+        type_ = "Coordinated disclosure"
+    elif vuln.source == "exploitdb":
+        title = vuln.vulnerability_name or f"Exploit-DB entry for {vuln.product}"
+        summary = vuln.description or f"Exploit-DB published a verified exploit entry for {vuln.product}."
+        operator_check = (
+            f"Treat this as a public exploit availability signal. Check whether {vuln.product} is present or exposed, "
+            "then prioritize patching, mitigation, or compensating controls before routine severity-only items."
+        )
+        why_it_matters = (
+            "A verified Exploit-DB entry means public exploit details or proof-of-concept code are available, which can compress the time from disclosure to opportunistic testing."
+        )
+        signal = "Threat activity"
+        type_ = "Exploit activity"
     else:
         title = f"{vuln.vendor} {vuln.product} — {vuln.cve_id} (Critical)"
         summary = vuln.description or f"Critical vulnerability in {vuln.vendor} {vuln.product}."
@@ -175,11 +215,9 @@ def _epss_sentence(vuln: "RawVuln") -> str:
 
 def _validate_and_fix(result: dict, vuln: "RawVuln") -> dict:
     if result.get("signal") not in _VALID_SIGNALS:
-        result["signal"] = (
-            "Known exploited" if vuln.source == "cisa_kev" else "Critical vendor advisory"
-        )
+        result["signal"] = _default_signal_for_source(vuln)
     if result.get("type") not in _VALID_TYPES:
-        result["type"] = "KEV" if vuln.source == "cisa_kev" else "Vendor advisory"
+        result["type"] = _default_type_for_source(vuln)
 
     for key in ("title", "summary", "operator_check", "why_it_matters"):
         if not result.get(key):
@@ -192,6 +230,30 @@ def _validate_and_fix(result: dict, vuln: "RawVuln") -> dict:
         result[key] = _clean_public_text(str(result.get(key, "")))
 
     return result
+
+
+def _default_signal_for_source(vuln: "RawVuln") -> str:
+    if vuln.source == "cisa_kev":
+        return "Known exploited"
+    if vuln.source == "cert_vu":
+        return "Patch review"
+    if vuln.source == "exploitdb":
+        return "Threat activity"
+    if (vuln.cvss_score or 0) >= 9:
+        return "Critical vendor advisory"
+    return "High-risk advisory"
+
+
+def _default_type_for_source(vuln: "RawVuln") -> str:
+    if vuln.source == "cisa_kev":
+        return "KEV"
+    if vuln.source == "msrc":
+        return "Patch Tuesday"
+    if vuln.source == "cert_vu":
+        return "Coordinated disclosure"
+    if vuln.source == "exploitdb":
+        return "Exploit activity"
+    return "Vendor advisory"
 
 
 def _clean_public_text(text: str) -> str:

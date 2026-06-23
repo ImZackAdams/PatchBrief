@@ -16,10 +16,14 @@ PUBLIC_WINDOW_DAYS = 365
 
 SOURCE_LABELS = {
     "cisa_kev": "CISA Known Exploited Vulnerabilities",
+    "msrc": "Microsoft Security Update Guide",
     "nvd": "NVD critical CVEs",
     "github_advisory": "GitHub Security Advisories",
+    "cert_vu": "CERT/CC Vulnerability Notes",
+    "exploitdb": "Exploit-DB verified exploits",
     "epss": "FIRST EPSS enrichment",
 }
+DEFAULT_SOURCES = "cisa_kev,msrc,github_advisory,nvd,cert_vu,exploitdb"
 
 
 # ---------------------------------------------------------------------------
@@ -138,8 +142,11 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
 
 def cmd_ingest(args: argparse.Namespace) -> None:
     from patchbrief.ingest.cisa_kev import fetch_recent_kev
+    from patchbrief.ingest.cert_vu import fetch_recent_cert_vu
     from patchbrief.ingest.epss import fetch_epss_scores
+    from patchbrief.ingest.exploitdb import fetch_recent_exploitdb
     from patchbrief.ingest.github_advisories import fetch_recent_github_advisories
+    from patchbrief.ingest.msrc import fetch_recent_msrc
     from patchbrief.ingest.nvd import fetch_recent_critical
     from patchbrief.ingest.state import ProcessedState
     from patchbrief.generate.brief import generate_brief, generate_raw_brief
@@ -184,6 +191,21 @@ def cmd_ingest(args: argparse.Namespace) -> None:
             print(f"  KEV fetch failed: {exc}", file=sys.stderr)
             source_runs.append(_source_run("cisa_kev", "failed", 0, started, str(exc)))
 
+    if "msrc" in source_names:
+        print(f"\nFetching Microsoft Security Update Guide (last {args.days} days)...")
+        started = _utc_now()
+        try:
+            msrc_items = fetch_recent_msrc(
+                days=args.days,
+                max_results=args.max_msrc,
+            )
+            print(f"  {len(msrc_items)} MSRC Patch Tuesday CVEs found")
+            source_items.extend(msrc_items)
+            source_runs.append(_source_run("msrc", "ok", len(msrc_items), started))
+        except Exception as exc:
+            print(f"  MSRC fetch failed: {exc}", file=sys.stderr)
+            source_runs.append(_source_run("msrc", "failed", 0, started, str(exc)))
+
     if "nvd" in source_names:
         nvd_api_key = args.nvd_api_key or os.environ.get("NVD_API_KEY", "") or None
         print(f"\nFetching NVD CRITICAL CVEs (last {args.days} days)...")
@@ -217,6 +239,36 @@ def cmd_ingest(args: argparse.Namespace) -> None:
         except Exception as exc:
             print(f"  GitHub advisory fetch failed: {exc}", file=sys.stderr)
             source_runs.append(_source_run("github_advisory", "failed", 0, started, str(exc)))
+
+    if "cert_vu" in source_names:
+        print(f"\nFetching CERT/CC Vulnerability Notes (last {args.days} days)...")
+        started = _utc_now()
+        try:
+            cert_items = fetch_recent_cert_vu(
+                days=args.days,
+                max_results=args.max_cert,
+            )
+            print(f"  {len(cert_items)} CERT/CC notes found")
+            source_items.extend(cert_items)
+            source_runs.append(_source_run("cert_vu", "ok", len(cert_items), started))
+        except Exception as exc:
+            print(f"  CERT/CC fetch failed: {exc}", file=sys.stderr)
+            source_runs.append(_source_run("cert_vu", "failed", 0, started, str(exc)))
+
+    if "exploitdb" in source_names:
+        print(f"\nFetching Exploit-DB verified exploits (last {args.days} days)...")
+        started = _utc_now()
+        try:
+            exploitdb_items = fetch_recent_exploitdb(
+                days=args.days,
+                max_results=args.max_exploitdb,
+            )
+            print(f"  {len(exploitdb_items)} Exploit-DB entries found")
+            source_items.extend(exploitdb_items)
+            source_runs.append(_source_run("exploitdb", "ok", len(exploitdb_items), started))
+        except Exception as exc:
+            print(f"  Exploit-DB fetch failed: {exc}", file=sys.stderr)
+            source_runs.append(_source_run("exploitdb", "failed", 0, started, str(exc)))
 
     # Dedupe by primary ID; source order gives KEV priority over appsec and NVD records.
     seen: set[str] = set()
@@ -447,7 +499,7 @@ def _make_tags(vuln: "RawVuln", brief: dict) -> list[str]:
 def _resolve_sources(raw_sources: str, *, kev_only: bool = False) -> list[str]:
     if kev_only:
         return ["cisa_kev"]
-    allowed = {"cisa_kev", "nvd", "github_advisory"}
+    allowed = {"cisa_kev", "msrc", "nvd", "github_advisory", "cert_vu", "exploitdb"}
     requested = [
         source.strip().lower().replace("-", "_")
         for source in raw_sources.split(",")
@@ -456,14 +508,17 @@ def _resolve_sources(raw_sources: str, *, kev_only: bool = False) -> list[str]:
     invalid = [source for source in requested if source not in allowed]
     if invalid:
         raise SystemExit(f"Invalid source(s): {', '.join(invalid)}. Valid sources: {', '.join(sorted(allowed))}")
-    return requested or ["cisa_kev", "nvd", "github_advisory"]
+    return requested or DEFAULT_SOURCES.split(",")
 
 
 def _source_priority(vuln: "RawVuln") -> tuple[int, str]:
     priority = {
         "cisa_kev": 0,
-        "github_advisory": 1,
-        "nvd": 2,
+        "msrc": 1,
+        "github_advisory": 2,
+        "nvd": 3,
+        "cert_vu": 4,
+        "exploitdb": 5,
     }
     return (priority.get(vuln.source, 9), vuln.cve_id)
 
@@ -630,14 +685,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p_ingest.add_argument(
         "--sources",
-        default="cisa_kev,nvd,github_advisory",
+        default=DEFAULT_SOURCES,
         metavar="LIST",
-        help="Comma-separated ingestion sources: cisa_kev,nvd,github_advisory.",
+        help=f"Comma-separated ingestion sources (default: {DEFAULT_SOURCES}).",
     )
     p_ingest.add_argument(
         "--kev-only",
         action="store_true",
-        help="Only fetch from CISA KEV, skip NVD.",
+        help="Only fetch from CISA KEV, skipping all other source connectors.",
     )
     p_ingest.add_argument(
         "--no-ai",
@@ -658,6 +713,27 @@ def build_parser() -> argparse.ArgumentParser:
         default=30,
         metavar="N",
         help="Maximum GitHub advisories per run (default: 30).",
+    )
+    p_ingest.add_argument(
+        "--max-msrc",
+        type=int,
+        default=25,
+        metavar="N",
+        help="Maximum MSRC Patch Tuesday CVEs per run (default: 25).",
+    )
+    p_ingest.add_argument(
+        "--max-cert",
+        type=int,
+        default=20,
+        metavar="N",
+        help="Maximum CERT/CC Vulnerability Notes per run (default: 20).",
+    )
+    p_ingest.add_argument(
+        "--max-exploitdb",
+        type=int,
+        default=20,
+        metavar="N",
+        help="Maximum Exploit-DB entries per run (default: 20).",
     )
     p_ingest.add_argument(
         "--no-epss",

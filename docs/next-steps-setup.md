@@ -6,13 +6,13 @@ Paused: 2026-06-19. Resume from here.
 
 ## Current state
 
-- Local build works: `python -m patchbrief.cli build-feed` -> 104 total content items, 96 current public feed items, feed.html, rss.xml, sitemap.xml, feed.json
+- Local build works: `python -m patchbrief.cli build-feed` -> 134 total content items, 126 current public feed items, feed.html, rss.xml, sitemap.xml, feed.json
 - Four CLI commands fully functional: `build-feed`, `ingest`, `digest`, `validate`
 - GitHub Actions workflow exists and is configured for tests, validation, daily ingest, weekly digest, and auto-commit
 - Full site structure complete: index, feed, items, pricing, checkout, watchlist, onboarding
-- Multi-source pipeline wired: CISA KEV, NVD, GitHub Security Advisories, and FIRST EPSS enrichment
+- Multi-source pipeline wired: CISA KEV, MSRC Patch Tuesday, NVD, GitHub Security Advisories, CERT/CC Vulnerability Notes, Exploit-DB, and FIRST EPSS enrichment
 - Stripe monetization module wired in — all "Get Pro" buttons link to `checkout.html` as fallback until real Stripe links are configured
-- Currently on branch `experiment` — workflow triggers on push to `main`
+- Current integration branch is `dev`; workflow publication still triggers on push or merge to `main`
 
 ---
 
@@ -144,7 +144,7 @@ export NVD_API_KEY="..."          # optional
 export GITHUB_TOKEN="..."         # optional locally; Actions provides one
 
 # Safe test: all sources, no AI enrichment, 1-day window
-python -m patchbrief.cli ingest --days 1 --no-ai --max-nvd 2 --max-github 2
+python -m patchbrief.cli ingest --days 1 --no-ai --max-msrc 2 --max-nvd 2 --max-github 2 --max-cert 2 --max-exploitdb 2
 
 # Full ingest with AI briefs (uses Anthropic API — costs tokens)
 python -m patchbrief.cli ingest --days 3

@@ -10,7 +10,7 @@ The static generator reads these files to produce `feed.html`, individual item p
 id: unique-slug-matching-filename
 slug: unique-slug-matching-filename
 external_id: CVE-YYYY-NNNNN        # optional source ID, used by automated ingest
-source: cisa_kev                   # optional source connector ID
+source: cisa_kev                   # optional connector: cisa_kev, msrc, nvd, github_advisory, cert_vu, exploitdb
 date: "YYYY-MM-DD"
 type: KEV                         # see Type values below
 signal: Known exploited           # see Signal values below
@@ -41,7 +41,7 @@ is_sample: true   # set to false for real published items
 | `id` | yes | Unique identifier, matches filename without extension. Use kebab-case. |
 | `slug` | yes | URL slug for the generated item page. Must match `id`. |
 | `external_id` | no | Original upstream ID used for dedupe, such as a CVE or GHSA ID. |
-| `source` | no | Source connector that created the item, such as `cisa_kev`, `nvd`, or `github_advisory`. |
+| `source` | no | Source connector that created the item, such as `cisa_kev`, `msrc`, `nvd`, `github_advisory`, `cert_vu`, or `exploitdb`. |
 | `date` | yes | ISO date string (`"YYYY-MM-DD"`). Quote it to prevent YAML date parsing. |
 | `type` | yes | Content category. See Type values. |
 | `signal` | yes | Threat signal label shown on the feed and item pages. See Signal values. |
@@ -63,6 +63,7 @@ is_sample: true   # set to false for real published items
 | `KEV` | CISA Known Exploited Vulnerabilities catalog additions |
 | `Vendor advisory` | Vendor-published security advisories |
 | `Patch Tuesday` | Microsoft Patch Tuesday releases |
+| `Coordinated disclosure` | CERT/CC or similar coordinated vulnerability disclosures |
 | `Ransomware` | Ransomware group activity reports |
 | `Exploit activity` | Active exploitation reports without a KEV addition |
 

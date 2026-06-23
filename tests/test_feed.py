@@ -113,6 +113,7 @@ def test_feed_filter_chips_only_include_visible_item_types(tmp_path: Path):
     assert 'data-filter="Patch Tuesday"' not in html
     assert 'data-filter="Ransomware"' not in html
     assert 'data-filter="Exploit activity"' not in html
+    assert 'data-filter="Coordinated disclosure"' not in html
 
 
 def test_rss_escapes_titles_and_links(tmp_path: Path):

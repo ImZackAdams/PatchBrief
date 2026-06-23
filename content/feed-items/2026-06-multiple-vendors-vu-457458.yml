@@ -1,0 +1,37 @@
+id: 2026-06-multiple-vendors-vu-457458
+slug: 2026-06-multiple-vendors-vu-457458
+external_id: VU-457458
+source: cert_vu
+date: '2026-06-18'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#457458: Vendor-signed UEFI applications found vulnerable to Secure Boot
+  bypass'
+summary: Overview Multiple vendor-signed UEFI applications are vulnerable to Secure
+  Boot bypass via a "Bring Your Own Vulnerable Driver" (BYOVD)-style attack. If a
+  target system trusts the affected vendor’s certificate, an attacker can exploit
+  these applications to execute arbitrary code during the early pre-boot phase before
+  the operating system initializes. To mitigate this risk, system administrators should
+  apply updates to the UEFI Forbidden Signature Database (DBX) that revoke trust in
+  the affected vendor-signed binaries, preventing these vulnerable applications from
+  executing during the boot process. Description The Unified Extensible Firmware Interface
+  ( UEFI ) standard defines the modern firmware architecture used to initialize hardware
+  and transfer control to the operating system during system startup. On systems with
+  Secure Boot...
+vendor: Multiple vendors
+product: Vendor-signed UEFI applications
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Vendor-signed UEFI applications where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#457458
+  url: https://kb.cert.org/vuls/id/457458
+tags:
+- vu-457458
+- coordinated-disclosure
+- multiple-vendors
+- cert-vu
+is_sample: false

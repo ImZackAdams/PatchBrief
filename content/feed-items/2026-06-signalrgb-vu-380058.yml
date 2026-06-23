@@ -1,0 +1,37 @@
+id: 2026-06-signalrgb-vu-380058
+slug: 2026-06-signalrgb-vu-380058
+external_id: VU-380058
+source: cert_vu
+date: '2026-06-17'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#380058: SignalRGB kernel driver contains improper access control and IOCTL
+  vulnerabilities'
+summary: 'Overview The SignalRGB kernel driver, SignalIo.sys , contains two vulnerabilities
+  involving improper access control and unsafe memory handling. The device object
+  is created with an overly permissive Discretionary Access Control List (DACL) that
+  allows user-mode processes to access privileged hardware operations through input/output
+  control (IOCTL) commands. Additionally, several IOCTL handlers are susceptible to
+  NULL pointer dereference conditions, which further enables low-privilege users to
+  trigger kernel crashes and cause Denial of Service (DoS). Version 1.3.7.0 of the
+  SignalRGB driver remediates these vulnerabilities. Description SignalRGB is a Windows
+  application used for RGB lighting control and hardware monitoring. Its kernel component,
+  SignalIo.sys , provides the low-level interfaces required to access and interact
+  with hardware... Related CVEs: CVE-2026-8049, CVE-2026-8050.'
+vendor: SignalRGB
+product: kernel driver
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for kernel driver where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#380058
+  url: https://kb.cert.org/vuls/id/380058
+tags:
+- vu-380058
+- coordinated-disclosure
+- signalrgb
+- cert-vu
+is_sample: false

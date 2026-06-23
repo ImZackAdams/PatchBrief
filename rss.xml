@@ -4,8 +4,71 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Tue, 23 Jun 2026 20:10:32 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 20:28:03 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>Lantronix EDS5000 Code Injection Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-lantronix-cve-2025-67038.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-lantronix-cve-2025-67038.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Lantronix EDS5000 contains a code injection vulnerability that could allow attackers to inject arbitrary OS commands into the username parameter. Injected commands are executed with root privileges.</description>
+    </item>
+    <item>
+      <title>motionEye Partial Authentication Bypass: Unauthenticated Admin Credential Theft via Path Traversal</title>
+      <link>https://www.patchbrief.org/items/2026-06-pypi-ghsa-phv5-334h-mxcw.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-pypi-ghsa-phv5-334h-mxcw.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>motionEye Partial Authentication Bypass: Unauthenticated Admin Credential Theft via Path Traversal</description>
+    </item>
+    <item>
+      <title>Ubiquiti UniFi OS Improper Access Control Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34908.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34908.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Ubiquiti UniFi OS contains an improper access control vulnerability which could allow a malicious actor with access to the network to make unauthorized changes to the system.</description>
+    </item>
+    <item>
+      <title>Ubiquiti UniFi OS Path Traversal Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34909.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34909.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Ubiquiti UniFi OS contains a path traversal vulnerability which could allow a malicious actor with access to the network to access files on the underlying system that could be manipulated to access an underlying account.</description>
+    </item>
+    <item>
+      <title>Ubiquiti UniFi OS Improper Input Validation Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34910.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34910.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Ubiquiti UniFi OS contains an improper input validation vulnerability which could allow a malicious actor with access to the network to conduct command injection.</description>
+    </item>
+    <item>
+      <title>VU#936962: Multiple file parsing vulnerabilities in FastStone Image Viewer 8.3.0.0</title>
+      <link>https://www.patchbrief.org/items/2026-06-faststone-vu-936962.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-faststone-vu-936962.html</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview Two vulnerabilities have been identified in FastStone Image Viewer 8.3 that may allow remote code execution or control-flow corruption when processing specially crafted image files. The affected components include the JPEG 2000 (JP2) parser and the PSD file parser. An attacker can exploit these vulnerabilities by causing the application to automatically or interactively process malicious image files. Description FastStone Image Viewer is a software tool for browsing, editing, and managing images, offering features like full‑screen viewing, batch processing, red‑eye removal, and a wide range of editing effects. It supports virtually all major image and RAW formats and includes conveniences like slideshows, comparison tools, scanner support, and screen capture. CVE-2026-30040 A critical heap-based buffer overflow vulnerability... Related CVEs: CVE-2026-30040, CVE-2026-30041.</description>
+    </item>
+    <item>
+      <title>Messagepack Messagepack — CVE-2026-48509 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-06-messagepack-cve-2026-48509.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-messagepack-cve-2026-48509.html</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <description>MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, the parameterless MessagePackInputFormatter() constructor uses default serializer options, which resolve to MessagePackSerializerOptions.Standard with MessagePackSecurity.TrustedData. The formatter is designed for ASP.NET Core MVC request bodies, which commonly cross an HTTP trust boundary. This insecure default can expose applications to denial-of-service attacks that MessagePackSecurity.UntrustedData is intended to mitigate, such as hash-collision attacks against dictionary-like model properties. This vulnerab</description>
+    </item>
+    <item>
+      <title>VU#226679: Microsoft WinRE allows for bypass of UEFI/BIOS password enforcement</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-vu-226679.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-vu-226679.html</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview Microsoft Windows Recovery Environment (WinRE) provides a mechanism for recovering and repairing Windows systems using an alternate boot environment. Under certain platform implementations, access to WinRE may allow an attacker to bypass firmware security controls, including administrator-configured UEFI/BIOS passwords. An attacker with physical or administrative access to a device may be able to leverage WinRE-related boot mechanisms to circumvent firmware protections and gain unauthorized access to system resources. Description Microsoft Windows versions 10 and 11 include the WinRE capability, a recovery platform that supports features such as the F11 recovery menu and the Reset this PC functionalities. WinRE is commonly used for system recovery, troubleshooting, and remote support scenarios. When WinRE is invoked, the system...</description>
+    </item>
+    <item>
+      <title>VU#457458: Vendor-signed UEFI applications found vulnerable to Secure Boot bypass</title>
+      <link>https://www.patchbrief.org/items/2026-06-multiple-vendors-vu-457458.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-multiple-vendors-vu-457458.html</guid>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview Multiple vendor-signed UEFI applications are vulnerable to Secure Boot bypass via a "Bring Your Own Vulnerable Driver" (BYOVD)-style attack. If a target system trusts the affected vendor’s certificate, an attacker can exploit these applications to execute arbitrary code during the early pre-boot phase before the operating system initializes. To mitigate this risk, system administrators should apply updates to the UEFI Forbidden Signature Database (DBX) that revoke trust in the affected vendor-signed binaries, preventing these vulnerable applications from executing during the boot process. Description The Unified Extensible Firmware Interface ( UEFI ) standard defines the modern firmware architecture used to initialize hardware and transfer control to the operating system during system startup. On systems with Secure Boot...</description>
+    </item>
     <item>
       <title>Splunk Enterprise Missing Authentication for Critical Function Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-06-splunk-cve-2026-20253.html</link>
@@ -46,6 +109,13 @@ This issue affects all Apache Shiro versions through 2.2.0, and 3.0.0-alpha-1 wh
 Upgrade to Apache Shiro 2.2.1 or 3.0.0-alpha-2 or later, which fixes the issu</description>
     </item>
     <item>
+      <title>VU#380058: SignalRGB kernel driver contains improper access control and IOCTL vulnerabilities</title>
+      <link>https://www.patchbrief.org/items/2026-06-signalrgb-vu-380058.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-signalrgb-vu-380058.html</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview The SignalRGB kernel driver, SignalIo.sys , contains two vulnerabilities involving improper access control and unsafe memory handling. The device object is created with an overly permissive Discretionary Access Control List (DACL) that allows user-mode processes to access privileged hardware operations through input/output control (IOCTL) commands. Additionally, several IOCTL handlers are susceptible to NULL pointer dereference conditions, which further enables low-privilege users to trigger kernel crashes and cause Denial of Service (DoS). Version 1.3.7.0 of the SignalRGB driver remediates these vulnerabilities. Description SignalRGB is a Windows application used for RGB lighting control and hardware monitoring. Its kernel component, SignalIo.sys , provides the low-level interfaces required to access and interact with hardware... Related CVEs: CVE-2026-8049, CVE-2026-8050.</description>
+    </item>
+    <item>
       <title>Widget Factory Joomla Content Editor Improper Access Control Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-06-widget-factory-cve-2026-48907.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-widget-factory-cve-2026-48907.html</guid>
@@ -81,6 +151,13 @@ Upgrade to Apache Shiro 2.2.1 or 3.0.0-alpha-2 or later, which fixes the issu</d
       <description>Ivanti Sentry (formerly known as MobileIron Sentry) contains an OS command injection vulnerability which could allow a remote unauthenticated user to achieve root-level remote code execution. This vulnerability can be successfully exploited in cases where the Sentry appliance is in an unmanaged state with its endpoints externally reachable. The use of mTLS with EPMM or restricted HTTPS access through Neurons for MDM makes interfaces inaccessible to external actors.</description>
     </item>
     <item>
+      <title>VU#862559: crypton-x509-validation Haskell libraries do not enforce X.509 NameConstraints</title>
+      <link>https://www.patchbrief.org/items/2026-06-multiple-vendors-vu-862559.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-multiple-vendors-vu-862559.html</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview A vulnerability has been discovered in the Haskell TLS software stack, commonly used by applications built in the Haskell programming language to securely connect to servers over the internet. Specifically, the libraries "crypton-x509-validation" fail to enforce a key security feature called NameConstraints, a standard defined in RFC 5280 that helps organizations control which domains a certificate authority (CA) is allowed to issue certificates for. This vulnerability allows an attacker with access to the sub-CA to create certificates that will validate successfully with any Haskell TLS connection, allowing the attacker access to full session visibility. Version 1.91 for crypton-x509-validation have been released to address the vulnerability, tracked as CVE-2026-9648. Description Haskell is a programming language often used in... Related CVEs: CVE-2026-9648.</description>
+    </item>
+    <item>
       <title>Arista Extensible Operating System Incomplete Comparison with Missing Factors Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-06-arista-cve-2026-7473.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-arista-cve-2026-7473.html</guid>
@@ -100,6 +177,83 @@ Upgrade to Apache Shiro 2.2.1 or 3.0.0-alpha-2 or later, which fixes the issu</d
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-google-cve-2026-11645.html</guid>
       <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
       <description>Google Chromium V8 out-of-bounds read and write vulnerability that could allow a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.</description>
+    </item>
+    <item>
+      <title>Azure Bot Service Elevation of Privilege Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-32174.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-32174.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Improper authentication in Azure Bot Service allows an authorized attacker to elevate privileges over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No.</description>
+    </item>
+    <item>
+      <title>Microsoft Edge (Chromium-based) Spoofing Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-32208.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-32208.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Edge (Chromium-based) allows an authorized attacker to perform spoofing over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.</description>
+    </item>
+    <item>
+      <title>Microsoft Copilot Tampering Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-42895.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-42895.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Improper neutralization of special elements used in a command ('command injection') in Microsoft Copilot allows an unauthorized attacker to perform tampering over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.</description>
+    </item>
+    <item>
+      <title>Microsoft Office Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-45472.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-45472.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.</description>
+    </item>
+    <item>
+      <title>Microsoft Office Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-45474.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-45474.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.</description>
+    </item>
+    <item>
+      <title>Azure Active Directory Elevation of Privilege Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-45480.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-45480.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Improper authentication in Azure Active Directory allows an unauthorized attacker to elevate privileges over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.</description>
+    </item>
+    <item>
+      <title>Microsoft Cost Management Information Disclosure Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-47633.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-47633.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Exposure of sensitive information to an unauthorized actor in Cost Management Interactive Experiences allows an unauthorized attacker to disclose information over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.</description>
+    </item>
+    <item>
+      <title>Copilot Chat (Microsoft Edge) Information Disclosure Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-47644.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-47644.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Improper neutralization of special elements in output used by a downstream component ('injection') in Copilot Chat (Microsoft Edge) allows an unauthorized attacker to disclose information over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.</description>
+    </item>
+    <item>
+      <title>Microsoft Graph Information Disclosure Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-47655.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-47655.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Exposure of sensitive information to an unauthorized actor in Microsoft Graph allows an authorized attacker to disclose information over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.</description>
+    </item>
+    <item>
+      <title>M365 Copilot Information Disclosure Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-54130.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-54130.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Missing authentication for critical function in M365 Copilot allows an unauthorized attacker to disclose information over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.</description>
+    </item>
+    <item>
+      <title>VU#616257: Microsoft-signed UEFI shim bootloaders vulnerable to Secure Boot bypass</title>
+      <link>https://www.patchbrief.org/items/2026-06-uefi-vu-616257.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-uefi-vu-616257.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview Microsoft-signed UEFI bootloaders of the open-source shim project, primarily from version 0.9 and earlier, were identified as vulnerable to Secure Boot bypass. To mitigate this risk, the affected bootloaders will be added to the Microsoft UEFI Forbidden Signature Database (DBX). Once the DBX update is applied, these bootloaders will no longer be trusted for execution during the boot process. An attacker could exploit these vulnerable shim bootloaders using a Bring Your Own Vulnerable Driver (BYOVD)-style technique to execute arbitrary code during the early boot phase, prior to operating system initialization, thereby bypassing Secure Boot protections. Description The Unified Extensible Firmware Interface (UEFI) standard defines the modern firmware architecture used to initialize hardware and transfer control to the operating... Related CVEs: CVE-2026-10797, CVE-2026-8863.</description>
     </item>
     <item>
       <title>BerriAI LiteLLM Command Injection Vulnerability</title>
@@ -130,6 +284,13 @@ Upgrade to Apache Shiro 2.2.1 or 3.0.0-alpha-2 or later, which fixes the issu</d
       <description>Mirasvit Full Page Cache Warmer contains a deserialization of untrusted data vulnerability that could allow unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie.</description>
     </item>
     <item>
+      <title>VU#595768: Securly Chrome Extension contains multiple weak encryption and access control vulnerabilities</title>
+      <link>https://www.patchbrief.org/items/2026-06-securly-vu-595768.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-securly-vu-595768.html</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview Version 3.0.7 of the Securly Chrome Extension contains multiple vulnerabilities involving insecure data transmission, weak cryptography, and improper access control. These issues may expose sensitive filtering rules, enable the manipulation of downloaded configuration files, and allow unauthenticated access to protected resources. An attacker could exploit these weakness to steal configuration information, induce a Denial of Service (DoS), or modify content blocking rules for student users. Description The Securly Chrome Extension is a browser add-on commonly used in K–12 school-managed Chromebooks to enforce internet safety policies, filter or block websites, and provide activity monitoring for students. It is an element of the Securly classroom management platform, which helps schools comply with web filtering requirements and... Related CVEs: CVE-2026-8874, CVE-2026-8876, CVE-2026-8878, CVE-2026-8879.</description>
+    </item>
+    <item>
       <title>Android Framework Integer Overflow Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-06-android-cve-2025-48595.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-android-cve-2025-48595.html</guid>
@@ -137,11 +298,32 @@ Upgrade to Apache Shiro 2.2.1 or 3.0.0-alpha-2 or later, which fixes the issu</d
       <description>Android Framework contains an integer overflow vulnerability that allows for code execution that could allow for local privilege escalation.</description>
     </item>
     <item>
+      <title>VU#265691: Appsmiths SQL Query autocomplete renderer contains a cross site scripting vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-appsmiths-vu-265691.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-appsmiths-vu-265691.html</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview A stored cross-site scripting (XSS) vulnerability has been discovered in Appsmith, specifically in the CodeMirror based SQL query editor’s autocomplete renderer. CVE-2026-7299 has been assigned to track the vulnerability. An attacker with developer level access to a shared PostgreSQL datasource can inject arbitrary JavaScript by creating malicious database objects whose names contain XSS payloads. Successful exploitation leads to arbitrary JavaScript execution in the browser of any workspace member who triggers SQL autocomplete, enabling session hijacking, privilege escalation, or credential theft. Version 2.1 of Appsmith fixes CVE-2026-7299. Description Appsmith is an open source, low code platform intended to allow developers to build internal tools, dashboards, and applications using a UI builder, database and API... Related CVEs: CVE-2026-7299.</description>
+    </item>
+    <item>
+      <title>VU#873170: Collibra Agent contains improper authentication and path traversal vulnerabilities</title>
+      <link>https://www.patchbrief.org/items/2026-06-collibra-vu-873170.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-collibra-vu-873170.html</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview The Collibra Platform Agent contains vulnerabilities that can be chained by a remote, unauthenticated attacker to achieve remote code execution. An attacker can exploit these issues by uploading a crafted ZIP archive that writes attacker-controlled files to arbitrary locations on the server once extracted, resulting in code execution. Description Collibra Platform (CP) and Collibra Platform Self-Hosted (CPSH), an enterprise grade, cloud-based platform designed to help organizations locate, understand, trust, and manage their data assets. The Collibra Agent of CP and CPSH that is installed on the host system is an independent service that listens on different port than the web interface and have the following vulnerabilities. CVE-2026-10622 Privileged REST endpoints exposed under /rest/* do not properly enforce authentication or... Related CVEs: CVE-2026-10621, CVE-2026-10622.</description>
+    </item>
+    <item>
       <title>Linux Kernel Improper Authentication Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-06-linux-cve-2022-0492.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-linux-cve-2022-0492.html</guid>
       <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
       <description>Linux Kernel contains an improper authentication vulnerability which could allow for privilege escalation via the cgroups v1 release_agent feature.</description>
+    </item>
+    <item>
+      <title>VU#615987: Missing IPsec Integrity Protection for IMS SIP Signaling in Verizon VoLTE Deployments</title>
+      <link>https://www.patchbrief.org/items/2026-06-verizon-vu-615987.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-verizon-vu-615987.html</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Overview VoLTE deployments on Verizon’s IMS network have operated without negotiated SIP integrity protection. In observed test conditions, SIP signaling—including registration, call setup, and messaging—traveled without IPsec ESP encapsulation and without SIP Security Agreement headers, exposing it to interception and modification by on-path attackers. Recent carrier configuration updates, including Apple’s iOS 26.5 carrier bundle released on May 11, 2026, include IMS IPsec–related settings. However, such configuration entries do not confirm active deployment, successful negotiation, or functional protection in production. Description CVE-2026-10629 Verizon IMS deployments were observed transmitting SIP signaling without integrity protection. REGISTER exchanges lacked Security-Client, Security-Server, and Security-Verify headers, and no... Related CVEs: CVE-2026-10629.</description>
     </item>
     <item>
       <title>Oracle WebLogic Server Unspecified Vulnerability</title>
@@ -709,6 +891,13 @@ Upgrade to Apache Shiro 2.2.1 or 3.0.0-alpha-2 or later, which fixes the issu</d
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-03-wwbn-cve-2026-33297.html</guid>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <description>WWBN AVideo is an open source video platform. Prior to version 26.0, the `setPassword.json.php` endpoint in the CustomizeUser plugin allows administrators to set a channel password for any user. Due to a logic error in how the submitted password value is processed, any password containing non-numeric characters is silently coerced to the integer zero before being stored. This means that regardless of the intended password, the stored channel password becomes 0, which any visitor can trivially guess to bypass channel-level access control. Version 26.0 contains a patch for the issue.</description>
+    </item>
+    <item>
+      <title>Invision Community 4.7.20 - (calendar/view.php) SQL Injection</title>
+      <link>https://www.patchbrief.org/items/2025-07-invision-cve-2025-48932.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2025-07-invision-cve-2025-48932.html</guid>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <description>Exploit-DB published a verified webapps entry for Invision Community 4.7.20 - (calendar/view.php) SQL Injection. Platform: multiple. Related CVEs: CVE-2025-48932.</description>
     </item>
   </channel>
 </rss>

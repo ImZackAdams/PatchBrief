@@ -1,0 +1,38 @@
+id: 2026-06-multiple-vendors-vu-862559
+slug: 2026-06-multiple-vendors-vu-862559
+external_id: VU-862559
+source: cert_vu
+date: '2026-06-11'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#862559: crypton-x509-validation Haskell libraries do not enforce X.509
+  NameConstraints'
+summary: 'Overview A vulnerability has been discovered in the Haskell TLS software
+  stack, commonly used by applications built in the Haskell programming language to
+  securely connect to servers over the internet. Specifically, the libraries "crypton-x509-validation"
+  fail to enforce a key security feature called NameConstraints, a standard defined
+  in RFC 5280 that helps organizations control which domains a certificate authority
+  (CA) is allowed to issue certificates for. This vulnerability allows an attacker
+  with access to the sub-CA to create certificates that will validate successfully
+  with any Haskell TLS connection, allowing the attacker access to full session visibility.
+  Version 1.91 for crypton-x509-validation have been released to address the vulnerability,
+  tracked as CVE-2026-9648. Description Haskell is a programming language often used
+  in... Related CVEs: CVE-2026-9648.'
+vendor: Multiple vendors
+product: crypton-x509-validation Haskell libraries do not enforce X.509 NameConstraints
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for crypton-x509-validation Haskell libraries do not enforce X.509 NameConstraints
+  where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#862559
+  url: https://kb.cert.org/vuls/id/862559
+tags:
+- vu-862559
+- coordinated-disclosure
+- multiple-vendors
+- cert-vu
+is_sample: false

@@ -1,0 +1,37 @@
+id: 2026-06-verizon-vu-615987
+slug: 2026-06-verizon-vu-615987
+external_id: VU-615987
+source: cert_vu
+date: '2026-06-02'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#615987: Missing IPsec Integrity Protection for IMS SIP Signaling in Verizon
+  VoLTE Deployments'
+summary: 'Overview VoLTE deployments on Verizon’s IMS network have operated without
+  negotiated SIP integrity protection. In observed test conditions, SIP signaling—including
+  registration, call setup, and messaging—traveled without IPsec ESP encapsulation
+  and without SIP Security Agreement headers, exposing it to interception and modification
+  by on-path attackers. Recent carrier configuration updates, including Apple’s iOS
+  26.5 carrier bundle released on May 11, 2026, include IMS IPsec–related settings.
+  However, such configuration entries do not confirm active deployment, successful
+  negotiation, or functional protection in production. Description CVE-2026-10629
+  Verizon IMS deployments were observed transmitting SIP signaling without integrity
+  protection. REGISTER exchanges lacked Security-Client, Security-Server, and Security-Verify
+  headers, and no... Related CVEs: CVE-2026-10629.'
+vendor: Verizon
+product: VoLTE Deployments
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for VoLTE Deployments where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#615987
+  url: https://kb.cert.org/vuls/id/615987
+tags:
+- vu-615987
+- coordinated-disclosure
+- verizon
+- cert-vu
+is_sample: false
