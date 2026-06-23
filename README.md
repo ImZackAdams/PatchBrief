@@ -39,6 +39,7 @@ Static GitHub Pages site at `https://www.patchbrief.org`
 |---|---|
 | `index.html` | Homepage: public feed intro and newsletter signup |
 | `feed.html` | Public security intel feed |
+| `api.html` | Premium API offer and JSON feed quickstart |
 | `pricing.html` | Free / Pro / Team pricing and plan comparison |
 | `checkout.html` | Static paid checkout handoff with Stripe-link and invoice-request fallback |
 | `onboarding.html` | Paid subscriber onboarding for watchlists, delivery, and integrations |
@@ -127,6 +128,7 @@ Short version:
 - [x] Source-health metadata in `feed.json`
 - [ ] Newsletter publishing workflow
 - [x] Monetization funnel
+- [x] Premium API offer page
 - [ ] Fully automated paid subscriber fulfillment
 
 ## Docs

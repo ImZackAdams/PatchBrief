@@ -409,7 +409,7 @@ PatchBrief uses a three-tier model: Free (public feed), Pro ($9/month), Team ($4
 |---|---|---|---|
 | Free | $0 | Public feed, RSS, `feed.json` | Nothing — it's already live |
 | Pro | $9/mo or $79/yr | Daily digest email, vendor watchlist alerts | Stripe + email platform |
-| Team | $49/mo or $399/yr | API access, 5 seats, CSV export, priority support | Stripe + email platform |
+| Team | $49/mo or $399/yr | Supported API access, 5 seats, CSV export, priority support | Stripe + email platform |
 
 ---
 
@@ -509,14 +509,19 @@ For now, watchlist fulfillment is manual. As volume grows, the right automation 
 
 ---
 
-### Step 5 — JSON API access for Team subscribers
+### Step 5 — Fulfill Team API subscribers
 
-The JSON API feed is at `https://www.patchbrief.org/feed.json`. It is publicly accessible now — no auth. The Team plan sells:
-- **Priority access** (the public feed has no SLA; Team subscribers get a direct contact)
-- **Structured integration help** (setting up SIEM/Slack/ticketing connectors)
-- **Full history** (the public JSON is always the current build; Team subscribers get access to archived builds)
+The launch API is the JSON feed at `https://www.patchbrief.org/feed.json`. It is publicly accessible now, so Team is sold as the supported API tier rather than as a private-auth product on day one.
 
-To add basic auth in future, the simplest approach is to move the feed to Cloudflare Pages with a Cloudflare Access rule, or to a private GitHub Pages repo. Document that as a follow-on when you have your first paying Team subscriber.
+When someone buys Team:
+
+1. Send them `https://www.patchbrief.org/api.html` and confirm the endpoint they should consume.
+2. Ask where the feed should land: Slack, SIEM, ticketing queue, dashboard, shared mailbox, or CSV workflow.
+3. Map the fields they need from `items[]`: `type`, `signal`, `vendor`, `product`, `cve`, `operator_check`, `sources`, and `url`.
+4. Offer a simple CSV export if they need reporting before building a direct integration.
+5. Keep them as the priority contact if `feed.json.pipeline.sources` shows a failed source or if the schema needs to stay stable for their workflow.
+
+To add private keys later, the simplest path is Cloudflare Pages plus a Cloudflare Access rule or a lightweight API gateway in front of the same generated JSON.
 
 ---
 
