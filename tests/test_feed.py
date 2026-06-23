@@ -9,6 +9,7 @@ import pytest
 from patchbrief.feed import FeedItem, load_feed_item
 from patchbrief.monetization import checkout_url, paid_cta_url
 from patchbrief.render.feed import (
+    render_feed,
     render_feed_item_card,
     render_item_page,
     render_rss,
@@ -100,6 +101,18 @@ def test_feed_card_escapes_html(tmp_path: Path):
 
     assert "<script>" not in html
     assert "&lt;script&gt;" in html
+
+
+def test_feed_filter_chips_only_include_visible_item_types(tmp_path: Path):
+    item = _load_test_item(tmp_path)
+
+    html = render_feed([item])
+
+    assert 'data-filter="KEV"' in html
+    assert 'data-filter="Vendor advisory"' not in html
+    assert 'data-filter="Patch Tuesday"' not in html
+    assert 'data-filter="Ransomware"' not in html
+    assert 'data-filter="Exploit activity"' not in html
 
 
 def test_rss_escapes_titles_and_links(tmp_path: Path):
