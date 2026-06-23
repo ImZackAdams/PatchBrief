@@ -85,6 +85,30 @@ def render_feed_item_card(item: FeedItem) -> str:
             </article>"""
 
 
+_TYPE_FILTER_ORDER = {
+    "KEV": 0,
+    "Vendor advisory": 1,
+    "Patch Tuesday": 2,
+    "Ransomware": 3,
+    "Exploit activity": 4,
+}
+
+
+def _render_filter_chips(items: list[FeedItem]) -> str:
+    item_types = sorted(
+        {item.type for item in items},
+        key=lambda item_type: (_TYPE_FILTER_ORDER.get(item_type, 99), item_type),
+    )
+    chips = [
+        '<button class="chip active" data-filter="all" role="listitem" aria-pressed="true">All</button>'
+    ]
+    chips.extend(
+        f'<button class="chip" data-filter="{_esc(item_type)}" role="listitem" aria-pressed="false">{_esc(item_type)}</button>'
+        for item_type in item_types
+    )
+    return "\n              ".join(chips)
+
+
 def render_feed(items: list[FeedItem]) -> str:
     template = _load_template("feed.html.template")
     items_html = "\n".join(render_feed_item_card(item) for item in items)
@@ -99,6 +123,7 @@ def render_feed(items: list[FeedItem]) -> str:
     return template.safe_substitute(
         ITEMS_HTML=items_html,
         SAMPLE_NOTICE=sample_notice,
+        FILTER_CHIPS=_render_filter_chips(items),
         ITEM_COUNT=str(len(items)),
         PRO_YEARLY_URL=_esc(paid_cta_url("pro", "yearly", "feed")),
         PRO_MONTHLY_URL=_esc(paid_cta_url("pro", "monthly", "feed")),
