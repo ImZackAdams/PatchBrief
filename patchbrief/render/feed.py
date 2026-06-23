@@ -213,6 +213,7 @@ def render_sitemap(items: list[FeedItem], base_url: str) -> str:
     static_paths = [
         ("", "1.0"),
         ("feed.html", "0.9"),
+        ("api.html", "0.9"),
         ("pricing.html", "0.9"),
         ("checkout.html", "0.8"),
         ("watchlist.html", "0.8"),

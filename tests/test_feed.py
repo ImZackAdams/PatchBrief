@@ -167,5 +167,6 @@ def test_sitemap_includes_revenue_and_item_pages(tmp_path: Path):
     sitemap = render_sitemap([item], "https://patchbrief.test/")
 
     assert "<loc>https://patchbrief.test/pricing.html</loc>" in sitemap
+    assert "<loc>https://patchbrief.test/api.html</loc>" in sitemap
     assert "<loc>https://patchbrief.test/checkout.html</loc>" in sitemap
     assert "<loc>https://patchbrief.test/items/sample.html</loc>" in sitemap
