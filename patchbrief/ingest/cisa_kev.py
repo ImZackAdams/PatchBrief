@@ -1,10 +1,9 @@
 from __future__ import annotations
 
-import json
-import urllib.request
 from datetime import date, timedelta
 
 from .base import RawVuln
+from .http import fetch_json
 
 CISA_KEV_URL = (
     "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
@@ -13,12 +12,7 @@ CISA_KEV_URL = (
 
 def fetch_recent_kev(days: int = 30) -> list[RawVuln]:
     """Return KEV entries added within the last *days* days."""
-    req = urllib.request.Request(
-        CISA_KEV_URL,
-        headers={"User-Agent": "PatchBrief-Ingest/1.0 (https://www.patchbrief.org)"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
+    data = fetch_json(CISA_KEV_URL, timeout=30)
 
     cutoff = date.today() - timedelta(days=days)
     results: list[RawVuln] = []
@@ -48,6 +42,8 @@ def fetch_recent_kev(days: int = 30) -> list[RawVuln]:
                 vulnerability_name=vuln.get("vulnerabilityName", "").strip() or None,
                 kev_action=vuln.get("requiredAction", "").strip() or None,
                 kev_due_date=vuln.get("dueDate", "").strip() or None,
+                source_url="https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+                source_title="CISA KEV catalog",
             )
         )
 

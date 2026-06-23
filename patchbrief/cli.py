@@ -4,12 +4,22 @@ import argparse
 import os
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
 
 SITE_BASE_URL = "https://www.patchbrief.org"
 STATE_FILE = "content/processed-state.json"
+SOURCE_STATUS_FILE = "content/source-status.json"
+PUBLIC_WINDOW_DAYS = 365
+
+SOURCE_LABELS = {
+    "cisa_kev": "CISA Known Exploited Vulnerabilities",
+    "nvd": "NVD critical CVEs",
+    "github_advisory": "GitHub Security Advisories",
+    "epss": "FIRST EPSS enrichment",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -18,7 +28,6 @@ STATE_FILE = "content/processed-state.json"
 
 def cmd_build_feed(args: argparse.Namespace) -> None:
     import json as _json
-    from datetime import datetime, timezone
     from patchbrief.feed import load_feed_items
     from patchbrief.render.feed import (
         render_feed,
@@ -42,8 +51,20 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
     print(f"  Loaded {len(items)} items")
 
     base_url = args.base_url.rstrip("/")
+    source_status = _load_source_status(Path(args.source_status_file))
 
-    feed_html = render_feed(items)
+    if args.public_window_days < 0:
+        print("Error: --public-window-days must be 0 or greater.", file=sys.stderr)
+        sys.exit(1)
+
+    public_items = _filter_public_items(items, args.public_window_days)
+    if len(public_items) != len(items):
+        print(
+            f"  Public feed window: {len(public_items)} current items "
+            f"({len(items) - len(public_items)} archived)"
+        )
+
+    feed_html = render_feed(public_items)
     Path("feed.html").write_text(feed_html, encoding="utf-8")
     print("Generated: feed.html")
 
@@ -54,11 +75,11 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
         (items_dir / f"{item.slug}.html").write_text(item_html, encoding="utf-8")
         print(f"Generated: items/{item.slug}.html")
 
-    rss_xml = render_rss(items, base_url)
+    rss_xml = render_rss(public_items, base_url)
     Path("rss.xml").write_text(rss_xml, encoding="utf-8")
     print("Generated: rss.xml")
 
-    sitemap_xml = render_sitemap(items, base_url)
+    sitemap_xml = render_sitemap(public_items, base_url)
     Path("sitemap.xml").write_text(sitemap_xml, encoding="utf-8")
     print("Generated: sitemap.xml")
 
@@ -71,7 +92,14 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
         "feed_url": f"{base_url}/feed.json",
         "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
         "generated": now,
-        "total_items": len(items),
+        "total_items": len(public_items),
+        "archived_items": len(items) - len(public_items),
+        "public_window_days": args.public_window_days,
+        "pipeline": {
+            "generated": now,
+            "source_count": len(source_status),
+            "sources": source_status,
+        },
         "items": [
             {
                 "id": item.id,
@@ -90,7 +118,7 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
                 "tags": item.tags,
                 "sources": [{"title": s.title, "url": s.url} for s in item.sources],
             }
-            for item in items
+            for item in public_items
         ],
     }
     Path("feed.json").write_text(
@@ -98,7 +126,10 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
     )
     print("Generated: feed.json")
 
-    print(f"\nBuild complete: {len(items)} items → feed.html, rss.xml, feed.json, sitemap.xml")
+    print(
+        f"\nBuild complete: {len(public_items)} current items "
+        f"({len(items)} total) → feed.html, rss.xml, feed.json, sitemap.xml"
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -107,6 +138,8 @@ def cmd_build_feed(args: argparse.Namespace) -> None:
 
 def cmd_ingest(args: argparse.Namespace) -> None:
     from patchbrief.ingest.cisa_kev import fetch_recent_kev
+    from patchbrief.ingest.epss import fetch_epss_scores
+    from patchbrief.ingest.github_advisories import fetch_recent_github_advisories
     from patchbrief.ingest.nvd import fetch_recent_critical
     from patchbrief.ingest.state import ProcessedState
     from patchbrief.generate.brief import generate_brief, generate_raw_brief
@@ -135,20 +168,26 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     # Bootstrap: scan existing YAML files and mark their CVEs processed.
     _bootstrap_state(content_dir, state)
 
-    # --- Fetch from CISA KEV ---
-    print(f"\nFetching CISA KEV (last {args.days} days)...")
-    try:
-        kev_items = fetch_recent_kev(days=args.days)
-        print(f"  {len(kev_items)} KEV entries found")
-    except Exception as exc:
-        print(f"  KEV fetch failed: {exc}", file=sys.stderr)
-        kev_items = []
+    source_names = _resolve_sources(args.sources, kev_only=args.kev_only)
+    source_runs = []
+    source_items = []
 
-    # --- Fetch from NVD ---
-    nvd_items = []
-    if not args.kev_only:
+    if "cisa_kev" in source_names:
+        print(f"\nFetching CISA KEV (last {args.days} days)...")
+        started = _utc_now()
+        try:
+            kev_items = fetch_recent_kev(days=args.days)
+            print(f"  {len(kev_items)} KEV entries found")
+            source_items.extend(kev_items)
+            source_runs.append(_source_run("cisa_kev", "ok", len(kev_items), started))
+        except Exception as exc:
+            print(f"  KEV fetch failed: {exc}", file=sys.stderr)
+            source_runs.append(_source_run("cisa_kev", "failed", 0, started, str(exc)))
+
+    if "nvd" in source_names:
         nvd_api_key = args.nvd_api_key or os.environ.get("NVD_API_KEY", "") or None
         print(f"\nFetching NVD CRITICAL CVEs (last {args.days} days)...")
+        started = _utc_now()
         try:
             nvd_items = fetch_recent_critical(
                 days=args.days,
@@ -156,22 +195,60 @@ def cmd_ingest(args: argparse.Namespace) -> None:
                 max_results=args.max_nvd,
             )
             print(f"  {len(nvd_items)} critical NVD CVEs found")
+            source_items.extend(nvd_items)
+            source_runs.append(_source_run("nvd", "ok", len(nvd_items), started))
         except Exception as exc:
             print(f"  NVD fetch failed: {exc}", file=sys.stderr)
+            source_runs.append(_source_run("nvd", "failed", 0, started, str(exc)))
 
-    # Dedupe by CVE ID; KEV takes priority over NVD.
+    if "github_advisory" in source_names:
+        github_token = args.github_token or os.environ.get("GITHUB_TOKEN", "") or os.environ.get("GH_TOKEN", "") or None
+        print(f"\nFetching GitHub Security Advisories (last {args.days} days)...")
+        started = _utc_now()
+        try:
+            github_items = fetch_recent_github_advisories(
+                days=args.days,
+                token=github_token,
+                max_results=args.max_github,
+            )
+            print(f"  {len(github_items)} GitHub advisories found")
+            source_items.extend(github_items)
+            source_runs.append(_source_run("github_advisory", "ok", len(github_items), started))
+        except Exception as exc:
+            print(f"  GitHub advisory fetch failed: {exc}", file=sys.stderr)
+            source_runs.append(_source_run("github_advisory", "failed", 0, started, str(exc)))
+
+    # Dedupe by primary ID; source order gives KEV priority over appsec and NVD records.
     seen: set[str] = set()
     combined = []
-    for vuln in kev_items + nvd_items:
+    for vuln in sorted(source_items, key=_source_priority):
         key = vuln.cve_id.upper()
         if key not in seen:
             seen.add(key)
             combined.append(vuln)
 
+    if args.enrich_epss and combined:
+        cve_ids = [v.cve_id for v in combined if v.is_cve]
+        print(f"\nFetching FIRST EPSS scores for {len(cve_ids)} CVEs...")
+        started = _utc_now()
+        try:
+            epss_scores = fetch_epss_scores(cve_ids)
+            for vuln in combined:
+                score = epss_scores.get(vuln.cve_id.upper())
+                if score:
+                    vuln.epss_score = score.epss
+                    vuln.epss_percentile = score.percentile
+            print(f"  {len(epss_scores)} EPSS scores applied")
+            source_runs.append(_source_run("epss", "ok", len(epss_scores), started, role="enrichment"))
+        except Exception as exc:
+            print(f"  EPSS enrichment failed: {exc}", file=sys.stderr)
+            source_runs.append(_source_run("epss", "failed", 0, started, str(exc), role="enrichment"))
+
     new_items = [v for v in combined if not state.is_processed(v.cve_id)]
     print(f"\n{len(new_items)} new items to process")
 
     if not new_items:
+        _write_source_status(Path(args.source_status_file), source_runs)
         print("Nothing new — exiting.")
         return
 
@@ -190,6 +267,8 @@ def cmd_ingest(args: argparse.Namespace) -> None:
             item_data = {
                 "id": slug,
                 "slug": slug,
+                "external_id": vuln.cve_id,
+                "source": vuln.source,
                 "date": vuln.date_added or _today(),
                 "type": brief["type"],
                 "signal": brief["signal"],
@@ -197,7 +276,7 @@ def cmd_ingest(args: argparse.Namespace) -> None:
                 "summary": brief["summary"],
                 "vendor": vuln.vendor,
                 "product": vuln.product,
-                "cve": vuln.cve_id,
+                "cve": vuln.cve_id if vuln.is_cve else None,
                 "operator_check": brief["operator_check"],
                 "why_it_matters": brief["why_it_matters"],
                 "sources": sources,
@@ -216,6 +295,7 @@ def cmd_ingest(args: argparse.Namespace) -> None:
             print(f"    Error processing {vuln.cve_id}: {exc}", file=sys.stderr)
 
     state.save()
+    _write_source_status(Path(args.source_status_file), source_runs)
     print(f"\nIngest complete: {generated} new briefs created")
 
 
@@ -260,19 +340,55 @@ def cmd_digest(args: argparse.Namespace) -> None:
 
 
 # ---------------------------------------------------------------------------
+# validate command
+# ---------------------------------------------------------------------------
+
+def cmd_validate(args: argparse.Namespace) -> None:
+    from patchbrief.feed import load_feed_items
+
+    content_dir = Path(args.content_dir)
+    if not content_dir.is_dir():
+        print(f"Error: content directory not found: {content_dir}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        items = load_feed_items(content_dir)
+    except ValueError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        sys.exit(1)
+
+    duplicate_slugs = _duplicates([item.slug for item in items])
+    duplicate_ids = _duplicates([item.id for item in items])
+    if duplicate_slugs or duplicate_ids:
+        if duplicate_slugs:
+            print(f"Duplicate slugs: {', '.join(duplicate_slugs)}", file=sys.stderr)
+        if duplicate_ids:
+            print(f"Duplicate ids: {', '.join(duplicate_ids)}", file=sys.stderr)
+        sys.exit(1)
+
+    source_status = _load_source_status(Path(args.source_status_file))
+    if not source_status:
+        print(f"Warning: no source status found at {args.source_status_file}", file=sys.stderr)
+
+    print(f"Validation passed: {len(items)} feed items, {len(source_status)} source records")
+
+
+# ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
 def _bootstrap_state(content_dir: Path, state: "ProcessedState") -> None:
-    """Scan existing YAML files and mark any CVE IDs as already processed."""
+    """Scan existing YAML files and mark source IDs as already processed."""
     added = 0
     for yml in content_dir.glob("*.yml"):
         try:
             with open(yml, encoding="utf-8") as f:
                 data = yaml.safe_load(f)
-            cve = data.get("cve") if isinstance(data, dict) else None
-            if cve and not state.is_processed(str(cve)):
-                state.mark_processed(str(cve))
+            source_id = None
+            if isinstance(data, dict):
+                source_id = data.get("cve") or data.get("external_id")
+            if source_id and not state.is_processed(str(source_id)):
+                state.mark_processed(str(source_id))
                 added += 1
         except Exception:
             pass
@@ -294,18 +410,21 @@ def _today() -> str:
 
 def _build_sources(vuln: "RawVuln") -> list[dict]:
     sources = []
+    seen_urls: set[str] = set()
+
+    def add_source(title: str, url: str) -> None:
+        if url and url.startswith("http") and url not in seen_urls:
+            sources.append({"title": title, "url": url})
+            seen_urls.add(url)
+
+    if vuln.source_url:
+        add_source(vuln.source_title or SOURCE_LABELS.get(vuln.source, vuln.source), vuln.source_url)
     if vuln.source == "cisa_kev":
-        sources.append({
-            "title": "CISA KEV catalog",
-            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-        })
-    sources.append({
-        "title": f"NVD — {vuln.cve_id}",
-        "url": f"https://nvd.nist.gov/vuln/detail/{vuln.cve_id}",
-    })
+        add_source("CISA KEV catalog", "https://www.cisa.gov/known-exploited-vulnerabilities-catalog")
+    if vuln.is_cve:
+        add_source(f"NVD — {vuln.cve_id}", f"https://nvd.nist.gov/vuln/detail/{vuln.cve_id}")
     for ref in (vuln.references or [])[:2]:
-        if ref.startswith("http"):
-            sources.append({"title": "Vendor reference", "url": ref})
+        add_source("Source reference", ref)
     return sources
 
 
@@ -317,7 +436,108 @@ def _make_tags(vuln: "RawVuln", brief: dict) -> list[str]:
     vendor_tag = re.sub(r"[^a-z0-9]+", "-", vuln.vendor.lower()).strip("-")
     if vendor_tag:
         tags.append(vendor_tag)
+    source_tag = vuln.source.lower().replace("_", "-")
+    if source_tag:
+        tags.append(source_tag)
+    if vuln.epss_percentile is not None and vuln.epss_percentile >= 0.95:
+        tags.append("high-epss")
     return tags
+
+
+def _resolve_sources(raw_sources: str, *, kev_only: bool = False) -> list[str]:
+    if kev_only:
+        return ["cisa_kev"]
+    allowed = {"cisa_kev", "nvd", "github_advisory"}
+    requested = [
+        source.strip().lower().replace("-", "_")
+        for source in raw_sources.split(",")
+        if source.strip()
+    ]
+    invalid = [source for source in requested if source not in allowed]
+    if invalid:
+        raise SystemExit(f"Invalid source(s): {', '.join(invalid)}. Valid sources: {', '.join(sorted(allowed))}")
+    return requested or ["cisa_kev", "nvd", "github_advisory"]
+
+
+def _source_priority(vuln: "RawVuln") -> tuple[int, str]:
+    priority = {
+        "cisa_kev": 0,
+        "github_advisory": 1,
+        "nvd": 2,
+    }
+    return (priority.get(vuln.source, 9), vuln.cve_id)
+
+
+def _source_run(
+    source_id: str,
+    status: str,
+    item_count: int,
+    started_at: str,
+    error: str | None = None,
+    *,
+    role: str = "source",
+) -> dict:
+    run = {
+        "id": source_id,
+        "label": SOURCE_LABELS.get(source_id, source_id),
+        "role": role,
+        "status": status,
+        "items_seen": item_count,
+        "started_at": started_at,
+        "finished_at": _utc_now(),
+    }
+    if error:
+        run["error"] = error[:240]
+    return run
+
+
+def _write_source_status(path: Path, source_runs: list[dict]) -> None:
+    if not source_runs:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "generated": _utc_now(),
+        "sources": source_runs,
+    }
+    import json
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+
+def _load_source_status(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    import json
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+    sources = data.get("sources", [])
+    return sources if isinstance(sources, list) else []
+
+
+def _duplicates(values: list[str]) -> list[str]:
+    seen: set[str] = set()
+    repeated: set[str] = set()
+    for value in values:
+        if value in seen:
+            repeated.add(value)
+        seen.add(value)
+    return sorted(repeated)
+
+
+def _filter_public_items(items: list, window_days: int) -> list:
+    if window_days < 0:
+        raise ValueError("window_days must be 0 or greater")
+    if window_days == 0:
+        return items
+    from datetime import date, timedelta
+
+    cutoff = (date.today() - timedelta(days=window_days)).isoformat()
+    return [item for item in items if item.date >= cutoff]
+
+
+def _utc_now() -> str:
+    return datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 # ---------------------------------------------------------------------------
@@ -347,6 +567,22 @@ def build_parser() -> argparse.ArgumentParser:
         default=SITE_BASE_URL,
         metavar="URL",
         help=f"Site base URL for RSS links (default: {SITE_BASE_URL}).",
+    )
+    p_feed.add_argument(
+        "--source-status-file",
+        default=SOURCE_STATUS_FILE,
+        metavar="PATH",
+        help=f"Source health metadata JSON (default: {SOURCE_STATUS_FILE}).",
+    )
+    p_feed.add_argument(
+        "--public-window-days",
+        type=int,
+        default=PUBLIC_WINDOW_DAYS,
+        metavar="N",
+        help=(
+            "Only publish feed/RSS/JSON/sitemap items from the last N days. "
+            f"Use 0 to include all items (default: {PUBLIC_WINDOW_DAYS})."
+        ),
     )
     p_feed.set_defaults(func=cmd_build_feed)
 
@@ -387,6 +623,18 @@ def build_parser() -> argparse.ArgumentParser:
         help="NVD API key for higher rate limits (default: NVD_API_KEY env var).",
     )
     p_ingest.add_argument(
+        "--github-token",
+        default="",
+        metavar="TOKEN",
+        help="GitHub token for advisory API rate limits (default: GITHUB_TOKEN or GH_TOKEN env var).",
+    )
+    p_ingest.add_argument(
+        "--sources",
+        default="cisa_kev,nvd,github_advisory",
+        metavar="LIST",
+        help="Comma-separated ingestion sources: cisa_kev,nvd,github_advisory.",
+    )
+    p_ingest.add_argument(
         "--kev-only",
         action="store_true",
         help="Only fetch from CISA KEV, skip NVD.",
@@ -404,6 +652,26 @@ def build_parser() -> argparse.ArgumentParser:
         metavar="N",
         help="Maximum NVD results per run (default: 20).",
     )
+    p_ingest.add_argument(
+        "--max-github",
+        type=int,
+        default=30,
+        metavar="N",
+        help="Maximum GitHub advisories per run (default: 30).",
+    )
+    p_ingest.add_argument(
+        "--no-epss",
+        action="store_false",
+        dest="enrich_epss",
+        help="Skip FIRST EPSS enrichment.",
+    )
+    p_ingest.add_argument(
+        "--source-status-file",
+        default=SOURCE_STATUS_FILE,
+        metavar="PATH",
+        help=f"Source health metadata JSON (default: {SOURCE_STATUS_FILE}).",
+    )
+    p_ingest.set_defaults(enrich_epss=True)
     p_ingest.set_defaults(func=cmd_ingest)
 
     # digest
@@ -457,6 +725,25 @@ def build_parser() -> argparse.ArgumentParser:
         help=f"Site base URL for links (default: {SITE_BASE_URL}).",
     )
     p_digest.set_defaults(func=cmd_digest)
+
+    # validate
+    p_validate = subparsers.add_parser(
+        "validate",
+        help="Validate feed content and pipeline metadata without writing generated files.",
+    )
+    p_validate.add_argument(
+        "--content-dir",
+        default="content/feed-items",
+        metavar="PATH",
+        help="Directory containing YAML feed item files (default: content/feed-items).",
+    )
+    p_validate.add_argument(
+        "--source-status-file",
+        default=SOURCE_STATUS_FILE,
+        metavar="PATH",
+        help=f"Source health metadata JSON (default: {SOURCE_STATUS_FILE}).",
+    )
+    p_validate.set_defaults(func=cmd_validate)
 
     return parser
 

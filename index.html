@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="PatchBrief delivers short operator-ready security briefs on exploited CVEs, vendor advisories, and threat activity — updated daily from CISA KEV and NVD." />
+    <meta name="description" content="PatchBrief delivers daily operator-ready security briefs from CISA KEV, NVD, GitHub Security Advisories, and EPSS-enriched vulnerability signals." />
     <meta name="theme-color" content="#15211f" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="PatchBrief | Security intel feed for operators" />
-    <meta property="og:description" content="Daily briefs on exploited vulnerabilities, critical vendor advisories, and high-signal threat activity. Built for security operators who don't have time to read everything." />
+    <meta property="og:description" content="Daily briefs on exploited vulnerabilities, critical advisories, open-source security advisories, and high-signal threat activity." />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="PatchBrief | Security intel feed for operators" />
-    <meta name="twitter:description" content="Daily briefs on exploited vulnerabilities, critical vendor advisories, and high-signal threat activity." />
+    <meta name="twitter:description" content="Daily source-backed briefs from CISA KEV, NVD, GitHub Security Advisories, and EPSS-enriched signals." />
     <link rel="alternate" type="application/rss+xml" title="PatchBrief RSS" href="/rss.xml" />
     <title>PatchBrief | Security intel feed for operators</title>
     <style>
@@ -196,18 +196,18 @@
       <!-- HERO -->
       <section class="hero" aria-label="Hero">
         <div class="wrap">
-          <p class="eyebrow">Security intelligence feed</p>
-          <h1>Security intel that actually updates.</h1>
+          <p class="eyebrow">Live security intelligence feed</p>
+          <h1>Know what to patch before it turns into work.</h1>
           <p class="hero-lede">
-            PatchBrief delivers short, source-backed briefs on actively exploited CVEs,
-            critical vendor advisories, and high-signal threat activity — pulled daily
-            from CISA KEV and NVD so you don't have to watch both yourself.
+            PatchBrief turns CISA KEV, NVD critical CVEs, GitHub Security Advisories,
+            and EPSS-enriched signals into short operator briefs with source links,
+            impact context, and the next check to run.
           </p>
           <div class="cta-row">
             <a class="button primary lg" href="feed.html">Read the live feed</a>
             <a class="button lg" href="pricing.html">See pricing</a>
           </div>
-          <p class="hero-note">Public sources only. No scanner, no dashboard, no vendor lock-in.</p>
+          <p class="hero-note">Public-source intelligence. No scanner, no agent, no vendor lock-in.</p>
         </div>
       </section>
 
@@ -215,10 +215,11 @@
       <div class="stats-bar" aria-label="Feed statistics">
         <div class="wrap">
           <div class="stats-row">
-            <span class="stat"><span class="stat-dot"></span> <strong>100+</strong> briefs published</span>
+            <span class="stat"><span class="stat-dot"></span> <strong>90+</strong> current briefs</span>
             <span class="stat"><span class="stat-dot"></span> <strong>CISA KEV</strong> monitored daily</span>
-            <span class="stat"><span class="stat-dot"></span> <strong>NVD Critical</strong> monitored daily</span>
-            <span class="stat"><span class="stat-dot"></span> Updated every <strong>24 hours</strong></span>
+            <span class="stat"><span class="stat-dot"></span> <strong>NVD + GitHub</strong> advisory intake</span>
+            <span class="stat"><span class="stat-dot"></span> <strong>EPSS</strong> enrichment</span>
+            <span class="stat"><span class="stat-dot"></span> Pipeline runs every <strong>24 hours</strong></span>
             <span class="stat"><span class="stat-dot"></span> Free tier forever</span>
           </div>
         </div>
@@ -228,8 +229,8 @@
       <section class="section alt" aria-labelledby="features-heading">
         <div class="wrap">
           <p class="section-eyebrow">What you get</p>
-          <h2 id="features-heading">The signals that matter, already summarized.</h2>
-          <p class="section-lede">Stop watching five feeds and three vendor portals. PatchBrief tracks the high-signal sources and converts them into short, actionable briefs.</p>
+          <h2 id="features-heading">High-signal sources, normalized into one feed.</h2>
+          <p class="section-lede">Stop watching advisory portals one tab at a time. PatchBrief ingests exploit, vulnerability, and open-source advisory sources, then distills them into short operator-ready records.</p>
           <div class="feature-grid">
             <article class="feature-card">
               <div class="feature-icon">&#x26A0;&#xFE0F;</div>
@@ -239,12 +240,12 @@
             <article class="feature-card">
               <div class="feature-icon">&#x1F4CB;</div>
               <h3>Critical vendor advisories</h3>
-              <p>CVSS critical CVEs from NVD, filtered to reduce noise. Vendor, product, and operator check included.</p>
+              <p>NVD critical CVEs are filtered, normalized, and paired with vendor, product, CVSS, and operator check fields.</p>
             </article>
             <article class="feature-card">
               <div class="feature-icon">&#x1F6E1;&#xFE0F;</div>
-              <h3>Threat activity</h3>
-              <p>Ransomware campaigns, Patch Tuesday summaries, and exploit activity with public source links.</p>
+              <h3>Open-source advisories</h3>
+              <p>GitHub-reviewed advisories surface dependency risk before it gets buried in application backlogs.</p>
             </article>
             <article class="feature-card">
               <div class="feature-icon">&#x2705;</div>
@@ -253,13 +254,13 @@
             </article>
             <article class="feature-card">
               <div class="feature-icon">&#x1F4E1;</div>
-              <h3>RSS + JSON API</h3>
-              <p>Subscribe in any RSS reader or pull structured JSON into your SIEM, Slack bot, or ticketing system.</p>
+              <h3>RSS + JSON feed</h3>
+              <p>Subscribe in any RSS reader or pull structured JSON into SIEM, Slack, ticketing, or internal workflows.</p>
             </article>
             <article class="feature-card">
               <div class="feature-icon">&#x1F4E7;</div>
-              <h3>Email digest</h3>
-              <p>Get a curated digest of the week's top exploited CVEs and critical advisories delivered to your inbox.</p>
+              <h3>Daily and weekly delivery</h3>
+              <p>Use the free weekly digest or upgrade for daily delivery and vendor-specific watchlist alerts.</p>
             </article>
           </div>
         </div>
@@ -269,8 +270,8 @@
       <section class="section" aria-labelledby="preview-heading">
         <div class="wrap">
           <p class="section-eyebrow">Feed format</p>
-          <h2 id="preview-heading">Short briefs with source links.</h2>
-          <p class="section-lede">Each item includes what happened, why it matters, what to check, and where the claim came from.</p>
+          <h2 id="preview-heading">Briefs built for triage, not reading marathons.</h2>
+          <p class="section-lede">Each item captures what happened, why it matters, what to check, and where the source claim came from.</p>
           <div class="feed-preview">
             <article class="preview-item">
               <div class="preview-meta">
@@ -301,7 +302,7 @@
             </article>
           </div>
           <div class="cta-row">
-            <a class="button primary" href="feed.html">Open full feed (100+ items)</a>
+            <a class="button primary" href="feed.html">Open full feed (90+ items)</a>
             <a class="button" href="rss.xml">Subscribe via RSS</a>
           </div>
         </div>
@@ -311,8 +312,8 @@
       <section class="section alt" id="pricing" aria-labelledby="pricing-heading">
         <div class="wrap">
           <p class="section-eyebrow">Pricing</p>
-          <h2 id="pricing-heading">Start free. Upgrade when you need more.</h2>
-          <p class="section-lede">The public feed is always free. Pro and Team unlock daily email digests, vendor watchlists, and API access.</p>
+          <h2 id="pricing-heading">Free feed. Paid delivery when it matters.</h2>
+          <p class="section-lede">Use the public feed for discovery. Upgrade when you need daily delivery, vendor watchlists, and integration support.</p>
 
           <div class="pricing-grid">
 
@@ -321,12 +322,12 @@
               <p class="plan-name">Free</p>
               <p class="plan-price">$0</p>
               <p class="plan-period">forever</p>
-              <p class="plan-desc">Full public feed with real-time KEV and CVE data. No account required.</p>
+              <p class="plan-desc">Full public feed with KEV, NVD, and GitHub advisory records. No account required.</p>
               <ul class="plan-features">
-                <li>Live public feed (100+ briefs)</li>
+                <li>Live public feed (90+ current briefs)</li>
                 <li>RSS subscription</li>
                 <li>JSON API feed</li>
-                <li>30-day history</li>
+                <li>365-day public window</li>
                 <li>Filter by type and signal</li>
               </ul>
               <div class="plan-cta">
@@ -339,7 +340,7 @@
               <p class="plan-name">Pro</p>
               <p class="plan-price">$9<sub>/mo</sub></p>
               <p class="plan-period">or $79/year &mdash; save 27%</p>
-              <p class="plan-desc">Everything you need to stay ahead of exploited vulnerabilities without checking the feed manually.</p>
+              <p class="plan-desc">Daily delivery and vendor alerts for operators who cannot manually watch every source.</p>
               <ul class="plan-features">
                 <li>Everything in Free</li>
                 <li>Daily email digest (top 5 items)</li>
@@ -358,7 +359,7 @@
               <p class="plan-name">Team</p>
               <p class="plan-price">$49<sub>/mo</sub></p>
               <p class="plan-period">or $399/year &mdash; save 32%</p>
-              <p class="plan-desc">API access, team seats, and custom watchlists for security teams that need to integrate intel into their workflow.</p>
+              <p class="plan-desc">Shared access, structured data, and integration help for teams that route vulnerability work into tools.</p>
               <ul class="plan-features">
                 <li>Everything in Pro</li>
                 <li>JSON API access (structured data)</li>
@@ -385,11 +386,11 @@
           <div class="faq-list">
             <div class="faq-item">
               <h3>Where does the data come from?</h3>
-              <p>CISA's Known Exploited Vulnerabilities catalog and NVD (NIST National Vulnerability Database). Both are authoritative public sources. PatchBrief does not manufacture or score vulnerabilities — it summarizes and links directly to the source.</p>
+              <p>CISA Known Exploited Vulnerabilities, NVD critical CVEs, GitHub Security Advisories, FIRST EPSS, and selected public threat activity sources. PatchBrief summarizes and links back to the original source.</p>
             </div>
             <div class="faq-item">
               <h3>How is this different from just watching the CISA KEV feed?</h3>
-              <p>CISA KEV tells you a CVE exists. PatchBrief adds context: what it is, why it matters now, what specifically operators should check, and direct links to vendor advisories. It also consolidates KEV, NVD critical CVEs, and threat activity into one place.</p>
+              <p>CISA KEV confirms known exploitation. PatchBrief adds operator context, source links, EPSS enrichment when available, and adjacent NVD/GitHub advisory coverage in one feed.</p>
             </div>
             <div class="faq-item">
               <h3>What does the vendor watchlist do?</h3>
@@ -397,7 +398,7 @@
             </div>
             <div class="faq-item">
               <h3>Can I integrate this into my SIEM or ticketing system?</h3>
-              <p>Yes. The JSON API feed (<code>patchbrief.org/feed.json</code>) is machine-readable and includes all brief fields. Team subscribers get full structured access. The RSS feed works with any RSS-compatible integration.</p>
+              <p>Yes. The JSON feed (<code>patchbrief.org/feed.json</code>) is machine-readable and includes brief fields plus pipeline source metadata. Team subscribers get integration support for routing it into tools.</p>
             </div>
             <div class="faq-item">
               <h3>Does PatchBrief scan my environment?</h3>
@@ -412,7 +413,7 @@
         <div class="wrap">
           <p class="section-eyebrow">Subscribe</p>
           <h2 style="font-size:clamp(1.7rem,4vw,2.4rem);font-weight:760;letter-spacing:-0.01em;line-height:1.1;margin-bottom:0.75rem;">Get the feed delivered.</h2>
-          <p style="color:var(--soft-ink);max-width:52ch;margin-bottom:2rem;">Subscribe free to receive weekly digests of the top exploited CVEs and critical advisories. Upgrade to Pro for daily delivery and vendor alerts.</p>
+          <p style="color:var(--soft-ink);max-width:52ch;margin-bottom:2rem;">Subscribe free for weekly highlights. Upgrade to Pro for daily delivery and alerts tied to the vendors you actually run.</p>
           <div class="signup-grid">
             <div class="signup-panel">
               <h3>Free weekly digest</h3>

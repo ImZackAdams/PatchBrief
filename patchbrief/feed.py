@@ -36,6 +36,7 @@ class FeedItem:
         mapping = {
             "Known exploited": "exploited",
             "Critical vendor advisory": "critical",
+            "High-risk advisory": "critical",
             "Patch review": "patch",
             "Threat activity": "threat",
         }
@@ -76,6 +77,10 @@ def load_feed_item(path: Path) -> FeedItem:
     if missing:
         raise ValueError(f"Missing required fields: {', '.join(missing)}")
 
+    for field_name in ("vendor", "product"):
+        if _is_placeholder_value(str(data.get(field_name, ""))):
+            raise ValueError(f"{field_name} must be specific, not {data.get(field_name)!r}")
+
     sources_raw = data.get("sources", [])
     if not isinstance(sources_raw, list) or not sources_raw:
         raise ValueError("sources must be a non-empty list")
@@ -107,6 +112,10 @@ def load_feed_item(path: Path) -> FeedItem:
         tags=[str(t) for t in data.get("tags", [])],
         is_sample=bool(data.get("is_sample", True)),
     )
+
+
+def _is_placeholder_value(value: str) -> bool:
+    return value.strip().lower() in {"unknown", "unresolved", "n/a", "none", "*", "-", "product pending analysis"}
 
 
 def load_feed_items(content_dir: Path) -> list[FeedItem]:

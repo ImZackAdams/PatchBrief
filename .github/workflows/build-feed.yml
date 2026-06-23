@@ -16,6 +16,10 @@ on:
         description: "Only ingest CISA KEV (skip NVD)"
         type: boolean
         default: false
+      sources:
+        description: "Comma-separated sources: cisa_kev,nvd,github_advisory"
+        default: "cisa_kev,nvd,github_advisory"
+        required: false
       digest_only:
         description: "Generate digest only, skip ingest + build"
         type: boolean
@@ -46,6 +50,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Validate content
+        run: python -m patchbrief.cli validate
+
       # -----------------------------------------------------------------------
       # Ingest — runs on schedule and manual dispatch (not on content pushes)
       # -----------------------------------------------------------------------
@@ -56,13 +66,15 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           DAYS="${{ github.event.inputs.days || '3' }}"
+          SOURCES="${{ github.event.inputs.sources || 'cisa_kev,nvd,github_advisory' }}"
           KEV_FLAG=""
           if [ "${{ github.event.inputs.kev_only }}" = "true" ]; then
             KEV_FLAG="--kev-only"
           fi
-          python -m patchbrief.cli ingest --days "$DAYS" $KEV_FLAG
+          python -m patchbrief.cli ingest --days "$DAYS" --sources "$SOURCES" $KEV_FLAG
 
       # -----------------------------------------------------------------------
       # Build — always runs except digest-only dispatch
@@ -114,6 +126,7 @@ jobs:
             items/ \
             content/feed-items/ \
             content/processed-state.json \
+            content/source-status.json \
             digest-latest.html \
             2>/dev/null || true
           if git diff --staged --quiet; then

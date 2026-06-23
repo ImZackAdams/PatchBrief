@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-import json
 import time
 import urllib.parse
-import urllib.request
 from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 from .base import RawVuln
+from .http import fetch_json
 
 NVD_API_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 
@@ -29,19 +28,15 @@ def fetch_recent_critical(
     }
 
     url = NVD_API_URL + "?" + urllib.parse.urlencode(params)
-    headers: dict[str, str] = {
-        "User-Agent": "PatchBrief-Ingest/1.0 (https://www.patchbrief.org)"
-    }
+    headers: dict[str, str] = {}
     if api_key:
         headers["apiKey"] = api_key
     else:
         # Without a key, NVD allows ~5 req/30s — add delay to be safe.
         time.sleep(6)
 
-    req = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(req, timeout=45) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
+        data = fetch_json(url, headers=headers, timeout=45)
     except Exception as exc:
         print(f"  [nvd] fetch failed: {exc}")
         return []
@@ -58,15 +53,18 @@ def fetch_recent_critical(
             (d["value"] for d in descriptions if d.get("lang") == "en"), ""
         ).strip()
 
-        vendor, product = _extract_vendor_product(cve)
-
-        cvss_score = _extract_cvss_score(cve)
-
         refs = [
             r["url"]
             for r in cve.get("references", [])[:4]
             if r.get("url")
         ]
+
+        vendor, product = _extract_vendor_product(cve, description, refs)
+        if not _is_resolved_value(vendor) or not _is_resolved_value(product):
+            print(f"  [nvd] skipped {cve_id}: unresolved vendor/product")
+            continue
+
+        cvss_score = _extract_cvss_score(cve)
 
         pub_date = cve.get("published", "")[:10]
 
@@ -80,25 +78,89 @@ def fetch_recent_critical(
                 date_added=pub_date,
                 cvss_score=cvss_score,
                 references=refs,
+                source_url=f"https://nvd.nist.gov/vuln/detail/{cve_id}",
+                source_title=f"NVD — {cve_id}",
             )
         )
 
     return results
 
 
-def _extract_vendor_product(cve: dict) -> tuple[str, str]:
+def _extract_vendor_product(cve: dict, description: str = "", references: list[str] | None = None) -> tuple[str, str]:
     configs = cve.get("configurations", [])
     for cfg in configs:
-        for node in cfg.get("nodes", []):
-            for match in node.get("cpeMatch", []):
-                cpe = match.get("criteria", "")
-                parts = cpe.split(":")
-                if len(parts) >= 5:
-                    vendor = parts[3].replace("_", " ").title()
-                    product = parts[4].replace("_", " ").title()
-                    if vendor and product and vendor != "*":
-                        return vendor, product
-    return "Unknown", "Unknown"
+        parsed = _extract_from_node(cfg)
+        if parsed:
+            return parsed
+
+    parsed = _infer_from_description(description)
+    if parsed:
+        return parsed
+
+    return "Unresolved", "Unresolved"
+
+
+def _extract_from_node(node: dict) -> tuple[str, str] | None:
+    for match in node.get("cpeMatch", []):
+        cpe = match.get("criteria", "")
+        parts = cpe.split(":")
+        if len(parts) >= 5:
+            vendor = _display_cpe_part(parts[3])
+            product = _display_cpe_part(parts[4])
+            if _is_resolved_value(vendor) and _is_resolved_value(product):
+                return vendor, product
+
+    for child in node.get("nodes", []) or []:
+        parsed = _extract_from_node(child)
+        if parsed:
+            return parsed
+
+    return None
+
+
+def _display_cpe_part(value: str) -> str:
+    value = urllib.parse.unquote(value or "")
+    value = value.replace("\\ ", " ").replace("_", " ").replace("-", " ")
+    return " ".join(part for part in value.title().split() if part)
+
+
+def _infer_from_description(description: str) -> tuple[str, str] | None:
+    if not description:
+        return None
+
+    import re
+
+    patterns = [
+        r"^(?P<vendor>[A-Z][A-Za-z0-9&.\-]{1,40}) (?P<product>[A-Z][A-Za-z0-9&()./\- ]{1,70}) contains ",
+        r"^(?P<vendor>[A-Z][A-Za-z0-9&.\-]{1,40}) (?P<product>[A-Z][A-Za-z0-9&()./\- ]{1,70}) versions? ",
+        r"^A vulnerability in (?P<product>[A-Z][A-Za-z0-9&()./\- ]{1,70}) of (?P<vendor>[A-Z][A-Za-z0-9&.\- ]{1,40}) ",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, description)
+        if not match:
+            continue
+        vendor = _clean_inferred_name(match.group("vendor"))
+        product = _clean_inferred_name(match.group("product"))
+        if _is_resolved_value(vendor) and _is_resolved_value(product):
+            return vendor, product
+
+    return None
+
+
+def _clean_inferred_name(value: str) -> str:
+    value = value.strip(" .,:;")
+    stop_words = (" contains", " versions", " prior", " before", " through")
+    lower = value.lower()
+    for stop in stop_words:
+        idx = lower.find(stop)
+        if idx != -1:
+            value = value[:idx]
+            break
+    return " ".join(value.split())
+
+
+def _is_resolved_value(value: str) -> bool:
+    return bool(value and value.strip().lower() not in {"unknown", "unresolved", "n/a", "none", "*", "-", "product pending analysis"})
 
 
 def _extract_cvss_score(cve: dict) -> Optional[float]:

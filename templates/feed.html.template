@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="PatchBrief public feed: short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity." />
+    <meta name="description" content="PatchBrief public feed: daily operator-ready briefs from CISA KEV, NVD critical CVEs, GitHub Security Advisories, and public threat signals." />
     <meta name="theme-color" content="#15211f" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="PatchBrief public feed | Security briefs for operators" />
-    <meta property="og:description" content="Short source-backed briefs on public vulnerability advisories, exploited vulnerabilities, vendor updates, and threat activity." />
+    <meta property="og:description" content="Daily source-backed briefs on exploited vulnerabilities, critical advisories, open-source advisories, and threat activity." />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="PatchBrief public feed | Security briefs for operators" />
-    <meta name="twitter:description" content="Short source-backed briefs on public vulnerability advisories, exploited vulnerabilities, vendor updates, and threat activity." />
+    <meta name="twitter:description" content="Daily source-backed briefs from CISA KEV, NVD, GitHub Security Advisories, and public threat signals." />
     <link rel="alternate" type="application/rss+xml" title="PatchBrief RSS" href="/rss.xml" />
     <title>Public feed | PatchBrief</title>
     <style>
@@ -199,11 +199,11 @@
     <main id="content">
       <section class="hero">
         <div class="wrap">
-          <p class="eyebrow">Public feed</p>
-          <h1>Short security briefs for public vulnerability and threat signals.</h1>
+          <p class="eyebrow">Live public feed</p>
+          <h1>Operator-ready vulnerability briefs from monitored public sources.</h1>
           <p class="hero-lede">
-            PatchBrief tracks public advisories, exploited vulnerabilities, vendor updates,
-            and threat activity, then summarizes what operators may want to check.
+            PatchBrief monitors CISA KEV, NVD critical CVEs, GitHub Security Advisories,
+            EPSS-enriched vulnerability signals, and selected public threat activity.
           </p>
           ${SAMPLE_NOTICE}
         </div>
@@ -254,7 +254,7 @@
             <div class="upgrade-panel">
               <p class="upgrade-label">Free</p>
               <h2 class="upgrade-heading">Get the weekly digest by email.</h2>
-              <p class="upgrade-desc">Top 5 exploited CVEs and critical advisories from the past week, every Monday.</p>
+              <p class="upgrade-desc">The highest-signal exploited CVEs, critical advisories, and open-source security items from the past week.</p>
               <form
                 action="https://formsubmit.co/87df02627dd3ab260cc04968fbe79bb7"
                 method="POST"
@@ -273,7 +273,7 @@
             <div class="upgrade-panel upgrade-pro">
               <p class="upgrade-label">Pro &mdash; $9/mo</p>
               <h2 class="upgrade-heading">Daily digest + vendor watchlist alerts.</h2>
-              <p class="upgrade-desc">Get this feed delivered every morning and receive targeted alerts when vulnerabilities hit vendors you run.</p>
+              <p class="upgrade-desc">Get daily delivery and targeted alerts when watched vendors or packages appear in the pipeline.</p>
               <a class="button button-white" href="${PRO_YEARLY_URL}">Upgrade to Pro &rarr;</a>
             </div>
           </div>
@@ -363,7 +363,7 @@
         promo.setAttribute('data-promo', '1');
         promo.innerHTML =
           '<div class="feed-promo-text">' +
-          '<p>Get daily digests + alerts for vendors you run.</p>' +
+          '<p>Get daily digests + watched-vendor alerts.</p>' +
           '<span>PatchBrief Pro &mdash; $9/month</span>' +
           '</div>' +
           '<a class="button button-ghost" href="${PRO_MONTHLY_URL}">Upgrade to Pro &rarr;</a>';

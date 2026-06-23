@@ -9,6 +9,8 @@ The static generator reads these files to produce `feed.html`, individual item p
 ```yaml
 id: unique-slug-matching-filename
 slug: unique-slug-matching-filename
+external_id: CVE-YYYY-NNNNN        # optional source ID, used by automated ingest
+source: cisa_kev                   # optional source connector ID
 date: "YYYY-MM-DD"
 type: KEV                         # see Type values below
 signal: Known exploited           # see Signal values below
@@ -38,6 +40,8 @@ is_sample: true   # set to false for real published items
 |---|---|---|
 | `id` | yes | Unique identifier, matches filename without extension. Use kebab-case. |
 | `slug` | yes | URL slug for the generated item page. Must match `id`. |
+| `external_id` | no | Original upstream ID used for dedupe, such as a CVE or GHSA ID. |
+| `source` | no | Source connector that created the item, such as `cisa_kev`, `nvd`, or `github_advisory`. |
 | `date` | yes | ISO date string (`"YYYY-MM-DD"`). Quote it to prevent YAML date parsing. |
 | `type` | yes | Content category. See Type values. |
 | `signal` | yes | Threat signal label shown on the feed and item pages. See Signal values. |
@@ -68,6 +72,7 @@ is_sample: true   # set to false for real published items
 |---|---|
 | `Known exploited` | CISA KEV addition or confirmed active exploitation |
 | `Critical vendor advisory` | Vendor-rated critical or CVSS ≥ 9.0 |
+| `High-risk advisory` | High-severity or high-priority advisory that is not confirmed exploited |
 | `Patch review` | Important patch or update that warrants review |
 | `Threat activity` | Threat actor or campaign activity without a specific CVE |
 

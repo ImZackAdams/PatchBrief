@@ -7,8 +7,8 @@ from typing import Optional
 @dataclass
 class RawVuln:
     """Raw vulnerability data from an ingestion source before brief generation."""
-    source: str           # "cisa_kev" | "nvd"
-    cve_id: str           # e.g. "CVE-2024-1234"
+    source: str
+    cve_id: str           # CVE ID when available; otherwise a stable source ID.
     vendor: str
     product: str
     description: str
@@ -17,4 +17,12 @@ class RawVuln:
     kev_action: Optional[str] = None
     kev_due_date: Optional[str] = None
     cvss_score: Optional[float] = None
+    epss_score: Optional[float] = None
+    epss_percentile: Optional[float] = None
     references: list[str] = field(default_factory=list)
+    source_url: Optional[str] = None
+    source_title: Optional[str] = None
+
+    @property
+    def is_cve(self) -> bool:
+        return self.cve_id.upper().startswith("CVE-")

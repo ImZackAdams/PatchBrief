@@ -83,6 +83,16 @@ why_it_matters: It is a useful public signal.
         load_feed_item(path)
 
 
+def test_load_feed_item_rejects_unknown_vendor_or_product(tmp_path: Path):
+    path = tmp_path / "item.yml"
+    _write_item(path)
+    text = path.read_text(encoding="utf-8").replace("vendor: Example", "vendor: Unknown")
+    path.write_text(text, encoding="utf-8")
+
+    with pytest.raises(ValueError, match="vendor must be specific"):
+        load_feed_item(path)
+
+
 def test_feed_card_escapes_html(tmp_path: Path):
     item = _load_test_item(tmp_path, title="<script>alert(1)</script>")
 

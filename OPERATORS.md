@@ -60,6 +60,7 @@ python -m pytest tests/ -v
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-..."   # enables AI-written briefs
 export NVD_API_KEY="..."                # higher NVD rate limits (free from nvd.nist.gov)
+export GITHUB_TOKEN="..."               # optional, higher GitHub Advisory API rate limits
 ```
 
 ---
@@ -68,7 +69,7 @@ export NVD_API_KEY="..."                # higher NVD rate limits (free from nvd.
 
 ### Refresh the feed with real data (no API key needed)
 
-This fetches from CISA KEV and NVD and writes briefs directly from their source text — no AI call required.
+This fetches from CISA KEV, NVD, and GitHub Security Advisories, enriches CVEs with EPSS, and writes briefs directly from source text — no AI call required.
 
 ```bash
 python -m patchbrief.cli ingest --no-ai --days 7
@@ -125,7 +126,7 @@ python -m patchbrief.cli build-feed
 
 ### `ingest`
 
-Fetches new vulnerabilities from CISA KEV and NVD, generates a brief for each one, and writes a YAML file to `content/feed-items/`. Skips any CVE already in `content/processed-state.json`.
+Fetches new vulnerabilities from CISA KEV, NVD, and GitHub Security Advisories, enriches CVE-backed items with FIRST EPSS, generates a brief for each new item, and writes YAML files to `content/feed-items/`. Skips upstream IDs already tracked in `content/processed-state.json`.
 
 ```
 python -m patchbrief.cli ingest [OPTIONS]
@@ -134,13 +135,18 @@ python -m patchbrief.cli ingest [OPTIONS]
 | Flag | Default | Description |
 |---|---|---|
 | `--days N` | 30 | Look back N days for new entries. Use 3–7 for daily runs, 30–90 for catch-up. |
-| `--kev-only` | off | Only fetch from CISA KEV. Skips NVD entirely. Faster, no rate limits. |
+| `--sources LIST` | `cisa_kev,nvd,github_advisory` | Comma-separated source connectors to run. |
+| `--kev-only` | off | Only fetch from CISA KEV. Faster, no rate limits. |
 | `--no-ai` | off | Build briefs from raw source fields instead of calling Claude. No API key needed. |
 | `--max-nvd N` | 20 | Maximum NVD results to process per run. |
+| `--max-github N` | 30 | Maximum GitHub advisories to process per run. |
+| `--no-epss` | off | Skip FIRST EPSS enrichment. |
 | `--api-key KEY` | env | Anthropic API key. Defaults to `ANTHROPIC_API_KEY` env var. |
 | `--nvd-api-key KEY` | env | NVD API key. Defaults to `NVD_API_KEY` env var. Without one, NVD adds a 6-second delay per request. |
+| `--github-token TOKEN` | env | GitHub token for advisory API rate limits. Defaults to `GITHUB_TOKEN` or `GH_TOKEN`. |
 | `--content-dir PATH` | `content/feed-items` | Where to write generated YAML files. |
 | `--state-file PATH` | `content/processed-state.json` | JSON file that tracks processed CVE IDs. |
+| `--source-status-file PATH` | `content/source-status.json` | Writes source health metadata for `feed.json`. |
 
 **Behaviour when no API key is set:** if `ANTHROPIC_API_KEY` is not set and `--no-ai` is not passed, ingest automatically falls back to `--no-ai` mode with a warning. It will not crash.
 
@@ -158,11 +164,31 @@ python -m patchbrief.cli build-feed [OPTIONS]
 |---|---|---|
 | `--content-dir PATH` | `content/feed-items` | Directory of YAML source files. |
 | `--base-url URL` | `https://www.patchbrief.org` | Base URL used in RSS `<link>` elements. |
+| `--source-status-file PATH` | `content/source-status.json` | Source health metadata to embed in `feed.json`. |
+| `--public-window-days N` | `365` | Publishes feed/RSS/JSON/sitemap items from the last N days. Use `0` for a full archive build. |
 
 **Output files written:**
 - `feed.html` — the main feed page
 - `items/{slug}.html` — one page per brief
 - `rss.xml` — RSS feed
+- `feed.json` — structured feed with pipeline metadata
+- `sitemap.xml` — crawlable URL map
+
+The generator still writes item pages for every valid YAML file so old URLs do
+not break. The public feed, RSS, JSON, and sitemap are restricted to the public
+window by default.
+
+---
+
+### `validate`
+
+Checks content and source-health metadata without writing generated files.
+
+```
+python -m patchbrief.cli validate
+```
+
+Run this before committing hand-authored feed items.
 
 ---
 
@@ -174,9 +200,9 @@ The workflow at `.github/workflows/build-feed.yml` runs automatically. You do no
 
 | Trigger | What happens |
 |---|---|
-| **Daily at 09:00 UTC** | Runs `ingest --days 3` then `build-feed`. Commits any new files. |
+| **Daily at 09:00 UTC** | Runs tests, validates content, runs `ingest --days 3`, then `build-feed`. Commits any new files. |
 | **Push to `main`** touching `content/`, `templates/`, or `patchbrief/` | Runs `build-feed` only (no ingest). Good for publishing hand-written items. |
-| **Manual dispatch** (Actions tab → Run workflow) | Lets you set `days` and `kev_only` before triggering. |
+| **Manual dispatch** (Actions tab → Run workflow) | Lets you set `days`, `sources`, and `kev_only` before triggering. |
 
 ### Manual trigger (GitHub UI)
 
@@ -184,7 +210,7 @@ The workflow at `.github/workflows/build-feed.yml` runs automatically. You do no
 2. Click **Actions** → **Build feed**
 3. Click **Run workflow**
 4. Set the `days` input (e.g. `30` to catch up a month)
-5. Optionally check **Only ingest CISA KEV**
+5. Optionally change source list or check **Only ingest CISA KEV**
 6. Click **Run workflow**
 
 The run will ingest, build, and commit. Check the Actions log to see what was created.
@@ -206,7 +232,7 @@ The daily automated ingest needs `ANTHROPIC_API_KEY` to write AI-enhanced briefs
 | `ANTHROPIC_API_KEY` | Your Anthropic API key (`sk-ant-...`) | Recommended |
 | `NVD_API_KEY` | Your NVD API key (free from nvd.nist.gov) | Optional |
 
-Without `ANTHROPIC_API_KEY`, ingest still runs in raw mode. Without `NVD_API_KEY`, NVD fetching works but adds a 6-second delay and is limited to 5 requests per 30 seconds.
+The workflow uses GitHub's built-in `GITHUB_TOKEN` for the GitHub Advisory API. Without `ANTHROPIC_API_KEY`, ingest still runs in raw mode. Without `NVD_API_KEY`, NVD fetching works but adds a 6-second delay and is limited to 5 requests per 30 seconds.
 
 ### Getting an NVD API key
 
