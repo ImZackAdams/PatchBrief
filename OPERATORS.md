@@ -26,10 +26,13 @@ PatchBrief is a static site generator. There is no server, no database, and no r
 ```
 Data sources                   Generator                     Output
 ──────────────                 ─────────────                 ──────
-CISA KEV feed    ─┐
-NVD CVE API      ─┤  →  ingest  →  content/feed-items/*.yml  →  build-feed  →  feed.html
-Hand-written YAML ┘                                                             items/*.html
-                                                                                rss.xml
+CISA KEV feed       ─┐
+MSRC Patch Tuesday  ─┤
+NVD CVE API         ─┤  →  ingest  →  content/feed-items/*.yml  →  build-feed  →  feed.html
+GitHub Advisories   ─┤                                                             items/*.html
+CERT/CC VU notes    ─┤                                                             rss.xml
+Exploit-DB          ─┤
+Hand-written YAML   ┘
 ```
 
 **Ingest** fetches live vulnerability data, generates a brief for each new entry, and saves it as a YAML file in `content/feed-items/`. `content/processed-state.json` tracks which CVE IDs have already been processed so nothing gets duplicated.
@@ -69,7 +72,7 @@ export GITHUB_TOKEN="..."               # optional, higher GitHub Advisory API r
 
 ### Refresh the feed with real data (no API key needed)
 
-This fetches from CISA KEV, NVD, and GitHub Security Advisories, enriches CVEs with EPSS, and writes briefs directly from source text — no AI call required.
+This fetches from CISA KEV, MSRC Patch Tuesday, NVD, GitHub Security Advisories, CERT/CC Vulnerability Notes, and Exploit-DB, enriches CVEs with EPSS, and writes briefs directly from source text — no AI call required.
 
 ```bash
 python -m patchbrief.cli ingest --no-ai --days 7
@@ -126,7 +129,7 @@ python -m patchbrief.cli build-feed
 
 ### `ingest`
 
-Fetches new vulnerabilities from CISA KEV, NVD, and GitHub Security Advisories, enriches CVE-backed items with FIRST EPSS, generates a brief for each new item, and writes YAML files to `content/feed-items/`. Skips upstream IDs already tracked in `content/processed-state.json`.
+Fetches new vulnerabilities from CISA KEV, Microsoft Security Update Guide, NVD, GitHub Security Advisories, CERT/CC Vulnerability Notes, and Exploit-DB, enriches CVE-backed items with FIRST EPSS, generates a brief for each new item, and writes YAML files to `content/feed-items/`. Skips upstream IDs already tracked in `content/processed-state.json`.
 
 ```
 python -m patchbrief.cli ingest [OPTIONS]
@@ -135,11 +138,14 @@ python -m patchbrief.cli ingest [OPTIONS]
 | Flag | Default | Description |
 |---|---|---|
 | `--days N` | 30 | Look back N days for new entries. Use 3–7 for daily runs, 30–90 for catch-up. |
-| `--sources LIST` | `cisa_kev,nvd,github_advisory` | Comma-separated source connectors to run. |
+| `--sources LIST` | `cisa_kev,msrc,github_advisory,nvd,cert_vu,exploitdb` | Comma-separated source connectors to run. |
 | `--kev-only` | off | Only fetch from CISA KEV. Faster, no rate limits. |
 | `--no-ai` | off | Build briefs from raw source fields instead of calling Claude. No API key needed. |
 | `--max-nvd N` | 20 | Maximum NVD results to process per run. |
 | `--max-github N` | 30 | Maximum GitHub advisories to process per run. |
+| `--max-msrc N` | 25 | Maximum MSRC Patch Tuesday CVEs to process per run. |
+| `--max-cert N` | 20 | Maximum CERT/CC Vulnerability Notes to process per run. |
+| `--max-exploitdb N` | 20 | Maximum Exploit-DB entries to process per run. |
 | `--no-epss` | off | Skip FIRST EPSS enrichment. |
 | `--api-key KEY` | env | Anthropic API key. Defaults to `ANTHROPIC_API_KEY` env var. |
 | `--nvd-api-key KEY` | env | NVD API key. Defaults to `NVD_API_KEY` env var. Without one, NVD adds a 6-second delay per request. |
@@ -243,7 +249,7 @@ Register free at [nvd.nist.gov/developers/request-an-api-key](https://nvd.nist.g
 ## Writing Feed Items by Hand
 
 Hand-written items are useful for:
-- Notable events that the automated sources don't capture (ransomware campaigns, threat actor activity, Patch Tuesday summaries)
+- Notable events that the automated sources don't capture yet, especially ransomware campaigns or threat actor activity
 - Correcting or enriching an auto-generated brief
 - Back-filling historical items
 
@@ -326,6 +332,7 @@ If your hand-written item has a `cve:` field, it is automatically added to `cont
 | `KEV` | CVE is in the CISA Known Exploited Vulnerabilities catalog |
 | `Vendor advisory` | Vendor-published security advisory without a KEV listing |
 | `Patch Tuesday` | Microsoft monthly patch release summary |
+| `Coordinated disclosure` | CERT/CC or similar coordinated vulnerability disclosure |
 | `Ransomware` | Ransomware campaign or group activity |
 | `Exploit activity` | Active exploitation confirmed, but no KEV listing yet |
 

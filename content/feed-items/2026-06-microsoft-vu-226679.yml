@@ -1,0 +1,36 @@
+id: 2026-06-microsoft-vu-226679
+slug: 2026-06-microsoft-vu-226679
+external_id: VU-226679
+source: cert_vu
+date: '2026-06-22'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#226679: Microsoft WinRE allows for bypass of UEFI/BIOS password enforcement'
+summary: Overview Microsoft Windows Recovery Environment (WinRE) provides a mechanism
+  for recovering and repairing Windows systems using an alternate boot environment.
+  Under certain platform implementations, access to WinRE may allow an attacker to
+  bypass firmware security controls, including administrator-configured UEFI/BIOS
+  passwords. An attacker with physical or administrative access to a device may be
+  able to leverage WinRE-related boot mechanisms to circumvent firmware protections
+  and gain unauthorized access to system resources. Description Microsoft Windows
+  versions 10 and 11 include the WinRE capability, a recovery platform that supports
+  features such as the F11 recovery menu and the Reset this PC functionalities. WinRE
+  is commonly used for system recovery, troubleshooting, and remote support scenarios.
+  When WinRE is invoked, the system...
+vendor: Microsoft
+product: WinRE
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for WinRE where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#226679
+  url: https://kb.cert.org/vuls/id/226679
+tags:
+- vu-226679
+- coordinated-disclosure
+- microsoft
+- cert-vu
+is_sample: false

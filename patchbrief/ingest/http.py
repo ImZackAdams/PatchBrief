@@ -35,3 +35,31 @@ def fetch_json(
             time.sleep(2**attempt)
 
     raise RuntimeError(f"failed to fetch JSON from {url}: {last_error}")
+
+
+def fetch_text(
+    url: str,
+    *,
+    headers: dict[str, str] | None = None,
+    timeout: int = 45,
+    retries: int = 2,
+) -> str:
+    """Fetch text/XML with the same retry behavior as JSON sources."""
+    request_headers = {"User-Agent": USER_AGENT, "Accept": "*/*"}
+    if headers:
+        request_headers.update(headers)
+
+    last_error: Exception | None = None
+    for attempt in range(retries + 1):
+        req = urllib.request.Request(url, headers=request_headers)
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                charset = resp.headers.get_content_charset() or "utf-8"
+                return resp.read().decode(charset, errors="replace")
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, UnicodeDecodeError) as exc:
+            last_error = exc
+            if attempt >= retries:
+                break
+            time.sleep(2**attempt)
+
+    raise RuntimeError(f"failed to fetch text from {url}: {last_error}")

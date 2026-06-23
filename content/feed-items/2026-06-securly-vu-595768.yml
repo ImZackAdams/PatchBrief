@@ -1,0 +1,37 @@
+id: 2026-06-securly-vu-595768
+slug: 2026-06-securly-vu-595768
+external_id: VU-595768
+source: cert_vu
+date: '2026-06-03'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#595768: Securly Chrome Extension contains multiple weak encryption and
+  access control vulnerabilities'
+summary: 'Overview Version 3.0.7 of the Securly Chrome Extension contains multiple
+  vulnerabilities involving insecure data transmission, weak cryptography, and improper
+  access control. These issues may expose sensitive filtering rules, enable the manipulation
+  of downloaded configuration files, and allow unauthenticated access to protected
+  resources. An attacker could exploit these weakness to steal configuration information,
+  induce a Denial of Service (DoS), or modify content blocking rules for student users.
+  Description The Securly Chrome Extension is a browser add-on commonly used in K–12
+  school-managed Chromebooks to enforce internet safety policies, filter or block
+  websites, and provide activity monitoring for students. It is an element of the
+  Securly classroom management platform, which helps schools comply with web filtering
+  requirements and... Related CVEs: CVE-2026-8874, CVE-2026-8876, CVE-2026-8878, CVE-2026-8879.'
+vendor: Securly
+product: Chrome Extension
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Chrome Extension where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#595768
+  url: https://kb.cert.org/vuls/id/595768
+tags:
+- vu-595768
+- coordinated-disclosure
+- securly
+- cert-vu
+is_sample: false

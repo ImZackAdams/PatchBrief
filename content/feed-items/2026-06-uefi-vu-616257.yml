@@ -1,0 +1,38 @@
+id: 2026-06-uefi-vu-616257
+slug: 2026-06-uefi-vu-616257
+external_id: VU-616257
+source: cert_vu
+date: '2026-06-09'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#616257: Microsoft-signed UEFI shim bootloaders vulnerable to Secure Boot
+  bypass'
+summary: 'Overview Microsoft-signed UEFI bootloaders of the open-source shim project,
+  primarily from version 0.9 and earlier, were identified as vulnerable to Secure
+  Boot bypass. To mitigate this risk, the affected bootloaders will be added to the
+  Microsoft UEFI Forbidden Signature Database (DBX). Once the DBX update is applied,
+  these bootloaders will no longer be trusted for execution during the boot process.
+  An attacker could exploit these vulnerable shim bootloaders using a Bring Your Own
+  Vulnerable Driver (BYOVD)-style technique to execute arbitrary code during the early
+  boot phase, prior to operating system initialization, thereby bypassing Secure Boot
+  protections. Description The Unified Extensible Firmware Interface (UEFI) standard
+  defines the modern firmware architecture used to initialize hardware and transfer
+  control to the operating... Related CVEs: CVE-2026-10797, CVE-2026-8863.'
+vendor: UEFI
+product: applications and drivers must be cryptographically signed and verified
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for applications and drivers must be cryptographically signed and verified where
+  available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#616257
+  url: https://kb.cert.org/vuls/id/616257
+tags:
+- vu-616257
+- coordinated-disclosure
+- uefi
+- cert-vu
+is_sample: false

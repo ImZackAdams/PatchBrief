@@ -17,8 +17,8 @@ on:
         type: boolean
         default: false
       sources:
-        description: "Comma-separated sources: cisa_kev,nvd,github_advisory"
-        default: "cisa_kev,nvd,github_advisory"
+        description: "Comma-separated sources: cisa_kev,msrc,github_advisory,nvd,cert_vu,exploitdb"
+        default: "cisa_kev,msrc,github_advisory,nvd,cert_vu,exploitdb"
         required: false
       digest_only:
         description: "Generate digest only, skip ingest + build"
@@ -69,7 +69,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           DAYS="${{ github.event.inputs.days || '3' }}"
-          SOURCES="${{ github.event.inputs.sources || 'cisa_kev,nvd,github_advisory' }}"
+          SOURCES="${{ github.event.inputs.sources || 'cisa_kev,msrc,github_advisory,nvd,cert_vu,exploitdb' }}"
           KEV_FLAG=""
           if [ "${{ github.event.inputs.kev_only }}" = "true" ]; then
             KEV_FLAG="--kev-only"

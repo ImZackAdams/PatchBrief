@@ -4,53 +4,348 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-06-23T20:13:35Z",
-  "total_items": 99,
+  "generated": "2026-06-23T20:35:48Z",
+  "total_items": 126,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-06-23T20:13:35Z",
-    "source_count": 4,
+    "generated": "2026-06-23T20:35:48Z",
+    "source_count": 7,
     "sources": [
       {
         "id": "cisa_kev",
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
-        "status": "pending",
+        "status": "ok",
+        "items_seen": 4,
+        "started_at": "2026-06-23T20:27:35Z",
+        "finished_at": "2026-06-23T20:27:35Z"
+      },
+      {
+        "id": "msrc",
+        "label": "Microsoft Security Update Guide",
+        "role": "source",
+        "status": "ok",
         "items_seen": 0,
-        "started_at": null,
-        "finished_at": null
+        "started_at": "2026-06-23T20:27:35Z",
+        "finished_at": "2026-06-23T20:27:35Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
-        "status": "pending",
-        "items_seen": 0,
-        "started_at": null,
-        "finished_at": null
+        "status": "ok",
+        "items_seen": 1,
+        "started_at": "2026-06-23T20:27:35Z",
+        "finished_at": "2026-06-23T20:27:49Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
-        "status": "pending",
+        "status": "ok",
+        "items_seen": 1,
+        "started_at": "2026-06-23T20:27:49Z",
+        "finished_at": "2026-06-23T20:27:49Z"
+      },
+      {
+        "id": "cert_vu",
+        "label": "CERT/CC Vulnerability Notes",
+        "role": "source",
+        "status": "ok",
+        "items_seen": 1,
+        "started_at": "2026-06-23T20:27:49Z",
+        "finished_at": "2026-06-23T20:27:50Z"
+      },
+      {
+        "id": "exploitdb",
+        "label": "Exploit-DB verified exploits",
+        "role": "source",
+        "status": "ok",
         "items_seen": 0,
-        "started_at": null,
-        "finished_at": null
+        "started_at": "2026-06-23T20:27:50Z",
+        "finished_at": "2026-06-23T20:27:51Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
-        "status": "pending",
-        "items_seen": 0,
-        "started_at": null,
-        "finished_at": null
+        "status": "ok",
+        "items_seen": 5,
+        "started_at": "2026-06-23T20:27:51Z",
+        "finished_at": "2026-06-23T20:27:51Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-06-lantronix-cve-2025-67038",
+      "slug": "2026-06-lantronix-cve-2025-67038",
+      "url": "https://www.patchbrief.org/items/2026-06-lantronix-cve-2025-67038.html",
+      "date": "2026-06-23",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Lantronix EDS5000 Code Injection Vulnerability",
+      "summary": "Lantronix EDS5000 contains a code injection vulnerability that could allow attackers to inject arbitrary OS commands into the username parameter. Injected commands are executed with root privileges.",
+      "vendor": "Lantronix",
+      "product": "EDS5000",
+      "cve": "CVE-2025-67038",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2025-67038 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-06-26. Treat remediation as urgent.",
+      "tags": [
+        "cve-2025-67038",
+        "kev",
+        "lantronix",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2025-67038",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67038"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-pypi-ghsa-phv5-334h-mxcw",
+      "slug": "2026-06-pypi-ghsa-phv5-334h-mxcw",
+      "url": "https://www.patchbrief.org/items/2026-06-pypi-ghsa-phv5-334h-mxcw.html",
+      "date": "2026-06-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "motionEye Partial Authentication Bypass: Unauthenticated Admin Credential Theft via Path Traversal",
+      "summary": "motionEye Partial Authentication Bypass: Unauthenticated Admin Credential Theft via Path Traversal",
+      "vendor": "PyPI",
+      "product": "motioneye",
+      "cve": null,
+      "operator_check": "Check whether motioneye is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 10.0.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for motioneye. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-phv5-334h-mxcw",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-phv5-334h-mxcw",
+          "url": "https://github.com/advisories/GHSA-phv5-334h-mxcw"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/motioneye-project/motioneye/security/advisories/GHSA-phv5-334h-mxcw"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-ubiquiti-cve-2026-34908",
+      "slug": "2026-06-ubiquiti-cve-2026-34908",
+      "url": "https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34908.html",
+      "date": "2026-06-23",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Ubiquiti UniFi OS Improper Access Control Vulnerability",
+      "summary": "Ubiquiti UniFi OS contains an improper access control vulnerability which could allow a malicious actor with access to the network to make unauthorized changes to the system.",
+      "vendor": "Ubiquiti",
+      "product": "UniFi OS",
+      "cve": "CVE-2026-34908",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-34908 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-06-26. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-34908",
+        "kev",
+        "ubiquiti",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-34908",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34908"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-ubiquiti-cve-2026-34909",
+      "slug": "2026-06-ubiquiti-cve-2026-34909",
+      "url": "https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34909.html",
+      "date": "2026-06-23",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Ubiquiti UniFi OS Path Traversal Vulnerability",
+      "summary": "Ubiquiti UniFi OS contains a path traversal vulnerability which could allow a malicious actor with access to the network to access files on the underlying system that could be manipulated to access an underlying account.",
+      "vendor": "Ubiquiti",
+      "product": "UniFi OS",
+      "cve": "CVE-2026-34909",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-34909 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-06-26. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-34909",
+        "kev",
+        "ubiquiti",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-34909",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34909"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-ubiquiti-cve-2026-34910",
+      "slug": "2026-06-ubiquiti-cve-2026-34910",
+      "url": "https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34910.html",
+      "date": "2026-06-23",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Ubiquiti UniFi OS Improper Input Validation Vulnerability",
+      "summary": "Ubiquiti UniFi OS contains an improper input validation vulnerability which could allow a malicious actor with access to the network to conduct command injection.",
+      "vendor": "Ubiquiti",
+      "product": "UniFi OS",
+      "cve": "CVE-2026-34910",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-34910 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-06-26. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-34910",
+        "kev",
+        "ubiquiti",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-34910",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34910"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-faststone-vu-936962",
+      "slug": "2026-06-faststone-vu-936962",
+      "url": "https://www.patchbrief.org/items/2026-06-faststone-vu-936962.html",
+      "date": "2026-06-22",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#936962: Multiple file parsing vulnerabilities in FastStone Image Viewer 8.3.0.0",
+      "summary": "Overview Two vulnerabilities have been identified in FastStone Image Viewer 8.3 that may allow remote code execution or control-flow corruption when processing specially crafted image files. The affected components include the JPEG 2000 (JP2) parser and the PSD file parser. An attacker can exploit these vulnerabilities by causing the application to automatically or interactively process malicious image files. Description FastStone Image Viewer is a software tool for browsing, editing, and managing images, offering features like full‑screen viewing, batch processing, red‑eye removal, and a wide range of editing effects. It supports virtually all major image and RAW formats and includes conveniences like slideshows, comparison tools, scanner support, and screen capture. CVE-2026-30040 A critical heap-based buffer overflow vulnerability... Related CVEs: CVE-2026-30040, CVE-2026-30041.",
+      "vendor": "FastStone",
+      "product": "Image Viewer 8.3.0.0",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Image Viewer 8.3.0.0 where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-936962",
+        "coordinated-disclosure",
+        "faststone",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#936962",
+          "url": "https://kb.cert.org/vuls/id/936962"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-messagepack-cve-2026-48509",
+      "slug": "2026-06-messagepack-cve-2026-48509",
+      "url": "https://www.patchbrief.org/items/2026-06-messagepack-cve-2026-48509.html",
+      "date": "2026-06-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Messagepack Messagepack — CVE-2026-48509 (Critical)",
+      "summary": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, the parameterless MessagePackInputFormatter() constructor uses default serializer options, which resolve to MessagePackSerializerOptions.Standard with MessagePackSecurity.TrustedData. The formatter is designed for ASP.NET Core MVC request bodies, which commonly cross an HTTP trust boundary. This insecure default can expose applications to denial-of-service attacks that MessagePackSecurity.UntrustedData is intended to mitigate, such as hash-collision attacks against dictionary-like model properties. This vulnerab",
+      "vendor": "Messagepack",
+      "product": "Messagepack",
+      "cve": "CVE-2026-48509",
+      "operator_check": "Review CVE-2026-48509 in your asset inventory. Apply patches per vendor guidance and verify Messagepack is not exposed. CVSS score: 9.1. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Messagepack Messagepack. Patch or mitigate promptly. EPSS percentile: 13%.",
+      "tags": [
+        "cve-2026-48509",
+        "vendor-advisory",
+        "messagepack",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-48509",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48509"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-2f33-pr97-265q"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-vu-226679",
+      "slug": "2026-06-microsoft-vu-226679",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-vu-226679.html",
+      "date": "2026-06-22",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#226679: Microsoft WinRE allows for bypass of UEFI/BIOS password enforcement",
+      "summary": "Overview Microsoft Windows Recovery Environment (WinRE) provides a mechanism for recovering and repairing Windows systems using an alternate boot environment. Under certain platform implementations, access to WinRE may allow an attacker to bypass firmware security controls, including administrator-configured UEFI/BIOS passwords. An attacker with physical or administrative access to a device may be able to leverage WinRE-related boot mechanisms to circumvent firmware protections and gain unauthorized access to system resources. Description Microsoft Windows versions 10 and 11 include the WinRE capability, a recovery platform that supports features such as the F11 recovery menu and the Reset this PC functionalities. WinRE is commonly used for system recovery, troubleshooting, and remote support scenarios. When WinRE is invoked, the system...",
+      "vendor": "Microsoft",
+      "product": "WinRE",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for WinRE where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-226679",
+        "coordinated-disclosure",
+        "microsoft",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#226679",
+          "url": "https://kb.cert.org/vuls/id/226679"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-multiple-vendors-vu-457458",
+      "slug": "2026-06-multiple-vendors-vu-457458",
+      "url": "https://www.patchbrief.org/items/2026-06-multiple-vendors-vu-457458.html",
+      "date": "2026-06-18",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#457458: Vendor-signed UEFI applications found vulnerable to Secure Boot bypass",
+      "summary": "Overview Multiple vendor-signed UEFI applications are vulnerable to Secure Boot bypass via a \"Bring Your Own Vulnerable Driver\" (BYOVD)-style attack. If a target system trusts the affected vendor’s certificate, an attacker can exploit these applications to execute arbitrary code during the early pre-boot phase before the operating system initializes. To mitigate this risk, system administrators should apply updates to the UEFI Forbidden Signature Database (DBX) that revoke trust in the affected vendor-signed binaries, preventing these vulnerable applications from executing during the boot process. Description The Unified Extensible Firmware Interface ( UEFI ) standard defines the modern firmware architecture used to initialize hardware and transfer control to the operating system during system startup. On systems with Secure Boot...",
+      "vendor": "Multiple vendors",
+      "product": "Vendor-signed UEFI applications",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Vendor-signed UEFI applications where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-457458",
+        "coordinated-disclosure",
+        "multiple-vendors",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#457458",
+          "url": "https://kb.cert.org/vuls/id/457458"
+        }
+      ]
+    },
     {
       "id": "2026-06-splunk-cve-2026-20253",
       "slug": "2026-06-splunk-cve-2026-20253",
@@ -180,6 +475,33 @@
         {
           "title": "Vendor reference",
           "url": "http://www.openwall.com/lists/oss-security/2026/06/17/8"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-signalrgb-vu-380058",
+      "slug": "2026-06-signalrgb-vu-380058",
+      "url": "https://www.patchbrief.org/items/2026-06-signalrgb-vu-380058.html",
+      "date": "2026-06-17",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#380058: SignalRGB kernel driver contains improper access control and IOCTL vulnerabilities",
+      "summary": "Overview The SignalRGB kernel driver, SignalIo.sys , contains two vulnerabilities involving improper access control and unsafe memory handling. The device object is created with an overly permissive Discretionary Access Control List (DACL) that allows user-mode processes to access privileged hardware operations through input/output control (IOCTL) commands. Additionally, several IOCTL handlers are susceptible to NULL pointer dereference conditions, which further enables low-privilege users to trigger kernel crashes and cause Denial of Service (DoS). Version 1.3.7.0 of the SignalRGB driver remediates these vulnerabilities. Description SignalRGB is a Windows application used for RGB lighting control and hardware monitoring. Its kernel component, SignalIo.sys , provides the low-level interfaces required to access and interact with hardware... Related CVEs: CVE-2026-8049, CVE-2026-8050.",
+      "vendor": "SignalRGB",
+      "product": "kernel driver",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for kernel driver where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-380058",
+        "coordinated-disclosure",
+        "signalrgb",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#380058",
+          "url": "https://kb.cert.org/vuls/id/380058"
         }
       ]
     },
@@ -334,6 +656,33 @@
       ]
     },
     {
+      "id": "2026-06-multiple-vendors-vu-862559",
+      "slug": "2026-06-multiple-vendors-vu-862559",
+      "url": "https://www.patchbrief.org/items/2026-06-multiple-vendors-vu-862559.html",
+      "date": "2026-06-11",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#862559: crypton-x509-validation Haskell libraries do not enforce X.509 NameConstraints",
+      "summary": "Overview A vulnerability has been discovered in the Haskell TLS software stack, commonly used by applications built in the Haskell programming language to securely connect to servers over the internet. Specifically, the libraries \"crypton-x509-validation\" fail to enforce a key security feature called NameConstraints, a standard defined in RFC 5280 that helps organizations control which domains a certificate authority (CA) is allowed to issue certificates for. This vulnerability allows an attacker with access to the sub-CA to create certificates that will validate successfully with any Haskell TLS connection, allowing the attacker access to full session visibility. Version 1.91 for crypton-x509-validation have been released to address the vulnerability, tracked as CVE-2026-9648. Description Haskell is a programming language often used in... Related CVEs: CVE-2026-9648.",
+      "vendor": "Multiple vendors",
+      "product": "crypton-x509-validation Haskell libraries do not enforce X.509 NameConstraints",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for crypton-x509-validation Haskell libraries do not enforce X.509 NameConstraints where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-862559",
+        "coordinated-disclosure",
+        "multiple-vendors",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#862559",
+          "url": "https://kb.cert.org/vuls/id/862559"
+        }
+      ]
+    },
+    {
       "id": "2026-06-arista-cve-2026-7473",
       "slug": "2026-06-arista-cve-2026-7473",
       "url": "https://www.patchbrief.org/items/2026-06-arista-cve-2026-7473.html",
@@ -420,6 +769,351 @@
         {
           "title": "NVD — CVE-2026-11645",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11645"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-32174",
+      "slug": "2026-06-microsoft-cve-2026-32174",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-32174.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Azure Bot Service Elevation of Privilege Vulnerability",
+      "summary": "Improper authentication in Azure Bot Service allows an authorized attacker to elevate privileges over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No.",
+      "vendor": "Microsoft",
+      "product": "Azure Bot Service",
+      "cve": "CVE-2026-32174",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-32174. Confirm whether Azure Bot Service is deployed, then apply the current security update or documented mitigation. CVSS score: 7.7. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 29%.",
+      "tags": [
+        "cve-2026-32174",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-32174"
+        },
+        {
+          "title": "NVD — CVE-2026-32174",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32174"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-32208",
+      "slug": "2026-06-microsoft-cve-2026-32208",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-32208.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Edge (Chromium-based) Spoofing Vulnerability",
+      "summary": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Edge (Chromium-based) allows an authorized attacker to perform spoofing over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-32208",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-32208. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 20%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 20%.",
+      "tags": [
+        "cve-2026-32208",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-32208"
+        },
+        {
+          "title": "NVD — CVE-2026-32208",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32208"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-42895",
+      "slug": "2026-06-microsoft-cve-2026-42895",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-42895.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Copilot Tampering Vulnerability",
+      "summary": "Improper neutralization of special elements used in a command ('command injection') in Microsoft Copilot allows an unauthorized attacker to perform tampering over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Copilot",
+      "cve": "CVE-2026-42895",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-42895. Confirm whether Microsoft Copilot is deployed, then apply the current security update or documented mitigation. CVSS score: 6.5. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 30%.",
+      "tags": [
+        "cve-2026-42895",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42895"
+        },
+        {
+          "title": "NVD — CVE-2026-42895",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42895"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-45472",
+      "slug": "2026-06-microsoft-cve-2026-45472",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-45472.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Office Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Office",
+      "cve": "CVE-2026-45472",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-45472. Confirm whether Microsoft Office is deployed, then apply the current security update or documented mitigation. CVSS score: 8.4. EPSS probability: 0.3%; percentile: 26%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 26%.",
+      "tags": [
+        "cve-2026-45472",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-45472"
+        },
+        {
+          "title": "NVD — CVE-2026-45472",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45472"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/officeupdates/microsoft365-apps-security-updates"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-45474",
+      "slug": "2026-06-microsoft-cve-2026-45474",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-45474.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Office Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Office",
+      "cve": "CVE-2026-45474",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-45474. Confirm whether Microsoft Office is deployed, then apply the current security update or documented mitigation. CVSS score: 8.4. EPSS probability: 0.4%; percentile: 28%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 28%.",
+      "tags": [
+        "cve-2026-45474",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-45474"
+        },
+        {
+          "title": "NVD — CVE-2026-45474",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45474"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/mac/microsoft-365-for-mac?msockid=35f9adb0e74b61392038b90de6fe608c"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-45480",
+      "slug": "2026-06-microsoft-cve-2026-45480",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-45480.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Azure Active Directory Elevation of Privilege Vulnerability",
+      "summary": "Improper authentication in Azure Active Directory allows an unauthorized attacker to elevate privileges over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Azure Active Directory",
+      "cve": "CVE-2026-45480",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-45480. Confirm whether Azure Active Directory is deployed, then apply the current security update or documented mitigation. CVSS score: 10.0. EPSS probability: 0.6%; percentile: 43%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 43%.",
+      "tags": [
+        "cve-2026-45480",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-45480"
+        },
+        {
+          "title": "NVD — CVE-2026-45480",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45480"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-47633",
+      "slug": "2026-06-microsoft-cve-2026-47633",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-47633.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Cost Management Information Disclosure Vulnerability",
+      "summary": "Exposure of sensitive information to an unauthorized actor in Cost Management Interactive Experiences allows an unauthorized attacker to disclose information over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Cost Management Interactive Experiences",
+      "cve": "CVE-2026-47633",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-47633. Confirm whether Cost Management Interactive Experiences is deployed, then apply the current security update or documented mitigation. CVSS score: 7.5. EPSS probability: 0.6%; percentile: 43%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 43%.",
+      "tags": [
+        "cve-2026-47633",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-47633"
+        },
+        {
+          "title": "NVD — CVE-2026-47633",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47633"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-47644",
+      "slug": "2026-06-microsoft-cve-2026-47644",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-47644.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Copilot Chat (Microsoft Edge) Information Disclosure Vulnerability",
+      "summary": "Improper neutralization of special elements in output used by a downstream component ('injection') in Copilot Chat (Microsoft Edge) allows an unauthorized attacker to disclose information over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Copilot Chat (Microsoft Edge)",
+      "cve": "CVE-2026-47644",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-47644. Confirm whether Copilot Chat (Microsoft Edge) is deployed, then apply the current security update or documented mitigation. CVSS score: 6.5. EPSS probability: 0.7%; percentile: 50%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 50%.",
+      "tags": [
+        "cve-2026-47644",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-47644"
+        },
+        {
+          "title": "NVD — CVE-2026-47644",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47644"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-47655",
+      "slug": "2026-06-microsoft-cve-2026-47655",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-47655.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Graph Information Disclosure Vulnerability",
+      "summary": "Exposure of sensitive information to an unauthorized actor in Microsoft Graph allows an authorized attacker to disclose information over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Graph",
+      "cve": "CVE-2026-47655",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-47655. Confirm whether Microsoft Graph is deployed, then apply the current security update or documented mitigation. CVSS score: 6.5. EPSS probability: 0.8%; percentile: 50%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 50%.",
+      "tags": [
+        "cve-2026-47655",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-47655"
+        },
+        {
+          "title": "NVD — CVE-2026-47655",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47655"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-microsoft-cve-2026-54130",
+      "slug": "2026-06-microsoft-cve-2026-54130",
+      "url": "https://www.patchbrief.org/items/2026-06-microsoft-cve-2026-54130.html",
+      "date": "2026-06-09",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "M365 Copilot Information Disclosure Vulnerability",
+      "summary": "Missing authentication for critical function in M365 Copilot allows an unauthorized attacker to disclose information over a network. Published in June 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "M365 Copilot",
+      "cve": "CVE-2026-54130",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-54130. Confirm whether M365 Copilot is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.5%; percentile: 39%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 39%.",
+      "tags": [
+        "cve-2026-54130",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jun Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-54130"
+        },
+        {
+          "title": "NVD — CVE-2026-54130",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54130"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-uefi-vu-616257",
+      "slug": "2026-06-uefi-vu-616257",
+      "url": "https://www.patchbrief.org/items/2026-06-uefi-vu-616257.html",
+      "date": "2026-06-09",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#616257: Microsoft-signed UEFI shim bootloaders vulnerable to Secure Boot bypass",
+      "summary": "Overview Microsoft-signed UEFI bootloaders of the open-source shim project, primarily from version 0.9 and earlier, were identified as vulnerable to Secure Boot bypass. To mitigate this risk, the affected bootloaders will be added to the Microsoft UEFI Forbidden Signature Database (DBX). Once the DBX update is applied, these bootloaders will no longer be trusted for execution during the boot process. An attacker could exploit these vulnerable shim bootloaders using a Bring Your Own Vulnerable Driver (BYOVD)-style technique to execute arbitrary code during the early boot phase, prior to operating system initialization, thereby bypassing Secure Boot protections. Description The Unified Extensible Firmware Interface (UEFI) standard defines the modern firmware architecture used to initialize hardware and transfer control to the operating... Related CVEs: CVE-2026-10797, CVE-2026-8863.",
+      "vendor": "UEFI",
+      "product": "applications and drivers must be cryptographically signed and verified",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for applications and drivers must be cryptographically signed and verified where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-616257",
+        "coordinated-disclosure",
+        "uefi",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#616257",
+          "url": "https://kb.cert.org/vuls/id/616257"
         }
       ]
     },
@@ -544,6 +1238,33 @@
       ]
     },
     {
+      "id": "2026-06-securly-vu-595768",
+      "slug": "2026-06-securly-vu-595768",
+      "url": "https://www.patchbrief.org/items/2026-06-securly-vu-595768.html",
+      "date": "2026-06-03",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#595768: Securly Chrome Extension contains multiple weak encryption and access control vulnerabilities",
+      "summary": "Overview Version 3.0.7 of the Securly Chrome Extension contains multiple vulnerabilities involving insecure data transmission, weak cryptography, and improper access control. These issues may expose sensitive filtering rules, enable the manipulation of downloaded configuration files, and allow unauthenticated access to protected resources. An attacker could exploit these weakness to steal configuration information, induce a Denial of Service (DoS), or modify content blocking rules for student users. Description The Securly Chrome Extension is a browser add-on commonly used in K–12 school-managed Chromebooks to enforce internet safety policies, filter or block websites, and provide activity monitoring for students. It is an element of the Securly classroom management platform, which helps schools comply with web filtering requirements and... Related CVEs: CVE-2026-8874, CVE-2026-8876, CVE-2026-8878, CVE-2026-8879.",
+      "vendor": "Securly",
+      "product": "Chrome Extension",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Chrome Extension where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-595768",
+        "coordinated-disclosure",
+        "securly",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#595768",
+          "url": "https://kb.cert.org/vuls/id/595768"
+        }
+      ]
+    },
+    {
       "id": "2026-06-android-cve-2025-48595",
       "slug": "2026-06-android-cve-2025-48595",
       "url": "https://www.patchbrief.org/items/2026-06-android-cve-2025-48595.html",
@@ -574,6 +1295,60 @@
       ]
     },
     {
+      "id": "2026-06-appsmiths-vu-265691",
+      "slug": "2026-06-appsmiths-vu-265691",
+      "url": "https://www.patchbrief.org/items/2026-06-appsmiths-vu-265691.html",
+      "date": "2026-06-02",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#265691: Appsmiths SQL Query autocomplete renderer contains a cross site scripting vulnerability",
+      "summary": "Overview A stored cross-site scripting (XSS) vulnerability has been discovered in Appsmith, specifically in the CodeMirror based SQL query editor’s autocomplete renderer. CVE-2026-7299 has been assigned to track the vulnerability. An attacker with developer level access to a shared PostgreSQL datasource can inject arbitrary JavaScript by creating malicious database objects whose names contain XSS payloads. Successful exploitation leads to arbitrary JavaScript execution in the browser of any workspace member who triggers SQL autocomplete, enabling session hijacking, privilege escalation, or credential theft. Version 2.1 of Appsmith fixes CVE-2026-7299. Description Appsmith is an open source, low code platform intended to allow developers to build internal tools, dashboards, and applications using a UI builder, database and API... Related CVEs: CVE-2026-7299.",
+      "vendor": "Appsmiths",
+      "product": "SQL Query autocomplete renderer",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for SQL Query autocomplete renderer where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-265691",
+        "coordinated-disclosure",
+        "appsmiths",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#265691",
+          "url": "https://kb.cert.org/vuls/id/265691"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-collibra-vu-873170",
+      "slug": "2026-06-collibra-vu-873170",
+      "url": "https://www.patchbrief.org/items/2026-06-collibra-vu-873170.html",
+      "date": "2026-06-02",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#873170: Collibra Agent contains improper authentication and path traversal vulnerabilities",
+      "summary": "Overview The Collibra Platform Agent contains vulnerabilities that can be chained by a remote, unauthenticated attacker to achieve remote code execution. An attacker can exploit these issues by uploading a crafted ZIP archive that writes attacker-controlled files to arbitrary locations on the server once extracted, resulting in code execution. Description Collibra Platform (CP) and Collibra Platform Self-Hosted (CPSH), an enterprise grade, cloud-based platform designed to help organizations locate, understand, trust, and manage their data assets. The Collibra Agent of CP and CPSH that is installed on the host system is an independent service that listens on different port than the web interface and have the following vulnerabilities. CVE-2026-10622 Privileged REST endpoints exposed under /rest/* do not properly enforce authentication or... Related CVEs: CVE-2026-10621, CVE-2026-10622.",
+      "vendor": "Collibra",
+      "product": "Agent",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Agent where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-873170",
+        "coordinated-disclosure",
+        "collibra",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#873170",
+          "url": "https://kb.cert.org/vuls/id/873170"
+        }
+      ]
+    },
+    {
       "id": "2026-06-linux-cve-2022-0492",
       "slug": "2026-06-linux-cve-2022-0492",
       "url": "https://www.patchbrief.org/items/2026-06-linux-cve-2022-0492.html",
@@ -600,6 +1375,33 @@
         {
           "title": "NVD — CVE-2022-0492",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0492"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-verizon-vu-615987",
+      "slug": "2026-06-verizon-vu-615987",
+      "url": "https://www.patchbrief.org/items/2026-06-verizon-vu-615987.html",
+      "date": "2026-06-02",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#615987: Missing IPsec Integrity Protection for IMS SIP Signaling in Verizon VoLTE Deployments",
+      "summary": "Overview VoLTE deployments on Verizon’s IMS network have operated without negotiated SIP integrity protection. In observed test conditions, SIP signaling—including registration, call setup, and messaging—traveled without IPsec ESP encapsulation and without SIP Security Agreement headers, exposing it to interception and modification by on-path attackers. Recent carrier configuration updates, including Apple’s iOS 26.5 carrier bundle released on May 11, 2026, include IMS IPsec–related settings. However, such configuration entries do not confirm active deployment, successful negotiation, or functional protection in production. Description CVE-2026-10629 Verizon IMS deployments were observed transmitting SIP signaling without integrity protection. REGISTER exchanges lacked Security-Client, Security-Server, and Security-Verify headers, and no... Related CVEs: CVE-2026-10629.",
+      "vendor": "Verizon",
+      "product": "VoLTE Deployments",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for VoLTE Deployments where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-615987",
+        "coordinated-disclosure",
+        "verizon",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#615987",
+          "url": "https://kb.cert.org/vuls/id/615987"
         }
       ]
     },
@@ -3122,6 +3924,37 @@
         {
           "title": "Vendor reference",
           "url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-6547-8hrg-c55m"
+        }
+      ]
+    },
+    {
+      "id": "2025-07-invision-cve-2025-48932",
+      "slug": "2025-07-invision-cve-2025-48932",
+      "url": "https://www.patchbrief.org/items/2025-07-invision-cve-2025-48932.html",
+      "date": "2025-07-28",
+      "type": "Exploit activity",
+      "signal": "Threat activity",
+      "title": "Invision Community 4.7.20 - (calendar/view.php) SQL Injection",
+      "summary": "Exploit-DB published a verified webapps entry for Invision Community 4.7.20 - (calendar/view.php) SQL Injection. Platform: multiple. Related CVEs: CVE-2025-48932.",
+      "vendor": "Invision",
+      "product": "Community",
+      "cve": "CVE-2025-48932",
+      "operator_check": "Treat this as a public exploit availability signal. Check whether Community is present or exposed, then prioritize patching, mitigation, or compensating controls before routine severity-only items.",
+      "why_it_matters": "A verified Exploit-DB entry means public exploit details or proof-of-concept code are available, which can compress the time from disclosure to opportunistic testing.",
+      "tags": [
+        "cve-2025-48932",
+        "exploit-activity",
+        "invision",
+        "exploitdb"
+      ],
+      "sources": [
+        {
+          "title": "Exploit-DB EDB-52383",
+          "url": "https://www.exploit-db.com/exploits/52383"
+        },
+        {
+          "title": "NVD — CVE-2025-48932",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48932"
         }
       ]
     }

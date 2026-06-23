@@ -1,0 +1,37 @@
+id: 2026-06-appsmiths-vu-265691
+slug: 2026-06-appsmiths-vu-265691
+external_id: VU-265691
+source: cert_vu
+date: '2026-06-02'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#265691: Appsmiths SQL Query autocomplete renderer contains a cross site
+  scripting vulnerability'
+summary: 'Overview A stored cross-site scripting (XSS) vulnerability has been discovered
+  in Appsmith, specifically in the CodeMirror based SQL query editor’s autocomplete
+  renderer. CVE-2026-7299 has been assigned to track the vulnerability. An attacker
+  with developer level access to a shared PostgreSQL datasource can inject arbitrary
+  JavaScript by creating malicious database objects whose names contain XSS payloads.
+  Successful exploitation leads to arbitrary JavaScript execution in the browser of
+  any workspace member who triggers SQL autocomplete, enabling session hijacking,
+  privilege escalation, or credential theft. Version 2.1 of Appsmith fixes CVE-2026-7299.
+  Description Appsmith is an open source, low code platform intended to allow developers
+  to build internal tools, dashboards, and applications using a UI builder, database
+  and API... Related CVEs: CVE-2026-7299.'
+vendor: Appsmiths
+product: SQL Query autocomplete renderer
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for SQL Query autocomplete renderer where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#265691
+  url: https://kb.cert.org/vuls/id/265691
+tags:
+- vu-265691
+- coordinated-disclosure
+- appsmiths
+- cert-vu
+is_sample: false

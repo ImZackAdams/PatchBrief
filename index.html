@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="PatchBrief delivers daily operator-ready security briefs from CISA KEV, NVD, GitHub Security Advisories, and EPSS-enriched vulnerability signals." />
+    <meta name="description" content="PatchBrief delivers daily operator-ready security briefs from CISA KEV, MSRC Patch Tuesday, NVD, GitHub Security Advisories, CERT/CC, Exploit-DB, and EPSS-enriched vulnerability signals." />
     <meta name="theme-color" content="#15211f" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="PatchBrief | Security intel feed for operators" />
     <meta property="og:description" content="Daily briefs on exploited vulnerabilities, critical advisories, open-source security advisories, and high-signal threat activity." />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="PatchBrief | Security intel feed for operators" />
-    <meta name="twitter:description" content="Daily source-backed briefs from CISA KEV, NVD, GitHub Security Advisories, and EPSS-enriched signals." />
+    <meta name="twitter:description" content="Daily source-backed briefs from CISA KEV, MSRC, NVD, GitHub Security Advisories, CERT/CC, Exploit-DB, and EPSS-enriched signals." />
     <link rel="alternate" type="application/rss+xml" title="PatchBrief RSS" href="/rss.xml" />
     <title>PatchBrief | Security intel feed for operators</title>
     <style>
@@ -199,9 +199,10 @@
           <p class="eyebrow">Live security intelligence feed</p>
           <h1>Know what to patch before it turns into work.</h1>
           <p class="hero-lede">
-            PatchBrief turns CISA KEV, NVD critical CVEs, GitHub Security Advisories,
-            and EPSS-enriched signals into short operator briefs with source links,
-            impact context, and the next check to run.
+            PatchBrief turns CISA KEV, MSRC Patch Tuesday, NVD critical CVEs,
+            GitHub Security Advisories, CERT/CC notes, Exploit-DB signals, and
+            EPSS enrichment into short operator briefs with source links, impact
+            context, and the next check to run.
           </p>
           <div class="cta-row">
             <a class="button primary lg" href="feed.html">Read the live feed</a>
@@ -215,9 +216,10 @@
       <div class="stats-bar" aria-label="Feed statistics">
         <div class="wrap">
           <div class="stats-row">
-            <span class="stat"><span class="stat-dot"></span> <strong>90+</strong> current briefs</span>
+            <span class="stat"><span class="stat-dot"></span> <strong>126</strong> current briefs</span>
             <span class="stat"><span class="stat-dot"></span> <strong>CISA KEV</strong> monitored daily</span>
-            <span class="stat"><span class="stat-dot"></span> <strong>NVD + GitHub</strong> advisory intake</span>
+            <span class="stat"><span class="stat-dot"></span> <strong>MSRC + CERT/CC</strong> intake</span>
+            <span class="stat"><span class="stat-dot"></span> <strong>NVD + GitHub</strong> coverage</span>
             <span class="stat"><span class="stat-dot"></span> <strong>EPSS</strong> enrichment</span>
             <span class="stat"><span class="stat-dot"></span> Pipeline runs every <strong>24 hours</strong></span>
             <span class="stat"><span class="stat-dot"></span> Free tier forever</span>
@@ -240,7 +242,7 @@
             <article class="feature-card">
               <div class="feature-icon">&#x1F4CB;</div>
               <h3>Critical vendor advisories</h3>
-              <p>NVD critical CVEs are filtered, normalized, and paired with vendor, product, CVSS, and operator check fields.</p>
+              <p>MSRC Patch Tuesday and NVD critical CVEs are filtered, normalized, and paired with vendor, product, CVSS, and operator check fields.</p>
             </article>
             <article class="feature-card">
               <div class="feature-icon">&#x1F6E1;&#xFE0F;</div>
@@ -302,7 +304,7 @@
             </article>
           </div>
           <div class="cta-row">
-            <a class="button primary" href="feed.html">Open full feed (90+ items)</a>
+            <a class="button primary" href="feed.html">Open full feed (126 items)</a>
             <a class="button" href="rss.xml">Subscribe via RSS</a>
           </div>
         </div>
@@ -322,9 +324,9 @@
               <p class="plan-name">Free</p>
               <p class="plan-price">$0</p>
               <p class="plan-period">forever</p>
-              <p class="plan-desc">Full public feed with KEV, NVD, and GitHub advisory records. No account required.</p>
+              <p class="plan-desc">Full public feed with KEV, Patch Tuesday, vendor advisory, coordinated disclosure, and exploit activity records. No account required.</p>
               <ul class="plan-features">
-                <li>Live public feed (90+ current briefs)</li>
+                <li>Live public feed (126 current briefs)</li>
                 <li>RSS subscription</li>
                 <li>JSON API feed</li>
                 <li>365-day public window</li>
@@ -386,11 +388,11 @@
           <div class="faq-list">
             <div class="faq-item">
               <h3>Where does the data come from?</h3>
-              <p>CISA Known Exploited Vulnerabilities, NVD critical CVEs, GitHub Security Advisories, FIRST EPSS, and selected public threat activity sources. PatchBrief summarizes and links back to the original source.</p>
+              <p>CISA Known Exploited Vulnerabilities, Microsoft Security Update Guide, NVD critical CVEs, GitHub Security Advisories, CERT/CC Vulnerability Notes, Exploit-DB, and FIRST EPSS. PatchBrief summarizes and links back to the original source.</p>
             </div>
             <div class="faq-item">
               <h3>How is this different from just watching the CISA KEV feed?</h3>
-              <p>CISA KEV confirms known exploitation. PatchBrief adds operator context, source links, EPSS enrichment when available, and adjacent NVD/GitHub advisory coverage in one feed.</p>
+              <p>CISA KEV confirms known exploitation. PatchBrief adds operator context, source links, EPSS enrichment when available, and adjacent MSRC, NVD, GitHub, CERT/CC, and exploit-release coverage in one feed.</p>
             </div>
             <div class="faq-item">
               <h3>What does the vendor watchlist do?</h3>

@@ -4,8 +4,9 @@
 
 PatchBrief is a source-backed security intelligence feed for operators.
 
-It tracks known exploited vulnerabilities, critical CVEs, GitHub-reviewed open-source
-advisories, EPSS exploitation-likelihood signals, and selected public threat activity,
+It tracks known exploited vulnerabilities, Patch Tuesday releases, critical CVEs,
+GitHub-reviewed open-source advisories, CERT/CC coordinated disclosures,
+verified exploit releases, and EPSS exploitation-likelihood signals,
 then turns them into short briefs built for patch triage.
 
 ## Product model
@@ -15,7 +16,7 @@ then turns them into short briefs built for patch triage.
 | **Public feed** | Active production feed |
 | **RSS** | Active |
 | **JSON feed** | Active with source metadata |
-| **Multi-source ingest** | CISA KEV, NVD, GitHub Security Advisories, FIRST EPSS |
+| **Multi-source ingest** | CISA KEV, MSRC, NVD, GitHub Security Advisories, CERT/CC, Exploit-DB, FIRST EPSS |
 | **Newsletter interest list** | Active via FormSubmit |
 | **Monetization** | Active — checkout funnel, paid watchlist onboarding, Stripe link config |
 
@@ -79,11 +80,13 @@ This checks feed content, duplicate IDs/slugs, and source-health metadata.
 ```bash
 python -m patchbrief.cli ingest \
   --days 3 \
-  --sources cisa_kev,nvd,github_advisory
+  --sources cisa_kev,msrc,github_advisory,nvd,cert_vu,exploitdb
 ```
 
-By default, ingest fetches CISA KEV, NVD critical CVEs, GitHub Security Advisories,
-and enriches CVE-backed items with FIRST EPSS scores. The command writes source-health
+By default, ingest fetches CISA KEV, Microsoft Security Update Guide, GitHub
+Security Advisories, NVD critical CVEs, CERT/CC Vulnerability Notes, and
+Exploit-DB verified exploit entries. CVE-backed items are enriched with FIRST
+EPSS scores. The command writes source-health
 metadata to `content/source-status.json`, which is then included in `feed.json`.
 
 Optional flags:
