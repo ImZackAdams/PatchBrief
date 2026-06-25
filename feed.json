@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-06-24T11:45:55Z",
-  "total_items": 158,
+  "generated": "2026-06-25T11:41:08Z",
+  "total_items": 166,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-06-24T11:45:55Z",
+    "generated": "2026-06-25T11:41:08Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 4,
-        "started_at": "2026-06-24T11:45:19Z",
-        "finished_at": "2026-06-24T11:45:20Z"
+        "started_at": "2026-06-25T11:40:53Z",
+        "finished_at": "2026-06-25T11:40:53Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-24T11:45:20Z",
-        "finished_at": "2026-06-24T11:45:20Z"
+        "started_at": "2026-06-25T11:40:53Z",
+        "finished_at": "2026-06-25T11:40:54Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-06-24T11:45:20Z",
-        "finished_at": "2026-06-24T11:45:53Z"
+        "items_seen": 9,
+        "started_at": "2026-06-25T11:40:54Z",
+        "finished_at": "2026-06-25T11:41:04Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-06-24T11:45:53Z",
-        "finished_at": "2026-06-24T11:45:53Z"
+        "started_at": "2026-06-25T11:41:04Z",
+        "finished_at": "2026-06-25T11:41:06Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-06-24T11:45:53Z",
-        "finished_at": "2026-06-24T11:45:54Z"
+        "started_at": "2026-06-25T11:41:06Z",
+        "finished_at": "2026-06-25T11:41:06Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,126 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-24T11:45:54Z",
-        "finished_at": "2026-06-24T11:45:55Z"
+        "started_at": "2026-06-25T11:41:06Z",
+        "finished_at": "2026-06-25T11:41:07Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 11,
-        "started_at": "2026-06-24T11:45:55Z",
-        "finished_at": "2026-06-24T11:45:55Z"
+        "items_seen": 19,
+        "started_at": "2026-06-25T11:41:07Z",
+        "finished_at": "2026-06-25T11:41:08Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-06-go-cve-2026-48708",
+      "slug": "2026-06-go-cve-2026-48708",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-48708.html",
+      "date": "2026-06-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OliveTin has a Concurrent Template Parsing Race Condition which Leads to Cross-Request Command Contamination",
+      "summary": "OliveTin has a Concurrent Template Parsing Race Condition which Leads to Cross-Request Command Contamination",
+      "vendor": "Go",
+      "product": "github.com/OliveTin/OliveTin",
+      "cve": "CVE-2026-48708",
+      "operator_check": "Check whether github.com/OliveTin/OliveTin is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/OliveTin/OliveTin. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-48708",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7fq5-7wr8-rjwj",
+          "url": "https://github.com/advisories/GHSA-7fq5-7wr8-rjwj"
+        },
+        {
+          "title": "NVD — CVE-2026-48708",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48708"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OliveTin/OliveTin/security/advisories/GHSA-7fq5-7wr8-rjwj"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-maven-cve-2026-45051",
+      "slug": "2026-06-maven-cve-2026-45051",
+      "url": "https://www.patchbrief.org/items/2026-06-maven-cve-2026-45051.html",
+      "date": "2026-06-24",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "OpenAM: Pre-auth RCE via Java Deserialization in WebAuthn Authenticator Storage",
+      "summary": "OpenAM: Pre-auth RCE via Java Deserialization in WebAuthn Authenticator Storage",
+      "vendor": "Maven",
+      "product": "org.openidentityplatform.openam:openam-auth-webauthn",
+      "cve": "CVE-2026-45051",
+      "operator_check": "Check whether org.openidentityplatform.openam:openam-auth-webauthn is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.openidentityplatform.openam:openam-auth-webauthn. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45051",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6c99-87fr-6q7r",
+          "url": "https://github.com/advisories/GHSA-6c99-87fr-6q7r"
+        },
+        {
+          "title": "NVD — CVE-2026-45051",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45051"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-6c99-87fr-6q7r"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-maven-cve-2026-45052",
+      "slug": "2026-06-maven-cve-2026-45052",
+      "url": "https://www.patchbrief.org/items/2026-06-maven-cve-2026-45052.html",
+      "date": "2026-06-24",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "OpenAM Pre-auth User Profile Tampering via Anonymous SOAP Authn in Liberty IDPP/Discovery Endpoints",
+      "summary": "OpenAM Pre-auth User Profile Tampering via Anonymous SOAP Authn in Liberty IDPP/Discovery Endpoints",
+      "vendor": "Maven",
+      "product": "org.openidentityplatform.openam:openam-federation-library",
+      "cve": "CVE-2026-45052",
+      "operator_check": "Check whether org.openidentityplatform.openam:openam-federation-library is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.openidentityplatform.openam:openam-federation-library. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45052",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p462-xxwx-pqf4",
+          "url": "https://github.com/advisories/GHSA-p462-xxwx-pqf4"
+        },
+        {
+          "title": "NVD — CVE-2026-45052",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45052"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-p462-xxwx-pqf4"
+        }
+      ]
+    },
     {
       "id": "2026-06-composer-cve-2026-48507",
       "slug": "2026-06-composer-cve-2026-48507",
@@ -635,6 +740,99 @@
       ]
     },
     {
+      "id": "2026-06-n8n-cve-2026-44789",
+      "slug": "2026-06-n8n-cve-2026-44789",
+      "url": "https://www.patchbrief.org/items/2026-06-n8n-cve-2026-44789.html",
+      "date": "2026-06-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "N8N N8N — CVE-2026-44789 (Critical)",
+      "summary": "n8n is an open source workflow automation platform. Prior to 1.123.43, 2.22.1, and 2.20.7, an authenticated user with permission to create or modify workflows could achieve global prototype pollution via an unvalidated pagination parameter in the HTTP Request node. Combined with other techniques this could lead to RCE on the instance. This vulnerability is fixed in 1.123.43, 2.22.1, and 2.20.7.",
+      "vendor": "N8N",
+      "product": "N8N",
+      "cve": "CVE-2026-44789",
+      "operator_check": "Review CVE-2026-44789 in your asset inventory. Apply patches per vendor guidance and verify N8N is not exposed. CVSS score: 9.9. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in N8N N8N. Patch or mitigate promptly. EPSS percentile: 40%.",
+      "tags": [
+        "cve-2026-44789",
+        "vendor-advisory",
+        "n8n",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-44789",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44789"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-c8xv-5998-g76h"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-n8n-cve-2026-44791",
+      "slug": "2026-06-n8n-cve-2026-44791",
+      "url": "https://www.patchbrief.org/items/2026-06-n8n-cve-2026-44791.html",
+      "date": "2026-06-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "N8N N8N — CVE-2026-44791 (Critical)",
+      "summary": "n8n is an open source workflow automation platform. Prior to 1.123.43, 2.22.1, and 2.20.7, an authenticated user with permission to create or modify workflows could bypass the patch for CVE-2026-42232 in the XML node. When combined with other nodes, this could lead to RCE on the n8n host. This vulnerability is fixed in 1.123.43, 2.22.1, and 2.20.7.",
+      "vendor": "N8N",
+      "product": "N8N",
+      "cve": "CVE-2026-44791",
+      "operator_check": "Review CVE-2026-44791 in your asset inventory. Apply patches per vendor guidance and verify N8N is not exposed. CVSS score: 9.9. EPSS probability: 0.5%; percentile: 41%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in N8N N8N. Patch or mitigate promptly. EPSS percentile: 41%.",
+      "tags": [
+        "cve-2026-44791",
+        "vendor-advisory",
+        "n8n",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-44791",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44791"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-wrwr-h859-xh2r"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-n8n-cve-2026-44792",
+      "slug": "2026-06-n8n-cve-2026-44792",
+      "url": "https://www.patchbrief.org/items/2026-06-n8n-cve-2026-44792.html",
+      "date": "2026-06-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "N8N N8N — CVE-2026-44792 (Critical)",
+      "summary": "n8n is an open source workflow automation platform. Prior to 1.123.43, 2.22.1, and 2.20.7, an attacker with write access to the git repository connected to an n8n Source Control configuration could commit a malicious Data Table JSON file containing a crafted column name. When an administrator performed a Source Control Pull, n8n imported the file and could lead to SQL injection on the internal PostgreSQL instance. Exploitation requires the n8n instance uses PostgreSQL as its database backend, the Source Control feature is enabled and connected to a repository the attacker can write to, and an",
+      "vendor": "N8N",
+      "product": "N8N",
+      "cve": "CVE-2026-44792",
+      "operator_check": "Review CVE-2026-44792 in your asset inventory. Apply patches per vendor guidance and verify N8N is not exposed. CVSS score: 9.0. EPSS probability: 0.4%; percentile: 27%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.0) in N8N N8N. Patch or mitigate promptly. EPSS percentile: 27%.",
+      "tags": [
+        "cve-2026-44792",
+        "vendor-advisory",
+        "n8n",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-44792",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44792"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-mhrx-qhrj-673w"
+        }
+      ]
+    },
+    {
       "id": "2026-06-npm-cve-2026-54350",
       "slug": "2026-06-npm-cve-2026-54350",
       "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-54350.html",
@@ -1121,6 +1319,41 @@
       ]
     },
     {
+      "id": "2026-06-litellm-cve-2026-49468",
+      "slug": "2026-06-litellm-cve-2026-49468",
+      "url": "https://www.patchbrief.org/items/2026-06-litellm-cve-2026-49468.html",
+      "date": "2026-06-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Litellm Litellm — CVE-2026-49468 (Critical)",
+      "summary": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.84.0, This vulnerability is fixed in 1.84.0.",
+      "vendor": "Litellm",
+      "product": "Litellm",
+      "cve": "CVE-2026-49468",
+      "operator_check": "Review CVE-2026-49468 in your asset inventory. Apply patches per vendor guidance and verify Litellm is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 31%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Litellm Litellm. Patch or mitigate promptly. EPSS percentile: 31%.",
+      "tags": [
+        "cve-2026-49468",
+        "vendor-advisory",
+        "litellm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-49468",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49468"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.84.0"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-4xpc-pv4p-pm3w"
+        }
+      ]
+    },
+    {
       "id": "2026-06-maven-cve-2026-44179",
       "slug": "2026-06-maven-cve-2026-44179",
       "url": "https://www.patchbrief.org/items/2026-06-maven-cve-2026-44179.html",
@@ -1280,6 +1513,41 @@
         {
           "title": "CERT/CC Vulnerability Note VU#226679",
           "url": "https://kb.cert.org/vuls/id/226679"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-n8n-cve-2026-56348",
+      "slug": "2026-06-n8n-cve-2026-56348",
+      "url": "https://www.patchbrief.org/items/2026-06-n8n-cve-2026-56348.html",
+      "date": "2026-06-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "N8N N8N — CVE-2026-56348 (Critical)",
+      "summary": "n8n before 2.20.0 contains a credential exfiltration vulnerability in the POST /rest/dynamic-node-parameters/options endpoint that allows authenticated users to bypass Allowed HTTP Request Domains restrictions. Attackers with credential access can cause the n8n server to issue HTTP requests with credentials to unauthorized hosts, exfiltrating sensitive authentication data.",
+      "vendor": "N8N",
+      "product": "N8N",
+      "cve": "CVE-2026-56348",
+      "operator_check": "Review CVE-2026-56348 in your asset inventory. Apply patches per vendor guidance and verify N8N is not exposed. CVSS score: 9.1. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in N8N N8N. Patch or mitigate promptly. EPSS percentile: 16%.",
+      "tags": [
+        "cve-2026-56348",
+        "vendor-advisory",
+        "n8n",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-56348",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56348"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-3875-8gcx-7v46"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/n8n-credential-exfiltration-via-allowed-http-request-domains-bypass-in-dynamic-node-parameters-endpoint"
         }
       ]
     },
