@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-06-25T11:41:08Z",
-  "total_items": 166,
+  "generated": "2026-06-26T11:45:09Z",
+  "total_items": 197,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-06-25T11:41:08Z",
+    "generated": "2026-06-26T11:45:09Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-06-25T11:40:53Z",
-        "finished_at": "2026-06-25T11:40:53Z"
+        "items_seen": 6,
+        "started_at": "2026-06-26T11:44:51Z",
+        "finished_at": "2026-06-26T11:44:51Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-25T11:40:53Z",
-        "finished_at": "2026-06-25T11:40:54Z"
+        "started_at": "2026-06-26T11:44:51Z",
+        "finished_at": "2026-06-26T11:44:52Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 9,
-        "started_at": "2026-06-25T11:40:54Z",
-        "finished_at": "2026-06-25T11:41:04Z"
+        "items_seen": 10,
+        "started_at": "2026-06-26T11:44:52Z",
+        "finished_at": "2026-06-26T11:45:05Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-06-25T11:41:04Z",
-        "finished_at": "2026-06-25T11:41:06Z"
+        "started_at": "2026-06-26T11:45:05Z",
+        "finished_at": "2026-06-26T11:45:06Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-06-25T11:41:06Z",
-        "finished_at": "2026-06-25T11:41:06Z"
+        "items_seen": 0,
+        "started_at": "2026-06-26T11:45:06Z",
+        "finished_at": "2026-06-26T11:45:07Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,888 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-25T11:41:06Z",
-        "finished_at": "2026-06-25T11:41:07Z"
+        "started_at": "2026-06-26T11:45:07Z",
+        "finished_at": "2026-06-26T11:45:08Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 19,
-        "started_at": "2026-06-25T11:41:07Z",
-        "finished_at": "2026-06-25T11:41:08Z"
+        "items_seen": 37,
+        "started_at": "2026-06-26T11:45:08Z",
+        "finished_at": "2026-06-26T11:45:08Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-06-cacti-cve-2026-40079",
+      "slug": "2026-06-cacti-cve-2026-40079",
+      "url": "https://www.patchbrief.org/items/2026-06-cacti-cve-2026-40079.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Cacti Cacti — CVE-2026-40079 (Critical)",
+      "summary": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior are vulnerable to Command Injection due to lack of sanitization in the escape_command() function. The escape_command() function at lib/rrd.php is a no-op: it returns $command unchanged. The command line built by rrdtool_function_graph() is passed through this function and then to shell_exec($full_commandline). The risk is in __rrd_execute() where text_format values from graph templates (which may contain host variable substitutions) reach shell_exec without adequate escaping. This issue has been addre",
+      "vendor": "Cacti",
+      "product": "Cacti",
+      "cve": "CVE-2026-40079",
+      "operator_check": "Review CVE-2026-40079 in your asset inventory. Apply patches per vendor guidance and verify Cacti is not exposed. CVSS score: 9.8. EPSS probability: 0.9%; percentile: 56%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Cacti Cacti. Patch or mitigate promptly. EPSS percentile: 56%.",
+      "tags": [
+        "cve-2026-40079",
+        "vendor-advisory",
+        "cacti",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-40079",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40079"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Cacti/cacti/commit/4c09efaebf3a9faec66969d0b5c4aceaf397f37f"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Cacti/cacti/security/advisories/GHSA-xq98-376r-hv9j"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-cisco-cve-2026-20230",
+      "slug": "2026-06-cisco-cve-2026-20230",
+      "url": "https://www.patchbrief.org/items/2026-06-cisco-cve-2026-20230.html",
+      "date": "2026-06-25",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
+      "summary": "Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) contain a server-side request forgery (SSRF) Vulnerability that could allow an unauthenticated, remote attacker to write files to the underlying operating system that could be used later to elevate to root.",
+      "vendor": "Cisco",
+      "product": "Unified Communications Manager",
+      "cve": "CVE-2026-20230",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-20230 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-06-28. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-20230",
+        "kev",
+        "cisco",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-20230",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20230"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-composer-cve-2026-48505",
+      "slug": "2026-06-composer-cve-2026-48505",
+      "url": "https://www.patchbrief.org/items/2026-06-composer-cve-2026-48505.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Filament: Multi-factor authentication (app) recovery codes can still be used multiple times via concurrent submission",
+      "summary": "Filament: Multi-factor authentication (app) recovery codes can still be used multiple times via concurrent submission",
+      "vendor": "Composer",
+      "product": "filament/filament",
+      "cve": "CVE-2026-48505",
+      "operator_check": "Check whether filament/filament is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 9%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for filament/filament. Prioritize it with other application dependency updates, especially because EPSS places it in the 9% percentile.",
+      "tags": [
+        "cve-2026-48505",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mc5j-f6wx-h9qh",
+          "url": "https://github.com/advisories/GHSA-mc5j-f6wx-h9qh"
+        },
+        {
+          "title": "NVD — CVE-2026-48505",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48505"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/filamentphp/filament/security/advisories/GHSA-mc5j-f6wx-h9qh"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-39829",
+      "slug": "2026-06-go-cve-2026-39829",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-39829.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "golang.org/x/crypto/ssh: Invoking pathological RSA/DSA parameters may cause DoS",
+      "summary": "golang.org/x/crypto/ssh: Invoking pathological RSA/DSA parameters may cause DoS",
+      "vendor": "Go",
+      "product": "golang.org/x/crypto/ssh",
+      "cve": "CVE-2026-39829",
+      "operator_check": "Check whether golang.org/x/crypto/ssh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 22%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for golang.org/x/crypto/ssh. Prioritize it with other application dependency updates, especially because EPSS places it in the 22% percentile.",
+      "tags": [
+        "cve-2026-39829",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w879-237q-wc7r",
+          "url": "https://github.com/advisories/GHSA-w879-237q-wc7r"
+        },
+        {
+          "title": "NVD — CVE-2026-39829",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39829"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-39830",
+      "slug": "2026-06-go-cve-2026-39830",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-39830.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "golang.org/x/crypto/ssh: Invoking client can cause server deadlock on unexpected responses",
+      "summary": "golang.org/x/crypto/ssh: Invoking client can cause server deadlock on unexpected responses",
+      "vendor": "Go",
+      "product": "golang.org/x/crypto/ssh",
+      "cve": "CVE-2026-39830",
+      "operator_check": "Check whether golang.org/x/crypto/ssh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 31%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for golang.org/x/crypto/ssh. Prioritize it with other application dependency updates, especially because EPSS places it in the 31% percentile.",
+      "tags": [
+        "cve-2026-39830",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vgwf-h737-ff37",
+          "url": "https://github.com/advisories/GHSA-vgwf-h737-ff37"
+        },
+        {
+          "title": "NVD — CVE-2026-39830",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39830"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-39831",
+      "slug": "2026-06-go-cve-2026-39831",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-39831.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "golang.org/x/crypto/ssh: FIDO/U2F security key physical presence check can be bypassed",
+      "summary": "golang.org/x/crypto/ssh: FIDO/U2F security key physical presence check can be bypassed",
+      "vendor": "Go",
+      "product": "golang.org/x/crypto/ssh",
+      "cve": "CVE-2026-39831",
+      "operator_check": "Check whether golang.org/x/crypto/ssh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for golang.org/x/crypto/ssh. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-39831",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-89gr-r52h-f8rx",
+          "url": "https://github.com/advisories/GHSA-89gr-r52h-f8rx"
+        },
+        {
+          "title": "NVD — CVE-2026-39831",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39831"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-39832",
+      "slug": "2026-06-go-cve-2026-39832",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-39832.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "golang.org/x/crypto/ssh/agent doesn't drop invoking agent constraints when forwarding keys",
+      "summary": "golang.org/x/crypto/ssh/agent doesn't drop invoking agent constraints when forwarding keys",
+      "vendor": "Go",
+      "product": "golang.org/x/crypto/ssh/agent",
+      "cve": "CVE-2026-39832",
+      "operator_check": "Check whether golang.org/x/crypto/ssh/agent is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for golang.org/x/crypto/ssh/agent. Prioritize it with other application dependency updates, especially because EPSS places it in the 32% percentile.",
+      "tags": [
+        "cve-2026-39832",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f5wc-c3c7-36mc",
+          "url": "https://github.com/advisories/GHSA-f5wc-c3c7-36mc"
+        },
+        {
+          "title": "NVD — CVE-2026-39832",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39832"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-39833",
+      "slug": "2026-06-go-cve-2026-39833",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-39833.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "golang.org/x/crypto/ssh/agent doesn't enforce invoking key constraints",
+      "summary": "golang.org/x/crypto/ssh/agent doesn't enforce invoking key constraints",
+      "vendor": "Go",
+      "product": "golang.org/x/crypto/ssh/agent",
+      "cve": "CVE-2026-39833",
+      "operator_check": "Check whether golang.org/x/crypto/ssh/agent is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 28%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for golang.org/x/crypto/ssh/agent. Prioritize it with other application dependency updates, especially because EPSS places it in the 28% percentile.",
+      "tags": [
+        "cve-2026-39833",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jppx-rxg9-jmrx",
+          "url": "https://github.com/advisories/GHSA-jppx-rxg9-jmrx"
+        },
+        {
+          "title": "NVD — CVE-2026-39833",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39833"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-39834",
+      "slug": "2026-06-go-cve-2026-39834",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-39834.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "golang.org/x/crypto/ssh vulnerable to infinite loop on large channel writes",
+      "summary": "golang.org/x/crypto/ssh vulnerable to infinite loop on large channel writes",
+      "vendor": "Go",
+      "product": "golang.org/x/crypto/ssh",
+      "cve": "CVE-2026-39834",
+      "operator_check": "Check whether golang.org/x/crypto/ssh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 37%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for golang.org/x/crypto/ssh. Prioritize it with other application dependency updates, especially because EPSS places it in the 37% percentile.",
+      "tags": [
+        "cve-2026-39834",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rm3j-f69w-wqmq",
+          "url": "https://github.com/advisories/GHSA-rm3j-f69w-wqmq"
+        },
+        {
+          "title": "NVD — CVE-2026-39834",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39834"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-42508",
+      "slug": "2026-06-go-cve-2026-42508",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-42508.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "golang.org/x/crypto/ssh/knownhosts vulnerable to auth bypass via unenforced @revoked status",
+      "summary": "golang.org/x/crypto/ssh/knownhosts vulnerable to auth bypass via unenforced @revoked status",
+      "vendor": "Go",
+      "product": "golang.org/x/crypto/ssh/knownhosts",
+      "cve": "CVE-2026-42508",
+      "operator_check": "Check whether golang.org/x/crypto/ssh/knownhosts is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for golang.org/x/crypto/ssh/knownhosts. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-42508",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5cgq-3rg8-m6cv",
+          "url": "https://github.com/advisories/GHSA-5cgq-3rg8-m6cv"
+        },
+        {
+          "title": "NVD — CVE-2026-42508",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42508"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-46595",
+      "slug": "2026-06-go-cve-2026-46595",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-46595.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "golang.org/x/crypto/ssh: Invoking VerifiedPublicKeyCallback permissions skip enforcement",
+      "summary": "golang.org/x/crypto/ssh: Invoking VerifiedPublicKeyCallback permissions skip enforcement",
+      "vendor": "Go",
+      "product": "golang.org/x/crypto/ssh",
+      "cve": "CVE-2026-46595",
+      "operator_check": "Check whether golang.org/x/crypto/ssh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for golang.org/x/crypto/ssh. Prioritize it with other application dependency updates, especially because EPSS places it in the 30% percentile.",
+      "tags": [
+        "cve-2026-46595",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x527-x647-q7gg",
+          "url": "https://github.com/advisories/GHSA-x527-x647-q7gg"
+        },
+        {
+          "title": "NVD — CVE-2026-46595",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46595"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45337"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-46597",
+      "slug": "2026-06-go-cve-2026-46597",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-46597.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "golang.org/x/crypto/ssh: Invoking byte arithmetic causes underflow and panic",
+      "summary": "golang.org/x/crypto/ssh: Invoking byte arithmetic causes underflow and panic",
+      "vendor": "Go",
+      "product": "golang.org/x/crypto/ssh",
+      "cve": "CVE-2026-46597",
+      "operator_check": "Check whether golang.org/x/crypto/ssh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 28%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for golang.org/x/crypto/ssh. Prioritize it with other application dependency updates, especially because EPSS places it in the 28% percentile.",
+      "tags": [
+        "cve-2026-46597",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q4h4-gmj2-qvw2",
+          "url": "https://github.com/advisories/GHSA-q4h4-gmj2-qvw2"
+        },
+        {
+          "title": "NVD — CVE-2026-46597",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46597"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-48702",
+      "slug": "2026-06-go-cve-2026-48702",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-48702.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Rekor has an OOM Condition due to Unbounded gzip Decompression in Alpine APK Parsing Logic",
+      "summary": "Rekor has an OOM Condition due to Unbounded gzip Decompression in Alpine APK Parsing Logic",
+      "vendor": "Go",
+      "product": "github.com/sigstore/rekor",
+      "cve": "CVE-2026-48702",
+      "operator_check": "Check whether github.com/sigstore/rekor is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/sigstore/rekor. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-48702",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-47q9-m4ww-924m",
+          "url": "https://github.com/advisories/GHSA-47q9-m4ww-924m"
+        },
+        {
+          "title": "NVD — CVE-2026-48702",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48702"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sigstore/rekor/security/advisories/GHSA-47q9-m4ww-924m"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-ghsa-rjr7-jggh-pgcp",
+      "slug": "2026-06-go-ghsa-rjr7-jggh-pgcp",
+      "url": "https://www.patchbrief.org/items/2026-06-go-ghsa-rjr7-jggh-pgcp.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "chi's RealIP Middleware allows IP spoofing via unvalidated X-Forwarded-For header",
+      "summary": "chi's RealIP Middleware allows IP spoofing via unvalidated X-Forwarded-For header",
+      "vendor": "Go",
+      "product": "github.com/go-chi/chi/middleware",
+      "cve": null,
+      "operator_check": "Check whether github.com/go-chi/chi/middleware is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/go-chi/chi/middleware. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-rjr7-jggh-pgcp",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rjr7-jggh-pgcp",
+          "url": "https://github.com/advisories/GHSA-rjr7-jggh-pgcp"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-chi/chi/security/advisories/GHSA-rjr7-jggh-pgcp"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-48713",
+      "slug": "2026-06-npm-cve-2026-48713",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-48713.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "i18next-fs-backend vulnerable to prototype pollution via crafted missing-key string",
+      "summary": "i18next-fs-backend vulnerable to prototype pollution via crafted missing-key string",
+      "vendor": "npm",
+      "product": "i18next-fs-backend",
+      "cve": "CVE-2026-48713",
+      "operator_check": "Check whether i18next-fs-backend is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for i18next-fs-backend. Prioritize it with other application dependency updates, especially because EPSS places it in the 33% percentile.",
+      "tags": [
+        "cve-2026-48713",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2933-q333-qg83",
+          "url": "https://github.com/advisories/GHSA-2933-q333-qg83"
+        },
+        {
+          "title": "NVD — CVE-2026-48713",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48713"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/i18next/i18next-fs-backend/security/advisories/GHSA-2933-q333-qg83"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-48714",
+      "slug": "2026-06-npm-cve-2026-48714",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-48714.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "i18next-http-middleware: MissingKeyHandler does not reject keys whose segments contain prototype-polluting names",
+      "summary": "i18next-http-middleware: MissingKeyHandler does not reject keys whose segments contain prototype-polluting names",
+      "vendor": "npm",
+      "product": "i18next-http-middleware",
+      "cve": "CVE-2026-48714",
+      "operator_check": "Check whether i18next-http-middleware is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for i18next-http-middleware. Prioritize it with other application dependency updates, especially because EPSS places it in the 33% percentile.",
+      "tags": [
+        "cve-2026-48714",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f49m-vf83-692w",
+          "url": "https://github.com/advisories/GHSA-f49m-vf83-692w"
+        },
+        {
+          "title": "NVD — CVE-2026-48714",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48714"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/i18next/i18next-http-middleware/security/advisories/GHSA-f49m-vf83-692w"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-nuget-cve-2026-48502",
+      "slug": "2026-06-nuget-cve-2026-48502",
+      "url": "https://www.patchbrief.org/items/2026-06-nuget-cve-2026-48502.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MessagePack-CSharp: Denial of service vulnerabilities can swamp the CPU or crash the process with stack and heap over...",
+      "summary": "MessagePack-CSharp: Denial of service vulnerabilities can swamp the CPU or crash the process with stack and heap overflows",
+      "vendor": "NuGet",
+      "product": "MessagePack",
+      "cve": "CVE-2026-48502",
+      "operator_check": "Check whether MessagePack is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for MessagePack. Prioritize it with other application dependency updates, especially because EPSS places it in the 17% percentile.",
+      "tags": [
+        "cve-2026-48502",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-382j-8mxh-c7x2",
+          "url": "https://github.com/advisories/GHSA-382j-8mxh-c7x2"
+        },
+        {
+          "title": "NVD — CVE-2026-48502",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48502"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-382j-8mxh-c7x2"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-nuget-cve-2026-48506",
+      "slug": "2026-06-nuget-cve-2026-48506",
+      "url": "https://www.patchbrief.org/items/2026-06-nuget-cve-2026-48506.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MessagePack-CSharp: MessagePackReader.Skip can recurse without enforcing maximum object graph depth",
+      "summary": "MessagePack-CSharp: MessagePackReader.Skip can recurse without enforcing maximum object graph depth",
+      "vendor": "NuGet",
+      "product": "MessagePack",
+      "cve": "CVE-2026-48506",
+      "operator_check": "Check whether MessagePack is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for MessagePack. Prioritize it with other application dependency updates, especially because EPSS places it in the 19% percentile.",
+      "tags": [
+        "cve-2026-48506",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vh6j-jc39-fggf",
+          "url": "https://github.com/advisories/GHSA-vh6j-jc39-fggf"
+        },
+        {
+          "title": "NVD — CVE-2026-48506",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48506"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-vh6j-jc39-fggf"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-nuget-cve-2026-49218",
+      "slug": "2026-06-nuget-cve-2026-49218",
+      "url": "https://www.patchbrief.org/items/2026-06-nuget-cve-2026-49218.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ImageMagick: Policy Bypass in DCM decoder could result in image with invalid dimensions",
+      "summary": "ImageMagick: Policy Bypass in DCM decoder could result in image with invalid dimensions",
+      "vendor": "NuGet",
+      "product": "Magick.NET-Q16-AnyCPU",
+      "cve": "CVE-2026-49218",
+      "operator_check": "Check whether Magick.NET-Q16-AnyCPU is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Magick.NET-Q16-AnyCPU. Prioritize it with other application dependency updates, especially because EPSS places it in the 18% percentile.",
+      "tags": [
+        "cve-2026-49218",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8pj9-6897-74xc",
+          "url": "https://github.com/advisories/GHSA-8pj9-6897-74xc"
+        },
+        {
+          "title": "NVD — CVE-2026-49218",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49218"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-8pj9-6897-74xc"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-nuget-cve-2026-53460",
+      "slug": "2026-06-nuget-cve-2026-53460",
+      "url": "https://www.patchbrief.org/items/2026-06-nuget-cve-2026-53460.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ImageMagick: Policy Bypass can Trigger an Out-of-Memory condition",
+      "summary": "ImageMagick: Policy Bypass can Trigger an Out-of-Memory condition",
+      "vendor": "NuGet",
+      "product": "Magick.NET-Q16-AnyCPU",
+      "cve": "CVE-2026-53460",
+      "operator_check": "Check whether Magick.NET-Q16-AnyCPU is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Magick.NET-Q16-AnyCPU. Prioritize it with other application dependency updates, especially because EPSS places it in the 18% percentile.",
+      "tags": [
+        "cve-2026-53460",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q62c-h75r-2xhc",
+          "url": "https://github.com/advisories/GHSA-q62c-h75r-2xhc"
+        },
+        {
+          "title": "NVD — CVE-2026-53460",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53460"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-q62c-h75r-2xhc"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-nuget-cve-2026-53461",
+      "slug": "2026-06-nuget-cve-2026-53461",
+      "url": "https://www.patchbrief.org/items/2026-06-nuget-cve-2026-53461.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ImageMagick has out-of-bounds write in ICON decoder due to incorrect loop",
+      "summary": "ImageMagick has out-of-bounds write in ICON decoder due to incorrect loop",
+      "vendor": "NuGet",
+      "product": "Magick.NET-Q16-AnyCPU",
+      "cve": "CVE-2026-53461",
+      "operator_check": "Check whether Magick.NET-Q16-AnyCPU is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Magick.NET-Q16-AnyCPU. Prioritize it with other application dependency updates, especially because EPSS places it in the 18% percentile.",
+      "tags": [
+        "cve-2026-53461",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g22q-f7gc-5jhr",
+          "url": "https://github.com/advisories/GHSA-g22q-f7gc-5jhr"
+        },
+        {
+          "title": "NVD — CVE-2026-53461",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53461"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-g22q-f7gc-5jhr"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-ptc-cve-2026-12569",
+      "slug": "2026-06-ptc-cve-2026-12569",
+      "url": "https://www.patchbrief.org/items/2026-06-ptc-cve-2026-12569.html",
+      "date": "2026-06-25",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
+      "summary": "PTC Windchill and FlexPLM contains an improper input validation vulnerability allowing an unauthenticated, remote attacker to execute arbitrary code by sending a malicious request to the network.",
+      "vendor": "PTC",
+      "product": "Windchill and FlexPLM",
+      "cve": "CVE-2026-12569",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-12569 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-06-28. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-12569",
+        "kev",
+        "ptc",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-12569",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12569"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-pypi-cve-2026-48508",
+      "slug": "2026-06-pypi-cve-2026-48508",
+      "url": "https://www.patchbrief.org/items/2026-06-pypi-cve-2026-48508.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Lemur has an authorization bypass in StrictRolePermission / AuthorityCreatorPermission",
+      "summary": "Lemur has an authorization bypass in StrictRolePermission / AuthorityCreatorPermission",
+      "vendor": "PyPI",
+      "product": "lemur",
+      "cve": "CVE-2026-48508",
+      "operator_check": "Check whether lemur is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for lemur. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-48508",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qcqw-jwxc-2hqg",
+          "url": "https://github.com/advisories/GHSA-qcqw-jwxc-2hqg"
+        },
+        {
+          "title": "NVD — CVE-2026-48508",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48508"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Netflix/lemur/security/advisories/GHSA-qcqw-jwxc-2hqg"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-pypi-cve-2026-55166",
+      "slug": "2026-06-pypi-cve-2026-55166",
+      "url": "https://www.patchbrief.org/items/2026-06-pypi-cve-2026-55166.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Lemur: ACME SSRF + creator-equality IDOR lead to AWS IAM/PKI compromise",
+      "summary": "Lemur: ACME SSRF + creator-equality IDOR lead to AWS IAM/PKI compromise",
+      "vendor": "PyPI",
+      "product": "lemur",
+      "cve": "CVE-2026-55166",
+      "operator_check": "Check whether lemur is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for lemur. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55166",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v2wp-frmc-5q3v",
+          "url": "https://github.com/advisories/GHSA-v2wp-frmc-5q3v"
+        },
+        {
+          "title": "NVD — CVE-2026-55166",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55166"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Netflix/lemur/security/advisories/GHSA-v2wp-frmc-5q3v"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-pypi-cve-2026-9291",
+      "slug": "2026-06-pypi-cve-2026-9291",
+      "url": "https://www.patchbrief.org/items/2026-06-pypi-cve-2026-9291.html",
+      "date": "2026-06-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "amazon-braket-sdk vulnerable to Insecure Deserialization via pickle.loads()",
+      "summary": "amazon-braket-sdk vulnerable to Insecure Deserialization via pickle.loads()",
+      "vendor": "PyPI",
+      "product": "amazon-braket-sdk",
+      "cve": "CVE-2026-9291",
+      "operator_check": "Check whether amazon-braket-sdk is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.5. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for amazon-braket-sdk. Prioritize it with other application dependency updates, especially because EPSS places it in the 30% percentile.",
+      "tags": [
+        "cve-2026-9291",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g697-2xrc-gc46",
+          "url": "https://github.com/advisories/GHSA-g697-2xrc-gc46"
+        },
+        {
+          "title": "NVD — CVE-2026-9291",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9291"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/amazon-braket/amazon-braket-sdk-python/security/advisories/GHSA-g697-2xrc-gc46"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-cacti-cve-2026-39948",
+      "slug": "2026-06-cacti-cve-2026-39948",
+      "url": "https://www.patchbrief.org/items/2026-06-cacti-cve-2026-39948.html",
+      "date": "2026-06-24",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Cacti Cacti — CVE-2026-39948 (Critical)",
+      "summary": "Cacti is an open source performance and fault management framework. In versions 1.2.30 and prior, the rfilter request parameter is retrieved via the raw accessor grv() (rather than gfrv() with FILTER_VALIDATE_IS_REGEX validation) and concatenated directly into RLIKE SQL clauses in lib/html_graph.php and lib/html_tree.php, which are reachable pre-authentication through graph_view.php on installations with guest graph viewing enabled. Because the unbalanced-quote payload bypasses the regex validation that would otherwise reject it, an unauthenticated attacker can inject arbitrary SQL to compromi",
+      "vendor": "Cacti",
+      "product": "Cacti",
+      "cve": "CVE-2026-39948",
+      "operator_check": "Review CVE-2026-39948 in your asset inventory. Apply patches per vendor guidance and verify Cacti is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 34%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Cacti Cacti. Patch or mitigate promptly. EPSS percentile: 34%.",
+      "tags": [
+        "cve-2026-39948",
+        "vendor-advisory",
+        "cacti",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-39948",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39948"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Cacti/cacti/commit/136ae6ef0715e77bca69c0eb60781f5e17df0795"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Cacti/cacti/security/advisories/GHSA-9jqv-4cpm-vm2c"
+        }
+      ]
+    },
     {
       "id": "2026-06-go-cve-2026-48708",
       "slug": "2026-06-go-cve-2026-48708",
@@ -180,6 +1047,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-p462-xxwx-pqf4"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-n8n-cve-2026-56351",
+      "slug": "2026-06-n8n-cve-2026-56351",
+      "url": "https://www.patchbrief.org/items/2026-06-n8n-cve-2026-56351.html",
+      "date": "2026-06-24",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "N8N N8N — CVE-2026-56351 (Critical)",
+      "summary": "n8n before version 2.4.0 contains a sql injection vulnerability in MySQL, PostgreSQL, and Microsoft SQL nodes that allows authenticated users to inject arbitrary SQL through unescaped identifier values in node configuration parameters. Attackers with workflow creation permissions can supply specially crafted table or column names to execute unauthorized database commands and compromise data integrity.",
+      "vendor": "N8N",
+      "product": "N8N",
+      "cve": "CVE-2026-56351",
+      "operator_check": "Review CVE-2026-56351 in your asset inventory. Apply patches per vendor guidance and verify N8N is not exposed. CVSS score: 8.2. EPSS probability: 0.2%; percentile: 12%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.2) in N8N N8N. Patch or mitigate promptly. EPSS percentile: 12%.",
+      "tags": [
+        "cve-2026-56351",
+        "vendor-advisory",
+        "n8n",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-56351",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56351"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-f3f2-mcxc-pwjx"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/n8n-sql-injection-in-mysql-postgresql-and-microsoft-sql-nodes"
         }
       ]
     },
@@ -829,6 +1731,130 @@
         {
           "title": "Source reference",
           "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-mhrx-qhrj-673w"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-n8n-cve-2026-54305",
+      "slug": "2026-06-n8n-cve-2026-54305",
+      "url": "https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54305.html",
+      "date": "2026-06-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "N8N N8N — CVE-2026-54305 (Critical)",
+      "summary": "n8n is an open source workflow automation platform. Prior to 1.123.55, 2.25.7, and 2.26.2, three EE endpoints used by the Dynamic Credentials feature accepted any authenticated n8n session without performing per-resource ownership or scope checks on the target workflow or credential. An authenticated user with no project membership or credential sharing relationship could enumerate credential identifiers, names, and types referenced by any private workflow in the instance, initiate an OAuth authorization flow against another user's credential to overwrite its stored tokens with tokens bound to",
+      "vendor": "N8N",
+      "product": "N8N",
+      "cve": "CVE-2026-54305",
+      "operator_check": "Review CVE-2026-54305 in your asset inventory. Apply patches per vendor guidance and verify N8N is not exposed. CVSS score: 9.9. EPSS probability: 0.3%; percentile: 25%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in N8N N8N. Patch or mitigate promptly. EPSS percentile: 25%.",
+      "tags": [
+        "cve-2026-54305",
+        "vendor-advisory",
+        "n8n",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-54305",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54305"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-2j5h-858j-5mpf"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-n8n-cve-2026-54307",
+      "slug": "2026-06-n8n-cve-2026-54307",
+      "url": "https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54307.html",
+      "date": "2026-06-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "N8N N8N — CVE-2026-54307 (Critical)",
+      "summary": "n8n is an open source workflow automation platform. Prior to 1.123.55, 2.25.7, and 2.26.2, a member-level user with editor access to a shared workflow could reference credentials they do not own via specific public API endpoints. Credential ownership checks were only enforced partially leading to cross-user credential access. This issue affects instances where workflow sharing is enabled and at least one workflow has been shared with a member-level user as an Editor. This vulnerability is fixed in 1.123.55, 2.25.7, and 2.26.2.",
+      "vendor": "N8N",
+      "product": "N8N",
+      "cve": "CVE-2026-54307",
+      "operator_check": "Review CVE-2026-54307 in your asset inventory. Apply patches per vendor guidance and verify N8N is not exposed. CVSS score: 9.6. EPSS probability: 0.3%; percentile: 24%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.6) in N8N N8N. Patch or mitigate promptly. EPSS percentile: 24%.",
+      "tags": [
+        "cve-2026-54307",
+        "vendor-advisory",
+        "n8n",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-54307",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54307"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-pmqw-72cg-wx85"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-n8n-cve-2026-54309",
+      "slug": "2026-06-n8n-cve-2026-54309",
+      "url": "https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54309.html",
+      "date": "2026-06-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "N8N N8N — CVE-2026-54309 (Critical)",
+      "summary": "n8n is an open source workflow automation platform. Prior to 2.25.7 and 2.26.2, when @n8n/mcp-browser is run in HTTP transport mode, the MCP endpoint accepts session initialization and tool invocation requests without any authentication. Any network-reachable client, or any website visited by the user, can establish an MCP session and invoke browser-control tools. Where the n8n AI Browser Bridge extension is installed and a browser connection is active, an unauthenticated caller can access browser-control capabilities including navigation, JavaScript evaluation, and cookie and storage access a",
+      "vendor": "N8N",
+      "product": "N8N",
+      "cve": "CVE-2026-54309",
+      "operator_check": "Review CVE-2026-54309 in your asset inventory. Apply patches per vendor guidance and verify N8N is not exposed. CVSS score: 10.0. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 10.0) in N8N N8N. Patch or mitigate promptly. EPSS percentile: 33%.",
+      "tags": [
+        "cve-2026-54309",
+        "vendor-advisory",
+        "n8n",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-54309",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54309"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-qrx8-25qr-5r7v"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-n8n-cve-2026-54310",
+      "slug": "2026-06-n8n-cve-2026-54310",
+      "url": "https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54310.html",
+      "date": "2026-06-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "N8N N8N — CVE-2026-54310 (Critical)",
+      "summary": "n8n is an open source workflow automation platform. Prior to 2.25.7 and 2.26.2, an authenticated user with permission to create or modify workflows could supply a crafted parameters to the TimescaleDB and/or legacy Postgres v1 node's allowing arbitrary SQL to be injected and executed against the connected database within the privileges of the configured database account. This vulnerability is fixed in 2.25.7 and 2.26.2.",
+      "vendor": "N8N",
+      "product": "N8N",
+      "cve": "CVE-2026-54310",
+      "operator_check": "Review CVE-2026-54310 in your asset inventory. Apply patches per vendor guidance and verify N8N is not exposed. CVSS score: 9.9. EPSS probability: 0.3%; percentile: 23%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in N8N N8N. Patch or mitigate promptly. EPSS percentile: 23%.",
+      "tags": [
+        "cve-2026-54310",
+        "vendor-advisory",
+        "n8n",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-54310",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54310"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-c37g-w77q-m4vp"
         }
       ]
     },

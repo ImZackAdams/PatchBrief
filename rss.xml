@@ -4,8 +4,190 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Thu, 25 Jun 2026 11:41:08 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 11:45:09 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>Cacti Cacti — CVE-2026-40079 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-06-cacti-cve-2026-40079.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-cacti-cve-2026-40079.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior are vulnerable to Command Injection due to lack of sanitization in the escape_command() function. The escape_command() function at lib/rrd.php is a no-op: it returns $command unchanged. The command line built by rrdtool_function_graph() is passed through this function and then to shell_exec($full_commandline). The risk is in __rrd_execute() where text_format values from graph templates (which may contain host variable substitutions) reach shell_exec without adequate escaping. This issue has been addre</description>
+    </item>
+    <item>
+      <title>Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-cisco-cve-2026-20230.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-cisco-cve-2026-20230.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) contain a server-side request forgery (SSRF) Vulnerability that could allow an unauthenticated, remote attacker to write files to the underlying operating system that could be used later to elevate to root.</description>
+    </item>
+    <item>
+      <title>Filament: Multi-factor authentication (app) recovery codes can still be used multiple times via concurrent submission</title>
+      <link>https://www.patchbrief.org/items/2026-06-composer-cve-2026-48505.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-composer-cve-2026-48505.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Filament: Multi-factor authentication (app) recovery codes can still be used multiple times via concurrent submission</description>
+    </item>
+    <item>
+      <title>golang.org/x/crypto/ssh: Invoking pathological RSA/DSA parameters may cause DoS</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-39829.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-39829.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>golang.org/x/crypto/ssh: Invoking pathological RSA/DSA parameters may cause DoS</description>
+    </item>
+    <item>
+      <title>golang.org/x/crypto/ssh: Invoking client can cause server deadlock on unexpected responses</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-39830.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-39830.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>golang.org/x/crypto/ssh: Invoking client can cause server deadlock on unexpected responses</description>
+    </item>
+    <item>
+      <title>golang.org/x/crypto/ssh: FIDO/U2F security key physical presence check can be bypassed</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-39831.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-39831.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>golang.org/x/crypto/ssh: FIDO/U2F security key physical presence check can be bypassed</description>
+    </item>
+    <item>
+      <title>golang.org/x/crypto/ssh/agent doesn't drop invoking agent constraints when forwarding keys</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-39832.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-39832.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>golang.org/x/crypto/ssh/agent doesn't drop invoking agent constraints when forwarding keys</description>
+    </item>
+    <item>
+      <title>golang.org/x/crypto/ssh/agent doesn't enforce invoking key constraints</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-39833.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-39833.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>golang.org/x/crypto/ssh/agent doesn't enforce invoking key constraints</description>
+    </item>
+    <item>
+      <title>golang.org/x/crypto/ssh vulnerable to infinite loop on large channel writes</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-39834.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-39834.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>golang.org/x/crypto/ssh vulnerable to infinite loop on large channel writes</description>
+    </item>
+    <item>
+      <title>golang.org/x/crypto/ssh/knownhosts vulnerable to auth bypass via unenforced @revoked status</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-42508.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-42508.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>golang.org/x/crypto/ssh/knownhosts vulnerable to auth bypass via unenforced @revoked status</description>
+    </item>
+    <item>
+      <title>golang.org/x/crypto/ssh: Invoking VerifiedPublicKeyCallback permissions skip enforcement</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-46595.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-46595.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>golang.org/x/crypto/ssh: Invoking VerifiedPublicKeyCallback permissions skip enforcement</description>
+    </item>
+    <item>
+      <title>golang.org/x/crypto/ssh: Invoking byte arithmetic causes underflow and panic</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-46597.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-46597.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>golang.org/x/crypto/ssh: Invoking byte arithmetic causes underflow and panic</description>
+    </item>
+    <item>
+      <title>Rekor has an OOM Condition due to Unbounded gzip Decompression in Alpine APK Parsing Logic</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-48702.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-48702.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Rekor has an OOM Condition due to Unbounded gzip Decompression in Alpine APK Parsing Logic</description>
+    </item>
+    <item>
+      <title>chi's RealIP Middleware allows IP spoofing via unvalidated X-Forwarded-For header</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-ghsa-rjr7-jggh-pgcp.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-ghsa-rjr7-jggh-pgcp.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>chi's RealIP Middleware allows IP spoofing via unvalidated X-Forwarded-For header</description>
+    </item>
+    <item>
+      <title>i18next-fs-backend vulnerable to prototype pollution via crafted missing-key string</title>
+      <link>https://www.patchbrief.org/items/2026-06-npm-cve-2026-48713.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-npm-cve-2026-48713.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>i18next-fs-backend vulnerable to prototype pollution via crafted missing-key string</description>
+    </item>
+    <item>
+      <title>i18next-http-middleware: MissingKeyHandler does not reject keys whose segments contain prototype-polluting names</title>
+      <link>https://www.patchbrief.org/items/2026-06-npm-cve-2026-48714.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-npm-cve-2026-48714.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>i18next-http-middleware: MissingKeyHandler does not reject keys whose segments contain prototype-polluting names</description>
+    </item>
+    <item>
+      <title>MessagePack-CSharp: Denial of service vulnerabilities can swamp the CPU or crash the process with stack and heap over...</title>
+      <link>https://www.patchbrief.org/items/2026-06-nuget-cve-2026-48502.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-nuget-cve-2026-48502.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>MessagePack-CSharp: Denial of service vulnerabilities can swamp the CPU or crash the process with stack and heap overflows</description>
+    </item>
+    <item>
+      <title>MessagePack-CSharp: MessagePackReader.Skip can recurse without enforcing maximum object graph depth</title>
+      <link>https://www.patchbrief.org/items/2026-06-nuget-cve-2026-48506.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-nuget-cve-2026-48506.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>MessagePack-CSharp: MessagePackReader.Skip can recurse without enforcing maximum object graph depth</description>
+    </item>
+    <item>
+      <title>ImageMagick: Policy Bypass in DCM decoder could result in image with invalid dimensions</title>
+      <link>https://www.patchbrief.org/items/2026-06-nuget-cve-2026-49218.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-nuget-cve-2026-49218.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>ImageMagick: Policy Bypass in DCM decoder could result in image with invalid dimensions</description>
+    </item>
+    <item>
+      <title>ImageMagick: Policy Bypass can Trigger an Out-of-Memory condition</title>
+      <link>https://www.patchbrief.org/items/2026-06-nuget-cve-2026-53460.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-nuget-cve-2026-53460.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>ImageMagick: Policy Bypass can Trigger an Out-of-Memory condition</description>
+    </item>
+    <item>
+      <title>ImageMagick has out-of-bounds write in ICON decoder due to incorrect loop</title>
+      <link>https://www.patchbrief.org/items/2026-06-nuget-cve-2026-53461.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-nuget-cve-2026-53461.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>ImageMagick has out-of-bounds write in ICON decoder due to incorrect loop</description>
+    </item>
+    <item>
+      <title>PTC Windchill and FlexPLM Improper Input Validation Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-06-ptc-cve-2026-12569.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-ptc-cve-2026-12569.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>PTC Windchill and FlexPLM contains an improper input validation vulnerability allowing an unauthenticated, remote attacker to execute arbitrary code by sending a malicious request to the network.</description>
+    </item>
+    <item>
+      <title>Lemur has an authorization bypass in StrictRolePermission / AuthorityCreatorPermission</title>
+      <link>https://www.patchbrief.org/items/2026-06-pypi-cve-2026-48508.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-pypi-cve-2026-48508.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Lemur has an authorization bypass in StrictRolePermission / AuthorityCreatorPermission</description>
+    </item>
+    <item>
+      <title>Lemur: ACME SSRF + creator-equality IDOR lead to AWS IAM/PKI compromise</title>
+      <link>https://www.patchbrief.org/items/2026-06-pypi-cve-2026-55166.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-pypi-cve-2026-55166.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Lemur: ACME SSRF + creator-equality IDOR lead to AWS IAM/PKI compromise</description>
+    </item>
+    <item>
+      <title>amazon-braket-sdk vulnerable to Insecure Deserialization via pickle.loads()</title>
+      <link>https://www.patchbrief.org/items/2026-06-pypi-cve-2026-9291.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-pypi-cve-2026-9291.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>amazon-braket-sdk vulnerable to Insecure Deserialization via pickle.loads()</description>
+    </item>
+    <item>
+      <title>Cacti Cacti — CVE-2026-39948 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-06-cacti-cve-2026-39948.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-cacti-cve-2026-39948.html</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Cacti is an open source performance and fault management framework. In versions 1.2.30 and prior, the rfilter request parameter is retrieved via the raw accessor grv() (rather than gfrv() with FILTER_VALIDATE_IS_REGEX validation) and concatenated directly into RLIKE SQL clauses in lib/html_graph.php and lib/html_tree.php, which are reachable pre-authentication through graph_view.php on installations with guest graph viewing enabled. Because the unbalanced-quote payload bypasses the regex validation that would otherwise reject it, an unauthenticated attacker can inject arbitrary SQL to compromi</description>
+    </item>
     <item>
       <title>OliveTin has a Concurrent Template Parsing Race Condition which Leads to Cross-Request Command Contamination</title>
       <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-48708.html</link>
@@ -26,6 +208,13 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-maven-cve-2026-45052.html</guid>
       <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
       <description>OpenAM Pre-auth User Profile Tampering via Anonymous SOAP Authn in Liberty IDPP/Discovery Endpoints</description>
+    </item>
+    <item>
+      <title>N8N N8N — CVE-2026-56351 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-06-n8n-cve-2026-56351.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-n8n-cve-2026-56351.html</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <description>n8n before version 2.4.0 contains a sql injection vulnerability in MySQL, PostgreSQL, and Microsoft SQL nodes that allows authenticated users to inject arbitrary SQL through unescaped identifier values in node configuration parameters. Attackers with workflow creation permissions can supply specially crafted table or column names to execute unauthorized database commands and compromise data integrity.</description>
     </item>
     <item>
       <title>Snipe-IT: Bulk editing users allowed `ldap_import` and `activated_in` bulk editing users</title>
@@ -159,6 +348,34 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-n8n-cve-2026-44792.html</guid>
       <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
       <description>n8n is an open source workflow automation platform. Prior to 1.123.43, 2.22.1, and 2.20.7, an attacker with write access to the git repository connected to an n8n Source Control configuration could commit a malicious Data Table JSON file containing a crafted column name. When an administrator performed a Source Control Pull, n8n imported the file and could lead to SQL injection on the internal PostgreSQL instance. Exploitation requires the n8n instance uses PostgreSQL as its database backend, the Source Control feature is enabled and connected to a repository the attacker can write to, and an</description>
+    </item>
+    <item>
+      <title>N8N N8N — CVE-2026-54305 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54305.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54305.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>n8n is an open source workflow automation platform. Prior to 1.123.55, 2.25.7, and 2.26.2, three EE endpoints used by the Dynamic Credentials feature accepted any authenticated n8n session without performing per-resource ownership or scope checks on the target workflow or credential. An authenticated user with no project membership or credential sharing relationship could enumerate credential identifiers, names, and types referenced by any private workflow in the instance, initiate an OAuth authorization flow against another user's credential to overwrite its stored tokens with tokens bound to</description>
+    </item>
+    <item>
+      <title>N8N N8N — CVE-2026-54307 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54307.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54307.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>n8n is an open source workflow automation platform. Prior to 1.123.55, 2.25.7, and 2.26.2, a member-level user with editor access to a shared workflow could reference credentials they do not own via specific public API endpoints. Credential ownership checks were only enforced partially leading to cross-user credential access. This issue affects instances where workflow sharing is enabled and at least one workflow has been shared with a member-level user as an Editor. This vulnerability is fixed in 1.123.55, 2.25.7, and 2.26.2.</description>
+    </item>
+    <item>
+      <title>N8N N8N — CVE-2026-54309 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54309.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54309.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>n8n is an open source workflow automation platform. Prior to 2.25.7 and 2.26.2, when @n8n/mcp-browser is run in HTTP transport mode, the MCP endpoint accepts session initialization and tool invocation requests without any authentication. Any network-reachable client, or any website visited by the user, can establish an MCP session and invoke browser-control tools. Where the n8n AI Browser Bridge extension is installed and a browser connection is active, an unauthenticated caller can access browser-control capabilities including navigation, JavaScript evaluation, and cookie and storage access a</description>
+    </item>
+    <item>
+      <title>N8N N8N — CVE-2026-54310 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54310.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-n8n-cve-2026-54310.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>n8n is an open source workflow automation platform. Prior to 2.25.7 and 2.26.2, an authenticated user with permission to create or modify workflows could supply a crafted parameters to the TimescaleDB and/or legacy Postgres v1 node's allowing arbitrary SQL to be injected and executed against the connected database within the privileges of the configured database account. This vulnerability is fixed in 2.25.7 and 2.26.2.</description>
     </item>
     <item>
       <title>Budibase has nonymous NoSQL operator injection via published-app query templates</title>
