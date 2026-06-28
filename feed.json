@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-06-27T10:58:08Z",
-  "total_items": 225,
+  "generated": "2026-06-28T11:07:44Z",
+  "total_items": 230,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-06-27T10:58:08Z",
+    "generated": "2026-06-28T11:07:44Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-06-27T10:57:38Z",
-        "finished_at": "2026-06-27T10:57:38Z"
+        "started_at": "2026-06-28T11:07:31Z",
+        "finished_at": "2026-06-28T11:07:31Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-27T10:57:38Z",
-        "finished_at": "2026-06-27T10:57:38Z"
+        "started_at": "2026-06-28T11:07:31Z",
+        "finished_at": "2026-06-28T11:07:32Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 13,
-        "started_at": "2026-06-27T10:57:38Z",
-        "finished_at": "2026-06-27T10:58:04Z"
+        "items_seen": 11,
+        "started_at": "2026-06-28T11:07:32Z",
+        "finished_at": "2026-06-28T11:07:40Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-06-27T10:58:04Z",
-        "finished_at": "2026-06-27T10:58:05Z"
+        "started_at": "2026-06-28T11:07:40Z",
+        "finished_at": "2026-06-28T11:07:41Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-27T10:58:05Z",
-        "finished_at": "2026-06-27T10:58:06Z"
+        "started_at": "2026-06-28T11:07:41Z",
+        "finished_at": "2026-06-28T11:07:42Z"
       },
       {
         "id": "exploitdb",
@@ -63,17 +63,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-27T10:58:06Z",
-        "finished_at": "2026-06-27T10:58:07Z"
+        "started_at": "2026-06-28T11:07:42Z",
+        "finished_at": "2026-06-28T11:07:43Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 28,
-        "started_at": "2026-06-27T10:58:07Z",
-        "finished_at": "2026-06-27T10:58:07Z"
+        "items_seen": 29,
+        "started_at": "2026-06-28T11:07:43Z",
+        "finished_at": "2026-06-28T11:07:43Z"
       }
     ]
   },
@@ -553,6 +553,68 @@
       ]
     },
     {
+      "id": "2026-06-jetbrains-cve-2026-53914",
+      "slug": "2026-06-jetbrains-cve-2026-53914",
+      "url": "https://www.patchbrief.org/items/2026-06-jetbrains-cve-2026-53914.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Jetbrains Kotlin — CVE-2026-53914 (Critical)",
+      "summary": "In JetBrains Kotlin before 2.4.20 code execution was possible via unsafe deserialization in the build cache metadata",
+      "vendor": "Jetbrains",
+      "product": "Kotlin",
+      "cve": "CVE-2026-53914",
+      "operator_check": "Review CVE-2026-53914 in your asset inventory. Apply patches per vendor guidance and verify Kotlin is not exposed. CVSS score: 6.7. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 6.7) in Jetbrains Kotlin. Patch or mitigate promptly. EPSS percentile: 2%.",
+      "tags": [
+        "cve-2026-53914",
+        "vendor-advisory",
+        "jetbrains",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-53914",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53914"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-jetbrains-cve-2026-57926",
+      "slug": "2026-06-jetbrains-cve-2026-57926",
+      "url": "https://www.patchbrief.org/items/2026-06-jetbrains-cve-2026-57926.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Jetbrains Youtrack — CVE-2026-57926 (Critical)",
+      "summary": "In JetBrains YouTrack before 2026.2.16593 the websandbox bridge was vulnerable to a prototype pollution attack",
+      "vendor": "Jetbrains",
+      "product": "Youtrack",
+      "cve": "CVE-2026-57926",
+      "operator_check": "Review CVE-2026-57926 in your asset inventory. Apply patches per vendor guidance and verify Youtrack is not exposed. CVSS score: 2.6. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 2.6) in Jetbrains Youtrack. Patch or mitigate promptly. EPSS percentile: 32%.",
+      "tags": [
+        "cve-2026-57926",
+        "vendor-advisory",
+        "jetbrains",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-57926",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57926"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        }
+      ]
+    },
+    {
       "id": "2026-06-nodejs-cve-2026-48930",
       "slug": "2026-06-nodejs-cve-2026-48930",
       "url": "https://www.patchbrief.org/items/2026-06-nodejs-cve-2026-48930.html",
@@ -615,6 +677,76 @@
         {
           "title": "Source reference",
           "url": "https://github.com/deepstreamIO/deepstream.io/security/advisories/GHSA-9v98-6g37-x9g6"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-55698",
+      "slug": "2026-06-npm-cve-2026-55698",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-55698.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pnpm: Project env lockfile can short-circuit package-manager resolution and execute lockfile-selected pnpm bytes",
+      "summary": "pnpm: Project env lockfile can short-circuit package-manager resolution and execute lockfile-selected pnpm bytes",
+      "vendor": "npm",
+      "product": "pnpm",
+      "cve": "CVE-2026-55698",
+      "operator_check": "Check whether pnpm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pnpm. Prioritize it with other application dependency updates, especially because EPSS places it in the 7% percentile.",
+      "tags": [
+        "cve-2026-55698",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w466-c33r-3gjp",
+          "url": "https://github.com/advisories/GHSA-w466-c33r-3gjp"
+        },
+        {
+          "title": "NVD — CVE-2026-55698",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55698"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pnpm/pnpm/security/advisories/GHSA-w466-c33r-3gjp"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-55700",
+      "slug": "2026-06-npm-cve-2026-55700",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-55700.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pnpm: `stage download` writes outside its destination directory via manifest name/version traversal",
+      "summary": "pnpm: `stage download` writes outside its destination directory via manifest name/version traversal",
+      "vendor": "npm",
+      "product": "pnpm",
+      "cve": "CVE-2026-55700",
+      "operator_check": "Check whether pnpm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pnpm. Prioritize it with other application dependency updates, especially because EPSS places it in the 17% percentile.",
+      "tags": [
+        "cve-2026-55700",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v23m-ccfg-pq9h",
+          "url": "https://github.com/advisories/GHSA-v23m-ccfg-pq9h"
+        },
+        {
+          "title": "NVD — CVE-2026-55700",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55700"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pnpm/pnpm/security/advisories/GHSA-v23m-ccfg-pq9h"
         }
       ]
     },
@@ -751,6 +883,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/fluent/fluentd/security/advisories/GHSA-44hj-4m45-frj3"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-wso2-cve-2026-2053",
+      "slug": "2026-06-wso2-cve-2026-2053",
+      "url": "https://www.patchbrief.org/items/2026-06-wso2-cve-2026-2053.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Wso2 Api Manager — CVE-2026-2053 (Critical)",
+      "summary": "The WSO2 API Manager's message flow component, when processing WS-Addressing headers, does not sufficiently validate or restrict user-controlled input within these headers. This omission allows an attacker to manipulate WS-Addressing headers to specify arbitrary destinations for server-initiated requests. Successful exploitation allows an unauthenticated attacker to control the destination of server-initiated requests originating from the WSO2 API Manager. This direct control can enable unauthorized access to internal network resources or services that would typically be inaccessible from ext",
+      "vendor": "Wso2",
+      "product": "Api Manager",
+      "cve": "CVE-2026-2053",
+      "operator_check": "Review CVE-2026-2053 in your asset inventory. Apply patches per vendor guidance and verify Api Manager is not exposed. CVSS score: 8.3. EPSS probability: 0.2%; percentile: 10%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.3) in Wso2 Api Manager. Patch or mitigate promptly. EPSS percentile: 10%.",
+      "tags": [
+        "cve-2026-2053",
+        "vendor-advisory",
+        "wso2",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-2053",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2053"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5072/"
         }
       ]
     },
