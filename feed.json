@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-06-28T11:07:44Z",
-  "total_items": 230,
+  "generated": "2026-06-29T13:07:18Z",
+  "total_items": 240,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-06-28T11:07:44Z",
+    "generated": "2026-06-29T13:07:18Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-06-28T11:07:31Z",
-        "finished_at": "2026-06-28T11:07:31Z"
+        "items_seen": 0,
+        "started_at": "2026-06-29T13:07:05Z",
+        "finished_at": "2026-06-29T13:07:06Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-28T11:07:31Z",
-        "finished_at": "2026-06-28T11:07:32Z"
+        "started_at": "2026-06-29T13:07:06Z",
+        "finished_at": "2026-06-29T13:07:06Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 11,
-        "started_at": "2026-06-28T11:07:32Z",
-        "finished_at": "2026-06-28T11:07:40Z"
+        "items_seen": 3,
+        "started_at": "2026-06-29T13:07:06Z",
+        "finished_at": "2026-06-29T13:07:14Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-06-28T11:07:40Z",
-        "finished_at": "2026-06-28T11:07:41Z"
+        "started_at": "2026-06-29T13:07:14Z",
+        "finished_at": "2026-06-29T13:07:15Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-28T11:07:41Z",
-        "finished_at": "2026-06-28T11:07:42Z"
+        "started_at": "2026-06-29T13:07:15Z",
+        "finished_at": "2026-06-29T13:07:16Z"
       },
       {
         "id": "exploitdb",
@@ -63,17 +63,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-28T11:07:42Z",
-        "finished_at": "2026-06-28T11:07:43Z"
+        "started_at": "2026-06-29T13:07:16Z",
+        "finished_at": "2026-06-29T13:07:17Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 29,
-        "started_at": "2026-06-28T11:07:43Z",
-        "finished_at": "2026-06-28T11:07:43Z"
+        "items_seen": 18,
+        "started_at": "2026-06-29T13:07:17Z",
+        "finished_at": "2026-06-29T13:07:18Z"
       }
     ]
   },
@@ -238,6 +238,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/szTheory/relyra/security/advisories/GHSA-jv46-xfwm-36j7"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-erlang-ghsa-8jgf-23q5-x7xx",
+      "slug": "2026-06-erlang-ghsa-8jgf-23q5-x7xx",
+      "url": "https://www.patchbrief.org/items/2026-06-erlang-ghsa-8jgf-23q5-x7xx.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ex_aws_sns: Trusted-attacker `SigningCertURL` permits complete SNS signature bypass",
+      "summary": "ex_aws_sns: Trusted-attacker `SigningCertURL` permits complete SNS signature bypass",
+      "vendor": "erlang",
+      "product": "ex_aws_sns",
+      "cve": null,
+      "operator_check": "Check whether ex_aws_sns is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ex_aws_sns. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-8jgf-23q5-x7xx",
+        "vendor-advisory",
+        "erlang",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8jgf-23q5-x7xx",
+          "url": "https://github.com/advisories/GHSA-8jgf-23q5-x7xx"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-jq4m-q6p2-8gwc"
         }
       ]
     },
@@ -487,6 +518,111 @@
       ]
     },
     {
+      "id": "2026-06-go-cve-2026-49338",
+      "slug": "2026-06-go-cve-2026-49338",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-49338.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Subsonic API: any authenticated user can delete or read any other user's playlist (IDOR)",
+      "summary": "Subsonic API: any authenticated user can delete or read any other user's playlist (IDOR)",
+      "vendor": "Go",
+      "product": "go.senan.xyz/gonic",
+      "cve": "CVE-2026-49338",
+      "operator_check": "Check whether go.senan.xyz/gonic is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 6%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for go.senan.xyz/gonic. Prioritize it with other application dependency updates, especially because EPSS places it in the 6% percentile.",
+      "tags": [
+        "cve-2026-49338",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hmgp-w9jm-vp95",
+          "url": "https://github.com/advisories/GHSA-hmgp-w9jm-vp95"
+        },
+        {
+          "title": "NVD — CVE-2026-49338",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49338"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sentriz/gonic/security/advisories/GHSA-hmgp-w9jm-vp95"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-49339",
+      "slug": "2026-06-go-cve-2026-49339",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-49339.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "gonic: Path Traversal in playlist `id` bypasses ownership check, enabling any user to read/delete other users' playlists",
+      "summary": "gonic: Path Traversal in playlist `id` bypasses ownership check, enabling any user to read/delete other users' playlists",
+      "vendor": "Go",
+      "product": "go.senan.xyz/gonic",
+      "cve": "CVE-2026-49339",
+      "operator_check": "Check whether go.senan.xyz/gonic is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for go.senan.xyz/gonic. Prioritize it with other application dependency updates, especially because EPSS places it in the 17% percentile.",
+      "tags": [
+        "cve-2026-49339",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2fp4-5v5c-4448",
+          "url": "https://github.com/advisories/GHSA-2fp4-5v5c-4448"
+        },
+        {
+          "title": "NVD — CVE-2026-49339",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49339"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sentriz/gonic/security/advisories/GHSA-2fp4-5v5c-4448"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-49340",
+      "slug": "2026-06-go-cve-2026-49340",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-49340.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "gonic has arbitrary file write in createPlaylist: any authenticated user can write playlist M3U content to attacker-c...",
+      "summary": "gonic has arbitrary file write in createPlaylist: any authenticated user can write playlist M3U content to attacker-controlled path on the host",
+      "vendor": "Go",
+      "product": "go.senan.xyz/gonic",
+      "cve": "CVE-2026-49340",
+      "operator_check": "Check whether go.senan.xyz/gonic is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for go.senan.xyz/gonic. Prioritize it with other application dependency updates, especially because EPSS places it in the 18% percentile.",
+      "tags": [
+        "cve-2026-49340",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4gxv-p5g5-j7w7",
+          "url": "https://github.com/advisories/GHSA-4gxv-p5g5-j7w7"
+        },
+        {
+          "title": "NVD — CVE-2026-49340",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49340"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sentriz/gonic/security/advisories/GHSA-4gxv-p5g5-j7w7"
+        }
+      ]
+    },
+    {
       "id": "2026-06-go-cve-2026-53519",
       "slug": "2026-06-go-cve-2026-53519",
       "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-53519.html",
@@ -549,6 +685,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/nezhahq/nezha/security/advisories/GHSA-q6xx-5vr8-p898"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-ghsa-wcr3-9x4c-f5gj",
+      "slug": "2026-06-go-ghsa-wcr3-9x4c-f5gj",
+      "url": "https://www.patchbrief.org/items/2026-06-go-ghsa-wcr3-9x4c-f5gj.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Blnk has an API key authorization bypass in owner and scope enforcement",
+      "summary": "Blnk has an API key authorization bypass in owner and scope enforcement",
+      "vendor": "Go",
+      "product": "github.com/blnkfinance/blnk",
+      "cve": null,
+      "operator_check": "Check whether github.com/blnkfinance/blnk is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/blnkfinance/blnk. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-wcr3-9x4c-f5gj",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wcr3-9x4c-f5gj",
+          "url": "https://github.com/advisories/GHSA-wcr3-9x4c-f5gj"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/blnkfinance/blnk/security/advisories/GHSA-wcr3-9x4c-f5gj"
         }
       ]
     },
@@ -677,6 +844,181 @@
         {
           "title": "Source reference",
           "url": "https://github.com/deepstreamIO/deepstream.io/security/advisories/GHSA-9v98-6g37-x9g6"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-49293",
+      "slug": "2026-06-npm-cve-2026-49293",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-49293.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "js-toml vulnerable to CPU exhaustion via O(n^2) BigInt construction on radix-prefixed integer literals",
+      "summary": "js-toml vulnerable to CPU exhaustion via O(n^2) BigInt construction on radix-prefixed integer literals",
+      "vendor": "npm",
+      "product": "js-toml",
+      "cve": "CVE-2026-49293",
+      "operator_check": "Check whether js-toml is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for js-toml. Prioritize it with other application dependency updates, especially because EPSS places it in the 33% percentile.",
+      "tags": [
+        "cve-2026-49293",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wp3c-266w-4qfq",
+          "url": "https://github.com/advisories/GHSA-wp3c-266w-4qfq"
+        },
+        {
+          "title": "NVD — CVE-2026-49293",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49293"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sunnyadn/js-toml/security/advisories/GHSA-wp3c-266w-4qfq"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-50015",
+      "slug": "2026-06-npm-cve-2026-50015",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-50015.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pnpm Vulnerable to Arbitrary File Write/Delete via Malicious Patch File (Path Traversal)",
+      "summary": "pnpm Vulnerable to Arbitrary File Write/Delete via Malicious Patch File (Path Traversal)",
+      "vendor": "npm",
+      "product": "pnpm",
+      "cve": "CVE-2026-50015",
+      "operator_check": "Check whether pnpm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pnpm. Prioritize it with other application dependency updates, especially because EPSS places it in the 16% percentile.",
+      "tags": [
+        "cve-2026-50015",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rxhj-4m44-96r4",
+          "url": "https://github.com/advisories/GHSA-rxhj-4m44-96r4"
+        },
+        {
+          "title": "NVD — CVE-2026-50015",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50015"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pnpm/pnpm/security/advisories/GHSA-rxhj-4m44-96r4"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-50016",
+      "slug": "2026-06-npm-cve-2026-50016",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-50016.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pnpm: Transitive dependency alias path traversal allows project path override via symlink replacement",
+      "summary": "pnpm: Transitive dependency alias path traversal allows project path override via symlink replacement",
+      "vendor": "npm",
+      "product": "pnpm",
+      "cve": "CVE-2026-50016",
+      "operator_check": "Check whether pnpm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 23%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pnpm. Prioritize it with other application dependency updates, especially because EPSS places it in the 23% percentile.",
+      "tags": [
+        "cve-2026-50016",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hwx4-2j3j-g496",
+          "url": "https://github.com/advisories/GHSA-hwx4-2j3j-g496"
+        },
+        {
+          "title": "NVD — CVE-2026-50016",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50016"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pnpm/pnpm/security/advisories/GHSA-hwx4-2j3j-g496"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-55487",
+      "slug": "2026-06-npm-cve-2026-55487",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-55487.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pnpm: Manifest identity spoof satisfies allowBuilds and runs attacker lifecycle",
+      "summary": "pnpm: Manifest identity spoof satisfies allowBuilds and runs attacker lifecycle",
+      "vendor": "npm",
+      "product": "pnpm",
+      "cve": "CVE-2026-55487",
+      "operator_check": "Check whether pnpm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pnpm. Prioritize it with other application dependency updates, especially because EPSS places it in the 2% percentile.",
+      "tags": [
+        "cve-2026-55487",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5wx6-mg75-v57r",
+          "url": "https://github.com/advisories/GHSA-5wx6-mg75-v57r"
+        },
+        {
+          "title": "NVD — CVE-2026-55487",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55487"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pnpm/pnpm/security/advisories/GHSA-5wx6-mg75-v57r"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-55697",
+      "slug": "2026-06-npm-cve-2026-55697",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-55697.html",
+      "date": "2026-06-26",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pnpm: Repository-controlled configDependencies can select a pacquet native install engine",
+      "summary": "pnpm: Repository-controlled configDependencies can select a pacquet native install engine",
+      "vendor": "npm",
+      "product": "pnpm",
+      "cve": "CVE-2026-55697",
+      "operator_check": "Check whether pnpm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pnpm. Prioritize it with other application dependency updates, especially because EPSS places it in the 2% percentile.",
+      "tags": [
+        "cve-2026-55697",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gj8w-mvpf-x27x",
+          "url": "https://github.com/advisories/GHSA-gj8w-mvpf-x27x"
+        },
+        {
+          "title": "NVD — CVE-2026-55697",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55697"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pnpm/pnpm/security/advisories/GHSA-gj8w-mvpf-x27x"
         }
       ]
     },

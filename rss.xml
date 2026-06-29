@@ -4,7 +4,7 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Sun, 28 Jun 2026 11:07:44 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 13:07:18 +0000</lastBuildDate>
     <language>en</language>
     <item>
       <title>pnpm: `patch-remove` could delete project-selected files outside the patches directory</title>
@@ -40,6 +40,13 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-erlang-cve-2026-49454.html</guid>
       <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
       <description>Relyra SAML SignatureValue not cryptographically verified -&gt; authentication bypass</description>
+    </item>
+    <item>
+      <title>ex_aws_sns: Trusted-attacker `SigningCertURL` permits complete SNS signature bypass</title>
+      <link>https://www.patchbrief.org/items/2026-06-erlang-ghsa-8jgf-23q5-x7xx.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-erlang-ghsa-8jgf-23q5-x7xx.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>ex_aws_sns: Trusted-attacker `SigningCertURL` permits complete SNS signature bypass</description>
     </item>
     <item>
       <title>Incus has an arbitrary file read+write on host via rootfs/ symlink in malicious image</title>
@@ -91,6 +98,27 @@
       <description>Incus has an arbitrary file write on its client due to trusted image hash</description>
     </item>
     <item>
+      <title>Subsonic API: any authenticated user can delete or read any other user's playlist (IDOR)</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-49338.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-49338.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Subsonic API: any authenticated user can delete or read any other user's playlist (IDOR)</description>
+    </item>
+    <item>
+      <title>gonic: Path Traversal in playlist `id` bypasses ownership check, enabling any user to read/delete other users' playlists</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-49339.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-49339.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>gonic: Path Traversal in playlist `id` bypasses ownership check, enabling any user to read/delete other users' playlists</description>
+    </item>
+    <item>
+      <title>gonic has arbitrary file write in createPlaylist: any authenticated user can write playlist M3U content to attacker-c...</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-49340.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-49340.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>gonic has arbitrary file write in createPlaylist: any authenticated user can write playlist M3U content to attacker-controlled path on the host</description>
+    </item>
+    <item>
       <title>Nezha Monitoring: Pre-auth path traversal via /dashboard.. prefix confusion leaks jwt_secret_key</title>
       <link>https://www.patchbrief.org/items/2026-06-go-cve-2026-53519.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-cve-2026-53519.html</guid>
@@ -103,6 +131,13 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-ghsa-q6xx-5vr8-p898.html</guid>
       <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
       <description>Nezha vulnerable to cross-tenant terminal/file-manager session hijack via WebSocket stream UUID without ownership check</description>
+    </item>
+    <item>
+      <title>Blnk has an API key authorization bypass in owner and scope enforcement</title>
+      <link>https://www.patchbrief.org/items/2026-06-go-ghsa-wcr3-9x4c-f5gj.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-go-ghsa-wcr3-9x4c-f5gj.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Blnk has an API key authorization bypass in owner and scope enforcement</description>
     </item>
     <item>
       <title>Jetbrains Kotlin — CVE-2026-53914 (Critical)</title>
@@ -131,6 +166,41 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-npm-cve-2026-49252.html</guid>
       <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
       <description>deepstream is vulnerable to prototype pollution</description>
+    </item>
+    <item>
+      <title>js-toml vulnerable to CPU exhaustion via O(n^2) BigInt construction on radix-prefixed integer literals</title>
+      <link>https://www.patchbrief.org/items/2026-06-npm-cve-2026-49293.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-npm-cve-2026-49293.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>js-toml vulnerable to CPU exhaustion via O(n^2) BigInt construction on radix-prefixed integer literals</description>
+    </item>
+    <item>
+      <title>pnpm Vulnerable to Arbitrary File Write/Delete via Malicious Patch File (Path Traversal)</title>
+      <link>https://www.patchbrief.org/items/2026-06-npm-cve-2026-50015.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-npm-cve-2026-50015.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>pnpm Vulnerable to Arbitrary File Write/Delete via Malicious Patch File (Path Traversal)</description>
+    </item>
+    <item>
+      <title>pnpm: Transitive dependency alias path traversal allows project path override via symlink replacement</title>
+      <link>https://www.patchbrief.org/items/2026-06-npm-cve-2026-50016.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-npm-cve-2026-50016.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>pnpm: Transitive dependency alias path traversal allows project path override via symlink replacement</description>
+    </item>
+    <item>
+      <title>pnpm: Manifest identity spoof satisfies allowBuilds and runs attacker lifecycle</title>
+      <link>https://www.patchbrief.org/items/2026-06-npm-cve-2026-55487.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-npm-cve-2026-55487.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>pnpm: Manifest identity spoof satisfies allowBuilds and runs attacker lifecycle</description>
+    </item>
+    <item>
+      <title>pnpm: Repository-controlled configDependencies can select a pacquet native install engine</title>
+      <link>https://www.patchbrief.org/items/2026-06-npm-cve-2026-55697.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-06-npm-cve-2026-55697.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>pnpm: Repository-controlled configDependencies can select a pacquet native install engine</description>
     </item>
     <item>
       <title>pnpm: Project env lockfile can short-circuit package-manager resolution and execute lockfile-selected pnpm bytes</title>
