@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-06-29T14:01:44Z",
-  "total_items": 240,
+  "generated": "2026-06-30T11:45:32Z",
+  "total_items": 244,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-06-29T14:01:44Z",
+    "generated": "2026-06-30T11:45:32Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-06-29T13:07:05Z",
-        "finished_at": "2026-06-29T13:07:06Z"
+        "items_seen": 1,
+        "started_at": "2026-06-30T11:45:19Z",
+        "finished_at": "2026-06-30T11:45:19Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-29T13:07:06Z",
-        "finished_at": "2026-06-29T13:07:06Z"
+        "started_at": "2026-06-30T11:45:19Z",
+        "finished_at": "2026-06-30T11:45:20Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-06-29T13:07:06Z",
-        "finished_at": "2026-06-29T13:07:14Z"
+        "items_seen": 0,
+        "started_at": "2026-06-30T11:45:20Z",
+        "finished_at": "2026-06-30T11:45:28Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 30,
-        "started_at": "2026-06-29T13:07:14Z",
-        "finished_at": "2026-06-29T13:07:15Z"
+        "items_seen": 6,
+        "started_at": "2026-06-30T11:45:28Z",
+        "finished_at": "2026-06-30T11:45:28Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-29T13:07:15Z",
-        "finished_at": "2026-06-29T13:07:16Z"
+        "started_at": "2026-06-30T11:45:28Z",
+        "finished_at": "2026-06-30T11:45:31Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,157 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-29T13:07:16Z",
-        "finished_at": "2026-06-29T13:07:17Z"
+        "started_at": "2026-06-30T11:45:31Z",
+        "finished_at": "2026-06-30T11:45:31Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 18,
-        "started_at": "2026-06-29T13:07:17Z",
-        "finished_at": "2026-06-29T13:07:18Z"
+        "items_seen": 1,
+        "started_at": "2026-06-30T11:45:31Z",
+        "finished_at": "2026-06-30T11:45:32Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-06-go-cve-2026-44840",
+      "slug": "2026-06-go-cve-2026-44840",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-44840.html",
+      "date": "2026-06-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Dgraph Vulnerable to DQL Injection via checkUserPassword GraphQL Query",
+      "summary": "Dgraph Vulnerable to DQL Injection via checkUserPassword GraphQL Query",
+      "vendor": "Go",
+      "product": "github.com/dgraph-io/dgraph/v25",
+      "cve": "CVE-2026-44840",
+      "operator_check": "Check whether github.com/dgraph-io/dgraph/v25 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/dgraph-io/dgraph/v25. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-44840",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q2m9-6jp9-c6mc",
+          "url": "https://github.com/advisories/GHSA-q2m9-6jp9-c6mc"
+        },
+        {
+          "title": "NVD — CVE-2026-44840",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44840"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dgraph-io/dgraph/security/advisories/GHSA-q2m9-6jp9-c6mc"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-maven-cve-2026-47424",
+      "slug": "2026-06-maven-cve-2026-47424",
+      "url": "https://www.patchbrief.org/items/2026-06-maven-cve-2026-47424.html",
+      "date": "2026-06-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenAM Authenticated RCE via Groovy Sandbox Escape",
+      "summary": "OpenAM Authenticated RCE via Groovy Sandbox Escape",
+      "vendor": "Maven",
+      "product": "org.openidentityplatform.openam:openam-scripting",
+      "cve": "CVE-2026-47424",
+      "operator_check": "Check whether org.openidentityplatform.openam:openam-scripting is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.5.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.openidentityplatform.openam:openam-scripting. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-47424",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-69j4-qvqr-hpw3",
+          "url": "https://github.com/advisories/GHSA-69j4-qvqr-hpw3"
+        },
+        {
+          "title": "NVD — CVE-2026-47424",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47424"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-69j4-qvqr-hpw3"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-maven-cve-2026-47426",
+      "slug": "2026-06-maven-cve-2026-47426",
+      "url": "https://www.patchbrief.org/items/2026-06-maven-cve-2026-47426.html",
+      "date": "2026-06-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenAM OAuth Client Impersonation via JWKS Resolver Cache",
+      "summary": "OpenAM OAuth Client Impersonation via JWKS Resolver Cache",
+      "vendor": "Maven",
+      "product": "org.openidentityplatform.openam:openam-oauth2",
+      "cve": "CVE-2026-47426",
+      "operator_check": "Check whether org.openidentityplatform.openam:openam-oauth2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.openidentityplatform.openam:openam-oauth2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-47426",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f2cx-463q-7m2c",
+          "url": "https://github.com/advisories/GHSA-f2cx-463q-7m2c"
+        },
+        {
+          "title": "NVD — CVE-2026-47426",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47426"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-f2cx-463q-7m2c"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-simplehelp-cve-2026-48558",
+      "slug": "2026-06-simplehelp-cve-2026-48558",
+      "url": "https://www.patchbrief.org/items/2026-06-simplehelp-cve-2026-48558.html",
+      "date": "2026-06-29",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "SimpleHelp Authentication Bypass Vulnerability",
+      "summary": "SimpleHelp contains an authentication bypass vulnerability in the OIDC authentication flow. When OIDC authentication is configured, identity tokens submitted during login are accepted without verifying their cryptographic signature. In a vulnerable configuration, a remote, unauthenticated attacker can submit a forged token containing arbitrary identity claims to obtain a fully authenticated technician session. In some configurations, this may also allow bypass of multi-factor authentication.",
+      "vendor": "SimpleHelp",
+      "product": "SimpleHelp",
+      "cve": "CVE-2026-48558",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-48558 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-02. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-48558",
+        "kev",
+        "simplehelp",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-48558",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48558"
+        }
+      ]
+    },
     {
       "id": "2026-06-npm-ghsa-72r4-9c5j-mj57",
       "slug": "2026-06-npm-ghsa-72r4-9c5j-mj57",
