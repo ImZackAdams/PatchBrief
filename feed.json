@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-06-30T11:45:32Z",
-  "total_items": 244,
+  "generated": "2026-07-01T12:08:42Z",
+  "total_items": 265,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-06-30T11:45:32Z",
+    "generated": "2026-07-01T12:08:42Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-06-30T11:45:19Z",
-        "finished_at": "2026-06-30T11:45:19Z"
+        "started_at": "2026-07-01T12:08:26Z",
+        "finished_at": "2026-07-01T12:08:26Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-30T11:45:19Z",
-        "finished_at": "2026-06-30T11:45:20Z"
+        "started_at": "2026-07-01T12:08:26Z",
+        "finished_at": "2026-07-01T12:08:27Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-06-30T11:45:20Z",
-        "finished_at": "2026-06-30T11:45:28Z"
+        "items_seen": 5,
+        "started_at": "2026-07-01T12:08:27Z",
+        "finished_at": "2026-07-01T12:08:37Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 6,
-        "started_at": "2026-06-30T11:45:28Z",
-        "finished_at": "2026-06-30T11:45:28Z"
+        "items_seen": 19,
+        "started_at": "2026-07-01T12:08:37Z",
+        "finished_at": "2026-07-01T12:08:38Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-30T11:45:28Z",
-        "finished_at": "2026-06-30T11:45:31Z"
+        "started_at": "2026-07-01T12:08:38Z",
+        "finished_at": "2026-07-01T12:08:41Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,705 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-06-30T11:45:31Z",
-        "finished_at": "2026-06-30T11:45:31Z"
+        "started_at": "2026-07-01T12:08:41Z",
+        "finished_at": "2026-07-01T12:08:41Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-06-30T11:45:31Z",
-        "finished_at": "2026-06-30T11:45:32Z"
+        "items_seen": 11,
+        "started_at": "2026-07-01T12:08:41Z",
+        "finished_at": "2026-07-01T12:08:42Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-06-adobe-cve-2026-48286",
+      "slug": "2026-06-adobe-cve-2026-48286",
+      "url": "https://www.patchbrief.org/items/2026-06-adobe-cve-2026-48286.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Adobe Campaign Classic (ACC) — CVE-2026-48286 (Critical)",
+      "summary": "Adobe Campaign Classic (ACC) versions 7.4.3 build 9396 and earlier are affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "vendor": "Adobe",
+      "product": "Campaign Classic (ACC)",
+      "cve": "CVE-2026-48286",
+      "operator_check": "Review CVE-2026-48286 in your asset inventory. Apply patches per vendor guidance and verify Campaign Classic (ACC) is not exposed. CVSS score: 10.0.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 10.0) in Adobe Campaign Classic (ACC). Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-48286",
+        "vendor-advisory",
+        "adobe",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-48286",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48286"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://helpx.adobe.com/security/products/campaign/apsb26-69.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-composer-cve-2026-47198",
+      "slug": "2026-06-composer-cve-2026-47198",
+      "url": "https://www.patchbrief.org/items/2026-06-composer-cve-2026-47198.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Paymenter has URL parameter injection that bypasses paid plan limits at checkout",
+      "summary": "Paymenter has URL parameter injection that bypasses paid plan limits at checkout",
+      "vendor": "Composer",
+      "product": "paymenter/paymenter",
+      "cve": "CVE-2026-47198",
+      "operator_check": "Check whether paymenter/paymenter is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for paymenter/paymenter. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-47198",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5q4q-834j-g8g4",
+          "url": "https://github.com/advisories/GHSA-5q4q-834j-g8g4"
+        },
+        {
+          "title": "NVD — CVE-2026-47198",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47198"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Paymenter/Paymenter/security/advisories/GHSA-5q4q-834j-g8g4"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-49478",
+      "slug": "2026-06-go-cve-2026-49478",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-49478.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fulcio has OIDC Discovery Redirect Following Allows SSRF and JWKS Substitution for Meta-Issuer Paths, with Kubernetes...",
+      "summary": "Fulcio has OIDC Discovery Redirect Following Allows SSRF and JWKS Substitution for Meta-Issuer Paths, with Kubernetes Service-Account Token Leakage",
+      "vendor": "Go",
+      "product": "github.com/sigstore/fulcio",
+      "cve": "CVE-2026-49478",
+      "operator_check": "Check whether github.com/sigstore/fulcio is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/sigstore/fulcio. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-49478",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f5mr-q85p-6hh6",
+          "url": "https://github.com/advisories/GHSA-f5mr-q85p-6hh6"
+        },
+        {
+          "title": "NVD — CVE-2026-49478",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49478"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sigstore/fulcio/security/advisories/GHSA-f5mr-q85p-6hh6"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-49821",
+      "slug": "2026-06-go-cve-2026-49821",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-49821.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fission: Cross-namespace Environment reference in Package allows build-time command execution and SA token exfiltration",
+      "summary": "Fission: Cross-namespace Environment reference in Package allows build-time command execution and SA token exfiltration",
+      "vendor": "Go",
+      "product": "github.com/fission/fission",
+      "cve": "CVE-2026-49821",
+      "operator_check": "Check whether github.com/fission/fission is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 14%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/fission/fission. Prioritize it with other application dependency updates, especially because EPSS places it in the 14% percentile.",
+      "tags": [
+        "cve-2026-49821",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vjhc-cf4p-72q4",
+          "url": "https://github.com/advisories/GHSA-vjhc-cf4p-72q4"
+        },
+        {
+          "title": "NVD — CVE-2026-49821",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49821"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fission/fission/security/advisories/GHSA-vjhc-cf4p-72q4"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-49822",
+      "slug": "2026-06-go-cve-2026-49822",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-49822.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fission: Cross-namespace event leakage via KubernetesWatchTrigger allows persistent tenant surveillance",
+      "summary": "Fission: Cross-namespace event leakage via KubernetesWatchTrigger allows persistent tenant surveillance",
+      "vendor": "Go",
+      "product": "github.com/fission/fission",
+      "cve": "CVE-2026-49822",
+      "operator_check": "Check whether github.com/fission/fission is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 14%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/fission/fission. Prioritize it with other application dependency updates, especially because EPSS places it in the 14% percentile.",
+      "tags": [
+        "cve-2026-49822",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gc3j-79f2-7vvw",
+          "url": "https://github.com/advisories/GHSA-gc3j-79f2-7vvw"
+        },
+        {
+          "title": "NVD — CVE-2026-49822",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49822"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fission/fission/security/advisories/GHSA-gc3j-79f2-7vvw"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-49823",
+      "slug": "2026-06-go-cve-2026-49823",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-49823.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fission: Cross-namespace Package read via unvalidated PackageRef in Function admission webhook",
+      "summary": "Fission: Cross-namespace Package read via unvalidated PackageRef in Function admission webhook",
+      "vendor": "Go",
+      "product": "github.com/fission/fission",
+      "cve": "CVE-2026-49823",
+      "operator_check": "Check whether github.com/fission/fission is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/fission/fission. Prioritize it with other application dependency updates, especially because EPSS places it in the 18% percentile.",
+      "tags": [
+        "cve-2026-49823",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3r8v-2xmj-5c39",
+          "url": "https://github.com/advisories/GHSA-3r8v-2xmj-5c39"
+        },
+        {
+          "title": "NVD — CVE-2026-49823",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49823"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fission/fission/security/advisories/GHSA-3r8v-2xmj-5c39"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-49824",
+      "slug": "2026-06-go-cve-2026-49824",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-49824.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fission: Cross-namespace Environment reference via unvalidated EnvironmentRef in Function admission webhook",
+      "summary": "Fission: Cross-namespace Environment reference via unvalidated EnvironmentRef in Function admission webhook",
+      "vendor": "Go",
+      "product": "github.com/fission/fission",
+      "cve": "CVE-2026-49824",
+      "operator_check": "Check whether github.com/fission/fission is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/fission/fission. Prioritize it with other application dependency updates, especially because EPSS places it in the 13% percentile.",
+      "tags": [
+        "cve-2026-49824",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cvw6-gfvv-953q",
+          "url": "https://github.com/advisories/GHSA-cvw6-gfvv-953q"
+        },
+        {
+          "title": "NVD — CVE-2026-49824",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49824"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fission/fission/security/advisories/GHSA-cvw6-gfvv-953q"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-50545",
+      "slug": "2026-06-go-cve-2026-50545",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-50545.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fission Environment CRD PodSpec Injection Leading to Node Escape and Cluster Takeover",
+      "summary": "Fission Environment CRD PodSpec Injection Leading to Node Escape and Cluster Takeover",
+      "vendor": "Go",
+      "product": "github.com/fission/fission",
+      "cve": "CVE-2026-50545",
+      "operator_check": "Check whether github.com/fission/fission is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 22%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/fission/fission. Prioritize it with other application dependency updates, especially because EPSS places it in the 22% percentile.",
+      "tags": [
+        "cve-2026-50545",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wmgg-3p4h-48x7",
+          "url": "https://github.com/advisories/GHSA-wmgg-3p4h-48x7"
+        },
+        {
+          "title": "NVD — CVE-2026-50545",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50545"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fission/fission/security/advisories/GHSA-wmgg-3p4h-48x7"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-50563",
+      "slug": "2026-06-go-cve-2026-50563",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-50563.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fission Container Executor Function PodSpec Injection Leading to Node Escape",
+      "summary": "Fission Container Executor Function PodSpec Injection Leading to Node Escape",
+      "vendor": "Go",
+      "product": "github.com/fission/fission",
+      "cve": "CVE-2026-50563",
+      "operator_check": "Check whether github.com/fission/fission is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/fission/fission. Prioritize it with other application dependency updates, especially because EPSS places it in the 19% percentile.",
+      "tags": [
+        "cve-2026-50563",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v455-mv2v-5g92",
+          "url": "https://github.com/advisories/GHSA-v455-mv2v-5g92"
+        },
+        {
+          "title": "NVD — CVE-2026-50563",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50563"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fission/fission/security/advisories/GHSA-v455-mv2v-5g92"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-50564",
+      "slug": "2026-06-go-cve-2026-50564",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-50564.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fission Environment CRD podspec passthrough enables hostPID/hostNetwork/privileged pods, node escape",
+      "summary": "Fission Environment CRD podspec passthrough enables hostPID/hostNetwork/privileged pods, node escape",
+      "vendor": "Go",
+      "product": "github.com/fission/fission",
+      "cve": "CVE-2026-50564",
+      "operator_check": "Check whether github.com/fission/fission is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/fission/fission. Prioritize it with other application dependency updates, especially because EPSS places it in the 19% percentile.",
+      "tags": [
+        "cve-2026-50564",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gx55-f84r-v3r7",
+          "url": "https://github.com/advisories/GHSA-gx55-f84r-v3r7"
+        },
+        {
+          "title": "NVD — CVE-2026-50564",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50564"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fission/fission/security/advisories/GHSA-gx55-f84r-v3r7"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-cve-2026-50566",
+      "slug": "2026-06-go-cve-2026-50566",
+      "url": "https://www.patchbrief.org/items/2026-06-go-cve-2026-50566.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fission: Environment Runtime.Container and Builder.Container SecurityContext bypass allows privileged pod creation",
+      "summary": "Fission: Environment Runtime.Container and Builder.Container SecurityContext bypass allows privileged pod creation",
+      "vendor": "Go",
+      "product": "github.com/fission/fission",
+      "cve": "CVE-2026-50566",
+      "operator_check": "Check whether github.com/fission/fission is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 21%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/fission/fission. Prioritize it with other application dependency updates, especially because EPSS places it in the 21% percentile.",
+      "tags": [
+        "cve-2026-50566",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m63v-2g9w-2w6v",
+          "url": "https://github.com/advisories/GHSA-m63v-2g9w-2w6v"
+        },
+        {
+          "title": "NVD — CVE-2026-50566",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50566"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fission/fission/security/advisories/GHSA-m63v-2g9w-2w6v"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-ghsa-55f6-4pr5-c7m5",
+      "slug": "2026-06-go-ghsa-55f6-4pr5-c7m5",
+      "url": "https://www.patchbrief.org/items/2026-06-go-ghsa-55f6-4pr5-c7m5.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Kahi has privilege-drop and socket/log permission issues",
+      "summary": "Kahi has privilege-drop and socket/log permission issues",
+      "vendor": "Go",
+      "product": "github.com/kahiteam/kahi",
+      "cve": null,
+      "operator_check": "Check whether github.com/kahiteam/kahi is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/kahiteam/kahi. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-55f6-4pr5-c7m5",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-55f6-4pr5-c7m5",
+          "url": "https://github.com/advisories/GHSA-55f6-4pr5-c7m5"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/kahiteam/kahi/security/advisories/GHSA-55f6-4pr5-c7m5"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-go-ghsa-7m8x-qg2j-4m3v",
+      "slug": "2026-06-go-ghsa-7m8x-qg2j-4m3v",
+      "url": "https://www.patchbrief.org/items/2026-06-go-ghsa-7m8x-qg2j-4m3v.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fission: MessageQueueTrigger scaler manager materializes Secret values into Deployment envvars and accepts arbitrary ...",
+      "summary": "Fission: MessageQueueTrigger scaler manager materializes Secret values into Deployment envvars and accepts arbitrary user PodSpec",
+      "vendor": "Go",
+      "product": "github.com/fission/fission",
+      "cve": null,
+      "operator_check": "Check whether github.com/fission/fission is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/fission/fission. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-7m8x-qg2j-4m3v",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7m8x-qg2j-4m3v",
+          "url": "https://github.com/advisories/GHSA-7m8x-qg2j-4m3v"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fission/fission/security/advisories/GHSA-7m8x-qg2j-4m3v"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-grav-cve-2026-56700",
+      "slug": "2026-06-grav-cve-2026-56700",
+      "url": "https://www.patchbrief.org/items/2026-06-grav-cve-2026-56700.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Grav CMS — CVE-2026-56700 (Critical)",
+      "summary": "Grav CMS before 2.0.0-beta.2 contains multiple code-execution vulnerabilities. Three unsafe unserialize() calls - in Scheduler\\JobQueue, Framework\\Cache\\Adapter\\FileCache, and Session - deserialize untrusted data without restricting allowed classes, enabling PHP object injection and, via a gadget chain, arbitrary code execution where an attacker controls the serialized input. Additionally, InstallCommand's git clone operation passes the branch, url, and path parameters into a shell command without escaping, allowing OS command injection via plugin/theme installation (which requires admin acces",
+      "vendor": "Grav",
+      "product": "CMS",
+      "cve": "CVE-2026-56700",
+      "operator_check": "Review CVE-2026-56700 in your asset inventory. Apply patches per vendor guidance and verify CMS is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Grav CMS. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-56700",
+        "vendor-advisory",
+        "grav",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-56700",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56700"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getgrav/grav/security/advisories/GHSA-vj3m-2g9h-vm4p"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/grav-multiple-remote-code-execution-vulnerabilities-via-unsafe-unserialize-and-command-injection"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-ibm-cve-2026-10140",
+      "slug": "2026-06-ibm-cve-2026-10140",
+      "url": "https://www.patchbrief.org/items/2026-06-ibm-cve-2026-10140.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "IBM Langflow OSS 1.0.0 — CVE-2026-10140 (Critical)",
+      "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 voice mode contains improper shared-state handling that allows reuse of API clients across tenant boundaries. An authenticated attacker can manipulate cache state to cause requests from other users to be processed using incorrect upstream API credentials, leading to cross-tenant billing and accountability misattribution.",
+      "vendor": "IBM",
+      "product": "Langflow OSS 1.0.0",
+      "cve": "CVE-2026-10140",
+      "operator_check": "Review CVE-2026-10140 in your asset inventory. Apply patches per vendor guidance and verify Langflow OSS 1.0.0 is not exposed. CVSS score: 9.6.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.6) in IBM Langflow OSS 1.0.0. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-10140",
+        "vendor-advisory",
+        "ibm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-10140",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10140"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7278209"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-48795",
+      "slug": "2026-06-npm-cve-2026-48795",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-48795.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@adonisjs/bodyparser has an incomplete fix for CVE-2026-25754",
+      "summary": "@adonisjs/bodyparser has an incomplete fix for CVE-2026-25754",
+      "vendor": "npm",
+      "product": "@adonisjs/bodyparser",
+      "cve": "CVE-2026-48795",
+      "operator_check": "Check whether @adonisjs/bodyparser is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @adonisjs/bodyparser. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-48795",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qcm7-3vpr-hj5h",
+          "url": "https://github.com/advisories/GHSA-qcm7-3vpr-hj5h"
+        },
+        {
+          "title": "NVD — CVE-2026-48795",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48795"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/adonisjs/core/security/advisories/GHSA-f5x2-vj4h-vg4c"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-npm-cve-2026-49473",
+      "slug": "2026-06-npm-cve-2026-49473",
+      "url": "https://www.patchbrief.org/items/2026-06-npm-cve-2026-49473.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@cedar-policy/authorization-for-expressjs has an authorization bypass via query string manipulation",
+      "summary": "@cedar-policy/authorization-for-expressjs has an authorization bypass via query string manipulation",
+      "vendor": "npm",
+      "product": "@cedar-policy/authorization-for-expressjs",
+      "cve": "CVE-2026-49473",
+      "operator_check": "Check whether @cedar-policy/authorization-for-expressjs is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @cedar-policy/authorization-for-expressjs. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-49473",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g4w6-vmgf-xqvx",
+          "url": "https://github.com/advisories/GHSA-g4w6-vmgf-xqvx"
+        },
+        {
+          "title": "NVD — CVE-2026-49473",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49473"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/cedar-policy/authorization-for-expressjs/security/advisories/GHSA-g4w6-vmgf-xqvx"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-nuget-cve-2026-49451",
+      "slug": "2026-06-nuget-cve-2026-49451",
+      "url": "https://www.patchbrief.org/items/2026-06-nuget-cve-2026-49451.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft.OpenAPI: Circular schema references may terminate OpenAPI parsing",
+      "summary": "Microsoft.OpenAPI: Circular schema references may terminate OpenAPI parsing",
+      "vendor": "NuGet",
+      "product": "Microsoft.OpenAPI",
+      "cve": "CVE-2026-49451",
+      "operator_check": "Check whether Microsoft.OpenAPI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.OpenAPI. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-49451",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v5pm-xwqc-g5wc",
+          "url": "https://github.com/advisories/GHSA-v5pm-xwqc-g5wc"
+        },
+        {
+          "title": "NVD — CVE-2026-49451",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49451"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/microsoft/OpenAPI.NET/security/advisories/GHSA-v5pm-xwqc-g5wc"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-orkes-cve-2026-58138",
+      "slug": "2026-06-orkes-cve-2026-58138",
+      "url": "https://www.patchbrief.org/items/2026-06-orkes-cve-2026-58138.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Orkes Conductor 3.21.21 — CVE-2026-58138 (Critical)",
+      "summary": "Orkes Conductor 3.21.21 before 3.30.2 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute arbitrary OS commands by submitting inline workflow definitions containing malicious JavaScript or Python expressions to the workflow API endpoint prior to authentication. Attackers can exploit unsandboxed GraalVM evaluators configured with HostAccess.ALL or allowAllAccess(true) through INLINE, LAMBDA, DO_WHILE, and SWITCH task types to invoke arbitrary system commands via Java reflection or direct subprocess calls.",
+      "vendor": "Orkes",
+      "product": "Conductor 3.21.21",
+      "cve": "CVE-2026-58138",
+      "operator_check": "Review CVE-2026-58138 in your asset inventory. Apply patches per vendor guidance and verify Conductor 3.21.21 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Orkes Conductor 3.21.21. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-58138",
+        "vendor-advisory",
+        "orkes",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-58138",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58138"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/conductor-oss/conductor/commit/87a7d96aabbb706d6e84f812b93da5165028d18f"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/conductor-oss/conductor/commit/c691e35e768caeb802c9f06ecdd9674c80081af1"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-pypi-cve-2025-10996",
+      "slug": "2026-06-pypi-cve-2025-10996",
+      "url": "https://www.patchbrief.org/items/2026-06-pypi-cve-2025-10996.html",
+      "date": "2026-06-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Open Babel has heap buffer overflow in SMILES OBSmilesParser::ParseSmiles",
+      "summary": "Open Babel has heap buffer overflow in SMILES OBSmilesParser::ParseSmiles",
+      "vendor": "PyPI",
+      "product": "openbabel",
+      "cve": "CVE-2025-10996",
+      "operator_check": "Check whether openbabel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for openbabel. Prioritize it with other application dependency updates, especially because EPSS places it in the 13% percentile.",
+      "tags": [
+        "cve-2025-10996",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j35x-w4gj-pf7w",
+          "url": "https://github.com/advisories/GHSA-j35x-w4gj-pf7w"
+        },
+        {
+          "title": "NVD — CVE-2025-10996",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10996"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/openbabel/openbabel/security/advisories/GHSA-j35x-w4gj-pf7w"
+        }
+      ]
+    },
     {
       "id": "2026-06-go-cve-2026-44840",
       "slug": "2026-06-go-cve-2026-44840",
@@ -211,6 +895,37 @@
         {
           "title": "NVD — CVE-2026-48558",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48558"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-snowflake-cve-2026-13751",
+      "slug": "2026-06-snowflake-cve-2026-13751",
+      "url": "https://www.patchbrief.org/items/2026-06-snowflake-cve-2026-13751.html",
+      "date": "2026-06-29",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Snowflake Snowflake Cli — CVE-2026-13751 (Critical)",
+      "summary": "Improper handling of untrusted remote references in Snowflake CLI versions prior to 3.19 allowed server-side request forgery. The SQL statement reader's !source/!load directives could reference remote URLs that were retrieved at runtime without sufficient restriction on the request destination. By supplying crafted SQL content processed through a vulnerable command path, an attacker could cause the victim's environment to issue unintended outbound requests to internal or otherwise non-public network locations, and could cause remote SQL content to be retrieved and executed in the context of th",
+      "vendor": "Snowflake",
+      "product": "Snowflake Cli",
+      "cve": "CVE-2026-13751",
+      "operator_check": "Review CVE-2026-13751 in your asset inventory. Apply patches per vendor guidance and verify Snowflake Cli is not exposed. CVSS score: 4.1. EPSS probability: 0.1%; percentile: 1%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 4.1) in Snowflake Snowflake Cli. Patch or mitigate promptly. EPSS percentile: 1%.",
+      "tags": [
+        "cve-2026-13751",
+        "vendor-advisory",
+        "snowflake",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-13751",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13751"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://community.snowflake.com/s/article/Snowflake-CLI-Vulnerability-Advisory"
         }
       ]
     },
