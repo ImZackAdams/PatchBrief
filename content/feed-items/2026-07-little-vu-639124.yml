@@ -1,0 +1,37 @@
+id: 2026-07-little-vu-639124
+slug: 2026-07-little-vu-639124
+external_id: VU-639124
+source: cert_vu
+date: '2026-07-02'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#639124: Multiple local privilege escalation vulnerabilities in Little Orbits
+  GameFirst Anti-Cheat'
+summary: 'Overview The GamersFirst Anti-Cheat (GFAC) driver GFAC.sys contains multiple
+  local privilege escalations and denial-of-service vulnerabilities stemming from
+  insecure handling of user-controlled input through a minifilter communication port.
+  A local attacker can abuse these flaws to perform arbitrary kernel memory writes,
+  obtain privilege escalation to SYSTEM, or trigger a system crash. Description GFAC
+  is a proprietary anti-cheat software developed by video game publisher Little Orbit.
+  GFAC includes a kernel-mode driver, GFAC_Sys_x64.sys , that exposes privileged functionality
+  to user-mode applications through a minifilter communication port. Although these
+  low-level interfaces are necessary for the software''s operation, vulnerabilities
+  can arise if user-mode access is not properly restricted and validated. CVE-2026-12166...
+  Related CVEs: CVE-2026-12166, CVE-2026-12167, CVE-2026-12168.'
+vendor: Little
+product: Orbits GameFirst Anti-Cheat
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Orbits GameFirst Anti-Cheat where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#639124
+  url: https://kb.cert.org/vuls/id/639124
+tags:
+- vu-639124
+- coordinated-disclosure
+- little
+- cert-vu
+is_sample: false
