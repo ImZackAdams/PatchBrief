@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-03T11:32:29Z",
-  "total_items": 341,
+  "generated": "2026-07-04T10:54:20Z",
+  "total_items": 352,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-03T11:32:29Z",
+    "generated": "2026-07-04T10:54:20Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,26 +18,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-07-03T11:32:19Z",
-        "finished_at": "2026-07-03T11:32:19Z"
+        "started_at": "2026-07-04T10:54:09Z",
+        "finished_at": "2026-07-04T10:54:09Z"
       },
       {
         "id": "msrc",
         "label": "Microsoft Security Update Guide",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-07-03T11:32:19Z",
-        "finished_at": "2026-07-03T11:32:19Z"
+        "items_seen": 9,
+        "started_at": "2026-07-04T10:54:09Z",
+        "finished_at": "2026-07-04T10:54:10Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 20,
-        "started_at": "2026-07-03T11:32:19Z",
-        "finished_at": "2026-07-03T11:32:27Z"
+        "items_seen": 4,
+        "started_at": "2026-07-04T10:54:10Z",
+        "finished_at": "2026-07-04T10:54:17Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-07-03T11:32:27Z",
-        "finished_at": "2026-07-03T11:32:27Z"
+        "started_at": "2026-07-04T10:54:17Z",
+        "finished_at": "2026-07-04T10:54:18Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-07-03T11:32:27Z",
-        "finished_at": "2026-07-03T11:32:27Z"
+        "started_at": "2026-07-04T10:54:18Z",
+        "finished_at": "2026-07-04T10:54:18Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,91 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-03T11:32:27Z",
-        "finished_at": "2026-07-03T11:32:28Z"
+        "started_at": "2026-07-04T10:54:18Z",
+        "finished_at": "2026-07-04T10:54:19Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 35,
-        "started_at": "2026-07-03T11:32:28Z",
-        "finished_at": "2026-07-03T11:32:28Z"
+        "items_seen": 17,
+        "started_at": "2026-07-04T10:54:19Z",
+        "finished_at": "2026-07-04T10:54:19Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-apereo-cve-2026-59099",
+      "slug": "2026-07-apereo-cve-2026-59099",
+      "url": "https://www.patchbrief.org/items/2026-07-apereo-cve-2026-59099.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apereo CAS 7.3.0 — CVE-2026-59099 (Critical)",
+      "summary": "Apereo CAS 7.3.0 before 8.0.0-RC6 contains a cryptographic vulnerability that allows remote unauthenticated attackers to recover plaintext conversation state by exploiting AES-GCM initialization vector reuse across the server lifetime. Attackers can collect multiple client-side webflow execution tokens from the unauthenticated login page and perform known-plaintext analysis to decrypt the webflow conversation state due to keystream reuse caused by a fixed all-zero IV paired with the same encryption key.",
+      "vendor": "Apereo",
+      "product": "CAS 7.3.0",
+      "cve": "CVE-2026-59099",
+      "operator_check": "Review CVE-2026-59099 in your asset inventory. Apply patches per vendor guidance and verify CAS 7.3.0 is not exposed. CVSS score: 9.1. EPSS probability: 0.4%; percentile: 28%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Apereo CAS 7.3.0. Patch or mitigate promptly. EPSS percentile: 28%.",
+      "tags": [
+        "cve-2026-59099",
+        "vendor-advisory",
+        "apereo",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-59099",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59099"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://apereo.github.io/2026/06/18/vuln/"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/apereo/cas/commit/22c6f4adf738852782309b523b4e80371057f2d0"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-49283",
+      "slug": "2026-07-composer-cve-2026-49283",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-49283.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SimpleSAMLphp HTTP-Artifact TLS validator confusion allows cross-IdP authentication bypass",
+      "summary": "SimpleSAMLphp HTTP-Artifact TLS validator confusion allows cross-IdP authentication bypass",
+      "vendor": "Composer",
+      "product": "simplesamlphp/saml2",
+      "cve": "CVE-2026-49283",
+      "operator_check": "Check whether simplesamlphp/saml2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for simplesamlphp/saml2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-49283",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6929-8p9f-26jx",
+          "url": "https://github.com/advisories/GHSA-6929-8p9f-26jx"
+        },
+        {
+          "title": "NVD — CVE-2026-49283",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49283"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/simplesamlphp/saml2/security/advisories/GHSA-6929-8p9f-26jx"
+        }
+      ]
+    },
     {
       "id": "2026-07-composer-cve-2026-49284",
       "slug": "2026-07-composer-cve-2026-49284",
@@ -506,6 +576,41 @@
       ]
     },
     {
+      "id": "2026-07-microsoft-cve-2026-56645",
+      "slug": "2026-07-microsoft-cve-2026-56645",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-56645.html",
+      "date": "2026-07-02",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network. Published in July 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-56645",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-56645. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-56645",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-56645"
+        },
+        {
+          "title": "NVD — CVE-2026-56645",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56645"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
       "id": "2026-07-microsoft-cve-2026-57100",
       "slug": "2026-07-microsoft-cve-2026-57100",
       "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-57100.html",
@@ -533,6 +638,111 @@
         {
           "title": "NVD — CVE-2026-57100",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57100"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-57974",
+      "slug": "2026-07-microsoft-cve-2026-57974",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-57974.html",
+      "date": "2026-07-02",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
+      "summary": "Integer overflow or wraparound in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network. Published in July 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Unlikely.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-57974",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-57974. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-57974",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-57974"
+        },
+        {
+          "title": "NVD — CVE-2026-57974",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57974"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-57981",
+      "slug": "2026-07-microsoft-cve-2026-57981",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-57981.html",
+      "date": "2026-07-02",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
+      "summary": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network. Published in July 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Unlikely.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-57981",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-57981. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-57981",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-57981"
+        },
+        {
+          "title": "NVD — CVE-2026-57981",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57981"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-58289",
+      "slug": "2026-07-microsoft-cve-2026-58289",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-58289.html",
+      "date": "2026-07-02",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
+      "summary": "Access of resource using incompatible type ('type confusion') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network. Published in July 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Unlikely.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-58289",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-58289. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 9.0.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-58289",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-58289"
+        },
+        {
+          "title": "NVD — CVE-2026-58289",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58289"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
         }
       ]
     },
@@ -603,6 +813,72 @@
         {
           "title": "Source reference",
           "url": "https://github.com/decolua/9router/security/advisories/GHSA-6g2f-w7g3-77vf"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-52746",
+      "slug": "2026-07-npm-cve-2026-52746",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-52746.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "jsonata: Malicious inputs to \"$toMillis\" function can cause resource exhaustion",
+      "summary": "jsonata: Malicious inputs to \"$toMillis\" function can cause resource exhaustion",
+      "vendor": "npm",
+      "product": "jsonata",
+      "cve": "CVE-2026-52746",
+      "operator_check": "Check whether jsonata is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for jsonata. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-52746",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-86vw-mfpg-wwv9",
+          "url": "https://github.com/advisories/GHSA-86vw-mfpg-wwv9"
+        },
+        {
+          "title": "NVD — CVE-2026-52746",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52746"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jsonata-js/jsonata/security/advisories/GHSA-86vw-mfpg-wwv9"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-322x-v876-g883",
+      "slug": "2026-07-npm-ghsa-322x-v876-g883",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-322x-v876-g883.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@asymmetric-effort/nogginlessdom's Path Traversal in matchFileSnapshot allows arbitrary file write",
+      "summary": "@asymmetric-effort/nogginlessdom's Path Traversal in matchFileSnapshot allows arbitrary file write",
+      "vendor": "npm",
+      "product": "@asymmetric-effort/nogginlessdom",
+      "cve": null,
+      "operator_check": "Check whether @asymmetric-effort/nogginlessdom is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @asymmetric-effort/nogginlessdom. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-322x-v876-g883",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-322x-v876-g883",
+          "url": "https://github.com/advisories/GHSA-322x-v876-g883"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/asymmetric-effort/NogginLessDom/security/advisories/GHSA-322x-v876-g883"
         }
       ]
     },
@@ -840,6 +1116,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/doobidoo/mcp-memory-service/security/advisories/GHSA-84hp-mqvj-3p8h"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-52817",
+      "slug": "2026-07-pypi-cve-2026-52817",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-52817.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Linuxfabrik Monitoring Plugins: Sudoers may be able to obtain privilege escalation via /usr/bin/apt-get arguments",
+      "summary": "Linuxfabrik Monitoring Plugins: Sudoers may be able to obtain privilege escalation via /usr/bin/apt-get arguments",
+      "vendor": "PyPI",
+      "product": "linuxfabrik-lib",
+      "cve": "CVE-2026-52817",
+      "operator_check": "Check whether linuxfabrik-lib is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.0.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for linuxfabrik-lib. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-52817",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8w6w-23mq-h8rg",
+          "url": "https://github.com/advisories/GHSA-8w6w-23mq-h8rg"
+        },
+        {
+          "title": "NVD — CVE-2026-52817",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52817"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Linuxfabrik/monitoring-plugins/security/advisories/GHSA-8w6w-23mq-h8rg"
         }
       ]
     },
@@ -1400,6 +1711,68 @@
         {
           "title": "Source reference",
           "url": "https://github.com/oras-project/oras-go/security/advisories/GHSA-fxhp-mv3v-67qp"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-linuxfoundation-cve-2026-50195",
+      "slug": "2026-07-linuxfoundation-cve-2026-50195",
+      "url": "https://www.patchbrief.org/items/2026-07-linuxfoundation-cve-2026-50195.html",
+      "date": "2026-07-01",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Linuxfoundation Containerd — CVE-2026-50195 (Critical)",
+      "summary": "containerd is an open-source container runtime. Versions prior to 2.3.2, 2.2.5 and 2.1.9 contain a vulnerability in the CRI checkpoint import process where it fails to validate the image references specified within a checkpoint image's configuration. An attacker with permissions to create pods can use a crafted checkpoint image to force containerd to pull a malicious image and assign it an arbitrary local tag, thereby poisoning the node's local image cache. Subsequently, if other pods on the same node attempt to use the poisoned tag with an IfNotPresent (or Never) pull policy, they will unknow",
+      "vendor": "Linuxfoundation",
+      "product": "Containerd",
+      "cve": "CVE-2026-50195",
+      "operator_check": "Review CVE-2026-50195 in your asset inventory. Apply patches per vendor guidance and verify Containerd is not exposed. CVSS score: 9.9. EPSS probability: 0.4%; percentile: 27%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in Linuxfoundation Containerd. Patch or mitigate promptly. EPSS percentile: 27%.",
+      "tags": [
+        "cve-2026-50195",
+        "vendor-advisory",
+        "linuxfoundation",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-50195",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50195"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/containerd/containerd/security/advisories/GHSA-cvxm-645q-p574"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-linuxfoundation-cve-2026-53492",
+      "slug": "2026-07-linuxfoundation-cve-2026-53492",
+      "url": "https://www.patchbrief.org/items/2026-07-linuxfoundation-cve-2026-53492.html",
+      "date": "2026-07-01",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Linuxfoundation Containerd — CVE-2026-53492 (Critical)",
+      "summary": "containerd is an open-source container runtime. In Versions prior to 2.3.2, 2.2.5 and 2.1.9, the CRI implementation improperly trusts Container Device Interface (CDI) annotations found within untrusted checkpoint image metadata during container restoration. When restoring a container from a checkpoint, containerd preserves CDI-related annotations from the checkpoint archive rather than relying solely on the pod's create-time specification. This allows a user with pod creation permissions to bypass standard Kubernetes resource allocation and device plugin enforcement, injecting arbitrary CDI ed",
+      "vendor": "Linuxfoundation",
+      "product": "Containerd",
+      "cve": "CVE-2026-53492",
+      "operator_check": "Review CVE-2026-53492 in your asset inventory. Apply patches per vendor guidance and verify Containerd is not exposed. CVSS score: 9.6. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.6) in Linuxfoundation Containerd. Patch or mitigate promptly. EPSS percentile: 33%.",
+      "tags": [
+        "cve-2026-53492",
+        "vendor-advisory",
+        "linuxfoundation",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-53492",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53492"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/containerd/containerd/security/advisories/GHSA-33vj-92qq-66hc"
         }
       ]
     },
