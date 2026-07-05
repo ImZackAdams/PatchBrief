@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-04T10:54:20Z",
-  "total_items": 352,
+  "generated": "2026-07-05T11:04:22Z",
+  "total_items": 357,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-04T10:54:20Z",
+    "generated": "2026-07-05T11:04:22Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-07-04T10:54:09Z",
-        "finished_at": "2026-07-04T10:54:09Z"
+        "items_seen": 0,
+        "started_at": "2026-07-05T11:04:10Z",
+        "finished_at": "2026-07-05T11:04:10Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 9,
-        "started_at": "2026-07-04T10:54:09Z",
-        "finished_at": "2026-07-04T10:54:10Z"
+        "started_at": "2026-07-05T11:04:10Z",
+        "finished_at": "2026-07-05T11:04:11Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-07-04T10:54:10Z",
-        "finished_at": "2026-07-04T10:54:17Z"
+        "items_seen": 1,
+        "started_at": "2026-07-05T11:04:11Z",
+        "finished_at": "2026-07-05T11:04:18Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-07-04T10:54:17Z",
-        "finished_at": "2026-07-04T10:54:18Z"
+        "started_at": "2026-07-05T11:04:18Z",
+        "finished_at": "2026-07-05T11:04:19Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-07-04T10:54:18Z",
-        "finished_at": "2026-07-04T10:54:18Z"
+        "started_at": "2026-07-05T11:04:19Z",
+        "finished_at": "2026-07-05T11:04:20Z"
       },
       {
         "id": "exploitdb",
@@ -63,17 +63,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-04T10:54:18Z",
-        "finished_at": "2026-07-04T10:54:19Z"
+        "started_at": "2026-07-05T11:04:20Z",
+        "finished_at": "2026-07-05T11:04:21Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 17,
-        "started_at": "2026-07-04T10:54:19Z",
-        "finished_at": "2026-07-04T10:54:19Z"
+        "items_seen": 22,
+        "started_at": "2026-07-05T11:04:21Z",
+        "finished_at": "2026-07-05T11:04:21Z"
       }
     ]
   },
@@ -219,6 +219,76 @@
       ]
     },
     {
+      "id": "2026-07-composer-cve-2026-50281",
+      "slug": "2026-07-composer-cve-2026-50281",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-50281.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Craft CMS's mass assignment via id in newAttributes during bulk duplicate overwrites existing elements",
+      "summary": "Craft CMS's mass assignment via id in newAttributes during bulk duplicate overwrites existing elements",
+      "vendor": "Composer",
+      "product": "craftcms/cms",
+      "cve": "CVE-2026-50281",
+      "operator_check": "Check whether craftcms/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for craftcms/cms. Prioritize it with other application dependency updates, especially because EPSS places it in the 17% percentile.",
+      "tags": [
+        "cve-2026-50281",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x5m4-g2cq-52pq",
+          "url": "https://github.com/advisories/GHSA-x5m4-g2cq-52pq"
+        },
+        {
+          "title": "NVD — CVE-2026-50281",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50281"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/craftcms/cms/security/advisories/GHSA-x5m4-g2cq-52pq"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-50282",
+      "slug": "2026-07-composer-cve-2026-50282",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-50282.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Craft CMS Vulnerable to Unauthorized Deletion of Destination Folders During Forced Moves",
+      "summary": "Craft CMS Vulnerable to Unauthorized Deletion of Destination Folders During Forced Moves",
+      "vendor": "Composer",
+      "product": "craftcms/cms",
+      "cve": "CVE-2026-50282",
+      "operator_check": "Check whether craftcms/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.2%; percentile: 11%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for craftcms/cms. Prioritize it with other application dependency updates, especially because EPSS places it in the 11% percentile.",
+      "tags": [
+        "cve-2026-50282",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3w32-23wj-rxg3",
+          "url": "https://github.com/advisories/GHSA-3w32-23wj-rxg3"
+        },
+        {
+          "title": "NVD — CVE-2026-50282",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50282"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/craftcms/cms/security/advisories/GHSA-3w32-23wj-rxg3"
+        }
+      ]
+    },
+    {
       "id": "2026-07-composer-cve-2026-9558",
       "slug": "2026-07-composer-cve-2026-9558",
       "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-9558.html",
@@ -285,6 +355,76 @@
         {
           "title": "Source reference",
           "url": "https://github.com/mautic/mautic/security/advisories/GHSA-6r9h-4h75-7q4x"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-9808",
+      "slug": "2026-07-composer-cve-2026-9808",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-9808.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Mautic has an Authorization Bypass in API v2 Endpoints",
+      "summary": "Mautic has an Authorization Bypass in API v2 Endpoints",
+      "vendor": "Composer",
+      "product": "mautic/core",
+      "cve": "CVE-2026-9808",
+      "operator_check": "Check whether mautic/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 10%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mautic/core. Prioritize it with other application dependency updates, especially because EPSS places it in the 10% percentile.",
+      "tags": [
+        "cve-2026-9808",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2jrw-c95w-h43g",
+          "url": "https://github.com/advisories/GHSA-2jrw-c95w-h43g"
+        },
+        {
+          "title": "NVD — CVE-2026-9808",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9808"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mautic/mautic/security/advisories/GHSA-2jrw-c95w-h43g"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-9809",
+      "slug": "2026-07-composer-cve-2026-9809",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-9809.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Mautic has Stored Cross-Site Scripting (XSS) in Projects Component",
+      "summary": "Mautic has Stored Cross-Site Scripting (XSS) in Projects Component",
+      "vendor": "Composer",
+      "product": "mautic/core",
+      "cve": "CVE-2026-9809",
+      "operator_check": "Check whether mautic/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 6%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mautic/core. Prioritize it with other application dependency updates, especially because EPSS places it in the 6% percentile.",
+      "tags": [
+        "cve-2026-9809",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7h65-whp7-rgqf",
+          "url": "https://github.com/advisories/GHSA-7h65-whp7-rgqf"
+        },
+        {
+          "title": "NVD — CVE-2026-9809",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9809"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mautic/mautic/security/advisories/GHSA-7h65-whp7-rgqf"
         }
       ]
     },
@@ -1221,6 +1361,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-gf9r-m956-97qx"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-rust-cve-2026-52736",
+      "slug": "2026-07-rust-cve-2026-52736",
+      "url": "https://www.patchbrief.org/items/2026-07-rust-cve-2026-52736.html",
+      "date": "2026-07-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Zebra has block suppression via NU5 same-header body poisoning of sent-hash cache",
+      "summary": "Zebra has block suppression via NU5 same-header body poisoning of sent-hash cache",
+      "vendor": "Rust",
+      "product": "zebra-state",
+      "cve": "CVE-2026-52736",
+      "operator_check": "Check whether zebra-state is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for zebra-state. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-52736",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4m69-67m6-prqp",
+          "url": "https://github.com/advisories/GHSA-4m69-67m6-prqp"
+        },
+        {
+          "title": "NVD — CVE-2026-52736",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52736"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-4m69-67m6-prqp"
         }
       ]
     },
