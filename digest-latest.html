@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>PatchBrief #78 — Weekly Digest</title>
+  <title>PatchBrief #79 — Weekly Digest</title>
   <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
   <style>
     body { margin:0;padding:0;background:#fbfbf8; }
@@ -19,7 +19,7 @@
 
   <!-- Preheader -->
   <div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">
-    PatchBrief #78 &middot; 8 security briefs &middot; June 29, 2026
+    PatchBrief #79 &middot; 8 security briefs &middot; July 6, 2026
     &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
   </div>
 
@@ -48,7 +48,7 @@
                           </table>
                         </td>
                         <td align="right">
-                          <span style="font-size:12px;color:#66706d;">Weekly Digest &middot; #78</span>
+                          <span style="font-size:12px;color:#66706d;">Weekly Digest &middot; #79</span>
                         </td>
                       </tr>
                     </table>
@@ -58,7 +58,7 @@
                   <td style="padding:16px 24px 18px;">
                     <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Security intel feed</p>
                     <h1 style="margin:0 0 8px;font-size:22px;font-weight:800;color:#111816;line-height:1.15;">This week in exploited vulnerabilities</h1>
-                    <p style="margin:0;font-size:13px;color:#66706d;">June 29, 2026 &middot; 8 items from 122 in the feed</p>
+                    <p style="margin:0;font-size:13px;color:#66706d;">July 6, 2026 &middot; 8 items from 117 in the feed</p>
                   </td>
                 </tr>
               </table>
@@ -74,30 +74,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Jun 23, 2026 &middot; CVE-2025-67038</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Jun 29, 2026 &middot; CVE-2026-48558</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-06-lantronix-cve-2025-67038.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Lantronix EDS5000 Code Injection Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-06-simplehelp-cve-2026-48558.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">SimpleHelp Authentication Bypass Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Lantronix &middot; EDS5000</span>
+              <span style="font-size:12px;color:#66706d;">SimpleHelp &middot; SimpleHelp</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Lantronix EDS5000 contains a code injection vulnerability that could allow attackers to inject arbitrary OS commands into the username parameter. Injected commands are executed with root privileges.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">SimpleHelp contains an authentication bypass vulnerability in the OIDC authentication flow. When OIDC authentication is configured, identity tokens submitted during login are accepted without verifying their cryptographic signature. In a vulnerable configuration, a remote, unauthenticated attacker can submit a forged token containing arbitrary identity claims to obtain a fully authenticated technician session. In some configurations, this may also allow bypass of multi-factor authentication.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
               <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-67038" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2025-67038</a>
-              <a href="https://www.patchbrief.org/items/2026-06-lantronix-cve-2025-67038.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48558" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-48558</a>
+              <a href="https://www.patchbrief.org/items/2026-06-simplehelp-cve-2026-48558.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -111,178 +111,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Jun 23, 2026 &middot; CVE-2026-34908</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Jul 1, 2026 &middot; CVE-2026-45659</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34908.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Ubiquiti UniFi OS Improper Access Control Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-45659.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Ubiquiti &middot; UniFi OS</span>
+              <span style="font-size:12px;color:#66706d;">Microsoft &middot; SharePoint Server</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Ubiquiti UniFi OS contains an improper access control vulnerability which could allow a malicious actor with access to the network to make unauthorized changes to the system.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Microsoft SharePoint Server contains a deserialization of untrusted data vulnerability which allows an authorized attacker to execute code over a network.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
               <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34908" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-34908</a>
-              <a href="https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34908.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr><td style="height:12px;"></td></tr>
-    <!-- Item -->
-    <tr>
-      <td style="padding:0 0 1px;">
-        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e2e5df;border-radius:6px;overflow:hidden;">
-          <tr>
-            <td style="padding:4px 16px;background:#edf7f4;">
-              <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Jun 23, 2026 &middot; CVE-2026-34909</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34909.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Ubiquiti UniFi OS Path Traversal Vulnerability</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Ubiquiti &middot; UniFi OS</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Ubiquiti UniFi OS contains a path traversal vulnerability which could allow a malicious actor with access to the network to access files on the underlying system that could be manipulated to access an underlying account.</p>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
-              <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
-              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34909" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-34909</a>
-              <a href="https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34909.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr><td style="height:12px;"></td></tr>
-    <!-- Item -->
-    <tr>
-      <td style="padding:0 0 1px;">
-        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e2e5df;border-radius:6px;overflow:hidden;">
-          <tr>
-            <td style="padding:4px 16px;background:#edf7f4;">
-              <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Jun 23, 2026 &middot; CVE-2026-34910</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34910.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Ubiquiti UniFi OS Improper Input Validation Vulnerability</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Ubiquiti &middot; UniFi OS</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Ubiquiti UniFi OS contains an improper input validation vulnerability which could allow a malicious actor with access to the network to conduct command injection.</p>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
-              <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
-              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34910" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-34910</a>
-              <a href="https://www.patchbrief.org/items/2026-06-ubiquiti-cve-2026-34910.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr><td style="height:12px;"></td></tr>
-    <!-- Item -->
-    <tr>
-      <td style="padding:0 0 1px;">
-        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e2e5df;border-radius:6px;overflow:hidden;">
-          <tr>
-            <td style="padding:4px 16px;background:#edf7f4;">
-              <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Jun 25, 2026 &middot; CVE-2026-20230</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-06-cisco-cve-2026-20230.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Cisco &middot; Unified Communications Manager</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) contain a server-side request forgery (SSRF) Vulnerability that could allow an unauthenticated, remote attacker to write files to the underlying operating system that could be used later to elevate to root.</p>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
-              <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
-              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20230" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-20230</a>
-              <a href="https://www.patchbrief.org/items/2026-06-cisco-cve-2026-20230.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr><td style="height:12px;"></td></tr>
-    <!-- Item -->
-    <tr>
-      <td style="padding:0 0 1px;">
-        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e2e5df;border-radius:6px;overflow:hidden;">
-          <tr>
-            <td style="padding:4px 16px;background:#edf7f4;">
-              <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Jun 25, 2026 &middot; CVE-2026-12569</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-06-ptc-cve-2026-12569.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">PTC Windchill and FlexPLM Improper Input Validation Vulnerability</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">PTC &middot; Windchill and FlexPLM</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">PTC Windchill and FlexPLM contains an improper input validation vulnerability allowing an unauthenticated, remote attacker to execute arbitrary code by sending a malicious request to the network.</p>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
-              <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
-              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-12569" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-12569</a>
-              <a href="https://www.patchbrief.org/items/2026-06-ptc-cve-2026-12569.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45659" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-45659</a>
+              <a href="https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-45659.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -296,30 +148,30 @@
           <tr>
             <td style="padding:4px 16px;background:#fdf0ee;">
               <span style="font-size:11px;font-weight:700;color:#913f32;letter-spacing:0.04em;text-transform:uppercase;">Critical vendor advisory</span>
-              <span style="font-size:11px;color:#913f32;opacity:0.7;margin-left:8px;">Jun 22, 2026 &middot; CVE-2026-8646</span>
+              <span style="font-size:11px;color:#913f32;opacity:0.7;margin-left:8px;">Jun 29, 2026 &middot; CVE-2026-11720</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-06-ibm-cve-2026-8646.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Ibm Websphere Application Server — CVE-2026-8646 (Critical)</a>
+              <a href="https://www.patchbrief.org/items/2026-06-google-cve-2026-11720.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Google Mcp Toolbox For Databases — CVE-2026-11720 (Critical)</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Ibm &middot; Websphere Application Server</span>
+              <span style="font-size:12px;color:#66706d;">Google &middot; Mcp Toolbox For Databases</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">IBM WebSphere Application Server 9.0 and 8.5 and IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.6 are vulnerable to HTTP request smuggling. A remote attacker could smuggle a specially crafted request to the application server thereby allowing the attacker to bypass security controls, spoof identity, escalate privilege, and expose sensitive information.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">A path traversal vulnerability exists in the HTTP tool URL builder of googleapis/mcp-toolbox. When constructing downstream API requests, the URL builder substitutes user-controlled pathParams into the configured tool path and parses the resulting string as a relative URL. While it checks that the input does not alter the scheme, host, or user info, it relies on ResolveReference for the final URL resolution. Because dot segments (../) are normalized during this resolution step, an attacker can supply path parameters containing directory traversal sequences to escape the operator-configured pat</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
-              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Review CVE-2026-8646 in your asset inventory. Apply patches per vendor guidance and verify Websphere Application Server is not exposed. CVSS score: 7.4. EPSS probability: 0.4%; percentile: 27%.</p>
-              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8646" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-8646</a><a href="https://www.ibm.com/support/pages/node/7276579" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">Source reference</a>
-              <a href="https://www.patchbrief.org/items/2026-06-ibm-cve-2026-8646.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Review CVE-2026-11720 in your asset inventory. Apply patches per vendor guidance and verify Mcp Toolbox For Databases is not exposed. CVSS score: 9.1. EPSS probability: 0.4%; percentile: 29%.</p>
+              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11720" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-11720</a><a href="https://github.com/googleapis/mcp-toolbox/pull/3218" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">Source reference</a>
+              <a href="https://www.patchbrief.org/items/2026-06-google-cve-2026-11720.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -333,30 +185,178 @@
           <tr>
             <td style="padding:4px 16px;background:#fdf0ee;">
               <span style="font-size:11px;font-weight:700;color:#913f32;letter-spacing:0.04em;text-transform:uppercase;">Critical vendor advisory</span>
-              <span style="font-size:11px;color:#913f32;opacity:0.7;margin-left:8px;">Jun 22, 2026 &middot; CVE-2026-9006</span>
+              <span style="font-size:11px;color:#913f32;opacity:0.7;margin-left:8px;">Jun 29, 2026 &middot; CVE-2026-13751</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-06-ibm-cve-2026-9006.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Ibm Websphere Application Server — CVE-2026-9006 (Critical)</a>
+              <a href="https://www.patchbrief.org/items/2026-06-snowflake-cve-2026-13751.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Snowflake Snowflake Cli — CVE-2026-13751 (Critical)</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Ibm &middot; Websphere Application Server</span>
+              <span style="font-size:12px;color:#66706d;">Snowflake &middot; Snowflake Cli</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">IBM WebSphere Application Server 9.0, and 8.5 is vulnerable to server-side request forgery (SSRF) with the Ajax Proxy configured. This may allow an attacker to send unauthorized requests from the system, resulting in a security bypass or information disclosure.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Improper handling of untrusted remote references in Snowflake CLI versions prior to 3.19 allowed server-side request forgery. The SQL statement reader&#x27;s !source/!load directives could reference remote URLs that were retrieved at runtime without sufficient restriction on the request destination. By supplying crafted SQL content processed through a vulnerable command path, an attacker could cause the victim&#x27;s environment to issue unintended outbound requests to internal or otherwise non-public network locations, and could cause remote SQL content to be retrieved and executed in the context of th</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
-              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Review CVE-2026-9006 in your asset inventory. Apply patches per vendor guidance and verify Websphere Application Server is not exposed. CVSS score: 7.4. EPSS probability: 0.2%; percentile: 14%.</p>
-              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-9006" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-9006</a><a href="https://www.ibm.com/support/pages/node/7276600" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">Source reference</a>
-              <a href="https://www.patchbrief.org/items/2026-06-ibm-cve-2026-9006.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Review CVE-2026-13751 in your asset inventory. Apply patches per vendor guidance and verify Snowflake Cli is not exposed. CVSS score: 4.1. EPSS probability: 0.1%; percentile: 1%.</p>
+              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-13751" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-13751</a><a href="https://community.snowflake.com/s/article/Snowflake-CLI-Vulnerability-Advisory" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">Source reference</a>
+              <a href="https://www.patchbrief.org/items/2026-06-snowflake-cve-2026-13751.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr><td style="height:12px;"></td></tr>
+    <!-- Item -->
+    <tr>
+      <td style="padding:0 0 1px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e2e5df;border-radius:6px;overflow:hidden;">
+          <tr>
+            <td style="padding:4px 16px;background:#fdf0ee;">
+              <span style="font-size:11px;font-weight:700;color:#913f32;letter-spacing:0.04em;text-transform:uppercase;">Critical vendor advisory</span>
+              <span style="font-size:11px;color:#913f32;opacity:0.7;margin-left:8px;">Jun 30, 2026 &middot; CVE-2026-48286</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:14px 16px 4px;">
+              <a href="https://www.patchbrief.org/items/2026-06-adobe-cve-2026-48286.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Adobe Campaign Classic (ACC) — CVE-2026-48286 (Critical)</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:4px 16px 6px;">
+              <span style="font-size:12px;color:#66706d;">Adobe &middot; Campaign Classic (ACC)</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 16px 10px;">
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Adobe Campaign Classic (ACC) versions 7.4.3 build 9396 and earlier are affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
+              <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
+              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Review CVE-2026-48286 in your asset inventory. Apply patches per vendor guidance and verify Campaign Classic (ACC) is not exposed. CVSS score: 10.0.</p>
+              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48286" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-48286</a><a href="https://helpx.adobe.com/security/products/campaign/apsb26-69.html" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">Source reference</a>
+              <a href="https://www.patchbrief.org/items/2026-06-adobe-cve-2026-48286.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr><td style="height:12px;"></td></tr>
+    <!-- Item -->
+    <tr>
+      <td style="padding:0 0 1px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e2e5df;border-radius:6px;overflow:hidden;">
+          <tr>
+            <td style="padding:4px 16px;background:#fdf0ee;">
+              <span style="font-size:11px;font-weight:700;color:#913f32;letter-spacing:0.04em;text-transform:uppercase;">Critical vendor advisory</span>
+              <span style="font-size:11px;color:#913f32;opacity:0.7;margin-left:8px;">Jun 30, 2026 &middot; CVE-2026-8452</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:14px 16px 4px;">
+              <a href="https://www.patchbrief.org/items/2026-06-citrix-cve-2026-8452.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Citrix Netscaler Application Delivery Controller — CVE-2026-8452 (Critical)</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:4px 16px 6px;">
+              <span style="font-size:12px;color:#66706d;">Citrix &middot; Netscaler Application Delivery Controller</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 16px 10px;">
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Memory overflow vulnerability NetScaler ADC and NetScaler Gateway leading to unpredictable or erroneous behavior and Denial of Service if the appliance is configured as a Gateway (SSL VPN, ICA Proxy, CVPN, RDP Proxy) or AAA virtual server</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
+              <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
+              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Review CVE-2026-8452 in your asset inventory. Apply patches per vendor guidance and verify Netscaler Application Delivery Controller is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 32%.</p>
+              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8452" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-8452</a><a href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX696604" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">Source reference</a>
+              <a href="https://www.patchbrief.org/items/2026-06-citrix-cve-2026-8452.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr><td style="height:12px;"></td></tr>
+    <!-- Item -->
+    <tr>
+      <td style="padding:0 0 1px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e2e5df;border-radius:6px;overflow:hidden;">
+          <tr>
+            <td style="padding:4px 16px;background:#fdf0ee;">
+              <span style="font-size:11px;font-weight:700;color:#913f32;letter-spacing:0.04em;text-transform:uppercase;">Critical vendor advisory</span>
+              <span style="font-size:11px;color:#913f32;opacity:0.7;margin-left:8px;">Jun 30, 2026 &middot; CVE-2026-8655</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:14px 16px 4px;">
+              <a href="https://www.patchbrief.org/items/2026-06-citrix-cve-2026-8655.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Citrix Netscaler Application Delivery Controller — CVE-2026-8655 (Critical)</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:4px 16px 6px;">
+              <span style="font-size:12px;color:#66706d;">Citrix &middot; Netscaler Application Delivery Controller</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 16px 10px;">
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Multiple Memory overflow vulnerabilities in NetScaler ADC and NetScaler Gateway leading to unpredictable or erroneous behavior and Denial of Service if NetScaler ADC is configured as an LB of type Oracle OR NetScaler ADC is configured as a DNS Proxy OR NetScaler ADC is configured as a DNS recursive resolver deployment</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
+              <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
+              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Review CVE-2026-8655 in your asset inventory. Apply patches per vendor guidance and verify Netscaler Application Delivery Controller is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 30%.</p>
+              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8655" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-8655</a><a href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX696604" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">Source reference</a>
+              <a href="https://www.patchbrief.org/items/2026-06-citrix-cve-2026-8655.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr><td style="height:12px;"></td></tr>
+    <!-- Item -->
+    <tr>
+      <td style="padding:0 0 1px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e2e5df;border-radius:6px;overflow:hidden;">
+          <tr>
+            <td style="padding:4px 16px;background:#fdf0ee;">
+              <span style="font-size:11px;font-weight:700;color:#913f32;letter-spacing:0.04em;text-transform:uppercase;">Critical vendor advisory</span>
+              <span style="font-size:11px;color:#913f32;opacity:0.7;margin-left:8px;">Jun 30, 2026 &middot; CVE-2026-58016</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:14px 16px 4px;">
+              <a href="https://www.patchbrief.org/items/2026-06-gnome-cve-2026-58016.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Gnome Glib — CVE-2026-58016 (Critical)</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:4px 16px 6px;">
+              <span style="font-size:12px;color:#66706d;">Gnome &middot; Glib</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 16px 10px;">
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malformed D-Bus introspection XML, specifically with a &lt;node&gt; element nested within other elements like &lt;method&gt;, &lt;signal&gt;, &lt;property&gt; or &lt;arg&gt;. This issue can cause an unsigned integer overflow and lead to an out-of-bounds read, resulting in a denial of service.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
+              <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
+              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Review CVE-2026-58016 in your asset inventory. Apply patches per vendor guidance and verify Glib is not exposed. CVSS score: 7.5. EPSS probability: 0.3%; percentile: 26%.</p>
+              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58016" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-58016</a><a href="https://access.redhat.com/security/cve/CVE-2026-58016" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">Source reference</a><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2492257" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">Source reference</a>
+              <a href="https://www.patchbrief.org/items/2026-06-gnome-cve-2026-58016.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
