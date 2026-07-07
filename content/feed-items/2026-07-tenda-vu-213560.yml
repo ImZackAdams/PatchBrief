@@ -1,0 +1,37 @@
+id: 2026-07-tenda-vu-213560
+slug: 2026-07-tenda-vu-213560
+external_id: VU-213560
+source: cert_vu
+date: '2026-07-06'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#213560: Tenda firmware (multiple versions) contains hidden authentication
+  backdoor'
+summary: 'Overview Several versions of Tenda firmware contain an undocumented authentication
+  backdoor that grants administrative access to the devices'' web management interfaces.
+  An attacker can expoit this vulnerability, tracked as CVE-2026-11405, to bypass
+  the password verification process and obtain full administrative control without
+  valid credentials. Affected Versions: * US_FH1201V1.0BR_V1.2.0.14(408)_EN_TD * US_W15EV1.0br_V15.11.0.5(1068_1567_841)_EN_TDE
+  * US_AC10V1.0re_V15.03.06.46_multi_TDE01 * US_AC5V1.0RTL_V15.03.06.48_multi_TDE01
+  * US_AC6V2.0RTL_V15.03.06.51_multi_T Description Tenda is a supplier of home and
+  business network devices such as routers, switches, wireless access points, and
+  video surveillance equipment. Most of these devices include web-based interfaces
+  that allow users to perform configuration and management operations... Related CVEs:
+  CVE-2026-11405.'
+vendor: Tenda
+product: firmware (multiple
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for firmware (multiple where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#213560
+  url: https://kb.cert.org/vuls/id/213560
+tags:
+- vu-213560
+- coordinated-disclosure
+- tenda
+- cert-vu
+is_sample: false

@@ -1,0 +1,37 @@
+id: 2026-07-overview-vu-828543
+slug: 2026-07-overview-vu-828543
+external_id: VU-828543
+source: cert_vu
+date: '2026-07-06'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#828543: HP Deskjet 2800 Printer Series Webservers contain Missing Authorization
+  Vulnerability'
+summary: 'Overview HP Printers in the Deskjet 2800 Series running firmware version
+  CVE-2026-13753 . This vulnerability allows unauthenticated access to the printer''s
+  webserver API endpoints, exposing Wi-Fi credentials, management configuration details,
+  and sensitive security data normally restricted to administrative users. Description
+  Modern HP printers provide a web-based management interface for configuring content
+  such as Wi-Fi Direct settings, SNMP management access, and device security options.
+  When accessed normally through the browser interface, these pages explicitly require
+  administrator credentials before sensitive information is displayed. This information
+  is protected because, for example, Wi-Fi Direct controls the printer''s direct wireless
+  connectivity, and SNMP configuration settings can reveal detailed information about
+  the... Related CVEs: CVE-2026-13753.'
+vendor: Overview
+product: HP Printers in the Deskjet 2800 Series running firmware
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for HP Printers in the Deskjet 2800 Series running firmware where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#828543
+  url: https://kb.cert.org/vuls/id/828543
+tags:
+- vu-828543
+- coordinated-disclosure
+- overview
+- cert-vu
+is_sample: false

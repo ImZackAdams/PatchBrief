@@ -4,13 +4,13 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-06T13:41:36Z",
-  "total_items": 357,
+  "generated": "2026-07-07T11:51:22Z",
+  "total_items": 389,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-06T13:41:36Z",
-    "source_count": 6,
+    "generated": "2026-07-07T11:51:22Z",
+    "source_count": 7,
     "sources": [
       {
         "id": "cisa_kev",
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-06T12:47:34Z",
-        "finished_at": "2026-07-06T12:47:34Z"
+        "started_at": "2026-07-07T11:51:10Z",
+        "finished_at": "2026-07-07T11:51:11Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-06T12:47:34Z",
-        "finished_at": "2026-07-06T12:47:35Z"
+        "started_at": "2026-07-07T11:51:11Z",
+        "finished_at": "2026-07-07T11:51:11Z"
       },
       {
         "id": "nvd",
@@ -36,26 +36,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-06T12:47:35Z",
-        "finished_at": "2026-07-06T12:47:42Z"
+        "started_at": "2026-07-07T11:51:11Z",
+        "finished_at": "2026-07-07T11:51:18Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-07-06T12:47:42Z",
-        "finished_at": "2026-07-06T12:47:43Z"
+        "items_seen": 30,
+        "started_at": "2026-07-07T11:51:18Z",
+        "finished_at": "2026-07-07T11:51:19Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-07-06T12:47:43Z",
-        "finished_at": "2026-07-06T12:47:43Z"
+        "items_seen": 2,
+        "started_at": "2026-07-07T11:51:19Z",
+        "finished_at": "2026-07-07T11:51:20Z"
       },
       {
         "id": "exploitdb",
@@ -63,12 +63,1113 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-06T12:47:43Z",
-        "finished_at": "2026-07-06T12:47:44Z"
+        "started_at": "2026-07-07T11:51:20Z",
+        "finished_at": "2026-07-07T11:51:21Z"
+      },
+      {
+        "id": "epss",
+        "label": "FIRST EPSS enrichment",
+        "role": "enrichment",
+        "status": "ok",
+        "items_seen": 4,
+        "started_at": "2026-07-07T11:51:21Z",
+        "finished_at": "2026-07-07T11:51:21Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-composer-cve-2026-52889",
+      "slug": "2026-07-composer-cve-2026-52889",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-52889.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Formie Hidden field defaults vulnerable to Server-Side Template Injection",
+      "summary": "Formie Hidden field defaults vulnerable to Server-Side Template Injection",
+      "vendor": "Composer",
+      "product": "verbb/formie",
+      "cve": "CVE-2026-52889",
+      "operator_check": "Check whether verbb/formie is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for verbb/formie. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-52889",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-565m-g33j-jq96",
+          "url": "https://github.com/advisories/GHSA-565m-g33j-jq96"
+        },
+        {
+          "title": "NVD — CVE-2026-52889",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52889"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/verbb/formie/security/advisories/GHSA-565m-g33j-jq96"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-55790",
+      "slug": "2026-07-composer-cve-2026-55790",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-55790.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Craft CMS: DOM XSS via GitHub issue title in CraftSupport widget",
+      "summary": "Craft CMS: DOM XSS via GitHub issue title in CraftSupport widget",
+      "vendor": "Composer",
+      "product": "craftcms/cms",
+      "cve": "CVE-2026-55790",
+      "operator_check": "Check whether craftcms/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.4. EPSS probability: 0.3%; percentile: 23%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for craftcms/cms. Prioritize it with other application dependency updates, especially because EPSS places it in the 23% percentile.",
+      "tags": [
+        "cve-2026-55790",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-24x4-j6x9-rfw5",
+          "url": "https://github.com/advisories/GHSA-24x4-j6x9-rfw5"
+        },
+        {
+          "title": "NVD — CVE-2026-55790",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55790"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/craftcms/cms/security/advisories/GHSA-24x4-j6x9-rfw5"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-55794",
+      "slug": "2026-07-composer-cve-2026-55794",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-55794.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Craft CMS: Potential authenticated Remote Code Execution via referrer redirect",
+      "summary": "Craft CMS: Potential authenticated Remote Code Execution via referrer redirect",
+      "vendor": "Composer",
+      "product": "craftcms/cms",
+      "cve": "CVE-2026-55794",
+      "operator_check": "Check whether craftcms/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.3%; percentile: 21%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for craftcms/cms. Prioritize it with other application dependency updates, especially because EPSS places it in the 21% percentile.",
+      "tags": [
+        "cve-2026-55794",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f74w-488g-8x5r",
+          "url": "https://github.com/advisories/GHSA-f74w-488g-8x5r"
+        },
+        {
+          "title": "NVD — CVE-2026-55794",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55794"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/craftcms/cms/security/advisories/GHSA-f74w-488g-8x5r"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-49445",
+      "slug": "2026-07-go-cve-2026-49445",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-49445.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Cilium vulnerable to sensitive information disclosure and cluster disruption via local Envoy admin socket access",
+      "summary": "Cilium vulnerable to sensitive information disclosure and cluster disruption via local Envoy admin socket access",
+      "vendor": "Go",
+      "product": "github.com/cilium/cilium",
+      "cve": "CVE-2026-49445",
+      "operator_check": "Check whether github.com/cilium/cilium is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/cilium/cilium. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-49445",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3fcv-jvfp-m4q9",
+          "url": "https://github.com/advisories/GHSA-3fcv-jvfp-m4q9"
+        },
+        {
+          "title": "NVD — CVE-2026-49445",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49445"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/cilium/cilium/security/advisories/GHSA-3fcv-jvfp-m4q9"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-55075",
+      "slug": "2026-07-go-cve-2026-55075",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-55075.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coder vulnerable to OIDC account takeover via email-based user matching and email_verified bypass",
+      "summary": "Coder vulnerable to OIDC account takeover via email-based user matching and email_verified bypass",
+      "vendor": "Go",
+      "product": "github.com/coder/coder/v2",
+      "cve": "CVE-2026-55075",
+      "operator_check": "Check whether github.com/coder/coder/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coder/coder/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55075",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9r87-mvcw-x35f",
+          "url": "https://github.com/advisories/GHSA-9r87-mvcw-x35f"
+        },
+        {
+          "title": "NVD — CVE-2026-55075",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55075"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coder/coder/security/advisories/GHSA-9r87-mvcw-x35f"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-55076",
+      "slug": "2026-07-go-cve-2026-55076",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-55076.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coder's OIDC email_verified type coercion bypass enables account takeover via unverified email linking",
+      "summary": "Coder's OIDC email_verified type coercion bypass enables account takeover via unverified email linking",
+      "vendor": "Go",
+      "product": "github.com/coder/coder/v2",
+      "cve": "CVE-2026-55076",
+      "operator_check": "Check whether github.com/coder/coder/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coder/coder/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55076",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-75vm-6w67-gwvp",
+          "url": "https://github.com/advisories/GHSA-75vm-6w67-gwvp"
+        },
+        {
+          "title": "NVD — CVE-2026-55076",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55076"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coder/coder/security/advisories/GHSA-75vm-6w67-gwvp"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-55077",
+      "slug": "2026-07-go-cve-2026-55077",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-55077.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coder: User-admin role can reset owner account password",
+      "summary": "Coder: User-admin role can reset owner account password",
+      "vendor": "Go",
+      "product": "github.com/coder/coder/v2",
+      "cve": "CVE-2026-55077",
+      "operator_check": "Check whether github.com/coder/coder/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coder/coder/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55077",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-29xf-69gq-m9jx",
+          "url": "https://github.com/advisories/GHSA-29xf-69gq-m9jx"
+        },
+        {
+          "title": "NVD — CVE-2026-55077",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55077"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coder/coder/security/advisories/GHSA-29xf-69gq-m9jx"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-55427",
+      "slug": "2026-07-go-cve-2026-55427",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-55427.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coder vulnerable to SSH config injection via unsanitized server-supplied values in `coder config-ssh`",
+      "summary": "Coder vulnerable to SSH config injection via unsanitized server-supplied values in `coder config-ssh`",
+      "vendor": "Go",
+      "product": "github.com/coder/coder/v2",
+      "cve": "CVE-2026-55427",
+      "operator_check": "Check whether github.com/coder/coder/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coder/coder/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55427",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mcqq-fqgf-rxwm",
+          "url": "https://github.com/advisories/GHSA-mcqq-fqgf-rxwm"
+        },
+        {
+          "title": "NVD — CVE-2026-55427",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55427"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coder/coder/security/advisories/GHSA-mcqq-fqgf-rxwm"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-55428",
+      "slug": "2026-07-go-cve-2026-55428",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-55428.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coder: Route hijacking through lack of validation of agent-supplied AllowedIPs in tailnet coordinator",
+      "summary": "Coder: Route hijacking through lack of validation of agent-supplied AllowedIPs in tailnet coordinator",
+      "vendor": "Go",
+      "product": "github.com/coder/coder/v2",
+      "cve": "CVE-2026-55428",
+      "operator_check": "Check whether github.com/coder/coder/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coder/coder/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55428",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wrq8-fcv5-8hvp",
+          "url": "https://github.com/advisories/GHSA-wrq8-fcv5-8hvp"
+        },
+        {
+          "title": "NVD — CVE-2026-55428",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55428"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coder/coder/security/advisories/GHSA-wrq8-fcv5-8hvp"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-55429",
+      "slug": "2026-07-go-cve-2026-55429",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-55429.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coder's workspace app upsert allows cross-workspace agent rebinding via user-controlled app ID",
+      "summary": "Coder's workspace app upsert allows cross-workspace agent rebinding via user-controlled app ID",
+      "vendor": "Go",
+      "product": "github.com/coder/coder/v2",
+      "cve": "CVE-2026-55429",
+      "operator_check": "Check whether github.com/coder/coder/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coder/coder/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55429",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9rjw-3gwp-f59v",
+          "url": "https://github.com/advisories/GHSA-9rjw-3gwp-f59v"
+        },
+        {
+          "title": "NVD — CVE-2026-55429",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55429"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coder/coder/security/advisories/GHSA-9rjw-3gwp-f59v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-55431",
+      "slug": "2026-07-go-cve-2026-55431",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-55431.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coder's session token leaked to arbitrary hosts via `coder open app` for external workspace apps",
+      "summary": "Coder's session token leaked to arbitrary hosts via `coder open app` for external workspace apps",
+      "vendor": "Go",
+      "product": "github.com/coder/coder/v2",
+      "cve": "CVE-2026-55431",
+      "operator_check": "Check whether github.com/coder/coder/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coder/coder/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55431",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v54h-cp2w-9x4g",
+          "url": "https://github.com/advisories/GHSA-v54h-cp2w-9x4g"
+        },
+        {
+          "title": "NVD — CVE-2026-55431",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55431"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coder/coder/security/advisories/GHSA-v54h-cp2w-9x4g"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-55436",
+      "slug": "2026-07-go-cve-2026-55436",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-55436.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coder's AI Bridge Proxy skips TLS certificate verification in default configuration",
+      "summary": "Coder's AI Bridge Proxy skips TLS certificate verification in default configuration",
+      "vendor": "Go",
+      "product": "github.com/coder/coder/v2",
+      "cve": "CVE-2026-55436",
+      "operator_check": "Check whether github.com/coder/coder/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coder/coder/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55436",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-84rm-42xw-mx52",
+          "url": "https://github.com/advisories/GHSA-84rm-42xw-mx52"
+        },
+        {
+          "title": "NVD — CVE-2026-55436",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55436"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coder/coder/security/advisories/GHSA-84rm-42xw-mx52"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-ghsa-qrwj-vh9x-gw5v",
+      "slug": "2026-07-go-ghsa-qrwj-vh9x-gw5v",
+      "url": "https://www.patchbrief.org/items/2026-07-go-ghsa-qrwj-vh9x-gw5v.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coder's workspace agent API insecure redirect handling allowed cross-agent file read and write",
+      "summary": "Coder's workspace agent API insecure redirect handling allowed cross-agent file read and write",
+      "vendor": "Go",
+      "product": "github.com/coder/coder/v2",
+      "cve": null,
+      "operator_check": "Check whether github.com/coder/coder/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coder/coder/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-qrwj-vh9x-gw5v",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qrwj-vh9x-gw5v",
+          "url": "https://github.com/advisories/GHSA-qrwj-vh9x-gw5v"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coder/coder/security/advisories/GHSA-qrwj-vh9x-gw5v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-54640",
+      "slug": "2026-07-maven-cve-2026-54640",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-54640.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenRemote has an incomplete fix for CVE-2026-40882: XXE in KNXProtocol.startAssetImport() allows arbitrary file read...",
+      "summary": "OpenRemote has an incomplete fix for CVE-2026-40882: XXE in KNXProtocol.startAssetImport() allows arbitrary file read via unprotected XMLInputFactory",
+      "vendor": "Maven",
+      "product": "io.openremote:openremote-agent",
+      "cve": "CVE-2026-54640",
+      "operator_check": "Check whether io.openremote:openremote-agent is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for io.openremote:openremote-agent. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54640",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7v6w-c3f4-9wpq",
+          "url": "https://github.com/advisories/GHSA-7v6w-c3f4-9wpq"
+        },
+        {
+          "title": "NVD — CVE-2026-54640",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54640"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/openremote/openremote/security/advisories/GHSA-7v6w-c3f4-9wpq"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-54641",
+      "slug": "2026-07-maven-cve-2026-54641",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-54641.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenRemote has Cross-Realm User Information Disclosure in UserResourceImpl",
+      "summary": "OpenRemote has Cross-Realm User Information Disclosure in UserResourceImpl",
+      "vendor": "Maven",
+      "product": "io.openremote:openremote-manager",
+      "cve": "CVE-2026-54641",
+      "operator_check": "Check whether io.openremote:openremote-manager is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for io.openremote:openremote-manager. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54641",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xqr9-4wvv-gvch",
+          "url": "https://github.com/advisories/GHSA-xqr9-4wvv-gvch"
+        },
+        {
+          "title": "NVD — CVE-2026-54641",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54641"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/openremote/openremote/security/advisories/GHSA-xqr9-4wvv-gvch"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-ghsa-cgfv-jrfp-2r7v",
+      "slug": "2026-07-maven-ghsa-cgfv-jrfp-2r7v",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-ghsa-cgfv-jrfp-2r7v.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenRemote has Authenticated SQL Injection via Datapoint Crosstab Export",
+      "summary": "OpenRemote has Authenticated SQL Injection via Datapoint Crosstab Export",
+      "vendor": "Maven",
+      "product": "io.openremote:openremote-manager",
+      "cve": null,
+      "operator_check": "Check whether io.openremote:openremote-manager is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for io.openremote:openremote-manager. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-cgfv-jrfp-2r7v",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cgfv-jrfp-2r7v",
+          "url": "https://github.com/advisories/GHSA-cgfv-jrfp-2r7v"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/openremote/openremote/security/advisories/GHSA-cgfv-jrfp-2r7v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-53486",
+      "slug": "2026-07-npm-cve-2026-53486",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-53486.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Decompress: Archive extraction can create files and links outside of the target directory",
+      "summary": "Decompress: Archive extraction can create files and links outside of the target directory",
+      "vendor": "npm",
+      "product": "@xhmikosr/decompress",
+      "cve": "CVE-2026-53486",
+      "operator_check": "Check whether @xhmikosr/decompress is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @xhmikosr/decompress. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-53486",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mp2f-45pm-3cg9",
+          "url": "https://github.com/advisories/GHSA-mp2f-45pm-3cg9"
+        },
+        {
+          "title": "NVD — CVE-2026-53486",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53486"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/XhmikosR/decompress/security/advisories/GHSA-mp2f-45pm-3cg9"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-55500",
+      "slug": "2026-07-npm-cve-2026-55500",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-55500.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "9routers has Exposure of Sensitive Information and Unprotected Database Import/Export, Allowing Complete Credential T...",
+      "summary": "9routers has Exposure of Sensitive Information and Unprotected Database Import/Export, Allowing Complete Credential Theft and Database Takeover",
+      "vendor": "npm",
+      "product": "9router",
+      "cve": "CVE-2026-55500",
+      "operator_check": "Check whether 9router is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for 9router. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55500",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qvfm-67h2-2qfx",
+          "url": "https://github.com/advisories/GHSA-qvfm-67h2-2qfx"
+        },
+        {
+          "title": "NVD — CVE-2026-55500",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55500"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/decolua/9router/security/advisories/GHSA-qvfm-67h2-2qfx"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-55501",
+      "slug": "2026-07-npm-cve-2026-55501",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-55501.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "9router: Login brute-force protection bypass via spoofed X-Forwarded-For header",
+      "summary": "9router: Login brute-force protection bypass via spoofed X-Forwarded-For header",
+      "vendor": "npm",
+      "product": "9router",
+      "cve": "CVE-2026-55501",
+      "operator_check": "Check whether 9router is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for 9router. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55501",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7cfm-pqrj-xgq7",
+          "url": "https://github.com/advisories/GHSA-7cfm-pqrj-xgq7"
+        },
+        {
+          "title": "NVD — CVE-2026-55501",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55501"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/decolua/9router/security/advisories/GHSA-7cfm-pqrj-xgq7"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-vjc7-jrh9-9j86",
+      "slug": "2026-07-npm-ghsa-vjc7-jrh9-9j86",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-vjc7-jrh9-9j86.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "9router has unauthenticated CRUD on /api/providers and Full API Key Leak via /api/usage/stats",
+      "summary": "9router has unauthenticated CRUD on /api/providers and Full API Key Leak via /api/usage/stats",
+      "vendor": "npm",
+      "product": "9router",
+      "cve": null,
+      "operator_check": "Check whether 9router is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for 9router. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-vjc7-jrh9-9j86",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vjc7-jrh9-9j86",
+          "url": "https://github.com/advisories/GHSA-vjc7-jrh9-9j86"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/decolua/9router/security/advisories/GHSA-vjc7-jrh9-9j86"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-overview-vu-828543",
+      "slug": "2026-07-overview-vu-828543",
+      "url": "https://www.patchbrief.org/items/2026-07-overview-vu-828543.html",
+      "date": "2026-07-06",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#828543: HP Deskjet 2800 Printer Series Webservers contain Missing Authorization Vulnerability",
+      "summary": "Overview HP Printers in the Deskjet 2800 Series running firmware version CVE-2026-13753 . This vulnerability allows unauthenticated access to the printer's webserver API endpoints, exposing Wi-Fi credentials, management configuration details, and sensitive security data normally restricted to administrative users. Description Modern HP printers provide a web-based management interface for configuring content such as Wi-Fi Direct settings, SNMP management access, and device security options. When accessed normally through the browser interface, these pages explicitly require administrator credentials before sensitive information is displayed. This information is protected because, for example, Wi-Fi Direct controls the printer's direct wireless connectivity, and SNMP configuration settings can reveal detailed information about the... Related CVEs: CVE-2026-13753.",
+      "vendor": "Overview",
+      "product": "HP Printers in the Deskjet 2800 Series running firmware",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for HP Printers in the Deskjet 2800 Series running firmware where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-828543",
+        "coordinated-disclosure",
+        "overview",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#828543",
+          "url": "https://kb.cert.org/vuls/id/828543"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-54760",
+      "slug": "2026-07-pypi-cve-2026-54760",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-54760.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Langroid: SQLChatAgent dangerous-function blocklist can be bypassed with quoted or schema-qualified pg_read_file calls",
+      "summary": "Langroid: SQLChatAgent dangerous-function blocklist can be bypassed with quoted or schema-qualified pg_read_file calls",
+      "vendor": "PyPI",
+      "product": "langroid",
+      "cve": "CVE-2026-54760",
+      "operator_check": "Check whether langroid is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for langroid. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54760",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6xc5-4r68-67fc",
+          "url": "https://github.com/advisories/GHSA-6xc5-4r68-67fc"
+        },
+        {
+          "title": "NVD — CVE-2026-54760",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54760"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/langroid/langroid/security/advisories/GHSA-6xc5-4r68-67fc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-54769",
+      "slug": "2026-07-pypi-cve-2026-54769",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-54769.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Langroid: Sandbox Escape to Remote Code Execution via Incomplete `eval()` Mitigation in TableChatAgent",
+      "summary": "Langroid: Sandbox Escape to Remote Code Execution via Incomplete `eval()` Mitigation in TableChatAgent",
+      "vendor": "PyPI",
+      "product": "langroid",
+      "cve": "CVE-2026-54769",
+      "operator_check": "Check whether langroid is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for langroid. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54769",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q9p7-wqxg-mrhc",
+          "url": "https://github.com/advisories/GHSA-q9p7-wqxg-mrhc"
+        },
+        {
+          "title": "NVD — CVE-2026-54769",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54769"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/langroid/langroid/security/advisories/GHSA-q9p7-wqxg-mrhc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-54771",
+      "slug": "2026-07-pypi-cve-2026-54771",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-54771.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Langroid: handle_message() executes user-supplied tool JSON without sender verification",
+      "summary": "Langroid: handle_message() executes user-supplied tool JSON without sender verification",
+      "vendor": "PyPI",
+      "product": "langroid",
+      "cve": "CVE-2026-54771",
+      "operator_check": "Check whether langroid is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for langroid. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54771",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gjgq-w2m6-wr5q",
+          "url": "https://github.com/advisories/GHSA-gjgq-w2m6-wr5q"
+        },
+        {
+          "title": "NVD — CVE-2026-54771",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54771"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/langroid/langroid/security/advisories/GHSA-gjgq-w2m6-wr5q"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-55426",
+      "slug": "2026-07-pypi-cve-2026-55426",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-55426.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Linuxfabrik Monitoring Plugins have local privilege escalation using embedded command",
+      "summary": "Linuxfabrik Monitoring Plugins have local privilege escalation using embedded command",
+      "vendor": "PyPI",
+      "product": "linuxfabrik-lib",
+      "cve": "CVE-2026-55426",
+      "operator_check": "Check whether linuxfabrik-lib is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for linuxfabrik-lib. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55426",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-798h-hpph-m24j",
+          "url": "https://github.com/advisories/GHSA-798h-hpph-m24j"
+        },
+        {
+          "title": "NVD — CVE-2026-55426",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55426"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Linuxfabrik/monitoring-plugins/security/advisories/GHSA-798h-hpph-m24j"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-55615",
+      "slug": "2026-07-pypi-cve-2026-55615",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-55615.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Langroid: Neo4jChatAgent executes LLM-generated Cypher without validation (prompt-to-Cypher injection; config-conditi...",
+      "summary": "Langroid: Neo4jChatAgent executes LLM-generated Cypher without validation (prompt-to-Cypher injection; config-conditional RCE), mirroring the SQLChatAgent bug fixed in CVE-2026-25879",
+      "vendor": "PyPI",
+      "product": "langroid",
+      "cve": "CVE-2026-55615",
+      "operator_check": "Check whether langroid is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for langroid. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55615",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2pq5-3q89-j7cc",
+          "url": "https://github.com/advisories/GHSA-2pq5-3q89-j7cc"
+        },
+        {
+          "title": "NVD — CVE-2026-55615",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55615"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/langroid/langroid/security/advisories/GHSA-2pq5-3q89-j7cc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-55786",
+      "slug": "2026-07-pypi-cve-2026-55786",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-55786.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "flyto-core has Unauthenticated Command Execution via HTTP MCP `execute_module`",
+      "summary": "flyto-core has Unauthenticated Command Execution via HTTP MCP `execute_module`",
+      "vendor": "PyPI",
+      "product": "flyto-core",
+      "cve": "CVE-2026-55786",
+      "operator_check": "Check whether flyto-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flyto-core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55786",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h9f9-h6gm-wc85",
+          "url": "https://github.com/advisories/GHSA-h9f9-h6gm-wc85"
+        },
+        {
+          "title": "NVD — CVE-2026-55786",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55786"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-h9f9-h6gm-wc85"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-55787",
+      "slug": "2026-07-pypi-cve-2026-55787",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-55787.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "flyto-core has SSRF guard bypass via IPv6 transition addresses (IPv4-mapped / 6to4 / NAT64) in validate_url_ssrf",
+      "summary": "flyto-core has SSRF guard bypass via IPv6 transition addresses (IPv4-mapped / 6to4 / NAT64) in validate_url_ssrf",
+      "vendor": "PyPI",
+      "product": "flyto-core",
+      "cve": "CVE-2026-55787",
+      "operator_check": "Check whether flyto-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flyto-core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55787",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-794r-5rp2-fpg8",
+          "url": "https://github.com/advisories/GHSA-794r-5rp2-fpg8"
+        },
+        {
+          "title": "NVD — CVE-2026-55787",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55787"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-794r-5rp2-fpg8"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-rust-cve-2026-35338",
+      "slug": "2026-07-rust-cve-2026-35338",
+      "url": "https://www.patchbrief.org/items/2026-07-rust-cve-2026-35338.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "chmod: --preserve-root bypassed by any path that resolves to root (e.g. /../)",
+      "summary": "chmod: --preserve-root bypassed by any path that resolves to root (e.g. /../)",
+      "vendor": "Rust",
+      "product": "uu_chmod",
+      "cve": "CVE-2026-35338",
+      "operator_check": "Check whether uu_chmod is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for uu_chmod. Prioritize it with other application dependency updates, especially because EPSS places it in the 7% percentile.",
+      "tags": [
+        "cve-2026-35338",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4c7q-4928-8445",
+          "url": "https://github.com/advisories/GHSA-4c7q-4928-8445"
+        },
+        {
+          "title": "NVD — CVE-2026-35338",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35338"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/uutils/coreutils/security/advisories/GHSA-4c7q-4928-8445"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-rust-cve-2026-35341",
+      "slug": "2026-07-rust-cve-2026-35341",
+      "url": "https://www.patchbrief.org/items/2026-07-rust-cve-2026-35341.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "mkfifo: permissions of an existing file are changed after FIFO creation fails",
+      "summary": "mkfifo: permissions of an existing file are changed after FIFO creation fails",
+      "vendor": "Rust",
+      "product": "uu_mkfifo",
+      "cve": "CVE-2026-35341",
+      "operator_check": "Check whether uu_mkfifo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 6%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for uu_mkfifo. Prioritize it with other application dependency updates, especially because EPSS places it in the 6% percentile.",
+      "tags": [
+        "cve-2026-35341",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pmf6-rcx4-v53v",
+          "url": "https://github.com/advisories/GHSA-pmf6-rcx4-v53v"
+        },
+        {
+          "title": "NVD — CVE-2026-35341",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35341"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/uutils/coreutils/security/advisories/GHSA-pmf6-rcx4-v53v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-rust-cve-2026-54496",
+      "slug": "2026-07-rust-cve-2026-54496",
+      "url": "https://www.patchbrief.org/items/2026-07-rust-cve-2026-54496.html",
+      "date": "2026-07-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Zebra: Missing copy constraint in halo2_gadgets variable-base scalar multiplication allows under-constrained base, br...",
+      "summary": "Zebra: Missing copy constraint in halo2_gadgets variable-base scalar multiplication allows under-constrained base, breaking Orchard Action circuit soundness",
+      "vendor": "Rust",
+      "product": "zebrad",
+      "cve": "CVE-2026-54496",
+      "operator_check": "Check whether zebrad is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for zebrad. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54496",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-ww9q-8r59-xv46",
+          "url": "https://github.com/advisories/GHSA-ww9q-8r59-xv46"
+        },
+        {
+          "title": "NVD — CVE-2026-54496",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54496"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-ww9q-8r59-xv46"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-tenda-vu-213560",
+      "slug": "2026-07-tenda-vu-213560",
+      "url": "https://www.patchbrief.org/items/2026-07-tenda-vu-213560.html",
+      "date": "2026-07-06",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#213560: Tenda firmware (multiple versions) contains hidden authentication backdoor",
+      "summary": "Overview Several versions of Tenda firmware contain an undocumented authentication backdoor that grants administrative access to the devices' web management interfaces. An attacker can expoit this vulnerability, tracked as CVE-2026-11405, to bypass the password verification process and obtain full administrative control without valid credentials. Affected Versions: * US_FH1201V1.0BR_V1.2.0.14(408)_EN_TD * US_W15EV1.0br_V15.11.0.5(1068_1567_841)_EN_TDE * US_AC10V1.0re_V15.03.06.46_multi_TDE01 * US_AC5V1.0RTL_V15.03.06.48_multi_TDE01 * US_AC6V2.0RTL_V15.03.06.51_multi_T Description Tenda is a supplier of home and business network devices such as routers, switches, wireless access points, and video surveillance equipment. Most of these devices include web-based interfaces that allow users to perform configuration and management operations... Related CVEs: CVE-2026-11405.",
+      "vendor": "Tenda",
+      "product": "firmware (multiple",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for firmware (multiple where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-213560",
+        "coordinated-disclosure",
+        "tenda",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#213560",
+          "url": "https://kb.cert.org/vuls/id/213560"
+        }
+      ]
+    },
     {
       "id": "2026-07-apereo-cve-2026-59099",
       "slug": "2026-07-apereo-cve-2026-59099",
