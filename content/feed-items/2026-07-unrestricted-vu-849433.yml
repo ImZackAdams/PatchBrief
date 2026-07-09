@@ -1,0 +1,37 @@
+id: 2026-07-unrestricted-vu-849433
+slug: 2026-07-unrestricted-vu-849433
+external_id: VU-849433
+source: cert_vu
+date: '2026-07-08'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#849433: Adalo Database API Enables Cross-App User Data Extraction via Over-Fetching
+  and Missing Authorization Cont...'
+summary: 'Overview Adalo’s no‑code application platform exposes complete user records
+  through its database API for all applications built on both V1 and V2. Due to a
+  platform-level flaw, authenticated users can retrieve full user data belonging to
+  any Adalo application, regardless of configuration. This issue affects more than
+  one million applications and placing developers and their end users at risk of data
+  exposure that they cannot prevent or remediate. Description Adalo is a Software-as-a-Service
+  (SaaS) provider for building no-code applications. In theory, each application or
+  tenant (customer) is logically isolated with separate databases, users, and configurations.
+  CVE-2026-10706 Unrestricted Disclosure of Full User Records The Adalo database API
+  contains a flaw which allows the backend to return complete user records for every
+  list... Related CVEs: CVE-2026-10706, CVE-2026-10708.'
+vendor: Unrestricted
+product: Disclosure of Full User Records The Adalo database API
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Disclosure of Full User Records The Adalo database API where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#849433
+  url: https://kb.cert.org/vuls/id/849433
+tags:
+- vu-849433
+- coordinated-disclosure
+- unrestricted
+- cert-vu
+is_sample: false

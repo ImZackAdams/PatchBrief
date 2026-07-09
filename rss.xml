@@ -4,8 +4,71 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Wed, 08 Jul 2026 11:04:57 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 12:08:36 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>Blocksy Companion Pro plugin for WordPress — CVE-2026-58480 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-07-blocksy-cve-2026-58480.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-blocksy-cve-2026-58480.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Blocksy Companion Pro plugin for WordPress before 2.1.47 contains an unauthenticated arbitrary file upload vulnerability that allows attackers to upload executable files by bypassing extension validation in the save_attachments function exposed through the Advanced Reviews feature. Attackers can exploit the Custom Fonts extension's flawed strpos() substring check by uploading double-extension filenames such as shell.woff2.php, causing the validation to pass on the substring match while the web server executes the file as PHP, achieving remote code execution.</description>
+    </item>
+    <item>
+      <title>Skipper: opaAuthorizeRequestWithBody filter bypasses OPA policy on Transfer-Encoding — chunked / HTTP/2 requests</title>
+      <link>https://www.patchbrief.org/items/2026-07-go-cve-2026-50197.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-go-cve-2026-50197.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Skipper: opaAuthorizeRequestWithBody filter bypasses OPA policy on Transfer-Encoding — chunked / HTTP/2 requests</description>
+    </item>
+    <item>
+      <title>Nuclio: Unsanitized cron trigger event headers/body injected into CronJob shell command leads to persistent RCE</title>
+      <link>https://www.patchbrief.org/items/2026-07-go-cve-2026-52831.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-go-cve-2026-52831.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Nuclio: Unsanitized cron trigger event headers/body injected into CronJob shell command leads to persistent RCE</description>
+    </item>
+    <item>
+      <title>Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE</title>
+      <link>https://www.patchbrief.org/items/2026-07-go-cve-2026-53649.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-go-cve-2026-53649.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE</description>
+    </item>
+    <item>
+      <title>NL Portal: IDOR allows any authenticated user to complete and tamper with another user's taak</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-cve-2026-49464.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-cve-2026-49464.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <description>NL Portal: IDOR allows any authenticated user to complete and tamper with another user's taak</description>
+    </item>
+    <item>
+      <title>DSpace has possible Remote Code Execution (RCE)  through Velocity Templates used by LDN</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-cve-2026-49832.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-cve-2026-49832.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <description>DSpace has possible Remote Code Execution (RCE) through Velocity Templates used by LDN</description>
+    </item>
+    <item>
+      <title>Serena: Unauthenticated Flask dashboard on fixed port enables DNS rebinding → memory poisoning → RCE</title>
+      <link>https://www.patchbrief.org/items/2026-07-pypi-cve-2026-49471.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-pypi-cve-2026-49471.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Serena: Unauthenticated Flask dashboard on fixed port enables DNS rebinding → memory poisoning → RCE</description>
+    </item>
+    <item>
+      <title>`lxml_html_clean.Cleaner` does not strip `javascript:` URLs from namespaced URL attributes</title>
+      <link>https://www.patchbrief.org/items/2026-07-pypi-cve-2026-49825.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-pypi-cve-2026-49825.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <description>`lxml_html_clean.Cleaner` does not strip `javascript:` URLs from namespaced URL attributes</description>
+    </item>
+    <item>
+      <title>VU#849433: Adalo Database API Enables Cross-App User Data Extraction via Over-Fetching and Missing Authorization Cont...</title>
+      <link>https://www.patchbrief.org/items/2026-07-unrestricted-vu-849433.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-unrestricted-vu-849433.html</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Overview Adalo’s no‑code application platform exposes complete user records through its database API for all applications built on both V1 and V2. Due to a platform-level flaw, authenticated users can retrieve full user data belonging to any Adalo application, regardless of configuration. This issue affects more than one million applications and placing developers and their end users at risk of data exposure that they cannot prevent or remediate. Description Adalo is a Software-as-a-Service (SaaS) provider for building no-code applications. In theory, each application or tenant (customer) is logically isolated with separate databases, users, and configurations. CVE-2026-10706 Unrestricted Disclosure of Full User Records The Adalo database API contains a flaw which allows the backend to return complete user records for every list... Related CVEs: CVE-2026-10706, CVE-2026-10708.</description>
+    </item>
     <item>
       <title>Adobe ColdFusion Path Traversal Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-07-adobe-cve-2026-48282.html</link>

@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-08T11:04:57Z",
-  "total_items": 417,
+  "generated": "2026-07-09T12:08:36Z",
+  "total_items": 426,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-08T11:04:57Z",
+    "generated": "2026-07-09T12:08:36Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 4,
-        "started_at": "2026-07-08T11:04:45Z",
-        "finished_at": "2026-07-08T11:04:45Z"
+        "started_at": "2026-07-09T12:08:25Z",
+        "finished_at": "2026-07-09T12:08:25Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-08T11:04:45Z",
-        "finished_at": "2026-07-08T11:04:46Z"
+        "started_at": "2026-07-09T12:08:25Z",
+        "finished_at": "2026-07-09T12:08:25Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 4,
-        "started_at": "2026-07-08T11:04:46Z",
-        "finished_at": "2026-07-08T11:04:53Z"
+        "started_at": "2026-07-09T12:08:25Z",
+        "finished_at": "2026-07-09T12:08:33Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-07-08T11:04:53Z",
-        "finished_at": "2026-07-08T11:04:54Z"
+        "started_at": "2026-07-09T12:08:33Z",
+        "finished_at": "2026-07-09T12:08:34Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-07-08T11:04:54Z",
-        "finished_at": "2026-07-08T11:04:55Z"
+        "items_seen": 3,
+        "started_at": "2026-07-09T12:08:34Z",
+        "finished_at": "2026-07-09T12:08:34Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,328 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-08T11:04:55Z",
-        "finished_at": "2026-07-08T11:04:56Z"
+        "started_at": "2026-07-09T12:08:34Z",
+        "finished_at": "2026-07-09T12:08:35Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 12,
-        "started_at": "2026-07-08T11:04:56Z",
-        "finished_at": "2026-07-08T11:04:56Z"
+        "items_seen": 8,
+        "started_at": "2026-07-09T12:08:35Z",
+        "finished_at": "2026-07-09T12:08:35Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-blocksy-cve-2026-58480",
+      "slug": "2026-07-blocksy-cve-2026-58480",
+      "url": "https://www.patchbrief.org/items/2026-07-blocksy-cve-2026-58480.html",
+      "date": "2026-07-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Blocksy Companion Pro plugin for WordPress — CVE-2026-58480 (Critical)",
+      "summary": "Blocksy Companion Pro plugin for WordPress before 2.1.47 contains an unauthenticated arbitrary file upload vulnerability that allows attackers to upload executable files by bypassing extension validation in the save_attachments function exposed through the Advanced Reviews feature. Attackers can exploit the Custom Fonts extension's flawed strpos() substring check by uploading double-extension filenames such as shell.woff2.php, causing the validation to pass on the substring match while the web server executes the file as PHP, achieving remote code execution.",
+      "vendor": "Blocksy",
+      "product": "Companion Pro plugin for WordPress",
+      "cve": "CVE-2026-58480",
+      "operator_check": "Review CVE-2026-58480 in your asset inventory. Apply patches per vendor guidance and verify Companion Pro plugin for WordPress is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Blocksy Companion Pro plugin for WordPress. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-58480",
+        "vendor-advisory",
+        "blocksy",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-58480",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58480"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://patchstack.com/database/wordpress/plugin/blocksy-companion/vulnerability/wordpress-blocksy-companion-plugin-2-1-46-unauthenticated-arbitrary-file-upload-vulnerability"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://wordpress.org/plugins/blocksy-companion/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-50197",
+      "slug": "2026-07-go-cve-2026-50197",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-50197.html",
+      "date": "2026-07-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Skipper: opaAuthorizeRequestWithBody filter bypasses OPA policy on Transfer-Encoding — chunked / HTTP/2 requests",
+      "summary": "Skipper: opaAuthorizeRequestWithBody filter bypasses OPA policy on Transfer-Encoding — chunked / HTTP/2 requests",
+      "vendor": "Go",
+      "product": "github.com/zalando/skipper",
+      "cve": "CVE-2026-50197",
+      "operator_check": "Check whether github.com/zalando/skipper is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/zalando/skipper. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-50197",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-659f-rgp5-w4wf",
+          "url": "https://github.com/advisories/GHSA-659f-rgp5-w4wf"
+        },
+        {
+          "title": "NVD — CVE-2026-50197",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50197"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zalando/skipper/security/advisories/GHSA-659f-rgp5-w4wf"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-52831",
+      "slug": "2026-07-go-cve-2026-52831",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-52831.html",
+      "date": "2026-07-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nuclio: Unsanitized cron trigger event headers/body injected into CronJob shell command leads to persistent RCE",
+      "summary": "Nuclio: Unsanitized cron trigger event headers/body injected into CronJob shell command leads to persistent RCE",
+      "vendor": "Go",
+      "product": "github.com/nuclio/nuclio",
+      "cve": "CVE-2026-52831",
+      "operator_check": "Check whether github.com/nuclio/nuclio is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/nuclio/nuclio. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-52831",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v5px-423j-pf7p",
+          "url": "https://github.com/advisories/GHSA-v5px-423j-pf7p"
+        },
+        {
+          "title": "NVD — CVE-2026-52831",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52831"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nuclio/nuclio/security/advisories/GHSA-v5px-423j-pf7p"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-53649",
+      "slug": "2026-07-go-cve-2026-53649",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-53649.html",
+      "date": "2026-07-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE",
+      "summary": "Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE",
+      "vendor": "Go",
+      "product": "github.com/BishopFox/joro",
+      "cve": "CVE-2026-53649",
+      "operator_check": "Check whether github.com/BishopFox/joro is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/BishopFox/joro. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-53649",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xqhv-chqm-fhcc",
+          "url": "https://github.com/advisories/GHSA-xqhv-chqm-fhcc"
+        },
+        {
+          "title": "NVD — CVE-2026-53649",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53649"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/BishopFox/joro/security/advisories/GHSA-xqhv-chqm-fhcc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-49464",
+      "slug": "2026-07-maven-cve-2026-49464",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-49464.html",
+      "date": "2026-07-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "NL Portal: IDOR allows any authenticated user to complete and tamper with another user's taak",
+      "summary": "NL Portal: IDOR allows any authenticated user to complete and tamper with another user's taak",
+      "vendor": "Maven",
+      "product": "nl.nl-portal:taak",
+      "cve": "CVE-2026-49464",
+      "operator_check": "Check whether nl.nl-portal:taak is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nl.nl-portal:taak. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-49464",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6h3c-r723-7fx3",
+          "url": "https://github.com/advisories/GHSA-6h3c-r723-7fx3"
+        },
+        {
+          "title": "NVD — CVE-2026-49464",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49464"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nl-portal/nl-portal-backend-libraries/security/advisories/GHSA-6h3c-r723-7fx3"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-49832",
+      "slug": "2026-07-maven-cve-2026-49832",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-49832.html",
+      "date": "2026-07-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "DSpace has possible Remote Code Execution (RCE)  through Velocity Templates used by LDN",
+      "summary": "DSpace has possible Remote Code Execution (RCE) through Velocity Templates used by LDN",
+      "vendor": "Maven",
+      "product": "org.dspace:dspace-api",
+      "cve": "CVE-2026-49832",
+      "operator_check": "Check whether org.dspace:dspace-api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.dspace:dspace-api. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-49832",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9x82-rm84-c6x7",
+          "url": "https://github.com/advisories/GHSA-9x82-rm84-c6x7"
+        },
+        {
+          "title": "NVD — CVE-2026-49832",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49832"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/DSpace/DSpace/security/advisories/GHSA-9x82-rm84-c6x7"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-49471",
+      "slug": "2026-07-pypi-cve-2026-49471",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-49471.html",
+      "date": "2026-07-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Serena: Unauthenticated Flask dashboard on fixed port enables DNS rebinding → memory poisoning → RCE",
+      "summary": "Serena: Unauthenticated Flask dashboard on fixed port enables DNS rebinding → memory poisoning → RCE",
+      "vendor": "PyPI",
+      "product": "serena-agent",
+      "cve": "CVE-2026-49471",
+      "operator_check": "Check whether serena-agent is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for serena-agent. Prioritize it with other application dependency updates, especially because EPSS places it in the 15% percentile.",
+      "tags": [
+        "cve-2026-49471",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-37h2-6p4f-mp3q",
+          "url": "https://github.com/advisories/GHSA-37h2-6p4f-mp3q"
+        },
+        {
+          "title": "NVD — CVE-2026-49471",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49471"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/oraios/serena/security/advisories/GHSA-37h2-6p4f-mp3q"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-49825",
+      "slug": "2026-07-pypi-cve-2026-49825",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-49825.html",
+      "date": "2026-07-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "`lxml_html_clean.Cleaner` does not strip `javascript:` URLs from namespaced URL attributes",
+      "summary": "`lxml_html_clean.Cleaner` does not strip `javascript:` URLs from namespaced URL attributes",
+      "vendor": "PyPI",
+      "product": "lxml_html_clean",
+      "cve": "CVE-2026-49825",
+      "operator_check": "Check whether lxml_html_clean is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for lxml_html_clean. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-49825",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4jhm-jv67-739f",
+          "url": "https://github.com/advisories/GHSA-4jhm-jv67-739f"
+        },
+        {
+          "title": "NVD — CVE-2026-49825",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49825"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fedora-python/lxml_html_clean/security/advisories/GHSA-4jhm-jv67-739f"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-unrestricted-vu-849433",
+      "slug": "2026-07-unrestricted-vu-849433",
+      "url": "https://www.patchbrief.org/items/2026-07-unrestricted-vu-849433.html",
+      "date": "2026-07-08",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#849433: Adalo Database API Enables Cross-App User Data Extraction via Over-Fetching and Missing Authorization Cont...",
+      "summary": "Overview Adalo’s no‑code application platform exposes complete user records through its database API for all applications built on both V1 and V2. Due to a platform-level flaw, authenticated users can retrieve full user data belonging to any Adalo application, regardless of configuration. This issue affects more than one million applications and placing developers and their end users at risk of data exposure that they cannot prevent or remediate. Description Adalo is a Software-as-a-Service (SaaS) provider for building no-code applications. In theory, each application or tenant (customer) is logically isolated with separate databases, users, and configurations. CVE-2026-10706 Unrestricted Disclosure of Full User Records The Adalo database API contains a flaw which allows the backend to return complete user records for every list... Related CVEs: CVE-2026-10706, CVE-2026-10708.",
+      "vendor": "Unrestricted",
+      "product": "Disclosure of Full User Records The Adalo database API",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Disclosure of Full User Records The Adalo database API where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-849433",
+        "coordinated-disclosure",
+        "unrestricted",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#849433",
+          "url": "https://kb.cert.org/vuls/id/849433"
+        }
+      ]
+    },
     {
       "id": "2026-07-adobe-cve-2026-48282",
       "slug": "2026-07-adobe-cve-2026-48282",

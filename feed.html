@@ -240,10 +240,208 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">417 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">426 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Blocksy Companion Pro plugin for WordPress — CVE-2026-58480 (Critical)" data-vendor="Blocksy" data-cve="CVE-2026-58480">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 8, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-58480</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-blocksy-cve-2026-58480.html">Blocksy Companion Pro plugin for WordPress — CVE-2026-58480 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Blocksy · Companion Pro plugin for WordPress</p>
+              <p class="feed-summary">Blocksy Companion Pro plugin for WordPress before 2.1.47 contains an unauthenticated arbitrary file upload vulnerability that allows attackers to upload executable files by bypassing extension validation in the save_attachments function exposed through the Advanced Reviews feature. Attackers can exploit the Custom Fonts extension&#x27;s flawed strpos() substring check by uploading double-extension filenames such as shell.woff2.php, causing the validation to pass on the substring match while the web server executes the file as PHP, achieving remote code execution.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-58480 in your asset inventory. Apply patches per vendor guidance and verify Companion Pro plugin for WordPress is not exposed. CVSS score: 9.8.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58480">NVD — CVE-2026-58480</a><a href="https://patchstack.com/database/wordpress/plugin/blocksy-companion/vulnerability/wordpress-blocksy-companion-plugin-2-1-46-unauthenticated-arbitrary-file-upload-vulnerability">Source reference</a><a href="https://wordpress.org/plugins/blocksy-companion/">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-blocksy-cve-2026-58480.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Skipper: opaAuthorizeRequestWithBody filter bypasses OPA policy on Transfer-Encoding — chunked / HTTP/2 requests" data-vendor="Go" data-cve="CVE-2026-50197">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 8, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-50197</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-go-cve-2026-50197.html">Skipper: opaAuthorizeRequestWithBody filter bypasses OPA policy on Transfer-Encoding — chunked / HTTP/2 requests</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/zalando/skipper</p>
+              <p class="feed-summary">Skipper: opaAuthorizeRequestWithBody filter bypasses OPA policy on Transfer-Encoding — chunked / HTTP/2 requests</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/zalando/skipper is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-659f-rgp5-w4wf">GitHub Advisory GHSA-659f-rgp5-w4wf</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-50197">NVD — CVE-2026-50197</a><a href="https://github.com/zalando/skipper/security/advisories/GHSA-659f-rgp5-w4wf">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-go-cve-2026-50197.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Nuclio: Unsanitized cron trigger event headers/body injected into CronJob shell command leads to persistent RCE" data-vendor="Go" data-cve="CVE-2026-52831">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 8, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-52831</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-go-cve-2026-52831.html">Nuclio: Unsanitized cron trigger event headers/body injected into CronJob shell command leads to persistent RCE</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/nuclio/nuclio</p>
+              <p class="feed-summary">Nuclio: Unsanitized cron trigger event headers/body injected into CronJob shell command leads to persistent RCE</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/nuclio/nuclio is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-v5px-423j-pf7p">GitHub Advisory GHSA-v5px-423j-pf7p</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-52831">NVD — CVE-2026-52831</a><a href="https://github.com/nuclio/nuclio/security/advisories/GHSA-v5px-423j-pf7p">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-go-cve-2026-52831.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE" data-vendor="Go" data-cve="CVE-2026-53649">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 8, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-53649</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-go-cve-2026-53649.html">Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/BishopFox/joro</p>
+              <p class="feed-summary">Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/BishopFox/joro is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-xqhv-chqm-fhcc">GitHub Advisory GHSA-xqhv-chqm-fhcc</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-53649">NVD — CVE-2026-53649</a><a href="https://github.com/BishopFox/joro/security/advisories/GHSA-xqhv-chqm-fhcc">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-go-cve-2026-53649.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="NL Portal: IDOR allows any authenticated user to complete and tamper with another user&#x27;s taak" data-vendor="Maven" data-cve="CVE-2026-49464">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 8, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-49464</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-maven-cve-2026-49464.html">NL Portal: IDOR allows any authenticated user to complete and tamper with another user&#x27;s taak</a>
+              </h2>
+              <p class="feed-vendor">Maven · nl.nl-portal:taak</p>
+              <p class="feed-summary">NL Portal: IDOR allows any authenticated user to complete and tamper with another user&#x27;s taak</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether nl.nl-portal:taak is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-6h3c-r723-7fx3">GitHub Advisory GHSA-6h3c-r723-7fx3</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49464">NVD — CVE-2026-49464</a><a href="https://github.com/nl-portal/nl-portal-backend-libraries/security/advisories/GHSA-6h3c-r723-7fx3">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-maven-cve-2026-49464.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="DSpace has possible Remote Code Execution (RCE)  through Velocity Templates used by LDN" data-vendor="Maven" data-cve="CVE-2026-49832">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 8, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-49832</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-maven-cve-2026-49832.html">DSpace has possible Remote Code Execution (RCE)  through Velocity Templates used by LDN</a>
+              </h2>
+              <p class="feed-vendor">Maven · org.dspace:dspace-api</p>
+              <p class="feed-summary">DSpace has possible Remote Code Execution (RCE) through Velocity Templates used by LDN</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether org.dspace:dspace-api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-9x82-rm84-c6x7">GitHub Advisory GHSA-9x82-rm84-c6x7</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49832">NVD — CVE-2026-49832</a><a href="https://github.com/DSpace/DSpace/security/advisories/GHSA-9x82-rm84-c6x7">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-maven-cve-2026-49832.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Serena: Unauthenticated Flask dashboard on fixed port enables DNS rebinding → memory poisoning → RCE" data-vendor="PyPI" data-cve="CVE-2026-49471">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 8, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-49471</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-pypi-cve-2026-49471.html">Serena: Unauthenticated Flask dashboard on fixed port enables DNS rebinding → memory poisoning → RCE</a>
+              </h2>
+              <p class="feed-vendor">PyPI · serena-agent</p>
+              <p class="feed-summary">Serena: Unauthenticated Flask dashboard on fixed port enables DNS rebinding → memory poisoning → RCE</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether serena-agent is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 15%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-37h2-6p4f-mp3q">GitHub Advisory GHSA-37h2-6p4f-mp3q</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49471">NVD — CVE-2026-49471</a><a href="https://github.com/oraios/serena/security/advisories/GHSA-37h2-6p4f-mp3q">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-pypi-cve-2026-49471.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="`lxml_html_clean.Cleaner` does not strip `javascript:` URLs from namespaced URL attributes" data-vendor="PyPI" data-cve="CVE-2026-49825">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 8, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-49825</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-pypi-cve-2026-49825.html">`lxml_html_clean.Cleaner` does not strip `javascript:` URLs from namespaced URL attributes</a>
+              </h2>
+              <p class="feed-vendor">PyPI · lxml_html_clean</p>
+              <p class="feed-summary">`lxml_html_clean.Cleaner` does not strip `javascript:` URLs from namespaced URL attributes</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether lxml_html_clean is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-4jhm-jv67-739f">GitHub Advisory GHSA-4jhm-jv67-739f</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49825">NVD — CVE-2026-49825</a><a href="https://github.com/fedora-python/lxml_html_clean/security/advisories/GHSA-4jhm-jv67-739f">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-pypi-cve-2026-49825.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#849433: Adalo Database API Enables Cross-App User Data Extraction via Over-Fetching and Missing Authorization Cont..." data-vendor="Unrestricted">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 8, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-unrestricted-vu-849433.html">VU#849433: Adalo Database API Enables Cross-App User Data Extraction via Over-Fetching and Missing Authorization Cont...</a>
+              </h2>
+              <p class="feed-vendor">Unrestricted · Disclosure of Full User Records The Adalo database API</p>
+              <p class="feed-summary">Overview Adalo’s no‑code application platform exposes complete user records through its database API for all applications built on both V1 and V2. Due to a platform-level flaw, authenticated users can retrieve full user data belonging to any Adalo application, regardless of configuration. This issue affects more than one million applications and placing developers and their end users at risk of data exposure that they cannot prevent or remediate. Description Adalo is a Software-as-a-Service (SaaS) provider for building no-code applications. In theory, each application or tenant (customer) is logically isolated with separate databases, users, and configurations. CVE-2026-10706 Unrestricted Disclosure of Full User Records The Adalo database API contains a flaw which allows the backend to return complete user records for every list... Related CVEs: CVE-2026-10706, CVE-2026-10708.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Disclosure of Full User Records The Adalo database API where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/849433">CERT/CC Vulnerability Note VU#849433</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-unrestricted-vu-849433.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Adobe ColdFusion Path Traversal Vulnerability" data-vendor="Adobe" data-cve="CVE-2026-48282">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
