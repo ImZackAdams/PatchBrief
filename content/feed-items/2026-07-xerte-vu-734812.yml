@@ -1,0 +1,37 @@
+id: 2026-07-xerte-vu-734812
+slug: 2026-07-xerte-vu-734812
+external_id: VU-734812
+source: cert_vu
+date: '2026-07-09'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#734812: Xerte Online Toolkit contains an authentication bypass that allows
+  for RCE'
+summary: 'Overview Two vulnerabilities have been discovered in Xerte Online Toolkits,
+  an open-source e-learning authoring toolsuite intended for the creation of learning
+  materials within a web browser. CVE-2026-14261 tracks the persistence of the /setup/
+  directory after installation, which allows an unauthenticated attacker to reconfigure
+  the application to point to a remote database they control in order to gain administrative
+  access. CVE-2026-12116 tracks an editable antivirus binary path that can be redirected
+  to a PHP interpreter, causing uploaded files to be executed as PHP code and resulting
+  in remote code execution (RCE). Version v3.15.5 or v3.14.6 of Xerte Online Toolkits
+  fixes these vulnerabilities. Description Xerte Online Toolkits is a suite of a free,
+  open-source e-learning authoring tools that allows users to make educational...
+  Related CVEs: CVE-2026-12116, CVE-2026-14261.'
+vendor: Xerte
+product: Online Toolkit
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Online Toolkit where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#734812
+  url: https://kb.cert.org/vuls/id/734812
+tags:
+- vu-734812
+- coordinated-disclosure
+- xerte
+- cert-vu
+is_sample: false

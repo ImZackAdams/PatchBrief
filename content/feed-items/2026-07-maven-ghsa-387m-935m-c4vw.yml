@@ -1,0 +1,30 @@
+id: 2026-07-maven-ghsa-387m-935m-c4vw
+slug: 2026-07-maven-ghsa-387m-935m-c4vw
+external_id: GHSA-387m-935m-c4vw
+source: github_advisory
+date: '2026-07-09'
+type: Vendor advisory
+signal: High-risk advisory
+title: Micronaut doesn't set a maximum redirect count for its HTTP Client, enabling
+  infinite loop DoS
+summary: Micronaut doesn't set a maximum redirect count for its HTTP Client, enabling
+  infinite loop DoS
+vendor: Maven
+product: io.micronaut:micronaut-http-client
+cve: null
+operator_check: Check whether io.micronaut:micronaut-http-client is present in application
+  dependency manifests, lockfiles, or build images. Review the GitHub advisory and
+  upgrade to a patched version where available.
+why_it_matters: GitHub has published a reviewed security advisory for io.micronaut:micronaut-http-client.
+  Prioritize it with other application dependency updates.
+sources:
+- title: GitHub Advisory GHSA-387m-935m-c4vw
+  url: https://github.com/advisories/GHSA-387m-935m-c4vw
+- title: Source reference
+  url: https://github.com/micronaut-projects/micronaut-core/security/advisories/GHSA-387m-935m-c4vw
+tags:
+- ghsa-387m-935m-c4vw
+- vendor-advisory
+- maven
+- github-advisory
+is_sample: false

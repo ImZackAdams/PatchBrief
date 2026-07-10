@@ -1,0 +1,36 @@
+id: 2026-07-payrange-vu-152953
+slug: 2026-07-payrange-vu-152953
+external_id: VU-152953
+source: cert_vu
+date: '2026-07-09'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#152953: PayRange Android app version 7.0.7 contains multiple vulnerabilities'
+summary: 'Overview PayRange is a mobile payment app that allows users to pay for vending
+  machines, laundromats, and other unattended machines using a smartphone with Bluetooth.
+  Two vulnerabilities were discovered in version 7.0.7 of the PayRange app that is
+  available in the Google Play store. Description A vulnerability (CVE-2026-13462)
+  exists in the PayRange Android app that causes invalid SSL certificates to be accepted
+  in application WebViews. A second vulnerability (CVE-2026-13461) exists that allows
+  the injection of JavaScript, which can be used to escape the WebView sandbox and
+  perform a number of dangerous actions on the user''s device. These vulnerabilities
+  were discovered in version 7.0.7 of the PayRange app. The PayRange app bypasses
+  Android''s SSL trust chain and accepts certificates that match any of the following
+  rules (including... Related CVEs: CVE-2026-13461, CVE-2026-13462.'
+vendor: PayRange
+product: Android app
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Android app where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#152953
+  url: https://kb.cert.org/vuls/id/152953
+tags:
+- vu-152953
+- coordinated-disclosure
+- payrange
+- cert-vu
+is_sample: false
