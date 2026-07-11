@@ -1,0 +1,36 @@
+id: 2026-07-users-vu-564823
+slug: 2026-07-users-vu-564823
+external_id: VU-564823
+source: cert_vu
+date: '2026-07-10'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#564823: GNU Wget enables SSRF via unvalidated FTP PASV IPs'
+summary: 'Overview GNU Wget, versions 1.25.0 and earlier, contains a server-side request
+  forgery (SSRF) vulnerability in its implementation of FTP passive mode. Because
+  Wget does not properly validate IP addresses obtained from PASV responses, an attacker-controlled
+  FTP endpoint can redirect the client’s connection to arbitrary IPs, potentially
+  exposing internal network host and service responses. This vulnerability has been
+  remediated in a recent update by GNU; see the Solutions section below for resolution
+  guidance. Description GNU Wget is a widely used command-line utility for retrieving
+  content over HTTP, HTTPS, and FTP. When operating over FTP in passive mode, Wget
+  relies on the server’s PASV response to determine which IP address and port to use
+  for the data connection. CVE-2026-15146 GNU Wget does not validate the IP address
+  provided by an... Related CVEs: CVE-2021-40491, CVE-2026-15146.'
+vendor: Users
+product: are advised to update their
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for are advised to update their where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#564823
+  url: https://kb.cert.org/vuls/id/564823
+tags:
+- vu-564823
+- coordinated-disclosure
+- users
+- cert-vu
+is_sample: false
