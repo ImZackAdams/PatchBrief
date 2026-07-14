@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-13T12:28:23Z",
-  "total_items": 487,
+  "generated": "2026-07-14T10:46:37Z",
+  "total_items": 509,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-13T12:28:23Z",
+    "generated": "2026-07-14T10:46:37Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-07-13T12:06:14Z",
-        "finished_at": "2026-07-13T12:06:14Z"
+        "items_seen": 1,
+        "started_at": "2026-07-14T10:46:26Z",
+        "finished_at": "2026-07-14T10:46:27Z"
       },
       {
         "id": "msrc",
@@ -27,35 +27,35 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-13T12:06:14Z",
-        "finished_at": "2026-07-13T12:06:15Z"
+        "started_at": "2026-07-14T10:46:27Z",
+        "finished_at": "2026-07-14T10:46:27Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-07-13T12:06:15Z",
-        "finished_at": "2026-07-13T12:06:22Z"
+        "items_seen": 4,
+        "started_at": "2026-07-14T10:46:27Z",
+        "finished_at": "2026-07-14T10:46:34Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 24,
-        "started_at": "2026-07-13T12:06:22Z",
-        "finished_at": "2026-07-13T12:06:23Z"
+        "items_seen": 17,
+        "started_at": "2026-07-14T10:46:34Z",
+        "finished_at": "2026-07-14T10:46:34Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-07-13T12:06:23Z",
-        "finished_at": "2026-07-13T12:06:25Z"
+        "items_seen": 0,
+        "started_at": "2026-07-14T10:46:34Z",
+        "finished_at": "2026-07-14T10:46:35Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,780 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-13T12:06:25Z",
-        "finished_at": "2026-07-13T12:06:26Z"
+        "started_at": "2026-07-14T10:46:35Z",
+        "finished_at": "2026-07-14T10:46:35Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 17,
-        "started_at": "2026-07-13T12:06:26Z",
-        "finished_at": "2026-07-13T12:06:26Z"
+        "items_seen": 2,
+        "started_at": "2026-07-14T10:46:35Z",
+        "finished_at": "2026-07-14T10:46:35Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-composer-cve-2026-52824",
+      "slug": "2026-07-composer-cve-2026-52824",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-52824.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Kimai: Default APP_SECRET in Docker Image Enables Cookie Forgery and Account Takeover",
+      "summary": "Kimai: Default APP_SECRET in Docker Image Enables Cookie Forgery and Account Takeover",
+      "vendor": "Composer",
+      "product": "kimai/kimai",
+      "cve": "CVE-2026-52824",
+      "operator_check": "Check whether kimai/kimai is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for kimai/kimai. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-52824",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jr9p-4h4j-6c58",
+          "url": "https://github.com/advisories/GHSA-jr9p-4h4j-6c58"
+        },
+        {
+          "title": "NVD — CVE-2026-52824",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52824"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/kimai/kimai/security/advisories/GHSA-jr9p-4h4j-6c58"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-52827",
+      "slug": "2026-07-composer-cve-2026-52827",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-52827.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Kimai: Pre-2FA KIMAI_SESSION cookie grants full authenticated REST API access, bypassing TOTP",
+      "summary": "Kimai: Pre-2FA KIMAI_SESSION cookie grants full authenticated REST API access, bypassing TOTP",
+      "vendor": "Composer",
+      "product": "kimai/kimai",
+      "cve": "CVE-2026-52827",
+      "operator_check": "Check whether kimai/kimai is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for kimai/kimai. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-52827",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v8hx-4vx8-wc96",
+          "url": "https://github.com/advisories/GHSA-v8hx-4vx8-wc96"
+        },
+        {
+          "title": "NVD — CVE-2026-52827",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52827"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/kimai/kimai/security/advisories/GHSA-v8hx-4vx8-wc96"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-cisco-cve-2008-4128",
+      "slug": "2026-07-cisco-cve-2008-4128",
+      "url": "https://www.patchbrief.org/items/2026-07-cisco-cve-2008-4128.html",
+      "date": "2026-07-13",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Cisco IOS Cross-Site Request Forgery Vulnerability",
+      "summary": "Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain \"show privilege\" command to the /level/15/exec/- URI, and (2) a certain \"alias exec\" command to the /level/15/exec/-/configure/http URI.",
+      "vendor": "Cisco",
+      "product": "IOS",
+      "cve": "CVE-2008-4128",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2008-4128 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-16. Treat remediation as urgent.",
+      "tags": [
+        "cve-2008-4128",
+        "kev",
+        "cisco",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2008-4128",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4128"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-47677",
+      "slug": "2026-07-composer-cve-2026-47677",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-47677.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "FacturaScripts: Account takeover of any 2FA-enabled user",
+      "summary": "FacturaScripts: Account takeover of any 2FA-enabled user",
+      "vendor": "Composer",
+      "product": "facturascripts/facturascripts",
+      "cve": "CVE-2026-47677",
+      "operator_check": "Check whether facturascripts/facturascripts is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for facturascripts/facturascripts. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-47677",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c67f-gmxw-mj93",
+          "url": "https://github.com/advisories/GHSA-c67f-gmxw-mj93"
+        },
+        {
+          "title": "NVD — CVE-2026-47677",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47677"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/NeoRazorX/facturascripts/security/advisories/GHSA-c67f-gmxw-mj93"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-48118",
+      "slug": "2026-07-composer-cve-2026-48118",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-48118.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "NukeViet: Unauthenticated Reflected XSS in Comment Module",
+      "summary": "NukeViet: Unauthenticated Reflected XSS in Comment Module",
+      "vendor": "Composer",
+      "product": "nukeviet/nukeviet",
+      "cve": "CVE-2026-48118",
+      "operator_check": "Check whether nukeviet/nukeviet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nukeviet/nukeviet. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-48118",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mxpf-qgg6-v3ff",
+          "url": "https://github.com/advisories/GHSA-mxpf-qgg6-v3ff"
+        },
+        {
+          "title": "NVD — CVE-2026-48118",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48118"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nukeviet/nukeviet/security/advisories/GHSA-mxpf-qgg6-v3ff"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-49259",
+      "slug": "2026-07-composer-cve-2026-49259",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-49259.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "NukeViet: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+      "summary": "NukeViet: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+      "vendor": "Composer",
+      "product": "nukeviet/nukeviet",
+      "cve": "CVE-2026-49259",
+      "operator_check": "Check whether nukeviet/nukeviet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nukeviet/nukeviet. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-49259",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w2w5-w2pw-r929",
+          "url": "https://github.com/advisories/GHSA-w2w5-w2pw-r929"
+        },
+        {
+          "title": "NVD — CVE-2026-49259",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49259"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nukeviet/nukeviet/security/advisories/GHSA-w2w5-w2pw-r929"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-54064",
+      "slug": "2026-07-composer-cve-2026-54064",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-54064.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "NukeViet: Multiple Anti-XSS Filter Bypasses Leading to Stored XSS in News Module",
+      "summary": "NukeViet: Multiple Anti-XSS Filter Bypasses Leading to Stored XSS in News Module",
+      "vendor": "Composer",
+      "product": "nukeviet/nukeviet",
+      "cve": "CVE-2026-54064",
+      "operator_check": "Check whether nukeviet/nukeviet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nukeviet/nukeviet. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54064",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-465g-4q99-5x86",
+          "url": "https://github.com/advisories/GHSA-465g-4q99-5x86"
+        },
+        {
+          "title": "NVD — CVE-2026-54064",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54064"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nukeviet/nukeviet/security/advisories/GHSA-465g-4q99-5x86"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-54065",
+      "slug": "2026-07-composer-cve-2026-54065",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-54065.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "NukeViet: Path Traversal to Arbitrary File Deletion in Edit Comment Function",
+      "summary": "NukeViet: Path Traversal to Arbitrary File Deletion in Edit Comment Function",
+      "vendor": "Composer",
+      "product": "nukeviet/nukeviet",
+      "cve": "CVE-2026-54065",
+      "operator_check": "Check whether nukeviet/nukeviet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nukeviet/nukeviet. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54065",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c9xg-64p9-f2jj",
+          "url": "https://github.com/advisories/GHSA-c9xg-64p9-f2jj"
+        },
+        {
+          "title": "NVD — CVE-2026-54065",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54065"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nukeviet/nukeviet/security/advisories/GHSA-c9xg-64p9-f2jj"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-55372",
+      "slug": "2026-07-composer-cve-2026-55372",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-55372.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "NukeViet: Pre-authentication SSRF via X-Forwarded-Host",
+      "summary": "NukeViet: Pre-authentication SSRF via X-Forwarded-Host",
+      "vendor": "Composer",
+      "product": "nukeviet/nukeviet",
+      "cve": "CVE-2026-55372",
+      "operator_check": "Check whether nukeviet/nukeviet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nukeviet/nukeviet. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55372",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4chg-4752-w88r",
+          "url": "https://github.com/advisories/GHSA-4chg-4752-w88r"
+        },
+        {
+          "title": "NVD — CVE-2026-55372",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55372"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nukeviet/nukeviet/security/advisories/GHSA-4chg-4752-w88r"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-fossies-cve-2026-40468",
+      "slug": "2026-07-fossies-cve-2026-40468",
+      "url": "https://www.patchbrief.org/items/2026-07-fossies-cve-2026-40468.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Fossies Gawk — CVE-2026-40468 (Critical)",
+      "summary": "Integer overflow vulnerability has been found in \"builtin.c\" program file of gawk. This issue may lead to memory exhaustion on the hosting operating system and could be used to overwrite gawk heap metadata and objects with attacker-controlled bytes. It affects gawk in versions 5.4.0 and below.",
+      "vendor": "Fossies",
+      "product": "Gawk",
+      "cve": "CVE-2026-40468",
+      "operator_check": "Review CVE-2026-40468 in your asset inventory. Apply patches per vendor guidance and verify Gawk is not exposed. CVSS score: 9.1.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Fossies Gawk. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-40468",
+        "vendor-advisory",
+        "fossies",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-40468",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40468"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://cert.pl/en/posts/2026/07/CVE-2026-40467"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=062f2f2581b991362c046f7f2e238ffa34e6f8c7"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-fossies-cve-2026-40469",
+      "slug": "2026-07-fossies-cve-2026-40469",
+      "url": "https://www.patchbrief.org/items/2026-07-fossies-cve-2026-40469.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Fossies Gawk — CVE-2026-40469 (Critical)",
+      "summary": "Integer overflow vulnerability has been found in \"builtin.c\" program file of gawk (do_sub() routine). This issue could be used to overwrite gawk heap metadata and objects causing the program to crash. It affects 32-bit builds of gawk in versions 5.4.0 and below.",
+      "vendor": "Fossies",
+      "product": "Gawk",
+      "cve": "CVE-2026-40469",
+      "operator_check": "Review CVE-2026-40469 in your asset inventory. Apply patches per vendor guidance and verify Gawk is not exposed. CVSS score: 9.1.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Fossies Gawk. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-40469",
+        "vendor-advisory",
+        "fossies",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-40469",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40469"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://cert.pl/en/posts/2026/07/CVE-2026-40467"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=ae1b2d508f46913269a9e62aceda3636afe8147b"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-59954",
+      "slug": "2026-07-maven-cve-2026-59954",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-59954.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Apollo ConfigService access key authentication bypass via appId parsing and non-canonical matching",
+      "summary": "Apollo ConfigService access key authentication bypass via appId parsing and non-canonical matching",
+      "vendor": "Maven",
+      "product": "com.ctrip.framework.apollo:apollo",
+      "cve": "CVE-2026-59954",
+      "operator_check": "Check whether com.ctrip.framework.apollo:apollo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for com.ctrip.framework.apollo:apollo. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-59954",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4w3q-qpfq-v992",
+          "url": "https://github.com/advisories/GHSA-4w3q-qpfq-v992"
+        },
+        {
+          "title": "NVD — CVE-2026-59954",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59954"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/apolloconfig/apollo/security/advisories/GHSA-4w3q-qpfq-v992"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-59955",
+      "slug": "2026-07-maven-cve-2026-59955",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-59955.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Apollo ConfigService access key authentication bypass via raw config file appId parsing",
+      "summary": "Apollo ConfigService access key authentication bypass via raw config file appId parsing",
+      "vendor": "Maven",
+      "product": "com.ctrip.framework.apollo:apollo",
+      "cve": "CVE-2026-59955",
+      "operator_check": "Check whether com.ctrip.framework.apollo:apollo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for com.ctrip.framework.apollo:apollo. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-59955",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h4pc-58cc-hc95",
+          "url": "https://github.com/advisories/GHSA-h4pc-58cc-hc95"
+        },
+        {
+          "title": "NVD — CVE-2026-59955",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59955"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/apolloconfig/apollo/security/advisories/GHSA-h4pc-58cc-hc95"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-45579",
+      "slug": "2026-07-pypi-cve-2026-45579",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-45579.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "DIRAC is vulnerable to RCE in RequestManager due to eval on untrusted input",
+      "summary": "DIRAC is vulnerable to RCE in RequestManager due to eval on untrusted input",
+      "vendor": "PyPI",
+      "product": "DIRAC",
+      "cve": "CVE-2026-45579",
+      "operator_check": "Check whether DIRAC is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for DIRAC. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45579",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9jpv-c7p4-997x",
+          "url": "https://github.com/advisories/GHSA-9jpv-c7p4-997x"
+        },
+        {
+          "title": "NVD — CVE-2026-45579",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45579"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/DIRACGrid/DIRAC/security/advisories/GHSA-9jpv-c7p4-997x"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-61667",
+      "slug": "2026-07-pypi-cve-2026-61667",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-61667.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "DIRAC is vulnerable to RCE in FileCatalog DatasetManager via SQL injection + eval",
+      "summary": "DIRAC is vulnerable to RCE in FileCatalog DatasetManager via SQL injection + eval",
+      "vendor": "PyPI",
+      "product": "DIRAC",
+      "cve": "CVE-2026-61667",
+      "operator_check": "Check whether DIRAC is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for DIRAC. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61667",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m4m7-4cw8-62j6",
+          "url": "https://github.com/advisories/GHSA-m4m7-4cw8-62j6"
+        },
+        {
+          "title": "NVD — CVE-2026-61667",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61667"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/DIRACGrid/DIRAC/security/advisories/GHSA-m4m7-4cw8-62j6"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-61668",
+      "slug": "2026-07-pypi-cve-2026-61668",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-61668.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "DIRAC: Pilot code downloaded over unverified HTTPS connection",
+      "summary": "DIRAC: Pilot code downloaded over unverified HTTPS connection",
+      "vendor": "PyPI",
+      "product": "DIRAC",
+      "cve": "CVE-2026-61668",
+      "operator_check": "Check whether DIRAC is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for DIRAC. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61668",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vg99-gr89-qhw9",
+          "url": "https://github.com/advisories/GHSA-vg99-gr89-qhw9"
+        },
+        {
+          "title": "NVD — CVE-2026-61668",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61668"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/DIRACGrid/DIRAC/security/advisories/GHSA-vg99-gr89-qhw9"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-ghsa-7xw9-549r-8jrc",
+      "slug": "2026-07-pypi-ghsa-7xw9-549r-8jrc",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-ghsa-7xw9-549r-8jrc.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "DIRAC: SQL injection and lack of access control in PilotManager service",
+      "summary": "DIRAC: SQL injection and lack of access control in PilotManager service",
+      "vendor": "PyPI",
+      "product": "DIRAC",
+      "cve": null,
+      "operator_check": "Check whether DIRAC is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for DIRAC. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-7xw9-549r-8jrc",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7xw9-549r-8jrc",
+          "url": "https://github.com/advisories/GHSA-7xw9-549r-8jrc"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/DIRACGrid/DIRAC/security/advisories/GHSA-7xw9-549r-8jrc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-ghsa-xf7x-x43h-rpqh",
+      "slug": "2026-07-pypi-ghsa-xf7x-x43h-rpqh",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-ghsa-xf7x-x43h-rpqh.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "json_repair: Circular JSON Schema `$ref` causes unbounded CPU DoS",
+      "summary": "json_repair: Circular JSON Schema `$ref` causes unbounded CPU DoS",
+      "vendor": "PyPI",
+      "product": "json-repair",
+      "cve": null,
+      "operator_check": "Check whether json-repair is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for json-repair. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-xf7x-x43h-rpqh",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xf7x-x43h-rpqh",
+          "url": "https://github.com/advisories/GHSA-xf7x-x43h-rpqh"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mangiucugna/json_repair/security/advisories/GHSA-xf7x-x43h-rpqh"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-rubygems-cve-2026-45378",
+      "slug": "2026-07-rubygems-cve-2026-45378",
+      "url": "https://www.patchbrief.org/items/2026-07-rubygems-cve-2026-45378.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Decidim: Verification documents can be downloaded through reusable links",
+      "summary": "Decidim: Verification documents can be downloaded through reusable links",
+      "vendor": "RubyGems",
+      "product": "decidim-verifications",
+      "cve": "CVE-2026-45378",
+      "operator_check": "Check whether decidim-verifications is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for decidim-verifications. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45378",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3mvf-82qp-8qh5",
+          "url": "https://github.com/advisories/GHSA-3mvf-82qp-8qh5"
+        },
+        {
+          "title": "NVD — CVE-2026-45378",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45378"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/decidim/decidim/security/advisories/GHSA-3mvf-82qp-8qh5"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-rubygems-cve-2026-45414",
+      "slug": "2026-07-rubygems-cve-2026-45414",
+      "url": "https://www.patchbrief.org/items/2026-07-rubygems-cve-2026-45414.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Decidim: JWT-backed authentication can be replayed across organizations",
+      "summary": "Decidim: JWT-backed authentication can be replayed across organizations",
+      "vendor": "RubyGems",
+      "product": "decidim",
+      "cve": "CVE-2026-45414",
+      "operator_check": "Check whether decidim is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for decidim. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45414",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r3v7-5x4c-c69q",
+          "url": "https://github.com/advisories/GHSA-r3v7-5x4c-c69q"
+        },
+        {
+          "title": "NVD — CVE-2026-45414",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45414"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/decidim/decidim/security/advisories/GHSA-r3v7-5x4c-c69q"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-vitec-cve-2026-61498",
+      "slug": "2026-07-vitec-cve-2026-61498",
+      "url": "https://www.patchbrief.org/items/2026-07-vitec-cve-2026-61498.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Vitec Flamingo 4.12.2 — CVE-2026-61498 (Critical)",
+      "summary": "Vitec Flamingo 4.12.2 contains an unauthenticated OS command injection vulnerability in the admin/ajax/gen_graphs.php endpoint that allows remote unauthenticated attackers to execute arbitrary commands by supplying shell metacharacters in the start, end, key, or format HTTP GET parameters. Attackers can exploit the lack of input sanitization in the graph generation script, which passes user-supplied values directly to shell commands via passthru(), to execute arbitrary OS commands with root privileges due to the web server context having passwordless sudo access.",
+      "vendor": "Vitec",
+      "product": "Flamingo 4.12.2",
+      "cve": "CVE-2026-61498",
+      "operator_check": "Review CVE-2026-61498 in your asset inventory. Apply patches per vendor guidance and verify Flamingo 4.12.2 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Vitec Flamingo 4.12.2. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-61498",
+        "vendor-advisory",
+        "vitec",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-61498",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61498"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://damiri.fr/en/cve/CVE-2026-61498"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vitec.com/solutions/iptv-distribution"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-imagemagick-cve-2026-56372",
+      "slug": "2026-07-imagemagick-cve-2026-56372",
+      "url": "https://www.patchbrief.org/items/2026-07-imagemagick-cve-2026-56372.html",
+      "date": "2026-07-11",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Imagemagick Imagemagick — CVE-2026-56372 (Critical)",
+      "summary": "ImageMagick before 7.1.2-19 contains a heap buffer overflow vulnerability in the magnify operation that allows attackers to read out of bounds memory. An unrecognized magnify:method value triggers an out of bounds read, potentially exposing sensitive information or causing denial of service.",
+      "vendor": "Imagemagick",
+      "product": "Imagemagick",
+      "cve": "CVE-2026-56372",
+      "operator_check": "Review CVE-2026-56372 in your asset inventory. Apply patches per vendor guidance and verify Imagemagick is not exposed. CVSS score: 3.3. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 3.3) in Imagemagick Imagemagick. Patch or mitigate promptly. EPSS percentile: 2%.",
+      "tags": [
+        "cve-2026-56372",
+        "vendor-advisory",
+        "imagemagick",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-56372",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56372"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-8vfj-q2cp-5m5j"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/imagemagick-heap-buffer-overflow-read-via-unrecognized-magnify-method"
+        }
+      ]
+    },
     {
       "id": "2026-07-balbooa-cve-2026-56291",
       "slug": "2026-07-balbooa-cve-2026-56291",
