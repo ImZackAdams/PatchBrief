@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-14T10:46:37Z",
-  "total_items": 509,
+  "generated": "2026-07-15T10:50:09Z",
+  "total_items": 564,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-14T10:46:37Z",
+    "generated": "2026-07-15T10:50:09Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,36 +17,36 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-07-14T10:46:26Z",
-        "finished_at": "2026-07-14T10:46:27Z"
+        "items_seen": 5,
+        "started_at": "2026-07-15T10:49:57Z",
+        "finished_at": "2026-07-15T10:49:57Z"
       },
       {
         "id": "msrc",
         "label": "Microsoft Security Update Guide",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-07-14T10:46:27Z",
-        "finished_at": "2026-07-14T10:46:27Z"
+        "items_seen": 25,
+        "started_at": "2026-07-15T10:49:57Z",
+        "finished_at": "2026-07-15T10:49:59Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-07-14T10:46:27Z",
-        "finished_at": "2026-07-14T10:46:34Z"
+        "items_seen": 8,
+        "started_at": "2026-07-15T10:49:59Z",
+        "finished_at": "2026-07-15T10:50:06Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 17,
-        "started_at": "2026-07-14T10:46:34Z",
-        "finished_at": "2026-07-14T10:46:34Z"
+        "items_seen": 30,
+        "started_at": "2026-07-15T10:50:06Z",
+        "finished_at": "2026-07-15T10:50:06Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-14T10:46:34Z",
-        "finished_at": "2026-07-14T10:46:35Z"
+        "started_at": "2026-07-15T10:50:06Z",
+        "finished_at": "2026-07-15T10:50:07Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,231 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-14T10:46:35Z",
-        "finished_at": "2026-07-14T10:46:35Z"
+        "started_at": "2026-07-15T10:50:07Z",
+        "finished_at": "2026-07-15T10:50:07Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-07-14T10:46:35Z",
-        "finished_at": "2026-07-14T10:46:35Z"
+        "items_seen": 23,
+        "started_at": "2026-07-15T10:50:07Z",
+        "finished_at": "2026-07-15T10:50:07Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-apache-cve-2026-58319",
+      "slug": "2026-07-apache-cve-2026-58319",
+      "url": "https://www.patchbrief.org/items/2026-07-apache-cve-2026-58319.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Doris — CVE-2026-58319 (Critical)",
+      "summary": "Certain Apache Doris FE HTTP REST administrative APIs were accessible without proper authentication. An unauthenticated attacker with network access to the FE HTTP service could perform unauthorized administrative operations, potentially affecting cluster integrity and availability and leading to cluster instability or denial of service. This issue affects Apache Doris versions prior to 3.1.0. Users are advised to upgrade to Apache Doris 3.1.0 or later.",
+      "vendor": "Apache",
+      "product": "Doris",
+      "cve": "CVE-2026-58319",
+      "operator_check": "Review CVE-2026-58319 in your asset inventory. Apply patches per vendor guidance and verify Doris is not exposed. CVSS score: 9.1. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Apache Doris. Patch or mitigate promptly. EPSS percentile: 17%.",
+      "tags": [
+        "cve-2026-58319",
+        "vendor-advisory",
+        "apache",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-58319",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58319"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/cob5mxkyr1k81o8v91hox2hld6zh25b4"
+        },
+        {
+          "title": "Source reference",
+          "url": "http://www.openwall.com/lists/oss-security/2026/07/14/3"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-apache-cve-2026-62390",
+      "slug": "2026-07-apache-cve-2026-62390",
+      "url": "https://www.patchbrief.org/items/2026-07-apache-cve-2026-62390.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Kylin — CVE-2026-62390 (Critical)",
+      "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Apache Kylin. A backend API refreshing table catalog may cause the injection to the generated SQL. This issue affects Apache Kylin: from 4 through 5.0.3. Users are recommended to upgrade to version 5.0.4, which fixes the issue.",
+      "vendor": "Apache",
+      "product": "Kylin",
+      "cve": "CVE-2026-62390",
+      "operator_check": "Review CVE-2026-62390 in your asset inventory. Apply patches per vendor guidance and verify Kylin is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Apache Kylin. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-62390",
+        "vendor-advisory",
+        "apache",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-62390",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62390"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/zdrj93txvdjj07f88s43d2pcg2gomvjc"
+        },
+        {
+          "title": "Source reference",
+          "url": "http://www.openwall.com/lists/oss-security/2026/07/14/4"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-apache-cve-2026-62392",
+      "slug": "2026-07-apache-cve-2026-62392",
+      "url": "https://www.patchbrief.org/items/2026-07-apache-cve-2026-62392.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Kylin — CVE-2026-62392 (Critical)",
+      "summary": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Apache Kylin. A backend API may bring job config parameters to OS command line. This issue affects Apache Kylin: from 4 through 5.0.3. Users are recommended to upgrade to version 5.0.4, which fixes the issue.",
+      "vendor": "Apache",
+      "product": "Kylin",
+      "cve": "CVE-2026-62392",
+      "operator_check": "Review CVE-2026-62392 in your asset inventory. Apply patches per vendor guidance and verify Kylin is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Apache Kylin. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-62392",
+        "vendor-advisory",
+        "apache",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-62392",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62392"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/9hof8lxo3mzshsh5r77mskzqlkns09gn"
+        },
+        {
+          "title": "Source reference",
+          "url": "http://www.openwall.com/lists/oss-security/2026/07/14/5"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-45262",
+      "slug": "2026-07-composer-cve-2026-45262",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-45262.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "FacturaScripts: Authenticated SQL injection in the FacturaScripts REST API filter parameter via parenthesis bypass in...",
+      "summary": "FacturaScripts: Authenticated SQL injection in the FacturaScripts REST API filter parameter via parenthesis bypass in `Where::sqlColumn`",
+      "vendor": "Composer",
+      "product": "facturascripts/facturascripts",
+      "cve": "CVE-2026-45262",
+      "operator_check": "Check whether facturascripts/facturascripts is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for facturascripts/facturascripts. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45262",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5qmh-x653-g8qj",
+          "url": "https://github.com/advisories/GHSA-5qmh-x653-g8qj"
+        },
+        {
+          "title": "NVD — CVE-2026-45262",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45262"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/NeoRazorX/facturascripts/security/advisories/GHSA-5qmh-x653-g8qj"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-45263",
+      "slug": "2026-07-composer-cve-2026-45263",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-45263.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "FacturaScripts: CSV formula injection in CSVExport allows authenticated low-priv users to plant payloads that execute...",
+      "summary": "FacturaScripts: CSV formula injection in CSVExport allows authenticated low-priv users to plant payloads that execute when an admin opens the export",
+      "vendor": "Composer",
+      "product": "facturascripts/facturascripts",
+      "cve": "CVE-2026-45263",
+      "operator_check": "Check whether facturascripts/facturascripts is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for facturascripts/facturascripts. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45263",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2p5x-4jr6-x5jg",
+          "url": "https://github.com/advisories/GHSA-2p5x-4jr6-x5jg"
+        },
+        {
+          "title": "NVD — CVE-2026-45263",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45263"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/NeoRazorX/facturascripts/security/advisories/GHSA-2p5x-4jr6-x5jg"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-45693",
+      "slug": "2026-07-composer-cve-2026-45693",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-45693.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "FacturaScripts: Unauthenticated Path Traversal in Static File Controllers Reads Private MyFiles Documents",
+      "summary": "FacturaScripts: Unauthenticated Path Traversal in Static File Controllers Reads Private MyFiles Documents",
+      "vendor": "Composer",
+      "product": "facturascripts/facturascripts",
+      "cve": "CVE-2026-45693",
+      "operator_check": "Check whether facturascripts/facturascripts is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for facturascripts/facturascripts. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45693",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cv65-7cg8-r623",
+          "url": "https://github.com/advisories/GHSA-cv65-7cg8-r623"
+        },
+        {
+          "title": "NVD — CVE-2026-45693",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45693"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/NeoRazorX/facturascripts/security/advisories/GHSA-cv65-7cg8-r623"
+        }
+      ]
+    },
     {
       "id": "2026-07-composer-cve-2026-52824",
       "slug": "2026-07-composer-cve-2026-52824",
@@ -145,6 +355,1599 @@
         {
           "title": "Source reference",
           "url": "https://github.com/kimai/kimai/security/advisories/GHSA-v8hx-4vx8-wc96"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-54087",
+      "slug": "2026-07-composer-cve-2026-54087",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-54087.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "EasyAdmin: Stored Cross-Site Scripting (XSS) via uploaded files served inline in FileField and ImageField",
+      "summary": "EasyAdmin: Stored Cross-Site Scripting (XSS) via uploaded files served inline in FileField and ImageField",
+      "vendor": "Composer",
+      "product": "easycorp/easyadmin-bundle",
+      "cve": "CVE-2026-54087",
+      "operator_check": "Check whether easycorp/easyadmin-bundle is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for easycorp/easyadmin-bundle. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54087",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8559-gwj3-q37r",
+          "url": "https://github.com/advisories/GHSA-8559-gwj3-q37r"
+        },
+        {
+          "title": "NVD — CVE-2026-54087",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54087"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/EasyCorp/EasyAdminBundle/security/advisories/GHSA-8559-gwj3-q37r"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-ghsa-hgjx-r89m-m7v4",
+      "slug": "2026-07-composer-ghsa-hgjx-r89m-m7v4",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-ghsa-hgjx-r89m-m7v4.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "FacturaScripts: Path traversal in UploadedFile::move() via getClientOriginalName() — arbitrary file write outside MyF...",
+      "summary": "FacturaScripts: Path traversal in UploadedFile::move() via getClientOriginalName() — arbitrary file write outside MyFiles/ leading to RCE",
+      "vendor": "Composer",
+      "product": "facturascripts/facturascripts",
+      "cve": null,
+      "operator_check": "Check whether facturascripts/facturascripts is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for facturascripts/facturascripts. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-hgjx-r89m-m7v4",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hgjx-r89m-m7v4",
+          "url": "https://github.com/advisories/GHSA-hgjx-r89m-m7v4"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/NeoRazorX/facturascripts/security/advisories/GHSA-hgjx-r89m-m7v4"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-44300",
+      "slug": "2026-07-go-cve-2026-44300",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-44300.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenCost ServiceKey Endpoint Unauthorized Credential Overwrite/Injection",
+      "summary": "OpenCost ServiceKey Endpoint Unauthorized Credential Overwrite/Injection",
+      "vendor": "Go",
+      "product": "github.com/opencost/opencost",
+      "cve": "CVE-2026-44300",
+      "operator_check": "Check whether github.com/opencost/opencost is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/opencost/opencost. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-44300",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wmj8-9953-vff5",
+          "url": "https://github.com/advisories/GHSA-wmj8-9953-vff5"
+        },
+        {
+          "title": "NVD — CVE-2026-44300",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44300"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/opencost/opencost/security/advisories/GHSA-wmj8-9953-vff5"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-50006",
+      "slug": "2026-07-go-cve-2026-50006",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-50006.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Anyquery: Arbitrary File Write (AFW) which could lead to Remote Code Execution (RCE) via Unrestricted ATTACH DATABASE...",
+      "summary": "Anyquery: Arbitrary File Write (AFW) which could lead to Remote Code Execution (RCE) via Unrestricted ATTACH DATABASE in Server Mode",
+      "vendor": "Go",
+      "product": "github.com/julien040/anyquery",
+      "cve": "CVE-2026-50006",
+      "operator_check": "Check whether github.com/julien040/anyquery is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/julien040/anyquery. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-50006",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xrcf-6jh3-ggvx",
+          "url": "https://github.com/advisories/GHSA-xrcf-6jh3-ggvx"
+        },
+        {
+          "title": "NVD — CVE-2026-50006",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50006"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/julien040/anyquery/security/advisories/GHSA-xrcf-6jh3-ggvx"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-50013",
+      "slug": "2026-07-go-cve-2026-50013",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-50013.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Hoverfly: Process Crash via Concurrent Map Write Race Condition in Diff Mode",
+      "summary": "Hoverfly: Process Crash via Concurrent Map Write Race Condition in Diff Mode",
+      "vendor": "Go",
+      "product": "github.com/SpectoLabs/hoverfly",
+      "cve": "CVE-2026-50013",
+      "operator_check": "Check whether github.com/SpectoLabs/hoverfly is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/SpectoLabs/hoverfly. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-50013",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qrh4-p6v4-mrfg",
+          "url": "https://github.com/advisories/GHSA-qrh4-p6v4-mrfg"
+        },
+        {
+          "title": "NVD — CVE-2026-50013",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50013"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SpectoLabs/hoverfly/security/advisories/GHSA-qrh4-p6v4-mrfg"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-50125",
+      "slug": "2026-07-go-cve-2026-50125",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-50125.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MKP: Unbounded Pod Log Read via Attacker-Controlled `limitBytes`/`tailLines` Causes Memory Exhaustion",
+      "summary": "MKP: Unbounded Pod Log Read via Attacker-Controlled `limitBytes`/`tailLines` Causes Memory Exhaustion",
+      "vendor": "Go",
+      "product": "github.com/StacklokLabs/mkp",
+      "cve": "CVE-2026-50125",
+      "operator_check": "Check whether github.com/StacklokLabs/mkp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/StacklokLabs/mkp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-50125",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qw5r-ppcg-f8rj",
+          "url": "https://github.com/advisories/GHSA-qw5r-ppcg-f8rj"
+        },
+        {
+          "title": "NVD — CVE-2026-50125",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50125"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/StacklokLabs/mkp/security/advisories/GHSA-qw5r-ppcg-f8rj"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-50141",
+      "slug": "2026-07-go-cve-2026-50141",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-50141.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Woodpecker gRPC agent_id metadata can be spoofed- cross-tenant agent impersonation",
+      "summary": "Woodpecker gRPC agent_id metadata can be spoofed- cross-tenant agent impersonation",
+      "vendor": "Go",
+      "product": "go.woodpecker-ci.org/woodpecker/v3",
+      "cve": "CVE-2026-50141",
+      "operator_check": "Check whether go.woodpecker-ci.org/woodpecker/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for go.woodpecker-ci.org/woodpecker/v3. Prioritize it with other application dependency updates, especially because EPSS places it in the 16% percentile.",
+      "tags": [
+        "cve-2026-50141",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g7mm-9vx7-jm7h",
+          "url": "https://github.com/advisories/GHSA-g7mm-9vx7-jm7h"
+        },
+        {
+          "title": "NVD — CVE-2026-50141",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50141"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/woodpecker-ci/woodpecker/security/advisories/GHSA-g7mm-9vx7-jm7h"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-50158",
+      "slug": "2026-07-go-cve-2026-50158",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-50158.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "yutu: Arbitrary File Write via MCP `caption-download` Tool",
+      "summary": "yutu: Arbitrary File Write via MCP `caption-download` Tool",
+      "vendor": "Go",
+      "product": "github.com/eat-pray-ai/yutu",
+      "cve": "CVE-2026-50158",
+      "operator_check": "Check whether github.com/eat-pray-ai/yutu is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/eat-pray-ai/yutu. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-50158",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2c7f-fxww-6w6c",
+          "url": "https://github.com/advisories/GHSA-2c7f-fxww-6w6c"
+        },
+        {
+          "title": "NVD — CVE-2026-50158",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50158"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/eat-pray-ai/yutu/security/advisories/GHSA-2c7f-fxww-6w6c"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-53603",
+      "slug": "2026-07-go-cve-2026-53603",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-53603.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "nebula-mesh: Operator session tokens stored in plaintext in the database",
+      "summary": "nebula-mesh: Operator session tokens stored in plaintext in the database",
+      "vendor": "Go",
+      "product": "github.com/forgekeep/nebula-mesh",
+      "cve": "CVE-2026-53603",
+      "operator_check": "Check whether github.com/forgekeep/nebula-mesh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/forgekeep/nebula-mesh. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-53603",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q4vm-pq3q-8wgq",
+          "url": "https://github.com/advisories/GHSA-q4vm-pq3q-8wgq"
+        },
+        {
+          "title": "NVD — CVE-2026-53603",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53603"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/forgekeep/nebula-mesh/security/advisories/GHSA-q4vm-pq3q-8wgq"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-53604",
+      "slug": "2026-07-go-cve-2026-53604",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-53604.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "nebula-mesh: CA private key not zeroized on web mobile-bundle error paths",
+      "summary": "nebula-mesh: CA private key not zeroized on web mobile-bundle error paths",
+      "vendor": "Go",
+      "product": "github.com/forgekeep/nebula-mesh",
+      "cve": "CVE-2026-53604",
+      "operator_check": "Check whether github.com/forgekeep/nebula-mesh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/forgekeep/nebula-mesh. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-53604",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2p2f-px33-4vv5",
+          "url": "https://github.com/advisories/GHSA-2p2f-px33-4vv5"
+        },
+        {
+          "title": "NVD — CVE-2026-53604",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53604"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/forgekeep/nebula-mesh/security/advisories/GHSA-2p2f-px33-4vv5"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-54448",
+      "slug": "2026-07-go-cve-2026-54448",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-54448.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Trivy: Helm chart tar bomb causes OOM via unbounded io.ReadAll in parser",
+      "summary": "Trivy: Helm chart tar bomb causes OOM via unbounded io.ReadAll in parser",
+      "vendor": "Go",
+      "product": "github.com/aquasecurity/trivy",
+      "cve": "CVE-2026-54448",
+      "operator_check": "Check whether github.com/aquasecurity/trivy is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/aquasecurity/trivy. Prioritize it with other application dependency updates, especially because EPSS places it in the 16% percentile.",
+      "tags": [
+        "cve-2026-54448",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q3fv-x8vg-qqm4",
+          "url": "https://github.com/advisories/GHSA-q3fv-x8vg-qqm4"
+        },
+        {
+          "title": "NVD — CVE-2026-54448",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54448"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-q3fv-x8vg-qqm4"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-54628",
+      "slug": "2026-07-go-cve-2026-54628",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-54628.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Anyquery: Server-Side Request Forgery (SSRF) via Unrestricted SQLite Virtual Table Modules in Server Mode",
+      "summary": "Anyquery: Server-Side Request Forgery (SSRF) via Unrestricted SQLite Virtual Table Modules in Server Mode",
+      "vendor": "Go",
+      "product": "github.com/julien040/anyquery",
+      "cve": "CVE-2026-54628",
+      "operator_check": "Check whether github.com/julien040/anyquery is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/julien040/anyquery. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54628",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hwrq-8wxh-q4xv",
+          "url": "https://github.com/advisories/GHSA-hwrq-8wxh-q4xv"
+        },
+        {
+          "title": "NVD — CVE-2026-54628",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54628"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/julien040/anyquery/security/advisories/GHSA-hwrq-8wxh-q4xv"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-54629",
+      "slug": "2026-07-go-cve-2026-54629",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-54629.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Anyquery: Local File Read (LFR) via Unrestricted SQLite Virtual Table Modules in Server Mode",
+      "summary": "Anyquery: Local File Read (LFR) via Unrestricted SQLite Virtual Table Modules in Server Mode",
+      "vendor": "Go",
+      "product": "github.com/julien040/anyquery",
+      "cve": "CVE-2026-54629",
+      "operator_check": "Check whether github.com/julien040/anyquery is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/julien040/anyquery. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54629",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mf78-3rpf-r784",
+          "url": "https://github.com/advisories/GHSA-mf78-3rpf-r784"
+        },
+        {
+          "title": "NVD — CVE-2026-54629",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54629"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/julien040/anyquery/security/advisories/GHSA-mf78-3rpf-r784"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-61549",
+      "slug": "2026-07-go-cve-2026-61549",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-61549.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Woodpecker: Privilege escalation via unrestricted serviceAccountName in the Kubernetes backend",
+      "summary": "Woodpecker: Privilege escalation via unrestricted serviceAccountName in the Kubernetes backend",
+      "vendor": "Go",
+      "product": "go.woodpecker-ci.org/woodpecker/v3",
+      "cve": "CVE-2026-61549",
+      "operator_check": "Check whether go.woodpecker-ci.org/woodpecker/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for go.woodpecker-ci.org/woodpecker/v3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61549",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qf34-295c-26v8",
+          "url": "https://github.com/advisories/GHSA-qf34-295c-26v8"
+        },
+        {
+          "title": "NVD — CVE-2026-61549",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61549"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/woodpecker-ci/woodpecker/security/advisories/GHSA-qf34-295c-26v8"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-61699",
+      "slug": "2026-07-go-cve-2026-61699",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-61699.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "nebula-mesh: Certificate revocation is never enforced at the mesh",
+      "summary": "nebula-mesh: Certificate revocation is never enforced at the mesh",
+      "vendor": "Go",
+      "product": "github.com/forgekeep/nebula-mesh",
+      "cve": "CVE-2026-61699",
+      "operator_check": "Check whether github.com/forgekeep/nebula-mesh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/forgekeep/nebula-mesh. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61699",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cm26-5974-52h8",
+          "url": "https://github.com/advisories/GHSA-cm26-5974-52h8"
+        },
+        {
+          "title": "NVD — CVE-2026-61699",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61699"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/forgekeep/nebula-mesh/security/advisories/GHSA-cm26-5974-52h8"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-ghsa-7rx3-5wx3-5v76",
+      "slug": "2026-07-go-ghsa-7rx3-5wx3-5v76",
+      "url": "https://www.patchbrief.org/items/2026-07-go-ghsa-7rx3-5wx3-5v76.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nebula-mesh allows non-admin operators to disable webhook SSRF protection via `allow_private`",
+      "summary": "Nebula-mesh allows non-admin operators to disable webhook SSRF protection via `allow_private`",
+      "vendor": "Go",
+      "product": "github.com/forgekeep/nebula-mesh",
+      "cve": null,
+      "operator_check": "Check whether github.com/forgekeep/nebula-mesh is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/forgekeep/nebula-mesh. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-7rx3-5wx3-5v76",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7rx3-5wx3-5v76",
+          "url": "https://github.com/advisories/GHSA-7rx3-5wx3-5v76"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/forgekeep/nebula-mesh/security/advisories/GHSA-7rx3-5wx3-5v76"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-ghsa-mqxv-9rm6-w8qc",
+      "slug": "2026-07-go-ghsa-mqxv-9rm6-w8qc",
+      "url": "https://www.patchbrief.org/items/2026-07-go-ghsa-mqxv-9rm6-w8qc.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Ech0: ParseAcceptLanguage `_` separator bypass enables ~70x CPU amplification via Accept-Language header in i18n.Midd...",
+      "summary": "Ech0: ParseAcceptLanguage `_` separator bypass enables ~70x CPU amplification via Accept-Language header in i18n.Middleware",
+      "vendor": "Go",
+      "product": "github.com/lin-snow/ech0",
+      "cve": null,
+      "operator_check": "Check whether github.com/lin-snow/ech0 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/lin-snow/ech0. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-mqxv-9rm6-w8qc",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mqxv-9rm6-w8qc",
+          "url": "https://github.com/advisories/GHSA-mqxv-9rm6-w8qc"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/lin-snow/Ech0/security/advisories/GHSA-mqxv-9rm6-w8qc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-ghsa-pqg7-v6wh-3pfp",
+      "slug": "2026-07-go-ghsa-pqg7-v6wh-3pfp",
+      "url": "https://www.patchbrief.org/items/2026-07-go-ghsa-pqg7-v6wh-3pfp.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "TsDProxy: X-Forwarded-For header injection allows IP spoofing in proxied requests to backend services",
+      "summary": "TsDProxy: X-Forwarded-For header injection allows IP spoofing in proxied requests to backend services",
+      "vendor": "Go",
+      "product": "github.com/almeidapaulopt/tsdproxy",
+      "cve": null,
+      "operator_check": "Check whether github.com/almeidapaulopt/tsdproxy is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/almeidapaulopt/tsdproxy. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-pqg7-v6wh-3pfp",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pqg7-v6wh-3pfp",
+          "url": "https://github.com/advisories/GHSA-pqg7-v6wh-3pfp"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/almeidapaulopt/tsdproxy/security/advisories/GHSA-pqg7-v6wh-3pfp"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-44891",
+      "slug": "2026-07-maven-cve-2026-44891",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-44891.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Netty: Denial of Service via Unbounded Headers in StompSubframeDecoder",
+      "summary": "Netty: Denial of Service via Unbounded Headers in StompSubframeDecoder",
+      "vendor": "Maven",
+      "product": "io.netty:netty-codec-stomp",
+      "cve": "CVE-2026-44891",
+      "operator_check": "Check whether io.netty:netty-codec-stomp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for io.netty:netty-codec-stomp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-44891",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vhch-2wf3-m8rp",
+          "url": "https://github.com/advisories/GHSA-vhch-2wf3-m8rp"
+        },
+        {
+          "title": "NVD — CVE-2026-44891",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44891"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/netty/netty/security/advisories/GHSA-vhch-2wf3-m8rp"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-14380",
+      "slug": "2026-07-microsoft-cve-2026-14380",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-14380.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "DBI versions before 1.650 for Perl are vulnerable to code injection via caller-influenced Profile",
+      "summary": "DBI versions before 1.650 for Perl are vulnerable to code injection via caller-influenced Profile Published in July 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-14380",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-14380. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.5%; percentile: 39%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 39%.",
+      "tags": [
+        "cve-2026-14380",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-14380"
+        },
+        {
+          "title": "NVD — CVE-2026-14380",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14380"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-14740",
+      "slug": "2026-07-microsoft-cve-2026-14740",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-14740.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "DBI versions before 1.650 for Perl read one byte out-of-bounds in preparse when deleting an initial SQL comment",
+      "summary": "DBI versions before 1.650 for Perl read one byte out-of-bounds in preparse when deleting an initial SQL comment Published in July 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-14740",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-14740. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 33%.",
+      "tags": [
+        "cve-2026-14740",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-14740"
+        },
+        {
+          "title": "NVD — CVE-2026-14740",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14740"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-38968",
+      "slug": "2026-07-microsoft-cve-2026-38968",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-38968.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "ntopng through 6.6 is vulnerable to Predictable Session Identifier which can lead to Session Hijacking. HTTP session ...",
+      "summary": "ntopng through 6.6 is vulnerable to Predictable Session Identifier which can lead to Session Hijacking. HTTP session identifiers in src/HTTPserver.cpp use weak time-seeded pseudo-randomness during session creation. As a result, fresh authenticated logins can receive deterministic or colliding session cookies under attacker-controlled timing. Published in July 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-38968",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-38968. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 30%.",
+      "tags": [
+        "cve-2026-38968",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-38968"
+        },
+        {
+          "title": "NVD — CVE-2026-38968",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38968"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-42982",
+      "slug": "2026-07-microsoft-cve-2026-42982",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-42982.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Secure Kernel Mode Elevation of Privilege Vulnerability",
+      "summary": "Improper validation of consistency within input in Windows Secure Kernel Mode allows an authorized attacker to elevate privileges locally. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Secure Kernel Mode",
+      "cve": "CVE-2026-42982",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-42982. Confirm whether Windows Secure Kernel Mode is deployed, then apply the current security update or documented mitigation. CVSS score: 7.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-42982",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42982"
+        },
+        {
+          "title": "NVD — CVE-2026-42982",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42982"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099538"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-42990",
+      "slug": "2026-07-microsoft-cve-2026-42990",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-42990.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "SQL Server ODBC driver Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in SQL Server ODBC driver allows an unauthorized attacker to execute code over a network. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Unlikely.",
+      "vendor": "Microsoft",
+      "product": "SQL Server ODBC driver",
+      "cve": "CVE-2026-42990",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-42990. Confirm whether SQL Server ODBC driver is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-42990",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42990"
+        },
+        {
+          "title": "NVD — CVE-2026-42990",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42990"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099538"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-47300",
+      "slug": "2026-07-microsoft-cve-2026-47300",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-47300.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "ASP.NET Core Elevation of Privilege Vulnerability",
+      "summary": "Incorrect implementation of authentication algorithm in ASP.NET Core allows an authorized attacker to elevate privileges over a network. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "ASP.NET Core",
+      "cve": "CVE-2026-47300",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-47300. Confirm whether ASP.NET Core is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-47300",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-47300"
+        },
+        {
+          "title": "NVD — CVE-2026-47300",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47300"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://dotnet.microsoft.com/download/dotnet/10.0"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-47303",
+      "slug": "2026-07-microsoft-cve-2026-47303",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-47303.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "ASP.NET Core Elevation of Privilege Vulnerability",
+      "summary": "Authentication bypass by assumed-immutable data in ASP.NET Core allows an authorized attacker to elevate privileges over a network. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "ASP.NET Core",
+      "cve": "CVE-2026-47303",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-47303. Confirm whether ASP.NET Core is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-47303",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-47303"
+        },
+        {
+          "title": "NVD — CVE-2026-47303",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47303"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://dotnet.microsoft.com/download/dotnet/10.0"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-48561",
+      "slug": "2026-07-microsoft-cve-2026-48561",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-48561.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Microsoft Copilot Remote Code Execution Vulnerability",
+      "summary": "Improper neutralization of special elements used in a command ('command injection') in Microsoft Copilot allows an unauthorized attacker to execute code over a network. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Copilot",
+      "cve": "CVE-2026-48561",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-48561. Confirm whether Microsoft Copilot is deployed, then apply the current security update or documented mitigation. CVSS score: 9.6.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-48561",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-48561"
+        },
+        {
+          "title": "NVD — CVE-2026-48561",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48561"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US&pli=1"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-49164",
+      "slug": "2026-07-microsoft-cve-2026-49164",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-49164.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Active Directory Domain Services Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Active Directory Domain Services allows an unauthorized attacker to execute code over a network. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Unlikely.",
+      "vendor": "Microsoft",
+      "product": "Active Directory Domain Services",
+      "cve": "CVE-2026-49164",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-49164. Confirm whether Active Directory Domain Services is deployed, then apply the current security update or documented mitigation. CVSS score: 8.1.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-49164",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-49164"
+        },
+        {
+          "title": "NVD — CVE-2026-49164",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49164"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099538"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-49170",
+      "slug": "2026-07-microsoft-cve-2026-49170",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-49170.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows StateRepository API Server file Elevation of Privilege Vulnerability",
+      "summary": "Insufficient granularity of access control in Windows StateRepository API allows an authorized attacker to elevate privileges locally. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation More Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows StateRepository API",
+      "cve": "CVE-2026-49170",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-49170. Confirm whether Windows StateRepository API is deployed, then apply the current security update or documented mitigation. CVSS score: 7.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-49170",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-49170"
+        },
+        {
+          "title": "NVD — CVE-2026-49170",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49170"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099538"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-49172",
+      "slug": "2026-07-microsoft-cve-2026-49172",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-49172.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Windows FTP Service Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows FTP Service allows an unauthorized attacker to execute code over a network. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows FTP Service",
+      "cve": "CVE-2026-49172",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-49172. Confirm whether Windows FTP Service is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-49172",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-49172"
+        },
+        {
+          "title": "NVD — CVE-2026-49172",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49172"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5101650"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-50663",
+      "slug": "2026-07-microsoft-cve-2026-50663",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-50663.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Game: Age of Empires II: Definitive Edition Remote Code Execution Vulnerability",
+      "summary": "Relative path traversal in Age of Empires II: Definitive Edition Game allows an unauthorized attacker to execute code over a network. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Age of Empires II: Definitive Edition Game",
+      "cve": "CVE-2026-50663",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-50663. Confirm whether Age of Empires II: Definitive Edition Game is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-50663",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-50663"
+        },
+        {
+          "title": "NVD — CVE-2026-50663",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50663"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-177723/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-54107",
+      "slug": "2026-07-microsoft-cve-2026-54107",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-54107.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Win32k Elevation of Privilege Vulnerability",
+      "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Win32K allows an authorized attacker to elevate privileges locally. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Win32K",
+      "cve": "CVE-2026-54107",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-54107. Confirm whether Windows Win32K is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-54107",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-54107"
+        },
+        {
+          "title": "NVD — CVE-2026-54107",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54107"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099538"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-54990",
+      "slug": "2026-07-microsoft-cve-2026-54990",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-54990.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Remote Desktop Client Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute code over a network. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Remote Desktop Client",
+      "cve": "CVE-2026-54990",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-54990. Confirm whether Remote Desktop Client is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-54990",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-54990"
+        },
+        {
+          "title": "NVD — CVE-2026-54990",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54990"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099536"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-56000",
+      "slug": "2026-07-microsoft-cve-2026-56000",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-56000.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "xorg-x11-server / xwayland GLX contextTags Use-After-Free in CommonMakeCurrent()",
+      "summary": "xorg-x11-server / xwayland GLX contextTags Use-After-Free in CommonMakeCurrent() Published in July 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-56000",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-56000. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. EPSS probability: 0.2%; percentile: 9%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 9%.",
+      "tags": [
+        "cve-2026-56000",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-56000"
+        },
+        {
+          "title": "NVD — CVE-2026-56000",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56000"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-56155",
+      "slug": "2026-07-microsoft-cve-2026-56155",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-56155.html",
+      "date": "2026-07-14",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability",
+      "summary": "Microsoft Active Directory Federation Services contains an insufficient granularity of access control vulnerability that allows an authorized attacker to elevate privileges locally.",
+      "vendor": "Microsoft",
+      "product": "Active Directory Federation Services",
+      "cve": "CVE-2026-56155",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-56155 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-28. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-56155",
+        "kev",
+        "microsoft",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-56155",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56155"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-56164",
+      "slug": "2026-07-microsoft-cve-2026-56164",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-56164.html",
+      "date": "2026-07-14",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability",
+      "summary": "Microsoft SharePoint contains a missing authentication for critical function vulnerability that allows an unauthorized attacker to elevate privileges over a network.",
+      "vendor": "Microsoft",
+      "product": "SharePoint Server",
+      "cve": "CVE-2026-56164",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-56164 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-17. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-56164",
+        "kev",
+        "microsoft",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-56164",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56164"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-58253",
+      "slug": "2026-07-microsoft-cve-2026-58253",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-58253.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "NATS Server: Route API Auth Bypass",
+      "summary": "NATS Server: Route API Auth Bypass Published in July 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-58253",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-58253. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 29%.",
+      "tags": [
+        "cve-2026-58253",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-58253"
+        },
+        {
+          "title": "NVD — CVE-2026-58253",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58253"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-59873",
+      "slug": "2026-07-microsoft-cve-2026-59873",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-59873.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "node-tar: Decompression/parse DoS via unlimited input",
+      "summary": "node-tar: Decompression/parse DoS via unlimited input Published in July 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-59873",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-59873. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 7.5. EPSS probability: 0.4%; percentile: 28%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 28%.",
+      "tags": [
+        "cve-2026-59873",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-59873"
+        },
+        {
+          "title": "NVD — CVE-2026-59873",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59873"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-8924",
+      "slug": "2026-07-microsoft-cve-2026-8924",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-8924.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "trailing dot domain super cookie",
+      "summary": "trailing dot domain super cookie Published in July 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-8924",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-8924. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.6%; percentile: 47%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 47%.",
+      "tags": [
+        "cve-2026-8924",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-8924"
+        },
+        {
+          "title": "NVD — CVE-2026-8924",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8924"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-8926",
+      "slug": "2026-07-microsoft-cve-2026-8926",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-8926.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "password leak with netrc and user in URL",
+      "summary": "password leak with netrc and user in URL Published in July 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-8926",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-8926. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 45%.",
+      "tags": [
+        "cve-2026-8926",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-8926"
+        },
+        {
+          "title": "NVD — CVE-2026-8926",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8926"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-9547",
+      "slug": "2026-07-microsoft-cve-2026-9547",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-9547.html",
+      "date": "2026-07-14",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "SSH improper host validation",
+      "summary": "SSH improper host validation Published in July 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-9547",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-9547. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 40%.",
+      "tags": [
+        "cve-2026-9547",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Jul Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-9547"
+        },
+        {
+          "title": "NVD — CVE-2026-9547",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9547"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-50131",
+      "slug": "2026-07-npm-cve-2026-50131",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-50131.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fedify has an incomplete SSRF mitigation after GHSA-p9cg-vqcc-grcx: validatePublicUrl allows special-use IPv4 ranges",
+      "summary": "Fedify has an incomplete SSRF mitigation after GHSA-p9cg-vqcc-grcx: validatePublicUrl allows special-use IPv4 ranges",
+      "vendor": "npm",
+      "product": "@fedify/fedify",
+      "cve": "CVE-2026-50131",
+      "operator_check": "Check whether @fedify/fedify is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @fedify/fedify. Prioritize it with other application dependency updates, especially because EPSS places it in the 19% percentile.",
+      "tags": [
+        "cve-2026-50131",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xw9q-2mv6-9fr8",
+          "url": "https://github.com/advisories/GHSA-xw9q-2mv6-9fr8"
+        },
+        {
+          "title": "NVD — CVE-2026-50131",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50131"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fedify-dev/fedify/security/advisories/GHSA-xw9q-2mv6-9fr8"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-54052",
+      "slug": "2026-07-npm-cve-2026-54052",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-54052.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n-MCP: Cross-tenant access to workflow version backups in multi-tenant HTTP deployments",
+      "summary": "n8n-MCP: Cross-tenant access to workflow version backups in multi-tenant HTTP deployments",
+      "vendor": "npm",
+      "product": "n8n-mcp",
+      "cve": "CVE-2026-54052",
+      "operator_check": "Check whether n8n-mcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n-mcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54052",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j6r7-6fhx-77wx",
+          "url": "https://github.com/advisories/GHSA-j6r7-6fhx-77wx"
+        },
+        {
+          "title": "NVD — CVE-2026-54052",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54052"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/czlonkowski/n8n-mcp/security/advisories/GHSA-j6r7-6fhx-77wx"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-9hc2-hjx8-q6pv",
+      "slug": "2026-07-npm-ghsa-9hc2-hjx8-q6pv",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-9hc2-hjx8-q6pv.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "TidGi Desktop Remote Code Execution via Malicious TiddlyWiki Repository Import — Tiddler Startup Module Auto-Execution",
+      "summary": "TidGi Desktop Remote Code Execution via Malicious TiddlyWiki Repository Import — Tiddler Startup Module Auto-Execution",
+      "vendor": "npm",
+      "product": "tidgi",
+      "cve": null,
+      "operator_check": "Check whether tidgi is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for tidgi. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-9hc2-hjx8-q6pv",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9hc2-hjx8-q6pv",
+          "url": "https://github.com/advisories/GHSA-9hc2-hjx8-q6pv"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/tiddly-gittly/TidGi-Desktop/security/advisories/GHSA-9hc2-hjx8-q6pv"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-54446",
+      "slug": "2026-07-pypi-cve-2026-54446",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-54446.html",
+      "date": "2026-07-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "NetLicensing-MCP: Unauthenticated Use of Server-Side NetLicensing API Key in HTTP Mode",
+      "summary": "NetLicensing-MCP: Unauthenticated Use of Server-Side NetLicensing API Key in HTTP Mode",
+      "vendor": "PyPI",
+      "product": "netlicensing-mcp",
+      "cve": "CVE-2026-54446",
+      "operator_check": "Check whether netlicensing-mcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for netlicensing-mcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54446",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x9vc-9ffq-p3gj",
+          "url": "https://github.com/advisories/GHSA-x9vc-9ffq-p3gj"
+        },
+        {
+          "title": "NVD — CVE-2026-54446",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54446"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Labs64/NetLicensing-MCP/security/advisories/GHSA-x9vc-9ffq-p3gj"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-sonicwall-cve-2026-15409",
+      "slug": "2026-07-sonicwall-cve-2026-15409",
+      "url": "https://www.patchbrief.org/items/2026-07-sonicwall-cve-2026-15409.html",
+      "date": "2026-07-14",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
+      "summary": "SonicWall SMA1000 Appliances contain a server-side request forgery vulnerability that could allow a remote unauthenticated attacker to potentially cause the appliance to make requests to unintended location.",
+      "vendor": "SonicWall",
+      "product": "SMA1000 Appliances",
+      "cve": "CVE-2026-15409",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-15409 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-17. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-15409",
+        "kev",
+        "sonicwall",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-15409",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15409"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-sonicwall-cve-2026-15410",
+      "slug": "2026-07-sonicwall-cve-2026-15410",
+      "url": "https://www.patchbrief.org/items/2026-07-sonicwall-cve-2026-15410.html",
+      "date": "2026-07-14",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "SonicWall SMA1000 Appliances Code Injection Vulnerability",
+      "summary": "SonicWall SMA1000 Appliances contain a code injection vulnerability which in specific conditions could potentially enable a remote authenticated attacker as administrator to execute arbitrary OS commands.",
+      "vendor": "SonicWall",
+      "product": "SMA1000 Appliances",
+      "cve": "CVE-2026-15410",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-15410 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-17. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-15410",
+        "kev",
+        "sonicwall",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-15410",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15410"
         }
       ]
     },
@@ -527,6 +2330,72 @@
         {
           "title": "Source reference",
           "url": "https://github.com/apolloconfig/apollo/security/advisories/GHSA-h4pc-58cc-hc95"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-ollyo-cve-2026-57830",
+      "slug": "2026-07-ollyo-cve-2026-57830",
+      "url": "https://www.patchbrief.org/items/2026-07-ollyo-cve-2026-57830.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ollyo Helix Ultimate — CVE-2026-57830 (Critical)",
+      "summary": "The Joomla extension Helix Ultimate is vulnerable to an unauthenticated arbitrary file deletion.",
+      "vendor": "Ollyo",
+      "product": "Helix Ultimate",
+      "cve": "CVE-2026-57830",
+      "operator_check": "Review CVE-2026-57830 in your asset inventory. Apply patches per vendor guidance and verify Helix Ultimate is not exposed. CVSS score: 9.1. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Ollyo Helix Ultimate. Patch or mitigate promptly. EPSS percentile: 15%.",
+      "tags": [
+        "cve-2026-57830",
+        "vendor-advisory",
+        "ollyo",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-57830",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57830"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.joomshaper.com/joomla-templates/helixultimate"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-perl-cve-2026-13221",
+      "slug": "2026-07-perl-cve-2026-13221",
+      "url": "https://www.patchbrief.org/items/2026-07-perl-cve-2026-13221.html",
+      "date": "2026-07-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Perl Perl — CVE-2026-13221 (Critical)",
+      "summary": "Perl versions through 5.43.9 produce silently incorrect regular expression matches when an alternation of more than 65535 fixed string branches is compiled into a trie in Perl_study_chunk. When such branches are combined into a trie, the delta between the first branch and the shared tail is stored in a 16-bit field. A branch count above 65535 overflows the field, and the trie's match decision table is truncated with no warning or error. A pattern of this shape produces false positive matches (matching strings it should not) and false negative matches (failing to match strings it should). Whe",
+      "vendor": "Perl",
+      "product": "Perl",
+      "cve": "CVE-2026-13221",
+      "operator_check": "Review CVE-2026-13221 in your asset inventory. Apply patches per vendor guidance and verify Perl is not exposed. CVSS score: 9.1. EPSS probability: 0.2%; percentile: 11%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Perl Perl. Patch or mitigate promptly. EPSS percentile: 11%.",
+      "tags": [
+        "cve-2026-13221",
+        "vendor-advisory",
+        "perl",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-13221",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13221"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Perl/perl5/commit/03f74bbbd3a68350d926ee93d56ee4808c28c4c7.patch"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Perl/perl5/issues/23388"
         }
       ]
     },

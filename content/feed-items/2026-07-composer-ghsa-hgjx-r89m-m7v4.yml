@@ -1,0 +1,30 @@
+id: 2026-07-composer-ghsa-hgjx-r89m-m7v4
+slug: 2026-07-composer-ghsa-hgjx-r89m-m7v4
+external_id: GHSA-hgjx-r89m-m7v4
+source: github_advisory
+date: '2026-07-14'
+type: Vendor advisory
+signal: High-risk advisory
+title: 'FacturaScripts: Path traversal in UploadedFile::move() via getClientOriginalName()
+  — arbitrary file write outside MyF...'
+summary: 'FacturaScripts: Path traversal in UploadedFile::move() via getClientOriginalName()
+  — arbitrary file write outside MyFiles/ leading to RCE'
+vendor: Composer
+product: facturascripts/facturascripts
+cve: null
+operator_check: Check whether facturascripts/facturascripts is present in application
+  dependency manifests, lockfiles, or build images. Review the GitHub advisory and
+  upgrade to a patched version where available.
+why_it_matters: GitHub has published a reviewed security advisory for facturascripts/facturascripts.
+  Prioritize it with other application dependency updates.
+sources:
+- title: GitHub Advisory GHSA-hgjx-r89m-m7v4
+  url: https://github.com/advisories/GHSA-hgjx-r89m-m7v4
+- title: Source reference
+  url: https://github.com/NeoRazorX/facturascripts/security/advisories/GHSA-hgjx-r89m-m7v4
+tags:
+- ghsa-hgjx-r89m-m7v4
+- vendor-advisory
+- composer
+- github-advisory
+is_sample: false
