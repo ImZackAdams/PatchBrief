@@ -1,0 +1,37 @@
+id: 2026-07-pegatron-vu-529388
+slug: 2026-07-pegatron-vu-529388
+external_id: VU-529388
+source: cert_vu
+date: '2026-07-15'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#529388: Privilege escalation vulnerability via unprotected IOCTL interface
+  in Pegatron Tdelo64.sys'
+summary: 'Overview A privilege escalation vulnerability exists in the tdeio64.sys
+  driver due to an unprotected input/output control (IOCTL) dispatch routine that
+  fails to validate the origin and permissions of user-supplied requests. An unprivileged
+  local attacker can abuse exposed IOCTL dispatch routines [RM1.1][MB1.2]to perform
+  arbitrary kernel memory read and write operations, ultimately obtaining NT AUTHORITY\SYSTEM
+  privileges and compromising the security of the affected system. Description The
+  tdeio64.sys driver distributed by Pegatron Corporation, a Taiwanese electronics
+  manufacturer that produces motherboards and OEM components, is a Windows Driver
+  Model (WDM) driver that provides low-level access to system I/O ports and hardware
+  components. The driver exposes the \\.\TdeIo device interface and processes privileged
+  IOTL requests without... Related CVEs: CVE-2026-14960, CVE-2026-14961.'
+vendor: Pegatron
+product: Tdelo64.sys
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Tdelo64.sys where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#529388
+  url: https://kb.cert.org/vuls/id/529388
+tags:
+- vu-529388
+- coordinated-disclosure
+- pegatron
+- cert-vu
+is_sample: false

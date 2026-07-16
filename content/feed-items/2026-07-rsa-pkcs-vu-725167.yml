@@ -1,0 +1,37 @@
+id: 2026-07-rsa-pkcs-vu-725167
+slug: 2026-07-rsa-pkcs-vu-725167
+external_id: VU-725167
+source: cert_vu
+date: '2026-07-15'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#725167: node-forge Signature Forgery Vulnerabilities in RSA-PKCS and ED25519
+  Implementations'
+summary: 'Overview Two distinct cryptographic signature verification vulnerabilities
+  exist in Digital Bazaar node-forge, a widely used JavaScript library implementing
+  cryptographic primitives for Node.js and browser environments. These vulnerabilities
+  allow attackers to forge RSA (PKCS#1 v1.5) and Ed25519 signatures under specific,
+  exploitable conditions. Description Both vulnerabilities stem from insufficient
+  enforcement of canonical cryptographic structures during verification: in the RSA
+  case, non-standard ASN.1 encodings and undersized padding are accepted; in the Ed25519
+  case, non-canonical signature scalars are not rejected. As a result, node-forge
+  accepts signatures that appear valid internally but are rejected by industry-standard
+  libraries such as OpenSSL and Node.js’s native crypto module. The vulnerabilities
+  affect node-forge versions... Related CVEs: CVE-2026-33894, CVE-2026-33895.'
+vendor: RSA-PKCS
+product: and ED25519 Implementations
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for and ED25519 Implementations where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#725167
+  url: https://kb.cert.org/vuls/id/725167
+tags:
+- vu-725167
+- coordinated-disclosure
+- rsa-pkcs
+- cert-vu
+is_sample: false
