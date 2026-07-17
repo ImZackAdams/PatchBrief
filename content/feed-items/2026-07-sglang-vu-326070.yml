@@ -1,0 +1,37 @@
+id: 2026-07-sglang-vu-326070
+slug: 2026-07-sglang-vu-326070
+external_id: VU-326070
+source: cert_vu
+date: '2026-07-16'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#326070: SGLang contains a vulnerable pickle deserialization vulnerability
+  through the expert-parallel subsystem'
+summary: 'Overview A Pickle deserialization vulnerability has been discovered within
+  the SGLang project , enabling an attacker to perform remote code execution (RCE)
+  on the target vulnerable server. In order for an attacker to exploit this vulnerability,
+  the expert-parallel backup subsystem must be enabled, and an attacker must have
+  network access to the SGLang service. No patch is available at this time, and no
+  response was obtained from the project maintainers during coordination. Description
+  SGLang is an open-source framework for serving large language models (LLMs) and
+  multimodal AI models, supporting models such as Qwen, DeepSeek, Mistral, and Skywork,
+  and is compatible with OpenAI APIs. A vulnerability has been discovered within the
+  tool and is tracked as follows: CVE-2026-14890 SGLang uses an expert-parallel backup
+  subsystem designed to... Related CVEs: CVE-2026-14890, CVE-2026-7301, CVE-2026-7304.'
+vendor: SGLang
+product: SGLang
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for SGLang where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#326070
+  url: https://kb.cert.org/vuls/id/326070
+tags:
+- vu-326070
+- coordinated-disclosure
+- sglang
+- cert-vu
+is_sample: false

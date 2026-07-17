@@ -1,0 +1,37 @@
+id: 2026-07-http-2-vu-885548
+slug: 2026-07-http-2-vu-885548
+external_id: VU-885548
+source: cert_vu
+date: '2026-07-16'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#885548: Denial-of-service vulnerability in HTTP/2 servers via stalled flow-control
+  conditions'
+summary: Overview A denial-of-service (DoS) vulnerability exists in some HTTP/2 server
+  implementations that fail to adequately limit resource consumption when buffering
+  response data under stalled flow-control conditions. A remote, unauthenticated attacker
+  can trigger memory exhaustion and service interruption by using standard flow-control
+  parameters such as SETTINGS_INITIAL_WINDOW_SIZE = 0 to stall outbound data for multiple
+  simultaneous request streams. Description HTTP/2 is a widely used application-layer
+  protocol that supports multiplexing, header compression, and flow-control mechanisms
+  to regulate the transmission of data between web browsers and servers. Flow control
+  is designed to prevent senders from overwhelming receivers and relies on client-advertised
+  window sizes to determine the maximum volume of unacknowledged data that can be
+  in...
+vendor: HTTP/2
+product: servers via stalled flow-control conditions
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for servers via stalled flow-control conditions where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#885548
+  url: https://kb.cert.org/vuls/id/885548
+tags:
+- vu-885548
+- coordinated-disclosure
+- http-2
+- cert-vu
+is_sample: false

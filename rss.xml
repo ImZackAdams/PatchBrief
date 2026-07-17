@@ -4,8 +4,141 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Thu, 16 Jul 2026 11:00:43 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 10:47:22 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>Pheditor has an authenticated terminal command whitelist bypass</title>
+      <link>https://www.patchbrief.org/items/2026-07-composer-cve-2026-54540.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-composer-cve-2026-54540.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Pheditor has an authenticated terminal command whitelist bypass</description>
+    </item>
+    <item>
+      <title>Pheditor: Incomplete command sanitization in terminal feature allows RCE via pipe operator, backtick substitution, an...</title>
+      <link>https://www.patchbrief.org/items/2026-07-composer-cve-2026-55578.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-composer-cve-2026-55578.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Pheditor: Incomplete command sanitization in terminal feature allows RCE via pipe operator, backtick substitution, and newline injection</description>
+    </item>
+    <item>
+      <title>Pheditor: Hardcoded default password 'admin' with no forced change enables full application compromise</title>
+      <link>https://www.patchbrief.org/items/2026-07-composer-cve-2026-55579.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-composer-cve-2026-55579.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Pheditor: Hardcoded default password 'admin' with no forced change enables full application compromise</description>
+    </item>
+    <item>
+      <title>Fortinet FortiSandbox OS Command Injection Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-07-fortinet-cve-2026-25089.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-fortinet-cve-2026-25089.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Fortinet FortiSandbox, FortiSandbox Cloud, and FortiSandbox PaaS contain an OS command injection vulnerability that allows an unauthenticated attacker to execute unauthorized commands via specifically crafted HTTP requests.</description>
+    </item>
+    <item>
+      <title>Fortinet FortiSandbox OS Command Injection Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-07-fortinet-cve-2026-39808.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-fortinet-cve-2026-39808.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Fortinet FortiSandbox contains an OS command injection vulnerability that could allow an unauthenticated attacker to execute unauthorized code or commands via crafted HTTP requests.</description>
+    </item>
+    <item>
+      <title>Nuclio: Unsanitized runtimeAttributes.repositories injected into Groovy build.gradle leads to build-time RCE</title>
+      <link>https://www.patchbrief.org/items/2026-07-go-cve-2026-52833.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-go-cve-2026-52833.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Nuclio: Unsanitized runtimeAttributes.repositories injected into Groovy build.gradle leads to build-time RCE</description>
+    </item>
+    <item>
+      <title>Envoy Gateway: Authentication Bypass via Improper Input Validation in EnvoyExtensionPolicy Lua Allows Secret Disclosure</title>
+      <link>https://www.patchbrief.org/items/2026-07-go-cve-2026-53713.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-go-cve-2026-53713.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Envoy Gateway: Authentication Bypass via Improper Input Validation in EnvoyExtensionPolicy Lua Allows Secret Disclosure</description>
+    </item>
+    <item>
+      <title>Envoy Gateway: xDS Control Plane Information Disclosure when operating in GatewayNamespaceMode</title>
+      <link>https://www.patchbrief.org/items/2026-07-go-cve-2026-53714.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-go-cve-2026-53714.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Envoy Gateway: xDS Control Plane Information Disclosure when operating in GatewayNamespaceMode</description>
+    </item>
+    <item>
+      <title>VU#885548: Denial-of-service vulnerability in HTTP/2 servers via stalled flow-control conditions</title>
+      <link>https://www.patchbrief.org/items/2026-07-http-2-vu-885548.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-http-2-vu-885548.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Overview A denial-of-service (DoS) vulnerability exists in some HTTP/2 server implementations that fail to adequately limit resource consumption when buffering response data under stalled flow-control conditions. A remote, unauthenticated attacker can trigger memory exhaustion and service interruption by using standard flow-control parameters such as SETTINGS_INITIAL_WINDOW_SIZE = 0 to stall outbound data for multiple simultaneous request streams. Description HTTP/2 is a widely used application-layer protocol that supports multiplexing, header compression, and flow-control mechanisms to regulate the transmission of data between web browsers and servers. Flow control is designed to prevent senders from overwhelming receivers and relies on client-advertised window sizes to determine the maximum volume of unacknowledged data that can be in...</description>
+    </item>
+    <item>
+      <title>ArcadeDB: Read-only users can mutate database schema (incomplete fix of CVE-2026-44221)</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-cve-2026-54076.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-cve-2026-54076.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>ArcadeDB: Read-only users can mutate database schema (incomplete fix of CVE-2026-44221)</description>
+    </item>
+    <item>
+      <title>ArcadeDB: IMPORT DATABASE allows SSRF and arbitrary local file read by authenticated users</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-cve-2026-54077.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-cve-2026-54077.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>ArcadeDB: IMPORT DATABASE allows SSRF and arbitrary local file read by authenticated users</description>
+    </item>
+    <item>
+      <title>ArcadeDB: Privilege escalation via reader role in /api/v1/command JS scripting language — arbitrary host file read</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-ghsa-48qw-824m-86pr.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-ghsa-48qw-824m-86pr.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>ArcadeDB: Privilege escalation via reader role in /api/v1/command JS scripting language — arbitrary host file read</description>
+    </item>
+    <item>
+      <title>ArcadeDB: Scripting authorization gate (GHSA-48qw-824m-86pr) bypassed via SQL DEFINE FUNCTION ... LANGUAGE js</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-ghsa-vwjc-v7x7-cm6g.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-ghsa-vwjc-v7x7-cm6g.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>ArcadeDB: Scripting authorization gate (GHSA-48qw-824m-86pr) bypassed via SQL DEFINE FUNCTION ... LANGUAGE js</description>
+    </item>
+    <item>
+      <title>ArcadeDB has cross-database IDOR: /ts/*, /batch/*, Prometheus and Grafana handlers bypass authorization</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-ghsa-x8mg-6r4p-87pf.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-ghsa-x8mg-6r4p-87pf.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>ArcadeDB has cross-database IDOR: /ts/*, /batch/*, Prometheus and Grafana handlers bypass authorization</description>
+    </item>
+    <item>
+      <title>ArcadeDB: Trigger scripts run with java.lang.* allowed, enabling OS command execution (RCE)</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-ghsa-x9f9-r4m8-9xc2.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-ghsa-x9f9-r4m8-9xc2.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>ArcadeDB: Trigger scripts run with java.lang.* allowed, enabling OS command execution (RCE)</description>
+    </item>
+    <item>
+      <title>MCP Python SDK: HTTP transports serve session requests without verifying the authenticated principal</title>
+      <link>https://www.patchbrief.org/items/2026-07-pypi-cve-2026-52869.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-pypi-cve-2026-52869.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>MCP Python SDK: HTTP transports serve session requests without verifying the authenticated principal</description>
+    </item>
+    <item>
+      <title>MCP Python SDK: Experimental task handlers allow any client to access and cancel other clients' tasks</title>
+      <link>https://www.patchbrief.org/items/2026-07-pypi-cve-2026-52870.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-pypi-cve-2026-52870.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>MCP Python SDK: Experimental task handlers allow any client to access and cancel other clients' tasks</description>
+    </item>
+    <item>
+      <title>MCP Python SDK: WebSocket server transport does not support Host/Origin validation</title>
+      <link>https://www.patchbrief.org/items/2026-07-pypi-cve-2026-59950.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-pypi-cve-2026-59950.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>MCP Python SDK: WebSocket server transport does not support Host/Origin validation</description>
+    </item>
+    <item>
+      <title>VU#326070: SGLang contains a vulnerable pickle deserialization vulnerability through the expert-parallel subsystem</title>
+      <link>https://www.patchbrief.org/items/2026-07-sglang-vu-326070.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-sglang-vu-326070.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Overview A Pickle deserialization vulnerability has been discovered within the SGLang project , enabling an attacker to perform remote code execution (RCE) on the target vulnerable server. In order for an attacker to exploit this vulnerability, the expert-parallel backup subsystem must be enabled, and an attacker must have network access to the SGLang service. No patch is available at this time, and no response was obtained from the project maintainers during coordination. Description SGLang is an open-source framework for serving large language models (LLMs) and multimodal AI models, supporting models such as Qwen, DeepSeek, Mistral, and Skywork, and is compatible with OpenAI APIs. A vulnerability has been discovered within the tool and is tracked as follows: CVE-2026-14890 SGLang uses an expert-parallel backup subsystem designed to... Related CVEs: CVE-2026-14890, CVE-2026-7301, CVE-2026-7304.</description>
+    </item>
     <item>
       <title>MantisBT: SOAP API Authentication Bypass with Privilege Escalation to Administrator</title>
       <link>https://www.patchbrief.org/items/2026-07-composer-cve-2026-47156.html</link>
@@ -448,6 +581,13 @@
       <description>DBI versions before 1.650 for Perl read one byte out-of-bounds in preparse when deleting an initial SQL comment Published in July 2026 Security Updates.</description>
     </item>
     <item>
+      <title>DBI::SQL::Nano versions from 1.42 before 1.651 for Perl have inverted &lt;= and &gt;= SQL operators on text</title>
+      <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-15043.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-15043.html</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>DBI::SQL::Nano versions from 1.42 before 1.651 for Perl have inverted &lt;= and &gt;= SQL operators on text Published in July 2026 Security Updates.</description>
+    </item>
+    <item>
       <title>ntopng through 6.6 is vulnerable to Predictable Session Identifier which can lead to Session Hijacking. HTTP session ...</title>
       <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-38968.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-38968.html</guid>
@@ -518,6 +658,13 @@
       <description>Relative path traversal in Age of Empires II: Definitive Edition Game allows an unauthorized attacker to execute code over a network. Published in July 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.</description>
     </item>
     <item>
+      <title>Microsoft Windows 10 1607 — CVE-2026-50694 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-50694.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-50694.html</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Use after free in Windows Secure Socket Tunneling Protocol (SSTP) allows an unauthorized attacker to execute code over a network.</description>
+    </item>
+    <item>
       <title>Windows Win32k Elevation of Privilege Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-54107.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-54107.html</guid>
@@ -553,11 +700,32 @@
       <description>Microsoft SharePoint contains a missing authentication for critical function vulnerability that allows an unauthorized attacker to elevate privileges over a network.</description>
     </item>
     <item>
+      <title>Storable versions before 3.41 for Perl have a signed integer overflow when deserializing a crafted SX_HOOK record</title>
+      <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-57433.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-57433.html</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Storable versions before 3.41 for Perl have a signed integer overflow when deserializing a crafted SX_HOOK record Published in July 2026 Security Updates.</description>
+    </item>
+    <item>
       <title>NATS Server: Route API Auth Bypass</title>
       <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-58253.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-58253.html</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
       <description>NATS Server: Route API Auth Bypass Published in July 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Microsoft Windows 10 1607 — CVE-2026-58594 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-58594.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-58594.html</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Integer overflow or wraparound in Windows RDP allows an unauthorized attacker to execute code over a network.</description>
+    </item>
+    <item>
+      <title>Microsoft 365 Copilot — CVE-2026-58617 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-58617.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-58617.html</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Improper access control in Microsoft 365 Copilot for iOS allows an unauthorized attacker to elevate privileges over a network.</description>
     </item>
     <item>
       <title>Microsoft Sharepoint Server — CVE-2026-58644 (Critical)</title>
@@ -572,6 +740,13 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-59873.html</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
       <description>node-tar: Decompression/parse DoS via unlimited input Published in July 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>DBI versions before 1.651 for Perl do not enforce statement handle consistency with the row</title>
+      <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-60082.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-60082.html</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>DBI versions before 1.651 for Perl do not enforce statement handle consistency with the row Published in July 2026 Security Updates.</description>
     </item>
     <item>
       <title>trailing dot domain super cookie</title>
@@ -614,6 +789,13 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-9hc2-hjx8-q6pv.html</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
       <description>TidGi Desktop Remote Code Execution via Malicious TiddlyWiki Repository Import — Tiddler Startup Module Auto-Execution</description>
+    </item>
+    <item>
+      <title>Nvidia Tensorrt — CVE-2026-24227 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-07-nvidia-cve-2026-24227.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-nvidia-cve-2026-24227.html</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>NVIDIA TensorRT for contains a vulnerability where a user might cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution.</description>
     </item>
     <item>
       <title>NetLicensing-MCP: Unauthenticated Use of Server-Side NetLicensing API Key in HTTP Mode</title>
