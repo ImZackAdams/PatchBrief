@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-21T11:08:47Z",
-  "total_items": 674,
+  "generated": "2026-07-22T11:10:05Z",
+  "total_items": 707,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-21T11:08:47Z",
+    "generated": "2026-07-22T11:10:05Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-07-21T11:08:34Z",
-        "finished_at": "2026-07-21T11:08:34Z"
+        "items_seen": 4,
+        "started_at": "2026-07-22T11:09:53Z",
+        "finished_at": "2026-07-22T11:09:54Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-21T11:08:34Z",
-        "finished_at": "2026-07-21T11:08:35Z"
+        "started_at": "2026-07-22T11:09:54Z",
+        "finished_at": "2026-07-22T11:09:54Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-07-21T11:08:35Z",
-        "finished_at": "2026-07-21T11:08:42Z"
+        "items_seen": 1,
+        "started_at": "2026-07-22T11:09:54Z",
+        "finished_at": "2026-07-22T11:10:01Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-07-21T11:08:42Z",
-        "finished_at": "2026-07-21T11:08:43Z"
+        "started_at": "2026-07-22T11:10:01Z",
+        "finished_at": "2026-07-22T11:10:03Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-07-21T11:08:43Z",
-        "finished_at": "2026-07-21T11:08:44Z"
+        "items_seen": 1,
+        "started_at": "2026-07-22T11:10:03Z",
+        "finished_at": "2026-07-22T11:10:03Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,1129 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-21T11:08:44Z",
-        "finished_at": "2026-07-21T11:08:45Z"
+        "started_at": "2026-07-22T11:10:03Z",
+        "finished_at": "2026-07-22T11:10:04Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 29,
-        "started_at": "2026-07-21T11:08:45Z",
-        "finished_at": "2026-07-21T11:08:45Z"
+        "items_seen": 21,
+        "started_at": "2026-07-22T11:10:04Z",
+        "finished_at": "2026-07-22T11:10:04Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-dd-wrt-cve-2021-27137",
+      "slug": "2026-07-dd-wrt-cve-2021-27137",
+      "url": "https://www.patchbrief.org/items/2026-07-dd-wrt-cve-2021-27137.html",
+      "date": "2026-07-21",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "DD-WRT Stack-Based Buffer Overflow Vulnerability",
+      "summary": "DD-WRT contains a stack-based buffer overflow vulnerability that could allow an unauthenticated attacker to overflow an internal buffer used by UPnP and trigger a code execution vulnerability.",
+      "vendor": "DD-WRT",
+      "product": "DD-WRT",
+      "cve": "CVE-2021-27137",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2021-27137 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-24. Treat remediation as urgent.",
+      "tags": [
+        "cve-2021-27137",
+        "kev",
+        "dd-wrt",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2021-27137",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27137"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-20779",
+      "slug": "2026-07-go-cve-2026-20779",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-20779.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: TOTP TOCTOU race on web 2FA paths + missing replay check on Basic-Auth `X-Gitea-OTP` surface",
+      "summary": "Gitea: TOTP TOCTOU race on web 2FA paths + missing replay check on Basic-Auth `X-Gitea-OTP` surface",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-20779",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 38%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 38% percentile.",
+      "tags": [
+        "cve-2026-20779",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gx3v-q759-g323",
+          "url": "https://github.com/advisories/GHSA-gx3v-q759-g323"
+        },
+        {
+          "title": "NVD — CVE-2026-20779",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20779"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-gx3v-q759-g323"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-20896",
+      "slug": "2026-07-go-cve-2026-20896",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-20896.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea Docker image: `REVERSE_PROXY_TRUSTED_PROXIES = *` default lets any source IP impersonate any user via `X-WEBAUT...",
+      "summary": "Gitea Docker image: `REVERSE_PROXY_TRUSTED_PROXIES = *` default lets any source IP impersonate any user via `X-WEBAUTH-USER`",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-20896",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.8%; percentile: 52%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 52% percentile.",
+      "tags": [
+        "cve-2026-20896",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f75j-4cw6-rmx4",
+          "url": "https://github.com/advisories/GHSA-f75j-4cw6-rmx4"
+        },
+        {
+          "title": "NVD — CVE-2026-20896",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20896"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-f75j-4cw6-rmx4"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-22874",
+      "slug": "2026-07-go-cve-2026-22874",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-22874.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Incomplete SSRF Protection in Webhook and Migration Allow-list Default Filter",
+      "summary": "Gitea: Incomplete SSRF Protection in Webhook and Migration Allow-list Default Filter",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-22874",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 37%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 37% percentile.",
+      "tags": [
+        "cve-2026-22874",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2r5c-gw76-rh3w",
+          "url": "https://github.com/advisories/GHSA-2r5c-gw76-rh3w"
+        },
+        {
+          "title": "NVD — CVE-2026-22874",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22874"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-2r5c-gw76-rh3w"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-24451",
+      "slug": "2026-07-go-cve-2026-24451",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-24451.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Fork Synchronization Continues After Parent Repository Changes from Public to Private",
+      "summary": "Gitea: Fork Synchronization Continues After Parent Repository Changes from Public to Private",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-24451",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 39%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 39% percentile.",
+      "tags": [
+        "cve-2026-24451",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wrf9-r3h7-7x5v",
+          "url": "https://github.com/advisories/GHSA-wrf9-r3h7-7x5v"
+        },
+        {
+          "title": "NVD — CVE-2026-24451",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24451"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-wrf9-r3h7-7x5v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-25038",
+      "slug": "2026-07-go-cve-2026-25038",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-25038.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Unauthorized Access to Labels of Private Organizations",
+      "summary": "Gitea: Unauthorized Access to Labels of Private Organizations",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-25038",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 39%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 39% percentile.",
+      "tags": [
+        "cve-2026-25038",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v73x-hx65-6pf4",
+          "url": "https://github.com/advisories/GHSA-v73x-hx65-6pf4"
+        },
+        {
+          "title": "NVD — CVE-2026-25038",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25038"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-v73x-hx65-6pf4"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-27775",
+      "slug": "2026-07-go-cve-2026-27775",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-27775.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Cached Per-Branch Permission Check in Pre-Receive Hook Allows Full Repository Write",
+      "summary": "Gitea: Cached Per-Branch Permission Check in Pre-Receive Hook Allows Full Repository Write",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-27775",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 41%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 41% percentile.",
+      "tags": [
+        "cve-2026-27775",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-649p-mmhf-85c7",
+          "url": "https://github.com/advisories/GHSA-649p-mmhf-85c7"
+        },
+        {
+          "title": "NVD — CVE-2026-27775",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27775"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-649p-mmhf-85c7"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-54481",
+      "slug": "2026-07-go-cve-2026-54481",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-54481.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Internal API HTTP client hardcodes InsecureSkipVerify:true with no config override",
+      "summary": "Gitea: Internal API HTTP client hardcodes InsecureSkipVerify:true with no config override",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-54481",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54481",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-94v3-77j7-vm48",
+          "url": "https://github.com/advisories/GHSA-94v3-77j7-vm48"
+        },
+        {
+          "title": "NVD — CVE-2026-54481",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54481"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-94v3-77j7-vm48"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-55987",
+      "slug": "2026-07-go-cve-2026-55987",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-55987.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: OAuth2 sign-in reactivates an administrator-deactivated account on auth sources without refresh tokens (incomp...",
+      "summary": "Gitea: OAuth2 sign-in reactivates an administrator-deactivated account on auth sources without refresh tokens (incomplete fix of #38009)",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-55987",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55987",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vrhc-jjfc-m3m3",
+          "url": "https://github.com/advisories/GHSA-vrhc-jjfc-m3m3"
+        },
+        {
+          "title": "NVD — CVE-2026-55987",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55987"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-vrhc-jjfc-m3m3"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-56750",
+      "slug": "2026-07-go-cve-2026-56750",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-56750.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Gitea Remember-Me Token Theft Not Invalidating Attacker Session",
+      "summary": "Gitea Remember-Me Token Theft Not Invalidating Attacker Session",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-56750",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-56750",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rgv6-xp99-6mgj",
+          "url": "https://github.com/advisories/GHSA-rgv6-xp99-6mgj"
+        },
+        {
+          "title": "NVD — CVE-2026-56750",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56750"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-rgv6-xp99-6mgj"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58314",
+      "slug": "2026-07-go-cve-2026-58314",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58314.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Two SSRF findings",
+      "summary": "Gitea: Two SSRF findings",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58314",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-58314",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2fcr-jfvc-vgg2",
+          "url": "https://github.com/advisories/GHSA-2fcr-jfvc-vgg2"
+        },
+        {
+          "title": "NVD — CVE-2026-58314",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58314"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-2fcr-jfvc-vgg2"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58419",
+      "slug": "2026-07-go-cve-2026-58419",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58419.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Notification API leaks private issue metadata after access revocation",
+      "summary": "Gitea: Notification API leaks private issue metadata after access revocation",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58419",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 22%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 22% percentile.",
+      "tags": [
+        "cve-2026-58419",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-44qc-pgvp-wx7v",
+          "url": "https://github.com/advisories/GHSA-44qc-pgvp-wx7v"
+        },
+        {
+          "title": "NVD — CVE-2026-58419",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58419"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-44qc-pgvp-wx7v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58421",
+      "slug": "2026-07-go-cve-2026-58421",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58421.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Unauthenticated ReDoS via CODEOWNERS pattern matching allows denial of service",
+      "summary": "Gitea: Unauthenticated ReDoS via CODEOWNERS pattern matching allows denial of service",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58421",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 25%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 25% percentile.",
+      "tags": [
+        "cve-2026-58421",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v96j-25gv-g2w9",
+          "url": "https://github.com/advisories/GHSA-v96j-25gv-g2w9"
+        },
+        {
+          "title": "NVD — CVE-2026-58421",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58421"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-v96j-25gv-g2w9"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58422",
+      "slug": "2026-07-go-cve-2026-58422",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58422.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Improper authorization on OAuth sign-in callback silently re-enables administrator-disabled accounts",
+      "summary": "Gitea: Improper authorization on OAuth sign-in callback silently re-enables administrator-disabled accounts",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58422",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.6. EPSS probability: 0.3%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-58422",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g9g6-qhrc-p3qc",
+          "url": "https://github.com/advisories/GHSA-g9g6-qhrc-p3qc"
+        },
+        {
+          "title": "NVD — CVE-2026-58422",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58422"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-g9g6-qhrc-p3qc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58423",
+      "slug": "2026-07-go-cve-2026-58423",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58423.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: LFS authentication bypass via malformed SSH sub-verb allows unauthorized read access to private repositories",
+      "summary": "Gitea: LFS authentication bypass via malformed SSH sub-verb allows unauthorized read access to private repositories",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58423",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 23%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 23% percentile.",
+      "tags": [
+        "cve-2026-58423",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7wvc-rvp7-w99x",
+          "url": "https://github.com/advisories/GHSA-7wvc-rvp7-w99x"
+        },
+        {
+          "title": "NVD — CVE-2026-58423",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58423"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-7wvc-rvp7-w99x"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58424",
+      "slug": "2026-07-go-cve-2026-58424",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58424.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Permanent Fork PR Workflow Approval Gate Bypass",
+      "summary": "Gitea: Permanent Fork PR Workflow Approval Gate Bypass",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58424",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 10%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 10% percentile.",
+      "tags": [
+        "cve-2026-58424",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-777r-4v59-6486",
+          "url": "https://github.com/advisories/GHSA-777r-4v59-6486"
+        },
+        {
+          "title": "NVD — CVE-2026-58424",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58424"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-777r-4v59-6486"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58426",
+      "slug": "2026-07-go-cve-2026-58426",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58426.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea Actions Artifacts V4 signed URL HMAC ambiguity allows cross-repository artifact read and cross-task upload-stat...",
+      "summary": "Gitea Actions Artifacts V4 signed URL HMAC ambiguity allows cross-repository artifact read and cross-task upload-state write",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58426",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates, especially because EPSS places it in the 7% percentile.",
+      "tags": [
+        "cve-2026-58426",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hg5r-vq93-9fv6",
+          "url": "https://github.com/advisories/GHSA-hg5r-vq93-9fv6"
+        },
+        {
+          "title": "NVD — CVE-2026-58426",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58426"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-hg5r-vq93-9fv6"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58436",
+      "slug": "2026-07-go-cve-2026-58436",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58436.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: ParseAcceptLanguage quadratic-time DoS via Locale middleware on unauthenticated requests",
+      "summary": "Gitea: ParseAcceptLanguage quadratic-time DoS via Locale middleware on unauthenticated requests",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58436",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-58436",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fw57-jgch-pgf3",
+          "url": "https://github.com/advisories/GHSA-fw57-jgch-pgf3"
+        },
+        {
+          "title": "NVD — CVE-2026-58436",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58436"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-fw57-jgch-pgf3"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58437",
+      "slug": "2026-07-go-cve-2026-58437",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58437.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Repository Visibility Manipulation via Git Push Options",
+      "summary": "Gitea: Repository Visibility Manipulation via Git Push Options",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58437",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-58437",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8p9h-49rc-qgxj",
+          "url": "https://github.com/advisories/GHSA-8p9h-49rc-qgxj"
+        },
+        {
+          "title": "NVD — CVE-2026-58437",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58437"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-8p9h-49rc-qgxj"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-58443",
+      "slug": "2026-07-go-cve-2026-58443",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-58443.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gitea: Public-only repository tokens can update private PR head branches",
+      "summary": "Gitea: Public-only repository tokens can update private PR head branches",
+      "vendor": "Go",
+      "product": "code.gitea.io/gitea",
+      "cve": "CVE-2026-58443",
+      "operator_check": "Check whether code.gitea.io/gitea is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.gitea.io/gitea. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-58443",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xxjv-752h-3vp2",
+          "url": "https://github.com/advisories/GHSA-xxjv-752h-3vp2"
+        },
+        {
+          "title": "NVD — CVE-2026-58443",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58443"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-xxjv-752h-3vp2"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-ghsa-hrxh-6v49-42gf",
+      "slug": "2026-07-go-ghsa-hrxh-6v49-42gf",
+      "url": "https://www.patchbrief.org/items/2026-07-go-ghsa-hrxh-6v49-42gf.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities",
+      "summary": "gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities",
+      "vendor": "Go",
+      "product": "google.golang.org/grpc",
+      "cve": null,
+      "operator_check": "Check whether google.golang.org/grpc is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for google.golang.org/grpc. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-hrxh-6v49-42gf",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hrxh-6v49-42gf",
+          "url": "https://github.com/advisories/GHSA-hrxh-6v49-42gf"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/grpc/grpc-go/security/advisories/GHSA-hrxh-6v49-42gf"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-langflow-cve-2026-0770",
+      "slug": "2026-07-langflow-cve-2026-0770",
+      "url": "https://www.patchbrief.org/items/2026-07-langflow-cve-2026-0770.html",
+      "date": "2026-07-21",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+      "summary": "Langflow contains an inclusion of functionality from untrusted control sphere vulnerability that allows remote attackers to execute arbitrary code on affected installations.",
+      "vendor": "Langflow",
+      "product": "Langflow",
+      "cve": "CVE-2026-0770",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-0770 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-24. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-0770",
+        "kev",
+        "langflow",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-0770",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0770"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-linknat-cve-2016-20096",
+      "slug": "2026-07-linknat-cve-2016-20096",
+      "url": "https://www.patchbrief.org/items/2026-07-linknat-cve-2016-20096.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Linknat VOS3000 and VOS2009 — CVE-2016-20096 (Critical)",
+      "summary": "Linknat VOS3000 and VOS2009 through version 2.1.2.0 contain an unauthenticated SQL injection vulnerability that allows remote attackers to execute arbitrary SQL commands by manipulating the name parameter in a POST request to the login endpoint. Attackers can inject malicious SQL through the login form and retrieve injected query results from a subsequent session request, enabling extraction of plaintext credentials and other database content with DBA-level privileges.",
+      "vendor": "Linknat",
+      "product": "VOS3000 and VOS2009",
+      "cve": "CVE-2016-20096",
+      "operator_check": "Review CVE-2016-20096 in your asset inventory. Apply patches per vendor guidance and verify VOS3000 and VOS2009 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Linknat VOS3000 and VOS2009. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2016-20096",
+        "vendor-advisory",
+        "linknat",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2016-20096",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-20096"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://packetstorm.news/files/id/137159"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://web.archive.org/web/20160601102456/http://www.wooyun.org/bugs/wooyun-2010-0145458"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-ghsa-r7wm-3cxj-wff9",
+      "slug": "2026-07-maven-ghsa-r7wm-3cxj-wff9",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-ghsa-r7wm-3cxj-wff9.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-5...",
+      "summary": "jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-57qq)",
+      "vendor": "Maven",
+      "product": "com.fasterxml.jackson.core:jackson-core",
+      "cve": null,
+      "operator_check": "Check whether com.fasterxml.jackson.core:jackson-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for com.fasterxml.jackson.core:jackson-core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-r7wm-3cxj-wff9",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r7wm-3cxj-wff9",
+          "url": "https://github.com/advisories/GHSA-r7wm-3cxj-wff9"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-r7wm-3cxj-wff9"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-16221",
+      "slug": "2026-07-npm-cve-2026-16221",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-16221.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "fast-uri vulnerable to host confusion via literal backslash authority delimiter",
+      "summary": "fast-uri vulnerable to host confusion via literal backslash authority delimiter",
+      "vendor": "npm",
+      "product": "fast-uri",
+      "cve": "CVE-2026-16221",
+      "operator_check": "Check whether fast-uri is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for fast-uri. Prioritize it with other application dependency updates, especially because EPSS places it in the 13% percentile.",
+      "tags": [
+        "cve-2026-16221",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v2hh-gcrm-f6hx",
+          "url": "https://github.com/advisories/GHSA-v2hh-gcrm-f6hx"
+        },
+        {
+          "title": "NVD — CVE-2026-16221",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16221"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-v2hh-gcrm-f6hx"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-59891",
+      "slug": "2026-07-npm-cve-2026-59891",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-59891.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Credential confusion in @sigstore/oci can leak registry credentials to an attacker-controlled registry",
+      "summary": "Credential confusion in @sigstore/oci can leak registry credentials to an attacker-controlled registry",
+      "vendor": "npm",
+      "product": "@sigstore/oci",
+      "cve": "CVE-2026-59891",
+      "operator_check": "Check whether @sigstore/oci is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 24%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @sigstore/oci. Prioritize it with other application dependency updates, especially because EPSS places it in the 24% percentile.",
+      "tags": [
+        "cve-2026-59891",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pf56-329r-95rw",
+          "url": "https://github.com/advisories/GHSA-pf56-329r-95rw"
+        },
+        {
+          "title": "NVD — CVE-2026-59891",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59891"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sigstore/sigstore-js/security/advisories/GHSA-pf56-329r-95rw"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-8r6m-32jq-jx6q",
+      "slug": "2026-07-npm-ghsa-8r6m-32jq-jx6q",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-8r6m-32jq-jx6q.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "fast-xml-parser: Repeated DOCTYPE declarations reset entity expansion limits",
+      "summary": "fast-xml-parser: Repeated DOCTYPE declarations reset entity expansion limits",
+      "vendor": "npm",
+      "product": "fast-xml-parser",
+      "cve": null,
+      "operator_check": "Check whether fast-xml-parser is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for fast-xml-parser. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-8r6m-32jq-jx6q",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8r6m-32jq-jx6q",
+          "url": "https://github.com/advisories/GHSA-8r6m-32jq-jx6q"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/NaturalIntelligence/fast-xml-parser/security/advisories/GHSA-8r6m-32jq-jx6q"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-f88m-g3jw-g9cj",
+      "slug": "2026-07-npm-ghsa-f88m-g3jw-g9cj",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-f88m-g3jw-g9cj.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591",
+      "summary": "sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591",
+      "vendor": "npm",
+      "product": "sharp",
+      "cve": null,
+      "operator_check": "Check whether sharp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.0.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for sharp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-f88m-g3jw-g9cj",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f88m-g3jw-g9cj",
+          "url": "https://github.com/advisories/GHSA-f88m-g3jw-g9cj"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/libvips/libvips/security/advisories/GHSA-2fcj-gj27-279x"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-p63j-vcc4-9vmv",
+      "slug": "2026-07-npm-ghsa-p63j-vcc4-9vmv",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-p63j-vcc4-9vmv.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@vitest/browser: Browser Mode provider commands bypass the file-access permission gate",
+      "summary": "@vitest/browser: Browser Mode provider commands bypass the file-access permission gate",
+      "vendor": "npm",
+      "product": "@vitest/browser",
+      "cve": null,
+      "operator_check": "Check whether @vitest/browser is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @vitest/browser. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-p63j-vcc4-9vmv",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p63j-vcc4-9vmv",
+          "url": "https://github.com/advisories/GHSA-p63j-vcc4-9vmv"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-p63j-vcc4-9vmv"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-plane-vu-762226",
+      "slug": "2026-07-plane-vu-762226",
+      "url": "https://www.patchbrief.org/items/2026-07-plane-vu-762226.html",
+      "date": "2026-07-21",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#762226: Plane contains multi-tenant authorization bypass vulnerability",
+      "summary": "Overview The project management tool Plane, versions 1.3.0 and earlier, contains a multi-tenant authorization bypass vulnerability in its asset-management API that allows unauthorized users to access, delete, or duplicate assets that belong to other workspaces. Description Plane is an open-source project management platform that provides multi-tenant workspace isolation for users to track issues, monitor progress, and manage workflows. The platform's API supports uploading, retrieving, deleting, and duplicating files associated with issues and tasks within a workspace. CVE-2026-15342 Plane's asset-management API endpoints accept workspace slugs and asset identifiers as path parameters, but do not verify that the requesting user is authorized to access the specified workspace. As a result, an authenticated user in one workspace can supply... Related CVEs: CVE-2026-15342.",
+      "vendor": "Plane",
+      "product": "Plane",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Plane where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-762226",
+        "coordinated-disclosure",
+        "plane",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#762226",
+          "url": "https://kb.cert.org/vuls/id/762226"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-ghsa-rwj8-pgh3-r573",
+      "slug": "2026-07-pypi-ghsa-rwj8-pgh3-r573",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-ghsa-rwj8-pgh3-r573.html",
+      "date": "2026-07-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "GitPython: Environment-variable exfiltration via os.path.expandvars() on Repo.clone_from() URL",
+      "summary": "GitPython: Environment-variable exfiltration via os.path.expandvars() on Repo.clone_from() URL",
+      "vendor": "PyPI",
+      "product": "gitpython",
+      "cve": null,
+      "operator_check": "Check whether gitpython is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for gitpython. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-rwj8-pgh3-r573",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rwj8-pgh3-r573",
+          "url": "https://github.com/advisories/GHSA-rwj8-pgh3-r573"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-rwj8-pgh3-r573"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-wordpress-cve-2026-60137",
+      "slug": "2026-07-wordpress-cve-2026-60137",
+      "url": "https://www.patchbrief.org/items/2026-07-wordpress-cve-2026-60137.html",
+      "date": "2026-07-21",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "WordPress Core SQL Injection Vulnerability",
+      "summary": "WordPress Core contains a SQL injection vulnerability when a plugin or theme passes untrusted input to the parameter. This vulnerability can be chained with CVE-2026-63030 to allow an unauthenticated attacker to gain remote code execution on default WordPress installations.",
+      "vendor": "WordPress",
+      "product": "Core",
+      "cve": "CVE-2026-60137",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-60137 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-08-04. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-60137",
+        "kev",
+        "wordpress",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-60137",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60137"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-wordpress-cve-2026-63030",
+      "slug": "2026-07-wordpress-cve-2026-63030",
+      "url": "https://www.patchbrief.org/items/2026-07-wordpress-cve-2026-63030.html",
+      "date": "2026-07-21",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "WordPress Core Interpretation Conflict Vulnerability",
+      "summary": "WordPress Core contains an interpretation conflict vulnerability that could allow an attacker to perform SQL Injection and achieve Remote Code Execution. This vulnerability can be chained with CVE-2026-60137.",
+      "vendor": "WordPress",
+      "product": "Core",
+      "cve": "CVE-2026-63030",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-63030 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-24. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-63030",
+        "kev",
+        "wordpress",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-63030",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63030"
+        }
+      ]
+    },
     {
       "id": "2026-07-go-cve-2026-54560",
       "slug": "2026-07-go-cve-2026-54560",

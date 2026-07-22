@@ -1,0 +1,36 @@
+id: 2026-07-plane-vu-762226
+slug: 2026-07-plane-vu-762226
+external_id: VU-762226
+source: cert_vu
+date: '2026-07-21'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#762226: Plane contains multi-tenant authorization bypass vulnerability'
+summary: 'Overview The project management tool Plane, versions 1.3.0 and earlier,
+  contains a multi-tenant authorization bypass vulnerability in its asset-management
+  API that allows unauthorized users to access, delete, or duplicate assets that belong
+  to other workspaces. Description Plane is an open-source project management platform
+  that provides multi-tenant workspace isolation for users to track issues, monitor
+  progress, and manage workflows. The platform''s API supports uploading, retrieving,
+  deleting, and duplicating files associated with issues and tasks within a workspace.
+  CVE-2026-15342 Plane''s asset-management API endpoints accept workspace slugs and
+  asset identifiers as path parameters, but do not verify that the requesting user
+  is authorized to access the specified workspace. As a result, an authenticated user
+  in one workspace can supply... Related CVEs: CVE-2026-15342.'
+vendor: Plane
+product: Plane
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Plane where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#762226
+  url: https://kb.cert.org/vuls/id/762226
+tags:
+- vu-762226
+- coordinated-disclosure
+- plane
+- cert-vu
+is_sample: false
