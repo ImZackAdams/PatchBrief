@@ -4,8 +4,176 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Wed, 22 Jul 2026 11:10:05 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 11:10:09 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>VU#360868: Analog Way Picturall Quad Compact Mark II contains a local privilege escalation vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-07-analog-vu-360868.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-analog-vu-360868.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Overview Version 3.5.8 of Analog Way's Picturall Quad Compact Mark II server contains a local privilege escalation vulnerability, tracked as CVE-2026-14985, due to improper privilege delegation and insufficient input validation in a maintenance script. Description The Picturall Quad Compact Mark II is a compact, heavy-duty 8K media server developed by Analog Way for video playback and content management in professional audiovisual environments. The core firmware includes a maintenance script called create_local_installer.sh , and the default script permission allows the low-privileged user, picmedia , to execute it as root and without a password. An attacker creates a malicious Ext4 disk image that contains the file, picturall-version.txt , with a directory traversal string and a payload file. create_local_installer.sh reads input from... Related CVEs: CVE-2026-14985.</description>
+    </item>
+    <item>
+      <title>Check Point SmartConsole Improper Authentication Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-07-check-point-cve-2026-16232.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-check-point-cve-2026-16232.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Check Point SmartConsole contains an improper authentication vulnerability which could allow an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges.</description>
+    </item>
+    <item>
+      <title>VU#847406: Duplicati backup software v2.3.0.1 is vulnerable to an incorrect permission assignment vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-07-duplicati-vu-847406.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-duplicati-vu-847406.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Overview Duplicati v2.3.0.1 is vulnerable to arbitrary code execution when installed outside the default C:\Program Files\Duplicati 2\ directory. An attacker with local user privileges who can write files to the Duplicati installation directory can execute arbitrary code by placing malicious files, such as DLLs, in that directory. To mitigate this vulnerability, install Duplicati in the default C:\Program Files\ directory or update to the latest fixed version. Description Duplicati is a free, open-source backup solution that stores data across cloud and local storage platforms. On Windows, Duplicati is distributed as an MSI installer. By default, the installer deploys the application to C:\Program Files\Duplicati 2\ , where the directory inherits the standard protected ACLs provided by Windows. The following vulnerability affects... Related CVEs: CVE-2026-16157.</description>
+    </item>
+    <item>
+      <title>Eclipse Jetty: DoS attack triggering OutOfMemory with 100-Continue requests</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-cve-2024-7708.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-cve-2024-7708.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Eclipse Jetty: DoS attack triggering OutOfMemory with 100-Continue requests</description>
+    </item>
+    <item>
+      <title>Eclipse Jetty Digest Authentication: ISO-8859-1 lossy encoding allows authentication bypass via character substitution</title>
+      <link>https://www.patchbrief.org/items/2026-07-maven-cve-2026-10050.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-maven-cve-2026-10050.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Eclipse Jetty Digest Authentication: ISO-8859-1 lossy encoding allows authentication bypass via character substitution</description>
+    </item>
+    <item>
+      <title>Microsoft SharePoint Deserialization of Untrusted Data Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-50522.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-50522.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft SharePoint contains a deserialization of untrusted data vulnerability which could allow an unauthorized attacker to execute code over a network.</description>
+    </item>
+    <item>
+      <title>Next.js: Denial of Service in App Router using Server Actions</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-cve-2026-64641.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-cve-2026-64641.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Next.js: Denial of Service in App Router using Server Actions</description>
+    </item>
+    <item>
+      <title>Next.js: Middleware / Proxy bypass in App Router applications using Turbopack and single locale</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-cve-2026-64642.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-cve-2026-64642.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Next.js: Middleware / Proxy bypass in App Router applications using Turbopack and single locale</description>
+    </item>
+    <item>
+      <title>Next.js: Server-Side Request Forgery in rewrites via attacker-controlled destination hostname</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-cve-2026-64645.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-cve-2026-64645.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Next.js: Server-Side Request Forgery in rewrites via attacker-controlled destination hostname</description>
+    </item>
+    <item>
+      <title>Next.js: Server-Side Request Forgery in Server Actions on custom servers</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-cve-2026-64649.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-cve-2026-64649.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Next.js: Server-Side Request Forgery in Server Actions on custom servers</description>
+    </item>
+    <item>
+      <title>n8n: SSO Instance-Role Provisioning Allows Privilege Escalation to Instance Owner</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-cve-2026-65016.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-cve-2026-65016.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: SSO Instance-Role Provisioning Allows Privilege Escalation to Instance Owner</description>
+    </item>
+    <item>
+      <title>n8n: Send Email Node Arbitrary File Read and SSRF via Nodemailer Content-Object Type Confusion</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-2x35-3fw4-9jr4.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-2x35-3fw4-9jr4.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Send Email Node Arbitrary File Read and SSRF via Nodemailer Content-Object Type Confusion</description>
+    </item>
+    <item>
+      <title>n8n: Bypass "Allowed HTTP Request Domains" Credential Restriction in Multiple AI and LLM Nodes</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-64xh-79j6-r5v8.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-64xh-79j6-r5v8.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Bypass "Allowed HTTP Request Domains" Credential Restriction in Multiple AI and LLM Nodes</description>
+    </item>
+    <item>
+      <title>n8n: Credential Authorization Bypass via Expression in HTTP Request Node `genericAuthType`</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-6qc9-mqvw-jg7x.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-6qc9-mqvw-jg7x.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Credential Authorization Bypass via Expression in HTTP Request Node `genericAuthType`</description>
+    </item>
+    <item>
+      <title>n8n: Account Takeover via Unverified Email Claim in Token Exchange Embed Login</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-8342-988q-86cr.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-8342-988q-86cr.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Account Takeover via Unverified Email Claim in Token Exchange Embed Login</description>
+    </item>
+    <item>
+      <title>n8n: Shared-Workflow Editor Can Exfiltrate Credentials via Inline Sub-Workflow JSON</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-cj9h-qx8g-pq2g.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-cj9h-qx8g-pq2g.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Shared-Workflow Editor Can Exfiltrate Credentials via Inline Sub-Workflow JSON</description>
+    </item>
+    <item>
+      <title>n8n: Git Node fetch/pull/pushTags Operations Bypass Sandbox Path Restriction</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-gf29-4f56-r2jf.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-gf29-4f56-r2jf.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Git Node fetch/pull/pushTags Operations Bypass Sandbox Path Restriction</description>
+    </item>
+    <item>
+      <title>n8n: Expression sandbox escape via arrow-function bodies enabling command execution</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-gv7g-jm28-cr3m.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-gv7g-jm28-cr3m.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Expression sandbox escape via arrow-function bodies enabling command execution</description>
+    </item>
+    <item>
+      <title>n8n: Authenticated code execution in the n8n Git node</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-rcv6-pvrj-4xcg.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-rcv6-pvrj-4xcg.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Authenticated code execution in the n8n Git node</description>
+    </item>
+    <item>
+      <title>n8n: Edit Image Node Format Injection Allows Arbitrary File Write</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-xmc9-4f2h-jf9c.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-xmc9-4f2h-jf9c.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Edit Image Node Format Injection Allows Arbitrary File Write</description>
+    </item>
+    <item>
+      <title>n8n: Prototype Pollution via Dot-Notation Field Names Leads To Instance-Wide Denial of Service</title>
+      <link>https://www.patchbrief.org/items/2026-07-npm-ghsa-xwx6-jjhv-84p8.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-npm-ghsa-xwx6-jjhv-84p8.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Prototype Pollution via Dot-Notation Field Names Leads To Instance-Wide Denial of Service</description>
+    </item>
+    <item>
+      <title>LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback</title>
+      <link>https://www.patchbrief.org/items/2026-07-pypi-cve-2026-59822.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-pypi-cve-2026-59822.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback</description>
+    </item>
+    <item>
+      <title>JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab</title>
+      <link>https://www.patchbrief.org/items/2026-07-pypi-ghsa-gx64-gj6p-pc4c.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-pypi-ghsa-gx64-gj6p-pc4c.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab</description>
+    </item>
+    <item>
+      <title>JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)</title>
+      <link>https://www.patchbrief.org/items/2026-07-pypi-ghsa-pppj-hq3g-57pj.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-pypi-ghsa-pppj-hq3g-57pj.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)</description>
+    </item>
     <item>
       <title>DD-WRT Stack-Based Buffer Overflow Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-07-dd-wrt-cve-2021-27137.html</link>
@@ -257,6 +425,13 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-go-cve-2026-62685.html</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <description>File Browser: Colliding username normalization gives two users the same home directory</description>
+    </item>
+    <item>
+      <title>Neutrinolabs Xrdp — CVE-2026-41521 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-07-neutrinolabs-cve-2026-41521.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-07-neutrinolabs-cve-2026-41521.html</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <description>xrdp is an open source RDP server. Versions 0.10.6 and prior contain an integer overflow vulnerability when processing screen update messages within the vnc-any connection mode. A malicious remote VNC server can send crafted image dimensions that cause an integer overflow during memory buffer size calculation, resulting in an undersized allocation. Subsequent processing of the incoming image data using the original oversized parameters leads to an out-of-bounds read. An unauthenticated remote attacker could exploit this flaw to disclose sensitive information from the heap memory or cause a den</description>
     </item>
     <item>
       <title>shell-quote: Quadratic-complexity Denial of Service in `parse()` (CWE-407)</title>

@@ -240,10 +240,538 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">707 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">732 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#360868: Analog Way Picturall Quad Compact Mark II contains a local privilege escalation vulnerability" data-vendor="Analog">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-analog-vu-360868.html">VU#360868: Analog Way Picturall Quad Compact Mark II contains a local privilege escalation vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Analog · Way Picturall Quad Compact Mark II</p>
+              <p class="feed-summary">Overview Version 3.5.8 of Analog Way&#x27;s Picturall Quad Compact Mark II server contains a local privilege escalation vulnerability, tracked as CVE-2026-14985, due to improper privilege delegation and insufficient input validation in a maintenance script. Description The Picturall Quad Compact Mark II is a compact, heavy-duty 8K media server developed by Analog Way for video playback and content management in professional audiovisual environments. The core firmware includes a maintenance script called create_local_installer.sh , and the default script permission allows the low-privileged user, picmedia , to execute it as root and without a password. An attacker creates a malicious Ext4 disk image that contains the file, picturall-version.txt , with a directory traversal string and a payload file. create_local_installer.sh reads input from... Related CVEs: CVE-2026-14985.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Way Picturall Quad Compact Mark II where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/360868">CERT/CC Vulnerability Note VU#360868</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-analog-vu-360868.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Check Point SmartConsole Improper Authentication Vulnerability" data-vendor="Check Point" data-cve="CVE-2026-16232">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-16232</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-check-point-cve-2026-16232.html">Check Point SmartConsole Improper Authentication Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Check Point · SmartConsole</p>
+              <p class="feed-summary">Check Point SmartConsole contains an improper authentication vulnerability which could allow an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-16232">NVD — CVE-2026-16232</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-check-point-cve-2026-16232.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#847406: Duplicati backup software v2.3.0.1 is vulnerable to an incorrect permission assignment vulnerability" data-vendor="Duplicati">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-duplicati-vu-847406.html">VU#847406: Duplicati backup software v2.3.0.1 is vulnerable to an incorrect permission assignment vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Duplicati · backup software v2.3.0.1</p>
+              <p class="feed-summary">Overview Duplicati v2.3.0.1 is vulnerable to arbitrary code execution when installed outside the default C:\Program Files\Duplicati 2\ directory. An attacker with local user privileges who can write files to the Duplicati installation directory can execute arbitrary code by placing malicious files, such as DLLs, in that directory. To mitigate this vulnerability, install Duplicati in the default C:\Program Files\ directory or update to the latest fixed version. Description Duplicati is a free, open-source backup solution that stores data across cloud and local storage platforms. On Windows, Duplicati is distributed as an MSI installer. By default, the installer deploys the application to C:\Program Files\Duplicati 2\ , where the directory inherits the standard protected ACLs provided by Windows. The following vulnerability affects... Related CVEs: CVE-2026-16157.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for backup software v2.3.0.1 where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/847406">CERT/CC Vulnerability Note VU#847406</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-duplicati-vu-847406.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Eclipse Jetty: DoS attack triggering OutOfMemory with 100-Continue requests" data-vendor="Maven" data-cve="CVE-2024-7708">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2024-7708</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-maven-cve-2024-7708.html">Eclipse Jetty: DoS attack triggering OutOfMemory with 100-Continue requests</a>
+              </h2>
+              <p class="feed-vendor">Maven · org.eclipse.jetty:jetty-server</p>
+              <p class="feed-summary">Eclipse Jetty: DoS attack triggering OutOfMemory with 100-Continue requests</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether org.eclipse.jetty:jetty-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 17%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-9299-c6m4-mjhc">GitHub Advisory GHSA-9299-c6m4-mjhc</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7708">NVD — CVE-2024-7708</a><a href="https://github.com/jetty/jetty.project/security/advisories/GHSA-9299-c6m4-mjhc">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-maven-cve-2024-7708.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Eclipse Jetty Digest Authentication: ISO-8859-1 lossy encoding allows authentication bypass via character substitution" data-vendor="Maven" data-cve="CVE-2026-10050">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-10050</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-maven-cve-2026-10050.html">Eclipse Jetty Digest Authentication: ISO-8859-1 lossy encoding allows authentication bypass via character substitution</a>
+              </h2>
+              <p class="feed-vendor">Maven · org.eclipse.jetty:jetty-security</p>
+              <p class="feed-summary">Eclipse Jetty Digest Authentication: ISO-8859-1 lossy encoding allows authentication bypass via character substitution</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether org.eclipse.jetty:jetty-security is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-2fvj-hgj9-j2gr">GitHub Advisory GHSA-2fvj-hgj9-j2gr</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-10050">NVD — CVE-2026-10050</a><a href="https://github.com/jetty/jetty.project/security/advisories/GHSA-2fvj-hgj9-j2gr">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-maven-cve-2026-10050.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Microsoft SharePoint Deserialization of Untrusted Data Vulnerability" data-vendor="Microsoft" data-cve="CVE-2026-50522">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-50522</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-microsoft-cve-2026-50522.html">Microsoft SharePoint Deserialization of Untrusted Data Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Microsoft · SharePoint</p>
+              <p class="feed-summary">Microsoft SharePoint contains a deserialization of untrusted data vulnerability which could allow an unauthorized attacker to execute code over a network.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-50522">NVD — CVE-2026-50522</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-microsoft-cve-2026-50522.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Next.js: Denial of Service in App Router using Server Actions" data-vendor="npm" data-cve="CVE-2026-64641">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-64641</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-cve-2026-64641.html">Next.js: Denial of Service in App Router using Server Actions</a>
+              </h2>
+              <p class="feed-vendor">npm · next</p>
+              <p class="feed-summary">Next.js: Denial of Service in App Router using Server Actions</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether next is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-m99w-x7hq-7vfj">GitHub Advisory GHSA-m99w-x7hq-7vfj</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-64641">NVD — CVE-2026-64641</a><a href="https://github.com/vercel/next.js/security/advisories/GHSA-m99w-x7hq-7vfj">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-cve-2026-64641.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Next.js: Middleware / Proxy bypass in App Router applications using Turbopack and single locale" data-vendor="npm" data-cve="CVE-2026-64642">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-64642</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-cve-2026-64642.html">Next.js: Middleware / Proxy bypass in App Router applications using Turbopack and single locale</a>
+              </h2>
+              <p class="feed-vendor">npm · next</p>
+              <p class="feed-summary">Next.js: Middleware / Proxy bypass in App Router applications using Turbopack and single locale</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether next is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-6gpp-xcg3-4w24">GitHub Advisory GHSA-6gpp-xcg3-4w24</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-64642">NVD — CVE-2026-64642</a><a href="https://github.com/vercel/next.js/security/advisories/GHSA-6gpp-xcg3-4w24">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-cve-2026-64642.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Next.js: Server-Side Request Forgery in rewrites via attacker-controlled destination hostname" data-vendor="npm" data-cve="CVE-2026-64645">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-64645</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-cve-2026-64645.html">Next.js: Server-Side Request Forgery in rewrites via attacker-controlled destination hostname</a>
+              </h2>
+              <p class="feed-vendor">npm · next</p>
+              <p class="feed-summary">Next.js: Server-Side Request Forgery in rewrites via attacker-controlled destination hostname</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether next is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-p9j2-gv94-2wf4">GitHub Advisory GHSA-p9j2-gv94-2wf4</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-64645">NVD — CVE-2026-64645</a><a href="https://github.com/vercel/next.js/security/advisories/GHSA-p9j2-gv94-2wf4">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-cve-2026-64645.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Next.js: Server-Side Request Forgery in Server Actions on custom servers" data-vendor="npm" data-cve="CVE-2026-64649">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-64649</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-cve-2026-64649.html">Next.js: Server-Side Request Forgery in Server Actions on custom servers</a>
+              </h2>
+              <p class="feed-vendor">npm · next</p>
+              <p class="feed-summary">Next.js: Server-Side Request Forgery in Server Actions on custom servers</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether next is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-89xv-2m56-2m9x">GitHub Advisory GHSA-89xv-2m56-2m9x</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-64649">NVD — CVE-2026-64649</a><a href="https://github.com/vercel/next.js/security/advisories/GHSA-89xv-2m56-2m9x">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-cve-2026-64649.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: SSO Instance-Role Provisioning Allows Privilege Escalation to Instance Owner" data-vendor="npm" data-cve="CVE-2026-65016">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-65016</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-cve-2026-65016.html">n8n: SSO Instance-Role Provisioning Allows Privilege Escalation to Instance Owner</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: SSO Instance-Role Provisioning Allows Privilege Escalation to Instance Owner</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-35q8-9mj6-wjmf">GitHub Advisory GHSA-35q8-9mj6-wjmf</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-65016">NVD — CVE-2026-65016</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-35q8-9mj6-wjmf">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-cve-2026-65016.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Send Email Node Arbitrary File Read and SSRF via Nodemailer Content-Object Type Confusion" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-2x35-3fw4-9jr4.html">n8n: Send Email Node Arbitrary File Read and SSRF via Nodemailer Content-Object Type Confusion</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Send Email Node Arbitrary File Read and SSRF via Nodemailer Content-Object Type Confusion</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-2x35-3fw4-9jr4">GitHub Advisory GHSA-2x35-3fw4-9jr4</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-2x35-3fw4-9jr4">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-2x35-3fw4-9jr4.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Bypass &quot;Allowed HTTP Request Domains&quot; Credential Restriction in Multiple AI and LLM Nodes" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-64xh-79j6-r5v8.html">n8n: Bypass &quot;Allowed HTTP Request Domains&quot; Credential Restriction in Multiple AI and LLM Nodes</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Bypass &quot;Allowed HTTP Request Domains&quot; Credential Restriction in Multiple AI and LLM Nodes</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-64xh-79j6-r5v8">GitHub Advisory GHSA-64xh-79j6-r5v8</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-64xh-79j6-r5v8">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-64xh-79j6-r5v8.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Credential Authorization Bypass via Expression in HTTP Request Node `genericAuthType`" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-6qc9-mqvw-jg7x.html">n8n: Credential Authorization Bypass via Expression in HTTP Request Node `genericAuthType`</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Credential Authorization Bypass via Expression in HTTP Request Node `genericAuthType`</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-6qc9-mqvw-jg7x">GitHub Advisory GHSA-6qc9-mqvw-jg7x</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-6qc9-mqvw-jg7x">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-6qc9-mqvw-jg7x.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Account Takeover via Unverified Email Claim in Token Exchange Embed Login" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-8342-988q-86cr.html">n8n: Account Takeover via Unverified Email Claim in Token Exchange Embed Login</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Account Takeover via Unverified Email Claim in Token Exchange Embed Login</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.9.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-8342-988q-86cr">GitHub Advisory GHSA-8342-988q-86cr</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-8342-988q-86cr">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-8342-988q-86cr.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Shared-Workflow Editor Can Exfiltrate Credentials via Inline Sub-Workflow JSON" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-cj9h-qx8g-pq2g.html">n8n: Shared-Workflow Editor Can Exfiltrate Credentials via Inline Sub-Workflow JSON</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Shared-Workflow Editor Can Exfiltrate Credentials via Inline Sub-Workflow JSON</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.2.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-cj9h-qx8g-pq2g">GitHub Advisory GHSA-cj9h-qx8g-pq2g</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-cj9h-qx8g-pq2g">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-cj9h-qx8g-pq2g.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Git Node fetch/pull/pushTags Operations Bypass Sandbox Path Restriction" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-gf29-4f56-r2jf.html">n8n: Git Node fetch/pull/pushTags Operations Bypass Sandbox Path Restriction</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Git Node fetch/pull/pushTags Operations Bypass Sandbox Path Restriction</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-gf29-4f56-r2jf">GitHub Advisory GHSA-gf29-4f56-r2jf</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-gf29-4f56-r2jf">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-gf29-4f56-r2jf.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Expression sandbox escape via arrow-function bodies enabling command execution" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-gv7g-jm28-cr3m.html">n8n: Expression sandbox escape via arrow-function bodies enabling command execution</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Expression sandbox escape via arrow-function bodies enabling command execution</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-gv7g-jm28-cr3m">GitHub Advisory GHSA-gv7g-jm28-cr3m</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-gv7g-jm28-cr3m">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-gv7g-jm28-cr3m.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Authenticated code execution in the n8n Git node" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-rcv6-pvrj-4xcg.html">n8n: Authenticated code execution in the n8n Git node</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Authenticated code execution in the n8n Git node</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-rcv6-pvrj-4xcg">GitHub Advisory GHSA-rcv6-pvrj-4xcg</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-rcv6-pvrj-4xcg">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-rcv6-pvrj-4xcg.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Edit Image Node Format Injection Allows Arbitrary File Write" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-xmc9-4f2h-jf9c.html">n8n: Edit Image Node Format Injection Allows Arbitrary File Write</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Edit Image Node Format Injection Allows Arbitrary File Write</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-xmc9-4f2h-jf9c">GitHub Advisory GHSA-xmc9-4f2h-jf9c</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-xmc9-4f2h-jf9c">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-xmc9-4f2h-jf9c.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Prototype Pollution via Dot-Notation Field Names Leads To Instance-Wide Denial of Service" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-npm-ghsa-xwx6-jjhv-84p8.html">n8n: Prototype Pollution via Dot-Notation Field Names Leads To Instance-Wide Denial of Service</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Prototype Pollution via Dot-Notation Field Names Leads To Instance-Wide Denial of Service</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-xwx6-jjhv-84p8">GitHub Advisory GHSA-xwx6-jjhv-84p8</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-xwx6-jjhv-84p8">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-npm-ghsa-xwx6-jjhv-84p8.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback" data-vendor="PyPI" data-cve="CVE-2026-59822">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-59822</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-pypi-cve-2026-59822.html">LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback</a>
+              </h2>
+              <p class="feed-vendor">PyPI · litellm</p>
+              <p class="feed-summary">LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether litellm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 16%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-7488-6r32-c95q">GitHub Advisory GHSA-7488-6r32-c95q</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59822">NVD — CVE-2026-59822</a><a href="https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-pypi-cve-2026-59822.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab" data-vendor="PyPI">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-pypi-ghsa-gx64-gj6p-pc4c.html">JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab</a>
+              </h2>
+              <p class="feed-vendor">PyPI · jupyterlab</p>
+              <p class="feed-summary">JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether jupyterlab is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.5.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-gx64-gj6p-pc4c">GitHub Advisory GHSA-gx64-gj6p-pc4c</a><a href="https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-gx64-gj6p-pc4c">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-pypi-ghsa-gx64-gj6p-pc4c.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)" data-vendor="PyPI">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 22, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-pypi-ghsa-pppj-hq3g-57pj.html">JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)</a>
+              </h2>
+              <p class="feed-vendor">PyPI · jupyterlab</p>
+              <p class="feed-summary">JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether jupyterlab is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-pppj-hq3g-57pj">GitHub Advisory GHSA-pppj-hq3g-57pj</a><a href="https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-pppj-hq3g-57pj">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-pypi-ghsa-pppj-hq3g-57pj.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="DD-WRT Stack-Based Buffer Overflow Vulnerability" data-vendor="DD-WRT" data-cve="CVE-2021-27137">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -1034,6 +1562,28 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-7rc3-g7h6-22m7">GitHub Advisory GHSA-7rc3-g7h6-22m7</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-62685">NVD — CVE-2026-62685</a><a href="https://github.com/filebrowser/filebrowser/security/advisories/GHSA-7rc3-g7h6-22m7">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-07-go-cve-2026-62685.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Neutrinolabs Xrdp — CVE-2026-41521 (Critical)" data-vendor="Neutrinolabs" data-cve="CVE-2026-41521">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Jul 20, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-41521</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-07-neutrinolabs-cve-2026-41521.html">Neutrinolabs Xrdp — CVE-2026-41521 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Neutrinolabs · Xrdp</p>
+              <p class="feed-summary">xrdp is an open source RDP server. Versions 0.10.6 and prior contain an integer overflow vulnerability when processing screen update messages within the vnc-any connection mode. A malicious remote VNC server can send crafted image dimensions that cause an integer overflow during memory buffer size calculation, resulting in an undersized allocation. Subsequent processing of the incoming image data using the original oversized parameters leads to an out-of-bounds read. An unauthenticated remote attacker could exploit this flaw to disclose sensitive information from the heap memory or cause a den</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-41521 in your asset inventory. Apply patches per vendor guidance and verify Xrdp is not exposed. CVSS score: 8.2. EPSS probability: 0.6%; percentile: 45%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41521">NVD — CVE-2026-41521</a><a href="https://github.com/neutrinolabs/xrdp/releases/tag/v0.10.6.1">Source reference</a><a href="https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-v8w6-pf78-9458">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-07-neutrinolabs-cve-2026-41521.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="shell-quote: Quadratic-complexity Denial of Service in `parse()` (CWE-407)" data-vendor="npm" data-cve="CVE-2026-13311">

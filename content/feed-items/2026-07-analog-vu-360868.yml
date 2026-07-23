@@ -1,0 +1,37 @@
+id: 2026-07-analog-vu-360868
+slug: 2026-07-analog-vu-360868
+external_id: VU-360868
+source: cert_vu
+date: '2026-07-22'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#360868: Analog Way Picturall Quad Compact Mark II contains a local privilege
+  escalation vulnerability'
+summary: 'Overview Version 3.5.8 of Analog Way''s Picturall Quad Compact Mark II server
+  contains a local privilege escalation vulnerability, tracked as CVE-2026-14985,
+  due to improper privilege delegation and insufficient input validation in a maintenance
+  script. Description The Picturall Quad Compact Mark II is a compact, heavy-duty
+  8K media server developed by Analog Way for video playback and content management
+  in professional audiovisual environments. The core firmware includes a maintenance
+  script called create_local_installer.sh , and the default script permission allows
+  the low-privileged user, picmedia , to execute it as root and without a password.
+  An attacker creates a malicious Ext4 disk image that contains the file, picturall-version.txt
+  , with a directory traversal string and a payload file. create_local_installer.sh
+  reads input from... Related CVEs: CVE-2026-14985.'
+vendor: Analog
+product: Way Picturall Quad Compact Mark II
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Way Picturall Quad Compact Mark II where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#360868
+  url: https://kb.cert.org/vuls/id/360868
+tags:
+- vu-360868
+- coordinated-disclosure
+- analog
+- cert-vu
+is_sample: false

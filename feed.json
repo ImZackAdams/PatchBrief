@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-22T11:10:05Z",
-  "total_items": 707,
+  "generated": "2026-07-23T11:10:09Z",
+  "total_items": 732,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-22T11:10:05Z",
+    "generated": "2026-07-23T11:10:09Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-07-22T11:09:53Z",
-        "finished_at": "2026-07-22T11:09:54Z"
+        "items_seen": 6,
+        "started_at": "2026-07-23T11:09:58Z",
+        "finished_at": "2026-07-23T11:09:59Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-22T11:09:54Z",
-        "finished_at": "2026-07-22T11:09:54Z"
+        "started_at": "2026-07-23T11:09:59Z",
+        "finished_at": "2026-07-23T11:09:59Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-07-22T11:09:54Z",
-        "finished_at": "2026-07-22T11:10:01Z"
+        "started_at": "2026-07-23T11:09:59Z",
+        "finished_at": "2026-07-23T11:10:06Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-07-22T11:10:01Z",
-        "finished_at": "2026-07-22T11:10:03Z"
+        "started_at": "2026-07-23T11:10:06Z",
+        "finished_at": "2026-07-23T11:10:07Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-07-22T11:10:03Z",
-        "finished_at": "2026-07-22T11:10:03Z"
+        "items_seen": 3,
+        "started_at": "2026-07-23T11:10:07Z",
+        "finished_at": "2026-07-23T11:10:07Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,790 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-22T11:10:03Z",
-        "finished_at": "2026-07-22T11:10:04Z"
+        "started_at": "2026-07-23T11:10:07Z",
+        "finished_at": "2026-07-23T11:10:08Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 21,
-        "started_at": "2026-07-22T11:10:04Z",
-        "finished_at": "2026-07-22T11:10:04Z"
+        "items_seen": 15,
+        "started_at": "2026-07-23T11:10:08Z",
+        "finished_at": "2026-07-23T11:10:08Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-analog-vu-360868",
+      "slug": "2026-07-analog-vu-360868",
+      "url": "https://www.patchbrief.org/items/2026-07-analog-vu-360868.html",
+      "date": "2026-07-22",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#360868: Analog Way Picturall Quad Compact Mark II contains a local privilege escalation vulnerability",
+      "summary": "Overview Version 3.5.8 of Analog Way's Picturall Quad Compact Mark II server contains a local privilege escalation vulnerability, tracked as CVE-2026-14985, due to improper privilege delegation and insufficient input validation in a maintenance script. Description The Picturall Quad Compact Mark II is a compact, heavy-duty 8K media server developed by Analog Way for video playback and content management in professional audiovisual environments. The core firmware includes a maintenance script called create_local_installer.sh , and the default script permission allows the low-privileged user, picmedia , to execute it as root and without a password. An attacker creates a malicious Ext4 disk image that contains the file, picturall-version.txt , with a directory traversal string and a payload file. create_local_installer.sh reads input from... Related CVEs: CVE-2026-14985.",
+      "vendor": "Analog",
+      "product": "Way Picturall Quad Compact Mark II",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Way Picturall Quad Compact Mark II where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-360868",
+        "coordinated-disclosure",
+        "analog",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#360868",
+          "url": "https://kb.cert.org/vuls/id/360868"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-check-point-cve-2026-16232",
+      "slug": "2026-07-check-point-cve-2026-16232",
+      "url": "https://www.patchbrief.org/items/2026-07-check-point-cve-2026-16232.html",
+      "date": "2026-07-22",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Check Point SmartConsole Improper Authentication Vulnerability",
+      "summary": "Check Point SmartConsole contains an improper authentication vulnerability which could allow an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges.",
+      "vendor": "Check Point",
+      "product": "SmartConsole",
+      "cve": "CVE-2026-16232",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-16232 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-25. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-16232",
+        "kev",
+        "check-point",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-16232",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16232"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-duplicati-vu-847406",
+      "slug": "2026-07-duplicati-vu-847406",
+      "url": "https://www.patchbrief.org/items/2026-07-duplicati-vu-847406.html",
+      "date": "2026-07-22",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#847406: Duplicati backup software v2.3.0.1 is vulnerable to an incorrect permission assignment vulnerability",
+      "summary": "Overview Duplicati v2.3.0.1 is vulnerable to arbitrary code execution when installed outside the default C:\\Program Files\\Duplicati 2\\ directory. An attacker with local user privileges who can write files to the Duplicati installation directory can execute arbitrary code by placing malicious files, such as DLLs, in that directory. To mitigate this vulnerability, install Duplicati in the default C:\\Program Files\\ directory or update to the latest fixed version. Description Duplicati is a free, open-source backup solution that stores data across cloud and local storage platforms. On Windows, Duplicati is distributed as an MSI installer. By default, the installer deploys the application to C:\\Program Files\\Duplicati 2\\ , where the directory inherits the standard protected ACLs provided by Windows. The following vulnerability affects... Related CVEs: CVE-2026-16157.",
+      "vendor": "Duplicati",
+      "product": "backup software v2.3.0.1",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for backup software v2.3.0.1 where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-847406",
+        "coordinated-disclosure",
+        "duplicati",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#847406",
+          "url": "https://kb.cert.org/vuls/id/847406"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2024-7708",
+      "slug": "2026-07-maven-cve-2024-7708",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2024-7708.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Eclipse Jetty: DoS attack triggering OutOfMemory with 100-Continue requests",
+      "summary": "Eclipse Jetty: DoS attack triggering OutOfMemory with 100-Continue requests",
+      "vendor": "Maven",
+      "product": "org.eclipse.jetty:jetty-server",
+      "cve": "CVE-2024-7708",
+      "operator_check": "Check whether org.eclipse.jetty:jetty-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.eclipse.jetty:jetty-server. Prioritize it with other application dependency updates, especially because EPSS places it in the 17% percentile.",
+      "tags": [
+        "cve-2024-7708",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9299-c6m4-mjhc",
+          "url": "https://github.com/advisories/GHSA-9299-c6m4-mjhc"
+        },
+        {
+          "title": "NVD — CVE-2024-7708",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7708"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-9299-c6m4-mjhc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-10050",
+      "slug": "2026-07-maven-cve-2026-10050",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-10050.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Eclipse Jetty Digest Authentication: ISO-8859-1 lossy encoding allows authentication bypass via character substitution",
+      "summary": "Eclipse Jetty Digest Authentication: ISO-8859-1 lossy encoding allows authentication bypass via character substitution",
+      "vendor": "Maven",
+      "product": "org.eclipse.jetty:jetty-security",
+      "cve": "CVE-2026-10050",
+      "operator_check": "Check whether org.eclipse.jetty:jetty-security is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.eclipse.jetty:jetty-security. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-10050",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2fvj-hgj9-j2gr",
+          "url": "https://github.com/advisories/GHSA-2fvj-hgj9-j2gr"
+        },
+        {
+          "title": "NVD — CVE-2026-10050",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10050"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-2fvj-hgj9-j2gr"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-microsoft-cve-2026-50522",
+      "slug": "2026-07-microsoft-cve-2026-50522",
+      "url": "https://www.patchbrief.org/items/2026-07-microsoft-cve-2026-50522.html",
+      "date": "2026-07-22",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
+      "summary": "Microsoft SharePoint contains a deserialization of untrusted data vulnerability which could allow an unauthorized attacker to execute code over a network.",
+      "vendor": "Microsoft",
+      "product": "SharePoint",
+      "cve": "CVE-2026-50522",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-50522 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-25. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-50522",
+        "kev",
+        "microsoft",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-50522",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50522"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-64641",
+      "slug": "2026-07-npm-cve-2026-64641",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-64641.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Next.js: Denial of Service in App Router using Server Actions",
+      "summary": "Next.js: Denial of Service in App Router using Server Actions",
+      "vendor": "npm",
+      "product": "next",
+      "cve": "CVE-2026-64641",
+      "operator_check": "Check whether next is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for next. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-64641",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m99w-x7hq-7vfj",
+          "url": "https://github.com/advisories/GHSA-m99w-x7hq-7vfj"
+        },
+        {
+          "title": "NVD — CVE-2026-64641",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64641"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-m99w-x7hq-7vfj"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-64642",
+      "slug": "2026-07-npm-cve-2026-64642",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-64642.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Next.js: Middleware / Proxy bypass in App Router applications using Turbopack and single locale",
+      "summary": "Next.js: Middleware / Proxy bypass in App Router applications using Turbopack and single locale",
+      "vendor": "npm",
+      "product": "next",
+      "cve": "CVE-2026-64642",
+      "operator_check": "Check whether next is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for next. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-64642",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6gpp-xcg3-4w24",
+          "url": "https://github.com/advisories/GHSA-6gpp-xcg3-4w24"
+        },
+        {
+          "title": "NVD — CVE-2026-64642",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64642"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-6gpp-xcg3-4w24"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-64645",
+      "slug": "2026-07-npm-cve-2026-64645",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-64645.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Next.js: Server-Side Request Forgery in rewrites via attacker-controlled destination hostname",
+      "summary": "Next.js: Server-Side Request Forgery in rewrites via attacker-controlled destination hostname",
+      "vendor": "npm",
+      "product": "next",
+      "cve": "CVE-2026-64645",
+      "operator_check": "Check whether next is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for next. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-64645",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p9j2-gv94-2wf4",
+          "url": "https://github.com/advisories/GHSA-p9j2-gv94-2wf4"
+        },
+        {
+          "title": "NVD — CVE-2026-64645",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64645"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p9j2-gv94-2wf4"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-64649",
+      "slug": "2026-07-npm-cve-2026-64649",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-64649.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Next.js: Server-Side Request Forgery in Server Actions on custom servers",
+      "summary": "Next.js: Server-Side Request Forgery in Server Actions on custom servers",
+      "vendor": "npm",
+      "product": "next",
+      "cve": "CVE-2026-64649",
+      "operator_check": "Check whether next is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for next. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-64649",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-89xv-2m56-2m9x",
+          "url": "https://github.com/advisories/GHSA-89xv-2m56-2m9x"
+        },
+        {
+          "title": "NVD — CVE-2026-64649",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64649"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-89xv-2m56-2m9x"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-65016",
+      "slug": "2026-07-npm-cve-2026-65016",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-65016.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: SSO Instance-Role Provisioning Allows Privilege Escalation to Instance Owner",
+      "summary": "n8n: SSO Instance-Role Provisioning Allows Privilege Escalation to Instance Owner",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": "CVE-2026-65016",
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-65016",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-35q8-9mj6-wjmf",
+          "url": "https://github.com/advisories/GHSA-35q8-9mj6-wjmf"
+        },
+        {
+          "title": "NVD — CVE-2026-65016",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65016"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-35q8-9mj6-wjmf"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-2x35-3fw4-9jr4",
+      "slug": "2026-07-npm-ghsa-2x35-3fw4-9jr4",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-2x35-3fw4-9jr4.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Send Email Node Arbitrary File Read and SSRF via Nodemailer Content-Object Type Confusion",
+      "summary": "n8n: Send Email Node Arbitrary File Read and SSRF via Nodemailer Content-Object Type Confusion",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-2x35-3fw4-9jr4",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2x35-3fw4-9jr4",
+          "url": "https://github.com/advisories/GHSA-2x35-3fw4-9jr4"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-2x35-3fw4-9jr4"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-64xh-79j6-r5v8",
+      "slug": "2026-07-npm-ghsa-64xh-79j6-r5v8",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-64xh-79j6-r5v8.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Bypass \"Allowed HTTP Request Domains\" Credential Restriction in Multiple AI and LLM Nodes",
+      "summary": "n8n: Bypass \"Allowed HTTP Request Domains\" Credential Restriction in Multiple AI and LLM Nodes",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-64xh-79j6-r5v8",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-64xh-79j6-r5v8",
+          "url": "https://github.com/advisories/GHSA-64xh-79j6-r5v8"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-64xh-79j6-r5v8"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-6qc9-mqvw-jg7x",
+      "slug": "2026-07-npm-ghsa-6qc9-mqvw-jg7x",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-6qc9-mqvw-jg7x.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Credential Authorization Bypass via Expression in HTTP Request Node `genericAuthType`",
+      "summary": "n8n: Credential Authorization Bypass via Expression in HTTP Request Node `genericAuthType`",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-6qc9-mqvw-jg7x",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6qc9-mqvw-jg7x",
+          "url": "https://github.com/advisories/GHSA-6qc9-mqvw-jg7x"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-6qc9-mqvw-jg7x"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-8342-988q-86cr",
+      "slug": "2026-07-npm-ghsa-8342-988q-86cr",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-8342-988q-86cr.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Account Takeover via Unverified Email Claim in Token Exchange Embed Login",
+      "summary": "n8n: Account Takeover via Unverified Email Claim in Token Exchange Embed Login",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.9.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-8342-988q-86cr",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8342-988q-86cr",
+          "url": "https://github.com/advisories/GHSA-8342-988q-86cr"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-8342-988q-86cr"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-cj9h-qx8g-pq2g",
+      "slug": "2026-07-npm-ghsa-cj9h-qx8g-pq2g",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-cj9h-qx8g-pq2g.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Shared-Workflow Editor Can Exfiltrate Credentials via Inline Sub-Workflow JSON",
+      "summary": "n8n: Shared-Workflow Editor Can Exfiltrate Credentials via Inline Sub-Workflow JSON",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-cj9h-qx8g-pq2g",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cj9h-qx8g-pq2g",
+          "url": "https://github.com/advisories/GHSA-cj9h-qx8g-pq2g"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-cj9h-qx8g-pq2g"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-gf29-4f56-r2jf",
+      "slug": "2026-07-npm-ghsa-gf29-4f56-r2jf",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-gf29-4f56-r2jf.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Git Node fetch/pull/pushTags Operations Bypass Sandbox Path Restriction",
+      "summary": "n8n: Git Node fetch/pull/pushTags Operations Bypass Sandbox Path Restriction",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-gf29-4f56-r2jf",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gf29-4f56-r2jf",
+          "url": "https://github.com/advisories/GHSA-gf29-4f56-r2jf"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-gf29-4f56-r2jf"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-gv7g-jm28-cr3m",
+      "slug": "2026-07-npm-ghsa-gv7g-jm28-cr3m",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-gv7g-jm28-cr3m.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Expression sandbox escape via arrow-function bodies enabling command execution",
+      "summary": "n8n: Expression sandbox escape via arrow-function bodies enabling command execution",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-gv7g-jm28-cr3m",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gv7g-jm28-cr3m",
+          "url": "https://github.com/advisories/GHSA-gv7g-jm28-cr3m"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-gv7g-jm28-cr3m"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-rcv6-pvrj-4xcg",
+      "slug": "2026-07-npm-ghsa-rcv6-pvrj-4xcg",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-rcv6-pvrj-4xcg.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Authenticated code execution in the n8n Git node",
+      "summary": "n8n: Authenticated code execution in the n8n Git node",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-rcv6-pvrj-4xcg",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rcv6-pvrj-4xcg",
+          "url": "https://github.com/advisories/GHSA-rcv6-pvrj-4xcg"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-rcv6-pvrj-4xcg"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-xmc9-4f2h-jf9c",
+      "slug": "2026-07-npm-ghsa-xmc9-4f2h-jf9c",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-xmc9-4f2h-jf9c.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Edit Image Node Format Injection Allows Arbitrary File Write",
+      "summary": "n8n: Edit Image Node Format Injection Allows Arbitrary File Write",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-xmc9-4f2h-jf9c",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xmc9-4f2h-jf9c",
+          "url": "https://github.com/advisories/GHSA-xmc9-4f2h-jf9c"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-xmc9-4f2h-jf9c"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-xwx6-jjhv-84p8",
+      "slug": "2026-07-npm-ghsa-xwx6-jjhv-84p8",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-xwx6-jjhv-84p8.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Prototype Pollution via Dot-Notation Field Names Leads To Instance-Wide Denial of Service",
+      "summary": "n8n: Prototype Pollution via Dot-Notation Field Names Leads To Instance-Wide Denial of Service",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": null,
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-xwx6-jjhv-84p8",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xwx6-jjhv-84p8",
+          "url": "https://github.com/advisories/GHSA-xwx6-jjhv-84p8"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-xwx6-jjhv-84p8"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-59822",
+      "slug": "2026-07-pypi-cve-2026-59822",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-59822.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback",
+      "summary": "LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback",
+      "vendor": "PyPI",
+      "product": "litellm",
+      "cve": "CVE-2026-59822",
+      "operator_check": "Check whether litellm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for litellm. Prioritize it with other application dependency updates, especially because EPSS places it in the 16% percentile.",
+      "tags": [
+        "cve-2026-59822",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7488-6r32-c95q",
+          "url": "https://github.com/advisories/GHSA-7488-6r32-c95q"
+        },
+        {
+          "title": "NVD — CVE-2026-59822",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59822"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-ghsa-gx64-gj6p-pc4c",
+      "slug": "2026-07-pypi-ghsa-gx64-gj6p-pc4c",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-ghsa-gx64-gj6p-pc4c.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab",
+      "summary": "JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab",
+      "vendor": "PyPI",
+      "product": "jupyterlab",
+      "cve": null,
+      "operator_check": "Check whether jupyterlab is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.5.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for jupyterlab. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-gx64-gj6p-pc4c",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gx64-gj6p-pc4c",
+          "url": "https://github.com/advisories/GHSA-gx64-gj6p-pc4c"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-gx64-gj6p-pc4c"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-ghsa-pppj-hq3g-57pj",
+      "slug": "2026-07-pypi-ghsa-pppj-hq3g-57pj",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-ghsa-pppj-hq3g-57pj.html",
+      "date": "2026-07-22",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)",
+      "summary": "JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)",
+      "vendor": "PyPI",
+      "product": "jupyterlab",
+      "cve": null,
+      "operator_check": "Check whether jupyterlab is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for jupyterlab. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-pppj-hq3g-57pj",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pppj-hq3g-57pj",
+          "url": "https://github.com/advisories/GHSA-pppj-hq3g-57pj"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-pppj-hq3g-57pj"
+        }
+      ]
+    },
     {
       "id": "2026-07-dd-wrt-cve-2021-27137",
       "slug": "2026-07-dd-wrt-cve-2021-27137",
@@ -1288,6 +2057,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/filebrowser/filebrowser/security/advisories/GHSA-7rc3-g7h6-22m7"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-neutrinolabs-cve-2026-41521",
+      "slug": "2026-07-neutrinolabs-cve-2026-41521",
+      "url": "https://www.patchbrief.org/items/2026-07-neutrinolabs-cve-2026-41521.html",
+      "date": "2026-07-20",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Neutrinolabs Xrdp — CVE-2026-41521 (Critical)",
+      "summary": "xrdp is an open source RDP server. Versions 0.10.6 and prior contain an integer overflow vulnerability when processing screen update messages within the vnc-any connection mode. A malicious remote VNC server can send crafted image dimensions that cause an integer overflow during memory buffer size calculation, resulting in an undersized allocation. Subsequent processing of the incoming image data using the original oversized parameters leads to an out-of-bounds read. An unauthenticated remote attacker could exploit this flaw to disclose sensitive information from the heap memory or cause a den",
+      "vendor": "Neutrinolabs",
+      "product": "Xrdp",
+      "cve": "CVE-2026-41521",
+      "operator_check": "Review CVE-2026-41521 in your asset inventory. Apply patches per vendor guidance and verify Xrdp is not exposed. CVSS score: 8.2. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.2) in Neutrinolabs Xrdp. Patch or mitigate promptly. EPSS percentile: 45%.",
+      "tags": [
+        "cve-2026-41521",
+        "vendor-advisory",
+        "neutrinolabs",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-41521",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41521"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/neutrinolabs/xrdp/releases/tag/v0.10.6.1"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-v8w6-pf78-9458"
         }
       ]
     },

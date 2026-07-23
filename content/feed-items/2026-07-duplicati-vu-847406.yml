@@ -1,0 +1,37 @@
+id: 2026-07-duplicati-vu-847406
+slug: 2026-07-duplicati-vu-847406
+external_id: VU-847406
+source: cert_vu
+date: '2026-07-22'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#847406: Duplicati backup software v2.3.0.1 is vulnerable to an incorrect
+  permission assignment vulnerability'
+summary: 'Overview Duplicati v2.3.0.1 is vulnerable to arbitrary code execution when
+  installed outside the default C:\Program Files\Duplicati 2\ directory. An attacker
+  with local user privileges who can write files to the Duplicati installation directory
+  can execute arbitrary code by placing malicious files, such as DLLs, in that directory.
+  To mitigate this vulnerability, install Duplicati in the default C:\Program Files\
+  directory or update to the latest fixed version. Description Duplicati is a free,
+  open-source backup solution that stores data across cloud and local storage platforms.
+  On Windows, Duplicati is distributed as an MSI installer. By default, the installer
+  deploys the application to C:\Program Files\Duplicati 2\ , where the directory inherits
+  the standard protected ACLs provided by Windows. The following vulnerability affects...
+  Related CVEs: CVE-2026-16157.'
+vendor: Duplicati
+product: backup software v2.3.0.1
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for backup software v2.3.0.1 where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#847406
+  url: https://kb.cert.org/vuls/id/847406
+tags:
+- vu-847406
+- coordinated-disclosure
+- duplicati
+- cert-vu
+is_sample: false
