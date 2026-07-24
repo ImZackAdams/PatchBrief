@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-23T11:10:09Z",
-  "total_items": 732,
+  "generated": "2026-07-24T11:03:45Z",
+  "total_items": 743,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-23T11:10:09Z",
+    "generated": "2026-07-24T11:03:45Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 6,
-        "started_at": "2026-07-23T11:09:58Z",
-        "finished_at": "2026-07-23T11:09:59Z"
+        "started_at": "2026-07-24T11:03:32Z",
+        "finished_at": "2026-07-24T11:03:32Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-23T11:09:59Z",
-        "finished_at": "2026-07-23T11:09:59Z"
+        "started_at": "2026-07-24T11:03:32Z",
+        "finished_at": "2026-07-24T11:03:32Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-07-23T11:09:59Z",
-        "finished_at": "2026-07-23T11:10:06Z"
+        "items_seen": 0,
+        "started_at": "2026-07-24T11:03:32Z",
+        "finished_at": "2026-07-24T11:03:39Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-07-23T11:10:06Z",
-        "finished_at": "2026-07-23T11:10:07Z"
+        "started_at": "2026-07-24T11:03:39Z",
+        "finished_at": "2026-07-24T11:03:41Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-07-23T11:10:07Z",
-        "finished_at": "2026-07-23T11:10:07Z"
+        "items_seen": 4,
+        "started_at": "2026-07-24T11:03:41Z",
+        "finished_at": "2026-07-24T11:03:42Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,386 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-23T11:10:07Z",
-        "finished_at": "2026-07-23T11:10:08Z"
+        "started_at": "2026-07-24T11:03:42Z",
+        "finished_at": "2026-07-24T11:03:43Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 15,
-        "started_at": "2026-07-23T11:10:08Z",
-        "finished_at": "2026-07-23T11:10:08Z"
+        "items_seen": 14,
+        "started_at": "2026-07-24T11:03:43Z",
+        "finished_at": "2026-07-24T11:03:43Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-composer-cve-2026-59931",
+      "slug": "2026-07-composer-cve-2026-59931",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-59931.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PHPSpreadsheet: SSRF bypass via HTTP redirect in WEBSERVICE() domain whitelist",
+      "summary": "PHPSpreadsheet: SSRF bypass via HTTP redirect in WEBSERVICE() domain whitelist",
+      "vendor": "Composer",
+      "product": "phpoffice/phpspreadsheet",
+      "cve": "CVE-2026-59931",
+      "operator_check": "Check whether phpoffice/phpspreadsheet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for phpoffice/phpspreadsheet. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-59931",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6hq5-7373-42rg",
+          "url": "https://github.com/advisories/GHSA-6hq5-7373-42rg"
+        },
+        {
+          "title": "NVD — CVE-2026-59931",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59931"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-6hq5-7373-42rg"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-59932",
+      "slug": "2026-07-composer-cve-2026-59932",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-59932.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PHPSpreadsheet: Gnumeric reader unbounded gzip expansion causes memory exhaustion",
+      "summary": "PHPSpreadsheet: Gnumeric reader unbounded gzip expansion causes memory exhaustion",
+      "vendor": "Composer",
+      "product": "phpoffice/phpspreadsheet",
+      "cve": "CVE-2026-59932",
+      "operator_check": "Check whether phpoffice/phpspreadsheet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for phpoffice/phpspreadsheet. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-59932",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2mrg-gjxq-2gvr",
+          "url": "https://github.com/advisories/GHSA-2mrg-gjxq-2gvr"
+        },
+        {
+          "title": "NVD — CVE-2026-59932",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59932"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-2mrg-gjxq-2gvr"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-59933",
+      "slug": "2026-07-composer-cve-2026-59933",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-59933.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PHPSpreadsheet: XLS/OLE sector-chain self-loop causes memory exhaustion",
+      "summary": "PHPSpreadsheet: XLS/OLE sector-chain self-loop causes memory exhaustion",
+      "vendor": "Composer",
+      "product": "phpoffice/phpspreadsheet",
+      "cve": "CVE-2026-59933",
+      "operator_check": "Check whether phpoffice/phpspreadsheet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for phpoffice/phpspreadsheet. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-59933",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xh5m-36r6-47m3",
+          "url": "https://github.com/advisories/GHSA-xh5m-36r6-47m3"
+        },
+        {
+          "title": "NVD — CVE-2026-59933",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59933"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-xh5m-36r6-47m3"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-logto-vu-492466",
+      "slug": "2026-07-logto-vu-492466",
+      "url": "https://www.patchbrief.org/items/2026-07-logto-vu-492466.html",
+      "date": "2026-07-23",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#492466: Logto Identity Platform has authentication and authorization failures in core protocol handling",
+      "summary": "Overview The Logto platform contains multiple vulnerabilities affecting the identity‑processing pipeline. These flaws reduce the reliability of authentication and authorization decisions and may allow attackers to bypass account‑ownership checks, skip MFA, replay externally issued SSO responses, or submit identity assertions without proper cryptographic or validity checks. Collectively, the issues create several paths for unauthorized access across both local and federated sign‑in flows. Description Developed by Silverhand Inc., Logto is an identity and access management system for software as a service (SaaS) and AI applications. It provides multi‑tenant authentication, single sign-on (SSO), role-based access control (RBAC), support for openId connect (OIDC), open authorization (OAuth) 2.1, and Security Assertion Markup Language (SAML)... Related CVEs: CVE-2026-15611, CVE-2026-15612, CVE-2026-15614, CVE-2026-15615.",
+      "vendor": "Logto",
+      "product": "Identity Platform",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Identity Platform where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-492466",
+        "coordinated-disclosure",
+        "logto",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#492466",
+          "url": "https://kb.cert.org/vuls/id/492466"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-45623",
+      "slug": "2026-07-npm-cve-2026-45623",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-45623.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
+      "summary": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
+      "vendor": "npm",
+      "product": "postcss",
+      "cve": "CVE-2026-45623",
+      "operator_check": "Check whether postcss is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for postcss. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45623",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6g55-p6wh-862q",
+          "url": "https://github.com/advisories/GHSA-6g55-p6wh-862q"
+        },
+        {
+          "title": "NVD — CVE-2026-45623",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45623"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/postcss/postcss/security/advisories/GHSA-6g55-p6wh-862q"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-47219",
+      "slug": "2026-07-npm-cve-2026-47219",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-47219.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "find-my-way: DDoS with HTTP2",
+      "summary": "find-my-way: DDoS with HTTP2",
+      "vendor": "npm",
+      "product": "find-my-way",
+      "cve": "CVE-2026-47219",
+      "operator_check": "Check whether find-my-way is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for find-my-way. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-47219",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c96f-x56v-gq3h",
+          "url": "https://github.com/advisories/GHSA-c96f-x56v-gq3h"
+        },
+        {
+          "title": "NVD — CVE-2026-47219",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47219"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/delvedor/find-my-way/security/advisories/GHSA-c96f-x56v-gq3h"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-7rqj-j65f-68wh",
+      "slug": "2026-07-npm-ghsa-7rqj-j65f-68wh",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-7rqj-j65f-68wh.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass",
+      "summary": "Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass",
+      "vendor": "npm",
+      "product": "@auth/core",
+      "cve": null,
+      "operator_check": "Check whether @auth/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @auth/core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-7rqj-j65f-68wh",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7rqj-j65f-68wh",
+          "url": "https://github.com/advisories/GHSA-7rqj-j65f-68wh"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nextauthjs/next-auth/security/advisories/GHSA-7rqj-j65f-68wh"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-8fpg-xm3f-6cx3",
+      "slug": "2026-07-npm-ghsa-8fpg-xm3f-6cx3",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-8fpg-xm3f-6cx3.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Auth.js: Configuration errors can cause existence-based auth checks to fail open (auth object populated with an error)",
+      "summary": "Auth.js: Configuration errors can cause existence-based auth checks to fail open (auth object populated with an error)",
+      "vendor": "npm",
+      "product": "next-auth",
+      "cve": null,
+      "operator_check": "Check whether next-auth is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for next-auth. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-8fpg-xm3f-6cx3",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8fpg-xm3f-6cx3",
+          "url": "https://github.com/advisories/GHSA-8fpg-xm3f-6cx3"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nextauthjs/next-auth/security/advisories/GHSA-8fpg-xm3f-6cx3"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-xmf8-cvqr-rfgj",
+      "slug": "2026-07-npm-ghsa-xmf8-cvqr-rfgj",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-xmf8-cvqr-rfgj.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers",
+      "summary": "Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers",
+      "vendor": "npm",
+      "product": "@auth/core",
+      "cve": null,
+      "operator_check": "Check whether @auth/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @auth/core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-xmf8-cvqr-rfgj",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xmf8-cvqr-rfgj",
+          "url": "https://github.com/advisories/GHSA-xmf8-cvqr-rfgj"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nextauthjs/next-auth/security/advisories/GHSA-xmf8-cvqr-rfgj"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-59935",
+      "slug": "2026-07-pypi-cve-2026-59935",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-59935.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pypdf: Possible infinite loop for not terminated inline images (ASCII85 and ASCIIHex filter)",
+      "summary": "pypdf: Possible infinite loop for not terminated inline images (ASCII85 and ASCIIHex filter)",
+      "vendor": "PyPI",
+      "product": "pypdf",
+      "cve": "CVE-2026-59935",
+      "operator_check": "Check whether pypdf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 28%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pypdf. Prioritize it with other application dependency updates, especially because EPSS places it in the 28% percentile.",
+      "tags": [
+        "cve-2026-59935",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g867-7843-wf8q",
+          "url": "https://github.com/advisories/GHSA-g867-7843-wf8q"
+        },
+        {
+          "title": "NVD — CVE-2026-59935",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59935"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-g867-7843-wf8q"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-59936",
+      "slug": "2026-07-pypi-cve-2026-59936",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-59936.html",
+      "date": "2026-07-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pypdf: Possible infinite loop for not terminated inline images",
+      "summary": "pypdf: Possible infinite loop for not terminated inline images",
+      "vendor": "PyPI",
+      "product": "pypdf",
+      "cve": "CVE-2026-59936",
+      "operator_check": "Check whether pypdf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.3%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pypdf. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-59936",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5xf7-4p34-54qr",
+          "url": "https://github.com/advisories/GHSA-5xf7-4p34-54qr"
+        },
+        {
+          "title": "NVD — CVE-2026-59936",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59936"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-5xf7-4p34-54qr"
+        }
+      ]
+    },
     {
       "id": "2026-07-analog-vu-360868",
       "slug": "2026-07-analog-vu-360868",

@@ -1,0 +1,38 @@
+id: 2026-07-logto-vu-492466
+slug: 2026-07-logto-vu-492466
+external_id: VU-492466
+source: cert_vu
+date: '2026-07-23'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#492466: Logto Identity Platform has authentication and authorization failures
+  in core protocol handling'
+summary: 'Overview The Logto platform contains multiple vulnerabilities affecting
+  the identity‑processing pipeline. These flaws reduce the reliability of authentication
+  and authorization decisions and may allow attackers to bypass account‑ownership
+  checks, skip MFA, replay externally issued SSO responses, or submit identity assertions
+  without proper cryptographic or validity checks. Collectively, the issues create
+  several paths for unauthorized access across both local and federated sign‑in flows.
+  Description Developed by Silverhand Inc., Logto is an identity and access management
+  system for software as a service (SaaS) and AI applications. It provides multi‑tenant
+  authentication, single sign-on (SSO), role-based access control (RBAC), support
+  for openId connect (OIDC), open authorization (OAuth) 2.1, and Security Assertion
+  Markup Language (SAML)... Related CVEs: CVE-2026-15611, CVE-2026-15612, CVE-2026-15614,
+  CVE-2026-15615.'
+vendor: Logto
+product: Identity Platform
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Identity Platform where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#492466
+  url: https://kb.cert.org/vuls/id/492466
+tags:
+- vu-492466
+- coordinated-disclosure
+- logto
+- cert-vu
+is_sample: false
