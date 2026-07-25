@@ -1,0 +1,30 @@
+id: 2026-07-go-ghsa-6vch-q96h-7gc3
+slug: 2026-07-go-ghsa-6vch-q96h-7gc3
+external_id: GHSA-6vch-q96h-7gc3
+source: github_advisory
+date: '2026-07-24'
+type: Vendor advisory
+signal: High-risk advisory
+title: 'etcd: `tlsListener.acceptLoop` spawns unbounded handshake goroutines with
+  no deadline'
+summary: 'etcd: `tlsListener.acceptLoop` spawns unbounded handshake goroutines with
+  no deadline'
+vendor: Go
+product: go.etcd.io/etcd/v3
+cve: null
+operator_check: 'Check whether go.etcd.io/etcd/v3 is present in application dependency
+  manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to
+  a patched version where available. CVSS score: 8.7.'
+why_it_matters: GitHub has published a reviewed security advisory for go.etcd.io/etcd/v3.
+  Prioritize it with other application dependency updates.
+sources:
+- title: GitHub Advisory GHSA-6vch-q96h-7gc3
+  url: https://github.com/advisories/GHSA-6vch-q96h-7gc3
+- title: Source reference
+  url: https://github.com/etcd-io/etcd/security/advisories/GHSA-6vch-q96h-7gc3
+tags:
+- ghsa-6vch-q96h-7gc3
+- vendor-advisory
+- go
+- github-advisory
+is_sample: false
