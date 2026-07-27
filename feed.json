@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-26T10:44:45Z",
-  "total_items": 772,
+  "generated": "2026-07-27T12:23:55Z",
+  "total_items": 774,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-26T10:44:45Z",
+    "generated": "2026-07-27T12:23:55Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-26T10:44:30Z",
-        "finished_at": "2026-07-26T10:44:30Z"
+        "started_at": "2026-07-27T12:23:41Z",
+        "finished_at": "2026-07-27T12:23:41Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-26T10:44:30Z",
-        "finished_at": "2026-07-26T10:44:31Z"
+        "started_at": "2026-07-27T12:23:41Z",
+        "finished_at": "2026-07-27T12:23:42Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-26T10:44:31Z",
-        "finished_at": "2026-07-26T10:44:38Z"
+        "started_at": "2026-07-27T12:23:42Z",
+        "finished_at": "2026-07-27T12:23:50Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-07-26T10:44:38Z",
-        "finished_at": "2026-07-26T10:44:39Z"
+        "started_at": "2026-07-27T12:23:50Z",
+        "finished_at": "2026-07-27T12:23:51Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-07-26T10:44:39Z",
-        "finished_at": "2026-07-26T10:44:40Z"
+        "items_seen": 0,
+        "started_at": "2026-07-27T12:23:51Z",
+        "finished_at": "2026-07-27T12:23:52Z"
       },
       {
         "id": "exploitdb",
@@ -63,8 +63,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-26T10:44:40Z",
-        "finished_at": "2026-07-26T10:44:40Z"
+        "started_at": "2026-07-27T12:23:52Z",
+        "finished_at": "2026-07-27T12:23:53Z"
       },
       {
         "id": "epss",
@@ -72,8 +72,8 @@
         "role": "enrichment",
         "status": "ok",
         "items_seen": 5,
-        "started_at": "2026-07-26T10:44:40Z",
-        "finished_at": "2026-07-26T10:44:40Z"
+        "started_at": "2026-07-27T12:23:53Z",
+        "finished_at": "2026-07-27T12:23:53Z"
       }
     ]
   },
@@ -335,6 +335,37 @@
       ]
     },
     {
+      "id": "2026-07-maven-ghsa-46q4-43ph-c6fr",
+      "slug": "2026-07-maven-ghsa-46q4-43ph-c6fr",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-ghsa-46q4-43ph-c6fr.html",
+      "date": "2026-07-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "blaze: Chunked-body trailer fields promoted into Request.headers in blaze-server (front-end header-sanitization bypass)",
+      "summary": "blaze: Chunked-body trailer fields promoted into Request.headers in blaze-server (front-end header-sanitization bypass)",
+      "vendor": "Maven",
+      "product": "org.http4s:blaze-http_2.13",
+      "cve": null,
+      "operator_check": "Check whether org.http4s:blaze-http_2.13 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:blaze-http_2.13. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-46q4-43ph-c6fr",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-46q4-43ph-c6fr",
+          "url": "https://github.com/advisories/GHSA-46q4-43ph-c6fr"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/blaze/security/advisories/GHSA-46q4-43ph-c6fr"
+        }
+      ]
+    },
+    {
       "id": "2026-07-maven-ghsa-68r5-9hpg-7qw9",
       "slug": "2026-07-maven-ghsa-68r5-9hpg-7qw9",
       "url": "https://www.patchbrief.org/items/2026-07-maven-ghsa-68r5-9hpg-7qw9.html",
@@ -424,6 +455,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/omnifaces/omnifaces/security/advisories/GHSA-fp43-vj7g-pg92"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-ghsa-mhvj-jhpq-885v",
+      "slug": "2026-07-maven-ghsa-mhvj-jhpq-885v",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-ghsa-mhvj-jhpq-885v.html",
+      "date": "2026-07-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "blaze: Multiple HTTP/1.1 request-smuggling primitives in blaze's Java wire parser",
+      "summary": "blaze: Multiple HTTP/1.1 request-smuggling primitives in blaze's Java wire parser",
+      "vendor": "Maven",
+      "product": "org.http4s:http4s-blaze-server_2.13",
+      "cve": null,
+      "operator_check": "Check whether org.http4s:http4s-blaze-server_2.13 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:http4s-blaze-server_2.13. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-mhvj-jhpq-885v",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mhvj-jhpq-885v",
+          "url": "https://github.com/advisories/GHSA-mhvj-jhpq-885v"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/blaze/security/advisories/GHSA-mhvj-jhpq-885v"
         }
       ]
     },
