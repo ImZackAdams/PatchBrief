@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-27T12:53:16Z",
-  "total_items": 774,
+  "generated": "2026-07-28T11:17:27Z",
+  "total_items": 780,
   "archived_items": 8,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-27T12:53:16Z",
+    "generated": "2026-07-28T11:17:27Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-07-27T12:23:41Z",
-        "finished_at": "2026-07-27T12:23:41Z"
+        "items_seen": 2,
+        "started_at": "2026-07-28T11:17:15Z",
+        "finished_at": "2026-07-28T11:17:16Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-27T12:23:41Z",
-        "finished_at": "2026-07-27T12:23:42Z"
+        "started_at": "2026-07-28T11:17:16Z",
+        "finished_at": "2026-07-28T11:17:16Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-07-27T12:23:42Z",
-        "finished_at": "2026-07-27T12:23:50Z"
+        "items_seen": 4,
+        "started_at": "2026-07-28T11:17:16Z",
+        "finished_at": "2026-07-28T11:17:23Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 30,
-        "started_at": "2026-07-27T12:23:50Z",
-        "finished_at": "2026-07-27T12:23:51Z"
+        "items_seen": 0,
+        "started_at": "2026-07-28T11:17:23Z",
+        "finished_at": "2026-07-28T11:17:23Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-27T12:23:51Z",
-        "finished_at": "2026-07-27T12:23:52Z"
+        "started_at": "2026-07-28T11:17:23Z",
+        "finished_at": "2026-07-28T11:17:25Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,223 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-27T12:23:52Z",
-        "finished_at": "2026-07-27T12:23:53Z"
+        "started_at": "2026-07-28T11:17:25Z",
+        "finished_at": "2026-07-28T11:17:25Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-07-27T12:23:53Z",
-        "finished_at": "2026-07-27T12:23:53Z"
+        "items_seen": 1,
+        "started_at": "2026-07-28T11:17:25Z",
+        "finished_at": "2026-07-28T11:17:26Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-apache-cve-2026-48144",
+      "slug": "2026-07-apache-cve-2026-48144",
+      "url": "https://www.patchbrief.org/items/2026-07-apache-cve-2026-48144.html",
+      "date": "2026-07-27",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Thrift — CVE-2026-48144 (Critical)",
+      "summary": "Improper Validation of Certificate with Host Mismatch vulnerability in Apache Thrift c_glib bindings. This issue affects Apache Thrift: before 0.24.0. Users are recommended to upgrade to version 0.24.0, which fixes the issue.",
+      "vendor": "Apache",
+      "product": "Thrift",
+      "cve": "CVE-2026-48144",
+      "operator_check": "Review CVE-2026-48144 in your asset inventory. Apply patches per vendor guidance and verify Thrift is not exposed. CVSS score: 9.1.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Apache Thrift. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-48144",
+        "vendor-advisory",
+        "apache",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-48144",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48144"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/2xoltfxgzf5jyhcwq6y07spts5cn6ppj"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/7v3jhgwfbmhx42424phydlnzb109g8b9"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-apache-cve-2026-55971",
+      "slug": "2026-07-apache-cve-2026-55971",
+      "url": "https://www.patchbrief.org/items/2026-07-apache-cve-2026-55971.html",
+      "date": "2026-07-27",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Thrift — CVE-2026-55971 (Critical)",
+      "summary": "Heap-based Buffer Overflow vulnerability in Apache Thrift C++ bindings. This issue affects Apache Thrift: before 0.24.0. Users are recommended to upgrade to version 0.24.0, which fixes the issue.",
+      "vendor": "Apache",
+      "product": "Thrift",
+      "cve": "CVE-2026-55971",
+      "operator_check": "Review CVE-2026-55971 in your asset inventory. Apply patches per vendor guidance and verify Thrift is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Apache Thrift. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-55971",
+        "vendor-advisory",
+        "apache",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-55971",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55971"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/7v3jhgwfbmhx42424phydlnzb109g8b9"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/xjs36m6kjxpmrmzwck636msg3nvoqnmx"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-apache-cve-2026-58023",
+      "slug": "2026-07-apache-cve-2026-58023",
+      "url": "https://www.patchbrief.org/items/2026-07-apache-cve-2026-58023.html",
+      "date": "2026-07-27",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Thrift — CVE-2026-58023 (Critical)",
+      "summary": "Out-of-bounds Read vulnerability in Apache Thrift c_glib bindings. This issue affects Apache Thrift: before 0.24.0. Users are recommended to upgrade to version 0.24.0, which fixes the issue.",
+      "vendor": "Apache",
+      "product": "Thrift",
+      "cve": "CVE-2026-58023",
+      "operator_check": "Review CVE-2026-58023 in your asset inventory. Apply patches per vendor guidance and verify Thrift is not exposed. CVSS score: 9.1.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Apache Thrift. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-58023",
+        "vendor-advisory",
+        "apache",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-58023",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58023"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/7v3jhgwfbmhx42424phydlnzb109g8b9"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/z2myopbovxngfvchdz8hddots9p5ffbt"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-apache-cve-2026-58662",
+      "slug": "2026-07-apache-cve-2026-58662",
+      "url": "https://www.patchbrief.org/items/2026-07-apache-cve-2026-58662.html",
+      "date": "2026-07-27",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Thrift — CVE-2026-58662 (Critical)",
+      "summary": "Improper Validation of Specified Quantity in Input, Out-of-bounds Read vulnerability in Apache Thrift C++ bindings. This issue affects Apache Thrift: before 0.24.0. Users are recommended to upgrade to version 0.24.0, which fixes the issue.",
+      "vendor": "Apache",
+      "product": "Thrift",
+      "cve": "CVE-2026-58662",
+      "operator_check": "Review CVE-2026-58662 in your asset inventory. Apply patches per vendor guidance and verify Thrift is not exposed. CVSS score: 9.1.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Apache Thrift. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-58662",
+        "vendor-advisory",
+        "apache",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-58662",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58662"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/13mzvylr3r3nktxrh5k1h30ng1t1sw1d"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/7v3jhgwfbmhx42424phydlnzb109g8b9"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-arista-cve-2026-16812",
+      "slug": "2026-07-arista-cve-2026-16812",
+      "url": "https://www.patchbrief.org/items/2026-07-arista-cve-2026-16812.html",
+      "date": "2026-07-27",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
+      "summary": "Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
+      "vendor": "Arista",
+      "product": "VeloCloud Orchestrator",
+      "cve": "CVE-2026-16812",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-16812 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-07-30. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-16812",
+        "kev",
+        "arista",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-16812",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16812"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-fortinet-cve-2025-68686",
+      "slug": "2026-07-fortinet-cve-2025-68686",
+      "url": "https://www.patchbrief.org/items/2026-07-fortinet-cve-2025-68686.html",
+      "date": "2026-07-27",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+      "summary": "Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level.",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "cve": "CVE-2025-68686",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2025-68686 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-08-10. Treat remediation as urgent.",
+      "tags": [
+        "cve-2025-68686",
+        "kev",
+        "fortinet",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2025-68686",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68686"
+        }
+      ]
+    },
     {
       "id": "2026-07-composer-ghsa-f25v-x6vr-962g",
       "slug": "2026-07-composer-ghsa-f25v-x6vr-962g",
