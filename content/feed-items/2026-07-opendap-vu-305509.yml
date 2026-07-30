@@ -1,0 +1,36 @@
+id: 2026-07-opendap-vu-305509
+slug: 2026-07-opendap-vu-305509
+external_id: VU-305509
+source: cert_vu
+date: '2026-07-29'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#305509: OPeNDAP Hyrax is vulnerable to SSRF and Credential Disclosure'
+summary: 'Overview A vulnerability has been discovered in the OPeNDAP Hyrax software
+  solution. A remote attacker with the ability to submit crafted requests to an affected
+  Hyrax instance could cause the application to communicate with unauthorized remote
+  systems. Under certain conditions, the vulnerability may also result in the unintended
+  disclosure of user authentication tokens to unauthorized destinations. Description
+  CVE-2026-16637 OPeNDAP Hyrax is vulnerable to Server Side Request Forgery (SSRF)
+  and credential disclosure via unvalidated HTTP redirects that bypass the AllowedHosts
+  allowlist and leak Earthdata headers (User-Id, Echo-Token) to attacker-controlled
+  endpoints. OPeNDAP Hyrax is an open-source data server software that enables remote
+  access to scientific datasets over the internet using the OPeNDAP protocol. It allows
+  users to query... Related CVEs: CVE-2026-16637.'
+vendor: OPeNDAP
+product: Hyrax
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Hyrax where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#305509
+  url: https://kb.cert.org/vuls/id/305509
+tags:
+- vu-305509
+- coordinated-disclosure
+- opendap
+- cert-vu
+is_sample: false

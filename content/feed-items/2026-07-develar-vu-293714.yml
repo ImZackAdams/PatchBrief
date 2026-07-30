@@ -1,0 +1,36 @@
+id: 2026-07-develar-vu-293714
+slug: 2026-07-develar-vu-293714
+external_id: VU-293714
+source: cert_vu
+date: '2026-07-29'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#293714: Arbitrary File Overwrite in Develar app-builder (zipx.Unzip) via
+  Symlink Following on macOS (APFS)'
+summary: Overview A vulnerability in the zipx.Unzip extraction routine of Develar’s
+  app-builder allows an attacker to overwrite arbitrary files on macOS using Apple
+  File System (APFS). The issue arises from a combination of Unicode normalization
+  collisions and unsafe symlink-following behavior. APFS treats certain Unicode equivalent
+  filenames as identical (e.g., ß ↔ ss), while app builder performs no canonical normalization
+  before validating or writing paths. Description Develar’s app-builder is a command‑line
+  build tool used heavily in the Electron ecosystem to package, sign, notarize, and
+  produce distributable application bundles for macOS, Windows, and Linux. It is popular
+  because it is a transitive dependency of electron-builder, one of the most widely
+  used packaging tools for Electron apps. The vulnerability arises from how the zipx.Unzip...
+vendor: Develar
+product: app-builder (zipx.Unzip) via Symlink Following on macOS (APFS)
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for app-builder (zipx.Unzip) via Symlink Following on macOS (APFS) where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#293714
+  url: https://kb.cert.org/vuls/id/293714
+tags:
+- vu-293714
+- coordinated-disclosure
+- develar
+- cert-vu
+is_sample: false

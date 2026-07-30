@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-29T11:26:06Z",
-  "total_items": 810,
+  "generated": "2026-07-30T11:08:09Z",
+  "total_items": 831,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-29T11:26:06Z",
+    "generated": "2026-07-30T11:08:09Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-07-29T11:25:55Z",
-        "finished_at": "2026-07-29T11:25:55Z"
+        "items_seen": 3,
+        "started_at": "2026-07-30T11:07:56Z",
+        "finished_at": "2026-07-30T11:07:56Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-29T11:25:55Z",
-        "finished_at": "2026-07-29T11:25:56Z"
+        "started_at": "2026-07-30T11:07:56Z",
+        "finished_at": "2026-07-30T11:07:57Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-07-29T11:25:56Z",
-        "finished_at": "2026-07-29T11:26:03Z"
+        "items_seen": 5,
+        "started_at": "2026-07-30T11:07:57Z",
+        "finished_at": "2026-07-30T11:08:04Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-07-29T11:26:03Z",
-        "finished_at": "2026-07-29T11:26:04Z"
+        "started_at": "2026-07-30T11:08:04Z",
+        "finished_at": "2026-07-30T11:08:05Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-07-29T11:26:04Z",
-        "finished_at": "2026-07-29T11:26:04Z"
+        "items_seen": 3,
+        "started_at": "2026-07-30T11:08:05Z",
+        "finished_at": "2026-07-30T11:08:06Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,732 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-29T11:26:04Z",
-        "finished_at": "2026-07-29T11:26:04Z"
+        "started_at": "2026-07-30T11:08:06Z",
+        "finished_at": "2026-07-30T11:08:07Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 12,
-        "started_at": "2026-07-29T11:26:04Z",
-        "finished_at": "2026-07-29T11:26:05Z"
+        "items_seen": 23,
+        "started_at": "2026-07-30T11:08:07Z",
+        "finished_at": "2026-07-30T11:08:07Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-care-cve-2026-41939",
+      "slug": "2026-07-care-cve-2026-41939",
+      "url": "https://www.patchbrief.org/items/2026-07-care-cve-2026-41939.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Care Everywhere Gateway 14.3.10 — CVE-2026-41939 (Critical)",
+      "summary": "Care Everywhere Gateway 14.3.10 contains a hard-coded credentials vulnerability in the bundled WildFly 8.2.0.Final management interface that allows unauthenticated remote attackers to gain administrative access by using default credentials identical across all installations. Attackers can authenticate to the exposed WildFly management console on port 20990 and deploy a malicious Web Application Archive file through the Deployments interface to achieve remote code execution as the Windows machine account. Version 14.x.x was declared end-of-life (EOL) in 2017 and future releases have addressed t",
+      "vendor": "Care",
+      "product": "Everywhere Gateway 14.3.10",
+      "cve": "CVE-2026-41939",
+      "operator_check": "Review CVE-2026-41939 in your asset inventory. Apply patches per vendor guidance and verify Everywhere Gateway 14.3.10 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Care Everywhere Gateway 14.3.10. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-41939",
+        "vendor-advisory",
+        "care",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-41939",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41939"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://gist.github.com/VAMorales/95874f23e27e17362b87133013834c0a"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.intuvie.com/products-overview"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-cisco-cve-2026-20316",
+      "slug": "2026-07-cisco-cve-2026-20316",
+      "url": "https://www.patchbrief.org/items/2026-07-cisco-cve-2026-20316.html",
+      "date": "2026-07-29",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
+      "summary": "Cisco Secure Firewall Management Center (FMC) formerly known as Firepower Management Center contains a use of hard-coded password vulnerability that could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.",
+      "vendor": "Cisco",
+      "product": "Secure Firewall Management Center (FMC)",
+      "cve": "CVE-2026-20316",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-20316 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-08-01. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-20316",
+        "kev",
+        "cisco",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-20316",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20316"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-composer-cve-2026-55651",
+      "slug": "2026-07-composer-cve-2026-55651",
+      "url": "https://www.patchbrief.org/items/2026-07-composer-cve-2026-55651.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Easy!Appointments Vulnerable to Appointments Takeover via Excessive Data Exposure",
+      "summary": "Easy!Appointments Vulnerable to Appointments Takeover via Excessive Data Exposure",
+      "vendor": "Composer",
+      "product": "alextselegidis/easyappointments",
+      "cve": "CVE-2026-55651",
+      "operator_check": "Check whether alextselegidis/easyappointments is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 8%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for alextselegidis/easyappointments. Prioritize it with other application dependency updates, especially because EPSS places it in the 8% percentile.",
+      "tags": [
+        "cve-2026-55651",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4vmm-5qvc-w5p7",
+          "url": "https://github.com/advisories/GHSA-4vmm-5qvc-w5p7"
+        },
+        {
+          "title": "NVD — CVE-2026-55651",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55651"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/alextselegidis/easyappointments/security/advisories/GHSA-4vmm-5qvc-w5p7"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-develar-vu-293714",
+      "slug": "2026-07-develar-vu-293714",
+      "url": "https://www.patchbrief.org/items/2026-07-develar-vu-293714.html",
+      "date": "2026-07-29",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#293714: Arbitrary File Overwrite in Develar app-builder (zipx.Unzip) via Symlink Following on macOS (APFS)",
+      "summary": "Overview A vulnerability in the zipx.Unzip extraction routine of Develar’s app-builder allows an attacker to overwrite arbitrary files on macOS using Apple File System (APFS). The issue arises from a combination of Unicode normalization collisions and unsafe symlink-following behavior. APFS treats certain Unicode equivalent filenames as identical (e.g., ß ↔ ss), while app builder performs no canonical normalization before validating or writing paths. Description Develar’s app-builder is a command‑line build tool used heavily in the Electron ecosystem to package, sign, notarize, and produce distributable application bundles for macOS, Windows, and Linux. It is popular because it is a transitive dependency of electron-builder, one of the most widely used packaging tools for Electron apps. The vulnerability arises from how the zipx.Unzip...",
+      "vendor": "Develar",
+      "product": "app-builder (zipx.Unzip) via Symlink Following on macOS (APFS)",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for app-builder (zipx.Unzip) via Symlink Following on macOS (APFS) where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-293714",
+        "coordinated-disclosure",
+        "develar",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#293714",
+          "url": "https://kb.cert.org/vuls/id/293714"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-erlang-cve-2026-49755",
+      "slug": "2026-07-erlang-cve-2026-49755",
+      "url": "https://www.patchbrief.org/items/2026-07-erlang-cve-2026-49755.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Req vulnerable to unbounded archive/compression extraction triggered by response content-type",
+      "summary": "Req vulnerable to unbounded archive/compression extraction triggered by response content-type",
+      "vendor": "erlang",
+      "product": "req",
+      "cve": "CVE-2026-49755",
+      "operator_check": "Check whether req is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2. EPSS probability: 0.4%; percentile: 36%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for req. Prioritize it with other application dependency updates, especially because EPSS places it in the 36% percentile.",
+      "tags": [
+        "cve-2026-49755",
+        "vendor-advisory",
+        "erlang",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-655f-mp8p-96gv",
+          "url": "https://github.com/advisories/GHSA-655f-mp8p-96gv"
+        },
+        {
+          "title": "NVD — CVE-2026-49755",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49755"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/wojtekmach/req/security/advisories/GHSA-655f-mp8p-96gv"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-54680",
+      "slug": "2026-07-go-cve-2026-54680",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-54680.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Logging operator has Fluentd configuration injection that allows remote code execution",
+      "summary": "Logging operator has Fluentd configuration injection that allows remote code execution",
+      "vendor": "Go",
+      "product": "github.com/kube-logging/logging-operator",
+      "cve": "CVE-2026-54680",
+      "operator_check": "Check whether github.com/kube-logging/logging-operator is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/kube-logging/logging-operator. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54680",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mjqf-28ph-426h",
+          "url": "https://github.com/advisories/GHSA-mjqf-28ph-426h"
+        },
+        {
+          "title": "NVD — CVE-2026-54680",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54680"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/kube-logging/logging-operator/security/advisories/GHSA-mjqf-28ph-426h"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-54693",
+      "slug": "2026-07-go-cve-2026-54693",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-54693.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ZITADEL Users Can Self-Verify Email/Phone via API",
+      "summary": "ZITADEL Users Can Self-Verify Email/Phone via API",
+      "vendor": "Go",
+      "product": "github.com/zitadel/zitadel",
+      "cve": "CVE-2026-54693",
+      "operator_check": "Check whether github.com/zitadel/zitadel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/zitadel/zitadel. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54693",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jq8w-8q2f-ffm9",
+          "url": "https://github.com/advisories/GHSA-jq8w-8q2f-ffm9"
+        },
+        {
+          "title": "NVD — CVE-2026-54693",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54693"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zitadel/zitadel/security/advisories/GHSA-jq8w-8q2f-ffm9"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-cve-2026-54735",
+      "slug": "2026-07-go-cve-2026-54735",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-54735.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "prebid-server's request forgery vulnerability allows for possible host environment data extraction",
+      "summary": "prebid-server's request forgery vulnerability allows for possible host environment data extraction",
+      "vendor": "Go",
+      "product": "github.com/prebid/prebid-server/v4",
+      "cve": "CVE-2026-54735",
+      "operator_check": "Check whether github.com/prebid/prebid-server/v4 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/prebid/prebid-server/v4. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54735",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4p3g-4hcj-wpvx",
+          "url": "https://github.com/advisories/GHSA-4p3g-4hcj-wpvx"
+        },
+        {
+          "title": "NVD — CVE-2026-54735",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54735"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/prebid/prebid-server/security/advisories/GHSA-4p3g-4hcj-wpvx"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-go-ghsa-xvg2-cgv6-6h7v",
+      "slug": "2026-07-go-ghsa-xvg2-cgv6-6h7v",
+      "url": "https://www.patchbrief.org/items/2026-07-go-ghsa-xvg2-cgv6-6h7v.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "netfoil: Incorrect block responses could lead to localhost traffic",
+      "summary": "netfoil: Incorrect block responses could lead to localhost traffic",
+      "vendor": "Go",
+      "product": "github.com/tinfoil-factory/netfoil",
+      "cve": null,
+      "operator_check": "Check whether github.com/tinfoil-factory/netfoil is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.4.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/tinfoil-factory/netfoil. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-xvg2-cgv6-6h7v",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xvg2-cgv6-6h7v",
+          "url": "https://github.com/advisories/GHSA-xvg2-cgv6-6h7v"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/tinfoil-factory/netfoil/security/advisories/GHSA-xvg2-cgv6-6h7v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-50559",
+      "slug": "2026-07-maven-cve-2026-50559",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-50559.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Quarkus: Authentication/Authorization Bypass via Advanced Path Normalization Vulnerabilities",
+      "summary": "Quarkus: Authentication/Authorization Bypass via Advanced Path Normalization Vulnerabilities",
+      "vendor": "Maven",
+      "product": "io.quarkus:quarkus-vertx-http",
+      "cve": "CVE-2026-50559",
+      "operator_check": "Check whether io.quarkus:quarkus-vertx-http is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 38%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for io.quarkus:quarkus-vertx-http. Prioritize it with other application dependency updates, especially because EPSS places it in the 38% percentile.",
+      "tags": [
+        "cve-2026-50559",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qcxp-gm7m-4j5v",
+          "url": "https://github.com/advisories/GHSA-qcxp-gm7m-4j5v"
+        },
+        {
+          "title": "NVD — CVE-2026-50559",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50559"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/quarkusio/quarkus/security/advisories/GHSA-qcxp-gm7m-4j5v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-54078",
+      "slug": "2026-07-maven-cve-2026-54078",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-54078.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "veraPDF Validation XXE via Rich Text",
+      "summary": "veraPDF Validation XXE via Rich Text",
+      "vendor": "Maven",
+      "product": "org.verapdf:validation-model",
+      "cve": "CVE-2026-54078",
+      "operator_check": "Check whether org.verapdf:validation-model is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.verapdf:validation-model. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54078",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3jh7-wm29-q568",
+          "url": "https://github.com/advisories/GHSA-3jh7-wm29-q568"
+        },
+        {
+          "title": "NVD — CVE-2026-54078",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54078"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/veraPDF/veraPDF-validation/security/advisories/GHSA-3jh7-wm29-q568"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-54079",
+      "slug": "2026-07-maven-cve-2026-54079",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-54079.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "veraPDF Validation XXE via XFA",
+      "summary": "veraPDF Validation XXE via XFA",
+      "vendor": "Maven",
+      "product": "org.verapdf:validation-model",
+      "cve": "CVE-2026-54079",
+      "operator_check": "Check whether org.verapdf:validation-model is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.verapdf:validation-model. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54079",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-36mm-w85j-3q2j",
+          "url": "https://github.com/advisories/GHSA-36mm-w85j-3q2j"
+        },
+        {
+          "title": "NVD — CVE-2026-54079",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54079"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/veraPDF/veraPDF-validation/security/advisories/GHSA-36mm-w85j-3q2j"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-11393",
+      "slug": "2026-07-npm-cve-2026-11393",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-11393.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AgentCore CLI Bedrock Agent Import Vulnerable to Code Injection via Improper Triple-Quote Escaping",
+      "summary": "AgentCore CLI Bedrock Agent Import Vulnerable to Code Injection via Improper Triple-Quote Escaping",
+      "vendor": "npm",
+      "product": "@aws/agentcore",
+      "cve": "CVE-2026-11393",
+      "operator_check": "Check whether @aws/agentcore is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 25%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @aws/agentcore. Prioritize it with other application dependency updates, especially because EPSS places it in the 25% percentile.",
+      "tags": [
+        "cve-2026-11393",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m4x6-gwgp-4pm7",
+          "url": "https://github.com/advisories/GHSA-m4x6-gwgp-4pm7"
+        },
+        {
+          "title": "NVD — CVE-2026-11393",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11393"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aws/agentcore-cli/security/advisories/GHSA-m4x6-gwgp-4pm7"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-54660",
+      "slug": "2026-07-npm-cve-2026-54660",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-54660.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "swagger-typescript-api vulnerable to authorization-token exfiltration via spec `$ref`",
+      "summary": "swagger-typescript-api vulnerable to authorization-token exfiltration via spec `$ref`",
+      "vendor": "npm",
+      "product": "swagger-typescript-api",
+      "cve": "CVE-2026-54660",
+      "operator_check": "Check whether swagger-typescript-api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for swagger-typescript-api. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54660",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h754-fxp7-88wx",
+          "url": "https://github.com/advisories/GHSA-h754-fxp7-88wx"
+        },
+        {
+          "title": "NVD — CVE-2026-54660",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54660"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/acacode/swagger-typescript-api/security/advisories/GHSA-h754-fxp7-88wx"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-54661",
+      "slug": "2026-07-npm-cve-2026-54661",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-54661.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "swagger-typescript-api vulnerable to code injection via unescaped `servers[0].url` in axios http-client template",
+      "summary": "swagger-typescript-api vulnerable to code injection via unescaped `servers[0].url` in axios http-client template",
+      "vendor": "npm",
+      "product": "swagger-typescript-api",
+      "cve": "CVE-2026-54661",
+      "operator_check": "Check whether swagger-typescript-api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for swagger-typescript-api. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54661",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-38c3-wv3c-v3xj",
+          "url": "https://github.com/advisories/GHSA-38c3-wv3c-v3xj"
+        },
+        {
+          "title": "NVD — CVE-2026-54661",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54661"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/acacode/swagger-typescript-api/security/advisories/GHSA-38c3-wv3c-v3xj"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-54662",
+      "slug": "2026-07-npm-cve-2026-54662",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-54662.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "swagger-typescript-api vulnerable to code injection via unescaped `servers[0].url` in fetch http-client template",
+      "summary": "swagger-typescript-api vulnerable to code injection via unescaped `servers[0].url` in fetch http-client template",
+      "vendor": "npm",
+      "product": "swagger-typescript-api",
+      "cve": "CVE-2026-54662",
+      "operator_check": "Check whether swagger-typescript-api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for swagger-typescript-api. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54662",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hqj5-cw9f-rx67",
+          "url": "https://github.com/advisories/GHSA-hqj5-cw9f-rx67"
+        },
+        {
+          "title": "NVD — CVE-2026-54662",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54662"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/acacode/swagger-typescript-api/security/advisories/GHSA-hqj5-cw9f-rx67"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-54664",
+      "slug": "2026-07-npm-cve-2026-54664",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-54664.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "swagger-typescript-api vulnerable to code injection via unescaped enum string values",
+      "summary": "swagger-typescript-api vulnerable to code injection via unescaped enum string values",
+      "vendor": "npm",
+      "product": "swagger-typescript-api",
+      "cve": "CVE-2026-54664",
+      "operator_check": "Check whether swagger-typescript-api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for swagger-typescript-api. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54664",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5f94-x226-ccpm",
+          "url": "https://github.com/advisories/GHSA-5f94-x226-ccpm"
+        },
+        {
+          "title": "NVD — CVE-2026-54664",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54664"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/acacode/swagger-typescript-api/security/advisories/GHSA-5f94-x226-ccpm"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-54666",
+      "slug": "2026-07-npm-cve-2026-54666",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-54666.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "swagger-typescript-api vulnerable to code injection via unescaped OpenAPI path strings in generated method bodies",
+      "summary": "swagger-typescript-api vulnerable to code injection via unescaped OpenAPI path strings in generated method bodies",
+      "vendor": "npm",
+      "product": "swagger-typescript-api",
+      "cve": "CVE-2026-54666",
+      "operator_check": "Check whether swagger-typescript-api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for swagger-typescript-api. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54666",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w284-33mx-6g9v",
+          "url": "https://github.com/advisories/GHSA-w284-33mx-6g9v"
+        },
+        {
+          "title": "NVD — CVE-2026-54666",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54666"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/acacode/swagger-typescript-api/security/advisories/GHSA-w284-33mx-6g9v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-opendap-vu-305509",
+      "slug": "2026-07-opendap-vu-305509",
+      "url": "https://www.patchbrief.org/items/2026-07-opendap-vu-305509.html",
+      "date": "2026-07-29",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#305509: OPeNDAP Hyrax is vulnerable to SSRF and Credential Disclosure",
+      "summary": "Overview A vulnerability has been discovered in the OPeNDAP Hyrax software solution. A remote attacker with the ability to submit crafted requests to an affected Hyrax instance could cause the application to communicate with unauthorized remote systems. Under certain conditions, the vulnerability may also result in the unintended disclosure of user authentication tokens to unauthorized destinations. Description CVE-2026-16637 OPeNDAP Hyrax is vulnerable to Server Side Request Forgery (SSRF) and credential disclosure via unvalidated HTTP redirects that bypass the AllowedHosts allowlist and leak Earthdata headers (User-Id, Echo-Token) to attacker-controlled endpoints. OPeNDAP Hyrax is an open-source data server software that enables remote access to scientific datasets over the internet using the OPeNDAP protocol. It allows users to query... Related CVEs: CVE-2026-16637.",
+      "vendor": "OPeNDAP",
+      "product": "Hyrax",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Hyrax where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-305509",
+        "coordinated-disclosure",
+        "opendap",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#305509",
+          "url": "https://kb.cert.org/vuls/id/305509"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-54574",
+      "slug": "2026-07-pypi-cve-2026-54574",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-54574.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "`proot-distro install` has a Symlink Escape (Arbitrary Host File Write) via Malicious Tar Archive",
+      "summary": "`proot-distro install` has a Symlink Escape (Arbitrary Host File Write) via Malicious Tar Archive",
+      "vendor": "PyPI",
+      "product": "proot-distro",
+      "cve": "CVE-2026-54574",
+      "operator_check": "Check whether proot-distro is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for proot-distro. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54574",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9xq3-3fqg-4vg7",
+          "url": "https://github.com/advisories/GHSA-9xq3-3fqg-4vg7"
+        },
+        {
+          "title": "NVD — CVE-2026-54574",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54574"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/termux/proot-distro/security/advisories/GHSA-9xq3-3fqg-4vg7"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-54727",
+      "slug": "2026-07-pypi-cve-2026-54727",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-54727.html",
+      "date": "2026-07-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "proot-distro has a Container Isolation Bypass via Crafted Restore Archive",
+      "summary": "proot-distro has a Container Isolation Bypass via Crafted Restore Archive",
+      "vendor": "PyPI",
+      "product": "proot-distro",
+      "cve": "CVE-2026-54727",
+      "operator_check": "Check whether proot-distro is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for proot-distro. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54727",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7h3g-4w2f-fj2f",
+          "url": "https://github.com/advisories/GHSA-7h3g-4w2f-fj2f"
+        },
+        {
+          "title": "NVD — CVE-2026-54727",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54727"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/termux/proot-distro/security/advisories/GHSA-7h3g-4w2f-fj2f"
+        }
+      ]
+    },
     {
       "id": "2026-07-composer-cve-2026-54588",
       "slug": "2026-07-composer-cve-2026-54588",
