@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-07-30T11:08:09Z",
-  "total_items": 831,
+  "generated": "2026-07-31T11:29:08Z",
+  "total_items": 847,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-07-30T11:08:09Z",
+    "generated": "2026-07-31T11:29:08Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-07-30T11:07:56Z",
-        "finished_at": "2026-07-30T11:07:56Z"
+        "items_seen": 1,
+        "started_at": "2026-07-31T11:28:55Z",
+        "finished_at": "2026-07-31T11:28:55Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-30T11:07:56Z",
-        "finished_at": "2026-07-30T11:07:57Z"
+        "started_at": "2026-07-31T11:28:55Z",
+        "finished_at": "2026-07-31T11:28:56Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-07-30T11:07:57Z",
-        "finished_at": "2026-07-30T11:08:04Z"
+        "items_seen": 2,
+        "started_at": "2026-07-31T11:28:56Z",
+        "finished_at": "2026-07-31T11:29:03Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-07-30T11:08:04Z",
-        "finished_at": "2026-07-30T11:08:05Z"
+        "started_at": "2026-07-31T11:29:03Z",
+        "finished_at": "2026-07-31T11:29:04Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-07-30T11:08:05Z",
-        "finished_at": "2026-07-30T11:08:06Z"
+        "items_seen": 5,
+        "started_at": "2026-07-31T11:29:04Z",
+        "finished_at": "2026-07-31T11:29:05Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,565 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-07-30T11:08:06Z",
-        "finished_at": "2026-07-30T11:08:07Z"
+        "started_at": "2026-07-31T11:29:05Z",
+        "finished_at": "2026-07-31T11:29:06Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 23,
-        "started_at": "2026-07-30T11:08:07Z",
-        "finished_at": "2026-07-30T11:08:07Z"
+        "items_seen": 28,
+        "started_at": "2026-07-31T11:29:06Z",
+        "finished_at": "2026-07-31T11:29:06Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-07-go-cve-2026-67437",
+      "slug": "2026-07-go-cve-2026-67437",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-67437.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OliveTin: Unauthenticated DoS via OAuth2 State Memory Exhaustion (Unbounded Map Growth)",
+      "summary": "OliveTin: Unauthenticated DoS via OAuth2 State Memory Exhaustion (Unbounded Map Growth)",
+      "vendor": "Go",
+      "product": "github.com/OliveTin/OliveTin",
+      "cve": "CVE-2026-67437",
+      "operator_check": "Check whether github.com/OliveTin/OliveTin is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 28%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/OliveTin/OliveTin. Prioritize it with other application dependency updates, especially because EPSS places it in the 28% percentile.",
+      "tags": [
+        "cve-2026-67437",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xpxj-f2fm-rqch",
+          "url": "https://github.com/advisories/GHSA-xpxj-f2fm-rqch"
+        },
+        {
+          "title": "NVD — CVE-2026-67437",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67437"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OliveTin/OliveTin/security/advisories/GHSA-xpxj-f2fm-rqch"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-multiple-vendors-vu-790363",
+      "slug": "2026-07-multiple-vendors-vu-790363",
+      "url": "https://www.patchbrief.org/items/2026-07-multiple-vendors-vu-790363.html",
+      "date": "2026-07-30",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#790363: foreUP golf management platform's web API contains multiple vulnerabilities",
+      "summary": "Overview Two vulnerabilities in the REST API were found in Golf Compete foreUP. The first exposes the merchant, Finix, API credentials directly in customer record responses, allowing any user to obtain and use the payment processor account. The second is a missing object-level authorization check, which lets a user retrieve any other customer's full profile, payment token, and transaction history by changing the golfer_id in the request path. Description Golf Compete foreUP provides cloud-based golf course management software to over 2,000 golf courses. They offer tools that allow the management of customers, inventory, tee times, food & beverages, marketing, billing, etc. The vulnerabilities identified are listed below. CVE-2026-15657 A vulnerability in the foreUP customer REST API exposes merchant credentials. Each customer record... Related CVEs: CVE-2026-15657, CVE-2026-15658.",
+      "vendor": "Multiple vendors",
+      "product": "foreUP golf management platform's web API",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for foreUP golf management platform's web API where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-790363",
+        "coordinated-disclosure",
+        "multiple-vendors",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#790363",
+          "url": "https://kb.cert.org/vuls/id/790363"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2025-4318",
+      "slug": "2026-07-npm-cve-2025-4318",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2025-4318.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "AWS Amplify Studio UI Component Properties Has an Input Validation Issue",
+      "summary": "AWS Amplify Studio UI Component Properties Has an Input Validation Issue",
+      "vendor": "npm",
+      "product": "@aws-amplify/codegen-ui-react",
+      "cve": "CVE-2025-4318",
+      "operator_check": "Check whether @aws-amplify/codegen-ui-react is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.5. EPSS probability: 0.9%; percentile: 57%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @aws-amplify/codegen-ui-react. Prioritize it with other application dependency updates, especially because EPSS places it in the 57% percentile.",
+      "tags": [
+        "cve-2025-4318",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hf3j-86p7-mfw8",
+          "url": "https://github.com/advisories/GHSA-hf3j-86p7-mfw8"
+        },
+        {
+          "title": "NVD — CVE-2025-4318",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4318"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aws-amplify/amplify-codegen-ui/security/advisories/GHSA-hf3j-86p7-mfw8"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-cve-2026-54722",
+      "slug": "2026-07-npm-cve-2026-54722",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-cve-2026-54722.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "dssrf has an SSRF bypass with remove_at_symbol_in_string",
+      "summary": "dssrf has an SSRF bypass with remove_at_symbol_in_string",
+      "vendor": "npm",
+      "product": "dssrf",
+      "cve": "CVE-2026-54722",
+      "operator_check": "Check whether dssrf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for dssrf. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54722",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cg4g-m8jx-vjv2",
+          "url": "https://github.com/advisories/GHSA-cg4g-m8jx-vjv2"
+        },
+        {
+          "title": "NVD — CVE-2026-54722",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54722"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/HackingRepo/dssrf-js/security/advisories/GHSA-cg4g-m8jx-vjv2"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-openclaw-cve-2026-66418",
+      "slug": "2026-07-openclaw-cve-2026-66418",
+      "url": "https://www.patchbrief.org/items/2026-07-openclaw-cve-2026-66418.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "OpenClaw Dashboard v3.0.0 — CVE-2026-66418 (Critical)",
+      "summary": "OpenClaw Dashboard v3.0.0 contains a stored cross-site scripting vulnerability that allows unauthenticated remote attackers to inject arbitrary HTML and script payloads by submitting a crafted username in a failed login POST request, which is recorded verbatim in the audit log. When an administrator opens the notification panel, the unescaped log entry is rendered via innerHTML with a permissive Content-Security-Policy allowing inline event handlers, enabling the attacker-supplied payload to execute in the administrator's session and interact with authenticated endpoints including agent instru",
+      "vendor": "OpenClaw",
+      "product": "Dashboard v3.0.0",
+      "cve": "CVE-2026-66418",
+      "operator_check": "Review CVE-2026-66418 in your asset inventory. Apply patches per vendor guidance and verify Dashboard v3.0.0 is not exposed. CVSS score: 9.3.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.3) in OpenClaw Dashboard v3.0.0. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-66418",
+        "vendor-advisory",
+        "openclaw",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-66418",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66418"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/theopaid/Unauthenticated-Stored-Cross-Site-Scripting-Leading-To-Administrator-Account-Takeover"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/tugcantopaloglu/openclaw-dashboard"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-openclaw-cve-2026-66421",
+      "slug": "2026-07-openclaw-cve-2026-66421",
+      "url": "https://www.patchbrief.org/items/2026-07-openclaw-cve-2026-66421.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "OpenClaw Dashboard — CVE-2026-66421 (Critical)",
+      "summary": "OpenClaw Dashboard contains a stored cross-site scripting vulnerability that allows unauthenticated remote attackers to execute arbitrary JavaScript in the administrator's browser session by injecting HTML markup into agent transcript messages processed through the sessions API. Attackers can craft a message containing inline event handler payloads such as an img tag with an onerror attribute within the 60-character rendering budget, which is stored in the session transcript and interpolated unsanitized into innerHTML on the default landing page, allowing theft of session tokens and unauthoriz",
+      "vendor": "OpenClaw",
+      "product": "Dashboard",
+      "cve": "CVE-2026-66421",
+      "operator_check": "Review CVE-2026-66421 in your asset inventory. Apply patches per vendor guidance and verify Dashboard is not exposed. CVSS score: 9.3.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.3) in OpenClaw Dashboard. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-66421",
+        "vendor-advisory",
+        "openclaw",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-66421",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66421"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/theopaid/Stored-Cross-Site-Scripting-Via-Agent-Messages-Leading-To-Session-Token-Theft-openclaw-dashboard-"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/tugcantopaloglu/openclaw-dashboard"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-67424",
+      "slug": "2026-07-pypi-cve-2026-67424",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-67424.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flyto2 Core: Guarded HTTP modules follow redirects into internal space without per-hop SSRF revalidation",
+      "summary": "Flyto2 Core: Guarded HTTP modules follow redirects into internal space without per-hop SSRF revalidation",
+      "vendor": "PyPI",
+      "product": "flyto-core",
+      "cve": "CVE-2026-67424",
+      "operator_check": "Check whether flyto-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flyto-core. Prioritize it with other application dependency updates, especially because EPSS places it in the 15% percentile.",
+      "tags": [
+        "cve-2026-67424",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c9hr-64h3-gxpc",
+          "url": "https://github.com/advisories/GHSA-c9hr-64h3-gxpc"
+        },
+        {
+          "title": "NVD — CVE-2026-67424",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67424"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-c9hr-64h3-gxpc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-67425",
+      "slug": "2026-07-pypi-cve-2026-67425",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-67425.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flyto2 Core: LLM/API keys leak to an attacker-controlled base_url",
+      "summary": "Flyto2 Core: LLM/API keys leak to an attacker-controlled base_url",
+      "vendor": "PyPI",
+      "product": "flyto-core",
+      "cve": "CVE-2026-67425",
+      "operator_check": "Check whether flyto-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 24%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flyto-core. Prioritize it with other application dependency updates, especially because EPSS places it in the 24% percentile.",
+      "tags": [
+        "cve-2026-67425",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qq9q-xgm3-xv9g",
+          "url": "https://github.com/advisories/GHSA-qq9q-xgm3-xv9g"
+        },
+        {
+          "title": "NVD — CVE-2026-67425",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67425"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-qq9q-xgm3-xv9g"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-67426",
+      "slug": "2026-07-pypi-cve-2026-67426",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-67426.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flyto2 Core: Unauthenticated flyto-verification /run: callback_url SSRF and internal runner-secret exfiltration",
+      "summary": "Flyto2 Core: Unauthenticated flyto-verification /run: callback_url SSRF and internal runner-secret exfiltration",
+      "vendor": "PyPI",
+      "product": "flyto-core",
+      "cve": "CVE-2026-67426",
+      "operator_check": "Check whether flyto-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 21%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flyto-core. Prioritize it with other application dependency updates, especially because EPSS places it in the 21% percentile.",
+      "tags": [
+        "cve-2026-67426",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jx74-cqjv-2c67",
+          "url": "https://github.com/advisories/GHSA-jx74-cqjv-2c67"
+        },
+        {
+          "title": "NVD — CVE-2026-67426",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67426"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-jx74-cqjv-2c67"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-67427",
+      "slug": "2026-07-pypi-cve-2026-67427",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-67427.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flyto2 Core: ${env.VAR} interpolation reads any env secret despite env.get being denylisted",
+      "summary": "Flyto2 Core: ${env.VAR} interpolation reads any env secret despite env.get being denylisted",
+      "vendor": "PyPI",
+      "product": "flyto-core",
+      "cve": "CVE-2026-67427",
+      "operator_check": "Check whether flyto-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flyto-core. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-67427",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hr7p-wg7r-hg9m",
+          "url": "https://github.com/advisories/GHSA-hr7p-wg7r-hg9m"
+        },
+        {
+          "title": "NVD — CVE-2026-67427",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67427"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-hr7p-wg7r-hg9m"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-67428",
+      "slug": "2026-07-pypi-cve-2026-67428",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-67428.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flyto2 Core: Multiple HTTP-family modules fetch client-controlled URLs without the SSRF guard their siblings apply (S...",
+      "summary": "Flyto2 Core: Multiple HTTP-family modules fetch client-controlled URLs without the SSRF guard their siblings apply (SSRF to internal/metadata)",
+      "vendor": "PyPI",
+      "product": "flyto-core",
+      "cve": "CVE-2026-67428",
+      "operator_check": "Check whether flyto-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 26%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flyto-core. Prioritize it with other application dependency updates, especially because EPSS places it in the 26% percentile.",
+      "tags": [
+        "cve-2026-67428",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pgwh-4jj4-qm8v",
+          "url": "https://github.com/advisories/GHSA-pgwh-4jj4-qm8v"
+        },
+        {
+          "title": "NVD — CVE-2026-67428",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67428"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-pgwh-4jj4-qm8v"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-pypi-cve-2026-67429",
+      "slug": "2026-07-pypi-cve-2026-67429",
+      "url": "https://www.patchbrief.org/items/2026-07-pypi-cve-2026-67429.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flyto2 Core: Arbitrary file write via image.download (and other file-writing modules)",
+      "summary": "Flyto2 Core: Arbitrary file write via image.download (and other file-writing modules)",
+      "vendor": "PyPI",
+      "product": "flyto-core",
+      "cve": "CVE-2026-67429",
+      "operator_check": "Check whether flyto-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flyto-core. Prioritize it with other application dependency updates, especially because EPSS places it in the 40% percentile.",
+      "tags": [
+        "cve-2026-67429",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2956-977x-2w3r",
+          "url": "https://github.com/advisories/GHSA-2956-977x-2w3r"
+        },
+        {
+          "title": "NVD — CVE-2026-67429",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67429"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-2956-977x-2w3r"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-rubygems-cve-2026-66066",
+      "slug": "2026-07-rubygems-cve-2026-66066",
+      "url": "https://www.patchbrief.org/items/2026-07-rubygems-cve-2026-66066.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Active Storage has possible arbitrary file read and remote code execution in Active Storage variant processing",
+      "summary": "Active Storage has possible arbitrary file read and remote code execution in Active Storage variant processing",
+      "vendor": "RubyGems",
+      "product": "activestorage",
+      "cve": "CVE-2026-66066",
+      "operator_check": "Check whether activestorage is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.5.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for activestorage. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-66066",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xr9x-r78c-5hrm",
+          "url": "https://github.com/advisories/GHSA-xr9x-r78c-5hrm"
+        },
+        {
+          "title": "NVD — CVE-2026-66066",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66066"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-rubygems-cve-2026-67431",
+      "slug": "2026-07-rubygems-cve-2026-67431",
+      "url": "https://www.patchbrief.org/items/2026-07-rubygems-cve-2026-67431.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MCP Ruby SDK: Ruby SSE Session Poisoning",
+      "summary": "MCP Ruby SDK: Ruby SSE Session Poisoning",
+      "vendor": "RubyGems",
+      "product": "mcp",
+      "cve": "CVE-2026-67431",
+      "operator_check": "Check whether mcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3. EPSS probability: 0.3%; percentile: 20%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mcp. Prioritize it with other application dependency updates, especially because EPSS places it in the 20% percentile.",
+      "tags": [
+        "cve-2026-67431",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5p9g-j988-pcwv",
+          "url": "https://github.com/advisories/GHSA-5p9g-j988-pcwv"
+        },
+        {
+          "title": "NVD — CVE-2026-67431",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67431"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/modelcontextprotocol/ruby-sdk/security/advisories/GHSA-5p9g-j988-pcwv"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-rubygems-cve-2026-67432",
+      "slug": "2026-07-rubygems-cve-2026-67432",
+      "url": "https://www.patchbrief.org/items/2026-07-rubygems-cve-2026-67432.html",
+      "date": "2026-07-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MCP Ruby SDK: Unbounded JSON-RPC request body causes uncontrolled memory allocation in StreamableHTTPTransport",
+      "summary": "MCP Ruby SDK: Unbounded JSON-RPC request body causes uncontrolled memory allocation in StreamableHTTPTransport",
+      "vendor": "RubyGems",
+      "product": "mcp",
+      "cve": "CVE-2026-67432",
+      "operator_check": "Check whether mcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 36%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mcp. Prioritize it with other application dependency updates, especially because EPSS places it in the 36% percentile.",
+      "tags": [
+        "cve-2026-67432",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h669-8m4g-r2hc",
+          "url": "https://github.com/advisories/GHSA-h669-8m4g-r2hc"
+        },
+        {
+          "title": "NVD — CVE-2026-67432",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67432"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/modelcontextprotocol/ruby-sdk/security/advisories/GHSA-h669-8m4g-r2hc"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-sglang-vu-281278",
+      "slug": "2026-07-sglang-vu-281278",
+      "url": "https://www.patchbrief.org/items/2026-07-sglang-vu-281278.html",
+      "date": "2026-07-30",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#281278: SGLang contains six different vulnerabilities including RCE, data exfiltration, and credential disclosure",
+      "summary": "Overview Six vulnerabilities have been discovered within the SGLang project, including remote code execution (RCE), server-side request forgery (SSRF), local file read, credential leakage, and model weight exfiltration on a target server. Exploitation does not require authentication in most cases, and some vulnerabilities require only network access with no API keys or user credentials. At the time of publication, no patches are available from the project maintainers, and coordination attempts have been unsuccessful. Description SGLang is an open-source framework for serving large language models (LLMs) and multimodal AI models, supporting models such as Qwen, DeepSeek, Mistral, and Skywork, and is compatible with OpenAI APIs. Six vulnerabilities have been discovered within the tool and are tracked as follows: CVE-2026-15969 SGLang... Related CVEs: CVE-2026-14890, CVE-2026-15969, CVE-2026-15971, CVE-2026-15974.",
+      "vendor": "SGLang",
+      "product": "SGLang",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for SGLang where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-281278",
+        "coordinated-disclosure",
+        "sglang",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#281278",
+          "url": "https://kb.cert.org/vuls/id/281278"
+        }
+      ]
+    },
     {
       "id": "2026-07-care-cve-2026-41939",
       "slug": "2026-07-care-cve-2026-41939",

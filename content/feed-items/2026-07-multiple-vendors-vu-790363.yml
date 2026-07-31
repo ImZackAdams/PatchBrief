@@ -1,0 +1,36 @@
+id: 2026-07-multiple-vendors-vu-790363
+slug: 2026-07-multiple-vendors-vu-790363
+external_id: VU-790363
+source: cert_vu
+date: '2026-07-30'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#790363: foreUP golf management platform''s web API contains multiple vulnerabilities'
+summary: 'Overview Two vulnerabilities in the REST API were found in Golf Compete
+  foreUP. The first exposes the merchant, Finix, API credentials directly in customer
+  record responses, allowing any user to obtain and use the payment processor account.
+  The second is a missing object-level authorization check, which lets a user retrieve
+  any other customer''s full profile, payment token, and transaction history by changing
+  the golfer_id in the request path. Description Golf Compete foreUP provides cloud-based
+  golf course management software to over 2,000 golf courses. They offer tools that
+  allow the management of customers, inventory, tee times, food & beverages, marketing,
+  billing, etc. The vulnerabilities identified are listed below. CVE-2026-15657 A
+  vulnerability in the foreUP customer REST API exposes merchant credentials. Each
+  customer record... Related CVEs: CVE-2026-15657, CVE-2026-15658.'
+vendor: Multiple vendors
+product: foreUP golf management platform's web API
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for foreUP golf management platform's web API where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#790363
+  url: https://kb.cert.org/vuls/id/790363
+tags:
+- vu-790363
+- coordinated-disclosure
+- multiple-vendors
+- cert-vu
+is_sample: false

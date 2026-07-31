@@ -1,0 +1,38 @@
+id: 2026-07-sglang-vu-281278
+slug: 2026-07-sglang-vu-281278
+external_id: VU-281278
+source: cert_vu
+date: '2026-07-30'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#281278: SGLang contains six different vulnerabilities including RCE, data
+  exfiltration, and credential disclosure'
+summary: 'Overview Six vulnerabilities have been discovered within the SGLang project,
+  including remote code execution (RCE), server-side request forgery (SSRF), local
+  file read, credential leakage, and model weight exfiltration on a target server.
+  Exploitation does not require authentication in most cases, and some vulnerabilities
+  require only network access with no API keys or user credentials. At the time of
+  publication, no patches are available from the project maintainers, and coordination
+  attempts have been unsuccessful. Description SGLang is an open-source framework
+  for serving large language models (LLMs) and multimodal AI models, supporting models
+  such as Qwen, DeepSeek, Mistral, and Skywork, and is compatible with OpenAI APIs.
+  Six vulnerabilities have been discovered within the tool and are tracked as follows:
+  CVE-2026-15969 SGLang... Related CVEs: CVE-2026-14890, CVE-2026-15969, CVE-2026-15971,
+  CVE-2026-15974.'
+vendor: SGLang
+product: SGLang
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for SGLang where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#281278
+  url: https://kb.cert.org/vuls/id/281278
+tags:
+- vu-281278
+- coordinated-disclosure
+- sglang
+- cert-vu
+is_sample: false
