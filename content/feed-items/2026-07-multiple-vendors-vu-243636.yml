@@ -1,0 +1,37 @@
+id: 2026-07-multiple-vendors-vu-243636
+slug: 2026-07-multiple-vendors-vu-243636
+external_id: VU-243636
+source: cert_vu
+date: '2026-07-31'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#243636: VPS.org one-click deployment templates contain multiple vulnerabilities'
+summary: 'Overview VPS.org''s one-click deployment templates provision services with
+  default passwords and predefined network bindings instead of generating randomized
+  secrets or applying per-deployment hardening measures. Description VPS.org is a
+  cloud and virtual private server hosting provider that offers a library of templates
+  for quickly provisioning common applications and services. Multiple vulnerabilities
+  exist in the one-click deployment templates feature. These vulnerabilities stem
+  from the same root cause: content is directly instantiated from static templates,
+  using default passwords and static secrets with no deployment-specific randomization
+  or interface-binding hardening at provisioning time. CVE-2026-16503 The Supabase
+  template provides an instance of PostgreSQL that is bound to all network interfaces
+  (0.0.0.0:5432) and uses the... Related CVEs: CVE-2026-16503, CVE-2026-16504.'
+vendor: Multiple vendors
+product: VPS.org one-click deployment templates contain multiple vulnerabilities
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for VPS.org one-click deployment templates contain multiple vulnerabilities where
+  available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#243636
+  url: https://kb.cert.org/vuls/id/243636
+tags:
+- vu-243636
+- coordinated-disclosure
+- multiple-vendors
+- cert-vu
+is_sample: false
