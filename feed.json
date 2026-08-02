@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-01T10:40:01Z",
-  "total_items": 872,
+  "generated": "2026-08-02T10:41:10Z",
+  "total_items": 874,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-01T10:40:01Z",
+    "generated": "2026-08-02T10:41:10Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-08-01T10:39:49Z",
-        "finished_at": "2026-08-01T10:39:49Z"
+        "items_seen": 0,
+        "started_at": "2026-08-02T10:40:59Z",
+        "finished_at": "2026-08-02T10:40:59Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-01T10:39:49Z",
-        "finished_at": "2026-08-01T10:39:50Z"
+        "started_at": "2026-08-02T10:40:59Z",
+        "finished_at": "2026-08-02T10:41:00Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-01T10:39:50Z",
-        "finished_at": "2026-08-01T10:39:57Z"
+        "started_at": "2026-08-02T10:41:00Z",
+        "finished_at": "2026-08-02T10:41:06Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-08-01T10:39:57Z",
-        "finished_at": "2026-08-01T10:39:58Z"
+        "started_at": "2026-08-02T10:41:06Z",
+        "finished_at": "2026-08-02T10:41:07Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-08-01T10:39:58Z",
-        "finished_at": "2026-08-01T10:39:58Z"
+        "items_seen": 3,
+        "started_at": "2026-08-02T10:41:07Z",
+        "finished_at": "2026-08-02T10:41:07Z"
       },
       {
         "id": "exploitdb",
@@ -63,17 +63,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-01T10:39:58Z",
-        "finished_at": "2026-08-01T10:39:59Z"
+        "started_at": "2026-08-02T10:41:07Z",
+        "finished_at": "2026-08-02T10:41:08Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 14,
-        "started_at": "2026-08-01T10:39:59Z",
-        "finished_at": "2026-08-01T10:39:59Z"
+        "items_seen": 26,
+        "started_at": "2026-08-02T10:41:08Z",
+        "finished_at": "2026-08-02T10:41:08Z"
       }
     ]
   },
@@ -184,6 +184,41 @@
       ]
     },
     {
+      "id": "2026-07-go-cve-2026-52856",
+      "slug": "2026-07-go-cve-2026-52856",
+      "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-52856.html",
+      "date": "2026-07-31",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Wings: Maliciously crafted packet during SFTP connection handshake causes denial of service",
+      "summary": "Wings: Maliciously crafted packet during SFTP connection handshake causes denial of service",
+      "vendor": "Go",
+      "product": "github.com/pterodactyl/wings",
+      "cve": "CVE-2026-52856",
+      "operator_check": "Check whether github.com/pterodactyl/wings is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 26%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/pterodactyl/wings. Prioritize it with other application dependency updates, especially because EPSS places it in the 26% percentile.",
+      "tags": [
+        "cve-2026-52856",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-ghrq-5wpp-hxx5",
+          "url": "https://github.com/advisories/GHSA-ghrq-5wpp-hxx5"
+        },
+        {
+          "title": "NVD — CVE-2026-52856",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52856"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pterodactyl/wings/security/advisories/GHSA-ghrq-5wpp-hxx5"
+        }
+      ]
+    },
+    {
       "id": "2026-07-go-cve-2026-54725",
       "slug": "2026-07-go-cve-2026-54725",
       "url": "https://www.patchbrief.org/items/2026-07-go-cve-2026-54725.html",
@@ -250,6 +285,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/gtsteffaniak/filebrowser/security/advisories/GHSA-vvp7-h4fj-m28w"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-maven-cve-2026-41695",
+      "slug": "2026-07-maven-cve-2026-41695",
+      "url": "https://www.patchbrief.org/items/2026-07-maven-cve-2026-41695.html",
+      "date": "2026-07-31",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Spring Data: Unbounded property-path cache keyed by externally-supplied path string",
+      "summary": "Spring Data: Unbounded property-path cache keyed by externally-supplied path string",
+      "vendor": "Maven",
+      "product": "org.springframework.data:spring-data-commons",
+      "cve": "CVE-2026-41695",
+      "operator_check": "Check whether org.springframework.data:spring-data-commons is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.springframework.data:spring-data-commons. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-41695",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-88fw-v6x4-3f58",
+          "url": "https://github.com/advisories/GHSA-88fw-v6x4-3f58"
+        },
+        {
+          "title": "NVD — CVE-2026-41695",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41695"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/spring-projects/security-advisories/security/advisories/GHSA-88fw-v6x4-3f58"
         }
       ]
     },
