@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-02T10:41:10Z",
-  "total_items": 874,
+  "generated": "2026-08-03T12:23:17Z",
+  "total_items": 875,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-02T10:41:10Z",
+    "generated": "2026-08-03T12:23:17Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-02T10:40:59Z",
-        "finished_at": "2026-08-02T10:40:59Z"
+        "started_at": "2026-08-03T12:23:04Z",
+        "finished_at": "2026-08-03T12:23:05Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-02T10:40:59Z",
-        "finished_at": "2026-08-02T10:41:00Z"
+        "started_at": "2026-08-03T12:23:05Z",
+        "finished_at": "2026-08-03T12:23:05Z"
       },
       {
         "id": "nvd",
@@ -36,26 +36,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-02T10:41:00Z",
-        "finished_at": "2026-08-02T10:41:06Z"
+        "started_at": "2026-08-03T12:23:05Z",
+        "finished_at": "2026-08-03T12:23:13Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 30,
-        "started_at": "2026-08-02T10:41:06Z",
-        "finished_at": "2026-08-02T10:41:07Z"
+        "items_seen": 27,
+        "started_at": "2026-08-03T12:23:13Z",
+        "finished_at": "2026-08-03T12:23:14Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-08-02T10:41:07Z",
-        "finished_at": "2026-08-02T10:41:07Z"
+        "items_seen": 1,
+        "started_at": "2026-08-03T12:23:14Z",
+        "finished_at": "2026-08-03T12:23:14Z"
       },
       {
         "id": "exploitdb",
@@ -63,17 +63,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-02T10:41:07Z",
-        "finished_at": "2026-08-02T10:41:08Z"
+        "started_at": "2026-08-03T12:23:14Z",
+        "finished_at": "2026-08-03T12:23:15Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 26,
-        "started_at": "2026-08-02T10:41:08Z",
-        "finished_at": "2026-08-02T10:41:08Z"
+        "items_seen": 22,
+        "started_at": "2026-08-03T12:23:15Z",
+        "finished_at": "2026-08-03T12:23:15Z"
       }
     ]
   },
@@ -627,6 +627,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/xdan/jodit/security/advisories/GHSA-rxcw-mc6f-6hr3"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-npm-ghsa-p7w7-4929-vpj5",
+      "slug": "2026-07-npm-ghsa-p7w7-4929-vpj5",
+      "url": "https://www.patchbrief.org/items/2026-07-npm-ghsa-p7w7-4929-vpj5.html",
+      "date": "2026-07-31",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "`@dynatrace-oss/dynatrace-mcp-server` has Unauthenticated HTTP MCP Tool Invocation",
+      "summary": "`@dynatrace-oss/dynatrace-mcp-server` has Unauthenticated HTTP MCP Tool Invocation",
+      "vendor": "npm",
+      "product": "@dynatrace-oss/dynatrace-mcp-server",
+      "cve": null,
+      "operator_check": "Check whether @dynatrace-oss/dynatrace-mcp-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @dynatrace-oss/dynatrace-mcp-server. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-p7w7-4929-vpj5",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p7w7-4929-vpj5",
+          "url": "https://github.com/advisories/GHSA-p7w7-4929-vpj5"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dynatrace-oss/dynatrace-mcp/security/advisories/GHSA-p7w7-4929-vpj5"
         }
       ]
     },
