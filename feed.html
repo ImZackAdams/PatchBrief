@@ -239,10 +239,362 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">875 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">891 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Guzzle: Noncanonical host can bypass host-based checks" data-vendor="Composer" data-cve="CVE-2026-69246">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69246</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-composer-cve-2026-69246.html">Guzzle: Noncanonical host can bypass host-based checks</a>
+              </h2>
+              <p class="feed-vendor">Composer · guzzlehttp/guzzle</p>
+              <p class="feed-summary">Guzzle: Noncanonical host can bypass host-based checks</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether guzzlehttp/guzzle is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-v5mv-p594-2x33">GitHub Advisory GHSA-v5mv-p594-2x33</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69246">NVD — CVE-2026-69246</a><a href="https://github.com/guzzle/guzzle/security/advisories/GHSA-v5mv-p594-2x33">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-composer-cve-2026-69246.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Krayin CRM 2.2.4 — CVE-2026-41452 (Critical)" data-vendor="Krayin" data-cve="CVE-2026-41452">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-41452</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-krayin-cve-2026-41452.html">Krayin CRM 2.2.4 — CVE-2026-41452 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Krayin · CRM 2.2.4</p>
+              <p class="feed-summary">Krayin CRM 2.2.4 contains a missing authentication vulnerability in the installer middleware that allows unauthenticated remote attackers to overwrite the primary administrator account by sending a crafted HTTP POST request with the X-Requested-With: XMLHttpRequest header to bypass the CanInstall middleware redirect check. Attackers can supply arbitrary name, email, and password values to the admin-config-setup endpoint, which performs an unauthenticated updateOrInsert targeting the hardcoded administrator user ID, enabling full administrative access to all CRM data.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-41452 in your asset inventory. Apply patches per vendor guidance and verify CRM 2.2.4 is not exposed. CVSS score: 9.8.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41452">NVD — CVE-2026-41452</a><a href="https://jivasecurity.com/writeups/krayin-installer-bypass-account-takeover-cve-2026-41452">Source reference</a><a href="https://www.vulncheck.com/advisories/krayin-crm-missing-authentication-via-install-api-admin-config-setup">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-krayin-cve-2026-41452.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability" data-vendor="N-able" data-cve="CVE-2026-18577">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-18577</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-n-able-cve-2026-18577.html">N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">N-able · N-central</p>
+              <p class="feed-summary">N-able N-central contains an authentication bypass using an alternate path or channel allows for authentication bypass and account takeover in N-central. This vulnerability is the result of an incomplete patch for CVE-2026-18556.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-18577">NVD — CVE-2026-18577</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-n-able-cve-2026-18577.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="undici vulnerable to cross-user information disclosure and parse-time crash via degenerate private cache directives" data-vendor="npm" data-cve="CVE-2026-13697">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-13697</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-13697.html">undici vulnerable to cross-user information disclosure and parse-time crash via degenerate private cache directives</a>
+              </h2>
+              <p class="feed-vendor">npm · undici</p>
+              <p class="feed-summary">undici vulnerable to cross-user information disclosure and parse-time crash via degenerate private cache directives</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether undici is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 19%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-4cwx-7wf7-3272">GitHub Advisory GHSA-4cwx-7wf7-3272</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-13697">NVD — CVE-2026-13697</a><a href="https://github.com/nodejs/undici/security/advisories/GHSA-4cwx-7wf7-3272">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-13697.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="fast-uri vulnerable to host confusion via backslash authority introducer" data-vendor="npm" data-cve="CVE-2026-18446">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-18446</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-18446.html">fast-uri vulnerable to host confusion via backslash authority introducer</a>
+              </h2>
+              <p class="feed-vendor">npm · fast-uri</p>
+              <p class="feed-summary">fast-uri vulnerable to host confusion via backslash authority introducer</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether fast-uri is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 13%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-7p8r-x3mc-p8w7">GitHub Advisory GHSA-7p8r-x3mc-p8w7</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-18446">NVD — CVE-2026-18446</a><a href="https://github.com/fastify/fast-uri/security/advisories/GHSA-7p8r-x3mc-p8w7">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-18446.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Angular: Cache-Key Ambiguity in HttpTransferCache Leading to Cross-Request Response Reuse and State Poisoning" data-vendor="npm" data-cve="CVE-2026-68945">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-68945</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-68945.html">Angular: Cache-Key Ambiguity in HttpTransferCache Leading to Cross-Request Response Reuse and State Poisoning</a>
+              </h2>
+              <p class="feed-vendor">npm · @angular/common</p>
+              <p class="feed-summary">Angular: Cache-Key Ambiguity in HttpTransferCache Leading to Cross-Request Response Reuse and State Poisoning</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether @angular/common is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-jhpw-976m-542j">GitHub Advisory GHSA-jhpw-976m-542j</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-68945">NVD — CVE-2026-68945</a><a href="https://github.com/angular/angular/security/advisories/GHSA-jhpw-976m-542j">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-68945.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Angular SSR: Missing Fallback Raw-Content Serialization Escaping leads to Cross-Site Scripting (XSS)" data-vendor="npm" data-cve="CVE-2026-69149">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69149</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-69149.html">Angular SSR: Missing Fallback Raw-Content Serialization Escaping leads to Cross-Site Scripting (XSS)</a>
+              </h2>
+              <p class="feed-vendor">npm · @angular/platform-server</p>
+              <p class="feed-summary">Angular SSR: Missing Fallback Raw-Content Serialization Escaping leads to Cross-Site Scripting (XSS)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether @angular/platform-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-vpx6-8pjr-4g3v">GitHub Advisory GHSA-vpx6-8pjr-4g3v</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69149">NVD — CVE-2026-69149</a><a href="https://github.com/angular/angular/security/advisories/GHSA-vpx6-8pjr-4g3v">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-69149.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Angular i18n: Cross-Site Scripting (XSS) via event-handler attributes" data-vendor="npm" data-cve="CVE-2026-69151">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69151</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-69151.html">Angular i18n: Cross-Site Scripting (XSS) via event-handler attributes</a>
+              </h2>
+              <p class="feed-vendor">npm · @angular/compiler</p>
+              <p class="feed-summary">Angular i18n: Cross-Site Scripting (XSS) via event-handler attributes</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether @angular/compiler is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.6.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-jj27-h5hq-8x99">GitHub Advisory GHSA-jj27-h5hq-8x99</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69151">NVD — CVE-2026-69151</a><a href="https://github.com/angular/angular/security/advisories/GHSA-jj27-h5hq-8x99">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-69151.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation" data-vendor="npm" data-cve="CVE-2026-69152">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69152</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-69152.html">brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation</a>
+              </h2>
+              <p class="feed-vendor">npm · brace-expansion</p>
+              <p class="feed-summary">brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether brace-expansion is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-rgw5-rvv9-x895">GitHub Advisory GHSA-rgw5-rvv9-x895</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69152">NVD — CVE-2026-69152</a><a href="https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-rgw5-rvv9-x895">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-69152.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Socket.IO: Zero-attachment Memory Exhaustion" data-vendor="npm" data-cve="CVE-2026-69185">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69185</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-69185.html">Socket.IO: Zero-attachment Memory Exhaustion</a>
+              </h2>
+              <p class="feed-vendor">npm · socket.io-parser</p>
+              <p class="feed-summary">Socket.IO: Zero-attachment Memory Exhaustion</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether socket.io-parser is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-2m8v-j782-fhvr">GitHub Advisory GHSA-2m8v-j782-fhvr</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69185">NVD — CVE-2026-69185</a><a href="https://github.com/socketio/socket.io/security/advisories/GHSA-2m8v-j782-fhvr">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-69185.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="ip-address: Address4 decodes leading-zero octets as decimal while resolvers decode them as octal, allowing SSRF and t..." data-vendor="npm" data-cve="CVE-2026-69192">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69192</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-69192.html">ip-address: Address4 decodes leading-zero octets as decimal while resolvers decode them as octal, allowing SSRF and t...</a>
+              </h2>
+              <p class="feed-vendor">npm · ip-address</p>
+              <p class="feed-summary">ip-address: Address4 decodes leading-zero octets as decimal while resolvers decode them as octal, allowing SSRF and trust-boundary bypass</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether ip-address is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-mwp4-54f8-5fhr">GitHub Advisory GHSA-mwp4-54f8-5fhr</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69192">NVD — CVE-2026-69192</a><a href="https://github.com/beaugunderson/ip-address/security/advisories/GHSA-mwp4-54f8-5fhr">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-69192.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Sequelize: SQL Injection (Oracle DB)" data-vendor="npm" data-cve="CVE-2026-69240">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69240</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-69240.html">Sequelize: SQL Injection (Oracle DB)</a>
+              </h2>
+              <p class="feed-vendor">npm · sequelize</p>
+              <p class="feed-summary">Sequelize: SQL Injection (Oracle DB)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether sequelize is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-v8fg-2rw7-q452">GitHub Advisory GHSA-v8fg-2rw7-q452</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69240">NVD — CVE-2026-69240</a><a href="https://github.com/sequelize/sequelize/security/advisories/GHSA-v8fg-2rw7-q452">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-69240.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)" data-vendor="PyPI" data-cve="CVE-2026-69244">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69244</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-pypi-cve-2026-69244.html">AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)</a>
+              </h2>
+              <p class="feed-vendor">PyPI · aiohttp</p>
+              <p class="feed-summary">AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-cq5v-8q36-5273">GitHub Advisory GHSA-cq5v-8q36-5273</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69244">NVD — CVE-2026-69244</a><a href="https://github.com/aio-libs/aiohttp/security/advisories/GHSA-cq5v-8q36-5273">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-pypi-cve-2026-69244.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="cryptography: PKCS#7 EnvelopedData decryption exposes a Bleichenbacher oracle through distinguishable errors and timing" data-vendor="PyPI" data-cve="CVE-2026-69247">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69247</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-pypi-cve-2026-69247.html">cryptography: PKCS#7 EnvelopedData decryption exposes a Bleichenbacher oracle through distinguishable errors and timing</a>
+              </h2>
+              <p class="feed-vendor">PyPI · cryptography</p>
+              <p class="feed-summary">cryptography: PKCS#7 EnvelopedData decryption exposes a Bleichenbacher oracle through distinguishable errors and timing</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether cryptography is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-g6cj-pr64-35w5">GitHub Advisory GHSA-g6cj-pr64-35w5</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69247">NVD — CVE-2026-69247</a><a href="https://github.com/pyca/cryptography/security/advisories/GHSA-g6cj-pr64-35w5">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-pypi-cve-2026-69247.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="python-cryptography: Duplicate self-signed intermediates can cause exponential path-building" data-vendor="PyPI" data-cve="CVE-2026-69249">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69249</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-pypi-cve-2026-69249.html">python-cryptography: Duplicate self-signed intermediates can cause exponential path-building</a>
+              </h2>
+              <p class="feed-vendor">PyPI · cryptography</p>
+              <p class="feed-summary">python-cryptography: Duplicate self-signed intermediates can cause exponential path-building</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether cryptography is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-jwv3-5hgf-82ww">GitHub Advisory GHSA-jwv3-5hgf-82ww</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69249">NVD — CVE-2026-69249</a><a href="https://github.com/pyca/cryptography/security/advisories/GHSA-jwv3-5hgf-82ww">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-pypi-cve-2026-69249.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="GitPython: Unguarded git option forwarding in IndexFile.checkout() and TagReference.create() enables arbitrary file o..." data-vendor="PyPI">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-pypi-ghsa-3f7w-8rr8-f37f.html">GitPython: Unguarded git option forwarding in IndexFile.checkout() and TagReference.create() enables arbitrary file o...</a>
+              </h2>
+              <p class="feed-vendor">PyPI · GitPython</p>
+              <p class="feed-summary">GitPython: Unguarded git option forwarding in IndexFile.checkout() and TagReference.create() enables arbitrary file overwrite and arbitrary file read</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether GitPython is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-3f7w-8rr8-f37f">GitHub Advisory GHSA-3f7w-8rr8-f37f</a><a href="https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-3f7w-8rr8-f37f">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-pypi-ghsa-3f7w-8rr8-f37f.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Redaxo has a Mediapool isAllowedExtension bypass via multi-segment filename that leads to authenticated RCE on Apache..." data-vendor="Composer" data-cve="CVE-2026-53599">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
