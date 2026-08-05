@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-04T11:23:17Z",
-  "total_items": 891,
+  "generated": "2026-08-05T11:20:53Z",
+  "total_items": 927,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-04T11:23:17Z",
+    "generated": "2026-08-05T11:20:53Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-08-04T11:23:03Z",
-        "finished_at": "2026-08-04T11:23:03Z"
+        "items_seen": 4,
+        "started_at": "2026-08-05T11:20:41Z",
+        "finished_at": "2026-08-05T11:20:41Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-04T11:23:03Z",
-        "finished_at": "2026-08-04T11:23:04Z"
+        "started_at": "2026-08-05T11:20:41Z",
+        "finished_at": "2026-08-05T11:20:41Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-08-04T11:23:04Z",
-        "finished_at": "2026-08-04T11:23:12Z"
+        "items_seen": 5,
+        "started_at": "2026-08-05T11:20:41Z",
+        "finished_at": "2026-08-05T11:20:49Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 14,
-        "started_at": "2026-08-04T11:23:12Z",
-        "finished_at": "2026-08-04T11:23:13Z"
+        "items_seen": 30,
+        "started_at": "2026-08-05T11:20:49Z",
+        "finished_at": "2026-08-05T11:20:49Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-04T11:23:13Z",
-        "finished_at": "2026-08-04T11:23:14Z"
+        "started_at": "2026-08-05T11:20:49Z",
+        "finished_at": "2026-08-05T11:20:50Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,1266 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-04T11:23:14Z",
-        "finished_at": "2026-08-04T11:23:15Z"
+        "started_at": "2026-08-05T11:20:50Z",
+        "finished_at": "2026-08-05T11:20:51Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-08-04T11:23:15Z",
-        "finished_at": "2026-08-04T11:23:15Z"
+        "items_seen": 7,
+        "started_at": "2026-08-05T11:20:51Z",
+        "finished_at": "2026-08-05T11:20:51Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-08-apache-cve-2026-34486",
+      "slug": "2026-08-apache-cve-2026-34486",
+      "url": "https://www.patchbrief.org/items/2026-08-apache-cve-2026-34486.html",
+      "date": "2026-08-04",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
+      "summary": "Apache Tomcat contains a missing encryption of sensitive data vulnerability that allows the bypass of the EncryptInterceptor.",
+      "vendor": "Apache",
+      "product": "Tomcat",
+      "cve": "CVE-2026-34486",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-34486 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-08-07. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-34486",
+        "kev",
+        "apache",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-34486",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34486"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-ibm-cve-2026-9198",
+      "slug": "2026-08-ibm-cve-2026-9198",
+      "url": "https://www.patchbrief.org/items/2026-08-ibm-cve-2026-9198.html",
+      "date": "2026-08-04",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "IBM Langflow Code Injection Vulnerability",
+      "summary": "Langflow contains a code injection vulnerability that allows unauthenticated attackers to achieve full remote code execution on default Langflow deployments.",
+      "vendor": "IBM",
+      "product": "Langflow",
+      "cve": "CVE-2026-9198",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-9198 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-08-07. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-9198",
+        "kev",
+        "ibm",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-9198",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9198"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-maxsite-cve-2026-70552",
+      "slug": "2026-08-maxsite-cve-2026-70552",
+      "url": "https://www.patchbrief.org/items/2026-08-maxsite-cve-2026-70552.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MaxSite CMS 109.5 and earlier — CVE-2026-70552 (Critical)",
+      "summary": "MaxSite CMS 109.5 and earlier contains an authentication bypass vulnerability in the AJAX dispatcher that allows unauthenticated attackers to access admin-gated endpoints by supplying any X-Requested-With header and requesting a base64-encoded path resolving to any *-ajax.php file in the codebase. Attackers can exploit this dispatcher bypass to reach privileged plugin endpoints without credentials, enabling actions such as manipulating poll states and vote counts, and amplifying the impact of any dangerous operation performed by admin-only ajax files across the plugin tree.",
+      "vendor": "MaxSite",
+      "product": "CMS 109.5 and earlier",
+      "cve": "CVE-2026-70552",
+      "operator_check": "Review CVE-2026-70552 in your asset inventory. Apply patches per vendor guidance and verify CMS 109.5 and earlier is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MaxSite CMS 109.5 and earlier. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-70552",
+        "vendor-advisory",
+        "maxsite",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-70552",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70552"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/maxsite/cms"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://max-3000.com/page/maxsite-cms-109-6"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-maxsite-cve-2026-70553",
+      "slug": "2026-08-maxsite-cve-2026-70553",
+      "url": "https://www.patchbrief.org/items/2026-08-maxsite-cve-2026-70553.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MaxSite CMS — CVE-2026-70553 (Critical)",
+      "summary": "MaxSite CMS contains a remote code execution vulnerability that allows unauthenticated attackers to inject arbitrary PHP code into the application configuration file by submitting crafted POST requests to the install endpoint after installation is complete. Attackers can supply a malicious db_dbprefix value containing a single quote to break out of a PHP string literal in application/config/database.php, appending attacker-controlled PHP statements that are executed by the web server on every subsequent request, resulting in persistent unauthenticated remote code execution as the web-server pr",
+      "vendor": "MaxSite",
+      "product": "CMS",
+      "cve": "CVE-2026-70553",
+      "operator_check": "Review CVE-2026-70553 in your asset inventory. Apply patches per vendor guidance and verify CMS is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MaxSite CMS. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-70553",
+        "vendor-advisory",
+        "maxsite",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-70553",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70553"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/maxsite/cms"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://max-3000.com/page/maxsite-cms-109-6"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-maxsite-cve-2026-70554",
+      "slug": "2026-08-maxsite-cve-2026-70554",
+      "url": "https://www.patchbrief.org/items/2026-08-maxsite-cve-2026-70554.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MaxSite CMS — CVE-2026-70554 (Critical)",
+      "summary": "MaxSite CMS contains a PHP object injection vulnerability that allows unauthenticated attackers to execute arbitrary code by passing attacker-controlled serialized data in the maxsite_comuser cookie directly to unserialize() without validation or class allowlisting. Attackers can craft a malicious serialized PHP object payload delivered in a single HTTP request to trigger magic methods during object graph reconstruction, enabling property-oriented programming attacks or remote code execution via available gadget chains such as those targeting SoapClient or Imagick extensions.",
+      "vendor": "MaxSite",
+      "product": "CMS",
+      "cve": "CVE-2026-70554",
+      "operator_check": "Review CVE-2026-70554 in your asset inventory. Apply patches per vendor guidance and verify CMS is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MaxSite CMS. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-70554",
+        "vendor-advisory",
+        "maxsite",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-70554",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70554"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/maxsite/cms"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://max-3000.com/page/maxsite-cms-109-6"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-n-able-cve-2026-18556",
+      "slug": "2026-08-n-able-cve-2026-18556",
+      "url": "https://www.patchbrief.org/items/2026-08-n-able-cve-2026-18556.html",
+      "date": "2026-08-04",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "summary": "N-able N-central contains an authentication bypass using an alternate path or channel that allows for authentication bypass.",
+      "vendor": "N-able",
+      "product": "N-central",
+      "cve": "CVE-2026-18556",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-18556 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-08-07. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-18556",
+        "kev",
+        "n-able",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-18556",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18556"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-53950",
+      "slug": "2026-08-npm-cve-2026-53950",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-53950.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "XSS in Ghost's ActivityPub client",
+      "summary": "XSS in Ghost's ActivityPub client",
+      "vendor": "npm",
+      "product": "@tryghost/activitypub",
+      "cve": "CVE-2026-53950",
+      "operator_check": "Check whether @tryghost/activitypub is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 11%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @tryghost/activitypub. Prioritize it with other application dependency updates, especially because EPSS places it in the 11% percentile.",
+      "tags": [
+        "cve-2026-53950",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xpp7-93x6-v29m",
+          "url": "https://github.com/advisories/GHSA-xpp7-93x6-v29m"
+        },
+        {
+          "title": "NVD — CVE-2026-53950",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53950"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-xpp7-93x6-v29m"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69251",
+      "slug": "2026-08-npm-cve-2026-69251",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69251.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise RCE via TypeORM DataSource",
+      "summary": "Flowise RCE via TypeORM DataSource",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69251",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.0.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69251",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g32j-mmxr-gfq5",
+          "url": "https://github.com/advisories/GHSA-g32j-mmxr-gfq5"
+        },
+        {
+          "title": "NVD — CVE-2026-69251",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69251"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-g32j-mmxr-gfq5"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69252",
+      "slug": "2026-08-npm-cve-2026-69252",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69252.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: Missing authorization on `/api/v1/files` allows low-privileged API keys to list and delete files across work...",
+      "summary": "Flowise: Missing authorization on `/api/v1/files` allows low-privileged API keys to list and delete files across workspaces within the same organization",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69252",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69252",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wp74-f5hh-5f3r",
+          "url": "https://github.com/advisories/GHSA-wp74-f5hh-5f3r"
+        },
+        {
+          "title": "NVD — CVE-2026-69252",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69252"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-wp74-f5hh-5f3r"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69253",
+      "slug": "2026-08-npm-cve-2026-69253",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69253.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise Sandbox Escape to RCE",
+      "summary": "Flowise Sandbox Escape to RCE",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69253",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.0.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69253",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wg86-r78f-74mp",
+          "url": "https://github.com/advisories/GHSA-wg86-r78f-74mp"
+        },
+        {
+          "title": "NVD — CVE-2026-69253",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69253"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-wg86-r78f-74mp"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69254",
+      "slug": "2026-08-npm-cve-2026-69254",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69254.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise: RCE via NodeVM Sandbox Escape in executeJavaScriptCode() nodeVMOptions Override",
+      "summary": "Flowise: RCE via NodeVM Sandbox Escape in executeJavaScriptCode() nodeVMOptions Override",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69254",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.4.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69254",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3769-jgqc-cxm7",
+          "url": "https://github.com/advisories/GHSA-3769-jgqc-cxm7"
+        },
+        {
+          "title": "NVD — CVE-2026-69254",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69254"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-3769-jgqc-cxm7"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69255",
+      "slug": "2026-08-npm-cve-2026-69255",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69255.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise: CSV Agent Remote Code Execution via Pyodide Code Injection — Root Shell Verified",
+      "summary": "Flowise: CSV Agent Remote Code Execution via Pyodide Code Injection — Root Shell Verified",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69255",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69255",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vmv7-4m6c-3cg5",
+          "url": "https://github.com/advisories/GHSA-vmv7-4m6c-3cg5"
+        },
+        {
+          "title": "NVD — CVE-2026-69255",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69255"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-vmv7-4m6c-3cg5"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69256",
+      "slug": "2026-08-npm-cve-2026-69256",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69256.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise: Remote Code Execution Vulnerability in CSVAgent",
+      "summary": "Flowise: Remote Code Execution Vulnerability in CSVAgent",
+      "vendor": "npm",
+      "product": "flowise-components",
+      "cve": "CVE-2026-69256",
+      "operator_check": "Check whether flowise-components is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.4.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise-components. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69256",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x6vm-w76m-8j7g",
+          "url": "https://github.com/advisories/GHSA-x6vm-w76m-8j7g"
+        },
+        {
+          "title": "NVD — CVE-2026-69256",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69256"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-x6vm-w76m-8j7g"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69257",
+      "slug": "2026-08-npm-cve-2026-69257",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69257.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: SSRF Protection Bypass via IPv4-Mapped IPv6 Addresses",
+      "summary": "Flowise: SSRF Protection Bypass via IPv4-Mapped IPv6 Addresses",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69257",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69257",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c6xh-wv4j-ppv5",
+          "url": "https://github.com/advisories/GHSA-c6xh-wv4j-ppv5"
+        },
+        {
+          "title": "NVD — CVE-2026-69257",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69257"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-c6xh-wv4j-ppv5"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69258",
+      "slug": "2026-08-npm-cve-2026-69258",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69258.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: Unauthenticated Property Injection into Flow Execution Context via Ungated `overrideConfig` Spread in Predic...",
+      "summary": "Flowise: Unauthenticated Property Injection into Flow Execution Context via Ungated `overrideConfig` Spread in Prediction API",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69258",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69258",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6vh2-wg4h-4vwj",
+          "url": "https://github.com/advisories/GHSA-6vh2-wg4h-4vwj"
+        },
+        {
+          "title": "NVD — CVE-2026-69258",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69258"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-6vh2-wg4h-4vwj"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69259",
+      "slug": "2026-08-npm-cve-2026-69259",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69259.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise RCE via SQLite Record Manager Node",
+      "summary": "Flowise RCE via SQLite Record Manager Node",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69259",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.4.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69259",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x3hf-7cj6-3r4m",
+          "url": "https://github.com/advisories/GHSA-x3hf-7cj6-3r4m"
+        },
+        {
+          "title": "NVD — CVE-2026-69259",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69259"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-x3hf-7cj6-3r4m"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69262",
+      "slug": "2026-08-npm-cve-2026-69262",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69262.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: `DELETE /api/v1/chatflows/:id` does not validate resource type, allowing `agentflows:delete` and `chatflows:...",
+      "summary": "Flowise: `DELETE /api/v1/chatflows/:id` does not validate resource type, allowing `agentflows:delete` and `chatflows:delete` to delete each other’s flow type",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69262",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69262",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p5w8-m249-4r4v",
+          "url": "https://github.com/advisories/GHSA-p5w8-m249-4r4v"
+        },
+        {
+          "title": "NVD — CVE-2026-69262",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69262"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-p5w8-m249-4r4v"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69263",
+      "slug": "2026-08-npm-cve-2026-69263",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69263.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: CVE-2025-8943 Patch Bypass: npm_config_yes bypasses MCP environment variable blocklist (Unauthenticated RCE)",
+      "summary": "Flowise: CVE-2025-8943 Patch Bypass: npm_config_yes bypasses MCP environment variable blocklist (Unauthenticated RCE)",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69263",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69263",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xc48-889x-5qmw",
+          "url": "https://github.com/advisories/GHSA-xc48-889x-5qmw"
+        },
+        {
+          "title": "NVD — CVE-2026-69263",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69263"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-xc48-889x-5qmw"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-69264",
+      "slug": "2026-08-npm-cve-2026-69264",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-69264.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise: RCE via CSVAgent csvFile data URI base64 segment is interpolated into Python source without validation",
+      "summary": "Flowise: RCE via CSVAgent csvFile data URI base64 segment is interpolated into Python source without validation",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-69264",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.4.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69264",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4j8x-x6v7-w9rq",
+          "url": "https://github.com/advisories/GHSA-4j8x-x6v7-w9rq"
+        },
+        {
+          "title": "NVD — CVE-2026-69264",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69264"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-4j8x-x6v7-w9rq"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70470",
+      "slug": "2026-08-npm-cve-2026-70470",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70470.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise: Pyodide validator Unicode homoglyph bypass leads to RCE",
+      "summary": "Flowise: Pyodide validator Unicode homoglyph bypass leads to RCE",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-70470",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.5.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70470",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-52fh-8v99-63c2",
+          "url": "https://github.com/advisories/GHSA-52fh-8v99-63c2"
+        },
+        {
+          "title": "NVD — CVE-2026-70470",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70470"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-52fh-8v99-63c2"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70471",
+      "slug": "2026-08-npm-cve-2026-70471",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70471.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: RBAC Bypass Leading to Unauthorized Workspace Variables Disclosure",
+      "summary": "Flowise: RBAC Bypass Leading to Unauthorized Workspace Variables Disclosure",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-70471",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70471",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8r8h-6vcc-xhrv",
+          "url": "https://github.com/advisories/GHSA-8r8h-6vcc-xhrv"
+        },
+        {
+          "title": "NVD — CVE-2026-70471",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70471"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-8r8h-6vcc-xhrv"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70472",
+      "slug": "2026-08-npm-cve-2026-70472",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70472.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: Cross-workspace credential IDOR in openai-assistants-vector-store",
+      "summary": "Flowise: Cross-workspace credential IDOR in openai-assistants-vector-store",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-70472",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70472",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-chm3-vqcf-52rx",
+          "url": "https://github.com/advisories/GHSA-chm3-vqcf-52rx"
+        },
+        {
+          "title": "NVD — CVE-2026-70472",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70472"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-chm3-vqcf-52rx"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70473",
+      "slug": "2026-08-npm-cve-2026-70473",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70473.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: Information Disclosure in GET /api/v1/upsert-history returns the entire server-wide upsert history",
+      "summary": "Flowise: Information Disclosure in GET /api/v1/upsert-history returns the entire server-wide upsert history",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-70473",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70473",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fr6g-7cq8-fg82",
+          "url": "https://github.com/advisories/GHSA-fr6g-7cq8-fg82"
+        },
+        {
+          "title": "NVD — CVE-2026-70473",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70473"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-fr6g-7cq8-fg82"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70474",
+      "slug": "2026-08-npm-cve-2026-70474",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70474.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: Cross-Workspace OAuth2 Credential Metadata Leak",
+      "summary": "Flowise: Cross-Workspace OAuth2 Credential Metadata Leak",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-70474",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70474",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wch5-xp77-fxg4",
+          "url": "https://github.com/advisories/GHSA-wch5-xp77-fxg4"
+        },
+        {
+          "title": "NVD — CVE-2026-70474",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70474"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-wch5-xp77-fxg4"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70475",
+      "slug": "2026-08-npm-cve-2026-70475",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70475.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: Missing Authorization on Execution Update Endpoint",
+      "summary": "Flowise: Missing Authorization on Execution Update Endpoint",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-70475",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70475",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fm2f-4339-4p2f",
+          "url": "https://github.com/advisories/GHSA-fm2f-4339-4p2f"
+        },
+        {
+          "title": "NVD — CVE-2026-70475",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70475"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-fm2f-4339-4p2f"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70476",
+      "slug": "2026-08-npm-cve-2026-70476",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70476.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: Broken Access Control in Stripe Subscription Endpoints Allows Cross-Tenant Billing Manipulation",
+      "summary": "Flowise: Broken Access Control in Stripe Subscription Endpoints Allows Cross-Tenant Billing Manipulation",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-70476",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70476",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gmmw-qg98-6j6p",
+          "url": "https://github.com/advisories/GHSA-gmmw-qg98-6j6p"
+        },
+        {
+          "title": "NVD — CVE-2026-70476",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70476"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-gmmw-qg98-6j6p"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70477",
+      "slug": "2026-08-npm-cve-2026-70477",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70477.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise: CSV Agent Prompt Injection Remote Code Execution Vulnerability",
+      "summary": "Flowise: CSV Agent Prompt Injection Remote Code Execution Vulnerability",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-70477",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.5.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70477",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5xvg-pmgg-3mxr",
+          "url": "https://github.com/advisories/GHSA-5xvg-pmgg-3mxr"
+        },
+        {
+          "title": "NVD — CVE-2026-70477",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70477"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-5xvg-pmgg-3mxr"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70478",
+      "slug": "2026-08-npm-cve-2026-70478",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70478.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Flowise: Unauthenticated OAuth2 token refresh endpoint returns access tokens — enables token theft for any connected ...",
+      "summary": "Flowise: Unauthenticated OAuth2 token refresh endpoint returns access tokens — enables token theft for any connected service",
+      "vendor": "npm",
+      "product": "flowise",
+      "cve": "CVE-2026-70478",
+      "operator_check": "Check whether flowise is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70478",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qgvm-j2hm-6m38",
+          "url": "https://github.com/advisories/GHSA-qgvm-j2hm-6m38"
+        },
+        {
+          "title": "NVD — CVE-2026-70478",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70478"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-qgvm-j2hm-6m38"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-ghsa-88pr-878c-24wf",
+      "slug": "2026-08-npm-ghsa-88pr-878c-24wf",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-ghsa-88pr-878c-24wf.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Flowise: Authenticated arbitrary file write in the `S3 Directory` document loader via unsanitized S3 object keys",
+      "summary": "Flowise: Authenticated arbitrary file write in the `S3 Directory` document loader via unsanitized S3 object keys",
+      "vendor": "npm",
+      "product": "flowise-components",
+      "cve": null,
+      "operator_check": "Check whether flowise-components is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for flowise-components. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-88pr-878c-24wf",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-88pr-878c-24wf",
+          "url": "https://github.com/advisories/GHSA-88pr-878c-24wf"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-88pr-878c-24wf"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-puwell-cve-2026-61515",
+      "slug": "2026-08-puwell-cve-2026-61515",
+      "url": "https://www.patchbrief.org/items/2026-08-puwell-cve-2026-61515.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Puwell IP Camera firmware — CVE-2026-61515 (Critical)",
+      "summary": "Puwell IP Camera firmware versions 2.x through 4.x contains an unauthenticated command injection vulnerability that allows remote attackers to execute arbitrary operating system commands by sending a crafted JSON payload to the DebugShell interface exposed on TCP port 34567. Attackers can exploit the lack of authentication and input sanitization in the binary protocol service to pass arbitrary commands directly to the underlying operating system, achieving root-level code execution and complete device compromise.",
+      "vendor": "Puwell",
+      "product": "IP Camera firmware",
+      "cve": "CVE-2026-61515",
+      "operator_check": "Review CVE-2026-61515 in your asset inventory. Apply patches per vendor guidance and verify IP Camera firmware is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Puwell IP Camera firmware. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-61515",
+        "vendor-advisory",
+        "puwell",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-61515",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61515"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://damiri.fr/fr/cve/CVE-2026-61515"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.puwell.com/Index/catalog"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-70479",
+      "slug": "2026-08-pypi-cve-2026-70479",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70479.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Open WebUI: SSRF into internal services via unvalidated sub-resource requests in the Playwright web loader",
+      "summary": "Open WebUI: SSRF into internal services via unvalidated sub-resource requests in the Playwright web loader",
+      "vendor": "PyPI",
+      "product": "open-webui",
+      "cve": "CVE-2026-70479",
+      "operator_check": "Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for open-webui. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70479",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w2rx-84hp-gg95",
+          "url": "https://github.com/advisories/GHSA-w2rx-84hp-gg95"
+        },
+        {
+          "title": "NVD — CVE-2026-70479",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70479"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-w2rx-84hp-gg95"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-70482",
+      "slug": "2026-08-pypi-cve-2026-70482",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70482.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Open WebUI: Account takeover via OAuth token exchange accepting tokens issued to any client",
+      "summary": "Open WebUI: Account takeover via OAuth token exchange accepting tokens issued to any client",
+      "vendor": "PyPI",
+      "product": "open-webui",
+      "cve": "CVE-2026-70482",
+      "operator_check": "Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for open-webui. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70482",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rq84-p6rr-vf89",
+          "url": "https://github.com/advisories/GHSA-rq84-p6rr-vf89"
+        },
+        {
+          "title": "NVD — CVE-2026-70482",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70482"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-rq84-p6rr-vf89"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-70485",
+      "slug": "2026-08-pypi-cve-2026-70485",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70485.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Open WebUI: Any authenticated user can reach internal services and cloud metadata via NAT64-encoded URLs",
+      "summary": "Open WebUI: Any authenticated user can reach internal services and cloud metadata via NAT64-encoded URLs",
+      "vendor": "PyPI",
+      "product": "open-webui",
+      "cve": "CVE-2026-70485",
+      "operator_check": "Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for open-webui. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70485",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8x5v-cpv7-8jjp",
+          "url": "https://github.com/advisories/GHSA-8x5v-cpv7-8jjp"
+        },
+        {
+          "title": "NVD — CVE-2026-70485",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70485"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-8x5v-cpv7-8jjp"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-70486",
+      "slug": "2026-08-pypi-cve-2026-70486",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70486.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Open WebUI: Same-origin XSS to account takeover via terminal file-preview iframe hardcoding allow-same-origin",
+      "summary": "Open WebUI: Same-origin XSS to account takeover via terminal file-preview iframe hardcoding allow-same-origin",
+      "vendor": "PyPI",
+      "product": "open-webui",
+      "cve": "CVE-2026-70486",
+      "operator_check": "Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for open-webui. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70486",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3xpf-xq7r-v8c5",
+          "url": "https://github.com/advisories/GHSA-3xpf-xq7r-v8c5"
+        },
+        {
+          "title": "NVD — CVE-2026-70486",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70486"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-3xpf-xq7r-v8c5"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-70492",
+      "slug": "2026-08-pypi-cve-2026-70492",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70492.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Open WebUI: Stored XSS via unescaped KaTeX render-error fallback in rendered messages",
+      "summary": "Open WebUI: Stored XSS via unescaped KaTeX render-error fallback in rendered messages",
+      "vendor": "PyPI",
+      "product": "open-webui",
+      "cve": "CVE-2026-70492",
+      "operator_check": "Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for open-webui. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70492",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pwxh-7358-jq2x",
+          "url": "https://github.com/advisories/GHSA-pwxh-7358-jq2x"
+        },
+        {
+          "title": "NVD — CVE-2026-70492",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70492"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-pwxh-7358-jq2x"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-70494",
+      "slug": "2026-08-pypi-cve-2026-70494",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70494.html",
+      "date": "2026-08-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Open WebUI: A folder write-collaborator can permanently delete the owner's chats by deleting a shared subfolder",
+      "summary": "Open WebUI: A folder write-collaborator can permanently delete the owner's chats by deleting a shared subfolder",
+      "vendor": "PyPI",
+      "product": "open-webui",
+      "cve": "CVE-2026-70494",
+      "operator_check": "Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for open-webui. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70494",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3cg5-48j3-v4gv",
+          "url": "https://github.com/advisories/GHSA-3cg5-48j3-v4gv"
+        },
+        {
+          "title": "NVD — CVE-2026-70494",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70494"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-3cg5-48j3-v4gv"
+        }
+      ]
+    },
     {
       "id": "2026-08-composer-cve-2026-69246",
       "slug": "2026-08-composer-cve-2026-69246",

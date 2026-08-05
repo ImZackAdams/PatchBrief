@@ -4,8 +4,260 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Tue, 04 Aug 2026 11:23:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 11:20:53 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>Apache Tomcat Missing Encryption of Sensitive Data Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-08-apache-cve-2026-34486.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-apache-cve-2026-34486.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Apache Tomcat contains a missing encryption of sensitive data vulnerability that allows the bypass of the EncryptInterceptor.</description>
+    </item>
+    <item>
+      <title>IBM Langflow Code Injection Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-08-ibm-cve-2026-9198.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-ibm-cve-2026-9198.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Langflow contains a code injection vulnerability that allows unauthenticated attackers to achieve full remote code execution on default Langflow deployments.</description>
+    </item>
+    <item>
+      <title>MaxSite CMS 109.5 and earlier — CVE-2026-70552 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-08-maxsite-cve-2026-70552.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-maxsite-cve-2026-70552.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>MaxSite CMS 109.5 and earlier contains an authentication bypass vulnerability in the AJAX dispatcher that allows unauthenticated attackers to access admin-gated endpoints by supplying any X-Requested-With header and requesting a base64-encoded path resolving to any *-ajax.php file in the codebase. Attackers can exploit this dispatcher bypass to reach privileged plugin endpoints without credentials, enabling actions such as manipulating poll states and vote counts, and amplifying the impact of any dangerous operation performed by admin-only ajax files across the plugin tree.</description>
+    </item>
+    <item>
+      <title>MaxSite CMS — CVE-2026-70553 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-08-maxsite-cve-2026-70553.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-maxsite-cve-2026-70553.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>MaxSite CMS contains a remote code execution vulnerability that allows unauthenticated attackers to inject arbitrary PHP code into the application configuration file by submitting crafted POST requests to the install endpoint after installation is complete. Attackers can supply a malicious db_dbprefix value containing a single quote to break out of a PHP string literal in application/config/database.php, appending attacker-controlled PHP statements that are executed by the web server on every subsequent request, resulting in persistent unauthenticated remote code execution as the web-server pr</description>
+    </item>
+    <item>
+      <title>MaxSite CMS — CVE-2026-70554 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-08-maxsite-cve-2026-70554.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-maxsite-cve-2026-70554.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>MaxSite CMS contains a PHP object injection vulnerability that allows unauthenticated attackers to execute arbitrary code by passing attacker-controlled serialized data in the maxsite_comuser cookie directly to unserialize() without validation or class allowlisting. Attackers can craft a malicious serialized PHP object payload delivered in a single HTTP request to trigger magic methods during object graph reconstruction, enabling property-oriented programming attacks or remote code execution via available gadget chains such as those targeting SoapClient or Imagick extensions.</description>
+    </item>
+    <item>
+      <title>N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-08-n-able-cve-2026-18556.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-n-able-cve-2026-18556.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>N-able N-central contains an authentication bypass using an alternate path or channel that allows for authentication bypass.</description>
+    </item>
+    <item>
+      <title>XSS in Ghost's ActivityPub client</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-53950.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-53950.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>XSS in Ghost's ActivityPub client</description>
+    </item>
+    <item>
+      <title>Flowise RCE via TypeORM DataSource</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69251.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69251.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise RCE via TypeORM DataSource</description>
+    </item>
+    <item>
+      <title>Flowise: Missing authorization on `/api/v1/files` allows low-privileged API keys to list and delete files across work...</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69252.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69252.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Missing authorization on `/api/v1/files` allows low-privileged API keys to list and delete files across workspaces within the same organization</description>
+    </item>
+    <item>
+      <title>Flowise Sandbox Escape to RCE</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69253.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69253.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise Sandbox Escape to RCE</description>
+    </item>
+    <item>
+      <title>Flowise: RCE via NodeVM Sandbox Escape in executeJavaScriptCode() nodeVMOptions Override</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69254.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69254.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: RCE via NodeVM Sandbox Escape in executeJavaScriptCode() nodeVMOptions Override</description>
+    </item>
+    <item>
+      <title>Flowise: CSV Agent Remote Code Execution via Pyodide Code Injection — Root Shell Verified</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69255.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69255.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: CSV Agent Remote Code Execution via Pyodide Code Injection — Root Shell Verified</description>
+    </item>
+    <item>
+      <title>Flowise: Remote Code Execution Vulnerability in CSVAgent</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69256.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69256.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Remote Code Execution Vulnerability in CSVAgent</description>
+    </item>
+    <item>
+      <title>Flowise: SSRF Protection Bypass via IPv4-Mapped IPv6 Addresses</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69257.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69257.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: SSRF Protection Bypass via IPv4-Mapped IPv6 Addresses</description>
+    </item>
+    <item>
+      <title>Flowise: Unauthenticated Property Injection into Flow Execution Context via Ungated `overrideConfig` Spread in Predic...</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69258.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69258.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Unauthenticated Property Injection into Flow Execution Context via Ungated `overrideConfig` Spread in Prediction API</description>
+    </item>
+    <item>
+      <title>Flowise RCE via SQLite Record Manager Node</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69259.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69259.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise RCE via SQLite Record Manager Node</description>
+    </item>
+    <item>
+      <title>Flowise: `DELETE /api/v1/chatflows/:id` does not validate resource type, allowing `agentflows:delete` and `chatflows:...</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69262.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69262.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: `DELETE /api/v1/chatflows/:id` does not validate resource type, allowing `agentflows:delete` and `chatflows:delete` to delete each other’s flow type</description>
+    </item>
+    <item>
+      <title>Flowise: CVE-2025-8943 Patch Bypass: npm_config_yes bypasses MCP environment variable blocklist (Unauthenticated RCE)</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69263.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69263.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: CVE-2025-8943 Patch Bypass: npm_config_yes bypasses MCP environment variable blocklist (Unauthenticated RCE)</description>
+    </item>
+    <item>
+      <title>Flowise: RCE via CSVAgent csvFile data URI base64 segment is interpolated into Python source without validation</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-69264.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-69264.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: RCE via CSVAgent csvFile data URI base64 segment is interpolated into Python source without validation</description>
+    </item>
+    <item>
+      <title>Flowise: Pyodide validator Unicode homoglyph bypass leads to RCE</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-70470.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-70470.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Pyodide validator Unicode homoglyph bypass leads to RCE</description>
+    </item>
+    <item>
+      <title>Flowise: RBAC Bypass Leading to Unauthorized Workspace Variables Disclosure</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-70471.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-70471.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: RBAC Bypass Leading to Unauthorized Workspace Variables Disclosure</description>
+    </item>
+    <item>
+      <title>Flowise: Cross-workspace credential IDOR in openai-assistants-vector-store</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-70472.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-70472.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Cross-workspace credential IDOR in openai-assistants-vector-store</description>
+    </item>
+    <item>
+      <title>Flowise: Information Disclosure in GET /api/v1/upsert-history returns the entire server-wide upsert history</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-70473.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-70473.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Information Disclosure in GET /api/v1/upsert-history returns the entire server-wide upsert history</description>
+    </item>
+    <item>
+      <title>Flowise: Cross-Workspace OAuth2 Credential Metadata Leak</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-70474.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-70474.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Cross-Workspace OAuth2 Credential Metadata Leak</description>
+    </item>
+    <item>
+      <title>Flowise: Missing Authorization on Execution Update Endpoint</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-70475.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-70475.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Missing Authorization on Execution Update Endpoint</description>
+    </item>
+    <item>
+      <title>Flowise: Broken Access Control in Stripe Subscription Endpoints Allows Cross-Tenant Billing Manipulation</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-70476.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-70476.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Broken Access Control in Stripe Subscription Endpoints Allows Cross-Tenant Billing Manipulation</description>
+    </item>
+    <item>
+      <title>Flowise: CSV Agent Prompt Injection Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-70477.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-70477.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: CSV Agent Prompt Injection Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Flowise: Unauthenticated OAuth2 token refresh endpoint returns access tokens — enables token theft for any connected ...</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-70478.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-70478.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Unauthenticated OAuth2 token refresh endpoint returns access tokens — enables token theft for any connected service</description>
+    </item>
+    <item>
+      <title>Flowise: Authenticated arbitrary file write in the `S3 Directory` document loader via unsanitized S3 object keys</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-ghsa-88pr-878c-24wf.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-ghsa-88pr-878c-24wf.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Flowise: Authenticated arbitrary file write in the `S3 Directory` document loader via unsanitized S3 object keys</description>
+    </item>
+    <item>
+      <title>Puwell IP Camera firmware — CVE-2026-61515 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-08-puwell-cve-2026-61515.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-puwell-cve-2026-61515.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Puwell IP Camera firmware versions 2.x through 4.x contains an unauthenticated command injection vulnerability that allows remote attackers to execute arbitrary operating system commands by sending a crafted JSON payload to the DebugShell interface exposed on TCP port 34567. Attackers can exploit the lack of authentication and input sanitization in the binary protocol service to pass arbitrary commands directly to the underlying operating system, achieving root-level code execution and complete device compromise.</description>
+    </item>
+    <item>
+      <title>Open WebUI: SSRF into internal services via unvalidated sub-resource requests in the Playwright web loader</title>
+      <link>https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70479.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70479.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Open WebUI: SSRF into internal services via unvalidated sub-resource requests in the Playwright web loader</description>
+    </item>
+    <item>
+      <title>Open WebUI: Account takeover via OAuth token exchange accepting tokens issued to any client</title>
+      <link>https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70482.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70482.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Open WebUI: Account takeover via OAuth token exchange accepting tokens issued to any client</description>
+    </item>
+    <item>
+      <title>Open WebUI: Any authenticated user can reach internal services and cloud metadata via NAT64-encoded URLs</title>
+      <link>https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70485.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70485.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Open WebUI: Any authenticated user can reach internal services and cloud metadata via NAT64-encoded URLs</description>
+    </item>
+    <item>
+      <title>Open WebUI: Same-origin XSS to account takeover via terminal file-preview iframe hardcoding allow-same-origin</title>
+      <link>https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70486.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70486.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Open WebUI: Same-origin XSS to account takeover via terminal file-preview iframe hardcoding allow-same-origin</description>
+    </item>
+    <item>
+      <title>Open WebUI: Stored XSS via unescaped KaTeX render-error fallback in rendered messages</title>
+      <link>https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70492.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70492.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Open WebUI: Stored XSS via unescaped KaTeX render-error fallback in rendered messages</description>
+    </item>
+    <item>
+      <title>Open WebUI: A folder write-collaborator can permanently delete the owner's chats by deleting a shared subfolder</title>
+      <link>https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70494.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-pypi-cve-2026-70494.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Open WebUI: A folder write-collaborator can permanently delete the owner's chats by deleting a shared subfolder</description>
+    </item>
     <item>
       <title>Guzzle: Noncanonical host can bypass host-based checks</title>
       <link>https://www.patchbrief.org/items/2026-08-composer-cve-2026-69246.html</link>
