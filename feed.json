@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-05T11:20:53Z",
-  "total_items": 927,
+  "generated": "2026-08-06T11:22:50Z",
+  "total_items": 943,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-05T11:20:53Z",
+    "generated": "2026-08-06T11:22:50Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-08-05T11:20:41Z",
-        "finished_at": "2026-08-05T11:20:41Z"
+        "items_seen": 5,
+        "started_at": "2026-08-06T11:22:37Z",
+        "finished_at": "2026-08-06T11:22:38Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-05T11:20:41Z",
-        "finished_at": "2026-08-05T11:20:41Z"
+        "started_at": "2026-08-06T11:22:38Z",
+        "finished_at": "2026-08-06T11:22:38Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-08-05T11:20:41Z",
-        "finished_at": "2026-08-05T11:20:49Z"
+        "items_seen": 3,
+        "started_at": "2026-08-06T11:22:38Z",
+        "finished_at": "2026-08-06T11:22:45Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-08-05T11:20:49Z",
-        "finished_at": "2026-08-05T11:20:49Z"
+        "started_at": "2026-08-06T11:22:45Z",
+        "finished_at": "2026-08-06T11:22:47Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-05T11:20:49Z",
-        "finished_at": "2026-08-05T11:20:50Z"
+        "started_at": "2026-08-06T11:22:47Z",
+        "finished_at": "2026-08-06T11:22:47Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,507 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-05T11:20:50Z",
-        "finished_at": "2026-08-05T11:20:51Z"
+        "started_at": "2026-08-06T11:22:47Z",
+        "finished_at": "2026-08-06T11:22:47Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 7,
-        "started_at": "2026-08-05T11:20:51Z",
-        "finished_at": "2026-08-05T11:20:51Z"
+        "items_seen": 27,
+        "started_at": "2026-08-06T11:22:47Z",
+        "finished_at": "2026-08-06T11:22:48Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-08-go-cve-2026-54572",
+      "slug": "2026-08-go-cve-2026-54572",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-54572.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "rclone: Unvalidated symlink target in local `--links` — arbitrary file write from an untrusted remote",
+      "summary": "rclone: Unvalidated symlink target in local `--links` — arbitrary file write from an untrusted remote",
+      "vendor": "Go",
+      "product": "github.com/rclone/rclone",
+      "cve": "CVE-2026-54572",
+      "operator_check": "Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 23%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rclone/rclone. Prioritize it with other application dependency updates, especially because EPSS places it in the 23% percentile.",
+      "tags": [
+        "cve-2026-54572",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cf44-9pgv-m4xc",
+          "url": "https://github.com/advisories/GHSA-cf44-9pgv-m4xc"
+        },
+        {
+          "title": "NVD — CVE-2026-54572",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54572"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rclone/rclone/security/advisories/GHSA-cf44-9pgv-m4xc"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-59733",
+      "slug": "2026-08-go-cve-2026-59733",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-59733.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "rclone `serve restic --private-repos` authorization bypass: `..` in the URL path lets an authenticated user read, ove...",
+      "summary": "rclone `serve restic --private-repos` authorization bypass: `..` in the URL path lets an authenticated user read, overwrite and delete other users' repositories",
+      "vendor": "Go",
+      "product": "github.com/rclone/rclone",
+      "cve": "CVE-2026-59733",
+      "operator_check": "Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 35%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rclone/rclone. Prioritize it with other application dependency updates, especially because EPSS places it in the 35% percentile.",
+      "tags": [
+        "cve-2026-59733",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fqj9-69pf-6pjg",
+          "url": "https://github.com/advisories/GHSA-fqj9-69pf-6pjg"
+        },
+        {
+          "title": "NVD — CVE-2026-59733",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59733"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rclone/rclone/security/advisories/GHSA-fqj9-69pf-6pjg"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-71309",
+      "slug": "2026-08-go-cve-2026-71309",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-71309.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "rclone: Incomplete path validation allows backend root escape in serve restic",
+      "summary": "rclone: Incomplete path validation allows backend root escape in serve restic",
+      "vendor": "Go",
+      "product": "github.com/rclone/rclone",
+      "cve": "CVE-2026-71309",
+      "operator_check": "Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rclone/rclone. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71309",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-45pq-889g-fcgh",
+          "url": "https://github.com/advisories/GHSA-45pq-889g-fcgh"
+        },
+        {
+          "title": "NVD — CVE-2026-71309",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71309"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rclone/rclone/security/advisories/GHSA-45pq-889g-fcgh"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-71312",
+      "slug": "2026-08-go-cve-2026-71312",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-71312.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "rclone: PowerShell Smart-Quote Filename Injection Enables SFTP Server-Side Command Execution",
+      "summary": "rclone: PowerShell Smart-Quote Filename Injection Enables SFTP Server-Side Command Execution",
+      "vendor": "Go",
+      "product": "github.com/rclone/rclone",
+      "cve": "CVE-2026-71312",
+      "operator_check": "Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rclone/rclone. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71312",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2m8m-jhrm-w6j2",
+          "url": "https://github.com/advisories/GHSA-2m8m-jhrm-w6j2"
+        },
+        {
+          "title": "NVD — CVE-2026-71312",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71312"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rclone/rclone/security/advisories/GHSA-2m8m-jhrm-w6j2"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-jetbrains-cve-2026-63077",
+      "slug": "2026-08-jetbrains-cve-2026-63077",
+      "url": "https://www.patchbrief.org/items/2026-08-jetbrains-cve-2026-63077.html",
+      "date": "2026-08-05",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "JetBrains TeamCity Deserialization of Untrusted Data Vulnerability",
+      "summary": "JetBrains TeamCity contains a deserialization of untrusted data vulnerability that could allow unauthenticated remote code execution via the agent polling protocol.",
+      "vendor": "JetBrains",
+      "product": "TeamCity",
+      "cve": "CVE-2026-63077",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-63077 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-08-08. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-63077",
+        "kev",
+        "jetbrains",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-63077",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63077"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70601",
+      "slug": "2026-08-npm-cve-2026-70601",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70601.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Electron: Context isolation bypass via Function.prototype.bind hijack",
+      "summary": "Electron: Context isolation bypass via Function.prototype.bind hijack",
+      "vendor": "npm",
+      "product": "electron",
+      "cve": "CVE-2026-70601",
+      "operator_check": "Check whether electron is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for electron. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70601",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h7rp-cf8h-j98x",
+          "url": "https://github.com/advisories/GHSA-h7rp-cf8h-j98x"
+        },
+        {
+          "title": "NVD — CVE-2026-70601",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70601"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/electron/electron/security/advisories/GHSA-h7rp-cf8h-j98x"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70604",
+      "slug": "2026-08-npm-cve-2026-70604",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70604.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Electron: Custom protocol with supportFetchAPI but not corsEnabled allows cross-origin reads",
+      "summary": "Electron: Custom protocol with supportFetchAPI but not corsEnabled allows cross-origin reads",
+      "vendor": "npm",
+      "product": "electron",
+      "cve": "CVE-2026-70604",
+      "operator_check": "Check whether electron is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for electron. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70604",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v3j7-r9gq-3gjw",
+          "url": "https://github.com/advisories/GHSA-v3j7-r9gq-3gjw"
+        },
+        {
+          "title": "NVD — CVE-2026-70604",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70604"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/electron/electron/security/advisories/GHSA-v3j7-r9gq-3gjw"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-70608",
+      "slug": "2026-08-npm-cve-2026-70608",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-70608.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Electron: Sandboxed iframe can bypass the allow-popups restriction via the OpenURL navigation path",
+      "summary": "Electron: Sandboxed iframe can bypass the allow-popups restriction via the OpenURL navigation path",
+      "vendor": "npm",
+      "product": "electron",
+      "cve": "CVE-2026-70608",
+      "operator_check": "Check whether electron is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for electron. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70608",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9f4c-93c8-jc8g",
+          "url": "https://github.com/advisories/GHSA-9f4c-93c8-jc8g"
+        },
+        {
+          "title": "NVD — CVE-2026-70608",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70608"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/electron/electron/security/advisories/GHSA-9f4c-93c8-jc8g"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-71314",
+      "slug": "2026-08-npm-cve-2026-71314",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-71314.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nuxt: Unauthenticated out-of-memory crash via unbounded v-for expansion in island rendering",
+      "summary": "Nuxt: Unauthenticated out-of-memory crash via unbounded v-for expansion in island rendering",
+      "vendor": "npm",
+      "product": "nuxt",
+      "cve": "CVE-2026-71314",
+      "operator_check": "Check whether nuxt is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nuxt. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71314",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hxcr-hm88-mpq6",
+          "url": "https://github.com/advisories/GHSA-hxcr-hm88-mpq6"
+        },
+        {
+          "title": "NVD — CVE-2026-71314",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71314"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-hxcr-hm88-mpq6"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-71315",
+      "slug": "2026-08-npm-cve-2026-71315",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-71315.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nuxt route rules silently dropped for mixed-case paths, bypassing appMiddleware auth gates (incomplete fix for CVE-20...",
+      "summary": "Nuxt route rules silently dropped for mixed-case paths, bypassing appMiddleware auth gates (incomplete fix for CVE-2026-53721)",
+      "vendor": "npm",
+      "product": "nuxt",
+      "cve": "CVE-2026-71315",
+      "operator_check": "Check whether nuxt is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nuxt. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71315",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hxvh-4h3w-prp9",
+          "url": "https://github.com/advisories/GHSA-hxvh-4h3w-prp9"
+        },
+        {
+          "title": "NVD — CVE-2026-71315",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71315"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-hxvh-4h3w-prp9"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-71316",
+      "slug": "2026-08-npm-cve-2026-71316",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-71316.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nuxt runtime payload cache discloses another user's SSR data across users and to unauthenticated clients",
+      "summary": "Nuxt runtime payload cache discloses another user's SSR data across users and to unauthenticated clients",
+      "vendor": "npm",
+      "product": "nuxt",
+      "cve": "CVE-2026-71316",
+      "operator_check": "Check whether nuxt is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nuxt. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71316",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wm8w-6qjm-cv43",
+          "url": "https://github.com/advisories/GHSA-wm8w-6qjm-cv43"
+        },
+        {
+          "title": "NVD — CVE-2026-71316",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71316"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-wm8w-6qjm-cv43"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-71319",
+      "slug": "2026-08-npm-cve-2026-71319",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-71319.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Unauthenticated Nuxt DevTools RPC allows arbitrary command execution on the developer's host",
+      "summary": "Unauthenticated Nuxt DevTools RPC allows arbitrary command execution on the developer's host",
+      "vendor": "npm",
+      "product": "@nuxt/devtools",
+      "cve": "CVE-2026-71319",
+      "operator_check": "Check whether @nuxt/devtools is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @nuxt/devtools. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71319",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-279x-mwfv-vcqv",
+          "url": "https://github.com/advisories/GHSA-279x-mwfv-vcqv"
+        },
+        {
+          "title": "NVD — CVE-2026-71319",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71319"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-279x-mwfv-vcqv"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-71320",
+      "slug": "2026-08-npm-cve-2026-71320",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-71320.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nuxt: Server-Side Remote Code Execution via Runtime Template Injection in Nuxt Server Island Props",
+      "summary": "Nuxt: Server-Side Remote Code Execution via Runtime Template Injection in Nuxt Server Island Props",
+      "vendor": "npm",
+      "product": "nuxt",
+      "cve": "CVE-2026-71320",
+      "operator_check": "Check whether nuxt is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nuxt. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71320",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9473-5f9j-94wq",
+          "url": "https://github.com/advisories/GHSA-9473-5f9j-94wq"
+        },
+        {
+          "title": "NVD — CVE-2026-71320",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71320"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-9473-5f9j-94wq"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-71321",
+      "slug": "2026-08-npm-cve-2026-71321",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-71321.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nuxt: Unauthenticated CPU exhaustion parsing and hashing the Nuxt island endpoint body before hash validation",
+      "summary": "Nuxt: Unauthenticated CPU exhaustion parsing and hashing the Nuxt island endpoint body before hash validation",
+      "vendor": "npm",
+      "product": "nuxt",
+      "cve": "CVE-2026-71321",
+      "operator_check": "Check whether nuxt is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nuxt. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71321",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9pgf-384g-p7mv",
+          "url": "https://github.com/advisories/GHSA-9pgf-384g-p7mv"
+        },
+        {
+          "title": "NVD — CVE-2026-71321",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71321"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-9pgf-384g-p7mv"
+        }
+      ]
+    },
     {
       "id": "2026-08-apache-cve-2026-34486",
       "slug": "2026-08-apache-cve-2026-34486",
@@ -1320,6 +1806,76 @@
         {
           "title": "Source reference",
           "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-3cg5-48j3-v4gv"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-apache-cve-2026-68979",
+      "slug": "2026-08-apache-cve-2026-68979",
+      "url": "https://www.patchbrief.org/items/2026-08-apache-cve-2026-68979.html",
+      "date": "2026-08-03",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Nifi — CVE-2026-68979 (Critical)",
+      "summary": "Apache NiFI 1.10.0 through 2.10.0 provide a Parameter Context update REST API method that does not enforce authorization checking on components referencing Parameter values. Updating a Parameter Context can change parameter values that affect referencing components, but framework authorization was limited to read and write privileges on the Parameter Context itself. As a result of the missing authorization, an authenticated user authorized to modify a Parameter Context, but not authorized on referencing components, could alter Parameter values affecting those components. In deployments where a",
+      "vendor": "Apache",
+      "product": "Nifi",
+      "cve": "CVE-2026-68979",
+      "operator_check": "Review CVE-2026-68979 in your asset inventory. Apply patches per vendor guidance and verify Nifi is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 28%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Apache Nifi. Patch or mitigate promptly. EPSS percentile: 28%.",
+      "tags": [
+        "cve-2026-68979",
+        "vendor-advisory",
+        "apache",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-68979",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68979"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/xwz8wsss2ovx07tns96rkc3n7cm4xfrq"
+        },
+        {
+          "title": "Source reference",
+          "url": "http://www.openwall.com/lists/oss-security/2026/08/03/10"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-apache-cve-2026-68980",
+      "slug": "2026-08-apache-cve-2026-68980",
+      "url": "https://www.patchbrief.org/items/2026-08-apache-cve-2026-68980.html",
+      "date": "2026-08-03",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Nifi — CVE-2026-68980 (Critical)",
+      "summary": "Apache NiFi 2.0.0 through 2.10.0 support creating, reading, and deleting Assets associated with Parameter Contexts through the REST API. The framework authorizes asset deletion against the owning Parameter Context using the supplied Parameter Context Identifier and Asset Identifier. The framework performed authorized based on the supplied Parameter Context Identifier without verifying the requested Identifier against the stored Identifier. Apache NiFi installations that do not implement different levels of authorization across Parameter Contexts are not subject to this vulnerability, because t",
+      "vendor": "Apache",
+      "product": "Nifi",
+      "cve": "CVE-2026-68980",
+      "operator_check": "Review CVE-2026-68980 in your asset inventory. Apply patches per vendor guidance and verify Nifi is not exposed. CVSS score: 9.1. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Apache Nifi. Patch or mitigate promptly. EPSS percentile: 18%.",
+      "tags": [
+        "cve-2026-68980",
+        "vendor-advisory",
+        "apache",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-68980",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68980"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://lists.apache.org/thread/yo8k6tt3zxjm49zzhly3453v0xhwm3o1"
+        },
+        {
+          "title": "Source reference",
+          "url": "http://www.openwall.com/lists/oss-security/2026/08/03/12"
         }
       ]
     },
