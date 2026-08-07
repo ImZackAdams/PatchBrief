@@ -1,0 +1,37 @@
+id: 2026-08-content-vu-487613
+slug: 2026-08-content-vu-487613
+external_id: VU-487613
+source: cert_vu
+date: '2026-08-06'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#487613: Alinto SOGo v5.12.7 vulnerable to cross-site scripting via malformed
+  ICS calendar invitations'
+summary: 'Overview A cross-site scripting (XSS) vulnerability in Alinto SOGo v5.12.7
+  allows attackers to achieve remote code execution by embedding malicious SVG (Scalable
+  Vector Graphics) objects in ICS (iCalendar) invitations. The vulnerability has been
+  actively exploited in the wild, as confirmed by VirusTotal sightings. Description
+  Alinto SOGo is an open-source webmail and groupware platform for email, calendars,
+  contacts, and shared scheduling. It is primarily used by organizations seeking a
+  self-hosted interface solution for existing mail infrastructure. CVE-2026-8496 The
+  vulnerability exists in SOGo’s handling of ICS files, where the DESCRIPTION field
+  is rendered without proper sanitization or Content Security Policy (CSP) enforcement.
+  When a calendar invite contains an SVG payload, such as , with JavaScript event
+  handlers, the browser... Related CVEs: CVE-2026-8496.'
+vendor: Content
+product: Security Policy (CSP) enforcement. When a calendar invite
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Security Policy (CSP) enforcement. When a calendar invite where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#487613
+  url: https://kb.cert.org/vuls/id/487613
+tags:
+- vu-487613
+- coordinated-disclosure
+- content
+- cert-vu
+is_sample: false

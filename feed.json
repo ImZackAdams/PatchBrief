@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-06T11:22:50Z",
-  "total_items": 943,
+  "generated": "2026-08-07T10:01:33Z",
+  "total_items": 963,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-06T11:22:50Z",
+    "generated": "2026-08-07T10:01:33Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-08-06T11:22:37Z",
-        "finished_at": "2026-08-06T11:22:38Z"
+        "items_seen": 4,
+        "started_at": "2026-08-07T10:01:07Z",
+        "finished_at": "2026-08-07T10:01:07Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-06T11:22:38Z",
-        "finished_at": "2026-08-06T11:22:38Z"
+        "started_at": "2026-08-07T10:01:07Z",
+        "finished_at": "2026-08-07T10:01:11Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-08-06T11:22:38Z",
-        "finished_at": "2026-08-06T11:22:45Z"
+        "items_seen": 2,
+        "started_at": "2026-08-07T10:01:11Z",
+        "finished_at": "2026-08-07T10:01:26Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-08-06T11:22:45Z",
-        "finished_at": "2026-08-06T11:22:47Z"
+        "started_at": "2026-08-07T10:01:26Z",
+        "finished_at": "2026-08-07T10:01:28Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-08-06T11:22:47Z",
-        "finished_at": "2026-08-06T11:22:47Z"
+        "items_seen": 1,
+        "started_at": "2026-08-07T10:01:28Z",
+        "finished_at": "2026-08-07T10:01:30Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,611 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-06T11:22:47Z",
-        "finished_at": "2026-08-06T11:22:47Z"
+        "started_at": "2026-08-07T10:01:30Z",
+        "finished_at": "2026-08-07T10:01:31Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 27,
-        "started_at": "2026-08-06T11:22:47Z",
-        "finished_at": "2026-08-06T11:22:48Z"
+        "items_seen": 21,
+        "started_at": "2026-08-07T10:01:31Z",
+        "finished_at": "2026-08-07T10:01:31Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-08-composer-cve-2026-64665",
+      "slug": "2026-08-composer-cve-2026-64665",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-64665.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Statamic: Account takeover via OAuth email matching without email-verification check",
+      "summary": "Statamic: Account takeover via OAuth email matching without email-verification check",
+      "vendor": "Composer",
+      "product": "statamic/cms",
+      "cve": "CVE-2026-64665",
+      "operator_check": "Check whether statamic/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for statamic/cms. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-64665",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-93qh-5269-9wcf",
+          "url": "https://github.com/advisories/GHSA-93qh-5269-9wcf"
+        },
+        {
+          "title": "NVD — CVE-2026-64665",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64665"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/statamic/cms/security/advisories/GHSA-93qh-5269-9wcf"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-67434",
+      "slug": "2026-08-composer-cve-2026-67434",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-67434.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PHP_CodeSniffer gitblame report command injection via crafted filename",
+      "summary": "PHP_CodeSniffer gitblame report command injection via crafted filename",
+      "vendor": "Composer",
+      "product": "squizlabs/php_codesniffer",
+      "cve": "CVE-2026-67434",
+      "operator_check": "Check whether squizlabs/php_codesniffer is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for squizlabs/php_codesniffer. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-67434",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hmqg-cxww-wqhq",
+          "url": "https://github.com/advisories/GHSA-hmqg-cxww-wqhq"
+        },
+        {
+          "title": "NVD — CVE-2026-67434",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67434"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer/security/advisories/GHSA-hmqg-cxww-wqhq"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-71488",
+      "slug": "2026-08-composer-cve-2026-71488",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-71488.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "league/commonmark: Quadratic-time denial of service when parsing crafted Markdown",
+      "summary": "league/commonmark: Quadratic-time denial of service when parsing crafted Markdown",
+      "vendor": "Composer",
+      "product": "league/commonmark",
+      "cve": "CVE-2026-71488",
+      "operator_check": "Check whether league/commonmark is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for league/commonmark. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71488",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2q4p-g7hv-5rgv",
+          "url": "https://github.com/advisories/GHSA-2q4p-g7hv-5rgv"
+        },
+        {
+          "title": "NVD — CVE-2026-71488",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71488"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/thephpleague/commonmark/security/advisories/GHSA-2q4p-g7hv-5rgv"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-ghsa-265m-7826-wjqm",
+      "slug": "2026-08-composer-ghsa-265m-7826-wjqm",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-ghsa-265m-7826-wjqm.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Craft CMS: Authenticated RCE via `condition.config` JSON cleanse bypass",
+      "summary": "Craft CMS: Authenticated RCE via `condition.config` JSON cleanse bypass",
+      "vendor": "Composer",
+      "product": "craftcms/cms",
+      "cve": null,
+      "operator_check": "Check whether craftcms/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for craftcms/cms. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-265m-7826-wjqm",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-265m-7826-wjqm",
+          "url": "https://github.com/advisories/GHSA-265m-7826-wjqm"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/craftcms/cms/security/advisories/GHSA-265m-7826-wjqm"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-ghsa-f5wm-88jv-g5hx",
+      "slug": "2026-08-composer-ghsa-f5wm-88jv-g5hx",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-ghsa-f5wm-88jv-g5hx.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Craft CMS: Authenticated RCE through Twig sandbox escape",
+      "summary": "Craft CMS: Authenticated RCE through Twig sandbox escape",
+      "vendor": "Composer",
+      "product": "craftcms/cms",
+      "cve": null,
+      "operator_check": "Check whether craftcms/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for craftcms/cms. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-f5wm-88jv-g5hx",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f5wm-88jv-g5hx",
+          "url": "https://github.com/advisories/GHSA-f5wm-88jv-g5hx"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/craftcms/cms/security/advisories/GHSA-f5wm-88jv-g5hx"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-ghsa-g2gp-3wwq-f4ph",
+      "slug": "2026-08-composer-ghsa-g2gp-3wwq-f4ph",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-ghsa-g2gp-3wwq-f4ph.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "league/commonmark: Denial of service via adjacent inline attribute blocks",
+      "summary": "league/commonmark: Denial of service via adjacent inline attribute blocks",
+      "vendor": "Composer",
+      "product": "league/commonmark",
+      "cve": null,
+      "operator_check": "Check whether league/commonmark is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for league/commonmark. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-g2gp-3wwq-f4ph",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g2gp-3wwq-f4ph",
+          "url": "https://github.com/advisories/GHSA-g2gp-3wwq-f4ph"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/thephpleague/commonmark/security/advisories/GHSA-g2gp-3wwq-f4ph"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-ghsa-jfm3-95jq-q3rf",
+      "slug": "2026-08-composer-ghsa-jfm3-95jq-q3rf",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-ghsa-jfm3-95jq-q3rf.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "league/commonmark:  Denial of service via duplicate footnote definitions",
+      "summary": "league/commonmark: Denial of service via duplicate footnote definitions",
+      "vendor": "Composer",
+      "product": "league/commonmark",
+      "cve": null,
+      "operator_check": "Check whether league/commonmark is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for league/commonmark. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-jfm3-95jq-q3rf",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jfm3-95jq-q3rf",
+          "url": "https://github.com/advisories/GHSA-jfm3-95jq-q3rf"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/thephpleague/commonmark/security/advisories/GHSA-jfm3-95jq-q3rf"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-ghsa-mh25-x5hq-wrqp",
+      "slug": "2026-08-composer-ghsa-mh25-x5hq-wrqp",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-ghsa-mh25-x5hq-wrqp.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "league/commonmark: Denial of service via colliding heading slugs",
+      "summary": "league/commonmark: Denial of service via colliding heading slugs",
+      "vendor": "Composer",
+      "product": "league/commonmark",
+      "cve": null,
+      "operator_check": "Check whether league/commonmark is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for league/commonmark. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-mh25-x5hq-wrqp",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mh25-x5hq-wrqp",
+          "url": "https://github.com/advisories/GHSA-mh25-x5hq-wrqp"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/thephpleague/commonmark/security/advisories/GHSA-mh25-x5hq-wrqp"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-ghsa-p8x7-9vfw-p7vc",
+      "slug": "2026-08-composer-ghsa-p8x7-9vfw-p7vc",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-ghsa-p8x7-9vfw-p7vc.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Craft CMS: Arbitrary user password reset leading to administrator account takeover",
+      "summary": "Craft CMS: Arbitrary user password reset leading to administrator account takeover",
+      "vendor": "Composer",
+      "product": "craftcms/cms",
+      "cve": null,
+      "operator_check": "Check whether craftcms/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for craftcms/cms. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-p8x7-9vfw-p7vc",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p8x7-9vfw-p7vc",
+          "url": "https://github.com/advisories/GHSA-p8x7-9vfw-p7vc"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/craftcms/cms/security/advisories/GHSA-p8x7-9vfw-p7vc"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-content-vu-487613",
+      "slug": "2026-08-content-vu-487613",
+      "url": "https://www.patchbrief.org/items/2026-08-content-vu-487613.html",
+      "date": "2026-08-06",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#487613: Alinto SOGo v5.12.7 vulnerable to cross-site scripting via malformed ICS calendar invitations",
+      "summary": "Overview A cross-site scripting (XSS) vulnerability in Alinto SOGo v5.12.7 allows attackers to achieve remote code execution by embedding malicious SVG (Scalable Vector Graphics) objects in ICS (iCalendar) invitations. The vulnerability has been actively exploited in the wild, as confirmed by VirusTotal sightings. Description Alinto SOGo is an open-source webmail and groupware platform for email, calendars, contacts, and shared scheduling. It is primarily used by organizations seeking a self-hosted interface solution for existing mail infrastructure. CVE-2026-8496 The vulnerability exists in SOGo’s handling of ICS files, where the DESCRIPTION field is rendered without proper sanitization or Content Security Policy (CSP) enforcement. When a calendar invite contains an SVG payload, such as , with JavaScript event handlers, the browser... Related CVEs: CVE-2026-8496.",
+      "vendor": "Content",
+      "product": "Security Policy (CSP) enforcement. When a calendar invite",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Security Policy (CSP) enforcement. When a calendar invite where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-487613",
+        "coordinated-disclosure",
+        "content",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#487613",
+          "url": "https://kb.cert.org/vuls/id/487613"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-65600",
+      "slug": "2026-08-go-cve-2026-65600",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-65600.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Traefik: Authentication Bypass via Path Traversal in ReplacePathRegex Middleware",
+      "summary": "Traefik: Authentication Bypass via Path Traversal in ReplacePathRegex Middleware",
+      "vendor": "Go",
+      "product": "github.com/traefik/traefik/v2",
+      "cve": "CVE-2026-65600",
+      "operator_check": "Check whether github.com/traefik/traefik/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.7%; percentile: 49%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/traefik/traefik/v2. Prioritize it with other application dependency updates, especially because EPSS places it in the 49% percentile.",
+      "tags": [
+        "cve-2026-65600",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cxjq-mrr5-89rv",
+          "url": "https://github.com/advisories/GHSA-cxjq-mrr5-89rv"
+        },
+        {
+          "title": "NVD — CVE-2026-65600",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65600"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/traefik/traefik/security/advisories/GHSA-cxjq-mrr5-89rv"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-67309",
+      "slug": "2026-08-go-cve-2026-67309",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-67309.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Traefik: Kubernetes Ingress NGINX RewriteTarget Path Traversal Allows Route-Level Authentication Bypass",
+      "summary": "Traefik: Kubernetes Ingress NGINX RewriteTarget Path Traversal Allows Route-Level Authentication Bypass",
+      "vendor": "Go",
+      "product": "github.com/traefik/traefik/v3",
+      "cve": "CVE-2026-67309",
+      "operator_check": "Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.8. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/traefik/traefik/v3. Prioritize it with other application dependency updates, especially because EPSS places it in the 40% percentile.",
+      "tags": [
+        "cve-2026-67309",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8rxv-jg7p-wvg3",
+          "url": "https://github.com/advisories/GHSA-8rxv-jg7p-wvg3"
+        },
+        {
+          "title": "NVD — CVE-2026-67309",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67309"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/traefik/traefik/security/advisories/GHSA-8rxv-jg7p-wvg3"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-71324",
+      "slug": "2026-08-go-cve-2026-71324",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-71324.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Traefik: Cross-user response poisoning via proxied CONNECT on Traefik's shared backend keep-alive pool",
+      "summary": "Traefik: Cross-user response poisoning via proxied CONNECT on Traefik's shared backend keep-alive pool",
+      "vendor": "Go",
+      "product": "github.com/traefik/traefik/v2",
+      "cve": "CVE-2026-71324",
+      "operator_check": "Check whether github.com/traefik/traefik/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.0.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/traefik/traefik/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71324",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3ccp-42pg-hgv6",
+          "url": "https://github.com/advisories/GHSA-3ccp-42pg-hgv6"
+        },
+        {
+          "title": "NVD — CVE-2026-71324",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71324"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/traefik/traefik/security/advisories/GHSA-3ccp-42pg-hgv6"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-71327",
+      "slug": "2026-08-go-cve-2026-71327",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-71327.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Traefik: Gateway API route identity collision allows cross-namespace backend hijacking",
+      "summary": "Traefik: Gateway API route identity collision allows cross-namespace backend hijacking",
+      "vendor": "Go",
+      "product": "github.com/traefik/traefik/v3",
+      "cve": "CVE-2026-71327",
+      "operator_check": "Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/traefik/traefik/v3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71327",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fgjj-px3w-67xx",
+          "url": "https://github.com/advisories/GHSA-fgjj-px3w-67xx"
+        },
+        {
+          "title": "NVD — CVE-2026-71327",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71327"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/traefik/traefik/security/advisories/GHSA-fgjj-px3w-67xx"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-16633",
+      "slug": "2026-08-npm-cve-2026-16633",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-16633.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PDF.js: Arbitrary JavaScript execution upon opening a malicious PDF",
+      "summary": "PDF.js: Arbitrary JavaScript execution upon opening a malicious PDF",
+      "vendor": "npm",
+      "product": "pdfjs-dist",
+      "cve": "CVE-2026-16633",
+      "operator_check": "Check whether pdfjs-dist is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pdfjs-dist. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-16633",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hq66-cqwq-w95j",
+          "url": "https://github.com/advisories/GHSA-hq66-cqwq-w95j"
+        },
+        {
+          "title": "NVD — CVE-2026-16633",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16633"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mozilla/pdf.js/security/advisories/GHSA-hq66-cqwq-w95j"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-71476",
+      "slug": "2026-08-npm-cve-2026-71476",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-71476.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nx: Zip-Slip in the self-hosted remote cache",
+      "summary": "Nx: Zip-Slip in the self-hosted remote cache",
+      "vendor": "npm",
+      "product": "nx",
+      "cve": "CVE-2026-71476",
+      "operator_check": "Check whether nx is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nx. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71476",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vp3h-ghgh-jr7g",
+          "url": "https://github.com/advisories/GHSA-vp3h-ghgh-jr7g"
+        },
+        {
+          "title": "NVD — CVE-2026-71476",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71476"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nrwl/nx/security/advisories/GHSA-vp3h-ghgh-jr7g"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-ghsa-5p4m-2wfm-xmqj",
+      "slug": "2026-08-npm-ghsa-5p4m-2wfm-xmqj",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-ghsa-5p4m-2wfm-xmqj.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported",
+      "summary": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported",
+      "vendor": "npm",
+      "product": "js-yaml",
+      "cve": null,
+      "operator_check": "Check whether js-yaml is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for js-yaml. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-5p4m-2wfm-xmqj",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5p4m-2wfm-xmqj",
+          "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-5p4m-2wfm-xmqj"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-ghsa-w9hm-4m3m-fxmm",
+      "slug": "2026-08-npm-ghsa-w9hm-4m3m-fxmm",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-ghsa-w9hm-4m3m-fxmm.html",
+      "date": "2026-08-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ngx-extended-pdf-viewer bundles a version of pdf.js vulnerable to CVE-2026-16633",
+      "summary": "ngx-extended-pdf-viewer bundles a version of pdf.js vulnerable to CVE-2026-16633",
+      "vendor": "npm",
+      "product": "ngx-extended-pdf-viewer",
+      "cve": null,
+      "operator_check": "Check whether ngx-extended-pdf-viewer is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ngx-extended-pdf-viewer. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-w9hm-4m3m-fxmm",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w9hm-4m3m-fxmm",
+          "url": "https://github.com/advisories/GHSA-w9hm-4m3m-fxmm"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/stephanrauh/ngx-extended-pdf-viewer/security/advisories/GHSA-w9hm-4m3m-fxmm"
+        }
+      ]
+    },
     {
       "id": "2026-08-go-cve-2026-54572",
       "slug": "2026-08-go-cve-2026-54572",
@@ -246,6 +836,68 @@
         {
           "title": "NVD — CVE-2026-63077",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63077"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-langflow-cve-2026-8470",
+      "slug": "2026-08-langflow-cve-2026-8470",
+      "url": "https://www.patchbrief.org/items/2026-08-langflow-cve-2026-8470.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Langflow Langflow — CVE-2026-8470 (Critical)",
+      "summary": "IBM Langflow OSS 1.0.0 through 1.10.3, 1.0.0 through 1.10.3, 1.0.0 through 1.10.3, and 1.0.0 through 1.10.3 use Python's non-cryptographic random module for generating Fernet encryption keys from user secrets under 32 characters. The deterministic Mersenne Twister PRNG produces identical keys for identical seeds, allowing attackers to reproduce encryption keys and decrypt stored API keys and authentication tokens.",
+      "vendor": "Langflow",
+      "product": "Langflow",
+      "cve": "CVE-2026-8470",
+      "operator_check": "Review CVE-2026-8470 in your asset inventory. Apply patches per vendor guidance and verify Langflow is not exposed. CVSS score: 7.4. EPSS probability: 0.1%; percentile: 1%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 7.4) in Langflow Langflow. Patch or mitigate promptly. EPSS percentile: 1%.",
+      "tags": [
+        "cve-2026-8470",
+        "vendor-advisory",
+        "langflow",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-8470",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8470"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7282648"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-langflow-cve-2026-9205",
+      "slug": "2026-08-langflow-cve-2026-9205",
+      "url": "https://www.patchbrief.org/items/2026-08-langflow-cve-2026-9205.html",
+      "date": "2026-08-05",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Langflow Langflow — CVE-2026-9205 (Critical)",
+      "summary": "IBM Langflow OSS contains a weak cryptographic key derivation vulnerability in the ensure_fernet_key() function.",
+      "vendor": "Langflow",
+      "product": "Langflow",
+      "cve": "CVE-2026-9205",
+      "operator_check": "Review CVE-2026-9205 in your asset inventory. Apply patches per vendor guidance and verify Langflow is not exposed. CVSS score: 7.4. EPSS probability: 0.2%; percentile: 11%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 7.4) in Langflow Langflow. Patch or mitigate promptly. EPSS percentile: 11%.",
+      "tags": [
+        "cve-2026-9205",
+        "vendor-advisory",
+        "langflow",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-9205",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9205"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7282648"
         }
       ]
     },
