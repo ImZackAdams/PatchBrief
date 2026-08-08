@@ -1,0 +1,37 @@
+id: 2026-08-github-vu-987105
+slug: 2026-08-github-vu-987105
+external_id: VU-987105
+source: cert_vu
+date: '2026-08-07'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#987105: The nothings stb TrueType library, up to version 1.26, contains
+  a heap buffer overflow vulnerability'
+summary: 'Overview A heap buffer overflow vulnerability exists in the stb TrueType
+  library created by nothings. Exploitation of this vulnerability can occur when handling
+  malformed font data and may lead to both Denial of Service (DoS) and Information
+  Disclosure. Description The nothings stb repository, versions 1.26 and earlier,
+  contains a collection of single-file public domain and MIT-licensed libraries for
+  C/C++ projects. CVE-2026-18497 A heap buffer overflow vulnerability exists in the
+  stbtt_GetGlyphShape() function within the stb_truetype.h library when handling malformed
+  TrueType Font (TTF) data. The issue occurs during glyph contour parsing. The function
+  iterates based on the number of contour endpoints specified in endPtsOfContours
+  , but does not validate that the points pointer remains within the bounds of the
+  glyph data buffer. As a... Related CVEs: CVE-2026-18497.'
+vendor: GitHub
+product: repository for updates and install the latest
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for repository for updates and install the latest where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#987105
+  url: https://kb.cert.org/vuls/id/987105
+tags:
+- vu-987105
+- coordinated-disclosure
+- github
+- cert-vu
+is_sample: false
