@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-08T09:37:34Z",
-  "total_items": 1005,
+  "generated": "2026-08-09T09:39:14Z",
+  "total_items": 1022,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-08T09:37:34Z",
+    "generated": "2026-08-09T09:39:14Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-08-08T09:37:20Z",
-        "finished_at": "2026-08-08T09:37:20Z"
+        "items_seen": 1,
+        "started_at": "2026-08-09T09:39:00Z",
+        "finished_at": "2026-08-09T09:39:00Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 25,
-        "started_at": "2026-08-08T09:37:20Z",
-        "finished_at": "2026-08-08T09:37:22Z"
+        "started_at": "2026-08-09T09:39:00Z",
+        "finished_at": "2026-08-09T09:39:02Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-08-08T09:37:22Z",
-        "finished_at": "2026-08-08T09:37:29Z"
+        "items_seen": 18,
+        "started_at": "2026-08-09T09:39:02Z",
+        "finished_at": "2026-08-09T09:39:09Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-08-08T09:37:29Z",
-        "finished_at": "2026-08-08T09:37:30Z"
+        "started_at": "2026-08-09T09:39:09Z",
+        "finished_at": "2026-08-09T09:39:10Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-08-08T09:37:30Z",
-        "finished_at": "2026-08-08T09:37:30Z"
+        "started_at": "2026-08-09T09:39:10Z",
+        "finished_at": "2026-08-09T09:39:11Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,546 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-08T09:37:30Z",
-        "finished_at": "2026-08-08T09:37:31Z"
+        "started_at": "2026-08-09T09:39:11Z",
+        "finished_at": "2026-08-09T09:39:12Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 40,
-        "started_at": "2026-08-08T09:37:31Z",
-        "finished_at": "2026-08-08T09:37:31Z"
+        "items_seen": 41,
+        "started_at": "2026-08-09T09:39:12Z",
+        "finished_at": "2026-08-09T09:39:12Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-08-msi-cve-2026-71984",
+      "slug": "2026-08-msi-cve-2026-71984",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71984.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71984 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the urlfilter function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit the urlfilter function to inject malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71984",
+      "operator_check": "Review CVE-2026-71984 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71984",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71984",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71984"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71985",
+      "slug": "2026-08-msi-cve-2026-71985",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71985.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71985 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the accesscontrol function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the accesscontrol function to execute malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71985",
+      "operator_check": "Review CVE-2026-71985 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71985",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71985",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71985"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71986",
+      "slug": "2026-08-msi-cve-2026-71986",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71986.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71986 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the dmz function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the dmz function to execute malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71986",
+      "operator_check": "Review CVE-2026-71986 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71986",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71986",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71986"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71987",
+      "slug": "2026-08-msi-cve-2026-71987",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71987.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71987 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the alg function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the alg function to execute malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71987",
+      "operator_check": "Review CVE-2026-71987 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71987",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71987",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71987"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71988",
+      "slug": "2026-08-msi-cve-2026-71988",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71988.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71988 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the portFw function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the alg function to execute malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71988",
+      "operator_check": "Review CVE-2026-71988 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71988",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71988",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71988"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71989",
+      "slug": "2026-08-msi-cve-2026-71989",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71989.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71989 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the porTrigger function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the alg function to execute malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71989",
+      "operator_check": "Review CVE-2026-71989 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71989",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71989",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71989"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71990",
+      "slug": "2026-08-msi-cve-2026-71990",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71990.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71990 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the TelnetSSH function used for SSH configuration that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the SSH configuration interface to inject malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71990",
+      "operator_check": "Review CVE-2026-71990 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71990",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71990",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71990"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71991",
+      "slug": "2026-08-msi-cve-2026-71991",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71991.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71991 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the TelnetSSH function used for Telnet configuration that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the Telnet configuration interface to inject malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71991",
+      "operator_check": "Review CVE-2026-71991 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71991",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71991",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71991"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71992",
+      "slug": "2026-08-msi-cve-2026-71992",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71992.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71992 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the macfilter function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit the macfilter function to inject malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71992",
+      "operator_check": "Review CVE-2026-71992 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71992",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71992",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71992"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71993",
+      "slug": "2026-08-msi-cve-2026-71993",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71993.html",
+      "date": "2026-08-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71993 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the openvpn function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit the macfilter function to inject malicious commands and obtain root privileges on the underlying system.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71993",
+      "operator_check": "Review CVE-2026-71993 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71993",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71993",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71993"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-d-link-cve-2026-71944",
+      "slug": "2026-08-d-link-cve-2026-71944",
+      "url": "https://www.patchbrief.org/items/2026-08-d-link-cve-2026-71944.html",
+      "date": "2026-08-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "D-Link DWR-M961 devices with hardware version C1 and firmware — CVE-2026-71944 (Critical)",
+      "summary": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formLtefotaUpgradeQuectel interface. A remote attacker can inject arbitrary malicious commands into the fota_url field, resulting in command execution with root privileges.",
+      "vendor": "D-Link",
+      "product": "DWR-M961 devices with hardware version C1 and firmware",
+      "cve": "CVE-2026-71944",
+      "operator_check": "Review CVE-2026-71944 in your asset inventory. Apply patches per vendor guidance and verify DWR-M961 devices with hardware version C1 and firmware is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in D-Link DWR-M961 devices with hardware version C1 and firmware. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71944",
+        "vendor-advisory",
+        "d-link",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71944",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71944"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-d-link-cve-2026-71956",
+      "slug": "2026-08-d-link-cve-2026-71956",
+      "url": "https://www.patchbrief.org/items/2026-08-d-link-cve-2026-71956.html",
+      "date": "2026-08-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "D-Link DWR-M961 devices with hardware version C1 and software — CVE-2026-71956 (Critical)",
+      "summary": "D-Link DWR-M961 devices with hardware version C1 and software version 1.1.2_C1_202602110044 contain a command injection vulnerability in the app.cgi interface. A remote attacker can inject arbitrary malicious commands into the netDig.ping.dst field, resulting in command execution with root privileges.",
+      "vendor": "D-Link",
+      "product": "DWR-M961 devices with hardware version C1 and software",
+      "cve": "CVE-2026-71956",
+      "operator_check": "Review CVE-2026-71956 in your asset inventory. Apply patches per vendor guidance and verify DWR-M961 devices with hardware version C1 and software is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in D-Link DWR-M961 devices with hardware version C1 and software. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71956",
+        "vendor-advisory",
+        "d-link",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71956",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71956"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-d-link-cve-2026-71957",
+      "slug": "2026-08-d-link-cve-2026-71957",
+      "url": "https://www.patchbrief.org/items/2026-08-d-link-cve-2026-71957.html",
+      "date": "2026-08-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "D-Link DWR-M961 devices with hardware version C1 and software — CVE-2026-71957 (Critical)",
+      "summary": "D-Link DWR-M961 devices with hardware version C1 and software version 1.1.2_C1_202602110044 contain a buffer overflow vulnerability in the app.cgi interface. A remote attacker can write an overly long string to the netAcc.addlist[].name field and execute arbitrary commands by crafting a specific payload, or cause the device to crash.",
+      "vendor": "D-Link",
+      "product": "DWR-M961 devices with hardware version C1 and software",
+      "cve": "CVE-2026-71957",
+      "operator_check": "Review CVE-2026-71957 in your asset inventory. Apply patches per vendor guidance and verify DWR-M961 devices with hardware version C1 and software is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in D-Link DWR-M961 devices with hardware version C1 and software. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71957",
+        "vendor-advisory",
+        "d-link",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71957",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71957"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-d-link-cve-2026-71958",
+      "slug": "2026-08-d-link-cve-2026-71958",
+      "url": "https://www.patchbrief.org/items/2026-08-d-link-cve-2026-71958.html",
+      "date": "2026-08-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "D-Link DWR-M961 devices with hardware version C1 and software — CVE-2026-71958 (Critical)",
+      "summary": "D-Link DWR-M961 devices with hardware version C1 and software version 1.1.2_C1_202602110044 contain a buffer overflow vulnerability in the quicksetup.cgi interface. A remote attacker can write overly long strings to the test4, ssid2, and username fields and execute arbitrary commands by crafting a specific payload, or cause the device to crash.",
+      "vendor": "D-Link",
+      "product": "DWR-M961 devices with hardware version C1 and software",
+      "cve": "CVE-2026-71958",
+      "operator_check": "Review CVE-2026-71958 in your asset inventory. Apply patches per vendor guidance and verify DWR-M961 devices with hardware version C1 and software is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in D-Link DWR-M961 devices with hardware version C1 and software. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71958",
+        "vendor-advisory",
+        "d-link",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71958",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71958"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-msi-cve-2026-71983",
+      "slug": "2026-08-msi-cve-2026-71983",
+      "url": "https://www.patchbrief.org/items/2026-08-msi-cve-2026-71983.html",
+      "date": "2026-08-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71983 (Critical)",
+      "summary": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the wps.cgi interface that allows remote attackers to execute arbitrary commands by injecting malicious input through the pin2g, pin5g, or pin6g parameters. Attackers can exploit these unsanitized parameters to execute arbitrary commands on the affected device and obtain root privileges.",
+      "vendor": "MSI",
+      "product": "Radix AXE6600 router firmware version v781521",
+      "cve": "CVE-2026-71983",
+      "operator_check": "Review CVE-2026-71983 in your asset inventory. Apply patches per vendor guidance and verify Radix AXE6600 router firmware version v781521 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in MSI Radix AXE6600 router firmware version v781521. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-71983",
+        "vendor-advisory",
+        "msi",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-71983",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71983"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.msi.com/"
+        }
+      ]
+    },
     {
       "id": "2026-08-composer-cve-2026-63221",
       "slug": "2026-08-composer-cve-2026-63221",
@@ -1089,6 +1614,37 @@
       ]
     },
     {
+      "id": "2026-08-microsoft-cve-2026-34191",
+      "slug": "2026-08-microsoft-cve-2026-34191",
+      "url": "https://www.patchbrief.org/items/2026-08-microsoft-cve-2026-34191.html",
+      "date": "2026-08-06",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Portable Runtime Utility: SQL Injection in apr_dbd_oracle",
+      "summary": "Apache Portable Runtime Utility: SQL Injection in apr_dbd_oracle Published in August 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-34191",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-34191. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 29%.",
+      "tags": [
+        "cve-2026-34191",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Aug Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-34191"
+        },
+        {
+          "title": "NVD — CVE-2026-34191",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34191"
+        }
+      ]
+    },
+    {
       "id": "2026-08-microsoft-cve-2026-49163",
       "slug": "2026-08-microsoft-cve-2026-49163",
       "url": "https://www.patchbrief.org/items/2026-08-microsoft-cve-2026-49163.html",
@@ -1209,6 +1765,37 @@
         {
           "title": "NVD — CVE-2026-50516",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50516"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-microsoft-cve-2026-50540",
+      "slug": "2026-08-microsoft-cve-2026-50540",
+      "url": "https://www.patchbrief.org/items/2026-08-microsoft-cve-2026-50540.html",
+      "date": "2026-08-06",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Kata Containers: Config Path Annotation Arbitrary File Loading",
+      "summary": "Kata Containers: Config Path Annotation Arbitrary File Loading Published in August 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-50540",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-50540. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.6. EPSS probability: 0.4%; percentile: 31%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 31%.",
+      "tags": [
+        "cve-2026-50540",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Aug Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-50540"
+        },
+        {
+          "title": "NVD — CVE-2026-50540",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50540"
         }
       ]
     },
