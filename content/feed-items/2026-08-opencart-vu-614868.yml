@@ -1,0 +1,36 @@
+id: 2026-08-opencart-vu-614868
+slug: 2026-08-opencart-vu-614868
+external_id: VU-614868
+source: cert_vu
+date: '2026-08-10'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#614868: Opencart ecommerce platform contains directory traversal vulnerability'
+summary: 'Overview The OpenCart v4.2.0.0 extension installer contains a directory
+  traversal vulnerability. The extension installation process extracts uploaded .zip
+  files then uses the zip entry filenames as filesystem paths, without validating
+  that the resolved path stays inside the intended directory. This vulnerability is
+  tracked as CVE-2026-18412. Description OpenCart is a free, open‑source e‑commerce
+  solution designed to help businesses build and manage online stores. OpenCart extensions
+  are uploaded as zip files with .ocmod.zip extensions. Upon installation, the OpenCart
+  v4.2.0.0 extension installer extracts these zip files, but does not validate that
+  the extracted paths stay inside the intended extraction directory. An attacker can
+  craft a malicious extension containing file path traversal sequences, such as ../
+  . With this vulnerability... Related CVEs: CVE-2026-18412.'
+vendor: Opencart
+product: ecommerce platform
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for ecommerce platform where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#614868
+  url: https://kb.cert.org/vuls/id/614868
+tags:
+- vu-614868
+- coordinated-disclosure
+- opencart
+- cert-vu
+is_sample: false

@@ -4,8 +4,15 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Mon, 10 Aug 2026 11:03:41 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 10:00:41 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>VU#614868: Opencart ecommerce platform contains directory traversal vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-08-opencart-vu-614868.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-opencart-vu-614868.html</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Overview The OpenCart v4.2.0.0 extension installer contains a directory traversal vulnerability. The extension installation process extracts uploaded .zip files then uses the zip entry filenames as filesystem paths, without validating that the resolved path stays inside the intended directory. This vulnerability is tracked as CVE-2026-18412. Description OpenCart is a free, open‑source e‑commerce solution designed to help businesses build and manage online stores. OpenCart extensions are uploaded as zip files with .ocmod.zip extensions. Upon installation, the OpenCart v4.2.0.0 extension installer extracts these zip files, but does not validate that the extracted paths stay inside the intended extraction directory. An attacker can craft a malicious extension containing file path traversal sequences, such as ../ . With this vulnerability... Related CVEs: CVE-2026-18412.</description>
+    </item>
     <item>
       <title>MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71984 (Critical)</title>
       <link>https://www.patchbrief.org/items/2026-08-msi-cve-2026-71984.html</link>

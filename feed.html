@@ -239,10 +239,32 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1022 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1023 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#614868: Opencart ecommerce platform contains directory traversal vulnerability" data-vendor="Opencart">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 10, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-opencart-vu-614868.html">VU#614868: Opencart ecommerce platform contains directory traversal vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Opencart · ecommerce platform</p>
+              <p class="feed-summary">Overview The OpenCart v4.2.0.0 extension installer contains a directory traversal vulnerability. The extension installation process extracts uploaded .zip files then uses the zip entry filenames as filesystem paths, without validating that the resolved path stays inside the intended directory. This vulnerability is tracked as CVE-2026-18412. Description OpenCart is a free, open‑source e‑commerce solution designed to help businesses build and manage online stores. OpenCart extensions are uploaded as zip files with .ocmod.zip extensions. Upon installation, the OpenCart v4.2.0.0 extension installer extracts these zip files, but does not validate that the extracted paths stay inside the intended extraction directory. An attacker can craft a malicious extension containing file path traversal sequences, such as ../ . With this vulnerability... Related CVEs: CVE-2026-18412.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for ecommerce platform where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/614868">CERT/CC Vulnerability Note VU#614868</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-opencart-vu-614868.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="MSI Radix AXE6600 router firmware version v781521 — CVE-2026-71984 (Critical)" data-vendor="MSI" data-cve="CVE-2026-71984">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
