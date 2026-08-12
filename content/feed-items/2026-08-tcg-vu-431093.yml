@@ -1,0 +1,37 @@
+id: 2026-08-tcg-vu-431093
+slug: 2026-08-tcg-vu-431093
+external_id: VU-431093
+source: cert_vu
+date: '2026-08-11'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#431093: TCG TPM 2.0 reference code found vulnerable to information leakage
+  and timing side-channel attacks'
+summary: 'Overview Two vulnerabilities have been identified in the Trusted Platform
+  Module (TPM) 2.0 reference implementation: CVE-2026-6726 – Information leakage via
+  falsified TPM keys. CVE-2026-6727 – A timing side-channel vulnerability in RSA OAEP
+  decryption. An attacker with privileged access to a TPM command interface may be
+  able to exploit these vulnerabilities by sending specially crafted TPM commands.
+  Successful exploitation could allow the attacker to decrypt ciphertexts encrypted
+  to affected TPM-managed RSA keys, including the RSA Endorsement Key (EK), or obtain
+  credentials for falsified TPM keys, enabling forged TPM 2.0 attestations. These
+  vulnerabilities are also documented by the Trusted Computing Group (TCG) in advisories
+  - TCGVRT010 and TCGVRT0011 : Description Trusted Platform Module (TPM) technology
+  provides hardware-backed... Related CVEs: CVE-2026-6726, CVE-2026-6727.'
+vendor: TCG
+product: TPM 2.0 reference code
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for TPM 2.0 reference code where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#431093
+  url: https://kb.cert.org/vuls/id/431093
+tags:
+- vu-431093
+- coordinated-disclosure
+- tcg
+- cert-vu
+is_sample: false
