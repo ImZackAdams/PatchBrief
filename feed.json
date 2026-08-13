@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-12T10:04:50Z",
-  "total_items": 1052,
+  "generated": "2026-08-13T10:06:02Z",
+  "total_items": 1063,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-12T10:04:50Z",
+    "generated": "2026-08-13T10:06:02Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 3,
-        "started_at": "2026-08-12T10:04:36Z",
-        "finished_at": "2026-08-12T10:04:36Z"
+        "started_at": "2026-08-13T10:05:48Z",
+        "finished_at": "2026-08-13T10:05:49Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 25,
-        "started_at": "2026-08-12T10:04:36Z",
-        "finished_at": "2026-08-12T10:04:37Z"
+        "started_at": "2026-08-13T10:05:49Z",
+        "finished_at": "2026-08-13T10:05:51Z"
       },
       {
         "id": "nvd",
@@ -36,17 +36,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-12T10:04:37Z",
-        "finished_at": "2026-08-12T10:04:45Z"
+        "started_at": "2026-08-13T10:05:51Z",
+        "finished_at": "2026-08-13T10:05:58Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 7,
-        "started_at": "2026-08-12T10:04:45Z",
-        "finished_at": "2026-08-12T10:04:46Z"
+        "items_seen": 18,
+        "started_at": "2026-08-13T10:05:58Z",
+        "finished_at": "2026-08-13T10:05:58Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-08-12T10:04:46Z",
-        "finished_at": "2026-08-12T10:04:47Z"
+        "started_at": "2026-08-13T10:05:58Z",
+        "finished_at": "2026-08-13T10:05:59Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,398 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-12T10:04:47Z",
-        "finished_at": "2026-08-12T10:04:48Z"
+        "started_at": "2026-08-13T10:05:59Z",
+        "finished_at": "2026-08-13T10:05:59Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 10,
-        "started_at": "2026-08-12T10:04:48Z",
-        "finished_at": "2026-08-12T10:04:48Z"
+        "items_seen": 36,
+        "started_at": "2026-08-13T10:05:59Z",
+        "finished_at": "2026-08-13T10:06:00Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-08-composer-cve-2026-32257",
+      "slug": "2026-08-composer-cve-2026-32257",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-32257.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Winter: Stored XSS through Brand Settings custom styles",
+      "summary": "Winter: Stored XSS through Brand Settings custom styles",
+      "vendor": "Composer",
+      "product": "winter/wn-backend-module",
+      "cve": "CVE-2026-32257",
+      "operator_check": "Check whether winter/wn-backend-module is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for winter/wn-backend-module. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-32257",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v7cf-8gh9-gxmj",
+          "url": "https://github.com/advisories/GHSA-v7cf-8gh9-gxmj"
+        },
+        {
+          "title": "NVD — CVE-2026-32257",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32257"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/wintercms/winter/security/advisories/GHSA-v7cf-8gh9-gxmj"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-32258",
+      "slug": "2026-08-composer-cve-2026-32258",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-32258.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Winter: Stored XSS through Editor Settings custom styles",
+      "summary": "Winter: Stored XSS through Editor Settings custom styles",
+      "vendor": "Composer",
+      "product": "winter/wn-backend-module",
+      "cve": "CVE-2026-32258",
+      "operator_check": "Check whether winter/wn-backend-module is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for winter/wn-backend-module. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-32258",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vgp4-2fc4-qff2",
+          "url": "https://github.com/advisories/GHSA-vgp4-2fc4-qff2"
+        },
+        {
+          "title": "NVD — CVE-2026-32258",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32258"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/wintercms/winter/security/advisories/GHSA-vgp4-2fc4-qff2"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-35445",
+      "slug": "2026-08-composer-cve-2026-35445",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-35445.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Winter: Authenticated backend users can bypass Users controller permission checks",
+      "summary": "Winter: Authenticated backend users can bypass Users controller permission checks",
+      "vendor": "Composer",
+      "product": "winter/wn-backend-module",
+      "cve": "CVE-2026-35445",
+      "operator_check": "Check whether winter/wn-backend-module is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for winter/wn-backend-module. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-35445",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j5jq-cr68-v2xx",
+          "url": "https://github.com/advisories/GHSA-j5jq-cr68-v2xx"
+        },
+        {
+          "title": "NVD — CVE-2026-35445",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35445"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/wintercms/winter/security/advisories/GHSA-j5jq-cr68-v2xx"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-54917",
+      "slug": "2026-08-go-cve-2026-54917",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-54917.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SeaweedFS: Path traversal in the S3 and Iceberg REST gateways allows cross-bucket access",
+      "summary": "SeaweedFS: Path traversal in the S3 and Iceberg REST gateways allows cross-bucket access",
+      "vendor": "Go",
+      "product": "github.com/seaweedfs/seaweedfs",
+      "cve": "CVE-2026-54917",
+      "operator_check": "Check whether github.com/seaweedfs/seaweedfs is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.8. EPSS probability: 0.4%; percentile: 31%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/seaweedfs/seaweedfs. Prioritize it with other application dependency updates, especially because EPSS places it in the 31% percentile.",
+      "tags": [
+        "cve-2026-54917",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w62w-66v9-vvgv",
+          "url": "https://github.com/advisories/GHSA-w62w-66v9-vvgv"
+        },
+        {
+          "title": "NVD — CVE-2026-54917",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54917"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/seaweedfs/seaweedfs/security/advisories/GHSA-w62w-66v9-vvgv"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-nuget-cve-2026-48798",
+      "slug": "2026-08-nuget-cve-2026-48798",
+      "url": "https://www.patchbrief.org/items/2026-08-nuget-cve-2026-48798.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SSH.NET: ScpClient Recursive Download Allows Arbitrary File Write via Server-Controlled SCP Filenames",
+      "summary": "SSH.NET: ScpClient Recursive Download Allows Arbitrary File Write via Server-Controlled SCP Filenames",
+      "vendor": "NuGet",
+      "product": "SSH.NET",
+      "cve": "CVE-2026-48798",
+      "operator_check": "Check whether SSH.NET is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for SSH.NET. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-48798",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q939-rpr3-3284",
+          "url": "https://github.com/advisories/GHSA-q939-rpr3-3284"
+        },
+        {
+          "title": "NVD — CVE-2026-48798",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48798"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sshnet/SSH.NET/security/advisories/GHSA-q939-rpr3-3284"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-nuget-ghsa-jwjp-4649-v8jp",
+      "slug": "2026-08-nuget-ghsa-jwjp-4649-v8jp",
+      "url": "https://www.patchbrief.org/items/2026-08-nuget-ghsa-jwjp-4649-v8jp.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SIPSorcery vulnerable to Denial of Service via out-of-bounds read in SCTP SACK chunk parsing",
+      "summary": "SIPSorcery vulnerable to Denial of Service via out-of-bounds read in SCTP SACK chunk parsing",
+      "vendor": "NuGet",
+      "product": "SIPSorcery",
+      "cve": null,
+      "operator_check": "Check whether SIPSorcery is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for SIPSorcery. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-jwjp-4649-v8jp",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jwjp-4649-v8jp",
+          "url": "https://github.com/advisories/GHSA-jwjp-4649-v8jp"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sipsorcery-org/sipsorcery/security/advisories/GHSA-jwjp-4649-v8jp"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-nuget-ghsa-pfvm-w89x-94jw",
+      "slug": "2026-08-nuget-ghsa-pfvm-w89x-94jw",
+      "url": "https://www.patchbrief.org/items/2026-08-nuget-ghsa-pfvm-w89x-94jw.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SIPSorcery: Malformed UDP datagram crashes TurnServer receive loop with no restart, disabling TURN UDP relay for all ...",
+      "summary": "SIPSorcery: Malformed UDP datagram crashes TurnServer receive loop with no restart, disabling TURN UDP relay for all clients (DoS)",
+      "vendor": "NuGet",
+      "product": "SIPSorcery",
+      "cve": null,
+      "operator_check": "Check whether SIPSorcery is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for SIPSorcery. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-pfvm-w89x-94jw",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pfvm-w89x-94jw",
+          "url": "https://github.com/advisories/GHSA-pfvm-w89x-94jw"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sipsorcery-org/sipsorcery/security/advisories/GHSA-pfvm-w89x-94jw"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-52776",
+      "slug": "2026-08-pypi-cve-2026-52776",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-52776.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "compliance-trestle has an URLSecurityValidator SSRF allowlist bypass via IPv4-mapped IPv6 and 0.0.0.0",
+      "summary": "compliance-trestle has an URLSecurityValidator SSRF allowlist bypass via IPv4-mapped IPv6 and 0.0.0.0",
+      "vendor": "PyPI",
+      "product": "compliance-trestle",
+      "cve": "CVE-2026-52776",
+      "operator_check": "Check whether compliance-trestle is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for compliance-trestle. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-52776",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h47f-gmjp-m7rr",
+          "url": "https://github.com/advisories/GHSA-h47f-gmjp-m7rr"
+        },
+        {
+          "title": "NVD — CVE-2026-52776",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52776"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/oscal-compass/compliance-trestle/security/advisories/GHSA-h47f-gmjp-m7rr"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-55071",
+      "slug": "2026-08-pypi-cve-2026-55071",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-55071.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MCP-for-Stata: Stata Command Injection via Unsanitized `package` in `ado_package_install`",
+      "summary": "MCP-for-Stata: Stata Command Injection via Unsanitized `package` in `ado_package_install`",
+      "vendor": "PyPI",
+      "product": "stata-mcp",
+      "cve": "CVE-2026-55071",
+      "operator_check": "Check whether stata-mcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for stata-mcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55071",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-49m4-vp58-wgc9",
+          "url": "https://github.com/advisories/GHSA-49m4-vp58-wgc9"
+        },
+        {
+          "title": "NVD — CVE-2026-55071",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55071"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SepineTam/mcp-for-stata/security/advisories/GHSA-49m4-vp58-wgc9"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-55074",
+      "slug": "2026-08-pypi-cve-2026-55074",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-55074.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Ansible FreeBSD Jail Connection Plugin: Jail escape via symlink following in put_file (host-side root mv)",
+      "summary": "Ansible FreeBSD Jail Connection Plugin: Jail escape via symlink following in put_file (host-side root mv)",
+      "vendor": "PyPI",
+      "product": "ansible-jailexec",
+      "cve": "CVE-2026-55074",
+      "operator_check": "Check whether ansible-jailexec is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.3.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ansible-jailexec. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55074",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cxgv-hp74-jj7r",
+          "url": "https://github.com/advisories/GHSA-cxgv-hp74-jj7r"
+        },
+        {
+          "title": "NVD — CVE-2026-55074",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55074"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/chofstede/ansible_jailexec/security/advisories/GHSA-cxgv-hp74-jj7r"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-rust-cve-2026-46369",
+      "slug": "2026-08-rust-cve-2026-46369",
+      "url": "https://www.patchbrief.org/items/2026-08-rust-cve-2026-46369.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "nimiq-blockchain: Validity store off by one error",
+      "summary": "nimiq-blockchain: Validity store off by one error",
+      "vendor": "Rust",
+      "product": "nimiq-blockchain",
+      "cve": "CVE-2026-46369",
+      "operator_check": "Check whether nimiq-blockchain is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nimiq-blockchain. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-46369",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3763-qp59-59vf",
+          "url": "https://github.com/advisories/GHSA-3763-qp59-59vf"
+        },
+        {
+          "title": "NVD — CVE-2026-46369",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46369"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nimiq/core-rs-albatross/security/advisories/GHSA-3763-qp59-59vf"
+        }
+      ]
+    },
     {
       "id": "2026-08-cisco-cve-2026-20349",
       "slug": "2026-08-cisco-cve-2026-20349",
