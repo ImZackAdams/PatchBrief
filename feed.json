@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-13T10:06:02Z",
-  "total_items": 1063,
+  "generated": "2026-08-14T10:01:44Z",
+  "total_items": 1073,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-13T10:06:02Z",
+    "generated": "2026-08-14T10:01:44Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 3,
-        "started_at": "2026-08-13T10:05:48Z",
-        "finished_at": "2026-08-13T10:05:49Z"
+        "started_at": "2026-08-14T10:01:31Z",
+        "finished_at": "2026-08-14T10:01:31Z"
       },
       {
         "id": "msrc",
@@ -27,35 +27,35 @@
         "role": "source",
         "status": "ok",
         "items_seen": 25,
-        "started_at": "2026-08-13T10:05:49Z",
-        "finished_at": "2026-08-13T10:05:51Z"
+        "started_at": "2026-08-14T10:01:31Z",
+        "finished_at": "2026-08-14T10:01:33Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-08-13T10:05:51Z",
-        "finished_at": "2026-08-13T10:05:58Z"
+        "items_seen": 4,
+        "started_at": "2026-08-14T10:01:33Z",
+        "finished_at": "2026-08-14T10:01:40Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 18,
-        "started_at": "2026-08-13T10:05:58Z",
-        "finished_at": "2026-08-13T10:05:58Z"
+        "items_seen": 23,
+        "started_at": "2026-08-14T10:01:40Z",
+        "finished_at": "2026-08-14T10:01:41Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-08-13T10:05:58Z",
-        "finished_at": "2026-08-13T10:05:59Z"
+        "items_seen": 1,
+        "started_at": "2026-08-14T10:01:41Z",
+        "finished_at": "2026-08-14T10:01:41Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,262 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-13T10:05:59Z",
-        "finished_at": "2026-08-13T10:05:59Z"
+        "started_at": "2026-08-14T10:01:41Z",
+        "finished_at": "2026-08-14T10:01:42Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 36,
-        "started_at": "2026-08-13T10:05:59Z",
-        "finished_at": "2026-08-13T10:06:00Z"
+        "items_seen": 40,
+        "started_at": "2026-08-14T10:01:42Z",
+        "finished_at": "2026-08-14T10:01:42Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-08-composer-cve-2026-55072",
+      "slug": "2026-08-composer-cve-2026-55072",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-55072.html",
+      "date": "2026-08-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Pimcore: ClassDefinition UID regex missing end anchor allows SQL injection via Block.php unquoted table name",
+      "summary": "Pimcore: ClassDefinition UID regex missing end anchor allows SQL injection via Block.php unquoted table name",
+      "vendor": "Composer",
+      "product": "pimcore/pimcore",
+      "cve": "CVE-2026-55072",
+      "operator_check": "Check whether pimcore/pimcore is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pimcore/pimcore. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55072",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2mhj-fhvg-v428",
+          "url": "https://github.com/advisories/GHSA-2mhj-fhvg-v428"
+        },
+        {
+          "title": "NVD — CVE-2026-55072",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55072"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pimcore/pimcore/security/advisories/GHSA-2mhj-fhvg-v428"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-fluent-cve-2026-73532",
+      "slug": "2026-08-fluent-cve-2026-73532",
+      "url": "https://www.patchbrief.org/items/2026-08-fluent-cve-2026-73532.html",
+      "date": "2026-08-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Fluent Forms Pro 6.2.7 — CVE-2026-73532 (Critical)",
+      "summary": "Fluent Forms Pro 6.2.7 contains an embedded malicious code vulnerability introduced via a tampered plugin build served through a decommissioned update server. The tampered build introduced a rogue PHP file (libs/class-license-sync.php), loaded via a require_once directive added to fluentformpro.php, that established a backdoor REST API endpoint, dropped persistent PHP files in mu-plugins and uploads directories, installed a passwordless administrator account, and registered scheduled tasks that survived plugin removal.",
+      "vendor": "Fluent",
+      "product": "Forms Pro 6.2.7",
+      "cve": "CVE-2026-73532",
+      "operator_check": "Review CVE-2026-73532 in your asset inventory. Apply patches per vendor guidance and verify Forms Pro 6.2.7 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Fluent Forms Pro 6.2.7. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-73532",
+        "vendor-advisory",
+        "fluent",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-73532",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73532"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://patchstack.com/database/wordpress/plugin/fluentformpro/vulnerability/wordpress-fluent-forms-pro-add-on-pack-plugin-6-2-7-6-2-7-remote-code-execution-vulnerability"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://wordpress.org/plugins/fluentform/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-54526",
+      "slug": "2026-08-go-cve-2026-54526",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-54526.html",
+      "date": "2026-08-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Argo Workflows: ArtifactGC.PodSpecPatch bypasses Strict/Secure template reference allow-list (Incomplete fix for CVE-...",
+      "summary": "Argo Workflows: ArtifactGC.PodSpecPatch bypasses Strict/Secure template reference allow-list (Incomplete fix for CVE-2026-31892)",
+      "vendor": "Go",
+      "product": "github.com/argoproj/argo-workflows/v4",
+      "cve": "CVE-2026-54526",
+      "operator_check": "Check whether github.com/argoproj/argo-workflows/v4 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.9. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/argoproj/argo-workflows/v4. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-54526",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-48p8-g2fx-3wwm",
+          "url": "https://github.com/advisories/GHSA-48p8-g2fx-3wwm"
+        },
+        {
+          "title": "NVD — CVE-2026-54526",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54526"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/argoproj/argo-workflows/security/advisories/GHSA-48p8-g2fx-3wwm"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-ninja-cve-2026-73533",
+      "slug": "2026-08-ninja-cve-2026-73533",
+      "url": "https://www.patchbrief.org/items/2026-08-ninja-cve-2026-73533.html",
+      "date": "2026-08-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ninja Tables Pro 5.2.11 — CVE-2026-73533 (Critical)",
+      "summary": "Ninja Tables Pro 5.2.11 contains an embedded malicious code vulnerability introduced via a tampered plugin build served through a decommissioned update server. The tampered build introduced a rogue PHP file (app/Library/updater/NinjaTableDataSync.php) that established a backdoor REST API endpoint, dropped persistent PHP files in mu-plugins and uploads directories, installed a passwordless administrator account, and registered scheduled tasks that survived plugin removal.",
+      "vendor": "Ninja",
+      "product": "Tables Pro 5.2.11",
+      "cve": "CVE-2026-73533",
+      "operator_check": "Review CVE-2026-73533 in your asset inventory. Apply patches per vendor guidance and verify Tables Pro 5.2.11 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Ninja Tables Pro 5.2.11. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-73533",
+        "vendor-advisory",
+        "ninja",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-73533",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73533"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://wordpress.org/plugins/ninja-tables/"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://wpmanageninja.com/security-incident-on-31-july-2026/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-73654",
+      "slug": "2026-08-npm-cve-2026-73654",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-73654.html",
+      "date": "2026-08-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Trigger.dev: Prototype pollution via run metadata operations → process-wide cross-tenant DoS",
+      "summary": "Trigger.dev: Prototype pollution via run metadata operations → process-wide cross-tenant DoS",
+      "vendor": "npm",
+      "product": "@trigger.dev/core",
+      "cve": "CVE-2026-73654",
+      "operator_check": "Check whether @trigger.dev/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @trigger.dev/core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-73654",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p28v-f755-9qrg",
+          "url": "https://github.com/advisories/GHSA-p28v-f755-9qrg"
+        },
+        {
+          "title": "NVD — CVE-2026-73654",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73654"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/triggerdotdev/trigger.dev/security/advisories/GHSA-p28v-f755-9qrg"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-12243",
+      "slug": "2026-08-pypi-cve-2026-12243",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-12243.html",
+      "date": "2026-08-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "nltk: Arbitrary File Read via Path Traversal in nltk.data.load() through Percent-Encoded Sequences",
+      "summary": "nltk: Arbitrary File Read via Path Traversal in nltk.data.load() through Percent-Encoded Sequences",
+      "vendor": "PyPI",
+      "product": "nltk",
+      "cve": "CVE-2026-12243",
+      "operator_check": "Check whether nltk is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nltk. Prioritize it with other application dependency updates, especially because EPSS places it in the 45% percentile.",
+      "tags": [
+        "cve-2026-12243",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m42h-3232-vpv3",
+          "url": "https://github.com/advisories/GHSA-m42h-3232-vpv3"
+        },
+        {
+          "title": "NVD — CVE-2026-12243",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12243"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nltk/nltk/security/advisories/GHSA-m42h-3232-vpv3"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-ghsa-rm43-82j9-r4mj",
+      "slug": "2026-08-pypi-ghsa-rm43-82j9-r4mj",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-ghsa-rm43-82j9-r4mj.html",
+      "date": "2026-08-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "atomic-agents-stack: Dashboard HTTP server path traversal allows arbitrary file read",
+      "summary": "atomic-agents-stack: Dashboard HTTP server path traversal allows arbitrary file read",
+      "vendor": "PyPI",
+      "product": "atomic-agents-stack",
+      "cve": null,
+      "operator_check": "Check whether atomic-agents-stack is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for atomic-agents-stack. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-rm43-82j9-r4mj",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rm43-82j9-r4mj",
+          "url": "https://github.com/advisories/GHSA-rm43-82j9-r4mj"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dep0we/atomic-agents-stack/security/advisories/GHSA-rm43-82j9-r4mj"
+        }
+      ]
+    },
     {
       "id": "2026-08-composer-cve-2026-32257",
       "slug": "2026-08-composer-cve-2026-32257",
@@ -215,6 +456,68 @@
         {
           "title": "Source reference",
           "url": "https://github.com/seaweedfs/seaweedfs/security/advisories/GHSA-w62w-66v9-vvgv"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-ibm-cve-2026-16860",
+      "slug": "2026-08-ibm-cve-2026-16860",
+      "url": "https://www.patchbrief.org/items/2026-08-ibm-cve-2026-16860.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ibm I — CVE-2026-16860 (Critical)",
+      "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary code due to an uncontrolled search path element.",
+      "vendor": "Ibm",
+      "product": "I",
+      "cve": "CVE-2026-16860",
+      "operator_check": "Review CVE-2026-16860 in your asset inventory. Apply patches per vendor guidance and verify I is not exposed. CVSS score: 9.9. EPSS probability: 0.5%; percentile: 38%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in Ibm I. Patch or mitigate promptly. EPSS percentile: 38%.",
+      "tags": [
+        "cve-2026-16860",
+        "vendor-advisory",
+        "ibm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-16860",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16860"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7283282"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-ibm-cve-2026-17276",
+      "slug": "2026-08-ibm-cve-2026-17276",
+      "url": "https://www.patchbrief.org/items/2026-08-ibm-cve-2026-17276.html",
+      "date": "2026-08-12",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ibm I — CVE-2026-17276 (Critical)",
+      "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to escalate privileges due to improper authorization in the handling of high-authority threads.",
+      "vendor": "Ibm",
+      "product": "I",
+      "cve": "CVE-2026-17276",
+      "operator_check": "Review CVE-2026-17276 in your asset inventory. Apply patches per vendor guidance and verify I is not exposed. CVSS score: 9.6. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.6) in Ibm I. Patch or mitigate promptly. EPSS percentile: 16%.",
+      "tags": [
+        "cve-2026-17276",
+        "vendor-advisory",
+        "ibm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-17276",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17276"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7283292"
         }
       ]
     },
@@ -930,6 +1233,41 @@
         {
           "title": "NVD — CVE-2026-62696",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62696"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5120238"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-microsoft-cve-2026-62712",
+      "slug": "2026-08-microsoft-cve-2026-62712",
+      "url": "https://www.patchbrief.org/items/2026-08-microsoft-cve-2026-62712.html",
+      "date": "2026-08-11",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Win32k Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Win32K allows an authorized attacker to elevate privileges locally. Published in August 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation More Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Win32K",
+      "cve": "CVE-2026-62712",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-62712. Confirm whether Windows Win32K is deployed, then apply the current security update or documented mitigation. CVSS score: 7.8. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 32%.",
+      "tags": [
+        "cve-2026-62712",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Aug Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-62712"
+        },
+        {
+          "title": "NVD — CVE-2026-62712",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62712"
         },
         {
           "title": "Source reference",
