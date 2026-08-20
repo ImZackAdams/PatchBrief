@@ -1,0 +1,36 @@
+id: 2026-08-rdk-b-vu-874418
+slug: 2026-08-rdk-b-vu-874418
+external_id: VU-874418
+source: cert_vu
+date: '2026-08-19'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#874418: RDK-B WebUI contains multiple vulnerabilities'
+summary: 'Overview RDK Central RDK-B WebUI version, rdkb-2025q4-kirkstone, contains
+  multiple vulnerabilities involving memory corruption, improper authentication, race
+  conditions, and insufficient input validation. An attacker with network access to
+  an affected WebUI may be able to bypass authentication, obtain administrative access,
+  cause a denial-of-service condition, or corrupt memory within underlying RDK-B processes.
+  Under certain conditions, this memory corruption may potentially be leveraged for
+  arbitrary code execution. Description RDK-B (Reference Design Kit for Broadband)
+  is an open-source software platform used in broadband gateways and related networking
+  devices. The RDK-B WebUI provides a web-based interface for configuring and administering
+  an RDK-B device. Five vulnerabilities have been identified in the RDK-B WebUI. CVE-2026-19505...
+  Related CVEs: CVE-2026-19505, CVE-2026-19506, CVE-2026-19507, CVE-2026-19508.'
+vendor: RDK-B
+product: WebUI
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for WebUI where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#874418
+  url: https://kb.cert.org/vuls/id/874418
+tags:
+- vu-874418
+- coordinated-disclosure
+- rdk-b
+- cert-vu
+is_sample: false

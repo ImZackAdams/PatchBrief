@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-19T09:33:47Z",
-  "total_items": 1137,
+  "generated": "2026-08-20T09:34:06Z",
+  "total_items": 1151,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-19T09:33:47Z",
+    "generated": "2026-08-20T09:34:06Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-08-19T09:33:35Z",
-        "finished_at": "2026-08-19T09:33:35Z"
+        "items_seen": 6,
+        "started_at": "2026-08-20T09:33:54Z",
+        "finished_at": "2026-08-20T09:33:54Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-19T09:33:35Z",
-        "finished_at": "2026-08-19T09:33:35Z"
+        "started_at": "2026-08-20T09:33:54Z",
+        "finished_at": "2026-08-20T09:33:55Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-19T09:33:35Z",
-        "finished_at": "2026-08-19T09:33:43Z"
+        "started_at": "2026-08-20T09:33:55Z",
+        "finished_at": "2026-08-20T09:34:02Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-08-19T09:33:43Z",
-        "finished_at": "2026-08-19T09:33:44Z"
+        "started_at": "2026-08-20T09:34:02Z",
+        "finished_at": "2026-08-20T09:34:03Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-08-19T09:33:44Z",
-        "finished_at": "2026-08-19T09:33:44Z"
+        "items_seen": 1,
+        "started_at": "2026-08-20T09:34:03Z",
+        "finished_at": "2026-08-20T09:34:03Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,487 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-19T09:33:44Z",
-        "finished_at": "2026-08-19T09:33:44Z"
+        "started_at": "2026-08-20T09:34:03Z",
+        "finished_at": "2026-08-20T09:34:03Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 11,
-        "started_at": "2026-08-19T09:33:44Z",
-        "finished_at": "2026-08-19T09:33:45Z"
+        "items_seen": 17,
+        "started_at": "2026-08-20T09:34:03Z",
+        "finished_at": "2026-08-20T09:34:04Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-08-composer-cve-2026-53965",
+      "slug": "2026-08-composer-cve-2026-53965",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-53965.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MCP PHP SDK: client HttpTransport SSE buffer (sseBuffer .= chunk) grows unbounded when server withholds the event del...",
+      "summary": "MCP PHP SDK: client HttpTransport SSE buffer (sseBuffer .= chunk) grows unbounded when server withholds the event delimiter",
+      "vendor": "Composer",
+      "product": "mcp/sdk",
+      "cve": "CVE-2026-53965",
+      "operator_check": "Check whether mcp/sdk is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mcp/sdk. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-53965",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7m52-jw36-44r3",
+          "url": "https://github.com/advisories/GHSA-7m52-jw36-44r3"
+        },
+        {
+          "title": "NVD — CVE-2026-53965",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53965"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/modelcontextprotocol/php-sdk/security/advisories/GHSA-7m52-jw36-44r3"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-55694",
+      "slug": "2026-08-composer-cve-2026-55694",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-55694.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Snipe-IT: Chained Information Disclosure and IDOR Leads to Full EULA File Takeover",
+      "summary": "Snipe-IT: Chained Information Disclosure and IDOR Leads to Full EULA File Takeover",
+      "vendor": "Composer",
+      "product": "snipe/snipe-it",
+      "cve": "CVE-2026-55694",
+      "operator_check": "Check whether snipe/snipe-it is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for snipe/snipe-it. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55694",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3hgv-jr5j-cg9x",
+          "url": "https://github.com/advisories/GHSA-3hgv-jr5j-cg9x"
+        },
+        {
+          "title": "NVD — CVE-2026-55694",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55694"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/grokability/snipe-it/security/advisories/GHSA-3hgv-jr5j-cg9x"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-62673",
+      "slug": "2026-08-composer-cve-2026-62673",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-62673.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Grav: .htaccess file extension rules bypass via case variation on case-insensitive filesystems",
+      "summary": "Grav: .htaccess file extension rules bypass via case variation on case-insensitive filesystems",
+      "vendor": "Composer",
+      "product": "getgrav/grav",
+      "cve": "CVE-2026-62673",
+      "operator_check": "Check whether getgrav/grav is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for getgrav/grav. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-62673",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vwg3-w8w3-pc79",
+          "url": "https://github.com/advisories/GHSA-vwg3-w8w3-pc79"
+        },
+        {
+          "title": "NVD — CVE-2026-62673",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62673"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getgrav/grav/security/advisories/GHSA-vwg3-w8w3-pc79"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-maven-cve-2024-45747",
+      "slug": "2026-08-maven-cve-2024-45747",
+      "url": "https://www.patchbrief.org/items/2026-08-maven-cve-2024-45747.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "GeoServer has a Server-Side Template Injection (SSTI) vulnerability in processing FreeMarker templates",
+      "summary": "GeoServer has a Server-Side Template Injection (SSTI) vulnerability in processing FreeMarker templates",
+      "vendor": "Maven",
+      "product": "org.geoserver:gs-main",
+      "cve": "CVE-2024-45747",
+      "operator_check": "Check whether org.geoserver:gs-main is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.geoserver:gs-main. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2024-45747",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wf6j-gr27-g7ch",
+          "url": "https://github.com/advisories/GHSA-wf6j-gr27-g7ch"
+        },
+        {
+          "title": "NVD — CVE-2024-45747",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45747"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/geoserver/geoserver/security/advisories/GHSA-wf6j-gr27-g7ch"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-maven-cve-2026-53966",
+      "slug": "2026-08-maven-cve-2026-53966",
+      "url": "https://www.patchbrief.org/items/2026-08-maven-cve-2026-53966.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "XWiki Platform Live Data Live Table Connector has privilege escalation from edit to script right through Live Data ed...",
+      "summary": "XWiki Platform Live Data Live Table Connector has privilege escalation from edit to script right through Live Data editing",
+      "vendor": "Maven",
+      "product": "org.xwiki.platform:xwiki-platform-livedata-livetable",
+      "cve": "CVE-2026-53966",
+      "operator_check": "Check whether org.xwiki.platform:xwiki-platform-livedata-livetable is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.xwiki.platform:xwiki-platform-livedata-livetable. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-53966",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-45ph-gxxr-gwgw",
+          "url": "https://github.com/advisories/GHSA-45ph-gxxr-gwgw"
+        },
+        {
+          "title": "NVD — CVE-2026-53966",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53966"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-45ph-gxxr-gwgw"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-53957",
+      "slug": "2026-08-npm-cve-2026-53957",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-53957.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Contentful MCP Server: export_space/import_space tools pass LLM-controlled `host`/`proxy` args to CMA client, redirec...",
+      "summary": "Contentful MCP Server: export_space/import_space tools pass LLM-controlled `host`/`proxy` args to CMA client, redirecting server PAT to attacker-controlled endpoint",
+      "vendor": "npm",
+      "product": "@contentful/mcp-server",
+      "cve": "CVE-2026-53957",
+      "operator_check": "Check whether @contentful/mcp-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @contentful/mcp-server. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-53957",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2xhg-73j7-rrgx",
+          "url": "https://github.com/advisories/GHSA-2xhg-73j7-rrgx"
+        },
+        {
+          "title": "NVD — CVE-2026-53957",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53957"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/contentful/contentful-mcp-server/security/advisories/GHSA-2xhg-73j7-rrgx"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-63188",
+      "slug": "2026-08-npm-cve-2026-63188",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-63188.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "logto-tunnel serves files outside --experience-path via path traversal",
+      "summary": "logto-tunnel serves files outside --experience-path via path traversal",
+      "vendor": "npm",
+      "product": "@logto/tunnel",
+      "cve": "CVE-2026-63188",
+      "operator_check": "Check whether @logto/tunnel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @logto/tunnel. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-63188",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rxjr-6c9q-h67x",
+          "url": "https://github.com/advisories/GHSA-rxjr-6c9q-h67x"
+        },
+        {
+          "title": "NVD — CVE-2026-63188",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63188"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/logto-io/logto/security/advisories/GHSA-rxjr-6c9q-h67x"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-ghsa-cc2g-gq8c-r332",
+      "slug": "2026-08-npm-ghsa-cc2g-gq8c-r332",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-ghsa-cc2g-gq8c-r332.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "grok-faf-mcp has an arbitrary local file read via unconfined `path` argument in FAF tools",
+      "summary": "grok-faf-mcp has an arbitrary local file read via unconfined `path` argument in FAF tools",
+      "vendor": "npm",
+      "product": "grok-faf-mcp",
+      "cve": null,
+      "operator_check": "Check whether grok-faf-mcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for grok-faf-mcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-cc2g-gq8c-r332",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cc2g-gq8c-r332",
+          "url": "https://github.com/advisories/GHSA-cc2g-gq8c-r332"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Wolfe-Jam/grok-faf-mcp/security/advisories/GHSA-cc2g-gq8c-r332"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-ghsa-j4r7-8ph4-43g3",
+      "slug": "2026-08-npm-ghsa-j4r7-8ph4-43g3",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-ghsa-j4r7-8ph4-43g3.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "faf-mcp has an arbitrary local file read/write via unconfined `path` argument in FAF tools",
+      "summary": "faf-mcp has an arbitrary local file read/write via unconfined `path` argument in FAF tools",
+      "vendor": "npm",
+      "product": "faf-mcp",
+      "cve": null,
+      "operator_check": "Check whether faf-mcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for faf-mcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-j4r7-8ph4-43g3",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j4r7-8ph4-43g3",
+          "url": "https://github.com/advisories/GHSA-j4r7-8ph4-43g3"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Wolfe-Jam/faf-mcp/security/advisories/GHSA-j4r7-8ph4-43g3"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-ghsa-rr55-jp92-8wp2",
+      "slug": "2026-08-npm-ghsa-rr55-jp92-8wp2",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-ghsa-rr55-jp92-8wp2.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "claude-faf-mcp has an arbitrary local file read/write via unconfined `path` argument in FAF tools",
+      "summary": "claude-faf-mcp has an arbitrary local file read/write via unconfined `path` argument in FAF tools",
+      "vendor": "npm",
+      "product": "claude-faf-mcp",
+      "cve": null,
+      "operator_check": "Check whether claude-faf-mcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for claude-faf-mcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-rr55-jp92-8wp2",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rr55-jp92-8wp2",
+          "url": "https://github.com/advisories/GHSA-rr55-jp92-8wp2"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Wolfe-Jam/claude-faf-mcp/security/advisories/GHSA-rr55-jp92-8wp2"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-53951",
+      "slug": "2026-08-pypi-cve-2026-53951",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-53951.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Copier has a trust-prefix bypass via path traversal that runs tasks unprompted",
+      "summary": "Copier has a trust-prefix bypass via path traversal that runs tasks unprompted",
+      "vendor": "PyPI",
+      "product": "copier",
+      "cve": "CVE-2026-53951",
+      "operator_check": "Check whether copier is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 9%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for copier. Prioritize it with other application dependency updates, especially because EPSS places it in the 9% percentile.",
+      "tags": [
+        "cve-2026-53951",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9gmc-jqmh-3rvm",
+          "url": "https://github.com/advisories/GHSA-9gmc-jqmh-3rvm"
+        },
+        {
+          "title": "NVD — CVE-2026-53951",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53951"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/copier-org/copier/security/advisories/GHSA-9gmc-jqmh-3rvm"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-53964",
+      "slug": "2026-08-pypi-cve-2026-53964",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-53964.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Document Merge Service vulnerable to RCE via SSTI (xlsx tempaltes)",
+      "summary": "Document Merge Service vulnerable to RCE via SSTI (xlsx tempaltes)",
+      "vendor": "PyPI",
+      "product": "document-merge-service",
+      "cve": "CVE-2026-53964",
+      "operator_check": "Check whether document-merge-service is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for document-merge-service. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-53964",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w47q-945m-q9pc",
+          "url": "https://github.com/advisories/GHSA-w47q-945m-q9pc"
+        },
+        {
+          "title": "NVD — CVE-2026-53964",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53964"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/adfinis/document-merge-service/security/advisories/GHSA-w47q-945m-q9pc"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-ghsa-p77j-g7h5-r2vw",
+      "slug": "2026-08-pypi-ghsa-p77j-g7h5-r2vw",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-ghsa-p77j-g7h5-r2vw.html",
+      "date": "2026-08-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "GeoLens's authorization and cache-scope flaws disclose private dataset data and metadata to unauthorized users (fixed...",
+      "summary": "GeoLens's authorization and cache-scope flaws disclose private dataset data and metadata to unauthorized users (fixed in 1.2.4)",
+      "vendor": "PyPI",
+      "product": "geolens",
+      "cve": null,
+      "operator_check": "Check whether geolens is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for geolens. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-p77j-g7h5-r2vw",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p77j-g7h5-r2vw",
+          "url": "https://github.com/advisories/GHSA-p77j-g7h5-r2vw"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/geolens-io/geolens/security/advisories/GHSA-p77j-g7h5-r2vw"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-rdk-b-vu-874418",
+      "slug": "2026-08-rdk-b-vu-874418",
+      "url": "https://www.patchbrief.org/items/2026-08-rdk-b-vu-874418.html",
+      "date": "2026-08-19",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#874418: RDK-B WebUI contains multiple vulnerabilities",
+      "summary": "Overview RDK Central RDK-B WebUI version, rdkb-2025q4-kirkstone, contains multiple vulnerabilities involving memory corruption, improper authentication, race conditions, and insufficient input validation. An attacker with network access to an affected WebUI may be able to bypass authentication, obtain administrative access, cause a denial-of-service condition, or corrupt memory within underlying RDK-B processes. Under certain conditions, this memory corruption may potentially be leveraged for arbitrary code execution. Description RDK-B (Reference Design Kit for Broadband) is an open-source software platform used in broadband gateways and related networking devices. The RDK-B WebUI provides a web-based interface for configuring and administering an RDK-B device. Five vulnerabilities have been identified in the RDK-B WebUI. CVE-2026-19505... Related CVEs: CVE-2026-19505, CVE-2026-19506, CVE-2026-19507, CVE-2026-19508.",
+      "vendor": "RDK-B",
+      "product": "WebUI",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for WebUI where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-874418",
+        "coordinated-disclosure",
+        "rdk-b",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#874418",
+          "url": "https://kb.cert.org/vuls/id/874418"
+        }
+      ]
+    },
     {
       "id": "2026-08-apple-cve-2026-65400",
       "slug": "2026-08-apple-cve-2026-65400",
