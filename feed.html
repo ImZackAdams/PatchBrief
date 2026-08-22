@@ -239,10 +239,362 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1185 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1202 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#756733: Calix GS7 XGS GS5239XG residential router contains missing authentication vulnerability" data-vendor="Calix">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-calix-vu-756733.html">VU#756733: Calix GS7 XGS GS5239XG residential router contains missing authentication vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Calix · GS7 XGS GS5239XG residential router</p>
+              <p class="feed-summary">Overview The Calix GS7 XGS GS5239XG router running firmware EXOS/6.6.47 contains a missing authentication vulnerability that exposes its UPnP (Universal Plug and Play) WANIPConnection service on the public WAN interface. Description Calix GS7 XGS GS5239XG is a residential gateway that provides routing, NAT, and firewall functionality for home networks. The device includes the Universal Plug and Play (UPnP) service implemented via MiniUPnPd 2.3.7, a lightweight software program that provides features such as automatic port forwarding for applications and devices on the LAN. By default, the UPnP service is exposed on the device’s WAN interface and does not require authentication. CVE-2026-75501 In affected firmware versions, the router binds its UPnP WANIPConnection SOAP service to the public WAN interface on TCP port 5000. Because the... Related CVEs: CVE-2026-75501.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for GS7 XGS GS5239XG residential router where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/756733">CERT/CC Vulnerability Note VU#756733</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-calix-vu-756733.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Phalcon Volt compiler `join` filter compile-time PHP code injection (SSTI leads to RCE)" data-vendor="Composer" data-cve="CVE-2026-59989">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-59989</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-composer-cve-2026-59989.html">Phalcon Volt compiler `join` filter compile-time PHP code injection (SSTI leads to RCE)</a>
+              </h2>
+              <p class="feed-vendor">Composer · phalcon/cphalcon</p>
+              <p class="feed-summary">Phalcon Volt compiler `join` filter compile-time PHP code injection (SSTI leads to RCE)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether phalcon/cphalcon is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-hrwp-4hh9-c8r8">GitHub Advisory GHSA-hrwp-4hh9-c8r8</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59989">NVD — CVE-2026-59989</a><a href="https://github.com/phalcon/cphalcon/security/advisories/GHSA-hrwp-4hh9-c8r8">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-composer-cve-2026-59989.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="YOURLS has stored XSS in referrer statistics chart via crafted Referer header" data-vendor="Composer" data-cve="CVE-2026-63135">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-63135</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-composer-cve-2026-63135.html">YOURLS has stored XSS in referrer statistics chart via crafted Referer header</a>
+              </h2>
+              <p class="feed-vendor">Composer · yourls/yourls</p>
+              <p class="feed-summary">YOURLS has stored XSS in referrer statistics chart via crafted Referer header</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether yourls/yourls is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-5h77-88j3-r659">GitHub Advisory GHSA-5h77-88j3-r659</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63135">NVD — CVE-2026-63135</a><a href="https://github.com/YOURLS/YOURLS/security/advisories/GHSA-5h77-88j3-r659">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-composer-cve-2026-63135.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Atlantis Workspace Handling has Path Traversal that Allows Out-of-Bounds Directory Deletion/Creation" data-vendor="Go" data-cve="CVE-2026-64679">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-64679</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-go-cve-2026-64679.html">Atlantis Workspace Handling has Path Traversal that Allows Out-of-Bounds Directory Deletion/Creation</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/runatlantis/atlantis</p>
+              <p class="feed-summary">Atlantis Workspace Handling has Path Traversal that Allows Out-of-Bounds Directory Deletion/Creation</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/runatlantis/atlantis is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-26w5-6g95-gj28">GitHub Advisory GHSA-26w5-6g95-gj28</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-64679">NVD — CVE-2026-64679</a><a href="https://github.com/runatlantis/atlantis/security/advisories/GHSA-26w5-6g95-gj28">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-go-cve-2026-64679.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="kin-openapi openai3filter: nil-pointer panic in ConvertErrors on malformed multipart/form-data body enables unauthent..." data-vendor="Go" data-cve="CVE-2026-76905">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-76905</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-go-cve-2026-76905.html">kin-openapi openai3filter: nil-pointer panic in ConvertErrors on malformed multipart/form-data body enables unauthent...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/getkin/kin-openapi</p>
+              <p class="feed-summary">kin-openapi openai3filter: nil-pointer panic in ConvertErrors on malformed multipart/form-data body enables unauthenticated DoS</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/getkin/kin-openapi is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-mmfr-pmjx-hw9w">GitHub Advisory GHSA-mmfr-pmjx-hw9w</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76905">NVD — CVE-2026-76905</a><a href="https://github.com/getkin/kin-openapi/security/advisories/GHSA-mmfr-pmjx-hw9w">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-go-cve-2026-76905.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="kin-openapi has uncontrolled resource consumption in openapi3filter deepObject query parameter decoding" data-vendor="Go" data-cve="CVE-2026-77354">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-77354</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-go-cve-2026-77354.html">kin-openapi has uncontrolled resource consumption in openapi3filter deepObject query parameter decoding</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/getkin/kin-openapi</p>
+              <p class="feed-summary">kin-openapi has uncontrolled resource consumption in openapi3filter deepObject query parameter decoding</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/getkin/kin-openapi is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-xhj3-7xw9-vr34">GitHub Advisory GHSA-xhj3-7xw9-vr34</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77354">NVD — CVE-2026-77354</a><a href="https://github.com/getkin/kin-openapi/security/advisories/GHSA-xhj3-7xw9-vr34">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-go-cve-2026-77354.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="GeoTools has unauthenticated SQL injection in the jsonArrayContains filter function against PostGIS layers" data-vendor="Maven" data-cve="CVE-2026-76904">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-76904</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-maven-cve-2026-76904.html">GeoTools has unauthenticated SQL injection in the jsonArrayContains filter function against PostGIS layers</a>
+              </h2>
+              <p class="feed-vendor">Maven · org.geotools.jdbc:gt-jdbc-postgis</p>
+              <p class="feed-summary">GeoTools has unauthenticated SQL injection in the jsonArrayContains filter function against PostGIS layers</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether org.geotools.jdbc:gt-jdbc-postgis is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-mqjf-5f49-2fjh">GitHub Advisory GHSA-mqjf-5f49-2fjh</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76904">NVD — CVE-2026-76904</a><a href="https://github.com/geotools/geotools/security/advisories/GHSA-mqjf-5f49-2fjh">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-maven-cve-2026-76904.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Defuddle vulnerable to XSS via unescaped attribute interpolation in site extractors" data-vendor="npm" data-cve="CVE-2026-61824">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-61824</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-61824.html">Defuddle vulnerable to XSS via unescaped attribute interpolation in site extractors</a>
+              </h2>
+              <p class="feed-vendor">npm · defuddle</p>
+              <p class="feed-summary">Defuddle vulnerable to XSS via unescaped attribute interpolation in site extractors</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether defuddle is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-jg4p-g6xj-4qmf">GitHub Advisory GHSA-jg4p-g6xj-4qmf</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-61824">NVD — CVE-2026-61824</a><a href="https://github.com/kepano/defuddle/security/advisories/GHSA-jg4p-g6xj-4qmf">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-61824.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Keystone vulnerable to `graphql.maxTake` bypass with negative `take`" data-vendor="npm" data-cve="CVE-2026-63421">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-63421</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-63421.html">Keystone vulnerable to `graphql.maxTake` bypass with negative `take`</a>
+              </h2>
+              <p class="feed-vendor">npm · @keystone-6/core</p>
+              <p class="feed-summary">Keystone vulnerable to `graphql.maxTake` bypass with negative `take`</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether @keystone-6/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-cqmq-8755-7xvh">GitHub Advisory GHSA-cqmq-8755-7xvh</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63421">NVD — CVE-2026-63421</a><a href="https://github.com/keystonejs/keystone/security/advisories/GHSA-cqmq-8755-7xvh">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-63421.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter" data-vendor="npm" data-cve="CVE-2026-63462">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-63462</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-63462.html">Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter</a>
+              </h2>
+              <p class="feed-vendor">npm · unleash-server</p>
+              <p class="feed-summary">Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether unleash-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-r5pq-6chh-j3xp">GitHub Advisory GHSA-r5pq-6chh-j3xp</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63462">NVD — CVE-2026-63462</a><a href="https://github.com/Unleash/unleash/security/advisories/GHSA-r5pq-6chh-j3xp">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-63462.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="JSONata: Arbitrary Code Execution via crafted JSONata expressions" data-vendor="npm" data-cve="CVE-2026-77413">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-77413</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-77413.html">JSONata: Arbitrary Code Execution via crafted JSONata expressions</a>
+              </h2>
+              <p class="feed-vendor">npm · jsonata</p>
+              <p class="feed-summary">JSONata: Arbitrary Code Execution via crafted JSONata expressions</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether jsonata is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-8gq3-vp5j-2grp">GitHub Advisory GHSA-8gq3-vp5j-2grp</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77413">NVD — CVE-2026-77413</a><a href="https://github.com/jsonata-js/jsonata/security/advisories/GHSA-8gq3-vp5j-2grp">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-77413.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions" data-vendor="npm" data-cve="CVE-2026-77414">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-77414</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-77414.html">JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions</a>
+              </h2>
+              <p class="feed-vendor">npm · jsonata</p>
+              <p class="feed-summary">JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether jsonata is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-2943-5xfg-gq5f">GitHub Advisory GHSA-2943-5xfg-gq5f</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77414">NVD — CVE-2026-77414</a><a href="https://github.com/jsonata-js/jsonata/security/advisories/GHSA-2943-5xfg-gq5f">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-77414.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions" data-vendor="npm" data-cve="CVE-2026-77415">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-77415</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-77415.html">JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions</a>
+              </h2>
+              <p class="feed-vendor">npm · jsonata</p>
+              <p class="feed-summary">JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether jsonata is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-66mm-25pp-rfff">GitHub Advisory GHSA-66mm-25pp-rfff</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77415">NVD — CVE-2026-77415</a><a href="https://github.com/jsonata-js/jsonata/security/advisories/GHSA-66mm-25pp-rfff">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-77415.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Xinference vulnerable to remote code execution via unsafe `eval()` in Llama3 tool-call parsing" data-vendor="PyPI" data-cve="CVE-2026-61539">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-61539</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-pypi-cve-2026-61539.html">Xinference vulnerable to remote code execution via unsafe `eval()` in Llama3 tool-call parsing</a>
+              </h2>
+              <p class="feed-vendor">PyPI · xinference</p>
+              <p class="feed-summary">Xinference vulnerable to remote code execution via unsafe `eval()` in Llama3 tool-call parsing</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether xinference is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-x2rj-828p-hx9m">GitHub Advisory GHSA-x2rj-828p-hx9m</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-61539">NVD — CVE-2026-61539</a><a href="https://github.com/xorbitsai/inference/security/advisories/GHSA-x2rj-828p-hx9m">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-pypi-cve-2026-61539.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Hydra: hydra.utils.instantiate with untrusted config can lead to code execution" data-vendor="PyPI" data-cve="CVE-2026-68508">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-68508</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-pypi-cve-2026-68508.html">Hydra: hydra.utils.instantiate with untrusted config can lead to code execution</a>
+              </h2>
+              <p class="feed-vendor">PyPI · hydra-core</p>
+              <p class="feed-summary">Hydra: hydra.utils.instantiate with untrusted config can lead to code execution</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether hydra-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-2cp2-2r3c-7p7r">GitHub Advisory GHSA-2cp2-2r3c-7p7r</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-68508">NVD — CVE-2026-68508</a><a href="https://github.com/hydra-ecosystem/hydra/security/advisories/GHSA-2cp2-2r3c-7p7r">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-pypi-cve-2026-68508.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability" data-vendor="Synacor" data-cve="CVE-2026-73570">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 21, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-73570</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-synacor-cve-2026-73570.html">Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Synacor · Zimbra Collaboration Suite (ZCS)</p>
+              <p class="feed-summary">Zimbra Collaboration Suite (ZCS) contains an OS command injection vulnerability which could allow an unauthenticated attacker to send specially crafted SMTP requests that may result in execution of arbitrary operating system commands as the Zimbra user.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-73570">NVD — CVE-2026-73570</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-synacor-cve-2026-73570.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Laravel Backpack CRUD: Unverified password change in MyAccountController via mass assignment" data-vendor="Composer" data-cve="CVE-2026-54175">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -351,6 +703,28 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-8cfw-pcwh-v63w">GitHub Advisory GHSA-8cfw-pcwh-v63w</a><a href="https://github.com/wintercms/winter/security/advisories/GHSA-8cfw-pcwh-v63w">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-08-composer-ghsa-8cfw-pcwh-v63w.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Winter: ImportExportController AJAX handlers bypass granular import/export permission gate" data-vendor="Composer">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 20, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-composer-ghsa-fm29-4mq3-phg6.html">Winter: ImportExportController AJAX handlers bypass granular import/export permission gate</a>
+              </h2>
+              <p class="feed-vendor">Composer · winter/wn-backend-module</p>
+              <p class="feed-summary">Winter: ImportExportController AJAX handlers bypass granular import/export permission gate</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether winter/wn-backend-module is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-fm29-4mq3-phg6">GitHub Advisory GHSA-fm29-4mq3-phg6</a><a href="https://github.com/wintercms/winter/security/advisories/GHSA-fm29-4mq3-phg6">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-composer-ghsa-fm29-4mq3-phg6.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Dgraph Alpha group stores can be replaced via unauthenticated external snapshot import" data-vendor="Go" data-cve="CVE-2026-54061">

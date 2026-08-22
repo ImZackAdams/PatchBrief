@@ -1,0 +1,37 @@
+id: 2026-08-calix-vu-756733
+slug: 2026-08-calix-vu-756733
+external_id: VU-756733
+source: cert_vu
+date: '2026-08-21'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#756733: Calix GS7 XGS GS5239XG residential router contains missing authentication
+  vulnerability'
+summary: 'Overview The Calix GS7 XGS GS5239XG router running firmware EXOS/6.6.47
+  contains a missing authentication vulnerability that exposes its UPnP (Universal
+  Plug and Play) WANIPConnection service on the public WAN interface. Description
+  Calix GS7 XGS GS5239XG is a residential gateway that provides routing, NAT, and
+  firewall functionality for home networks. The device includes the Universal Plug
+  and Play (UPnP) service implemented via MiniUPnPd 2.3.7, a lightweight software
+  program that provides features such as automatic port forwarding for applications
+  and devices on the LAN. By default, the UPnP service is exposed on the device’s
+  WAN interface and does not require authentication. CVE-2026-75501 In affected firmware
+  versions, the router binds its UPnP WANIPConnection SOAP service to the public WAN
+  interface on TCP port 5000. Because the... Related CVEs: CVE-2026-75501.'
+vendor: Calix
+product: GS7 XGS GS5239XG residential router
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for GS7 XGS GS5239XG residential router where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#756733
+  url: https://kb.cert.org/vuls/id/756733
+tags:
+- vu-756733
+- coordinated-disclosure
+- calix
+- cert-vu
+is_sample: false
