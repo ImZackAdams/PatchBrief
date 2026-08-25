@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-24T10:32:39Z",
-  "total_items": 1202,
+  "generated": "2026-08-25T09:34:42Z",
+  "total_items": 1211,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-24T10:32:39Z",
+    "generated": "2026-08-25T09:34:42Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-08-24T09:47:27Z",
-        "finished_at": "2026-08-24T09:47:27Z"
+        "started_at": "2026-08-25T09:34:30Z",
+        "finished_at": "2026-08-25T09:34:30Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-24T09:47:27Z",
-        "finished_at": "2026-08-24T09:47:27Z"
+        "started_at": "2026-08-25T09:34:30Z",
+        "finished_at": "2026-08-25T09:34:31Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-08-24T09:47:27Z",
-        "finished_at": "2026-08-24T09:47:35Z"
+        "items_seen": 3,
+        "started_at": "2026-08-25T09:34:31Z",
+        "finished_at": "2026-08-25T09:34:38Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 14,
-        "started_at": "2026-08-24T09:47:35Z",
-        "finished_at": "2026-08-24T09:47:35Z"
+        "items_seen": 4,
+        "started_at": "2026-08-25T09:34:38Z",
+        "finished_at": "2026-08-25T09:34:38Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-08-24T09:47:35Z",
-        "finished_at": "2026-08-24T09:47:36Z"
+        "started_at": "2026-08-25T09:34:38Z",
+        "finished_at": "2026-08-25T09:34:39Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,321 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-24T09:47:36Z",
-        "finished_at": "2026-08-24T09:47:36Z"
+        "started_at": "2026-08-25T09:34:39Z",
+        "finished_at": "2026-08-25T09:34:39Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 15,
-        "started_at": "2026-08-24T09:47:36Z",
-        "finished_at": "2026-08-24T09:47:36Z"
+        "items_seen": 3,
+        "started_at": "2026-08-25T09:34:39Z",
+        "finished_at": "2026-08-25T09:34:39Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-08-grav-cve-2026-56710",
+      "slug": "2026-08-grav-cve-2026-56710",
+      "url": "https://www.patchbrief.org/items/2026-08-grav-cve-2026-56710.html",
+      "date": "2026-08-25",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Grav Login plugin — CVE-2026-56710 (Critical)",
+      "summary": "Grav Login plugin versions before 1.0.16 fail to validate the target account's privilege level in the onApiUserListRowAction unlock handler. An attacker with api.users.write permission can clear login lockout counters on admin.super accounts, removing brute-force protection from the highest-privilege accounts without requiring equivalent permissions.",
+      "vendor": "Grav",
+      "product": "Login plugin",
+      "cve": "CVE-2026-56710",
+      "operator_check": "Review CVE-2026-56710 in your asset inventory. Apply patches per vendor guidance and verify Login plugin is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Grav Login plugin. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-56710",
+        "vendor-advisory",
+        "grav",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-56710",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56710"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getgrav/grav/security/advisories/GHSA-985r-mpj8-5rqw"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/grav-login-plugin-before-privilege-escalation-via-unlock"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-the-cve-2026-78477",
+      "slug": "2026-08-the-cve-2026-78477",
+      "url": "https://www.patchbrief.org/items/2026-08-the-cve-2026-78477.html",
+      "date": "2026-08-25",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "The Jawn theme for WordPress is vulnerable to Privilege Escalation in all — CVE-2026-78477 (Critical)",
+      "summary": "The Jawn theme for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.4.2. This makes it possible for unauthenticated attackers to elevate their privileges to that of an administrator.",
+      "vendor": "The",
+      "product": "Jawn theme for WordPress is vulnerable to Privilege Escalation in all",
+      "cve": "CVE-2026-78477",
+      "operator_check": "Review CVE-2026-78477 in your asset inventory. Apply patches per vendor guidance and verify Jawn theme for WordPress is vulnerable to Privilege Escalation in all is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in The Jawn theme for WordPress is vulnerable to Privilege Escalation in all. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-78477",
+        "vendor-advisory",
+        "the",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-78477",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78477"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://patchstack.com/database/wordpress/theme/jawn/vulnerability/wordpress-jawn-theme-1-4-2-privilege-escalation-vulnerability"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/e0642c85-ee01-497c-8dc3-42e3ffc02995?source=cve"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-55477",
+      "slug": "2026-08-go-cve-2026-55477",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-55477.html",
+      "date": "2026-08-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "3X-UI Vulnerable to Authenticated Arbitrary File Write via Database Import and Xray Log Path Manipulation",
+      "summary": "3X-UI Vulnerable to Authenticated Arbitrary File Write via Database Import and Xray Log Path Manipulation",
+      "vendor": "Go",
+      "product": "github.com/mhsanaei/3x-ui/v3",
+      "cve": "CVE-2026-55477",
+      "operator_check": "Check whether github.com/mhsanaei/3x-ui/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 47%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/mhsanaei/3x-ui/v3. Prioritize it with other application dependency updates, especially because EPSS places it in the 47% percentile.",
+      "tags": [
+        "cve-2026-55477",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jm48-m3rr-9hgg",
+          "url": "https://github.com/advisories/GHSA-jm48-m3rr-9hgg"
+        },
+        {
+          "title": "NVD — CVE-2026-55477",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55477"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MHSanaei/3x-ui/security/advisories/GHSA-jm48-m3rr-9hgg"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-maven-cve-2026-54049",
+      "slug": "2026-08-maven-cve-2026-54049",
+      "url": "https://www.patchbrief.org/items/2026-08-maven-cve-2026-54049.html",
+      "date": "2026-08-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Sakai Conversations has a Stored XSS Issue",
+      "summary": "Sakai Conversations has a Stored XSS Issue",
+      "vendor": "Maven",
+      "product": "org.sakaiproject.conversations:sakai-conversations-impl",
+      "cve": "CVE-2026-54049",
+      "operator_check": "Check whether org.sakaiproject.conversations:sakai-conversations-impl is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.sakaiproject.conversations:sakai-conversations-impl. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-54049",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w2x5-gv52-9ccv",
+          "url": "https://github.com/advisories/GHSA-w2x5-gv52-9ccv"
+        },
+        {
+          "title": "NVD — CVE-2026-54049",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54049"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sakaiproject/sakai/security/advisories/GHSA-w2x5-gv52-9ccv"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-metal-vu-728712",
+      "slug": "2026-08-metal-vu-728712",
+      "url": "https://www.patchbrief.org/items/2026-08-metal-vu-728712.html",
+      "date": "2026-08-24",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#728712: Konami's Metal Gear Online 3 contains a heap-based buffer overflow",
+      "summary": "Overview Konami's Metal Gear Online 3 video game contains a heap-based buffer overflow that can be triggered by an input‑validation vulnerability that allows match hosts to remotely execute arbitrary code on lobby members' machines through specially crafted data. Description Metal Gear Online 3 is an online 8 vs. 8 competitive shooter game that uses Steam Matchmaking to handle its multiplayer lobbies and matches. As detailed in CVE‑2026‑19874 , version 1.1.2.8 of Metal Gear Online 3 (Steam AppID 287700) contains an input‑validation vulnerability in the processing of Steam lobby metadata related to the player‑removal feature. The game tracks a lobby field ( kick_num ) indicating the number of players designated for removal, along with corresponding Steam ID entries of each kicked player ( kicked_id_%i ). When joining a lobby, the player's...",
+      "vendor": "Metal",
+      "product": "Gear Online 3 video game",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Gear Online 3 video game where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-728712",
+        "coordinated-disclosure",
+        "metal",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#728712",
+          "url": "https://kb.cert.org/vuls/id/728712"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-netis-cve-2026-76071",
+      "slug": "2026-08-netis-cve-2026-76071",
+      "url": "https://www.patchbrief.org/items/2026-08-netis-cve-2026-76071.html",
+      "date": "2026-08-24",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Netis NC63 firmware — CVE-2026-76071 (Critical)",
+      "summary": "Netis NC63 firmware through V3.0.0.3327 contains a stack-based buffer overflow vulnerability that allows unauthenticated remote attackers to overwrite saved stack state by supplying an oversized destHost parameter to the ipFilterList=mod action in netis.cgi. Attackers can exploit widthless sscanf conversions that copy user-supplied input into fixed-size stack buffers before authentication is verified, achieving remote code execution as root due to the Boa web server executing the CGI environment with root privileges.",
+      "vendor": "Netis",
+      "product": "NC63 firmware",
+      "cve": "CVE-2026-76071",
+      "operator_check": "Review CVE-2026-76071 in your asset inventory. Apply patches per vendor guidance and verify NC63 firmware is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Netis NC63 firmware. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-76071",
+        "vendor-advisory",
+        "netis",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-76071",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76071"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ozcanpng/CVE-2026-76071"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://ozcanpng.dev/blog/cve-2026-76071-netis-nc63-ipfilter-stack-buffer-overflow/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-oracle-cve-2026-21962",
+      "slug": "2026-08-oracle-cve-2026-21962",
+      "url": "https://www.patchbrief.org/items/2026-08-oracle-cve-2026-21962.html",
+      "date": "2026-08-24",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
+      "summary": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in contain an improper access control vulnerability that can result in unauthorized creation, deletion or modification access to critical data as well as unauthorized access to critical data or complete access to all Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in accessible data.",
+      "vendor": "Oracle",
+      "product": "HTTP Server and Oracle Weblogic Server Proxy Plug-in",
+      "cve": "CVE-2026-21962",
+      "operator_check": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+      "why_it_matters": "CVE-2026-21962 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-08-27. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-21962",
+        "kev",
+        "oracle",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-21962",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21962"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-54623",
+      "slug": "2026-08-pypi-cve-2026-54623",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-54623.html",
+      "date": "2026-08-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "django CMS: Plugin move endpoint allows cyclic reparenting (DoS)",
+      "summary": "django CMS: Plugin move endpoint allows cyclic reparenting (DoS)",
+      "vendor": "PyPI",
+      "product": "django-cms",
+      "cve": "CVE-2026-54623",
+      "operator_check": "Check whether django-cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for django-cms. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-54623",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8jj7-4v57-frf5",
+          "url": "https://github.com/advisories/GHSA-8jj7-4v57-frf5"
+        },
+        {
+          "title": "NVD — CVE-2026-54623",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54623"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/django-cms/django-cms/security/advisories/GHSA-8jj7-4v57-frf5"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-rust-ghsa-5x78-73v4-xg6w",
+      "slug": "2026-08-rust-ghsa-5x78-73v4-xg6w",
+      "url": "https://www.patchbrief.org/items/2026-08-rust-ghsa-5x78-73v4-xg6w.html",
+      "date": "2026-08-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "postgres-protocol: Unbounded SCRAM iteration count allows a malicious server to cause CPU-exhaustion denial of service",
+      "summary": "postgres-protocol: Unbounded SCRAM iteration count allows a malicious server to cause CPU-exhaustion denial of service",
+      "vendor": "Rust",
+      "product": "postgres-protocol",
+      "cve": null,
+      "operator_check": "Check whether postgres-protocol is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for postgres-protocol. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-5x78-73v4-xg6w",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5x78-73v4-xg6w",
+          "url": "https://github.com/advisories/GHSA-5x78-73v4-xg6w"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rust-postgres/rust-postgres/commit/d40097a36a85068ea50a3afbf0ce154ba439e7f0"
+        }
+      ]
+    },
     {
       "id": "2026-08-calix-vu-756733",
       "slug": "2026-08-calix-vu-756733",

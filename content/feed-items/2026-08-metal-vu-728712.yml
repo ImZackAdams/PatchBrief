@@ -1,0 +1,36 @@
+id: 2026-08-metal-vu-728712
+slug: 2026-08-metal-vu-728712
+external_id: VU-728712
+source: cert_vu
+date: '2026-08-24'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#728712: Konami''s Metal Gear Online 3 contains a heap-based buffer overflow'
+summary: Overview Konami's Metal Gear Online 3 video game contains a heap-based buffer
+  overflow that can be triggered by an input‑validation vulnerability that allows
+  match hosts to remotely execute arbitrary code on lobby members' machines through
+  specially crafted data. Description Metal Gear Online 3 is an online 8 vs. 8 competitive
+  shooter game that uses Steam Matchmaking to handle its multiplayer lobbies and matches.
+  As detailed in CVE‑2026‑19874 , version 1.1.2.8 of Metal Gear Online 3 (Steam AppID
+  287700) contains an input‑validation vulnerability in the processing of Steam lobby
+  metadata related to the player‑removal feature. The game tracks a lobby field (
+  kick_num ) indicating the number of players designated for removal, along with corresponding
+  Steam ID entries of each kicked player ( kicked_id_%i ). When joining a lobby, the
+  player's...
+vendor: Metal
+product: Gear Online 3 video game
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Gear Online 3 video game where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#728712
+  url: https://kb.cert.org/vuls/id/728712
+tags:
+- vu-728712
+- coordinated-disclosure
+- metal
+- cert-vu
+is_sample: false

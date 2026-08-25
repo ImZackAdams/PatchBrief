@@ -4,8 +4,71 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Mon, 24 Aug 2026 10:32:39 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 09:34:42 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>Grav Login plugin — CVE-2026-56710 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-08-grav-cve-2026-56710.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-grav-cve-2026-56710.html</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Grav Login plugin versions before 1.0.16 fail to validate the target account's privilege level in the onApiUserListRowAction unlock handler. An attacker with api.users.write permission can clear login lockout counters on admin.super accounts, removing brute-force protection from the highest-privilege accounts without requiring equivalent permissions.</description>
+    </item>
+    <item>
+      <title>The Jawn theme for WordPress is vulnerable to Privilege Escalation in all — CVE-2026-78477 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-08-the-cve-2026-78477.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-the-cve-2026-78477.html</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <description>The Jawn theme for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.4.2. This makes it possible for unauthenticated attackers to elevate their privileges to that of an administrator.</description>
+    </item>
+    <item>
+      <title>3X-UI Vulnerable to Authenticated Arbitrary File Write via Database Import and Xray Log Path Manipulation</title>
+      <link>https://www.patchbrief.org/items/2026-08-go-cve-2026-55477.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-go-cve-2026-55477.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>3X-UI Vulnerable to Authenticated Arbitrary File Write via Database Import and Xray Log Path Manipulation</description>
+    </item>
+    <item>
+      <title>Sakai Conversations has a Stored XSS Issue</title>
+      <link>https://www.patchbrief.org/items/2026-08-maven-cve-2026-54049.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-maven-cve-2026-54049.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Sakai Conversations has a Stored XSS Issue</description>
+    </item>
+    <item>
+      <title>VU#728712: Konami's Metal Gear Online 3 contains a heap-based buffer overflow</title>
+      <link>https://www.patchbrief.org/items/2026-08-metal-vu-728712.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-metal-vu-728712.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Overview Konami's Metal Gear Online 3 video game contains a heap-based buffer overflow that can be triggered by an input‑validation vulnerability that allows match hosts to remotely execute arbitrary code on lobby members' machines through specially crafted data. Description Metal Gear Online 3 is an online 8 vs. 8 competitive shooter game that uses Steam Matchmaking to handle its multiplayer lobbies and matches. As detailed in CVE‑2026‑19874 , version 1.1.2.8 of Metal Gear Online 3 (Steam AppID 287700) contains an input‑validation vulnerability in the processing of Steam lobby metadata related to the player‑removal feature. The game tracks a lobby field ( kick_num ) indicating the number of players designated for removal, along with corresponding Steam ID entries of each kicked player ( kicked_id_%i ). When joining a lobby, the player's...</description>
+    </item>
+    <item>
+      <title>Netis NC63 firmware — CVE-2026-76071 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-08-netis-cve-2026-76071.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-netis-cve-2026-76071.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Netis NC63 firmware through V3.0.0.3327 contains a stack-based buffer overflow vulnerability that allows unauthenticated remote attackers to overwrite saved stack state by supplying an oversized destHost parameter to the ipFilterList=mod action in netis.cgi. Attackers can exploit widthless sscanf conversions that copy user-supplied input into fixed-size stack buffers before authentication is verified, achieving remote code execution as root due to the Boa web server executing the CGI environment with root privileges.</description>
+    </item>
+    <item>
+      <title>Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-08-oracle-cve-2026-21962.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-oracle-cve-2026-21962.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in contain an improper access control vulnerability that can result in unauthorized creation, deletion or modification access to critical data as well as unauthorized access to critical data or complete access to all Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in accessible data.</description>
+    </item>
+    <item>
+      <title>django CMS: Plugin move endpoint allows cyclic reparenting (DoS)</title>
+      <link>https://www.patchbrief.org/items/2026-08-pypi-cve-2026-54623.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-pypi-cve-2026-54623.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>django CMS: Plugin move endpoint allows cyclic reparenting (DoS)</description>
+    </item>
+    <item>
+      <title>postgres-protocol: Unbounded SCRAM iteration count allows a malicious server to cause CPU-exhaustion denial of service</title>
+      <link>https://www.patchbrief.org/items/2026-08-rust-ghsa-5x78-73v4-xg6w.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-rust-ghsa-5x78-73v4-xg6w.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>postgres-protocol: Unbounded SCRAM iteration count allows a malicious server to cause CPU-exhaustion denial of service</description>
+    </item>
     <item>
       <title>VU#756733: Calix GS7 XGS GS5239XG residential router contains missing authentication vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-08-calix-vu-756733.html</link>
