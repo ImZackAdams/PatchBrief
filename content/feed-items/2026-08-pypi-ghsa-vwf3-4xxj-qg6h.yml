@@ -1,0 +1,31 @@
+id: 2026-08-pypi-ghsa-vwf3-4xxj-qg6h
+slug: 2026-08-pypi-ghsa-vwf3-4xxj-qg6h
+external_id: GHSA-vwf3-4xxj-qg6h
+source: github_advisory
+date: '2026-08-25'
+type: Vendor advisory
+signal: High-risk advisory
+title: mcp-contextforge-gateway has Server-Side Template Injection (SSTI) leading
+  to Remote Code Execution in `PromptService...
+summary: mcp-contextforge-gateway has Server-Side Template Injection (SSTI) leading
+  to Remote Code Execution in `PromptService._render_template` via unsandboxed Jinja2
+  Environment
+vendor: PyPI
+product: mcp-contextforge-gateway
+cve: null
+operator_check: Check whether mcp-contextforge-gateway is present in application dependency
+  manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to
+  a patched version where available.
+why_it_matters: GitHub has published a reviewed security advisory for mcp-contextforge-gateway.
+  Prioritize it with other application dependency updates.
+sources:
+- title: GitHub Advisory GHSA-vwf3-4xxj-qg6h
+  url: https://github.com/advisories/GHSA-vwf3-4xxj-qg6h
+- title: Source reference
+  url: https://github.com/IBM/mcp-context-forge/security/advisories/GHSA-vwf3-4xxj-qg6h
+tags:
+- ghsa-vwf3-4xxj-qg6h
+- vendor-advisory
+- pypi
+- github-advisory
+is_sample: false

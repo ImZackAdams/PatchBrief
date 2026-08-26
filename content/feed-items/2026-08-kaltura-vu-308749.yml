@@ -1,0 +1,37 @@
+id: 2026-08-kaltura-vu-308749
+slug: 2026-08-kaltura-vu-308749
+external_id: VU-308749
+source: cert_vu
+date: '2026-08-25'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#308749: Remote Code Execution and Arbitrary File Read Vulnerabilities in
+  Kaltura Servers'
+summary: 'Overview The Kaltura HTML5 Player Library (mwEmbed / html5lib) contains
+  two vulnerabilities, both involving the same insecure deserialization flaw, that
+  enable arbitrary file read and remote code execution. Affected versions include
+  html5lib v2.45, v2.103 and earlier, and other v2.x releases that expose the vulnerable
+  mwEmbedLoader.php endpoint. Until a vendor patch is available, users are advised
+  to restrict access to the affected endpoint or disable it entirely. Description
+  Kaltura is an AI video platform that provides tools for video management, publishing,
+  playback, and integration with web applications. Kaltura’s HTML5 player library
+  exposes the mwEmbedLoader.php endpoint, which accepts a user-controlled ServiceUrl
+  parameter as the target URL for backend API requests. The KalturaClientBase PHP
+  client library fetches data from this... Related CVEs: CVE-2026-19912, CVE-2026-19913.'
+vendor: Kaltura
+product: Servers
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Servers where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#308749
+  url: https://kb.cert.org/vuls/id/308749
+tags:
+- vu-308749
+- coordinated-disclosure
+- kaltura
+- cert-vu
+is_sample: false
