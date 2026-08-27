@@ -1,0 +1,30 @@
+id: 2026-08-go-ghsa-mf7q-r4rv-jv94
+slug: 2026-08-go-ghsa-mf7q-r4rv-jv94
+external_id: GHSA-mf7q-r4rv-jv94
+source: github_advisory
+date: '2026-08-27'
+type: Vendor advisory
+signal: High-risk advisory
+title: Crossplane's TOCTOU between cosign verification and image fetch in xpkg.CachedClient
+  allows tag-based package install...
+summary: Crossplane's TOCTOU between cosign verification and image fetch in xpkg.CachedClient
+  allows tag-based package install to bypass signature check
+vendor: Go
+product: github.com/crossplane/crossplane-runtime/v2
+cve: null
+operator_check: 'Check whether github.com/crossplane/crossplane-runtime/v2 is present
+  in application dependency manifests, lockfiles, or build images. Review the GitHub
+  advisory and upgrade to a patched version where available. CVSS score: 8.2.'
+why_it_matters: GitHub has published a reviewed security advisory for github.com/crossplane/crossplane-runtime/v2.
+  Prioritize it with other application dependency updates.
+sources:
+- title: GitHub Advisory GHSA-mf7q-r4rv-jv94
+  url: https://github.com/advisories/GHSA-mf7q-r4rv-jv94
+- title: Source reference
+  url: https://github.com/crossplane/crossplane-runtime/security/advisories/GHSA-mf7q-r4rv-jv94
+tags:
+- ghsa-mf7q-r4rv-jv94
+- vendor-advisory
+- go
+- github-advisory
+is_sample: false
