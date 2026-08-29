@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-28T20:43:35Z",
-  "total_items": 1286,
+  "generated": "2026-08-29T14:11:18Z",
+  "total_items": 1293,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-28T20:43:35Z",
+    "generated": "2026-08-29T14:11:18Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 10,
-        "started_at": "2026-08-28T20:43:22Z",
-        "finished_at": "2026-08-28T20:43:22Z"
+        "items_seen": 9,
+        "started_at": "2026-08-29T14:11:04Z",
+        "finished_at": "2026-08-29T14:11:05Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-28T20:43:22Z",
-        "finished_at": "2026-08-28T20:43:23Z"
+        "started_at": "2026-08-29T14:11:05Z",
+        "finished_at": "2026-08-29T14:11:05Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-28T20:43:23Z",
-        "finished_at": "2026-08-28T20:43:30Z"
+        "started_at": "2026-08-29T14:11:05Z",
+        "finished_at": "2026-08-29T14:11:12Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-08-28T20:43:30Z",
-        "finished_at": "2026-08-28T20:43:31Z"
+        "started_at": "2026-08-29T14:11:12Z",
+        "finished_at": "2026-08-29T14:11:13Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-08-28T20:43:31Z",
-        "finished_at": "2026-08-28T20:43:31Z"
+        "items_seen": 0,
+        "started_at": "2026-08-29T14:11:13Z",
+        "finished_at": "2026-08-29T14:11:15Z"
       },
       {
         "id": "exploitdb",
@@ -63,17 +63,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-28T20:43:31Z",
-        "finished_at": "2026-08-28T20:43:32Z"
+        "started_at": "2026-08-29T14:11:15Z",
+        "finished_at": "2026-08-29T14:11:16Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 25,
-        "started_at": "2026-08-28T20:43:32Z",
-        "finished_at": "2026-08-28T20:43:32Z"
+        "items_seen": 21,
+        "started_at": "2026-08-29T14:11:16Z",
+        "finished_at": "2026-08-29T14:11:16Z"
       }
     ]
   },
@@ -250,6 +250,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/pimcore/pimcore/security/advisories/GHSA-9x44-4gxf-8c25"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-55843",
+      "slug": "2026-08-composer-cve-2026-55843",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-55843.html",
+      "date": "2026-08-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Snipe-IT has an Improper Privilege Management issue",
+      "summary": "Snipe-IT has an Improper Privilege Management issue",
+      "vendor": "Composer",
+      "product": "snipe/snipe-it",
+      "cve": "CVE-2026-55843",
+      "operator_check": "Check whether snipe/snipe-it is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.0. EPSS probability: 0.5%; percentile: 43%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for snipe/snipe-it. Prioritize it with other application dependency updates, especially because EPSS places it in the 43% percentile.",
+      "tags": [
+        "cve-2026-55843",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j5g3-42wp-gqm3",
+          "url": "https://github.com/advisories/GHSA-j5g3-42wp-gqm3"
+        },
+        {
+          "title": "NVD — CVE-2026-55843",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55843"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/grokability/snipe-it/security/advisories/GHSA-j5g3-42wp-gqm3"
         }
       ]
     },
@@ -534,6 +569,111 @@
       ]
     },
     {
+      "id": "2026-08-go-cve-2026-55764",
+      "slug": "2026-08-go-cve-2026-55764",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-55764.html",
+      "date": "2026-08-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "klever-go: SFT add-quantity `int64` overflow bypasses a finite per-nonce MaxSupply",
+      "summary": "klever-go: SFT add-quantity `int64` overflow bypasses a finite per-nonce MaxSupply",
+      "vendor": "Go",
+      "product": "github.com/klever-io/klever-go",
+      "cve": "CVE-2026-55764",
+      "operator_check": "Check whether github.com/klever-io/klever-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/klever-io/klever-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55764",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mrpp-v6pg-p54x",
+          "url": "https://github.com/advisories/GHSA-mrpp-v6pg-p54x"
+        },
+        {
+          "title": "NVD — CVE-2026-55764",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55764"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/klever-io/klever-go/security/advisories/GHSA-mrpp-v6pg-p54x"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-55784",
+      "slug": "2026-08-go-cve-2026-55784",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-55784.html",
+      "date": "2026-08-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "free5GC AUSF authentication contexts can be overwritten by concurrent requests for the same SUPI",
+      "summary": "free5GC AUSF authentication contexts can be overwritten by concurrent requests for the same SUPI",
+      "vendor": "Go",
+      "product": "github.com/free5gc/ausf",
+      "cve": "CVE-2026-55784",
+      "operator_check": "Check whether github.com/free5gc/ausf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/free5gc/ausf. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55784",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-334q-h5g3-fpxv",
+          "url": "https://github.com/advisories/GHSA-334q-h5g3-fpxv"
+        },
+        {
+          "title": "NVD — CVE-2026-55784",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55784"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/free5gc/free5gc/security/advisories/GHSA-334q-h5g3-fpxv"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-go-cve-2026-55874",
+      "slug": "2026-08-go-cve-2026-55874",
+      "url": "https://www.patchbrief.org/items/2026-08-go-cve-2026-55874.html",
+      "date": "2026-08-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SeaweedFS: Path traversal in the S3 gateway X-Amz-Copy-Source header allows cross-bucket object read",
+      "summary": "SeaweedFS: Path traversal in the S3 gateway X-Amz-Copy-Source header allows cross-bucket object read",
+      "vendor": "Go",
+      "product": "github.com/seaweedfs/seaweedfs",
+      "cve": "CVE-2026-55874",
+      "operator_check": "Check whether github.com/seaweedfs/seaweedfs is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 46%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/seaweedfs/seaweedfs. Prioritize it with other application dependency updates, especially because EPSS places it in the 46% percentile.",
+      "tags": [
+        "cve-2026-55874",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-56wq-x3wv-3ff4",
+          "url": "https://github.com/advisories/GHSA-56wq-x3wv-3ff4"
+        },
+        {
+          "title": "NVD — CVE-2026-55874",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55874"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/seaweedfs/seaweedfs/security/advisories/GHSA-56wq-x3wv-3ff4"
+        }
+      ]
+    },
+    {
       "id": "2026-08-maven-cve-2026-55511",
       "slug": "2026-08-maven-cve-2026-55511",
       "url": "https://www.patchbrief.org/items/2026-08-maven-cve-2026-55511.html",
@@ -635,6 +775,76 @@
         {
           "title": "Source reference",
           "url": "https://github.com/yamcs/yamcs/security/advisories/GHSA-c64q-hj4j-375f"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-maven-cve-2026-55841",
+      "slug": "2026-08-maven-cve-2026-55841",
+      "url": "https://www.patchbrief.org/items/2026-08-maven-cve-2026-55841.html",
+      "date": "2026-08-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Fortigate syslog message parser can be exploited to modify or delete fields from the original message",
+      "summary": "Fortigate syslog message parser can be exploited to modify or delete fields from the original message",
+      "vendor": "Maven",
+      "product": "org.graylog2:graylog2-server",
+      "cve": "CVE-2026-55841",
+      "operator_check": "Check whether org.graylog2:graylog2-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.graylog2:graylog2-server. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55841",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gqr6-r77p-c2pj",
+          "url": "https://github.com/advisories/GHSA-gqr6-r77p-c2pj"
+        },
+        {
+          "title": "NVD — CVE-2026-55841",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55841"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Graylog2/graylog2-server/security/advisories/GHSA-gqr6-r77p-c2pj"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-maven-cve-2026-55848",
+      "slug": "2026-08-maven-cve-2026-55848",
+      "url": "https://www.patchbrief.org/items/2026-08-maven-cve-2026-55848.html",
+      "date": "2026-08-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MapFish Print has XXE that allows reading arbitrary files of certain types",
+      "summary": "MapFish Print has XXE that allows reading arbitrary files of certain types",
+      "vendor": "Maven",
+      "product": "org.mapfish.print:print-lib",
+      "cve": "CVE-2026-55848",
+      "operator_check": "Check whether org.mapfish.print:print-lib is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.mapfish.print:print-lib. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-55848",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5v29-34h8-v68r",
+          "url": "https://github.com/advisories/GHSA-5v29-34h8-v68r"
+        },
+        {
+          "title": "NVD — CVE-2026-55848",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55848"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mapfish/mapfish-print/security/advisories/GHSA-5v29-34h8-v68r"
         }
       ]
     },
@@ -810,6 +1020,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/scrapy/protego/security/advisories/GHSA-wjmf-p669-5m5p"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-pypi-cve-2026-55830",
+      "slug": "2026-08-pypi-cve-2026-55830",
+      "url": "https://www.patchbrief.org/items/2026-08-pypi-cve-2026-55830.html",
+      "date": "2026-08-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "RestrictedPython guard hooks can be shadowed via positional-only arguments",
+      "summary": "RestrictedPython guard hooks can be shadowed via positional-only arguments",
+      "vendor": "PyPI",
+      "product": "RestrictedPython",
+      "cve": "CVE-2026-55830",
+      "operator_check": "Check whether RestrictedPython is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for RestrictedPython. Prioritize it with other application dependency updates, especially because EPSS places it in the 33% percentile.",
+      "tags": [
+        "cve-2026-55830",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-ffg3-p8fm-mjx2",
+          "url": "https://github.com/advisories/GHSA-ffg3-p8fm-mjx2"
+        },
+        {
+          "title": "NVD — CVE-2026-55830",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55830"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zopefoundation/RestrictedPython/security/advisories/GHSA-ffg3-p8fm-mjx2"
         }
       ]
     },
