@@ -239,10 +239,54 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1293 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1297 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Cloud Commander — CVE-2026-82460 (Critical)" data-vendor="Cloud" data-cve="CVE-2026-82460">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 29, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-82460</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-cloud-cve-2026-82460.html">Cloud Commander — CVE-2026-82460 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Cloud · Commander</p>
+              <p class="feed-summary">Cloud Commander before 19.20.2 contains a directory traversal vulnerability in REST file-operation and markdown endpoints that fails to properly validate path normalization. Attackers can use path traversal sequences to read, write, move, or copy files outside the configured root directory.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-82460 in your asset inventory. Apply patches per vendor guidance and verify Commander is not exposed. CVSS score: 9.8.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82460">NVD — CVE-2026-82460</a><a href="https://github.com/coderaiser/cloudcmd">Source reference</a><a href="https://github.com/coderaiser/cloudcmd/blob/v19.20.1/server/root.js">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-cloud-cve-2026-82460.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="The Omnivore API (packages/api) — CVE-2026-82454 (Critical)" data-vendor="The" data-cve="CVE-2026-82454">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 29, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-82454</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-the-cve-2026-82454.html">The Omnivore API (packages/api) — CVE-2026-82454 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">The · Omnivore API (packages/api)</p>
+              <p class="feed-summary">The Omnivore API (packages/api) before the fix in commit abf53d6 contains an authentication bypass in Apple sign-in token verification. The decodeAppleToken function extracted the &#x27;alg&#x27; field from the attacker-supplied JWT header and passed it as the sole allowed algorithm to jwt.verify(). Using jsonwebtoken v8 (which does not validate key/algorithm compatibility), an attacker can set alg=HS256 and sign a forged token using Apple&#x27;s publicly available RSA public key as the HMAC secret, bypassing signature verification and impersonating any Apple-linked account.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-82454 in your asset inventory. Apply patches per vendor guidance and verify Omnivore API (packages/api) is not exposed. CVSS score: 9.1.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82454">NVD — CVE-2026-82454</a><a href="https://github.com/omnivore-app/omnivore">Source reference</a><a href="https://github.com/omnivore-app/omnivore/commit/abf53d6508755d3d22a994e28e370a9193ea977a">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-the-cve-2026-82454.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Pimcore: Account Takeover via Password Reset URL Injection allows unauthenticated attacker to hijack any admin accoun..." data-vendor="Composer" data-cve="CVE-2026-55207">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -617,6 +661,28 @@
               <a class="feed-read-link" href="items/2026-08-go-cve-2026-55874.html">Read brief →</a>
             </article>
 
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Spinnaker: Improper yaml processing on kustomize bake operations" data-vendor="Maven" data-cve="CVE-2026-55175">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 28, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-55175</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-maven-cve-2026-55175.html">Spinnaker: Improper yaml processing on kustomize bake operations</a>
+              </h2>
+              <p class="feed-vendor">Maven · io.spinnaker.rosco:rosco-manifests</p>
+              <p class="feed-summary">Spinnaker: Improper yaml processing on kustomize bake operations</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether io.spinnaker.rosco:rosco-manifests is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 1.1%; percentile: 62%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-p68j-q7hf-3qcp">GitHub Advisory GHSA-p68j-q7hf-3qcp</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-55175">NVD — CVE-2026-55175</a><a href="https://github.com/spinnaker/spinnaker/security/advisories/GHSA-p68j-q7hf-3qcp">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-maven-cve-2026-55175.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Yamcs vulnerable to authenticated RCE via StreamSQL aggregate-compiler column-name injection in Yamcs `executeSql`" data-vendor="Maven" data-cve="CVE-2026-55511">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -681,6 +747,28 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-c64q-hj4j-375f">GitHub Advisory GHSA-c64q-hj4j-375f</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-55565">NVD — CVE-2026-55565</a><a href="https://github.com/yamcs/yamcs/security/advisories/GHSA-c64q-hj4j-375f">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-08-maven-cve-2026-55565.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="PowSyBl Core has Command Injection in LocalCommandExecutor-s" data-vendor="Maven" data-cve="CVE-2026-55673">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 28, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-55673</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-maven-cve-2026-55673.html">PowSyBl Core has Command Injection in LocalCommandExecutor-s</a>
+              </h2>
+              <p class="feed-vendor">Maven · com.powsybl:powsybl-computation-local</p>
+              <p class="feed-summary">PowSyBl Core has Command Injection in LocalCommandExecutor-s</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether com.powsybl:powsybl-computation-local is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.4%; percentile: 35%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-jqvf-j3ww-r8c7">GitHub Advisory GHSA-jqvf-j3ww-r8c7</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-55673">NVD — CVE-2026-55673</a><a href="https://github.com/powsybl/powsybl-core/security/advisories/GHSA-jqvf-j3ww-r8c7">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-maven-cve-2026-55673.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Fortigate syslog message parser can be exploited to modify or delete fields from the original message" data-vendor="Maven" data-cve="CVE-2026-55841">

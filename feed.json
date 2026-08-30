@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-29T14:11:18Z",
-  "total_items": 1293,
+  "generated": "2026-08-30T14:17:59Z",
+  "total_items": 1297,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-29T14:11:18Z",
+    "generated": "2026-08-30T14:17:59Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 9,
-        "started_at": "2026-08-29T14:11:04Z",
-        "finished_at": "2026-08-29T14:11:05Z"
+        "items_seen": 3,
+        "started_at": "2026-08-30T14:17:46Z",
+        "finished_at": "2026-08-30T14:17:46Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-29T14:11:05Z",
-        "finished_at": "2026-08-29T14:11:05Z"
+        "started_at": "2026-08-30T14:17:46Z",
+        "finished_at": "2026-08-30T14:17:46Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-08-29T14:11:05Z",
-        "finished_at": "2026-08-29T14:11:12Z"
+        "items_seen": 2,
+        "started_at": "2026-08-30T14:17:46Z",
+        "finished_at": "2026-08-30T14:17:53Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-08-29T14:11:12Z",
-        "finished_at": "2026-08-29T14:11:13Z"
+        "started_at": "2026-08-30T14:17:53Z",
+        "finished_at": "2026-08-30T14:17:55Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-29T14:11:13Z",
-        "finished_at": "2026-08-29T14:11:15Z"
+        "started_at": "2026-08-30T14:17:55Z",
+        "finished_at": "2026-08-30T14:17:55Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,91 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-29T14:11:15Z",
-        "finished_at": "2026-08-29T14:11:16Z"
+        "started_at": "2026-08-30T14:17:55Z",
+        "finished_at": "2026-08-30T14:17:56Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 21,
-        "started_at": "2026-08-29T14:11:16Z",
-        "finished_at": "2026-08-29T14:11:16Z"
+        "items_seen": 33,
+        "started_at": "2026-08-30T14:17:56Z",
+        "finished_at": "2026-08-30T14:17:56Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-08-cloud-cve-2026-82460",
+      "slug": "2026-08-cloud-cve-2026-82460",
+      "url": "https://www.patchbrief.org/items/2026-08-cloud-cve-2026-82460.html",
+      "date": "2026-08-29",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Cloud Commander — CVE-2026-82460 (Critical)",
+      "summary": "Cloud Commander before 19.20.2 contains a directory traversal vulnerability in REST file-operation and markdown endpoints that fails to properly validate path normalization. Attackers can use path traversal sequences to read, write, move, or copy files outside the configured root directory.",
+      "vendor": "Cloud",
+      "product": "Commander",
+      "cve": "CVE-2026-82460",
+      "operator_check": "Review CVE-2026-82460 in your asset inventory. Apply patches per vendor guidance and verify Commander is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Cloud Commander. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-82460",
+        "vendor-advisory",
+        "cloud",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-82460",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82460"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coderaiser/cloudcmd"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coderaiser/cloudcmd/blob/v19.20.1/server/root.js"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-the-cve-2026-82454",
+      "slug": "2026-08-the-cve-2026-82454",
+      "url": "https://www.patchbrief.org/items/2026-08-the-cve-2026-82454.html",
+      "date": "2026-08-29",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "The Omnivore API (packages/api) — CVE-2026-82454 (Critical)",
+      "summary": "The Omnivore API (packages/api) before the fix in commit abf53d6 contains an authentication bypass in Apple sign-in token verification. The decodeAppleToken function extracted the 'alg' field from the attacker-supplied JWT header and passed it as the sole allowed algorithm to jwt.verify(). Using jsonwebtoken v8 (which does not validate key/algorithm compatibility), an attacker can set alg=HS256 and sign a forged token using Apple's publicly available RSA public key as the HMAC secret, bypassing signature verification and impersonating any Apple-linked account.",
+      "vendor": "The",
+      "product": "Omnivore API (packages/api)",
+      "cve": "CVE-2026-82454",
+      "operator_check": "Review CVE-2026-82454 in your asset inventory. Apply patches per vendor guidance and verify Omnivore API (packages/api) is not exposed. CVSS score: 9.1.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in The Omnivore API (packages/api). Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-82454",
+        "vendor-advisory",
+        "the",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-82454",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82454"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/omnivore-app/omnivore"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/omnivore-app/omnivore/commit/abf53d6508755d3d22a994e28e370a9193ea977a"
+        }
+      ]
+    },
     {
       "id": "2026-08-composer-cve-2026-55207",
       "slug": "2026-08-composer-cve-2026-55207",
@@ -674,6 +744,41 @@
       ]
     },
     {
+      "id": "2026-08-maven-cve-2026-55175",
+      "slug": "2026-08-maven-cve-2026-55175",
+      "url": "https://www.patchbrief.org/items/2026-08-maven-cve-2026-55175.html",
+      "date": "2026-08-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Spinnaker: Improper yaml processing on kustomize bake operations",
+      "summary": "Spinnaker: Improper yaml processing on kustomize bake operations",
+      "vendor": "Maven",
+      "product": "io.spinnaker.rosco:rosco-manifests",
+      "cve": "CVE-2026-55175",
+      "operator_check": "Check whether io.spinnaker.rosco:rosco-manifests is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 1.1%; percentile: 62%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for io.spinnaker.rosco:rosco-manifests. Prioritize it with other application dependency updates, especially because EPSS places it in the 62% percentile.",
+      "tags": [
+        "cve-2026-55175",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p68j-q7hf-3qcp",
+          "url": "https://github.com/advisories/GHSA-p68j-q7hf-3qcp"
+        },
+        {
+          "title": "NVD — CVE-2026-55175",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55175"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/spinnaker/spinnaker/security/advisories/GHSA-p68j-q7hf-3qcp"
+        }
+      ]
+    },
+    {
       "id": "2026-08-maven-cve-2026-55511",
       "slug": "2026-08-maven-cve-2026-55511",
       "url": "https://www.patchbrief.org/items/2026-08-maven-cve-2026-55511.html",
@@ -775,6 +880,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/yamcs/yamcs/security/advisories/GHSA-c64q-hj4j-375f"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-maven-cve-2026-55673",
+      "slug": "2026-08-maven-cve-2026-55673",
+      "url": "https://www.patchbrief.org/items/2026-08-maven-cve-2026-55673.html",
+      "date": "2026-08-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PowSyBl Core has Command Injection in LocalCommandExecutor-s",
+      "summary": "PowSyBl Core has Command Injection in LocalCommandExecutor-s",
+      "vendor": "Maven",
+      "product": "com.powsybl:powsybl-computation-local",
+      "cve": "CVE-2026-55673",
+      "operator_check": "Check whether com.powsybl:powsybl-computation-local is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.4%; percentile: 35%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for com.powsybl:powsybl-computation-local. Prioritize it with other application dependency updates, especially because EPSS places it in the 35% percentile.",
+      "tags": [
+        "cve-2026-55673",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jqvf-j3ww-r8c7",
+          "url": "https://github.com/advisories/GHSA-jqvf-j3ww-r8c7"
+        },
+        {
+          "title": "NVD — CVE-2026-55673",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55673"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/powsybl/powsybl-core/security/advisories/GHSA-jqvf-j3ww-r8c7"
         }
       ]
     },

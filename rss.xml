@@ -4,8 +4,22 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Sat, 29 Aug 2026 14:11:18 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 14:17:59 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>Cloud Commander — CVE-2026-82460 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-08-cloud-cve-2026-82460.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-cloud-cve-2026-82460.html</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Cloud Commander before 19.20.2 contains a directory traversal vulnerability in REST file-operation and markdown endpoints that fails to properly validate path normalization. Attackers can use path traversal sequences to read, write, move, or copy files outside the configured root directory.</description>
+    </item>
+    <item>
+      <title>The Omnivore API (packages/api) — CVE-2026-82454 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-08-the-cve-2026-82454.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-the-cve-2026-82454.html</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 +0000</pubDate>
+      <description>The Omnivore API (packages/api) before the fix in commit abf53d6 contains an authentication bypass in Apple sign-in token verification. The decodeAppleToken function extracted the 'alg' field from the attacker-supplied JWT header and passed it as the sole allowed algorithm to jwt.verify(). Using jsonwebtoken v8 (which does not validate key/algorithm compatibility), an attacker can set alg=HS256 and sign a forged token using Apple's publicly available RSA public key as the HMAC secret, bypassing signature verification and impersonating any Apple-linked account.</description>
+    </item>
     <item>
       <title>Pimcore: Account Takeover via Password Reset URL Injection allows unauthenticated attacker to hijack any admin accoun...</title>
       <link>https://www.patchbrief.org/items/2026-08-composer-cve-2026-55207.html</link>
@@ -126,6 +140,13 @@
       <description>SeaweedFS: Path traversal in the S3 gateway X-Amz-Copy-Source header allows cross-bucket object read</description>
     </item>
     <item>
+      <title>Spinnaker: Improper yaml processing on kustomize bake operations</title>
+      <link>https://www.patchbrief.org/items/2026-08-maven-cve-2026-55175.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-maven-cve-2026-55175.html</guid>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Spinnaker: Improper yaml processing on kustomize bake operations</description>
+    </item>
+    <item>
       <title>Yamcs vulnerable to authenticated RCE via StreamSQL aggregate-compiler column-name injection in Yamcs `executeSql`</title>
       <link>https://www.patchbrief.org/items/2026-08-maven-cve-2026-55511.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-maven-cve-2026-55511.html</guid>
@@ -145,6 +166,13 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-maven-cve-2026-55565.html</guid>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
       <description>Yamcs vulnerable to authenticated remote code execution via unescaped StreamSQL `LIKE` pattern compiled by Janino (`LikeExpression`)</description>
+    </item>
+    <item>
+      <title>PowSyBl Core has Command Injection in LocalCommandExecutor-s</title>
+      <link>https://www.patchbrief.org/items/2026-08-maven-cve-2026-55673.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-maven-cve-2026-55673.html</guid>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <description>PowSyBl Core has Command Injection in LocalCommandExecutor-s</description>
     </item>
     <item>
       <title>Fortigate syslog message parser can be exploited to modify or delete fields from the original message</title>
