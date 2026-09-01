@@ -4,8 +4,43 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Mon, 31 Aug 2026 17:21:51 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 13:57:44 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>VU#456290: Hugging Face Transformers library writes remote code to disk prior to consent check</title>
+      <link>https://www.patchbrief.org/items/2026-09-a-vu-456290.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-a-vu-456290.html</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Overview A vulnerability in the Hugging Face Transformers library (versions 4.49.0 through 5.8.1) allows remote, attacker‑controlled Python files to be written to the local disk without user authorization. The library performs a remote module fetch and local cache write before evaluating the trust_remote_code consent prompt, violating the security contract enforced across other dynamic module-loading paths in the library. Description Hugging Face Transformers serves as a primary framework for defining and operating modern machine learning models including NLP, computer vision, audio, video, and multimodal systems, for both training and inference. As detailed in CVE‑2026‑80047 , affected versions (4.49.0 through 5.8.1) implement GenerativePreTrainedModel.load_custom_generate() such that the library fetches and caches a remote Python...</description>
+    </item>
+    <item>
+      <title>Kirby: File upload permissions are not checked during processing of chunk data</title>
+      <link>https://www.patchbrief.org/items/2026-08-composer-cve-2026-71415.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-composer-cve-2026-71415.html</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Kirby: File upload permissions are not checked during processing of chunk data</description>
+    </item>
+    <item>
+      <title>Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the medi...</title>
+      <link>https://www.patchbrief.org/items/2026-08-composer-cve-2026-75594.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-composer-cve-2026-75594.html</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the media handling</description>
+    </item>
+    <item>
+      <title>elFinder: SSRF protection bypass via DNS rebinding in the `fsock_get_contents()` fallback</title>
+      <link>https://www.patchbrief.org/items/2026-08-composer-cve-2026-81889.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-composer-cve-2026-81889.html</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <description>elFinder: SSRF protection bypass via DNS rebinding in the `fsock_get_contents()` fallback</description>
+    </item>
+    <item>
+      <title>Socket.IO: Engine.IO WebTransport SID DoS</title>
+      <link>https://www.patchbrief.org/items/2026-08-npm-cve-2026-59724.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-08-npm-cve-2026-59724.html</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Socket.IO: Engine.IO WebTransport SID DoS</description>
+    </item>
     <item>
       <title>PaperCut NG/MF Missing Authentication for Critical Function Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-08-papercut-cve-2026-81578.html</link>

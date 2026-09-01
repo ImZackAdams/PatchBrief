@@ -239,10 +239,120 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1299 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1304 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#456290: Hugging Face Transformers library writes remote code to disk prior to consent check" data-vendor="A">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 1, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-a-vu-456290.html">VU#456290: Hugging Face Transformers library writes remote code to disk prior to consent check</a>
+              </h2>
+              <p class="feed-vendor">A · vulnerability in the Hugging Face Transformers library (</p>
+              <p class="feed-summary">Overview A vulnerability in the Hugging Face Transformers library (versions 4.49.0 through 5.8.1) allows remote, attacker‑controlled Python files to be written to the local disk without user authorization. The library performs a remote module fetch and local cache write before evaluating the trust_remote_code consent prompt, violating the security contract enforced across other dynamic module-loading paths in the library. Description Hugging Face Transformers serves as a primary framework for defining and operating modern machine learning models including NLP, computer vision, audio, video, and multimodal systems, for both training and inference. As detailed in CVE‑2026‑80047 , affected versions (4.49.0 through 5.8.1) implement GenerativePreTrainedModel.load_custom_generate() such that the library fetches and caches a remote Python...</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for vulnerability in the Hugging Face Transformers library ( where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/456290">CERT/CC Vulnerability Note VU#456290</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-a-vu-456290.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Kirby: File upload permissions are not checked during processing of chunk data" data-vendor="Composer" data-cve="CVE-2026-71415">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 31, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-71415</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-composer-cve-2026-71415.html">Kirby: File upload permissions are not checked during processing of chunk data</a>
+              </h2>
+              <p class="feed-vendor">Composer · getkirby/cms</p>
+              <p class="feed-summary">Kirby: File upload permissions are not checked during processing of chunk data</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether getkirby/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-67mx-6wf2-92xp">GitHub Advisory GHSA-67mx-6wf2-92xp</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71415">NVD — CVE-2026-71415</a><a href="https://github.com/getkirby/kirby/security/advisories/GHSA-67mx-6wf2-92xp">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-composer-cve-2026-71415.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the medi..." data-vendor="Composer" data-cve="CVE-2026-75594">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 31, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-75594</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-composer-cve-2026-75594.html">Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the medi...</a>
+              </h2>
+              <p class="feed-vendor">Composer · getkirby/cms</p>
+              <p class="feed-summary">Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the media handling</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether getkirby/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-9vx2-j98c-p72w">GitHub Advisory GHSA-9vx2-j98c-p72w</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-75594">NVD — CVE-2026-75594</a><a href="https://github.com/getkirby/kirby/security/advisories/GHSA-9vx2-j98c-p72w">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-composer-cve-2026-75594.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="elFinder: SSRF protection bypass via DNS rebinding in the `fsock_get_contents()` fallback" data-vendor="Composer" data-cve="CVE-2026-81889">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 31, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-81889</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-composer-cve-2026-81889.html">elFinder: SSRF protection bypass via DNS rebinding in the `fsock_get_contents()` fallback</a>
+              </h2>
+              <p class="feed-vendor">Composer · studio-42/elfinder</p>
+              <p class="feed-summary">elFinder: SSRF protection bypass via DNS rebinding in the `fsock_get_contents()` fallback</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether studio-42/elfinder is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-8x3q-jpjh-qh5c">GitHub Advisory GHSA-8x3q-jpjh-qh5c</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-81889">NVD — CVE-2026-81889</a><a href="https://github.com/Studio-42/elFinder/security/advisories/GHSA-8x3q-jpjh-qh5c">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-composer-cve-2026-81889.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Socket.IO: Engine.IO WebTransport SID DoS" data-vendor="npm" data-cve="CVE-2026-59724">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Aug 31, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-59724</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-08-npm-cve-2026-59724.html">Socket.IO: Engine.IO WebTransport SID DoS</a>
+              </h2>
+              <p class="feed-vendor">npm · engine.io</p>
+              <p class="feed-summary">Socket.IO: Engine.IO WebTransport SID DoS</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether engine.io is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 47%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-gr94-w7qr-f4j3">GitHub Advisory GHSA-gr94-w7qr-f4j3</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59724">NVD — CVE-2026-59724</a><a href="https://github.com/socketio/socket.io/security/advisories/GHSA-gr94-w7qr-f4j3">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-08-npm-cve-2026-59724.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="PaperCut NG/MF Missing Authentication for Critical Function Vulnerability" data-vendor="PaperCut" data-cve="CVE-2026-81578">
               <div class="feed-item-top">
                 <div class="feed-item-meta">

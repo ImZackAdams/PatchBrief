@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-08-31T17:21:51Z",
-  "total_items": 1299,
+  "generated": "2026-09-01T13:57:44Z",
+  "total_items": 1304,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-08-31T17:21:51Z",
+    "generated": "2026-09-01T13:57:44Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-08-31T16:44:51Z",
-        "finished_at": "2026-08-31T16:44:51Z"
+        "started_at": "2026-09-01T13:57:29Z",
+        "finished_at": "2026-09-01T13:57:30Z"
       },
       {
         "id": "msrc",
@@ -27,35 +27,35 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-31T16:44:51Z",
-        "finished_at": "2026-08-31T16:44:52Z"
+        "started_at": "2026-09-01T13:57:30Z",
+        "finished_at": "2026-09-01T13:57:30Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-08-31T16:44:52Z",
-        "finished_at": "2026-08-31T16:44:58Z"
+        "items_seen": 0,
+        "started_at": "2026-09-01T13:57:30Z",
+        "finished_at": "2026-09-01T13:57:38Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 30,
-        "started_at": "2026-08-31T16:44:58Z",
-        "finished_at": "2026-08-31T16:44:59Z"
+        "items_seen": 4,
+        "started_at": "2026-09-01T13:57:38Z",
+        "finished_at": "2026-09-01T13:57:39Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-08-31T16:44:59Z",
-        "finished_at": "2026-08-31T16:44:59Z"
+        "items_seen": 1,
+        "started_at": "2026-09-01T13:57:39Z",
+        "finished_at": "2026-09-01T13:57:39Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,188 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-08-31T16:44:59Z",
-        "finished_at": "2026-08-31T16:45:00Z"
+        "started_at": "2026-09-01T13:57:39Z",
+        "finished_at": "2026-09-01T13:57:40Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 34,
-        "started_at": "2026-08-31T16:45:00Z",
-        "finished_at": "2026-08-31T16:45:00Z"
+        "items_seen": 3,
+        "started_at": "2026-09-01T13:57:40Z",
+        "finished_at": "2026-09-01T13:57:41Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-a-vu-456290",
+      "slug": "2026-09-a-vu-456290",
+      "url": "https://www.patchbrief.org/items/2026-09-a-vu-456290.html",
+      "date": "2026-09-01",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#456290: Hugging Face Transformers library writes remote code to disk prior to consent check",
+      "summary": "Overview A vulnerability in the Hugging Face Transformers library (versions 4.49.0 through 5.8.1) allows remote, attacker‑controlled Python files to be written to the local disk without user authorization. The library performs a remote module fetch and local cache write before evaluating the trust_remote_code consent prompt, violating the security contract enforced across other dynamic module-loading paths in the library. Description Hugging Face Transformers serves as a primary framework for defining and operating modern machine learning models including NLP, computer vision, audio, video, and multimodal systems, for both training and inference. As detailed in CVE‑2026‑80047 , affected versions (4.49.0 through 5.8.1) implement GenerativePreTrainedModel.load_custom_generate() such that the library fetches and caches a remote Python...",
+      "vendor": "A",
+      "product": "vulnerability in the Hugging Face Transformers library (",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for vulnerability in the Hugging Face Transformers library ( where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-456290",
+        "coordinated-disclosure",
+        "a",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#456290",
+          "url": "https://kb.cert.org/vuls/id/456290"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-71415",
+      "slug": "2026-08-composer-cve-2026-71415",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-71415.html",
+      "date": "2026-08-31",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Kirby: File upload permissions are not checked during processing of chunk data",
+      "summary": "Kirby: File upload permissions are not checked during processing of chunk data",
+      "vendor": "Composer",
+      "product": "getkirby/cms",
+      "cve": "CVE-2026-71415",
+      "operator_check": "Check whether getkirby/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for getkirby/cms. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-71415",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-67mx-6wf2-92xp",
+          "url": "https://github.com/advisories/GHSA-67mx-6wf2-92xp"
+        },
+        {
+          "title": "NVD — CVE-2026-71415",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71415"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getkirby/kirby/security/advisories/GHSA-67mx-6wf2-92xp"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-75594",
+      "slug": "2026-08-composer-cve-2026-75594",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-75594.html",
+      "date": "2026-08-31",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the medi...",
+      "summary": "Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the media handling",
+      "vendor": "Composer",
+      "product": "getkirby/cms",
+      "cve": "CVE-2026-75594",
+      "operator_check": "Check whether getkirby/cms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for getkirby/cms. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-75594",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9vx2-j98c-p72w",
+          "url": "https://github.com/advisories/GHSA-9vx2-j98c-p72w"
+        },
+        {
+          "title": "NVD — CVE-2026-75594",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75594"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getkirby/kirby/security/advisories/GHSA-9vx2-j98c-p72w"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-composer-cve-2026-81889",
+      "slug": "2026-08-composer-cve-2026-81889",
+      "url": "https://www.patchbrief.org/items/2026-08-composer-cve-2026-81889.html",
+      "date": "2026-08-31",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "elFinder: SSRF protection bypass via DNS rebinding in the `fsock_get_contents()` fallback",
+      "summary": "elFinder: SSRF protection bypass via DNS rebinding in the `fsock_get_contents()` fallback",
+      "vendor": "Composer",
+      "product": "studio-42/elfinder",
+      "cve": "CVE-2026-81889",
+      "operator_check": "Check whether studio-42/elfinder is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for studio-42/elfinder. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-81889",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8x3q-jpjh-qh5c",
+          "url": "https://github.com/advisories/GHSA-8x3q-jpjh-qh5c"
+        },
+        {
+          "title": "NVD — CVE-2026-81889",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81889"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Studio-42/elFinder/security/advisories/GHSA-8x3q-jpjh-qh5c"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-npm-cve-2026-59724",
+      "slug": "2026-08-npm-cve-2026-59724",
+      "url": "https://www.patchbrief.org/items/2026-08-npm-cve-2026-59724.html",
+      "date": "2026-08-31",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Socket.IO: Engine.IO WebTransport SID DoS",
+      "summary": "Socket.IO: Engine.IO WebTransport SID DoS",
+      "vendor": "npm",
+      "product": "engine.io",
+      "cve": "CVE-2026-59724",
+      "operator_check": "Check whether engine.io is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 47%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for engine.io. Prioritize it with other application dependency updates, especially because EPSS places it in the 47% percentile.",
+      "tags": [
+        "cve-2026-59724",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gr94-w7qr-f4j3",
+          "url": "https://github.com/advisories/GHSA-gr94-w7qr-f4j3"
+        },
+        {
+          "title": "NVD — CVE-2026-59724",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59724"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/socketio/socket.io/security/advisories/GHSA-gr94-w7qr-f4j3"
+        }
+      ]
+    },
     {
       "id": "2026-08-papercut-cve-2026-81578",
       "slug": "2026-08-papercut-cve-2026-81578",

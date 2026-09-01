@@ -1,0 +1,37 @@
+id: 2026-09-a-vu-456290
+slug: 2026-09-a-vu-456290
+external_id: VU-456290
+source: cert_vu
+date: '2026-09-01'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#456290: Hugging Face Transformers library writes remote code to disk prior
+  to consent check'
+summary: Overview A vulnerability in the Hugging Face Transformers library (versions
+  4.49.0 through 5.8.1) allows remote, attacker‑controlled Python files to be written
+  to the local disk without user authorization. The library performs a remote module
+  fetch and local cache write before evaluating the trust_remote_code consent prompt,
+  violating the security contract enforced across other dynamic module-loading paths
+  in the library. Description Hugging Face Transformers serves as a primary framework
+  for defining and operating modern machine learning models including NLP, computer
+  vision, audio, video, and multimodal systems, for both training and inference. As
+  detailed in CVE‑2026‑80047 , affected versions (4.49.0 through 5.8.1) implement
+  GenerativePreTrainedModel.load_custom_generate() such that the library fetches and
+  caches a remote Python...
+vendor: A
+product: vulnerability in the Hugging Face Transformers library (
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for vulnerability in the Hugging Face Transformers library ( where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#456290
+  url: https://kb.cert.org/vuls/id/456290
+tags:
+- vu-456290
+- coordinated-disclosure
+- a
+- cert-vu
+is_sample: false
