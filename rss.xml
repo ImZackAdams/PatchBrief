@@ -4,8 +4,183 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Thu, 03 Sep 2026 13:18:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 13:11:24 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>VU#889462: Casdoor authentication server is vulnerable to authorization bypass</title>
+      <link>https://www.patchbrief.org/items/2026-09-casdoor-vu-889462.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-casdoor-vu-889462.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Overview Casdoor is an open-source Access Management (IAM) platform used to manage web applications. An authorization bypass vulnerability affects Casdoor versions 3.115.0 and earlier. The vulnerability allows a non-global organization administrator to perform unauthorized administrative actions against arbitrary organizations by exploiting inconsistent object resolution between the authorization layer and downstream controllers. In multi-tenant deployments, an attacker with administrative privileges within a single organization can bypass tenant isolation and perform administrative operations against other organizations. Description CVE-2026-15630. The vulnerability stems from a desynchronization between authorization and action in multiple POST /api/{add,delete}- endpoints (e.g., /api/add-user, /api/delete-user, /api/add-permission)... Related CVEs: CVE-2026-15630.</description>
+    </item>
+    <item>
+      <title>SiYuan: Cross-boundary content disclosure via getBacklinkDoc/getBackmentionDoc (publish mode): reader-reachable rende...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-68586.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-68586.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Cross-boundary content disclosure via getBacklinkDoc/getBackmentionDoc (publish mode): reader-reachable rendered DOM of publish-forbidden docs; sibling list endpoints are filtered</description>
+    </item>
+    <item>
+      <title>SiYuan: Full-content disclosure of publish-disabled documents via getHeading*Transaction endpoints (publish mode): re...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-68587.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-68587.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Full-content disclosure of publish-disabled documents via getHeading*Transaction endpoints (publish mode): reader-reachable rendered DOM with no publish-access check</description>
+    </item>
+    <item>
+      <title>SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reac...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-69083.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-69083.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reachable raw SQL (method 2) and unescaped REGEXP (method 3) on read-write asset-content DB</description>
+    </item>
+    <item>
+      <title>SiYuan: Unauthenticated arbitrary SQL execution via searchEmbedBlock (publish mode) : reader-reachable raw statement ...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-69084.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-69084.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Unauthenticated arbitrary SQL execution via searchEmbedBlock (publish mode) : reader-reachable raw statement on read-write handle, cross-notebook read/write</description>
+    </item>
+    <item>
+      <title>SiYuan: Path Traversal via unvalidated avID in RenderAttributeView/AV read endpoints : reader-reachable cross-scope a...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-69086.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-69086.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Path Traversal via unvalidated avID in RenderAttributeView/AV read endpoints : reader-reachable cross-scope attribute-view disclosure</description>
+    </item>
+    <item>
+      <title>SiYuan: Encrypted-notebook key-derivation material and wrapped notebook keys disclosed to anonymous readers, enabling...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72801.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72801.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Encrypted-notebook key-derivation material and wrapped notebook keys disclosed to anonymous readers, enabling offline master-password cracking</description>
+    </item>
+    <item>
+      <title>SiYuan: Graph endpoints omit the publish-password tier: anonymous readers receive block-level content of password-pro...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72804.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72804.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Graph endpoints omit the publish-password tier: anonymous readers receive block-level content of password-protected documents</description>
+    </item>
+    <item>
+      <title>SiYuan: Second-order SSTI to arbitrary SQL via attribute-view template column (queryBlocks): malicious imported packa...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72807.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72807.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Second-order SSTI to arbitrary SQL via attribute-view template column (queryBlocks): malicious imported package executes SQL on victim kernel</description>
+    </item>
+    <item>
+      <title>SiYuan: Localhost-trust admin bypass on auth-code-gated endpoints, with potential remote reachability via the fixed-p...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72809.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72809.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Localhost-trust admin bypass on auth-code-gated endpoints, with potential remote reachability via the fixed-port proxy</description>
+    </item>
+    <item>
+      <title>SiYuan: Publish-boundary bypass via WebSocket broadcast: anonymous readers receive a live unfiltered feed of all edit...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72810.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72810.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Publish-boundary bypass via WebSocket broadcast: anonymous readers receive a live unfiltered feed of all edits including protected/forbidden documents (publish mode)</description>
+    </item>
+    <item>
+      <title>SiYuan: SQL injection in backlink/mention search via unescaped stored and client input (publish mode): first-order (c...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72811.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72811.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: SQL injection in backlink/mention search via unescaped stored and client input (publish mode): first-order (client keyword) and second-order (stored document title) breakout on read-write handle</description>
+    </item>
+    <item>
+      <title>SiYuan: Anonymous publish-password authentication bypass via getHeadingChildrenDOM / getHeading*Transaction / getBack...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-ghsa-7j72-f6wg-cxw6.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-ghsa-7j72-f6wg-cxw6.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Anonymous publish-password authentication bypass via getHeadingChildrenDOM / getHeading*Transaction / getBacklinkDoc (publish mode)</description>
+    </item>
+    <item>
+      <title>Orval: RCE via OpenAPI path -&gt; unescaped request-URL template literal (backtick breakout)</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-62681.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-62681.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Orval: RCE via OpenAPI path -&gt; unescaped request-URL template literal (backtick breakout)</description>
+    </item>
+    <item>
+      <title>Orval: RCE via servers[].url -&gt; unescaped request-URL template literal (with getBaseUrlFromSpecification)</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-62682.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-62682.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Orval: RCE via servers[].url -&gt; unescaped request-URL template literal (with getBaseUrlFromSpecification)</description>
+    </item>
+    <item>
+      <title>toml-node: Prototype Pollution Leads to `Object.prototype` Corruption via `__proto__` Key-Path Desynchronization</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-63376.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-63376.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>toml-node: Prototype Pollution Leads to `Object.prototype` Corruption via `__proto__` Key-Path Desynchronization</description>
+    </item>
+    <item>
+      <title>Orval: Import-time RCE via header parameter name -&gt; computed-property-key injection in the zod client</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-71864.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-71864.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Orval: Import-time RCE via header parameter name -&gt; computed-property-key injection in the zod client</description>
+    </item>
+    <item>
+      <title>Orval: Import-time RCE via query parameter name -&gt; computed-property-key injection in the zod cli</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-71865.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-71865.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Orval: Import-time RCE via query parameter name -&gt; computed-property-key injection in the zod cli</description>
+    </item>
+    <item>
+      <title>Orval: RCE via schema property name -&gt; computed-property-key injection in the MSW mock generator</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-71867.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-71867.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Orval: RCE via schema property name -&gt; computed-property-key injection in the MSW mock generator</description>
+    </item>
+    <item>
+      <title>Orval: Import-time RCE via enum-typed default -&gt; zod module-level template literal</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-71868.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-71868.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Orval: Import-time RCE via enum-typed default -&gt; zod module-level template literal</description>
+    </item>
+    <item>
+      <title>Orval: Import-time RCE via array-items default -&gt; zod module-level template literal</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-71869.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-71869.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Orval: Import-time RCE via array-items default -&gt; zod module-level template literal</description>
+    </item>
+    <item>
+      <title>Orval: Import-time RCE via header-parameter default -&gt; zod module-level template literal</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-71871.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-71871.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Orval: Import-time RCE via header-parameter default -&gt; zod module-level template literal</description>
+    </item>
+    <item>
+      <title>Orval: Import-time RCE via schema default -&gt; zod module-level template literal</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-72717.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-72717.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Orval: Import-time RCE via schema default -&gt; zod module-level template literal</description>
+    </item>
+    <item>
+      <title>toml-node: Uncontrolled Recursion</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-77465.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-77465.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>toml-node: Uncontrolled Recursion</description>
+    </item>
+    <item>
+      <title>unstructured: Server-Side Request Forgery in the URL-based partitioning</title>
+      <link>https://www.patchbrief.org/items/2026-09-pypi-cve-2026-71428.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-pypi-cve-2026-71428.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>unstructured: Server-Side Request Forgery in the URL-based partitioning</description>
+    </item>
     <item>
       <title>WWBN AVideo — CVE-2026-85154 (Critical)</title>
       <link>https://www.patchbrief.org/items/2026-09-wwbn-cve-2026-85154.html</link>
@@ -313,6 +488,41 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-84304.html</guid>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
       <description>gRPC-Go: Heap Memory Exhaustion (OOM) via HTTP/2 DATA Frame Fragmentation</description>
+    </item>
+    <item>
+      <title>Mozilla Firefox Mobile — CVE-2026-84135 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84135.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84135.html</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Other issue in Firefox Focus for Android. This vulnerability was fixed in Firefox 155.</description>
+    </item>
+    <item>
+      <title>Mozilla Firefox — CVE-2026-84140 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84140.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84140.html</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Site isolation issue in the DOM: Navigation component. This vulnerability was fixed in Firefox 155, Firefox ESR 153.2, Thunderbird 155, and Thunderbird 153.2.</description>
+    </item>
+    <item>
+      <title>Mozilla Firefox — CVE-2026-84141 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84141.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84141.html</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Integer overflow in the Graphics: ImageLib component. This vulnerability was fixed in Firefox 155, Firefox ESR 153.2, Thunderbird 155, and Thunderbird 153.2.</description>
+    </item>
+    <item>
+      <title>Mozilla Firefox — CVE-2026-84142 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84142.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84142.html</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Internally found bugs present in Thunderbird 154. Some of these bugs showed evidence of memory corruption or another security-relevant defect and we presume that with enough effort some of these could have been exploited. This vulnerability was fixed in Firefox 155 and Thunderbird 155.</description>
+    </item>
+    <item>
+      <title>Mozilla Firefox — CVE-2026-84143 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84143.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-mozilla-cve-2026-84143.html</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Internally found bugs present in Thunderbird 154, Thunderbird ESR 153.1 and Thunderbird ESR 140.14. Some of these bugs showed evidence of memory corruption or another security-relevant defect and we presume that with enough effort some of these could have been exploited. This vulnerability was fixed in Firefox 155, Firefox ESR 140.15, Firefox ESR 153.2, Thunderbird 155, Thunderbird 140.15, and Thunderbird 153.2.</description>
     </item>
     <item>
       <title>nanoid: Integer Overflow or Wraparound</title>

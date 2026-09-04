@@ -239,10 +239,560 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1356 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1386 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#889462: Casdoor authentication server is vulnerable to authorization bypass" data-vendor="Casdoor">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-casdoor-vu-889462.html">VU#889462: Casdoor authentication server is vulnerable to authorization bypass</a>
+              </h2>
+              <p class="feed-vendor">Casdoor · authentication server</p>
+              <p class="feed-summary">Overview Casdoor is an open-source Access Management (IAM) platform used to manage web applications. An authorization bypass vulnerability affects Casdoor versions 3.115.0 and earlier. The vulnerability allows a non-global organization administrator to perform unauthorized administrative actions against arbitrary organizations by exploiting inconsistent object resolution between the authorization layer and downstream controllers. In multi-tenant deployments, an attacker with administrative privileges within a single organization can bypass tenant isolation and perform administrative operations against other organizations. Description CVE-2026-15630. The vulnerability stems from a desynchronization between authorization and action in multiple POST /api/{add,delete}- endpoints (e.g., /api/add-user, /api/delete-user, /api/add-permission)... Related CVEs: CVE-2026-15630.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for authentication server where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/889462">CERT/CC Vulnerability Note VU#889462</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-casdoor-vu-889462.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Cross-boundary content disclosure via getBacklinkDoc/getBackmentionDoc (publish mode): reader-reachable rende..." data-vendor="Go" data-cve="CVE-2026-68586">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-68586</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-68586.html">SiYuan: Cross-boundary content disclosure via getBacklinkDoc/getBackmentionDoc (publish mode): reader-reachable rende...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Cross-boundary content disclosure via getBacklinkDoc/getBackmentionDoc (publish mode): reader-reachable rendered DOM of publish-forbidden docs; sibling list endpoints are filtered</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 15%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-36v8-mpjm-8j5r">GitHub Advisory GHSA-36v8-mpjm-8j5r</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-68586">NVD — CVE-2026-68586</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-36v8-mpjm-8j5r">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-68586.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Full-content disclosure of publish-disabled documents via getHeading*Transaction endpoints (publish mode): re..." data-vendor="Go" data-cve="CVE-2026-68587">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-68587</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-68587.html">SiYuan: Full-content disclosure of publish-disabled documents via getHeading*Transaction endpoints (publish mode): re...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Full-content disclosure of publish-disabled documents via getHeading*Transaction endpoints (publish mode): reader-reachable rendered DOM with no publish-access check</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 16%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-69mh-gvh4-8gp7">GitHub Advisory GHSA-69mh-gvh4-8gp7</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-68587">NVD — CVE-2026-68587</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-69mh-gvh4-8gp7">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-68587.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reac..." data-vendor="Go" data-cve="CVE-2026-69083">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69083</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-69083.html">SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reac...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reachable raw SQL (method 2) and unescaped REGEXP (method 3) on read-write asset-content DB</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 28%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-fph3-ghq9-vw66">GitHub Advisory GHSA-fph3-ghq9-vw66</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69083">NVD — CVE-2026-69083</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-fph3-ghq9-vw66">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-69083.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Unauthenticated arbitrary SQL execution via searchEmbedBlock (publish mode) : reader-reachable raw statement ..." data-vendor="Go" data-cve="CVE-2026-69084">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69084</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-69084.html">SiYuan: Unauthenticated arbitrary SQL execution via searchEmbedBlock (publish mode) : reader-reachable raw statement ...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Unauthenticated arbitrary SQL execution via searchEmbedBlock (publish mode) : reader-reachable raw statement on read-write handle, cross-notebook read/write</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 1.1%; percentile: 64%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-vh22-h7hf-www7">GitHub Advisory GHSA-vh22-h7hf-www7</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69084">NVD — CVE-2026-69084</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-vh22-h7hf-www7">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-69084.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Path Traversal via unvalidated avID in RenderAttributeView/AV read endpoints : reader-reachable cross-scope a..." data-vendor="Go" data-cve="CVE-2026-69086">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69086</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-69086.html">SiYuan: Path Traversal via unvalidated avID in RenderAttributeView/AV read endpoints : reader-reachable cross-scope a...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Path Traversal via unvalidated avID in RenderAttributeView/AV read endpoints : reader-reachable cross-scope attribute-view disclosure</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 28%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-7hm9-v7vf-7g4w">GitHub Advisory GHSA-7hm9-v7vf-7g4w</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69086">NVD — CVE-2026-69086</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-7hm9-v7vf-7g4w">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-69086.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Encrypted-notebook key-derivation material and wrapped notebook keys disclosed to anonymous readers, enabling..." data-vendor="Go" data-cve="CVE-2026-72801">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-72801</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-72801.html">SiYuan: Encrypted-notebook key-derivation material and wrapped notebook keys disclosed to anonymous readers, enabling...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Encrypted-notebook key-derivation material and wrapped notebook keys disclosed to anonymous readers, enabling offline master-password cracking</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 15%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-8x84-r2ff-h8pq">GitHub Advisory GHSA-8x84-r2ff-h8pq</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-72801">NVD — CVE-2026-72801</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-8x84-r2ff-h8pq">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-72801.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Graph endpoints omit the publish-password tier: anonymous readers receive block-level content of password-pro..." data-vendor="Go" data-cve="CVE-2026-72804">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-72804</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-72804.html">SiYuan: Graph endpoints omit the publish-password tier: anonymous readers receive block-level content of password-pro...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Graph endpoints omit the publish-password tier: anonymous readers receive block-level content of password-protected documents</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 17%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-vpjw-wf5h-cgpq">GitHub Advisory GHSA-vpjw-wf5h-cgpq</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-72804">NVD — CVE-2026-72804</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-vpjw-wf5h-cgpq">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-72804.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Second-order SSTI to arbitrary SQL via attribute-view template column (queryBlocks): malicious imported packa..." data-vendor="Go" data-cve="CVE-2026-72807">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-72807</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-72807.html">SiYuan: Second-order SSTI to arbitrary SQL via attribute-view template column (queryBlocks): malicious imported packa...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Second-order SSTI to arbitrary SQL via attribute-view template column (queryBlocks): malicious imported package executes SQL on victim kernel</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 10%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-x67c-8pwr-m8g3">GitHub Advisory GHSA-x67c-8pwr-m8g3</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-72807">NVD — CVE-2026-72807</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-x67c-8pwr-m8g3">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-72807.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Localhost-trust admin bypass on auth-code-gated endpoints, with potential remote reachability via the fixed-p..." data-vendor="Go" data-cve="CVE-2026-72809">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-72809</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-72809.html">SiYuan: Localhost-trust admin bypass on auth-code-gated endpoints, with potential remote reachability via the fixed-p...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Localhost-trust admin bypass on auth-code-gated endpoints, with potential remote reachability via the fixed-port proxy</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 11%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-3mp7-4rh5-jrv9">GitHub Advisory GHSA-3mp7-4rh5-jrv9</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-72809">NVD — CVE-2026-72809</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-3mp7-4rh5-jrv9">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-72809.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Publish-boundary bypass via WebSocket broadcast: anonymous readers receive a live unfiltered feed of all edit..." data-vendor="Go" data-cve="CVE-2026-72810">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-72810</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-72810.html">SiYuan: Publish-boundary bypass via WebSocket broadcast: anonymous readers receive a live unfiltered feed of all edit...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Publish-boundary bypass via WebSocket broadcast: anonymous readers receive a live unfiltered feed of all edits including protected/forbidden documents (publish mode)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 24%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-mw8r-mw84-88v2">GitHub Advisory GHSA-mw8r-mw84-88v2</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-72810">NVD — CVE-2026-72810</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-mw8r-mw84-88v2">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-72810.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: SQL injection in backlink/mention search via unescaped stored and client input (publish mode): first-order (c..." data-vendor="Go" data-cve="CVE-2026-72811">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-72811</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-72811.html">SiYuan: SQL injection in backlink/mention search via unescaped stored and client input (publish mode): first-order (c...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: SQL injection in backlink/mention search via unescaped stored and client input (publish mode): first-order (client keyword) and second-order (stored document title) breakout on read-write handle</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 16%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-q2vg-7qgx-x5fc">GitHub Advisory GHSA-q2vg-7qgx-x5fc</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-72811">NVD — CVE-2026-72811</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-q2vg-7qgx-x5fc">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-72811.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Anonymous publish-password authentication bypass via getHeadingChildrenDOM / getHeading*Transaction / getBack..." data-vendor="Go">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-ghsa-7j72-f6wg-cxw6.html">SiYuan: Anonymous publish-password authentication bypass via getHeadingChildrenDOM / getHeading*Transaction / getBack...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Anonymous publish-password authentication bypass via getHeadingChildrenDOM / getHeading*Transaction / getBacklinkDoc (publish mode)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-7j72-f6wg-cxw6">GitHub Advisory GHSA-7j72-f6wg-cxw6</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-7j72-f6wg-cxw6">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-ghsa-7j72-f6wg-cxw6.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Orval: RCE via OpenAPI path -&gt; unescaped request-URL template literal (backtick breakout)" data-vendor="npm" data-cve="CVE-2026-62681">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-62681</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-62681.html">Orval: RCE via OpenAPI path -&gt; unescaped request-URL template literal (backtick breakout)</a>
+              </h2>
+              <p class="feed-vendor">npm · orval</p>
+              <p class="feed-summary">Orval: RCE via OpenAPI path -&gt; unescaped request-URL template literal (backtick breakout)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether orval is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 42%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-fg9p-mrxr-hvq7">GitHub Advisory GHSA-fg9p-mrxr-hvq7</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-62681">NVD — CVE-2026-62681</a><a href="https://github.com/orval-labs/orval/security/advisories/GHSA-fg9p-mrxr-hvq7">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-62681.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Orval: RCE via servers[].url -&gt; unescaped request-URL template literal (with getBaseUrlFromSpecification)" data-vendor="npm" data-cve="CVE-2026-62682">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-62682</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-62682.html">Orval: RCE via servers[].url -&gt; unescaped request-URL template literal (with getBaseUrlFromSpecification)</a>
+              </h2>
+              <p class="feed-vendor">npm · orval</p>
+              <p class="feed-summary">Orval: RCE via servers[].url -&gt; unescaped request-URL template literal (with getBaseUrlFromSpecification)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether orval is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 41%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-88f2-fpv8-89q2">GitHub Advisory GHSA-88f2-fpv8-89q2</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-62682">NVD — CVE-2026-62682</a><a href="https://github.com/orval-labs/orval/security/advisories/GHSA-88f2-fpv8-89q2">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-62682.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="toml-node: Prototype Pollution Leads to `Object.prototype` Corruption via `__proto__` Key-Path Desynchronization" data-vendor="npm" data-cve="CVE-2026-63376">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-63376</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-63376.html">toml-node: Prototype Pollution Leads to `Object.prototype` Corruption via `__proto__` Key-Path Desynchronization</a>
+              </h2>
+              <p class="feed-vendor">npm · toml</p>
+              <p class="feed-summary">toml-node: Prototype Pollution Leads to `Object.prototype` Corruption via `__proto__` Key-Path Desynchronization</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether toml is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-v5mp-jgw5-2x6j">GitHub Advisory GHSA-v5mp-jgw5-2x6j</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63376">NVD — CVE-2026-63376</a><a href="https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-v5mp-jgw5-2x6j">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-63376.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Orval: Import-time RCE via header parameter name -&gt; computed-property-key injection in the zod client" data-vendor="npm" data-cve="CVE-2026-71864">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-71864</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-71864.html">Orval: Import-time RCE via header parameter name -&gt; computed-property-key injection in the zod client</a>
+              </h2>
+              <p class="feed-vendor">npm · orval</p>
+              <p class="feed-summary">Orval: Import-time RCE via header parameter name -&gt; computed-property-key injection in the zod client</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether orval is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 40%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-6437-gxhq-pqv8">GitHub Advisory GHSA-6437-gxhq-pqv8</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71864">NVD — CVE-2026-71864</a><a href="https://github.com/orval-labs/orval/security/advisories/GHSA-6437-gxhq-pqv8">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-71864.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Orval: Import-time RCE via query parameter name -&gt; computed-property-key injection in the zod cli" data-vendor="npm" data-cve="CVE-2026-71865">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-71865</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-71865.html">Orval: Import-time RCE via query parameter name -&gt; computed-property-key injection in the zod cli</a>
+              </h2>
+              <p class="feed-vendor">npm · orval</p>
+              <p class="feed-summary">Orval: Import-time RCE via query parameter name -&gt; computed-property-key injection in the zod cli</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether orval is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 40%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-653q-5476-x79g">GitHub Advisory GHSA-653q-5476-x79g</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71865">NVD — CVE-2026-71865</a><a href="https://github.com/orval-labs/orval/security/advisories/GHSA-653q-5476-x79g">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-71865.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Orval: RCE via schema property name -&gt; computed-property-key injection in the MSW mock generator" data-vendor="npm" data-cve="CVE-2026-71867">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-71867</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-71867.html">Orval: RCE via schema property name -&gt; computed-property-key injection in the MSW mock generator</a>
+              </h2>
+              <p class="feed-vendor">npm · orval</p>
+              <p class="feed-summary">Orval: RCE via schema property name -&gt; computed-property-key injection in the MSW mock generator</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether orval is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 40%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-2w86-xfrc-g85r">GitHub Advisory GHSA-2w86-xfrc-g85r</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71867">NVD — CVE-2026-71867</a><a href="https://github.com/orval-labs/orval/security/advisories/GHSA-2w86-xfrc-g85r">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-71867.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Orval: Import-time RCE via enum-typed default -&gt; zod module-level template literal" data-vendor="npm" data-cve="CVE-2026-71868">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-71868</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-71868.html">Orval: Import-time RCE via enum-typed default -&gt; zod module-level template literal</a>
+              </h2>
+              <p class="feed-vendor">npm · orval</p>
+              <p class="feed-summary">Orval: Import-time RCE via enum-typed default -&gt; zod module-level template literal</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether orval is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 40%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-3575-w9fc-c2j6">GitHub Advisory GHSA-3575-w9fc-c2j6</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71868">NVD — CVE-2026-71868</a><a href="https://github.com/orval-labs/orval/security/advisories/GHSA-3575-w9fc-c2j6">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-71868.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Orval: Import-time RCE via array-items default -&gt; zod module-level template literal" data-vendor="npm" data-cve="CVE-2026-71869">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-71869</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-71869.html">Orval: Import-time RCE via array-items default -&gt; zod module-level template literal</a>
+              </h2>
+              <p class="feed-vendor">npm · orval</p>
+              <p class="feed-summary">Orval: Import-time RCE via array-items default -&gt; zod module-level template literal</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether orval is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 40%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-2h9g-j24r-h63g">GitHub Advisory GHSA-2h9g-j24r-h63g</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71869">NVD — CVE-2026-71869</a><a href="https://github.com/orval-labs/orval/security/advisories/GHSA-2h9g-j24r-h63g">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-71869.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Orval: Import-time RCE via header-parameter default -&gt; zod module-level template literal" data-vendor="npm" data-cve="CVE-2026-71871">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-71871</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-71871.html">Orval: Import-time RCE via header-parameter default -&gt; zod module-level template literal</a>
+              </h2>
+              <p class="feed-vendor">npm · orval</p>
+              <p class="feed-summary">Orval: Import-time RCE via header-parameter default -&gt; zod module-level template literal</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether orval is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 40%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-8j6p-r8jg-mxqh">GitHub Advisory GHSA-8j6p-r8jg-mxqh</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71871">NVD — CVE-2026-71871</a><a href="https://github.com/orval-labs/orval/security/advisories/GHSA-8j6p-r8jg-mxqh">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-71871.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Orval: Import-time RCE via schema default -&gt; zod module-level template literal" data-vendor="npm" data-cve="CVE-2026-72717">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-72717</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-72717.html">Orval: Import-time RCE via schema default -&gt; zod module-level template literal</a>
+              </h2>
+              <p class="feed-vendor">npm · orval</p>
+              <p class="feed-summary">Orval: Import-time RCE via schema default -&gt; zod module-level template literal</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether orval is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 44%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-w727-8j6c-2rj4">GitHub Advisory GHSA-w727-8j6c-2rj4</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-72717">NVD — CVE-2026-72717</a><a href="https://github.com/orval-labs/orval/security/advisories/GHSA-w727-8j6c-2rj4">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-72717.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="toml-node: Uncontrolled Recursion" data-vendor="npm" data-cve="CVE-2026-77465">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-77465</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-77465.html">toml-node: Uncontrolled Recursion</a>
+              </h2>
+              <p class="feed-vendor">npm · toml</p>
+              <p class="feed-summary">toml-node: Uncontrolled Recursion</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether toml is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-82x6-q7mm-w9cf">GitHub Advisory GHSA-82x6-q7mm-w9cf</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77465">NVD — CVE-2026-77465</a><a href="https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-82x6-q7mm-w9cf">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-77465.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="unstructured: Server-Side Request Forgery in the URL-based partitioning" data-vendor="PyPI" data-cve="CVE-2026-71428">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-71428</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-pypi-cve-2026-71428.html">unstructured: Server-Side Request Forgery in the URL-based partitioning</a>
+              </h2>
+              <p class="feed-vendor">PyPI · unstructured</p>
+              <p class="feed-summary">unstructured: Server-Side Request Forgery in the URL-based partitioning</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether unstructured is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 16%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7">GitHub Advisory GHSA-4mvj-m6j5-pmf7</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71428">NVD — CVE-2026-71428</a><a href="https://github.com/Unstructured-IO/unstructured/security/advisories/GHSA-4mvj-m6j5-pmf7">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-pypi-cve-2026-71428.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="WWBN AVideo — CVE-2026-85154 (Critical)" data-vendor="WWBN" data-cve="CVE-2026-85154">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -1209,6 +1759,116 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-vp52-pcj8-j9qc">GitHub Advisory GHSA-vp52-pcj8-j9qc</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-84304">NVD — CVE-2026-84304</a><a href="https://github.com/grpc/grpc-go/security/advisories/GHSA-vp52-pcj8-j9qc">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-09-go-cve-2026-84304.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Mozilla Firefox Mobile — CVE-2026-84135 (Critical)" data-vendor="Mozilla" data-cve="CVE-2026-84135">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-84135</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-mozilla-cve-2026-84135.html">Mozilla Firefox Mobile — CVE-2026-84135 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Mozilla · Firefox Mobile</p>
+              <p class="feed-summary">Other issue in Firefox Focus for Android. This vulnerability was fixed in Firefox 155.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-84135 in your asset inventory. Apply patches per vendor guidance and verify Firefox Mobile is not exposed. CVSS score: 9.8. EPSS probability: 0.1%; percentile: 3%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-84135">NVD — CVE-2026-84135</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=2046661">Source reference</a><a href="https://www.mozilla.org/security/advisories/mfsa2026-82/">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-mozilla-cve-2026-84135.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Mozilla Firefox — CVE-2026-84140 (Critical)" data-vendor="Mozilla" data-cve="CVE-2026-84140">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-84140</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-mozilla-cve-2026-84140.html">Mozilla Firefox — CVE-2026-84140 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Mozilla · Firefox</p>
+              <p class="feed-summary">Site isolation issue in the DOM: Navigation component. This vulnerability was fixed in Firefox 155, Firefox ESR 153.2, Thunderbird 155, and Thunderbird 153.2.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-84140 in your asset inventory. Apply patches per vendor guidance and verify Firefox is not exposed. CVSS score: 9.8. EPSS probability: 0.1%; percentile: 4%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-84140">NVD — CVE-2026-84140</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=2063780">Source reference</a><a href="https://www.mozilla.org/security/advisories/mfsa2026-82/">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-mozilla-cve-2026-84140.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Mozilla Firefox — CVE-2026-84141 (Critical)" data-vendor="Mozilla" data-cve="CVE-2026-84141">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-84141</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-mozilla-cve-2026-84141.html">Mozilla Firefox — CVE-2026-84141 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Mozilla · Firefox</p>
+              <p class="feed-summary">Integer overflow in the Graphics: ImageLib component. This vulnerability was fixed in Firefox 155, Firefox ESR 153.2, Thunderbird 155, and Thunderbird 153.2.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-84141 in your asset inventory. Apply patches per vendor guidance and verify Firefox is not exposed. CVSS score: 9.8. EPSS probability: 0.1%; percentile: 4%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-84141">NVD — CVE-2026-84141</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=2063994">Source reference</a><a href="https://www.mozilla.org/security/advisories/mfsa2026-82/">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-mozilla-cve-2026-84141.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Mozilla Firefox — CVE-2026-84142 (Critical)" data-vendor="Mozilla" data-cve="CVE-2026-84142">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-84142</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-mozilla-cve-2026-84142.html">Mozilla Firefox — CVE-2026-84142 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Mozilla · Firefox</p>
+              <p class="feed-summary">Internally found bugs present in Thunderbird 154. Some of these bugs showed evidence of memory corruption or another security-relevant defect and we presume that with enough effort some of these could have been exploited. This vulnerability was fixed in Firefox 155 and Thunderbird 155.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-84142 in your asset inventory. Apply patches per vendor guidance and verify Firefox is not exposed. CVSS score: 9.8. EPSS probability: 0.1%; percentile: 4%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-84142">NVD — CVE-2026-84142</a><a href="https://bugzilla.mozilla.org/buglist.cgi?bug_id=2029421%2C2040889%2C2045313%2C2045435%2C2053578%2C2058621%2C2058626">Source reference</a><a href="https://bugzilla.mozilla.org/buglist.cgi?bug_id=2048796%2C2053150%2C2057356">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-mozilla-cve-2026-84142.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Mozilla Firefox — CVE-2026-84143 (Critical)" data-vendor="Mozilla" data-cve="CVE-2026-84143">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-84143</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-mozilla-cve-2026-84143.html">Mozilla Firefox — CVE-2026-84143 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Mozilla · Firefox</p>
+              <p class="feed-summary">Internally found bugs present in Thunderbird 154, Thunderbird ESR 153.1 and Thunderbird ESR 140.14. Some of these bugs showed evidence of memory corruption or another security-relevant defect and we presume that with enough effort some of these could have been exploited. This vulnerability was fixed in Firefox 155, Firefox ESR 140.15, Firefox ESR 153.2, Thunderbird 155, Thunderbird 140.15, and Thunderbird 153.2.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-84143 in your asset inventory. Apply patches per vendor guidance and verify Firefox is not exposed. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 6%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-84143">NVD — CVE-2026-84143</a><a href="https://bugzilla.mozilla.org/buglist.cgi?bug_id=2048793%2C2054645%2C2057114%2C2059109%2C2061287">Source reference</a><a href="https://bugzilla.mozilla.org/buglist.cgi?bug_id=2054631%2C2054657%2C2055007%2C2055681%2C2057107%2C2058087%2C2058088%2C2058090%2C2058095%2C2058101%2C2059183%2C2059185%2C2061301%2C2061325">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-mozilla-cve-2026-84143.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="nanoid: Integer Overflow or Wraparound" data-vendor="npm" data-cve="CVE-2026-73086">

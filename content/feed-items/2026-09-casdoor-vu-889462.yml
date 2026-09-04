@@ -1,0 +1,36 @@
+id: 2026-09-casdoor-vu-889462
+slug: 2026-09-casdoor-vu-889462
+external_id: VU-889462
+source: cert_vu
+date: '2026-09-03'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#889462: Casdoor authentication server is vulnerable to authorization bypass'
+summary: 'Overview Casdoor is an open-source Access Management (IAM) platform used
+  to manage web applications. An authorization bypass vulnerability affects Casdoor
+  versions 3.115.0 and earlier. The vulnerability allows a non-global organization
+  administrator to perform unauthorized administrative actions against arbitrary organizations
+  by exploiting inconsistent object resolution between the authorization layer and
+  downstream controllers. In multi-tenant deployments, an attacker with administrative
+  privileges within a single organization can bypass tenant isolation and perform
+  administrative operations against other organizations. Description CVE-2026-15630.
+  The vulnerability stems from a desynchronization between authorization and action
+  in multiple POST /api/{add,delete}- endpoints (e.g., /api/add-user, /api/delete-user,
+  /api/add-permission)... Related CVEs: CVE-2026-15630.'
+vendor: Casdoor
+product: authentication server
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for authentication server where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#889462
+  url: https://kb.cert.org/vuls/id/889462
+tags:
+- vu-889462
+- coordinated-disclosure
+- casdoor
+- cert-vu
+is_sample: false
