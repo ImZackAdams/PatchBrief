@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-04T13:11:24Z",
-  "total_items": 1386,
+  "generated": "2026-09-05T12:25:54Z",
+  "total_items": 1400,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-04T13:11:24Z",
+    "generated": "2026-09-05T12:25:54Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 7,
-        "started_at": "2026-09-04T13:11:12Z",
-        "finished_at": "2026-09-04T13:11:12Z"
+        "items_seen": 8,
+        "started_at": "2026-09-05T12:25:41Z",
+        "finished_at": "2026-09-05T12:25:42Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-04T13:11:12Z",
-        "finished_at": "2026-09-04T13:11:12Z"
+        "started_at": "2026-09-05T12:25:42Z",
+        "finished_at": "2026-09-05T12:25:42Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 6,
-        "started_at": "2026-09-04T13:11:12Z",
-        "finished_at": "2026-09-04T13:11:19Z"
+        "items_seen": 1,
+        "started_at": "2026-09-05T12:25:42Z",
+        "finished_at": "2026-09-05T12:25:49Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-09-04T13:11:19Z",
-        "finished_at": "2026-09-04T13:11:20Z"
+        "started_at": "2026-09-05T12:25:49Z",
+        "finished_at": "2026-09-05T12:25:50Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-09-04T13:11:20Z",
-        "finished_at": "2026-09-04T13:11:20Z"
+        "items_seen": 1,
+        "started_at": "2026-09-05T12:25:50Z",
+        "finished_at": "2026-09-05T12:25:51Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,503 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-04T13:11:20Z",
-        "finished_at": "2026-09-04T13:11:21Z"
+        "started_at": "2026-09-05T12:25:51Z",
+        "finished_at": "2026-09-05T12:25:52Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 39,
-        "started_at": "2026-09-04T13:11:21Z",
-        "finished_at": "2026-09-04T13:11:21Z"
+        "items_seen": 37,
+        "started_at": "2026-09-05T12:25:52Z",
+        "finished_at": "2026-09-05T12:25:52Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-go-cve-2026-72793",
+      "slug": "2026-09-go-cve-2026-72793",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-72793.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SiYuan: Non-administrator responses from /api/system/getConf omit three secrets that the configuration-export path ex...",
+      "summary": "SiYuan: Non-administrator responses from /api/system/getConf omit three secrets that the configuration-export path explicitly strips, disclosing the session-cookie signing key and the OS username to anonymous readers",
+      "vendor": "Go",
+      "product": "github.com/siyuan-note/siyuan/kernel",
+      "cve": "CVE-2026-72793",
+      "operator_check": "Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/siyuan-note/siyuan/kernel. Prioritize it with other application dependency updates, especially because EPSS places it in the 15% percentile.",
+      "tags": [
+        "cve-2026-72793",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h4v5-crx2-3cv4",
+          "url": "https://github.com/advisories/GHSA-h4v5-crx2-3cv4"
+        },
+        {
+          "title": "NVD — CVE-2026-72793",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72793"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-h4v5-crx2-3cv4"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-72794",
+      "slug": "2026-09-go-cve-2026-72794",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-72794.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SiYuan: The session-cookie signing key (Conf.CookieKey) is returned to anonymous readers by /api/system/getConf",
+      "summary": "SiYuan: The session-cookie signing key (Conf.CookieKey) is returned to anonymous readers by /api/system/getConf",
+      "vendor": "Go",
+      "product": "github.com/siyuan-note/siyuan/kernel",
+      "cve": "CVE-2026-72794",
+      "operator_check": "Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/siyuan-note/siyuan/kernel. Prioritize it with other application dependency updates, especially because EPSS places it in the 16% percentile.",
+      "tags": [
+        "cve-2026-72794",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-34fj-mwm6-fjfg",
+          "url": "https://github.com/advisories/GHSA-34fj-mwm6-fjfg"
+        },
+        {
+          "title": "NVD — CVE-2026-72794",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72794"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-34fj-mwm6-fjfg"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-72795",
+      "slug": "2026-09-go-cve-2026-72795",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-72795.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SiYuan: Embedded (transclusion) block content is returned without publish-access filtering, leaking private and passw...",
+      "summary": "SiYuan: Embedded (transclusion) block content is returned without publish-access filtering, leaking private and password-protected document content to anonymous readers",
+      "vendor": "Go",
+      "product": "github.com/siyuan-note/siyuan/kernel",
+      "cve": "CVE-2026-72795",
+      "operator_check": "Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/siyuan-note/siyuan/kernel. Prioritize it with other application dependency updates, especially because EPSS places it in the 15% percentile.",
+      "tags": [
+        "cve-2026-72795",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h6w7-xxcf-w2mq",
+          "url": "https://github.com/advisories/GHSA-h6w7-xxcf-w2mq"
+        },
+        {
+          "title": "NVD — CVE-2026-72795",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72795"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-h6w7-xxcf-w2mq"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-72798",
+      "slug": "2026-09-go-cve-2026-72798",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-72798.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SiYuan: Publish-access filter on renderAttributeView leaves related-database content unfiltered and fails open on non...",
+      "summary": "SiYuan: Publish-access filter on renderAttributeView leaves related-database content unfiltered and fails open on non-block first columns",
+      "vendor": "Go",
+      "product": "github.com/siyuan-note/siyuan/kernel",
+      "cve": "CVE-2026-72798",
+      "operator_check": "Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/siyuan-note/siyuan/kernel. Prioritize it with other application dependency updates, especially because EPSS places it in the 17% percentile.",
+      "tags": [
+        "cve-2026-72798",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mfrj-v65r-979c",
+          "url": "https://github.com/advisories/GHSA-mfrj-v65r-979c"
+        },
+        {
+          "title": "NVD — CVE-2026-72798",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72798"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-mfrj-v65r-979c"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-73842",
+      "slug": "2026-09-go-cve-2026-73842",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-73842.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenChoreo: cluster-gateway internal proxy performs no caller authentication and is not read-only — data-plane Secret...",
+      "summary": "OpenChoreo: cluster-gateway internal proxy performs no caller authentication and is not read-only — data-plane Secret disclosure and arbitrary Kubernetes mutation",
+      "vendor": "Go",
+      "product": "github.com/openchoreo/openchoreo",
+      "cve": "CVE-2026-73842",
+      "operator_check": "Check whether github.com/openchoreo/openchoreo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 8%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/openchoreo/openchoreo. Prioritize it with other application dependency updates, especially because EPSS places it in the 8% percentile.",
+      "tags": [
+        "cve-2026-73842",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rh53-xvx2-j327",
+          "url": "https://github.com/advisories/GHSA-rh53-xvx2-j327"
+        },
+        {
+          "title": "NVD — CVE-2026-73842",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73842"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/openchoreo/openchoreo/security/advisories/GHSA-rh53-xvx2-j327"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-google-cve-2026-85046",
+      "slug": "2026-09-google-cve-2026-85046",
+      "url": "https://www.patchbrief.org/items/2026-09-google-cve-2026-85046.html",
+      "date": "2026-09-04",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Google Chromium V8 Type Confusion Vulnerability",
+      "summary": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+      "vendor": "Google",
+      "product": "Chromium V8",
+      "cve": "CVE-2026-85046",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-85046 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-18. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-85046",
+        "kev",
+        "google",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-85046",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85046"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-ghsa-7q9c-hpx7-9cwm",
+      "slug": "2026-09-npm-ghsa-7q9c-hpx7-9cwm",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-ghsa-7q9c-hpx7-9cwm.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "TypeSpec: Unauthenticated Remote Shutdown of Spector Mock Server via POST /.admin/stop",
+      "summary": "TypeSpec: Unauthenticated Remote Shutdown of Spector Mock Server via POST /.admin/stop",
+      "vendor": "npm",
+      "product": "@typespec/spector",
+      "cve": null,
+      "operator_check": "Check whether @typespec/spector is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @typespec/spector. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-7q9c-hpx7-9cwm",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7q9c-hpx7-9cwm",
+          "url": "https://github.com/advisories/GHSA-7q9c-hpx7-9cwm"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/microsoft/typespec/security/advisories/GHSA-7q9c-hpx7-9cwm"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-63735",
+      "slug": "2026-09-rust-cve-2026-63735",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-63735.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SurrealDB: Custom API route lets authenticated callers override namespace/database scope via URL path",
+      "summary": "SurrealDB: Custom API route lets authenticated callers override namespace/database scope via URL path",
+      "vendor": "Rust",
+      "product": "surrealdb",
+      "cve": "CVE-2026-63735",
+      "operator_check": "Check whether surrealdb is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for surrealdb. Prioritize it with other application dependency updates, especially because EPSS places it in the 30% percentile.",
+      "tags": [
+        "cve-2026-63735",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-848m-r628-vrxw",
+          "url": "https://github.com/advisories/GHSA-848m-r628-vrxw"
+        },
+        {
+          "title": "NVD — CVE-2026-63735",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63735"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/surrealdb/surrealdb/security/advisories/GHSA-848m-r628-vrxw"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-75856",
+      "slug": "2026-09-rust-cve-2026-75856",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75856.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning",
+      "summary": "CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning",
+      "vendor": "Rust",
+      "product": "deepseek-tui",
+      "cve": "CVE-2026-75856",
+      "operator_check": "Check whether deepseek-tui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for deepseek-tui. Prioritize it with other application dependency updates, especially because EPSS places it in the 30% percentile.",
+      "tags": [
+        "cve-2026-75856",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6v2g-fpxh-pmmh",
+          "url": "https://github.com/advisories/GHSA-6v2g-fpxh-pmmh"
+        },
+        {
+          "title": "NVD — CVE-2026-75856",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75856"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-6v2g-fpxh-pmmh"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-75858",
+      "slug": "2026-09-rust-cve-2026-75858",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75858.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE)",
+      "summary": "CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE)",
+      "vendor": "Rust",
+      "product": "deepseek-tui",
+      "cve": "CVE-2026-75858",
+      "operator_check": "Check whether deepseek-tui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.5. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for deepseek-tui. Prioritize it with other application dependency updates, especially because EPSS places it in the 19% percentile.",
+      "tags": [
+        "cve-2026-75858",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wrj3-vj8c-784f",
+          "url": "https://github.com/advisories/GHSA-wrj3-vj8c-784f"
+        },
+        {
+          "title": "NVD — CVE-2026-75858",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75858"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-wrj3-vj8c-784f"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-75911",
+      "slug": "2026-09-rust-cve-2026-75911",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75911.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository",
+      "summary": "CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository",
+      "vendor": "Rust",
+      "product": "deepseek-tui",
+      "cve": "CVE-2026-75911",
+      "operator_check": "Check whether deepseek-tui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.5. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for deepseek-tui. Prioritize it with other application dependency updates, especially because EPSS places it in the 7% percentile.",
+      "tags": [
+        "cve-2026-75911",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gx45-xrj5-g6c4",
+          "url": "https://github.com/advisories/GHSA-gx45-xrj5-g6c4"
+        },
+        {
+          "title": "NVD — CVE-2026-75911",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75911"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-gx45-xrj5-g6c4"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-75912",
+      "slug": "2026-09-rust-cve-2026-75912",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75912.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval",
+      "summary": "CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval",
+      "vendor": "Rust",
+      "product": "deepseek-tui",
+      "cve": "CVE-2026-75912",
+      "operator_check": "Check whether deepseek-tui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3. EPSS probability: 0.3%; percentile: 25%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for deepseek-tui. Prioritize it with other application dependency updates, especially because EPSS places it in the 25% percentile.",
+      "tags": [
+        "cve-2026-75912",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c6mw-8xh8-gpq6",
+          "url": "https://github.com/advisories/GHSA-c6mw-8xh8-gpq6"
+        },
+        {
+          "title": "NVD — CVE-2026-75912",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75912"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-c6mw-8xh8-gpq6"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-75915",
+      "slug": "2026-09-rust-cve-2026-75915",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75915.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CodeWhale: js_execution leaks parent environment to model context via missing env scrub",
+      "summary": "CodeWhale: js_execution leaks parent environment to model context via missing env scrub",
+      "vendor": "Rust",
+      "product": "deepseek-tui",
+      "cve": "CVE-2026-75915",
+      "operator_check": "Check whether deepseek-tui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 41%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for deepseek-tui. Prioritize it with other application dependency updates, especially because EPSS places it in the 41% percentile.",
+      "tags": [
+        "cve-2026-75915",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h539-c7r8-3xq4",
+          "url": "https://github.com/advisories/GHSA-h539-c7r8-3xq4"
+        },
+        {
+          "title": "NVD — CVE-2026-75915",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75915"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-h539-c7r8-3xq4"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-ten-cve-2026-85688",
+      "slug": "2026-09-ten-cve-2026-85688",
+      "url": "https://www.patchbrief.org/items/2026-09-ten-cve-2026-85688.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "TEN Framework 0.11.71 — CVE-2026-85688 (Critical)",
+      "summary": "TEN Framework 0.11.71 contains unauthenticated arbitrary file read and write vulnerabilities in the TMAN Designer file-content API endpoints. Attackers can submit POST and PUT requests to the /api/designer/v1/file-content endpoints to read arbitrary files or write malicious content to system paths, enabling code execution through authorized_keys, cron files, or executable graph files.",
+      "vendor": "TEN",
+      "product": "Framework 0.11.71",
+      "cve": "CVE-2026-85688",
+      "operator_check": "Review CVE-2026-85688 in your asset inventory. Apply patches per vendor guidance and verify Framework 0.11.71 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in TEN Framework 0.11.71. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-85688",
+        "vendor-advisory",
+        "ten",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-85688",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85688"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/TEN-framework/ten-framework"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/TEN-framework/ten-framework/blob/0.11.71/core/src/ten_manager/src/designer/file_content/mod.rs"
+        }
+      ]
+    },
     {
       "id": "2026-09-casdoor-vu-889462",
       "slug": "2026-09-casdoor-vu-889462",

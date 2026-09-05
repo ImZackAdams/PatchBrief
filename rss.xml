@@ -4,8 +4,106 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Fri, 04 Sep 2026 13:11:24 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 12:25:54 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>SiYuan: Non-administrator responses from /api/system/getConf omit three secrets that the configuration-export path ex...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72793.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72793.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Non-administrator responses from /api/system/getConf omit three secrets that the configuration-export path explicitly strips, disclosing the session-cookie signing key and the OS username to anonymous readers</description>
+    </item>
+    <item>
+      <title>SiYuan: The session-cookie signing key (Conf.CookieKey) is returned to anonymous readers by /api/system/getConf</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72794.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72794.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: The session-cookie signing key (Conf.CookieKey) is returned to anonymous readers by /api/system/getConf</description>
+    </item>
+    <item>
+      <title>SiYuan: Embedded (transclusion) block content is returned without publish-access filtering, leaking private and passw...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72795.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72795.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Embedded (transclusion) block content is returned without publish-access filtering, leaking private and password-protected document content to anonymous readers</description>
+    </item>
+    <item>
+      <title>SiYuan: Publish-access filter on renderAttributeView leaves related-database content unfiltered and fails open on non...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72798.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-72798.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SiYuan: Publish-access filter on renderAttributeView leaves related-database content unfiltered and fails open on non-block first columns</description>
+    </item>
+    <item>
+      <title>OpenChoreo: cluster-gateway internal proxy performs no caller authentication and is not read-only — data-plane Secret...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-73842.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-73842.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>OpenChoreo: cluster-gateway internal proxy performs no caller authentication and is not read-only — data-plane Secret disclosure and arbitrary Kubernetes mutation</description>
+    </item>
+    <item>
+      <title>Google Chromium V8 Type Confusion Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-09-google-cve-2026-85046.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-google-cve-2026-85046.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.</description>
+    </item>
+    <item>
+      <title>TypeSpec: Unauthenticated Remote Shutdown of Spector Mock Server via POST /.admin/stop</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-ghsa-7q9c-hpx7-9cwm.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-ghsa-7q9c-hpx7-9cwm.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>TypeSpec: Unauthenticated Remote Shutdown of Spector Mock Server via POST /.admin/stop</description>
+    </item>
+    <item>
+      <title>SurrealDB: Custom API route lets authenticated callers override namespace/database scope via URL path</title>
+      <link>https://www.patchbrief.org/items/2026-09-rust-cve-2026-63735.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-rust-cve-2026-63735.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>SurrealDB: Custom API route lets authenticated callers override namespace/database scope via URL path</description>
+    </item>
+    <item>
+      <title>CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning</title>
+      <link>https://www.patchbrief.org/items/2026-09-rust-cve-2026-75856.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-rust-cve-2026-75856.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning</description>
+    </item>
+    <item>
+      <title>CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE)</title>
+      <link>https://www.patchbrief.org/items/2026-09-rust-cve-2026-75858.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-rust-cve-2026-75858.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE)</description>
+    </item>
+    <item>
+      <title>CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository</title>
+      <link>https://www.patchbrief.org/items/2026-09-rust-cve-2026-75911.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-rust-cve-2026-75911.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository</description>
+    </item>
+    <item>
+      <title>CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval</title>
+      <link>https://www.patchbrief.org/items/2026-09-rust-cve-2026-75912.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-rust-cve-2026-75912.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval</description>
+    </item>
+    <item>
+      <title>CodeWhale: js_execution leaks parent environment to model context via missing env scrub</title>
+      <link>https://www.patchbrief.org/items/2026-09-rust-cve-2026-75915.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-rust-cve-2026-75915.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>CodeWhale: js_execution leaks parent environment to model context via missing env scrub</description>
+    </item>
+    <item>
+      <title>TEN Framework 0.11.71 — CVE-2026-85688 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-ten-cve-2026-85688.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-ten-cve-2026-85688.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>TEN Framework 0.11.71 contains unauthenticated arbitrary file read and write vulnerabilities in the TMAN Designer file-content API endpoints. Attackers can submit POST and PUT requests to the /api/designer/v1/file-content endpoints to read arbitrary files or write malicious content to system paths, enabling code execution through authorized_keys, cron files, or executable graph files.</description>
+    </item>
     <item>
       <title>VU#889462: Casdoor authentication server is vulnerable to authorization bypass</title>
       <link>https://www.patchbrief.org/items/2026-09-casdoor-vu-889462.html</link>
