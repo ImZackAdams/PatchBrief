@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-05T12:25:54Z",
-  "total_items": 1400,
+  "generated": "2026-09-06T12:39:41Z",
+  "total_items": 1419,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-05T12:25:54Z",
+    "generated": "2026-09-06T12:39:41Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,18 +17,18 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 8,
-        "started_at": "2026-09-05T12:25:41Z",
-        "finished_at": "2026-09-05T12:25:42Z"
+        "items_seen": 1,
+        "started_at": "2026-09-06T12:39:27Z",
+        "finished_at": "2026-09-06T12:39:27Z"
       },
       {
         "id": "msrc",
         "label": "Microsoft Security Update Guide",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-09-05T12:25:42Z",
-        "finished_at": "2026-09-05T12:25:42Z"
+        "items_seen": 15,
+        "started_at": "2026-09-06T12:39:27Z",
+        "finished_at": "2026-09-06T12:39:28Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-09-05T12:25:42Z",
-        "finished_at": "2026-09-05T12:25:49Z"
+        "started_at": "2026-09-06T12:39:28Z",
+        "finished_at": "2026-09-06T12:39:35Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-09-05T12:25:49Z",
-        "finished_at": "2026-09-05T12:25:50Z"
+        "started_at": "2026-09-06T12:39:35Z",
+        "finished_at": "2026-09-06T12:39:36Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-09-05T12:25:50Z",
-        "finished_at": "2026-09-05T12:25:51Z"
+        "started_at": "2026-09-06T12:39:36Z",
+        "finished_at": "2026-09-06T12:39:37Z"
       },
       {
         "id": "exploitdb",
@@ -63,17 +63,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-05T12:25:51Z",
-        "finished_at": "2026-09-05T12:25:52Z"
+        "started_at": "2026-09-06T12:39:37Z",
+        "finished_at": "2026-09-06T12:39:37Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 37,
-        "started_at": "2026-09-05T12:25:52Z",
-        "finished_at": "2026-09-05T12:25:52Z"
+        "items_seen": 45,
+        "started_at": "2026-09-06T12:39:37Z",
+        "finished_at": "2026-09-06T12:39:38Z"
       }
     ]
   },
@@ -386,6 +386,41 @@
       ]
     },
     {
+      "id": "2026-09-rust-cve-2026-75857",
+      "slug": "2026-09-rust-cve-2026-75857",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75857.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CodeWhale: exec_shell_interact sends LLM-controlled input to a running shell without an approval prompt (privilege es...",
+      "summary": "CodeWhale: exec_shell_interact sends LLM-controlled input to a running shell without an approval prompt (privilege escalation)",
+      "vendor": "Rust",
+      "product": "deepseek-tui",
+      "cve": "CVE-2026-75857",
+      "operator_check": "Check whether deepseek-tui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.3. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for deepseek-tui. Prioritize it with other application dependency updates, especially because EPSS places it in the 2% percentile.",
+      "tags": [
+        "cve-2026-75857",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g29h-pfmp-qp9r",
+          "url": "https://github.com/advisories/GHSA-g29h-pfmp-qp9r"
+        },
+        {
+          "title": "NVD — CVE-2026-75857",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75857"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-g29h-pfmp-qp9r"
+        }
+      ]
+    },
+    {
       "id": "2026-09-rust-cve-2026-75858",
       "slug": "2026-09-rust-cve-2026-75858",
       "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75858.html",
@@ -417,6 +452,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-wrj3-vj8c-784f"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-75859",
+      "slug": "2026-09-rust-cve-2026-75859",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75859.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CodeWhale: Project config `instructions` override enables arbitrary file read into AI system prompt via cloned reposi...",
+      "summary": "CodeWhale: Project config `instructions` override enables arbitrary file read into AI system prompt via cloned repository",
+      "vendor": "Rust",
+      "product": "deepseek-tui",
+      "cve": "CVE-2026-75859",
+      "operator_check": "Check whether deepseek-tui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 35%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for deepseek-tui. Prioritize it with other application dependency updates, especially because EPSS places it in the 35% percentile.",
+      "tags": [
+        "cve-2026-75859",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-62f5-cp2p-vq95",
+          "url": "https://github.com/advisories/GHSA-62f5-cp2p-vq95"
+        },
+        {
+          "title": "NVD — CVE-2026-75859",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75859"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-62f5-cp2p-vq95"
         }
       ]
     },
@@ -487,6 +557,76 @@
         {
           "title": "Source reference",
           "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-c6mw-8xh8-gpq6"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-75913",
+      "slug": "2026-09-rust-cve-2026-75913",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75913.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CodeWhale: Argument Injection in `git_show` Tool Allows Arbitrary File Write Without Approval",
+      "summary": "CodeWhale: Argument Injection in `git_show` Tool Allows Arbitrary File Write Without Approval",
+      "vendor": "Rust",
+      "product": "deepseek-tui",
+      "cve": "CVE-2026-75913",
+      "operator_check": "Check whether deepseek-tui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.5. EPSS probability: 0.3%; percentile: 26%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for deepseek-tui. Prioritize it with other application dependency updates, especially because EPSS places it in the 26% percentile.",
+      "tags": [
+        "cve-2026-75913",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7j5w-7r7x-9v27",
+          "url": "https://github.com/advisories/GHSA-7j5w-7r7x-9v27"
+        },
+        {
+          "title": "NVD — CVE-2026-75913",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75913"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-7j5w-7r7x-9v27"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-75914",
+      "slug": "2026-09-rust-cve-2026-75914",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-75914.html",
+      "date": "2026-09-04",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CodeWhale: image_analyze follows workspace symlinks, leaking external file bytes",
+      "summary": "CodeWhale: image_analyze follows workspace symlinks, leaking external file bytes",
+      "vendor": "Rust",
+      "product": "deepseek-tui",
+      "cve": "CVE-2026-75914",
+      "operator_check": "Check whether deepseek-tui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 35%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for deepseek-tui. Prioritize it with other application dependency updates, especially because EPSS places it in the 35% percentile.",
+      "tags": [
+        "cve-2026-75914",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w7wx-5q49-r59w",
+          "url": "https://github.com/advisories/GHSA-w7wx-5q49-r59w"
+        },
+        {
+          "title": "NVD — CVE-2026-75914",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75914"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-w7wx-5q49-r59w"
         }
       ]
     },
@@ -1000,6 +1140,495 @@
         {
           "title": "Source reference",
           "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-7j72-f6wg-cxw6"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-62906",
+      "slug": "2026-09-microsoft-cve-2026-62906",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-62906.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Discovery Studio Information Disclosure Vulnerability",
+      "summary": "Improper neutralization of special elements in data query logic in Microsoft Discovery Studio allows an unauthorized attacker to disclose information over a network. Published in September 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Discovery Studio",
+      "cve": "CVE-2026-62906",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-62906. Confirm whether Microsoft Discovery Studio is deployed, then apply the current security update or documented mitigation. CVSS score: 7.4. EPSS probability: 0.7%; percentile: 49%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 49%.",
+      "tags": [
+        "cve-2026-62906",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-62906"
+        },
+        {
+          "title": "NVD — CVE-2026-62906",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62906"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-62916",
+      "slug": "2026-09-microsoft-cve-2026-62916",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-62916.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Microsoft Entra ID Elevation of Privilege Vulnerability",
+      "summary": "Authentication bypass using an alternate path or channel in Microsoft Entra ID allows an unauthorized attacker to elevate privileges over a network. Published in September 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Entra ID",
+      "cve": "CVE-2026-62916",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-62916. Confirm whether Microsoft Entra ID is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 45%.",
+      "tags": [
+        "cve-2026-62916",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-62916"
+        },
+        {
+          "title": "NVD — CVE-2026-62916",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62916"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-65818",
+      "slug": "2026-09-microsoft-cve-2026-65818",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-65818.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Power Automate Elevation of Privilege Vulnerability",
+      "summary": "Server-side request forgery (ssrf) in Power Automate allows an authorized attacker to elevate privileges over a network. Published in September 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Power Automate",
+      "cve": "CVE-2026-65818",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-65818. Confirm whether Power Automate is deployed, then apply the current security update or documented mitigation. CVSS score: 8.5. EPSS probability: 0.3%; percentile: 26%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 26%.",
+      "tags": [
+        "cve-2026-65818",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-65818"
+        },
+        {
+          "title": "NVD — CVE-2026-65818",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65818"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-69857",
+      "slug": "2026-09-microsoft-cve-2026-69857",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-69857.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Azure Cosmos DB Spoofing Vulnerability",
+      "summary": "Authorization bypass through user-controlled key in Azure Cosmos DB allows an authorized attacker to perform spoofing over a network. Published in September 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation More Likely.",
+      "vendor": "Microsoft",
+      "product": "Azure Cosmos DB",
+      "cve": "CVE-2026-69857",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-69857. Confirm whether Azure Cosmos DB is deployed, then apply the current security update or documented mitigation. CVSS score: 8.5. EPSS probability: 0.4%; percentile: 35%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 35%.",
+      "tags": [
+        "cve-2026-69857",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-69857"
+        },
+        {
+          "title": "NVD — CVE-2026-69857",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69857"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-70178",
+      "slug": "2026-09-microsoft-cve-2026-70178",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-70178.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Fabric Elevation of Privilege Vulnerability",
+      "summary": "Missing authorization in Microsoft Fabric allows an authorized attacker to elevate privileges over a network. Published in September 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Fabric",
+      "cve": "CVE-2026-70178",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-70178. Confirm whether Microsoft Fabric is deployed, then apply the current security update or documented mitigation. CVSS score: 8.5. EPSS probability: 0.4%; percentile: 35%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 35%.",
+      "tags": [
+        "cve-2026-70178",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-70178"
+        },
+        {
+          "title": "NVD — CVE-2026-70178",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70178"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-70352",
+      "slug": "2026-09-microsoft-cve-2026-70352",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-70352.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Azure AI Language Elevation of Privilege Vulnerability",
+      "summary": "Missing authentication for critical function in Azure AI Language allows an unauthorized attacker to elevate privileges over a network. Published in September 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Azure AI Language",
+      "cve": "CVE-2026-70352",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-70352. Confirm whether Azure AI Language is deployed, then apply the current security update or documented mitigation. CVSS score: 10.0. EPSS probability: 0.6%; percentile: 47%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 47%.",
+      "tags": [
+        "cve-2026-70352",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-70352"
+        },
+        {
+          "title": "NVD — CVE-2026-70352",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70352"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-72649",
+      "slug": "2026-09-microsoft-cve-2026-72649",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-72649.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Deserialization of Untrusted Data in Elasticsearch Leading to Remote Code Execution",
+      "summary": "Deserialization of Untrusted Data in Elasticsearch Leading to Remote Code Execution Published in September 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-72649",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-72649. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 45%.",
+      "tags": [
+        "cve-2026-72649",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-72649"
+        },
+        {
+          "title": "NVD — CVE-2026-72649",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72649"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-80098",
+      "slug": "2026-09-microsoft-cve-2026-80098",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-80098.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Copilot Studio Elevation of Privilege Vulnerability",
+      "summary": "Improper verification of cryptographic signature in Copilot Studio allows an unauthorized attacker to elevate privileges over a network. Published in September 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Copilot Studio",
+      "cve": "CVE-2026-80098",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-80098. Confirm whether Copilot Studio is deployed, then apply the current security update or documented mitigation. CVSS score: 9.3. EPSS probability: 0.3%; percentile: 22%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 22%.",
+      "tags": [
+        "cve-2026-80098",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-80098"
+        },
+        {
+          "title": "NVD — CVE-2026-80098",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80098"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-83711",
+      "slug": "2026-09-microsoft-cve-2026-83711",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-83711.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Microsoft Azure Active Directory B2C Elevation of Privilege Vulnerability",
+      "summary": "Authorization bypass through user-controlled key in Microsoft Azure Active Directory B2C allows an unauthorized attacker to elevate privileges over a network. Published in September 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Azure Active Directory B2C",
+      "cve": "CVE-2026-83711",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-83711. Confirm whether Microsoft Azure Active Directory B2C is deployed, then apply the current security update or documented mitigation. CVSS score: 10.0. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 45%.",
+      "tags": [
+        "cve-2026-83711",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-83711"
+        },
+        {
+          "title": "NVD — CVE-2026-83711",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83711"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-83941",
+      "slug": "2026-09-microsoft-cve-2026-83941",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-83941.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Entra ID Elevation of Privilege Vulnerability",
+      "summary": "Missing authorization in Entra ID allows an authorized attacker to elevate privileges over a network. Published in September 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Entra ID",
+      "cve": "CVE-2026-83941",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-83941. Confirm whether Entra ID is deployed, then apply the current security update or documented mitigation. CVSS score: 9.9.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-83941",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-83941"
+        },
+        {
+          "title": "NVD — CVE-2026-83941",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83941"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-85504",
+      "slug": "2026-09-microsoft-cve-2026-85504",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-85504.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "FreeIPMI before 1.6.19 has a stack-based buffer overflow in _ipmi_sel_oem_fujitsu_get_sel_entry_long_text in libfreei...",
+      "summary": "FreeIPMI before 1.6.19 has a stack-based buffer overflow in _ipmi_sel_oem_fujitsu_get_sel_entry_long_text in libfreeipmi/sel/ipmi-sel-string-fujitsu-irmc-common.c via malformed Fujitsu SEL long-text responses. Published in September 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-85504",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-85504. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 32%.",
+      "tags": [
+        "cve-2026-85504",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-85504"
+        },
+        {
+          "title": "NVD — CVE-2026-85504",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85504"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-85506",
+      "slug": "2026-09-microsoft-cve-2026-85506",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-85506.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "ipmi-oem in FreeIPMI before 1.6.19 has a stack-based buffer overflow in _get_dell_system_info_idrac_info in ipmi-oem/...",
+      "summary": "ipmi-oem in FreeIPMI before 1.6.19 has a stack-based buffer overflow in _get_dell_system_info_idrac_info in ipmi-oem/ipmi-oem-dell.c (idrac-info subcommand to dell get-system-info). Published in September 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-85506",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-85506. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 32%.",
+      "tags": [
+        "cve-2026-85506",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-85506"
+        },
+        {
+          "title": "NVD — CVE-2026-85506",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85506"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-85507",
+      "slug": "2026-09-microsoft-cve-2026-85507",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-85507.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "ipmi-oem in FreeIPMI before 1.6.19 has a stack-based buffer overflow in _output_dell_system_info_cmc_info in ipmi-oem...",
+      "summary": "ipmi-oem in FreeIPMI before 1.6.19 has a stack-based buffer overflow in _output_dell_system_info_cmc_info in ipmi-oem/ipmi-oem-dell.c (cmc-info subcommand to dell get-system-info). Published in September 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-85507",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-85507. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 32%.",
+      "tags": [
+        "cve-2026-85507",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-85507"
+        },
+        {
+          "title": "NVD — CVE-2026-85507",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85507"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-85508",
+      "slug": "2026-09-microsoft-cve-2026-85508",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-85508.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "ipmi-oem in FreeIPMI before 1.6.19 has a stack-based buffer overflow in _output_dell_system_info_cmc_ipv6_info in ipm...",
+      "summary": "ipmi-oem in FreeIPMI before 1.6.19 has a stack-based buffer overflow in _output_dell_system_info_cmc_ipv6_info in ipmi-oem/ipmi-oem-dell.c (cmc-ipv6-info subcommand to dell get-system-info). Published in September 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-85508",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-85508. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 32%.",
+      "tags": [
+        "cve-2026-85508",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-85508"
+        },
+        {
+          "title": "NVD — CVE-2026-85508",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85508"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-85509",
+      "slug": "2026-09-microsoft-cve-2026-85509",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-85509.html",
+      "date": "2026-09-03",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "FreeIPMI before 1.6.19 has a stack-based buffer overflow in _read_fru_data in libfreeipmi/fru/ipmi-fru.c when a BMC r...",
+      "summary": "FreeIPMI before 1.6.19 has a stack-based buffer overflow in _read_fru_data in libfreeipmi/fru/ipmi-fru.c when a BMC returns more bytes than requested. Published in September 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-85509",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-85509. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 32%.",
+      "tags": [
+        "cve-2026-85509",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-85509"
+        },
+        {
+          "title": "NVD — CVE-2026-85509",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85509"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
         }
       ]
     },
