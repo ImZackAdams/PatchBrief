@@ -239,10 +239,76 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1419 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1422 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Lara Dashboard — CVE-2026-86184 (Critical)" data-vendor="Lara" data-cve="CVE-2026-86184">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 5, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-86184</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-lara-cve-2026-86184.html">Lara Dashboard — CVE-2026-86184 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Lara · Dashboard</p>
+              <p class="feed-summary">Lara Dashboard before 1.3.0 contains an authentication bypass vulnerability in the screenshot-login route that allows unauthenticated attackers to authenticate as any user by email when APP_ENV is not production. Attackers can request the GET /screenshot-login/{email} endpoint with a registered email address to receive a fully authenticated session, enabling access to user administration, settings, database contents, and arbitrary code execution through the module installer.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-86184 in your asset inventory. Apply patches per vendor guidance and verify Dashboard is not exposed. CVSS score: 9.8. EPSS probability: 0.6%; percentile: 46%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86184">NVD — CVE-2026-86184</a><a href="https://github.com/laradashboard/laradashboard">Source reference</a><a href="https://github.com/laradashboard/laradashboard/blob/v1.2.2/app/Http/Controllers/Backend/Auth/ScreenshotGeneratorLoginController.php">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-lara-cve-2026-86184.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="WWBN AVideo — CVE-2026-86189 (Critical)" data-vendor="WWBN" data-cve="CVE-2026-86189">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 5, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-86189</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-wwbn-cve-2026-86189.html">WWBN AVideo — CVE-2026-86189 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">WWBN · AVideo</p>
+              <p class="feed-summary">WWBN AVideo contains a path traversal vulnerability in notify.ffmpeg.json.php that allows unauthenticated attackers to write files to arbitrary locations by supplying a caller-chosen path in the avideoRelativePath parameter. Attackers can replay any previously issued ciphertext as a notifyCode token, which is decrypted but never validated, to bypass authentication and write files to the application root and subdirectories.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-86189 in your asset inventory. Apply patches per vendor guidance and verify AVideo is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 34%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86189">NVD — CVE-2026-86189</a><a href="https://github.com/WWBN/AVideo/security/advisories/GHSA-cprx-fggj-7vpq">Source reference</a><a href="https://www.vulncheck.com/advisories/wwbn-avideo-unauthenticated-path-traversal-via-notify-ffmpeg-json-php">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-wwbn-cve-2026-86189.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="WWBN AVideo — CVE-2026-86190 (Critical)" data-vendor="WWBN" data-cve="CVE-2026-86190">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 5, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-86190</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-wwbn-cve-2026-86190.html">WWBN AVideo — CVE-2026-86190 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">WWBN · AVideo</p>
+              <p class="feed-summary">WWBN AVideo contains a broken access control vulnerability in videoViewsInfo endpoints that returns complete user records including password hashes, recovery tokens, and live session identifiers to unauthenticated callers when a hash parameter is provided. Attackers can use the disclosed session identifier to hijack viewer sessions, including administrator accounts, and obtain sensitive personal data for all video viewers.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-86190 in your asset inventory. Apply patches per vendor guidance and verify AVideo is not exposed. CVSS score: 9.1. EPSS probability: 0.3%; percentile: 19%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86190">NVD — CVE-2026-86190</a><a href="https://github.com/WWBN/AVideo/security/advisories/GHSA-82q2-88mq-p44q">Source reference</a><a href="https://www.vulncheck.com/advisories/wwbn-avideo-broken-access-control-via-videoviewsinfo-hash-parameter">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-wwbn-cve-2026-86190.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Non-administrator responses from /api/system/getConf omit three secrets that the configuration-export path ex..." data-vendor="Go" data-cve="CVE-2026-72793">
               <div class="feed-item-top">
                 <div class="feed-item-meta">

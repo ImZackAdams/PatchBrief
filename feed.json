@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-06T12:39:41Z",
-  "total_items": 1419,
+  "generated": "2026-09-07T14:50:30Z",
+  "total_items": 1422,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-06T12:39:41Z",
+    "generated": "2026-09-07T14:50:30Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,44 +18,44 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-09-06T12:39:27Z",
-        "finished_at": "2026-09-06T12:39:27Z"
+        "started_at": "2026-09-07T14:50:18Z",
+        "finished_at": "2026-09-07T14:50:18Z"
       },
       {
         "id": "msrc",
         "label": "Microsoft Security Update Guide",
         "role": "source",
         "status": "ok",
-        "items_seen": 15,
-        "started_at": "2026-09-06T12:39:27Z",
-        "finished_at": "2026-09-06T12:39:28Z"
+        "items_seen": 0,
+        "started_at": "2026-09-07T14:50:18Z",
+        "finished_at": "2026-09-07T14:50:19Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-09-06T12:39:28Z",
-        "finished_at": "2026-09-06T12:39:35Z"
+        "items_seen": 4,
+        "started_at": "2026-09-07T14:50:19Z",
+        "finished_at": "2026-09-07T14:50:25Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 30,
-        "started_at": "2026-09-06T12:39:35Z",
-        "finished_at": "2026-09-06T12:39:36Z"
+        "items_seen": 16,
+        "started_at": "2026-09-07T14:50:25Z",
+        "finished_at": "2026-09-07T14:50:26Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-09-06T12:39:36Z",
-        "finished_at": "2026-09-06T12:39:37Z"
+        "items_seen": 0,
+        "started_at": "2026-09-07T14:50:26Z",
+        "finished_at": "2026-09-07T14:50:26Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,126 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-06T12:39:37Z",
-        "finished_at": "2026-09-06T12:39:37Z"
+        "started_at": "2026-09-07T14:50:26Z",
+        "finished_at": "2026-09-07T14:50:27Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 45,
-        "started_at": "2026-09-06T12:39:37Z",
-        "finished_at": "2026-09-06T12:39:38Z"
+        "items_seen": 20,
+        "started_at": "2026-09-07T14:50:27Z",
+        "finished_at": "2026-09-07T14:50:27Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-lara-cve-2026-86184",
+      "slug": "2026-09-lara-cve-2026-86184",
+      "url": "https://www.patchbrief.org/items/2026-09-lara-cve-2026-86184.html",
+      "date": "2026-09-05",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Lara Dashboard — CVE-2026-86184 (Critical)",
+      "summary": "Lara Dashboard before 1.3.0 contains an authentication bypass vulnerability in the screenshot-login route that allows unauthenticated attackers to authenticate as any user by email when APP_ENV is not production. Attackers can request the GET /screenshot-login/{email} endpoint with a registered email address to receive a fully authenticated session, enabling access to user administration, settings, database contents, and arbitrary code execution through the module installer.",
+      "vendor": "Lara",
+      "product": "Dashboard",
+      "cve": "CVE-2026-86184",
+      "operator_check": "Review CVE-2026-86184 in your asset inventory. Apply patches per vendor guidance and verify Dashboard is not exposed. CVSS score: 9.8. EPSS probability: 0.6%; percentile: 46%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Lara Dashboard. Patch or mitigate promptly. EPSS percentile: 46%.",
+      "tags": [
+        "cve-2026-86184",
+        "vendor-advisory",
+        "lara",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-86184",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86184"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/laradashboard/laradashboard"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/laradashboard/laradashboard/blob/v1.2.2/app/Http/Controllers/Backend/Auth/ScreenshotGeneratorLoginController.php"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-wwbn-cve-2026-86189",
+      "slug": "2026-09-wwbn-cve-2026-86189",
+      "url": "https://www.patchbrief.org/items/2026-09-wwbn-cve-2026-86189.html",
+      "date": "2026-09-05",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "WWBN AVideo — CVE-2026-86189 (Critical)",
+      "summary": "WWBN AVideo contains a path traversal vulnerability in notify.ffmpeg.json.php that allows unauthenticated attackers to write files to arbitrary locations by supplying a caller-chosen path in the avideoRelativePath parameter. Attackers can replay any previously issued ciphertext as a notifyCode token, which is decrypted but never validated, to bypass authentication and write files to the application root and subdirectories.",
+      "vendor": "WWBN",
+      "product": "AVideo",
+      "cve": "CVE-2026-86189",
+      "operator_check": "Review CVE-2026-86189 in your asset inventory. Apply patches per vendor guidance and verify AVideo is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 34%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in WWBN AVideo. Patch or mitigate promptly. EPSS percentile: 34%.",
+      "tags": [
+        "cve-2026-86189",
+        "vendor-advisory",
+        "wwbn",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-86189",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86189"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-cprx-fggj-7vpq"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/wwbn-avideo-unauthenticated-path-traversal-via-notify-ffmpeg-json-php"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-wwbn-cve-2026-86190",
+      "slug": "2026-09-wwbn-cve-2026-86190",
+      "url": "https://www.patchbrief.org/items/2026-09-wwbn-cve-2026-86190.html",
+      "date": "2026-09-05",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "WWBN AVideo — CVE-2026-86190 (Critical)",
+      "summary": "WWBN AVideo contains a broken access control vulnerability in videoViewsInfo endpoints that returns complete user records including password hashes, recovery tokens, and live session identifiers to unauthenticated callers when a hash parameter is provided. Attackers can use the disclosed session identifier to hijack viewer sessions, including administrator accounts, and obtain sensitive personal data for all video viewers.",
+      "vendor": "WWBN",
+      "product": "AVideo",
+      "cve": "CVE-2026-86190",
+      "operator_check": "Review CVE-2026-86190 in your asset inventory. Apply patches per vendor guidance and verify AVideo is not exposed. CVSS score: 9.1. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in WWBN AVideo. Patch or mitigate promptly. EPSS percentile: 19%.",
+      "tags": [
+        "cve-2026-86190",
+        "vendor-advisory",
+        "wwbn",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-86190",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86190"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-82q2-88mq-p44q"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/wwbn-avideo-broken-access-control-via-videoviewsinfo-hash-parameter"
+        }
+      ]
+    },
     {
       "id": "2026-09-go-cve-2026-72793",
       "slug": "2026-09-go-cve-2026-72793",

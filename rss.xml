@@ -4,8 +4,29 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Sun, 06 Sep 2026 12:39:41 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 14:50:30 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>Lara Dashboard — CVE-2026-86184 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-lara-cve-2026-86184.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-lara-cve-2026-86184.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Lara Dashboard before 1.3.0 contains an authentication bypass vulnerability in the screenshot-login route that allows unauthenticated attackers to authenticate as any user by email when APP_ENV is not production. Attackers can request the GET /screenshot-login/{email} endpoint with a registered email address to receive a fully authenticated session, enabling access to user administration, settings, database contents, and arbitrary code execution through the module installer.</description>
+    </item>
+    <item>
+      <title>WWBN AVideo — CVE-2026-86189 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-wwbn-cve-2026-86189.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-wwbn-cve-2026-86189.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <description>WWBN AVideo contains a path traversal vulnerability in notify.ffmpeg.json.php that allows unauthenticated attackers to write files to arbitrary locations by supplying a caller-chosen path in the avideoRelativePath parameter. Attackers can replay any previously issued ciphertext as a notifyCode token, which is decrypted but never validated, to bypass authentication and write files to the application root and subdirectories.</description>
+    </item>
+    <item>
+      <title>WWBN AVideo — CVE-2026-86190 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-wwbn-cve-2026-86190.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-wwbn-cve-2026-86190.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <description>WWBN AVideo contains a broken access control vulnerability in videoViewsInfo endpoints that returns complete user records including password hashes, recovery tokens, and live session identifiers to unauthenticated callers when a hash parameter is provided. Attackers can use the disclosed session identifier to hijack viewer sessions, including administrator accounts, and obtain sensitive personal data for all video viewers.</description>
+    </item>
     <item>
       <title>SiYuan: Non-administrator responses from /api/system/getConf omit three secrets that the configuration-export path ex...</title>
       <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-72793.html</link>
