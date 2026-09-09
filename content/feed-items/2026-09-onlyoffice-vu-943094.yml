@@ -1,0 +1,37 @@
+id: 2026-09-onlyoffice-vu-943094
+slug: 2026-09-onlyoffice-vu-943094
+external_id: VU-943094
+source: cert_vu
+date: '2026-09-08'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#943094: ONLYOFFICE ownCloud integration plugin contains a Server-Side Request
+  Forgery (SSRF) vulnerability'
+summary: 'Overview A Server-Side Request Forgery (SSRF) vulnerability exists in Ascensio
+  System SIA''s ONLYOFFICE ownCloud integration plugin (version 9.12). The plugin’s
+  backend endpoint does not adequately validate the user‑supplied document server
+  URL before initiating outbound connections. An authenticated administrator can exploit
+  this flaw to coerce the ownCloud server into issuing arbitrary network requests
+  to attacker‑controlled destinations. Description The ownCloud ecosystem delivers
+  a platform for enterprise file collaboration, providing capabilities for storing,
+  syncing, and sharing data across devices. Ascensio System SIA''s ONLYOFFICE provides
+  a connector that integrates with ownCloud, enabling users to open and edit files
+  directly within the cloud storage environment. When configuring the ONLYOFFICE document
+  server within ownCloud... Related CVEs: CVE-2026-84282.'
+vendor: ONLYOFFICE
+product: ownCloud integration plugin
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for ownCloud integration plugin where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#943094
+  url: https://kb.cert.org/vuls/id/943094
+tags:
+- vu-943094
+- coordinated-disclosure
+- onlyoffice
+- cert-vu
+is_sample: false

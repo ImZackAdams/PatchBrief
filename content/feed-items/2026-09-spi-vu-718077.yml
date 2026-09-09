@@ -1,0 +1,37 @@
+id: 2026-09-spi-vu-718077
+slug: 2026-09-spi-vu-718077
+external_id: VU-718077
+source: cert_vu
+date: '2026-09-08'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#718077: UEFI Shell module embedded in SPI Flash can be used to bypass Secure
+  Boot'
+summary: Overview The UEFI Shell program may expose raw memory access capabilities
+  that, if present in platform firmware for debugging or advanced support use cases,
+  could be abused to undermine UEFI Secure Boot protections. When the UEFI Shell is
+  included in SPI flash, an attacker with the ability to modify UEFI boot configuration
+  may be able to create multiple boot option entries and bypass controls intended
+  to prevent the UEFI Shell from launching while Secure Boot is enabled. This could
+  allow an attacker to modify the pre-boot environment and execute unauthorized software
+  during system startup. Description The Unified Extensible Firmware Interface (UEFI)
+  is a firmware specification that defines the interface between a computing platform's
+  hardware and operating system (OS) during the early boot process before the operating
+  system is loaded...
+vendor: SPI
+product: Flash can be used to bypass Secure Boot
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Flash can be used to bypass Secure Boot where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#718077
+  url: https://kb.cert.org/vuls/id/718077
+tags:
+- vu-718077
+- coordinated-disclosure
+- spi
+- cert-vu
+is_sample: false

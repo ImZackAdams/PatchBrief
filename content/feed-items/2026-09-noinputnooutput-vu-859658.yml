@@ -1,0 +1,37 @@
+id: 2026-09-noinputnooutput-vu-859658
+slug: 2026-09-noinputnooutput-vu-859658
+external_id: VU-859658
+source: cert_vu
+date: '2026-09-08'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#859658: Skullcandy Dime 3 wireless earbuds contain an unauthenticated Bluetooth
+  pairing vulnerability'
+summary: 'Overview Skullcandy Dime 3 wireless earbuds, running firmware version 1.0.0.28,
+  accept a new Bluetooth Classic (BR/EDR) pairing request from an unpaired device
+  without requiring the earbuds to be placed into pairing mode or requiring any physical
+  confirmation or interaction from the owner. Description The Skullcandy Dime 3 (Model
+  S2DCW) wireless earbuds, running firmware version 1.0.0.28, accept a new Bluetooth
+  Classic (BR/EDR) pairing request from a previously unpaired device without the device
+  being placed into pairing mode by the owner and without physical confirmation on
+  the earbuds. The device''s Bluetooth PnP modalias identifies the chipset vendor
+  as Airoha Technology Corp. (Bluetooth SIG company ID 0x0094). This vulnerability
+  was previously disclosed in CVE-2025-20701 and is described as: In the Airoha Bluetooth
+  audio SDK, there is... Related CVEs: CVE-2025-20701.'
+vendor: NoInputNoOutput
+product: I/O capability. The firmware
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for I/O capability. The firmware where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#859658
+  url: https://kb.cert.org/vuls/id/859658
+tags:
+- vu-859658
+- coordinated-disclosure
+- noinputnooutput
+- cert-vu
+is_sample: false
