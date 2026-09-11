@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-10T13:21:06Z",
-  "total_items": 1499,
+  "generated": "2026-09-11T13:18:24Z",
+  "total_items": 1526,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-10T13:21:06Z",
+    "generated": "2026-09-11T13:18:24Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 8,
-        "started_at": "2026-09-10T13:20:44Z",
-        "finished_at": "2026-09-10T13:20:44Z"
+        "items_seen": 10,
+        "started_at": "2026-09-11T13:18:08Z",
+        "finished_at": "2026-09-11T13:18:08Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 25,
-        "started_at": "2026-09-10T13:20:44Z",
-        "finished_at": "2026-09-10T13:20:49Z"
+        "started_at": "2026-09-11T13:18:08Z",
+        "finished_at": "2026-09-11T13:18:12Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 7,
-        "started_at": "2026-09-10T13:20:49Z",
-        "finished_at": "2026-09-10T13:20:56Z"
+        "started_at": "2026-09-11T13:18:12Z",
+        "finished_at": "2026-09-11T13:18:19Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-09-10T13:20:56Z",
-        "finished_at": "2026-09-10T13:20:57Z"
+        "started_at": "2026-09-11T13:18:19Z",
+        "finished_at": "2026-09-11T13:18:20Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-09-10T13:20:57Z",
-        "finished_at": "2026-09-10T13:21:01Z"
+        "items_seen": 4,
+        "started_at": "2026-09-11T13:18:20Z",
+        "finished_at": "2026-09-11T13:18:21Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,697 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-10T13:21:01Z",
-        "finished_at": "2026-09-10T13:21:02Z"
+        "started_at": "2026-09-11T13:18:21Z",
+        "finished_at": "2026-09-11T13:18:22Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 55,
-        "started_at": "2026-09-10T13:21:02Z",
-        "finished_at": "2026-09-10T13:21:02Z"
+        "items_seen": 56,
+        "started_at": "2026-09-11T13:18:22Z",
+        "finished_at": "2026-09-11T13:18:22Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-aomei-vu-687587",
+      "slug": "2026-09-aomei-vu-687587",
+      "url": "https://www.patchbrief.org/items/2026-09-aomei-vu-687587.html",
+      "date": "2026-09-10",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#687587: AOMEI Backupper amwrtdrv.sys local privilege escalation vulnerability allows arbitrary writes to physical ...",
+      "summary": "Overview An incorrect permissions assignment vulnerability in the amwrtdrv.sys kernel driver, included with AOMEI Backupper 8.4.0, allows an unprivileged local user to perform arbitrary writes to the physical disk. When Secure Boot is disabled, this can be leveraged to execute arbitrary UEFI-level code before the operating system loads. This allows an attacker to bypass OS-level security controls, including HVCI, EDR solutions, and Microsoft Defender. The attack may also enable capture of BitLocker Volume Master Key (VMK) material, depending on the system's BitLocker configuration. Description AOMEI Backupper from AOMEI International Network Limited is designed to provide backup and disaster recovery services. It also helps individuals and businesses to create system images, disk clones, and file backups. AOMEI Backupper is available as... Related CVEs: CVE-2026-12780.",
+      "vendor": "AOMEI",
+      "product": "Backupper amwrtdrv.sys local privilege escalation vulnerability",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Backupper amwrtdrv.sys local privilege escalation vulnerability where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-687587",
+        "coordinated-disclosure",
+        "aomei",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#687587",
+          "url": "https://kb.cert.org/vuls/id/687587"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-88004",
+      "slug": "2026-09-go-cve-2026-88004",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-88004.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Traefik entrypoint header-name sanitization bypassed via request trailers",
+      "summary": "Traefik entrypoint header-name sanitization bypassed via request trailers",
+      "vendor": "Go",
+      "product": "github.com/traefik/traefik/v3",
+      "cve": "CVE-2026-88004",
+      "operator_check": "Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.0.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/traefik/traefik/v3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88004",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v67p-phpq-fc8x",
+          "url": "https://github.com/advisories/GHSA-v67p-phpq-fc8x"
+        },
+        {
+          "title": "NVD — CVE-2026-88004",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88004"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/traefik/traefik/security/advisories/GHSA-v67p-phpq-fc8x"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-88007",
+      "slug": "2026-09-go-cve-2026-88007",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-88007.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Traefik HTTP/3 Backend NTLM Connection Reuse",
+      "summary": "Traefik HTTP/3 Backend NTLM Connection Reuse",
+      "vendor": "Go",
+      "product": "github.com/traefik/traefik/v3",
+      "cve": "CVE-2026-88007",
+      "operator_check": "Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/traefik/traefik/v3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88007",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qqjf-53cj-pwvv",
+          "url": "https://github.com/advisories/GHSA-qqjf-53cj-pwvv"
+        },
+        {
+          "title": "NVD — CVE-2026-88007",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88007"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/traefik/traefik/security/advisories/GHSA-qqjf-53cj-pwvv"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-88008",
+      "slug": "2026-09-go-cve-2026-88008",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-88008.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Traefik: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') and Incorrect Authorization",
+      "summary": "Traefik: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') and Incorrect Authorization",
+      "vendor": "Go",
+      "product": "github.com/traefik/traefik/v3",
+      "cve": "CVE-2026-88008",
+      "operator_check": "Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.0.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/traefik/traefik/v3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88008",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w4v4-9rw7-5326",
+          "url": "https://github.com/advisories/GHSA-w4v4-9rw7-5326"
+        },
+        {
+          "title": "NVD — CVE-2026-88008",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88008"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/traefik/traefik/security/advisories/GHSA-w4v4-9rw7-5326"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-88009",
+      "slug": "2026-09-go-cve-2026-88009",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-88009.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Traefik: Rootless HTTP/1 request-target routes as \"/\" but is forwarded verbatim, bypassing path-scoped routing, middl...",
+      "summary": "Traefik: Rootless HTTP/1 request-target routes as \"/\" but is forwarded verbatim, bypassing path-scoped routing, middleware guards and access logging",
+      "vendor": "Go",
+      "product": "github.com/traefik/traefik/v3",
+      "cve": "CVE-2026-88009",
+      "operator_check": "Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/traefik/traefik/v3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88009",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f52w-8j3h-j724",
+          "url": "https://github.com/advisories/GHSA-f52w-8j3h-j724"
+        },
+        {
+          "title": "NVD — CVE-2026-88009",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88009"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/traefik/traefik/security/advisories/GHSA-f52w-8j3h-j724"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-88017",
+      "slug": "2026-09-go-cve-2026-88017",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-88017.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "rclone: FTP cross-session auth-proxy backend confusion",
+      "summary": "rclone: FTP cross-session auth-proxy backend confusion",
+      "vendor": "Go",
+      "product": "github.com/rclone/rclone",
+      "cve": "CVE-2026-88017",
+      "operator_check": "Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rclone/rclone. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88017",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c476-6w5q-jw77",
+          "url": "https://github.com/advisories/GHSA-c476-6w5q-jw77"
+        },
+        {
+          "title": "NVD — CVE-2026-88017",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88017"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rclone/rclone/security/advisories/GHSA-c476-6w5q-jw77"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-88018",
+      "slug": "2026-09-go-cve-2026-88018",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-88018.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "rclone serve s3: --auth-proxy without --auth-key authenticates nobody - full SigV4 signature bypass",
+      "summary": "rclone serve s3: --auth-proxy without --auth-key authenticates nobody - full SigV4 signature bypass",
+      "vendor": "Go",
+      "product": "github.com/rclone/rclone",
+      "cve": "CVE-2026-88018",
+      "operator_check": "Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rclone/rclone. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88018",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xwwr-4h3p-r22c",
+          "url": "https://github.com/advisories/GHSA-xwwr-4h3p-r22c"
+        },
+        {
+          "title": "NVD — CVE-2026-88018",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88018"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rclone/rclone/security/advisories/GHSA-xwwr-4h3p-r22c"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-88044",
+      "slug": "2026-09-go-cve-2026-88044",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-88044.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "rclone: RC per-server auth-proxy bypass",
+      "summary": "rclone: RC per-server auth-proxy bypass",
+      "vendor": "Go",
+      "product": "github.com/rclone/rclone",
+      "cve": "CVE-2026-88044",
+      "operator_check": "Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rclone/rclone. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88044",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p569-5gjg-9cmj",
+          "url": "https://github.com/advisories/GHSA-p569-5gjg-9cmj"
+        },
+        {
+          "title": "NVD — CVE-2026-88044",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88044"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rclone/rclone/security/advisories/GHSA-p569-5gjg-9cmj"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-88045",
+      "slug": "2026-09-go-cve-2026-88045",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-88045.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "rclone: S3 multipart declared-length memory exhaustion",
+      "summary": "rclone: S3 multipart declared-length memory exhaustion",
+      "vendor": "Go",
+      "product": "github.com/rclone/rclone",
+      "cve": "CVE-2026-88045",
+      "operator_check": "Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rclone/rclone. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88045",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2p48-j3qc-rx9f",
+          "url": "https://github.com/advisories/GHSA-2p48-j3qc-rx9f"
+        },
+        {
+          "title": "NVD — CVE-2026-88045",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88045"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rclone/rclone/security/advisories/GHSA-2p48-j3qc-rx9f"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-mikrotik-cve-2026-67277",
+      "slug": "2026-09-mikrotik-cve-2026-67277",
+      "url": "https://www.patchbrief.org/items/2026-09-mikrotik-cve-2026-67277.html",
+      "date": "2026-09-10",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
+      "summary": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
+      "vendor": "MikroTik",
+      "product": "RouterOS",
+      "cve": "CVE-2026-67277",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-67277 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-13. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-67277",
+        "kev",
+        "mikrotik",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-67277",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67277"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-mikrotik-cve-2026-86060",
+      "slug": "2026-09-mikrotik-cve-2026-86060",
+      "url": "https://www.patchbrief.org/items/2026-09-mikrotik-cve-2026-86060.html",
+      "date": "2026-09-10",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
+      "summary": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
+      "vendor": "MikroTik",
+      "product": "RouterOS",
+      "cve": "CVE-2026-86060",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-86060 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-13. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-86060",
+        "kev",
+        "mikrotik",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-86060",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86060"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-59960",
+      "slug": "2026-09-npm-cve-2026-59960",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-59960.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@argos-ci/core: CI Branch Name OS Command Injection",
+      "summary": "@argos-ci/core: CI Branch Name OS Command Injection",
+      "vendor": "npm",
+      "product": "@argos-ci/core",
+      "cve": "CVE-2026-59960",
+      "operator_check": "Check whether @argos-ci/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @argos-ci/core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-59960",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4x45-gxvp-6283",
+          "url": "https://github.com/advisories/GHSA-4x45-gxvp-6283"
+        },
+        {
+          "title": "NVD — CVE-2026-59960",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59960"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/argos-ci/argos-javascript/security/advisories/GHSA-4x45-gxvp-6283"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-59965",
+      "slug": "2026-09-npm-cve-2026-59965",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-59965.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` ...",
+      "summary": "@jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` Omission",
+      "vendor": "npm",
+      "product": "@jhb.software/payload-alt-text-plugin",
+      "cve": "CVE-2026-59965",
+      "operator_check": "Check whether @jhb.software/payload-alt-text-plugin is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @jhb.software/payload-alt-text-plugin. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-59965",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4qpv-39hg-f7fx",
+          "url": "https://github.com/advisories/GHSA-4qpv-39hg-f7fx"
+        },
+        {
+          "title": "NVD — CVE-2026-59965",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59965"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jhb-software/payload-plugins/security/advisories/GHSA-4qpv-39hg-f7fx"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-86083",
+      "slug": "2026-09-npm-cve-2026-86083",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-86083.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "n8n: Expression Sandbox Escape via Shared Builtin Tampering and Code-Printer Injection Leads to Code Execution",
+      "summary": "n8n: Expression Sandbox Escape via Shared Builtin Tampering and Code-Printer Injection Leads to Code Execution",
+      "vendor": "npm",
+      "product": "n8n",
+      "cve": "CVE-2026-86083",
+      "operator_check": "Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7. EPSS probability: 0.3%; percentile: 20%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for n8n. Prioritize it with other application dependency updates, especially because EPSS places it in the 20% percentile.",
+      "tags": [
+        "cve-2026-86083",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6xcw-7xm6-48c6",
+          "url": "https://github.com/advisories/GHSA-6xcw-7xm6-48c6"
+        },
+        {
+          "title": "NVD — CVE-2026-86083",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86083"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-6xcw-7xm6-48c6"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-88060",
+      "slug": "2026-09-npm-cve-2026-88060",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-88060.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Angular: SSR XSS via Unescaped <template> Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements",
+      "summary": "Angular: SSR XSS via Unescaped <template> Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements",
+      "vendor": "npm",
+      "product": "@angular/platform-server",
+      "cve": "CVE-2026-88060",
+      "operator_check": "Check whether @angular/platform-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @angular/platform-server. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88060",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v3p8-whq6-r5jg",
+          "url": "https://github.com/advisories/GHSA-v3p8-whq6-r5jg"
+        },
+        {
+          "title": "NVD — CVE-2026-88060",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88060"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/angular/angular/security/advisories/GHSA-v3p8-whq6-r5jg"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-88062",
+      "slug": "2026-09-npm-cve-2026-88062",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-88062.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "OmniRoute ACP Custom-Agent Remote Code Execution (RCE)",
+      "summary": "OmniRoute ACP Custom-Agent Remote Code Execution (RCE)",
+      "vendor": "npm",
+      "product": "omniroute",
+      "cve": "CVE-2026-88062",
+      "operator_check": "Check whether omniroute is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.5.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for omniroute. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88062",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hf57-cqmx-p4gr",
+          "url": "https://github.com/advisories/GHSA-hf57-cqmx-p4gr"
+        },
+        {
+          "title": "NVD — CVE-2026-88062",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88062"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/diegosouzapw/OmniRoute/security/advisories/GHSA-hf57-cqmx-p4gr"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-87011",
+      "slug": "2026-09-pypi-cve-2026-87011",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-87011.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout",
+      "summary": "Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout",
+      "vendor": "PyPI",
+      "product": "open-webui",
+      "cve": "CVE-2026-87011",
+      "operator_check": "Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for open-webui. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-87011",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3g9q-v48f-hh9w",
+          "url": "https://github.com/advisories/GHSA-3g9q-v48f-hh9w"
+        },
+        {
+          "title": "NVD — CVE-2026-87011",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87011"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-3g9q-v48f-hh9w"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-87016",
+      "slug": "2026-09-pypi-cve-2026-87016",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-87016.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite",
+      "summary": "Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite",
+      "vendor": "PyPI",
+      "product": "open-webui",
+      "cve": "CVE-2026-87016",
+      "operator_check": "Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 26%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for open-webui. Prioritize it with other application dependency updates, especially because EPSS places it in the 26% percentile.",
+      "tags": [
+        "cve-2026-87016",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wpmr-8h3q-fwj7",
+          "url": "https://github.com/advisories/GHSA-wpmr-8h3q-fwj7"
+        },
+        {
+          "title": "NVD — CVE-2026-87016",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87016"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-wpmr-8h3q-fwj7"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-ghsa-m3wp-48jr-vr4g",
+      "slug": "2026-09-rust-ghsa-m3wp-48jr-vr4g",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-ghsa-m3wp-48jr-vr4g.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "mistral.rs: Unbounded Remote Media Fetch and Video Frame Expansion DoS",
+      "summary": "mistral.rs: Unbounded Remote Media Fetch and Video Frame Expansion DoS",
+      "vendor": "Rust",
+      "product": "mistralrs-server-core",
+      "cve": null,
+      "operator_check": "Check whether mistralrs-server-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mistralrs-server-core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-m3wp-48jr-vr4g",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m3wp-48jr-vr4g",
+          "url": "https://github.com/advisories/GHSA-m3wp-48jr-vr4g"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/EricLBuehler/mistral.rs/security/advisories/GHSA-m3wp-48jr-vr4g"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-ghsa-wfgq-w7cq-qj7j",
+      "slug": "2026-09-rust-ghsa-wfgq-w7cq-qj7j",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-ghsa-wfgq-w7cq-qj7j.html",
+      "date": "2026-09-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "mistral.rs Media Loader: Unauthenticated SSRF and arbitrary local file read via image_url",
+      "summary": "mistral.rs Media Loader: Unauthenticated SSRF and arbitrary local file read via image_url",
+      "vendor": "Rust",
+      "product": "mistralrs-server-core",
+      "cve": null,
+      "operator_check": "Check whether mistralrs-server-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mistralrs-server-core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-wfgq-w7cq-qj7j",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wfgq-w7cq-qj7j",
+          "url": "https://github.com/advisories/GHSA-wfgq-w7cq-qj7j"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/EricLBuehler/mistral.rs/security/advisories/GHSA-wfgq-w7cq-qj7j"
+        }
+      ]
+    },
     {
       "id": "2026-09-cisco-cve-2026-20079",
       "slug": "2026-09-cisco-cve-2026-20079",
@@ -363,6 +1039,41 @@
         {
           "title": "NVD — CVE-2026-87491",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87491"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-google-cve-2026-87534",
+      "slug": "2026-09-google-cve-2026-87534",
+      "url": "https://www.patchbrief.org/items/2026-09-google-cve-2026-87534.html",
+      "date": "2026-09-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Google Chrome — CVE-2026-87534 (Critical)",
+      "summary": "Missing authorization in WebView in Google Chrome on on Android prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to bypass system access restrictions via crafted network traffic. (Chromium security severity: Medium)",
+      "vendor": "Google",
+      "product": "Chrome",
+      "cve": "CVE-2026-87534",
+      "operator_check": "Review CVE-2026-87534 in your asset inventory. Apply patches per vendor guidance and verify Chrome is not exposed. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Google Chrome. Patch or mitigate promptly. EPSS percentile: 7%.",
+      "tags": [
+        "cve-2026-87534",
+        "vendor-advisory",
+        "google",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-87534",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87534"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://issues.chromium.org/issues/513134173"
         }
       ]
     },
@@ -748,6 +1459,68 @@
         {
           "title": "Source reference",
           "url": "https://github.com/esphome/device-builder/security/advisories/GHSA-vv4j-m4vr-f3g6"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-samsung-cve-2026-21095",
+      "slug": "2026-09-samsung-cve-2026-21095",
+      "url": "https://www.patchbrief.org/items/2026-09-samsung-cve-2026-21095.html",
+      "date": "2026-09-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Samsung Android — CVE-2026-21095 (Critical)",
+      "summary": "Heap-based buffer overflow in DNG decoder of libimagecodec.quram.so prior to SMR Sep-2026 Release 1 allows remote attackers to execute arbitrary code.",
+      "vendor": "Samsung",
+      "product": "Android",
+      "cve": "CVE-2026-21095",
+      "operator_check": "Review CVE-2026-21095 in your asset inventory. Apply patches per vendor guidance and verify Android is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 34%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Samsung Android. Patch or mitigate promptly. EPSS percentile: 34%.",
+      "tags": [
+        "cve-2026-21095",
+        "vendor-advisory",
+        "samsung",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-21095",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21095"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=09"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-samsung-cve-2026-21096",
+      "slug": "2026-09-samsung-cve-2026-21096",
+      "url": "https://www.patchbrief.org/items/2026-09-samsung-cve-2026-21096.html",
+      "date": "2026-09-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Samsung Android — CVE-2026-21096 (Critical)",
+      "summary": "Heap-based buffer overflow in JPEG decoder of libimagecodec.quram.so prior to SMR Sep-2026 Release 1 allows remote attackers to execute arbitrary code.",
+      "vendor": "Samsung",
+      "product": "Android",
+      "cve": "CVE-2026-21096",
+      "operator_check": "Review CVE-2026-21096 in your asset inventory. Apply patches per vendor guidance and verify Android is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 34%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Samsung Android. Patch or mitigate promptly. EPSS percentile: 34%.",
+      "tags": [
+        "cve-2026-21096",
+        "vendor-advisory",
+        "samsung",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-21096",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21096"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=09"
         }
       ]
     },
@@ -1712,6 +2485,146 @@
         {
           "title": "NVD — CVE-2026-85880",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85880"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-87536",
+      "slug": "2026-09-microsoft-cve-2026-87536",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87536.html",
+      "date": "2026-09-08",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi...",
+      "summary": "Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High) Published in September 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-87536",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-87536. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 19%.",
+      "tags": [
+        "cve-2026-87536",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-87536"
+        },
+        {
+          "title": "NVD — CVE-2026-87536",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87536"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-87587",
+      "slug": "2026-09-microsoft-cve-2026-87587",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87587.html",
+      "date": "2026-09-08",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi...",
+      "summary": "Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High) Published in September 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-87587",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-87587. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 23%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 23%.",
+      "tags": [
+        "cve-2026-87587",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-87587"
+        },
+        {
+          "title": "NVD — CVE-2026-87587",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87587"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-87612",
+      "slug": "2026-09-microsoft-cve-2026-87612",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87612.html",
+      "date": "2026-09-08",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Type confusion in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi...",
+      "summary": "Type confusion in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High) Published in September 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-87612",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-87612. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 24%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 24%.",
+      "tags": [
+        "cve-2026-87612",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-87612"
+        },
+        {
+          "title": "NVD — CVE-2026-87612",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87612"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-microsoft-cve-2026-87625",
+      "slug": "2026-09-microsoft-cve-2026-87625",
+      "url": "https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87625.html",
+      "date": "2026-09-08",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering ...",
+      "summary": "Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to execute arbitrary code inside the sandbox via a crafted Chrome extension. (Chromium security severity: Medium) Published in September 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-87625",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-87625. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 19%.",
+      "tags": [
+        "cve-2026-87625",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Sep Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-87625"
+        },
+        {
+          "title": "NVD — CVE-2026-87625",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87625"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
         }
       ]
     },

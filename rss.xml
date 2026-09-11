@@ -4,8 +4,148 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Thu, 10 Sep 2026 13:21:06 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 13:18:24 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>VU#687587: AOMEI Backupper amwrtdrv.sys local privilege escalation vulnerability allows arbitrary writes to physical ...</title>
+      <link>https://www.patchbrief.org/items/2026-09-aomei-vu-687587.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-aomei-vu-687587.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Overview An incorrect permissions assignment vulnerability in the amwrtdrv.sys kernel driver, included with AOMEI Backupper 8.4.0, allows an unprivileged local user to perform arbitrary writes to the physical disk. When Secure Boot is disabled, this can be leveraged to execute arbitrary UEFI-level code before the operating system loads. This allows an attacker to bypass OS-level security controls, including HVCI, EDR solutions, and Microsoft Defender. The attack may also enable capture of BitLocker Volume Master Key (VMK) material, depending on the system's BitLocker configuration. Description AOMEI Backupper from AOMEI International Network Limited is designed to provide backup and disaster recovery services. It also helps individuals and businesses to create system images, disk clones, and file backups. AOMEI Backupper is available as... Related CVEs: CVE-2026-12780.</description>
+    </item>
+    <item>
+      <title>Traefik entrypoint header-name sanitization bypassed via request trailers</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-88004.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-88004.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Traefik entrypoint header-name sanitization bypassed via request trailers</description>
+    </item>
+    <item>
+      <title>Traefik HTTP/3 Backend NTLM Connection Reuse</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-88007.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-88007.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Traefik HTTP/3 Backend NTLM Connection Reuse</description>
+    </item>
+    <item>
+      <title>Traefik: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') and Incorrect Authorization</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-88008.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-88008.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Traefik: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') and Incorrect Authorization</description>
+    </item>
+    <item>
+      <title>Traefik: Rootless HTTP/1 request-target routes as "/" but is forwarded verbatim, bypassing path-scoped routing, middl...</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-88009.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-88009.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Traefik: Rootless HTTP/1 request-target routes as "/" but is forwarded verbatim, bypassing path-scoped routing, middleware guards and access logging</description>
+    </item>
+    <item>
+      <title>rclone: FTP cross-session auth-proxy backend confusion</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-88017.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-88017.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>rclone: FTP cross-session auth-proxy backend confusion</description>
+    </item>
+    <item>
+      <title>rclone serve s3: --auth-proxy without --auth-key authenticates nobody - full SigV4 signature bypass</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-88018.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-88018.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>rclone serve s3: --auth-proxy without --auth-key authenticates nobody - full SigV4 signature bypass</description>
+    </item>
+    <item>
+      <title>rclone: RC per-server auth-proxy bypass</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-88044.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-88044.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>rclone: RC per-server auth-proxy bypass</description>
+    </item>
+    <item>
+      <title>rclone: S3 multipart declared-length memory exhaustion</title>
+      <link>https://www.patchbrief.org/items/2026-09-go-cve-2026-88045.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-go-cve-2026-88045.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>rclone: S3 multipart declared-length memory exhaustion</description>
+    </item>
+    <item>
+      <title>MikroTik RouterOS Missing Authentication for Critical Function Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-09-mikrotik-cve-2026-67277.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-mikrotik-cve-2026-67277.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.</description>
+    </item>
+    <item>
+      <title>MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-09-mikrotik-cve-2026-86060.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-mikrotik-cve-2026-86060.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.</description>
+    </item>
+    <item>
+      <title>@argos-ci/core: CI Branch Name OS Command Injection</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-59960.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-59960.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>@argos-ci/core: CI Branch Name OS Command Injection</description>
+    </item>
+    <item>
+      <title>@jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` ...</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-59965.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-59965.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>@jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` Omission</description>
+    </item>
+    <item>
+      <title>n8n: Expression Sandbox Escape via Shared Builtin Tampering and Code-Printer Injection Leads to Code Execution</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-86083.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-86083.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>n8n: Expression Sandbox Escape via Shared Builtin Tampering and Code-Printer Injection Leads to Code Execution</description>
+    </item>
+    <item>
+      <title>Angular: SSR XSS via Unescaped &lt;template&gt; Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-88060.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-88060.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Angular: SSR XSS via Unescaped &lt;template&gt; Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements</description>
+    </item>
+    <item>
+      <title>OmniRoute ACP Custom-Agent Remote Code Execution (RCE)</title>
+      <link>https://www.patchbrief.org/items/2026-09-npm-cve-2026-88062.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-npm-cve-2026-88062.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>OmniRoute ACP Custom-Agent Remote Code Execution (RCE)</description>
+    </item>
+    <item>
+      <title>Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout</title>
+      <link>https://www.patchbrief.org/items/2026-09-pypi-cve-2026-87011.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-pypi-cve-2026-87011.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout</description>
+    </item>
+    <item>
+      <title>Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite</title>
+      <link>https://www.patchbrief.org/items/2026-09-pypi-cve-2026-87016.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-pypi-cve-2026-87016.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite</description>
+    </item>
+    <item>
+      <title>mistral.rs: Unbounded Remote Media Fetch and Video Frame Expansion DoS</title>
+      <link>https://www.patchbrief.org/items/2026-09-rust-ghsa-m3wp-48jr-vr4g.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-rust-ghsa-m3wp-48jr-vr4g.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>mistral.rs: Unbounded Remote Media Fetch and Video Frame Expansion DoS</description>
+    </item>
+    <item>
+      <title>mistral.rs Media Loader: Unauthenticated SSRF and arbitrary local file read via image_url</title>
+      <link>https://www.patchbrief.org/items/2026-09-rust-ghsa-wfgq-w7cq-qj7j.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-rust-ghsa-wfgq-w7cq-qj7j.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>mistral.rs Media Loader: Unauthenticated SSRF and arbitrary local file read via image_url</description>
+    </item>
     <item>
       <title>Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-09-cisco-cve-2026-20079.html</link>
@@ -68,6 +208,13 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-google-cve-2026-87491.html</guid>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
       <description>Google Chromium V8 contains an out of bounds write vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.</description>
+    </item>
+    <item>
+      <title>Google Chrome — CVE-2026-87534 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-google-cve-2026-87534.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-google-cve-2026-87534.html</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Missing authorization in WebView in Google Chrome on on Android prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to bypass system access restrictions via crafted network traffic. (Chromium security severity: Medium)</description>
     </item>
     <item>
       <title>Google Chrome — CVE-2026-87544 (Critical)</title>
@@ -145,6 +292,20 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-pypi-cve-2026-59177.html</guid>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
       <description>ESPHome Device Builder Dashboard: Unauthenticated dashboard access via the HA add-on ingress site bound to all interfaces</description>
+    </item>
+    <item>
+      <title>Samsung Android — CVE-2026-21095 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-samsung-cve-2026-21095.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-samsung-cve-2026-21095.html</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Heap-based buffer overflow in DNG decoder of libimagecodec.quram.so prior to SMR Sep-2026 Release 1 allows remote attackers to execute arbitrary code.</description>
+    </item>
+    <item>
+      <title>Samsung Android — CVE-2026-21096 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-09-samsung-cve-2026-21096.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-samsung-cve-2026-21096.html</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Heap-based buffer overflow in JPEG decoder of libimagecodec.quram.so prior to SMR Sep-2026 Release 1 allows remote attackers to execute arbitrary code.</description>
     </item>
     <item>
       <title>Adobe Commerce and Magento Improper Neutralization of Special Elements Used in a Template Engine Vulnerability</title>
@@ -341,6 +502,34 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-85880.html</guid>
       <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
       <description>Microsoft Windows Advanced Local Procedure Call contains a heap-based buffer overflow vulnerability that allows an attacker to elevate privileges locally.</description>
+    </item>
+    <item>
+      <title>Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi...</title>
+      <link>https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87536.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87536.html</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High) Published in September 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi...</title>
+      <link>https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87587.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87587.html</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High) Published in September 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Type confusion in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi...</title>
+      <link>https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87612.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87612.html</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Type confusion in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High) Published in September 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering ...</title>
+      <link>https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87625.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-09-microsoft-cve-2026-87625.html</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to execute arbitrary code inside the sandbox via a crafted Chrome extension. (Chromium security severity: Medium) Published in September 2026 Security Updates.</description>
     </item>
     <item>
       <title>N-able N-central Static Code Injection Vulnerability</title>

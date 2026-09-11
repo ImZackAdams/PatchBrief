@@ -239,10 +239,450 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1499 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1526 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#687587: AOMEI Backupper amwrtdrv.sys local privilege escalation vulnerability allows arbitrary writes to physical ..." data-vendor="AOMEI">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-aomei-vu-687587.html">VU#687587: AOMEI Backupper amwrtdrv.sys local privilege escalation vulnerability allows arbitrary writes to physical ...</a>
+              </h2>
+              <p class="feed-vendor">AOMEI · Backupper amwrtdrv.sys local privilege escalation vulnerability</p>
+              <p class="feed-summary">Overview An incorrect permissions assignment vulnerability in the amwrtdrv.sys kernel driver, included with AOMEI Backupper 8.4.0, allows an unprivileged local user to perform arbitrary writes to the physical disk. When Secure Boot is disabled, this can be leveraged to execute arbitrary UEFI-level code before the operating system loads. This allows an attacker to bypass OS-level security controls, including HVCI, EDR solutions, and Microsoft Defender. The attack may also enable capture of BitLocker Volume Master Key (VMK) material, depending on the system&#x27;s BitLocker configuration. Description AOMEI Backupper from AOMEI International Network Limited is designed to provide backup and disaster recovery services. It also helps individuals and businesses to create system images, disk clones, and file backups. AOMEI Backupper is available as... Related CVEs: CVE-2026-12780.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Backupper amwrtdrv.sys local privilege escalation vulnerability where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/687587">CERT/CC Vulnerability Note VU#687587</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-aomei-vu-687587.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Traefik entrypoint header-name sanitization bypassed via request trailers" data-vendor="Go" data-cve="CVE-2026-88004">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-88004</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-88004.html">Traefik entrypoint header-name sanitization bypassed via request trailers</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/traefik/traefik/v3</p>
+              <p class="feed-summary">Traefik entrypoint header-name sanitization bypassed via request trailers</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.0.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-v67p-phpq-fc8x">GitHub Advisory GHSA-v67p-phpq-fc8x</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88004">NVD — CVE-2026-88004</a><a href="https://github.com/traefik/traefik/security/advisories/GHSA-v67p-phpq-fc8x">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-88004.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Traefik HTTP/3 Backend NTLM Connection Reuse" data-vendor="Go" data-cve="CVE-2026-88007">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-88007</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-88007.html">Traefik HTTP/3 Backend NTLM Connection Reuse</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/traefik/traefik/v3</p>
+              <p class="feed-summary">Traefik HTTP/3 Backend NTLM Connection Reuse</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.1.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-qqjf-53cj-pwvv">GitHub Advisory GHSA-qqjf-53cj-pwvv</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88007">NVD — CVE-2026-88007</a><a href="https://github.com/traefik/traefik/security/advisories/GHSA-qqjf-53cj-pwvv">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-88007.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Traefik: Inconsistent Interpretation of HTTP Requests (&#x27;HTTP Request/Response Smuggling&#x27;) and Incorrect Authorization" data-vendor="Go" data-cve="CVE-2026-88008">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-88008</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-88008.html">Traefik: Inconsistent Interpretation of HTTP Requests (&#x27;HTTP Request/Response Smuggling&#x27;) and Incorrect Authorization</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/traefik/traefik/v3</p>
+              <p class="feed-summary">Traefik: Inconsistent Interpretation of HTTP Requests (&#x27;HTTP Request/Response Smuggling&#x27;) and Incorrect Authorization</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.0.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-w4v4-9rw7-5326">GitHub Advisory GHSA-w4v4-9rw7-5326</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88008">NVD — CVE-2026-88008</a><a href="https://github.com/traefik/traefik/security/advisories/GHSA-w4v4-9rw7-5326">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-88008.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Traefik: Rootless HTTP/1 request-target routes as &quot;/&quot; but is forwarded verbatim, bypassing path-scoped routing, middl..." data-vendor="Go" data-cve="CVE-2026-88009">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-88009</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-88009.html">Traefik: Rootless HTTP/1 request-target routes as &quot;/&quot; but is forwarded verbatim, bypassing path-scoped routing, middl...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/traefik/traefik/v3</p>
+              <p class="feed-summary">Traefik: Rootless HTTP/1 request-target routes as &quot;/&quot; but is forwarded verbatim, bypassing path-scoped routing, middleware guards and access logging</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/traefik/traefik/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-f52w-8j3h-j724">GitHub Advisory GHSA-f52w-8j3h-j724</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88009">NVD — CVE-2026-88009</a><a href="https://github.com/traefik/traefik/security/advisories/GHSA-f52w-8j3h-j724">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-88009.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="rclone: FTP cross-session auth-proxy backend confusion" data-vendor="Go" data-cve="CVE-2026-88017">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-88017</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-88017.html">rclone: FTP cross-session auth-proxy backend confusion</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/rclone/rclone</p>
+              <p class="feed-summary">rclone: FTP cross-session auth-proxy backend confusion</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-c476-6w5q-jw77">GitHub Advisory GHSA-c476-6w5q-jw77</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88017">NVD — CVE-2026-88017</a><a href="https://github.com/rclone/rclone/security/advisories/GHSA-c476-6w5q-jw77">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-88017.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="rclone serve s3: --auth-proxy without --auth-key authenticates nobody - full SigV4 signature bypass" data-vendor="Go" data-cve="CVE-2026-88018">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-88018</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-88018.html">rclone serve s3: --auth-proxy without --auth-key authenticates nobody - full SigV4 signature bypass</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/rclone/rclone</p>
+              <p class="feed-summary">rclone serve s3: --auth-proxy without --auth-key authenticates nobody - full SigV4 signature bypass</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-xwwr-4h3p-r22c">GitHub Advisory GHSA-xwwr-4h3p-r22c</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88018">NVD — CVE-2026-88018</a><a href="https://github.com/rclone/rclone/security/advisories/GHSA-xwwr-4h3p-r22c">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-88018.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="rclone: RC per-server auth-proxy bypass" data-vendor="Go" data-cve="CVE-2026-88044">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-88044</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-88044.html">rclone: RC per-server auth-proxy bypass</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/rclone/rclone</p>
+              <p class="feed-summary">rclone: RC per-server auth-proxy bypass</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-p569-5gjg-9cmj">GitHub Advisory GHSA-p569-5gjg-9cmj</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88044">NVD — CVE-2026-88044</a><a href="https://github.com/rclone/rclone/security/advisories/GHSA-p569-5gjg-9cmj">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-88044.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="rclone: S3 multipart declared-length memory exhaustion" data-vendor="Go" data-cve="CVE-2026-88045">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-88045</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-go-cve-2026-88045.html">rclone: S3 multipart declared-length memory exhaustion</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/rclone/rclone</p>
+              <p class="feed-summary">rclone: S3 multipart declared-length memory exhaustion</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/rclone/rclone is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-2p48-j3qc-rx9f">GitHub Advisory GHSA-2p48-j3qc-rx9f</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88045">NVD — CVE-2026-88045</a><a href="https://github.com/rclone/rclone/security/advisories/GHSA-2p48-j3qc-rx9f">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-go-cve-2026-88045.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="MikroTik RouterOS Missing Authentication for Critical Function Vulnerability" data-vendor="MikroTik" data-cve="CVE-2026-67277">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-67277</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-mikrotik-cve-2026-67277.html">MikroTik RouterOS Missing Authentication for Critical Function Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">MikroTik · RouterOS</p>
+              <p class="feed-summary">MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-67277">NVD — CVE-2026-67277</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-mikrotik-cve-2026-67277.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability" data-vendor="MikroTik" data-cve="CVE-2026-86060">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-86060</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-mikrotik-cve-2026-86060.html">MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">MikroTik · RouterOS</p>
+              <p class="feed-summary">MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86060">NVD — CVE-2026-86060</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-mikrotik-cve-2026-86060.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="@argos-ci/core: CI Branch Name OS Command Injection" data-vendor="npm" data-cve="CVE-2026-59960">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-59960</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-59960.html">@argos-ci/core: CI Branch Name OS Command Injection</a>
+              </h2>
+              <p class="feed-vendor">npm · @argos-ci/core</p>
+              <p class="feed-summary">@argos-ci/core: CI Branch Name OS Command Injection</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether @argos-ci/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-4x45-gxvp-6283">GitHub Advisory GHSA-4x45-gxvp-6283</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59960">NVD — CVE-2026-59960</a><a href="https://github.com/argos-ci/argos-javascript/security/advisories/GHSA-4x45-gxvp-6283">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-59960.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="@jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` ..." data-vendor="npm" data-cve="CVE-2026-59965">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-59965</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-59965.html">@jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` ...</a>
+              </h2>
+              <p class="feed-vendor">npm · @jhb.software/payload-alt-text-plugin</p>
+              <p class="feed-summary">@jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` Omission</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether @jhb.software/payload-alt-text-plugin is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-4qpv-39hg-f7fx">GitHub Advisory GHSA-4qpv-39hg-f7fx</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59965">NVD — CVE-2026-59965</a><a href="https://github.com/jhb-software/payload-plugins/security/advisories/GHSA-4qpv-39hg-f7fx">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-59965.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="n8n: Expression Sandbox Escape via Shared Builtin Tampering and Code-Printer Injection Leads to Code Execution" data-vendor="npm" data-cve="CVE-2026-86083">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-86083</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-86083.html">n8n: Expression Sandbox Escape via Shared Builtin Tampering and Code-Printer Injection Leads to Code Execution</a>
+              </h2>
+              <p class="feed-vendor">npm · n8n</p>
+              <p class="feed-summary">n8n: Expression Sandbox Escape via Shared Builtin Tampering and Code-Printer Injection Leads to Code Execution</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether n8n is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7. EPSS probability: 0.3%; percentile: 20%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-6xcw-7xm6-48c6">GitHub Advisory GHSA-6xcw-7xm6-48c6</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86083">NVD — CVE-2026-86083</a><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-6xcw-7xm6-48c6">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-86083.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Angular: SSR XSS via Unescaped &lt;template&gt; Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements" data-vendor="npm" data-cve="CVE-2026-88060">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-88060</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-88060.html">Angular: SSR XSS via Unescaped &lt;template&gt; Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements</a>
+              </h2>
+              <p class="feed-vendor">npm · @angular/platform-server</p>
+              <p class="feed-summary">Angular: SSR XSS via Unescaped &lt;template&gt; Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether @angular/platform-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-v3p8-whq6-r5jg">GitHub Advisory GHSA-v3p8-whq6-r5jg</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88060">NVD — CVE-2026-88060</a><a href="https://github.com/angular/angular/security/advisories/GHSA-v3p8-whq6-r5jg">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-88060.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="OmniRoute ACP Custom-Agent Remote Code Execution (RCE)" data-vendor="npm" data-cve="CVE-2026-88062">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-88062</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-npm-cve-2026-88062.html">OmniRoute ACP Custom-Agent Remote Code Execution (RCE)</a>
+              </h2>
+              <p class="feed-vendor">npm · omniroute</p>
+              <p class="feed-summary">OmniRoute ACP Custom-Agent Remote Code Execution (RCE)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether omniroute is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.5.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-hf57-cqmx-p4gr">GitHub Advisory GHSA-hf57-cqmx-p4gr</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88062">NVD — CVE-2026-88062</a><a href="https://github.com/diegosouzapw/OmniRoute/security/advisories/GHSA-hf57-cqmx-p4gr">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-npm-cve-2026-88062.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout" data-vendor="PyPI" data-cve="CVE-2026-87011">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-87011</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-pypi-cve-2026-87011.html">Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout</a>
+              </h2>
+              <p class="feed-vendor">PyPI · open-webui</p>
+              <p class="feed-summary">Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 27%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-3g9q-v48f-hh9w">GitHub Advisory GHSA-3g9q-v48f-hh9w</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87011">NVD — CVE-2026-87011</a><a href="https://github.com/open-webui/open-webui/security/advisories/GHSA-3g9q-v48f-hh9w">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-pypi-cve-2026-87011.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite" data-vendor="PyPI" data-cve="CVE-2026-87016">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-87016</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-pypi-cve-2026-87016.html">Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite</a>
+              </h2>
+              <p class="feed-vendor">PyPI · open-webui</p>
+              <p class="feed-summary">Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether open-webui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 26%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-wpmr-8h3q-fwj7">GitHub Advisory GHSA-wpmr-8h3q-fwj7</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87016">NVD — CVE-2026-87016</a><a href="https://github.com/open-webui/open-webui/security/advisories/GHSA-wpmr-8h3q-fwj7">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-pypi-cve-2026-87016.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="mistral.rs: Unbounded Remote Media Fetch and Video Frame Expansion DoS" data-vendor="Rust">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-rust-ghsa-m3wp-48jr-vr4g.html">mistral.rs: Unbounded Remote Media Fetch and Video Frame Expansion DoS</a>
+              </h2>
+              <p class="feed-vendor">Rust · mistralrs-server-core</p>
+              <p class="feed-summary">mistral.rs: Unbounded Remote Media Fetch and Video Frame Expansion DoS</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether mistralrs-server-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-m3wp-48jr-vr4g">GitHub Advisory GHSA-m3wp-48jr-vr4g</a><a href="https://github.com/EricLBuehler/mistral.rs/security/advisories/GHSA-m3wp-48jr-vr4g">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-rust-ghsa-m3wp-48jr-vr4g.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="mistral.rs Media Loader: Unauthenticated SSRF and arbitrary local file read via image_url" data-vendor="Rust">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 10, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-rust-ghsa-wfgq-w7cq-qj7j.html">mistral.rs Media Loader: Unauthenticated SSRF and arbitrary local file read via image_url</a>
+              </h2>
+              <p class="feed-vendor">Rust · mistralrs-server-core</p>
+              <p class="feed-summary">mistral.rs Media Loader: Unauthenticated SSRF and arbitrary local file read via image_url</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether mistralrs-server-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-wfgq-w7cq-qj7j">GitHub Advisory GHSA-wfgq-w7cq-qj7j</a><a href="https://github.com/EricLBuehler/mistral.rs/security/advisories/GHSA-wfgq-w7cq-qj7j">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-rust-ghsa-wfgq-w7cq-qj7j.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability" data-vendor="Cisco" data-cve="CVE-2026-20079">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -439,6 +879,28 @@
                 <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87491">NVD — CVE-2026-87491</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-09-google-cve-2026-87491.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Google Chrome — CVE-2026-87534 (Critical)" data-vendor="Google" data-cve="CVE-2026-87534">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-87534</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-google-cve-2026-87534.html">Google Chrome — CVE-2026-87534 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Google · Chrome</p>
+              <p class="feed-summary">Missing authorization in WebView in Google Chrome on on Android prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to bypass system access restrictions via crafted network traffic. (Chromium security severity: Medium)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-87534 in your asset inventory. Apply patches per vendor guidance and verify Chrome is not exposed. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 7%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87534">NVD — CVE-2026-87534</a><a href="https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html">Source reference</a><a href="https://issues.chromium.org/issues/513134173">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-google-cve-2026-87534.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Google Chrome — CVE-2026-87544 (Critical)" data-vendor="Google" data-cve="CVE-2026-87544">
@@ -681,6 +1143,50 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-vv4j-m4vr-f3g6">GitHub Advisory GHSA-vv4j-m4vr-f3g6</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59177">NVD — CVE-2026-59177</a><a href="https://github.com/esphome/device-builder/security/advisories/GHSA-vv4j-m4vr-f3g6">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-09-pypi-cve-2026-59177.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Samsung Android — CVE-2026-21095 (Critical)" data-vendor="Samsung" data-cve="CVE-2026-21095">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-21095</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-samsung-cve-2026-21095.html">Samsung Android — CVE-2026-21095 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Samsung · Android</p>
+              <p class="feed-summary">Heap-based buffer overflow in DNG decoder of libimagecodec.quram.so prior to SMR Sep-2026 Release 1 allows remote attackers to execute arbitrary code.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-21095 in your asset inventory. Apply patches per vendor guidance and verify Android is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 34%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21095">NVD — CVE-2026-21095</a><a href="https://security.samsungmobile.com/securityUpdate.smsb?year=2026&amp;month=09">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-samsung-cve-2026-21095.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Samsung Android — CVE-2026-21096 (Critical)" data-vendor="Samsung" data-cve="CVE-2026-21096">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-21096</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-samsung-cve-2026-21096.html">Samsung Android — CVE-2026-21096 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Samsung · Android</p>
+              <p class="feed-summary">Heap-based buffer overflow in JPEG decoder of libimagecodec.quram.so prior to SMR Sep-2026 Release 1 allows remote attackers to execute arbitrary code.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-21096 in your asset inventory. Apply patches per vendor guidance and verify Android is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 34%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21096">NVD — CVE-2026-21096</a><a href="https://security.samsungmobile.com/securityUpdate.smsb?year=2026&amp;month=09">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-samsung-cve-2026-21096.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Adobe Commerce and Magento Improper Neutralization of Special Elements Used in a Template Engine Vulnerability" data-vendor="Adobe" data-cve="CVE-2026-75650">
@@ -1297,6 +1803,94 @@
                 <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-85880">NVD — CVE-2026-85880</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-09-microsoft-cve-2026-85880.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Patch Tuesday" data-signal="critical" data-title="Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi..." data-vendor="Microsoft" data-cve="CVE-2026-87536">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 8, 2026</span>
+                  <span class="type-badge">Patch Tuesday</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-87536</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-microsoft-cve-2026-87536.html">Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi...</a>
+              </h2>
+              <p class="feed-vendor">Microsoft · Mariner</p>
+              <p class="feed-summary">Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High) Published in September 2026 Security Updates.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the Microsoft Security Update Guide entry for CVE-2026-87536. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 19%.</p>
+                <div class="feed-sources"><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-87536">MSRC 2026-Sep Security Update Guide</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87536">NVD — CVE-2026-87536</a><a href="https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-microsoft-cve-2026-87536.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Patch Tuesday" data-signal="critical" data-title="Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi..." data-vendor="Microsoft" data-cve="CVE-2026-87587">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 8, 2026</span>
+                  <span class="type-badge">Patch Tuesday</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-87587</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-microsoft-cve-2026-87587.html">Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi...</a>
+              </h2>
+              <p class="feed-vendor">Microsoft · Mariner</p>
+              <p class="feed-summary">Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High) Published in September 2026 Security Updates.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the Microsoft Security Update Guide entry for CVE-2026-87587. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 23%.</p>
+                <div class="feed-sources"><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-87587">MSRC 2026-Sep Security Update Guide</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87587">NVD — CVE-2026-87587</a><a href="https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-microsoft-cve-2026-87587.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Patch Tuesday" data-signal="critical" data-title="Type confusion in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi..." data-vendor="Microsoft" data-cve="CVE-2026-87612">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 8, 2026</span>
+                  <span class="type-badge">Patch Tuesday</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-87612</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-microsoft-cve-2026-87612.html">Type confusion in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code insi...</a>
+              </h2>
+              <p class="feed-vendor">Microsoft · Mariner</p>
+              <p class="feed-summary">Type confusion in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High) Published in September 2026 Security Updates.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the Microsoft Security Update Guide entry for CVE-2026-87612. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 24%.</p>
+                <div class="feed-sources"><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-87612">MSRC 2026-Sep Security Update Guide</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87612">NVD — CVE-2026-87612</a><a href="https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-microsoft-cve-2026-87612.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Patch Tuesday" data-signal="critical" data-title="Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering ..." data-vendor="Microsoft" data-cve="CVE-2026-87625">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 8, 2026</span>
+                  <span class="type-badge">Patch Tuesday</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-87625</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-microsoft-cve-2026-87625.html">Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering ...</a>
+              </h2>
+              <p class="feed-vendor">Microsoft · Mariner</p>
+              <p class="feed-summary">Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to execute arbitrary code inside the sandbox via a crafted Chrome extension. (Chromium security severity: Medium) Published in September 2026 Security Updates.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the Microsoft Security Update Guide entry for CVE-2026-87625. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 19%.</p>
+                <div class="feed-sources"><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-87625">MSRC 2026-Sep Security Update Guide</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87625">NVD — CVE-2026-87625</a><a href="https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-microsoft-cve-2026-87625.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="N-able N-central Static Code Injection Vulnerability" data-vendor="N-able" data-cve="CVE-2026-86218">

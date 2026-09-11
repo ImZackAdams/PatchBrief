@@ -1,0 +1,37 @@
+id: 2026-09-aomei-vu-687587
+slug: 2026-09-aomei-vu-687587
+external_id: VU-687587
+source: cert_vu
+date: '2026-09-10'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#687587: AOMEI Backupper amwrtdrv.sys local privilege escalation vulnerability
+  allows arbitrary writes to physical ...'
+summary: 'Overview An incorrect permissions assignment vulnerability in the amwrtdrv.sys
+  kernel driver, included with AOMEI Backupper 8.4.0, allows an unprivileged local
+  user to perform arbitrary writes to the physical disk. When Secure Boot is disabled,
+  this can be leveraged to execute arbitrary UEFI-level code before the operating
+  system loads. This allows an attacker to bypass OS-level security controls, including
+  HVCI, EDR solutions, and Microsoft Defender. The attack may also enable capture
+  of BitLocker Volume Master Key (VMK) material, depending on the system''s BitLocker
+  configuration. Description AOMEI Backupper from AOMEI International Network Limited
+  is designed to provide backup and disaster recovery services. It also helps individuals
+  and businesses to create system images, disk clones, and file backups. AOMEI Backupper
+  is available as... Related CVEs: CVE-2026-12780.'
+vendor: AOMEI
+product: Backupper amwrtdrv.sys local privilege escalation vulnerability
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Backupper amwrtdrv.sys local privilege escalation vulnerability where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#687587
+  url: https://kb.cert.org/vuls/id/687587
+tags:
+- vu-687587
+- coordinated-disclosure
+- aomei
+- cert-vu
+is_sample: false
