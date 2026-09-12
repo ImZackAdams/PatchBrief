@@ -1,0 +1,37 @@
+id: 2026-09-exllamav3-vu-369611
+slug: 2026-09-exllamav3-vu-369611
+external_id: VU-369611
+source: cert_vu
+date: '2026-09-11'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#369611: ExLlamaV3 contains Denial of Service vulnerability via insufficient
+  bounds checking on kernel dispatch index'
+summary: 'Overview An out-of-bounds (OOB) memory access vulnerability involving unchecked
+  array indexing has been identified in the exllamav3_ext compute unified device architecture
+  ( CUDA ) extension. Successful exploitation can lead to an immediate denial of service
+  or application instability. This vulnerability is tracked as CVE-2026-84286. Description
+  An OOB memory access vulnerability exists in the exllamav3_ext module due to insufficient
+  input validation. When the kernel parameter K is set to 0 in a crafted input, the
+  extension generates a negative array index, resulting in a CUDA illegal memory access.s.
+  The root cause is a missing bounds check in the kernel-table dispatch process. The
+  checkpoint-derived block index ( cbi ) is used to access a fixed 24-entry array
+  without confirming that either K or cbi fall within safe limits. Impact... Related
+  CVEs: CVE-2026-84286.'
+vendor: ExLlamaV3
+product: ExLlamaV3
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for ExLlamaV3 where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#369611
+  url: https://kb.cert.org/vuls/id/369611
+tags:
+- vu-369611
+- coordinated-disclosure
+- exllamav3
+- cert-vu
+is_sample: false
