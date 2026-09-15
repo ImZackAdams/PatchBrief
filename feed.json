@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-14T16:07:17Z",
-  "total_items": 1544,
+  "generated": "2026-09-15T14:11:43Z",
+  "total_items": 1547,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-14T16:07:17Z",
+    "generated": "2026-09-15T14:11:43Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-09-14T15:42:02Z",
-        "finished_at": "2026-09-14T15:42:02Z"
+        "items_seen": 1,
+        "started_at": "2026-09-15T14:11:30Z",
+        "finished_at": "2026-09-15T14:11:30Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-14T15:42:02Z",
-        "finished_at": "2026-09-14T15:42:03Z"
+        "started_at": "2026-09-15T14:11:30Z",
+        "finished_at": "2026-09-15T14:11:31Z"
       },
       {
         "id": "nvd",
@@ -36,26 +36,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-14T15:42:03Z",
-        "finished_at": "2026-09-14T15:42:10Z"
+        "started_at": "2026-09-15T14:11:31Z",
+        "finished_at": "2026-09-15T14:11:37Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 11,
-        "started_at": "2026-09-14T15:42:10Z",
-        "finished_at": "2026-09-14T15:42:11Z"
+        "items_seen": 2,
+        "started_at": "2026-09-15T14:11:37Z",
+        "finished_at": "2026-09-15T14:11:38Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-09-14T15:42:11Z",
-        "finished_at": "2026-09-14T15:42:11Z"
+        "items_seen": 0,
+        "started_at": "2026-09-15T14:11:38Z",
+        "finished_at": "2026-09-15T14:11:38Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,122 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-14T15:42:11Z",
-        "finished_at": "2026-09-14T15:42:12Z"
+        "started_at": "2026-09-15T14:11:38Z",
+        "finished_at": "2026-09-15T14:11:39Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 8,
-        "started_at": "2026-09-14T15:42:12Z",
-        "finished_at": "2026-09-14T15:42:12Z"
+        "items_seen": 1,
+        "started_at": "2026-09-15T14:11:39Z",
+        "finished_at": "2026-09-15T14:11:39Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-cisco-cve-2026-76461",
+      "slug": "2026-09-cisco-cve-2026-76461",
+      "url": "https://www.patchbrief.org/items/2026-09-cisco-cve-2026-76461.html",
+      "date": "2026-09-14",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Cisco Secure Email Gateway SQL Injection Vulnerability",
+      "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
+      "vendor": "Cisco",
+      "product": "Secure Email Gateway",
+      "cve": "CVE-2026-76461",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-76461 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-17. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-76461",
+        "kev",
+        "cisco",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-76461",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76461"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-56668",
+      "slug": "2026-09-go-cve-2026-56668",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-56668.html",
+      "date": "2026-09-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ZITADEL: Unauthorized Token Privilege Escalation in OAuth2 Token Exchange",
+      "summary": "ZITADEL: Unauthorized Token Privilege Escalation in OAuth2 Token Exchange",
+      "vendor": "Go",
+      "product": "github.com/zitadel/zitadel",
+      "cve": "CVE-2026-56668",
+      "operator_check": "Check whether github.com/zitadel/zitadel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 35%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/zitadel/zitadel. Prioritize it with other application dependency updates, especially because EPSS places it in the 35% percentile.",
+      "tags": [
+        "cve-2026-56668",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vrh8-c9cm-wh8v",
+          "url": "https://github.com/advisories/GHSA-vrh8-c9cm-wh8v"
+        },
+        {
+          "title": "NVD — CVE-2026-56668",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56668"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zitadel/zitadel/security/advisories/GHSA-vrh8-c9cm-wh8v"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-59178",
+      "slug": "2026-09-pypi-cve-2026-59178",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-59178.html",
+      "date": "2026-09-14",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ESPHome Device Builder: Renamed auth env vars silently disable dashboard authentication on upgrade",
+      "summary": "ESPHome Device Builder: Renamed auth env vars silently disable dashboard authentication on upgrade",
+      "vendor": "PyPI",
+      "product": "esphome-device-builder",
+      "cve": "CVE-2026-59178",
+      "operator_check": "Check whether esphome-device-builder is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for esphome-device-builder. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-59178",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rrxg-g2pf-6hh4",
+          "url": "https://github.com/advisories/GHSA-rrxg-g2pf-6hh4"
+        },
+        {
+          "title": "NVD — CVE-2026-59178",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59178"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/esphome/device-builder/security/advisories/GHSA-rrxg-g2pf-6hh4"
+        }
+      ]
+    },
     {
       "id": "2026-09-composer-cve-2026-56825",
       "slug": "2026-09-composer-cve-2026-56825",
