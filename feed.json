@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-15T14:11:43Z",
-  "total_items": 1547,
+  "generated": "2026-09-16T14:03:45Z",
+  "total_items": 1566,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-15T14:11:43Z",
+    "generated": "2026-09-16T14:03:45Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-09-15T14:11:30Z",
-        "finished_at": "2026-09-15T14:11:30Z"
+        "items_seen": 2,
+        "started_at": "2026-09-16T14:03:32Z",
+        "finished_at": "2026-09-16T14:03:33Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-15T14:11:30Z",
-        "finished_at": "2026-09-15T14:11:31Z"
+        "started_at": "2026-09-16T14:03:33Z",
+        "finished_at": "2026-09-16T14:03:34Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-09-15T14:11:31Z",
-        "finished_at": "2026-09-15T14:11:37Z"
+        "items_seen": 1,
+        "started_at": "2026-09-16T14:03:34Z",
+        "finished_at": "2026-09-16T14:03:41Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-09-15T14:11:37Z",
-        "finished_at": "2026-09-15T14:11:38Z"
+        "items_seen": 19,
+        "started_at": "2026-09-16T14:03:41Z",
+        "finished_at": "2026-09-16T14:03:42Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-15T14:11:38Z",
-        "finished_at": "2026-09-15T14:11:38Z"
+        "started_at": "2026-09-16T14:03:42Z",
+        "finished_at": "2026-09-16T14:03:42Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,678 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-15T14:11:38Z",
-        "finished_at": "2026-09-15T14:11:39Z"
+        "started_at": "2026-09-16T14:03:42Z",
+        "finished_at": "2026-09-16T14:03:43Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-09-15T14:11:39Z",
-        "finished_at": "2026-09-15T14:11:39Z"
+        "items_seen": 4,
+        "started_at": "2026-09-16T14:03:43Z",
+        "finished_at": "2026-09-16T14:03:43Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-google-cve-2026-58704",
+      "slug": "2026-09-google-cve-2026-58704",
+      "url": "https://www.patchbrief.org/items/2026-09-google-cve-2026-58704.html",
+      "date": "2026-09-16",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Google Pixel Improper Authorization Vulnerability",
+      "summary": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
+      "vendor": "Google",
+      "product": "Pixel",
+      "cve": "CVE-2026-58704",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-58704 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-19. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-58704",
+        "kev",
+        "google",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-58704",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58704"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-61560",
+      "slug": "2026-09-npm-cve-2026-61560",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-61560.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@zereight/mcp-gitlab: Unauthenticated arbitrary file read via `upload_markdown` enables PAT exfiltration and full acc...",
+      "summary": "@zereight/mcp-gitlab: Unauthenticated arbitrary file read via `upload_markdown` enables PAT exfiltration and full account takeover",
+      "vendor": "npm",
+      "product": "@zereight/mcp-gitlab",
+      "cve": "CVE-2026-61560",
+      "operator_check": "Check whether @zereight/mcp-gitlab is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @zereight/mcp-gitlab. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61560",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cv3r-c5h8-f4g5",
+          "url": "https://github.com/advisories/GHSA-cv3r-c5h8-f4g5"
+        },
+        {
+          "title": "NVD — CVE-2026-61560",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61560"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-cv3r-c5h8-f4g5"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-nuget-cve-2026-81192",
+      "slug": "2026-09-nuget-cve-2026-81192",
+      "url": "https://www.patchbrief.org/items/2026-09-nuget-cve-2026-81192.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenTelemetry.Resources.Host vulnerable to arbitrary code execution via local PATH hijacking on macOS",
+      "summary": "OpenTelemetry.Resources.Host vulnerable to arbitrary code execution via local PATH hijacking on macOS",
+      "vendor": "NuGet",
+      "product": "OpenTelemetry.Resources.Host",
+      "cve": "CVE-2026-81192",
+      "operator_check": "Check whether OpenTelemetry.Resources.Host is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.1%; percentile: 4%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for OpenTelemetry.Resources.Host. Prioritize it with other application dependency updates, especially because EPSS places it in the 4% percentile.",
+      "tags": [
+        "cve-2026-81192",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v8pv-4842-x354",
+          "url": "https://github.com/advisories/GHSA-v8pv-4842-x354"
+        },
+        {
+          "title": "NVD — CVE-2026-81192",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81192"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/open-telemetry/opentelemetry-dotnet-contrib/security/advisories/GHSA-v8pv-4842-x354"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-61590",
+      "slug": "2026-09-pypi-cve-2026-61590",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61590.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust's observability endpoints are network-exposed: the localhost gate is an opt-in middleware the docs omit, and th...",
+      "summary": "djust's observability endpoints are network-exposed: the localhost gate is an opt-in middleware the docs omit, and the views enforce only DEBUG",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": "CVE-2026-61590",
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61590",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8g2f-g3gq-5rjv",
+          "url": "https://github.com/advisories/GHSA-8g2f-g3gq-5rjv"
+        },
+        {
+          "title": "NVD — CVE-2026-61590",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61590"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-8g2f-g3gq-5rjv"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-61598",
+      "slug": "2026-09-pypi-cve-2026-61598",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61598.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust: Client mass-assignment of arbitrary view attributes via the default dj-model update_model handler",
+      "summary": "djust: Client mass-assignment of arbitrary view attributes via the default dj-model update_model handler",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": "CVE-2026-61598",
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61598",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cc7c-9jff-58wj",
+          "url": "https://github.com/advisories/GHSA-cc7c-9jff-58wj"
+        },
+        {
+          "title": "NVD — CVE-2026-61598",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61598"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-cc7c-9jff-58wj"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-61554",
+      "slug": "2026-09-go-cve-2026-61554",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-61554.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "emp3r0r has an unauthenticated HTTP Polling DoS",
+      "summary": "emp3r0r has an unauthenticated HTTP Polling DoS",
+      "vendor": "Go",
+      "product": "github.com/jm33-m0/emp3r0r/core",
+      "cve": "CVE-2026-61554",
+      "operator_check": "Check whether github.com/jm33-m0/emp3r0r/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/jm33-m0/emp3r0r/core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61554",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4595-rvpx-4q34",
+          "url": "https://github.com/advisories/GHSA-4595-rvpx-4q34"
+        },
+        {
+          "title": "NVD — CVE-2026-61554",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61554"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jm33-m0/emp3r0r/security/advisories/GHSA-4595-rvpx-4q34"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-69202",
+      "slug": "2026-09-maven-cve-2026-69202",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-69202.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Http4s Ember HTTP/2: unbounded inbound body buffering",
+      "summary": "Http4s Ember HTTP/2: unbounded inbound body buffering",
+      "vendor": "Maven",
+      "product": "org.http4s:http4s-ember-core_2.12",
+      "cve": "CVE-2026-69202",
+      "operator_check": "Check whether org.http4s:http4s-ember-core_2.12 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:http4s-ember-core_2.12. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69202",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6m4x-pp6q-5jmm",
+          "url": "https://github.com/advisories/GHSA-6m4x-pp6q-5jmm"
+        },
+        {
+          "title": "NVD — CVE-2026-69202",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69202"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/http4s/security/advisories/GHSA-6m4x-pp6q-5jmm"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-69203",
+      "slug": "2026-09-maven-cve-2026-69203",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-69203.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Http4s Ember HTTP/2 does not enforce SETTINGS_MAX_CONCURRENT_STREAMS",
+      "summary": "Http4s Ember HTTP/2 does not enforce SETTINGS_MAX_CONCURRENT_STREAMS",
+      "vendor": "Maven",
+      "product": "org.http4s:http4s-ember-core_2.12",
+      "cve": "CVE-2026-69203",
+      "operator_check": "Check whether org.http4s:http4s-ember-core_2.12 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:http4s-ember-core_2.12. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69203",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9vwc-pc8p-253q",
+          "url": "https://github.com/advisories/GHSA-9vwc-pc8p-253q"
+        },
+        {
+          "title": "NVD — CVE-2026-69203",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69203"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/http4s/security/advisories/GHSA-9vwc-pc8p-253q"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-69204",
+      "slug": "2026-09-maven-cve-2026-69204",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-69204.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Http4s Ember accepts Transfer-Encoding combined with Content-Length (CL.TE request smuggling)",
+      "summary": "Http4s Ember accepts Transfer-Encoding combined with Content-Length (CL.TE request smuggling)",
+      "vendor": "Maven",
+      "product": "org.http4s:http4s-ember-core_2.12",
+      "cve": "CVE-2026-69204",
+      "operator_check": "Check whether org.http4s:http4s-ember-core_2.12 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:http4s-ember-core_2.12. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69204",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8h4c-x2wg-6xp8",
+          "url": "https://github.com/advisories/GHSA-8h4c-x2wg-6xp8"
+        },
+        {
+          "title": "NVD — CVE-2026-69204",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69204"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/http4s/security/advisories/GHSA-8h4c-x2wg-6xp8"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-69205",
+      "slug": "2026-09-maven-cve-2026-69205",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-69205.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Http4s Ember Transfer-Encoding value parsing (TE.CL / TE.0 request smuggling)",
+      "summary": "Http4s Ember Transfer-Encoding value parsing (TE.CL / TE.0 request smuggling)",
+      "vendor": "Maven",
+      "product": "org.http4s:http4s-ember-core_3",
+      "cve": "CVE-2026-69205",
+      "operator_check": "Check whether org.http4s:http4s-ember-core_3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:http4s-ember-core_3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69205",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9998-894r-fwvr",
+          "url": "https://github.com/advisories/GHSA-9998-894r-fwvr"
+        },
+        {
+          "title": "NVD — CVE-2026-69205",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69205"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/http4s/security/advisories/GHSA-9998-894r-fwvr"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-69208",
+      "slug": "2026-09-maven-cve-2026-69208",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-69208.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Http4s: DigestAuth nonce map grows unbounded",
+      "summary": "Http4s: DigestAuth nonce map grows unbounded",
+      "vendor": "Maven",
+      "product": "org.http4s:http4s-ember-server_2.12",
+      "cve": "CVE-2026-69208",
+      "operator_check": "Check whether org.http4s:http4s-ember-server_2.12 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:http4s-ember-server_2.12. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69208",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fm4g-76c9-7w69",
+          "url": "https://github.com/advisories/GHSA-fm4g-76c9-7w69"
+        },
+        {
+          "title": "NVD — CVE-2026-69208",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69208"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/http4s/security/advisories/GHSA-fm4g-76c9-7w69"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-69213",
+      "slug": "2026-09-maven-cve-2026-69213",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-69213.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Http4s Ember HTTP/2 has an unbounded outbound frame queue",
+      "summary": "Http4s Ember HTTP/2 has an unbounded outbound frame queue",
+      "vendor": "Maven",
+      "product": "org.http4s:http4s-ember-core_2.12",
+      "cve": "CVE-2026-69213",
+      "operator_check": "Check whether org.http4s:http4s-ember-core_2.12 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:http4s-ember-core_2.12. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69213",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8f3q-3jmv-7prw",
+          "url": "https://github.com/advisories/GHSA-8f3q-3jmv-7prw"
+        },
+        {
+          "title": "NVD — CVE-2026-69213",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69213"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/http4s/security/advisories/GHSA-8f3q-3jmv-7prw"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-69218",
+      "slug": "2026-09-maven-cve-2026-69218",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-69218.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Http4s Ember HTTP/2: unbounded continuation frame accumulation",
+      "summary": "Http4s Ember HTTP/2: unbounded continuation frame accumulation",
+      "vendor": "Maven",
+      "product": "org.http4s:http4s-ember-core_2.12",
+      "cve": "CVE-2026-69218",
+      "operator_check": "Check whether org.http4s:http4s-ember-core_2.12 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:http4s-ember-core_2.12. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69218",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cp4q-fqw9-4hf6",
+          "url": "https://github.com/advisories/GHSA-cp4q-fqw9-4hf6"
+        },
+        {
+          "title": "NVD — CVE-2026-69218",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69218"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/http4s/security/advisories/GHSA-cp4q-fqw9-4hf6"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-88975",
+      "slug": "2026-09-maven-cve-2026-88975",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-88975.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Http4s: Ember HTTP/2 buffers a frame's declared payload before checking SETTINGS_MAX_FRAME_SIZE",
+      "summary": "Http4s: Ember HTTP/2 buffers a frame's declared payload before checking SETTINGS_MAX_FRAME_SIZE",
+      "vendor": "Maven",
+      "product": "org.http4s:http4s-ember-core_2.13",
+      "cve": "CVE-2026-88975",
+      "operator_check": "Check whether org.http4s:http4s-ember-core_2.13 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.http4s:http4s-ember-core_2.13. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88975",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gq9p-f254-h286",
+          "url": "https://github.com/advisories/GHSA-gq9p-f254-h286"
+        },
+        {
+          "title": "NVD — CVE-2026-88975",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88975"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/http4s/http4s/security/advisories/GHSA-gq9p-f254-h286"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-61559",
+      "slug": "2026-09-npm-cve-2026-61559",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-61559.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@zereight/mcp-gitlab Vulnerable to Server-Side Request Forgery",
+      "summary": "@zereight/mcp-gitlab Vulnerable to Server-Side Request Forgery",
+      "vendor": "npm",
+      "product": "@zereight/mcp-gitlab",
+      "cve": "CVE-2026-61559",
+      "operator_check": "Check whether @zereight/mcp-gitlab is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @zereight/mcp-gitlab. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61559",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2h44-8472-frjj",
+          "url": "https://github.com/advisories/GHSA-2h44-8472-frjj"
+        },
+        {
+          "title": "NVD — CVE-2026-61559",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61559"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-2h44-8472-frjj"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-61568",
+      "slug": "2026-09-npm-cve-2026-61568",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-61568.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@zereight/mcp-gitlab: DNS rebinding reaches local Streamable HTTP MCP transport",
+      "summary": "@zereight/mcp-gitlab: DNS rebinding reaches local Streamable HTTP MCP transport",
+      "vendor": "npm",
+      "product": "@zereight/mcp-gitlab",
+      "cve": "CVE-2026-61568",
+      "operator_check": "Check whether @zereight/mcp-gitlab is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @zereight/mcp-gitlab. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61568",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vmp7-252j-cwp7",
+          "url": "https://github.com/advisories/GHSA-vmp7-252j-cwp7"
+        },
+        {
+          "title": "NVD — CVE-2026-61568",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61568"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-vmp7-252j-cwp7"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-ghsa-5648-rgj9-v224",
+      "slug": "2026-09-npm-ghsa-5648-rgj9-v224",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-ghsa-5648-rgj9-v224.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@zereight/mcp-gitlab has multiple safety-control bypasses: execute_graphql read-only + allow-list bypass, unauthentic...",
+      "summary": "@zereight/mcp-gitlab has multiple safety-control bypasses: execute_graphql read-only + allow-list bypass, unauthenticated transports, session-exhaustion DoS",
+      "vendor": "npm",
+      "product": "@zereight/mcp-gitlab",
+      "cve": null,
+      "operator_check": "Check whether @zereight/mcp-gitlab is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @zereight/mcp-gitlab. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-5648-rgj9-v224",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5648-rgj9-v224",
+          "url": "https://github.com/advisories/GHSA-5648-rgj9-v224"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-5648-rgj9-v224"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-61544",
+      "slug": "2026-09-rust-cve-2026-61544",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-61544.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "libp2p-quic: Remote panic via certificate expiry race during QUIC handshake",
+      "summary": "libp2p-quic: Remote panic via certificate expiry race during QUIC handshake",
+      "vendor": "Rust",
+      "product": "libp2p-quic",
+      "cve": "CVE-2026-61544",
+      "operator_check": "Check whether libp2p-quic is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for libp2p-quic. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61544",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5hq8-qhww-jm7q",
+          "url": "https://github.com/advisories/GHSA-5hq8-qhww-jm7q"
+        },
+        {
+          "title": "NVD — CVE-2026-61544",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61544"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/libp2p/rust-libp2p/security/advisories/GHSA-5hq8-qhww-jm7q"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-yonyou-cve-2024-58385",
+      "slug": "2026-09-yonyou-cve-2024-58385",
+      "url": "https://www.patchbrief.org/items/2026-09-yonyou-cve-2024-58385.html",
+      "date": "2026-09-15",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Yonyou U8 CRM — CVE-2024-58385 (Critical)",
+      "summary": "Yonyou U8 CRM contains an unauthenticated SQL injection vulnerability in the fillbacksettingedit.php configuration endpoint where the DontCheckLogin=1 parameter bypasses authentication and the id parameter is incorporated into SQL queries without sanitization. Attackers can exploit this flaw to execute arbitrary SQL commands and, on Microsoft SQL Server deployments with xp_cmdshell enabled, write backdoor files and execute arbitrary operating system commands. Exploitation evidence was first observed by the Shadowserver Foundation on 2025-02-13.",
+      "vendor": "Yonyou",
+      "product": "U8 CRM",
+      "cve": "CVE-2024-58385",
+      "operator_check": "Review CVE-2024-58385 in your asset inventory. Apply patches per vendor guidance and verify U8 CRM is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Yonyou U8 CRM. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2024-58385",
+        "vendor-advisory",
+        "yonyou",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2024-58385",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58385"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://cn-sec.com/archives/3234745.html"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://security.yonyou.com/#/noticeInfo?id=618"
+        }
+      ]
+    },
     {
       "id": "2026-09-cisco-cve-2026-76461",
       "slug": "2026-09-cisco-cve-2026-76461",
