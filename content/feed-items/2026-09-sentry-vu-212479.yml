@@ -1,0 +1,37 @@
+id: 2026-09-sentry-vu-212479
+slug: 2026-09-sentry-vu-212479
+external_id: VU-212479
+source: cert_vu
+date: '2026-09-16'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#212479: Sentry Seer vulnerability allows attacker-controlled input to be
+  executed in a privileged environment'
+summary: 'Overview A vulnerability exists in Sentry Seer when the system is configured
+  to automatically hand issues to a coding agent for remediation. Successful exploitation
+  results in arbitrary code execution within the coding‑agent environment and access
+  to connected source repositories. This vulnerability is tracked as CVE-2026-90999
+  . Description Sentry is a software error‑monitoring and performance‑tracking platform
+  used by developers to detect, diagnose, and understand issues in their applications.
+  It collects telemetry such as exceptions, stack traces, logs, and performance data
+  from applications. Built into Sentry, Seer acts as an automated debugging assistant
+  that converts telemetry into actionable remediation steps and can hand off issues
+  to an integrated coding agent to propose code fixes. Because Sentry front-end projects
+  commonly... Related CVEs: CVE-2026-90999.'
+vendor: Sentry
+product: Seer vulnerability
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Seer vulnerability where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#212479
+  url: https://kb.cert.org/vuls/id/212479
+tags:
+- vu-212479
+- coordinated-disclosure
+- sentry
+- cert-vu
+is_sample: false

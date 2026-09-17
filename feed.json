@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-16T14:03:45Z",
-  "total_items": 1566,
+  "generated": "2026-09-17T14:08:34Z",
+  "total_items": 1584,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-16T14:03:45Z",
+    "generated": "2026-09-17T14:08:34Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-09-16T14:03:32Z",
-        "finished_at": "2026-09-16T14:03:33Z"
+        "items_seen": 4,
+        "started_at": "2026-09-17T14:08:16Z",
+        "finished_at": "2026-09-17T14:08:16Z"
       },
       {
         "id": "msrc",
@@ -27,35 +27,35 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-16T14:03:33Z",
-        "finished_at": "2026-09-16T14:03:34Z"
+        "started_at": "2026-09-17T14:08:16Z",
+        "finished_at": "2026-09-17T14:08:17Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-09-16T14:03:34Z",
-        "finished_at": "2026-09-16T14:03:41Z"
+        "items_seen": 3,
+        "started_at": "2026-09-17T14:08:17Z",
+        "finished_at": "2026-09-17T14:08:24Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 19,
-        "started_at": "2026-09-16T14:03:41Z",
-        "finished_at": "2026-09-16T14:03:42Z"
+        "items_seen": 30,
+        "started_at": "2026-09-17T14:08:24Z",
+        "finished_at": "2026-09-17T14:08:26Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-09-16T14:03:42Z",
-        "finished_at": "2026-09-16T14:03:42Z"
+        "items_seen": 2,
+        "started_at": "2026-09-17T14:08:26Z",
+        "finished_at": "2026-09-17T14:08:27Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,83 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-16T14:03:42Z",
-        "finished_at": "2026-09-16T14:03:43Z"
+        "started_at": "2026-09-17T14:08:27Z",
+        "finished_at": "2026-09-17T14:08:31Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-09-16T14:03:43Z",
-        "finished_at": "2026-09-16T14:03:43Z"
+        "items_seen": 20,
+        "started_at": "2026-09-17T14:08:31Z",
+        "finished_at": "2026-09-17T14:08:32Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-acronis-cve-2026-87886",
+      "slug": "2026-09-acronis-cve-2026-87886",
+      "url": "https://www.patchbrief.org/items/2026-09-acronis-cve-2026-87886.html",
+      "date": "2026-09-16",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Acronis Backup Incorrect Default Permissions Vulnerability",
+      "summary": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.",
+      "vendor": "Acronis",
+      "product": "Backup",
+      "cve": "CVE-2026-87886",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-87886 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-19. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-87886",
+        "kev",
+        "acronis",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-87886",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87886"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-cisco-cve-2026-76460",
+      "slug": "2026-09-cisco-cve-2026-76460",
+      "url": "https://www.patchbrief.org/items/2026-09-cisco-cve-2026-76460.html",
+      "date": "2026-09-16",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
+      "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.",
+      "vendor": "Cisco",
+      "product": "Identity Services Engine",
+      "cve": "CVE-2026-76460",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-76460 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-19. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-76460",
+        "kev",
+        "cisco",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-76460",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76460"
+        }
+      ]
+    },
     {
       "id": "2026-09-google-cve-2026-58704",
       "slug": "2026-09-google-cve-2026-58704",
@@ -145,6 +207,76 @@
       ]
     },
     {
+      "id": "2026-09-npm-cve-2026-63671",
+      "slug": "2026-09-npm-cve-2026-63671",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-63671.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@nuxtjs/mdc's URL sanitizer misses SVG xlink:href and data:text/html, allowing XSS from untrusted markdown at the def...",
+      "summary": "@nuxtjs/mdc's URL sanitizer misses SVG xlink:href and data:text/html, allowing XSS from untrusted markdown at the default configuration",
+      "vendor": "npm",
+      "product": "@nuxtjs/mdc",
+      "cve": "CVE-2026-63671",
+      "operator_check": "Check whether @nuxtjs/mdc is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @nuxtjs/mdc. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-63671",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mxm6-v9r6-r94c",
+          "url": "https://github.com/advisories/GHSA-mxm6-v9r6-r94c"
+        },
+        {
+          "title": "NVD — CVE-2026-63671",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63671"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nuxt-content/mdc/security/advisories/GHSA-mxm6-v9r6-r94c"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-68904",
+      "slug": "2026-09-npm-cve-2026-68904",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-68904.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "node-opcua: TCP Socket Leak (FIN-WAIT-2) via keepalive reconnection cycle - Resource Exhaustion",
+      "summary": "node-opcua: TCP Socket Leak (FIN-WAIT-2) via keepalive reconnection cycle - Resource Exhaustion",
+      "vendor": "npm",
+      "product": "node-opcua-transport",
+      "cve": "CVE-2026-68904",
+      "operator_check": "Check whether node-opcua-transport is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for node-opcua-transport. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-68904",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r2pf-9cw4-5j65",
+          "url": "https://github.com/advisories/GHSA-r2pf-9cw4-5j65"
+        },
+        {
+          "title": "NVD — CVE-2026-68904",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68904"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/node-opcua/node-opcua/security/advisories/GHSA-r2pf-9cw4-5j65"
+        }
+      ]
+    },
+    {
       "id": "2026-09-nuget-cve-2026-81192",
       "slug": "2026-09-nuget-cve-2026-81192",
       "url": "https://www.patchbrief.org/items/2026-09-nuget-cve-2026-81192.html",
@@ -176,6 +308,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/open-telemetry/opentelemetry-dotnet-contrib/security/advisories/GHSA-v8pv-4842-x354"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2025-59953",
+      "slug": "2026-09-pypi-cve-2025-59953",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2025-59953.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LMdeploy has Remote Code Execution by Pickle Deserialization via zmq_rpc.call_and_response() in InterLM/lmdeploy",
+      "summary": "LMdeploy has Remote Code Execution by Pickle Deserialization via zmq_rpc.call_and_response() in InterLM/lmdeploy",
+      "vendor": "PyPI",
+      "product": "lmdeploy",
+      "cve": "CVE-2025-59953",
+      "operator_check": "Check whether lmdeploy is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for lmdeploy. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2025-59953",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5h8j-6crg-7rmw",
+          "url": "https://github.com/advisories/GHSA-5h8j-6crg-7rmw"
+        },
+        {
+          "title": "NVD — CVE-2025-59953",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59953"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/InternLM/lmdeploy/security/advisories/GHSA-5h8j-6crg-7rmw"
         }
       ]
     },
@@ -215,6 +382,216 @@
       ]
     },
     {
+      "id": "2026-09-pypi-cve-2026-61591",
+      "slug": "2026-09-pypi-cve-2026-61591",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61591.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust: Unsigned client state snapshot is restored as trusted view state (privilege escalation / state injection)",
+      "summary": "djust: Unsigned client state snapshot is restored as trusted view state (privilege escalation / state injection)",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": "CVE-2026-61591",
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61591",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c67v-vqrp-m5wj",
+          "url": "https://github.com/advisories/GHSA-c67v-vqrp-m5wj"
+        },
+        {
+          "title": "NVD — CVE-2026-61591",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61591"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-c67v-vqrp-m5wj"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-61592",
+      "slug": "2026-09-pypi-cve-2026-61592",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61592.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust: SSE sessions are not bound to the authenticated user; the client-chosen session_id is the sole authorization c...",
+      "summary": "djust: SSE sessions are not bound to the authenticated user; the client-chosen session_id is the sole authorization capability (session hijack)",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": "CVE-2026-61592",
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61592",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f795-p5jw-j6g2",
+          "url": "https://github.com/advisories/GHSA-f795-p5jw-j6g2"
+        },
+        {
+          "title": "NVD — CVE-2026-61592",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61592"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-f795-p5jw-j6g2"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-61593",
+      "slug": "2026-09-pypi-cve-2026-61593",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61593.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust has Cross-Site Request Forgery on the Server-Sent-Events transport: a cross-origin page can drive a victim-auth...",
+      "summary": "djust has Cross-Site Request Forgery on the Server-Sent-Events transport: a cross-origin page can drive a victim-authenticated SSE session",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": "CVE-2026-61593",
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61593",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pg97-jvmf-qfvc",
+          "url": "https://github.com/advisories/GHSA-pg97-jvmf-qfvc"
+        },
+        {
+          "title": "NVD — CVE-2026-61593",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61593"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-pg97-jvmf-qfvc"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-61594",
+      "slug": "2026-09-pypi-cve-2026-61594",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61594.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust has an authorization bypass on the WebSocket/SSE mount path",
+      "summary": "djust has an authorization bypass on the WebSocket/SSE mount path",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": "CVE-2026-61594",
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61594",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xhhm-f6hp-2qwj",
+          "url": "https://github.com/advisories/GHSA-xhhm-f6hp-2qwj"
+        },
+        {
+          "title": "NVD — CVE-2026-61594",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61594"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-xhhm-f6hp-2qwj"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-61595",
+      "slug": "2026-09-pypi-cve-2026-61595",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61595.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust: Multi-tenant isolation fails open on the WebSocket/SSE path, disclosing other tenants' data",
+      "summary": "djust: Multi-tenant isolation fails open on the WebSocket/SSE path, disclosing other tenants' data",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": "CVE-2026-61595",
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61595",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3492-cvg7-9mr2",
+          "url": "https://github.com/advisories/GHSA-3492-cvg7-9mr2"
+        },
+        {
+          "title": "NVD — CVE-2026-61595",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61595"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-3492-cvg7-9mr2"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-61596",
+      "slug": "2026-09-pypi-cve-2026-61596",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61596.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust has broken object-level access control (IDOR)",
+      "summary": "djust has broken object-level access control (IDOR)",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": "CVE-2026-61596",
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61596",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c7c5-5j6r-q957",
+          "url": "https://github.com/advisories/GHSA-c7c5-5j6r-q957"
+        },
+        {
+          "title": "NVD — CVE-2026-61596",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61596"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-c7c5-5j6r-q957"
+        }
+      ]
+    },
+    {
       "id": "2026-09-pypi-cve-2026-61598",
       "slug": "2026-09-pypi-cve-2026-61598",
       "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61598.html",
@@ -246,6 +623,165 @@
         {
           "title": "Source reference",
           "url": "https://github.com/djust-org/djust/security/advisories/GHSA-cc7c-9jff-58wj"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-61599",
+      "slug": "2026-09-pypi-cve-2026-61599",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-61599.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust has an unauthenticated arbitrary module import via the WebSocket/SSE view-mount path",
+      "summary": "djust has an unauthenticated arbitrary module import via the WebSocket/SSE view-mount path",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": "CVE-2026-61599",
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61599",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7prp-2623-8g45",
+          "url": "https://github.com/advisories/GHSA-7prp-2623-8g45"
+        },
+        {
+          "title": "NVD — CVE-2026-61599",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61599"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-7prp-2623-8g45"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-63127",
+      "slug": "2026-09-rust-cve-2026-63127",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-63127.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "RMCP: Missing Resource Field Validation in OAuth Protected Resource Metadata Discovery",
+      "summary": "RMCP: Missing Resource Field Validation in OAuth Protected Resource Metadata Discovery",
+      "vendor": "Rust",
+      "product": "rmcp",
+      "cve": "CVE-2026-63127",
+      "operator_check": "Check whether rmcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for rmcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-63127",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-33f5-2c5q-wgwj",
+          "url": "https://github.com/advisories/GHSA-33f5-2c5q-wgwj"
+        },
+        {
+          "title": "NVD — CVE-2026-63127",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63127"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/modelcontextprotocol/rust-sdk/security/advisories/GHSA-33f5-2c5q-wgwj"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rust-cve-2026-63128",
+      "slug": "2026-09-rust-cve-2026-63128",
+      "url": "https://www.patchbrief.org/items/2026-09-rust-cve-2026-63128.html",
+      "date": "2026-09-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "RMCP: Unauthenticated permanent session-table leak in rmcp Streamable HTTP server transport leads to remote denial-of...",
+      "summary": "RMCP: Unauthenticated permanent session-table leak in rmcp Streamable HTTP server transport leads to remote denial-of-service",
+      "vendor": "Rust",
+      "product": "rmcp",
+      "cve": "CVE-2026-63128",
+      "operator_check": "Check whether rmcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for rmcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-63128",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9pj6-vhgr-3mwh",
+          "url": "https://github.com/advisories/GHSA-9pj6-vhgr-3mwh"
+        },
+        {
+          "title": "NVD — CVE-2026-63128",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63128"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/modelcontextprotocol/rust-sdk/security/advisories/GHSA-9pj6-vhgr-3mwh"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-sentry-vu-212479",
+      "slug": "2026-09-sentry-vu-212479",
+      "url": "https://www.patchbrief.org/items/2026-09-sentry-vu-212479.html",
+      "date": "2026-09-16",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#212479: Sentry Seer vulnerability allows attacker-controlled input to be executed in a privileged environment",
+      "summary": "Overview A vulnerability exists in Sentry Seer when the system is configured to automatically hand issues to a coding agent for remediation. Successful exploitation results in arbitrary code execution within the coding‑agent environment and access to connected source repositories. This vulnerability is tracked as CVE-2026-90999 . Description Sentry is a software error‑monitoring and performance‑tracking platform used by developers to detect, diagnose, and understand issues in their applications. It collects telemetry such as exceptions, stack traces, logs, and performance data from applications. Built into Sentry, Seer acts as an automated debugging assistant that converts telemetry into actionable remediation steps and can hand off issues to an integrated coding agent to propose code fixes. Because Sentry front-end projects commonly... Related CVEs: CVE-2026-90999.",
+      "vendor": "Sentry",
+      "product": "Seer vulnerability",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Seer vulnerability where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-212479",
+        "coordinated-disclosure",
+        "sentry",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#212479",
+          "url": "https://kb.cert.org/vuls/id/212479"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-when-vu-369093",
+      "slug": "2026-09-when-vu-369093",
+      "url": "https://www.patchbrief.org/items/2026-09-when-vu-369093.html",
+      "date": "2026-09-16",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#369093: MLflow dspy and statsmodels flavors bypass pickle deserialization control",
+      "summary": "Overview A vulnerability in MLflow’s dspy and statsmodels model flavors allows unauthorized pickle deserialization executions despite a safety control. Specifically, the dspy flavor conditionally applies the control based on the model path’s file extension, and the statsmodels flavor does not apply the control. Description MLflow is an open-source platform for managing machine learning lifecycles, including model packaging, versioning, and deployment. \"Flavors\" refer to the specialized frameworks through which supported models are stored and loaded. In response to previous vulnerability concerns, MLflow implemented the MLFLOW_ALLOW_PICKLE_DESERIALIZATION safety control to block and disable executing any pickle deserialization and subsequent loads per the user’s choice. When loading models through mlflow.pyfunc.load_model(model) , users...",
+      "vendor": "When",
+      "product": "loading models",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for loading models where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-369093",
+        "coordinated-disclosure",
+        "when",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#369093",
+          "url": "https://kb.cert.org/vuls/id/369093"
         }
       ]
     },
@@ -732,6 +1268,76 @@
         {
           "title": "Source reference",
           "url": "https://security.yonyou.com/#/noticeInfo?id=618"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-apple-cve-2026-43790",
+      "slug": "2026-09-apple-cve-2026-43790",
+      "url": "https://www.patchbrief.org/items/2026-09-apple-cve-2026-43790.html",
+      "date": "2026-09-14",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apple Macos — CVE-2026-43790 (Critical)",
+      "summary": "The issue was addressed with improved memory handling. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. A remote attacker may be able to cause unexpected system termination or corrupt kernel memory.",
+      "vendor": "Apple",
+      "product": "Macos",
+      "cve": "CVE-2026-43790",
+      "operator_check": "Review CVE-2026-43790 in your asset inventory. Apply patches per vendor guidance and verify Macos is not exposed. CVSS score: 9.1. EPSS probability: 0.3%; percentile: 21%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Apple Macos. Patch or mitigate promptly. EPSS percentile: 21%.",
+      "tags": [
+        "cve-2026-43790",
+        "vendor-advisory",
+        "apple",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-43790",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43790"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://support.apple.com/en-us/149035"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://support.apple.com/en-us/149042"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-apple-cve-2026-65381",
+      "slug": "2026-09-apple-cve-2026-65381",
+      "url": "https://www.patchbrief.org/items/2026-09-apple-cve-2026-65381.html",
+      "date": "2026-09-14",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Apple Macos — CVE-2026-65381 (Critical)",
+      "summary": "A validation issue existed in the entitlement verification. This issue was addressed with improved validation of the process entitlement. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. A malicious app may be able to break out of its sandbox.",
+      "vendor": "Apple",
+      "product": "Macos",
+      "cve": "CVE-2026-65381",
+      "operator_check": "Review CVE-2026-65381 in your asset inventory. Apply patches per vendor guidance and verify Macos is not exposed. CVSS score: 10.0. EPSS probability: 0.2%; percentile: 9%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 10.0) in Apple Macos. Patch or mitigate promptly. EPSS percentile: 9%.",
+      "tags": [
+        "cve-2026-65381",
+        "vendor-advisory",
+        "apple",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-65381",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65381"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://support.apple.com/en-us/149035"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://support.apple.com/en-us/149042"
         }
       ]
     },

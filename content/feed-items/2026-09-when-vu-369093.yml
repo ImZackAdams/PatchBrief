@@ -1,0 +1,37 @@
+id: 2026-09-when-vu-369093
+slug: 2026-09-when-vu-369093
+external_id: VU-369093
+source: cert_vu
+date: '2026-09-16'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#369093: MLflow dspy and statsmodels flavors bypass pickle deserialization
+  control'
+summary: Overview A vulnerability in MLflow’s dspy and statsmodels model flavors allows
+  unauthorized pickle deserialization executions despite a safety control. Specifically,
+  the dspy flavor conditionally applies the control based on the model path’s file
+  extension, and the statsmodels flavor does not apply the control. Description MLflow
+  is an open-source platform for managing machine learning lifecycles, including model
+  packaging, versioning, and deployment. "Flavors" refer to the specialized frameworks
+  through which supported models are stored and loaded. In response to previous vulnerability
+  concerns, MLflow implemented the MLFLOW_ALLOW_PICKLE_DESERIALIZATION safety control
+  to block and disable executing any pickle deserialization and subsequent loads per
+  the user’s choice. When loading models through mlflow.pyfunc.load_model(model) ,
+  users...
+vendor: When
+product: loading models
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for loading models where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#369093
+  url: https://kb.cert.org/vuls/id/369093
+tags:
+- vu-369093
+- coordinated-disclosure
+- when
+- cert-vu
+is_sample: false
