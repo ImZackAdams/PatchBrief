@@ -1,0 +1,36 @@
+id: 2026-09-dokploy-vu-280377
+slug: 2026-09-dokploy-vu-280377
+external_id: VU-280377
+source: cert_vu
+date: '2026-09-17'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#280377: Dokploy is vulnerable to OS command injection'
+summary: Overview Dokploy versions 0.29.8 and 0.29.11, as well as commit 24b02f5 on
+  the canary branch, are vulnerable to OS command injection during the backup creation
+  and restoration processes. The vulnerability stems from unsanitized shell command
+  construction that can allow an attacker to escalate privileges and lead to full
+  compromise of the target device. Description Dokploy is an open-source Platform
+  as a Service solution for deploying applications and databases on self-hosted servers.
+  Dokploy allows authenticated users to create and schedule database backups and restore
+  previously created backups. These backup operations are executed by the Dokploy
+  process, which runs with root privileges by default. Dokploy is vulnerable to OS
+  command injection in its database backup creation and restoration functionality
+  due to insufficient sanitization...
+vendor: Dokploy
+product: Dokploy
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Dokploy where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#280377
+  url: https://kb.cert.org/vuls/id/280377
+tags:
+- vu-280377
+- coordinated-disclosure
+- dokploy
+- cert-vu
+is_sample: false

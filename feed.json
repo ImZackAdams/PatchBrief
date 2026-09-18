@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-17T14:08:34Z",
-  "total_items": 1584,
+  "generated": "2026-09-18T13:26:09Z",
+  "total_items": 1609,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-17T14:08:34Z",
+    "generated": "2026-09-18T13:26:09Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-09-17T14:08:16Z",
-        "finished_at": "2026-09-17T14:08:16Z"
+        "items_seen": 3,
+        "started_at": "2026-09-18T13:25:56Z",
+        "finished_at": "2026-09-18T13:25:56Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-17T14:08:16Z",
-        "finished_at": "2026-09-17T14:08:17Z"
+        "started_at": "2026-09-18T13:25:56Z",
+        "finished_at": "2026-09-18T13:25:57Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-09-17T14:08:17Z",
-        "finished_at": "2026-09-17T14:08:24Z"
+        "items_seen": 1,
+        "started_at": "2026-09-18T13:25:57Z",
+        "finished_at": "2026-09-18T13:26:03Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-09-17T14:08:24Z",
-        "finished_at": "2026-09-17T14:08:26Z"
+        "started_at": "2026-09-18T13:26:03Z",
+        "finished_at": "2026-09-18T13:26:04Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-09-17T14:08:26Z",
-        "finished_at": "2026-09-17T14:08:27Z"
+        "items_seen": 3,
+        "started_at": "2026-09-18T13:26:04Z",
+        "finished_at": "2026-09-18T13:26:05Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,880 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-17T14:08:27Z",
-        "finished_at": "2026-09-17T14:08:31Z"
+        "started_at": "2026-09-18T13:26:05Z",
+        "finished_at": "2026-09-18T13:26:05Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 20,
-        "started_at": "2026-09-17T14:08:31Z",
-        "finished_at": "2026-09-17T14:08:32Z"
+        "items_seen": 12,
+        "started_at": "2026-09-18T13:26:05Z",
+        "finished_at": "2026-09-18T13:26:06Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-maven-cve-2026-77615",
+      "slug": "2026-09-maven-cve-2026-77615",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-77615.html",
+      "date": "2026-09-18",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Opencast: Stored XSS in Paella player via WebVTT/DFXP caption cue text",
+      "summary": "Opencast: Stored XSS in Paella player via WebVTT/DFXP caption cue text",
+      "vendor": "Maven",
+      "product": "org.opencastproject:opencast-engage-paella-player-7",
+      "cve": "CVE-2026-77615",
+      "operator_check": "Check whether org.opencastproject:opencast-engage-paella-player-7 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.opencastproject:opencast-engage-paella-player-7. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-77615",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m6c8-jcw2-5r25",
+          "url": "https://github.com/advisories/GHSA-m6c8-jcw2-5r25"
+        },
+        {
+          "title": "NVD — CVE-2026-77615",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77615"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/opencast/opencast/security/advisories/GHSA-m6c8-jcw2-5r25"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-45140",
+      "slug": "2026-09-composer-cve-2026-45140",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-45140.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Chamilo LMS CStudio upload flow allows unauthenticated remote code execution",
+      "summary": "Chamilo LMS CStudio upload flow allows unauthenticated remote code execution",
+      "vendor": "Composer",
+      "product": "chamilo/chamilo-lms",
+      "cve": "CVE-2026-45140",
+      "operator_check": "Check whether chamilo/chamilo-lms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for chamilo/chamilo-lms. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-45140",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g4c3-4g96-6g4m",
+          "url": "https://github.com/advisories/GHSA-g4c3-4g96-6g4m"
+        },
+        {
+          "title": "NVD — CVE-2026-45140",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45140"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/chamilo/chamilo-lms/security/advisories/GHSA-g4c3-4g96-6g4m"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-72695",
+      "slug": "2026-09-composer-cve-2026-72695",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-72695.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Grav: Path Traversal in MediaUploadTrait::deleteFile() Allows Arbitrary File Deletion",
+      "summary": "Grav: Path Traversal in MediaUploadTrait::deleteFile() Allows Arbitrary File Deletion",
+      "vendor": "Composer",
+      "product": "getgrav/grav",
+      "cve": "CVE-2026-72695",
+      "operator_check": "Check whether getgrav/grav is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.6%; percentile: 46%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for getgrav/grav. Prioritize it with other application dependency updates, especially because EPSS places it in the 46% percentile.",
+      "tags": [
+        "cve-2026-72695",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jq29-c7v8-rg55",
+          "url": "https://github.com/advisories/GHSA-jq29-c7v8-rg55"
+        },
+        {
+          "title": "NVD — CVE-2026-72695",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72695"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getgrav/grav/security/advisories/GHSA-jq29-c7v8-rg55"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-72819",
+      "slug": "2026-09-composer-cve-2026-72819",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-72819.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Grav CMS vulnerable to remote code execution via .zip file upload",
+      "summary": "Grav CMS vulnerable to remote code execution via .zip file upload",
+      "vendor": "Composer",
+      "product": "getgrav/grav",
+      "cve": "CVE-2026-72819",
+      "operator_check": "Check whether getgrav/grav is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 42%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for getgrav/grav. Prioritize it with other application dependency updates, especially because EPSS places it in the 42% percentile.",
+      "tags": [
+        "cve-2026-72819",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r94f-hx44-8jqf",
+          "url": "https://github.com/advisories/GHSA-r94f-hx44-8jqf"
+        },
+        {
+          "title": "NVD — CVE-2026-72819",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72819"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getgrav/grav/security/advisories/GHSA-r94f-hx44-8jqf"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-74907",
+      "slug": "2026-09-composer-cve-2026-74907",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-74907.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Grav: Unauthenticated Path Traversal via Missing Directory-Boundary Check in `plugin-asset-map.php` Static Asset Serv...",
+      "summary": "Grav: Unauthenticated Path Traversal via Missing Directory-Boundary Check in `plugin-asset-map.php` Static Asset Server (`index.php`)",
+      "vendor": "Composer",
+      "product": "getgrav/grav",
+      "cve": "CVE-2026-74907",
+      "operator_check": "Check whether getgrav/grav is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2. EPSS probability: 0.3%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for getgrav/grav. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-74907",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4v9q-p283-qc2m",
+          "url": "https://github.com/advisories/GHSA-4v9q-p283-qc2m"
+        },
+        {
+          "title": "NVD — CVE-2026-74907",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74907"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getgrav/grav/security/advisories/GHSA-4v9q-p283-qc2m"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-75827",
+      "slug": "2026-09-composer-cve-2026-75827",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-75827.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Grav: Blueprint dynamic-data bare-function branch is denylist-gated and omits error_log, giving arbitrary file write",
+      "summary": "Grav: Blueprint dynamic-data bare-function branch is denylist-gated and omits error_log, giving arbitrary file write",
+      "vendor": "Composer",
+      "product": "getgrav/grav",
+      "cve": "CVE-2026-75827",
+      "operator_check": "Check whether getgrav/grav is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.8%; percentile: 54%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for getgrav/grav. Prioritize it with other application dependency updates, especially because EPSS places it in the 54% percentile.",
+      "tags": [
+        "cve-2026-75827",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f8wv-xp27-6gq7",
+          "url": "https://github.com/advisories/GHSA-f8wv-xp27-6gq7"
+        },
+        {
+          "title": "NVD — CVE-2026-75827",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75827"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getgrav/grav/security/advisories/GHSA-f8wv-xp27-6gq7"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-75828",
+      "slug": "2026-09-composer-cve-2026-75828",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-75828.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Grav: detectXss() misses an event-handler attribute after an unpaired quote in an unquoted attribute value, giving st...",
+      "summary": "Grav: detectXss() misses an event-handler attribute after an unpaired quote in an unquoted attribute value, giving stored XSS",
+      "vendor": "Composer",
+      "product": "getgrav/grav",
+      "cve": "CVE-2026-75828",
+      "operator_check": "Check whether getgrav/grav is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.3%; percentile: 28%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for getgrav/grav. Prioritize it with other application dependency updates, especially because EPSS places it in the 28% percentile.",
+      "tags": [
+        "cve-2026-75828",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vfmf-q6x9-cw96",
+          "url": "https://github.com/advisories/GHSA-vfmf-q6x9-cw96"
+        },
+        {
+          "title": "NVD — CVE-2026-75828",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75828"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getgrav/grav/security/advisories/GHSA-vfmf-q6x9-cw96"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-75837",
+      "slug": "2026-09-composer-cve-2026-75837",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-75837.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Grav: Missing admin.super guard on core group blueprint access field allows admin.users operator to escalate to super...",
+      "summary": "Grav: Missing admin.super guard on core group blueprint access field allows admin.users operator to escalate to super-admin",
+      "vendor": "Composer",
+      "product": "getgrav/grav",
+      "cve": "CVE-2026-75837",
+      "operator_check": "Check whether getgrav/grav is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7. EPSS probability: 0.3%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for getgrav/grav. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-75837",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xhfv-7758-r9hx",
+          "url": "https://github.com/advisories/GHSA-xhfv-7758-r9hx"
+        },
+        {
+          "title": "NVD — CVE-2026-75837",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75837"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getgrav/grav/security/advisories/GHSA-xhfv-7758-r9hx"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-79752",
+      "slug": "2026-09-composer-cve-2026-79752",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-79752.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "CakePHP: Multiple methods in FunctionsBuilder vulnerable to SQL injection",
+      "summary": "CakePHP: Multiple methods in FunctionsBuilder vulnerable to SQL injection",
+      "vendor": "Composer",
+      "product": "cakephp/database",
+      "cve": "CVE-2026-79752",
+      "operator_check": "Check whether cakephp/database is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for cakephp/database. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-79752",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vjqc-q4mp-2rvf",
+          "url": "https://github.com/advisories/GHSA-vjqc-q4mp-2rvf"
+        },
+        {
+          "title": "NVD — CVE-2026-79752",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79752"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/cakephp/cakephp/security/advisories/GHSA-vjqc-q4mp-2rvf"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-84997",
+      "slug": "2026-09-composer-cve-2026-84997",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-84997.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "react/http: A malformed HTTP chunked body can lead to a denial-of-service and peg the CPU",
+      "summary": "react/http: A malformed HTTP chunked body can lead to a denial-of-service and peg the CPU",
+      "vendor": "Composer",
+      "product": "react/http",
+      "cve": "CVE-2026-84997",
+      "operator_check": "Check whether react/http is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for react/http. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-84997",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x424-64qh-5j54",
+          "url": "https://github.com/advisories/GHSA-x424-64qh-5j54"
+        },
+        {
+          "title": "NVD — CVE-2026-84997",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84997"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/reactphp/http/security/advisories/GHSA-x424-64qh-5j54"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-dokploy-vu-280377",
+      "slug": "2026-09-dokploy-vu-280377",
+      "url": "https://www.patchbrief.org/items/2026-09-dokploy-vu-280377.html",
+      "date": "2026-09-17",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#280377: Dokploy is vulnerable to OS command injection",
+      "summary": "Overview Dokploy versions 0.29.8 and 0.29.11, as well as commit 24b02f5 on the canary branch, are vulnerable to OS command injection during the backup creation and restoration processes. The vulnerability stems from unsanitized shell command construction that can allow an attacker to escalate privileges and lead to full compromise of the target device. Description Dokploy is an open-source Platform as a Service solution for deploying applications and databases on self-hosted servers. Dokploy allows authenticated users to create and schedule database backups and restore previously created backups. These backup operations are executed by the Dokploy process, which runs with root privileges by default. Dokploy is vulnerable to OS command injection in its database backup creation and restoration functionality due to insufficient sanitization...",
+      "vendor": "Dokploy",
+      "product": "Dokploy",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Dokploy where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-280377",
+        "coordinated-disclosure",
+        "dokploy",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#280377",
+          "url": "https://kb.cert.org/vuls/id/280377"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-77405",
+      "slug": "2026-09-go-cve-2026-77405",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-77405.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "RabbitMQ amqp091-go: Missing Explicit TLS Minimum Version Configuration In URI Parser",
+      "summary": "RabbitMQ amqp091-go: Missing Explicit TLS Minimum Version Configuration In URI Parser",
+      "vendor": "Go",
+      "product": "github.com/rabbitmq/amqp091-go",
+      "cve": "CVE-2026-77405",
+      "operator_check": "Check whether github.com/rabbitmq/amqp091-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.4.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rabbitmq/amqp091-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-77405",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-33mj-cw25-m34h",
+          "url": "https://github.com/advisories/GHSA-33mj-cw25-m34h"
+        },
+        {
+          "title": "NVD — CVE-2026-77405",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77405"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rabbitmq/amqp091-go/security/advisories/GHSA-33mj-cw25-m34h"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-77408",
+      "slug": "2026-09-go-cve-2026-77408",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-77408.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "RabbitMQ amqp091-go: Silent Data Truncation and State Corruption via Shortstr Integer Overflow",
+      "summary": "RabbitMQ amqp091-go: Silent Data Truncation and State Corruption via Shortstr Integer Overflow",
+      "vendor": "Go",
+      "product": "github.com/rabbitmq/amqp091-go",
+      "cve": "CVE-2026-77408",
+      "operator_check": "Check whether github.com/rabbitmq/amqp091-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rabbitmq/amqp091-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-77408",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j497-x9hr-x34x",
+          "url": "https://github.com/advisories/GHSA-j497-x9hr-x34x"
+        },
+        {
+          "title": "NVD — CVE-2026-77408",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77408"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rabbitmq/amqp091-go/security/advisories/GHSA-j497-x9hr-x34x"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-77411",
+      "slug": "2026-09-go-cve-2026-77411",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-77411.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "RabbitMQ amqp091-go: Protocol Desynchronization and Frame Injection via Integer Overflow in readLongstr",
+      "summary": "RabbitMQ amqp091-go: Protocol Desynchronization and Frame Injection via Integer Overflow in readLongstr",
+      "vendor": "Go",
+      "product": "github.com/rabbitmq/amqp091-go",
+      "cve": "CVE-2026-77411",
+      "operator_check": "Check whether github.com/rabbitmq/amqp091-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.5.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/rabbitmq/amqp091-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-77411",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c5pq-fr2g-9jpf",
+          "url": "https://github.com/advisories/GHSA-c5pq-fr2g-9jpf"
+        },
+        {
+          "title": "NVD — CVE-2026-77411",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77411"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rabbitmq/amqp091-go/security/advisories/GHSA-c5pq-fr2g-9jpf"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-82399",
+      "slug": "2026-09-go-cve-2026-82399",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-82399.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CoreDNS: Unauthenticated memory exhaustion in custom transports",
+      "summary": "CoreDNS: Unauthenticated memory exhaustion in custom transports",
+      "vendor": "Go",
+      "product": "github.com/coredns/coredns",
+      "cve": "CVE-2026-82399",
+      "operator_check": "Check whether github.com/coredns/coredns is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coredns/coredns. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-82399",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mrg3-qvqr-jw29",
+          "url": "https://github.com/advisories/GHSA-mrg3-qvqr-jw29"
+        },
+        {
+          "title": "NVD — CVE-2026-82399",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82399"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coredns/coredns/security/advisories/GHSA-mrg3-qvqr-jw29"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-86003",
+      "slug": "2026-09-go-cve-2026-86003",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-86003.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CoreDNS DoH/DoQ/gRPC bypass UPDATE rejection enforced on UDP/TCP",
+      "summary": "CoreDNS DoH/DoQ/gRPC bypass UPDATE rejection enforced on UDP/TCP",
+      "vendor": "Go",
+      "product": "github.com/coredns/coredns",
+      "cve": "CVE-2026-86003",
+      "operator_check": "Check whether github.com/coredns/coredns is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/coredns/coredns. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-86003",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9gm5-9rfh-m6vx",
+          "url": "https://github.com/advisories/GHSA-9gm5-9rfh-m6vx"
+        },
+        {
+          "title": "NVD — CVE-2026-86003",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86003"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coredns/coredns/security/advisories/GHSA-9gm5-9rfh-m6vx"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-81875",
+      "slug": "2026-09-maven-cve-2026-81875",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-81875.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "HAPI FHIR: SHCParser unbounded DEFLATE decompression causes denial of service",
+      "summary": "HAPI FHIR: SHCParser unbounded DEFLATE decompression causes denial of service",
+      "vendor": "Maven",
+      "product": "ca.uhn.hapi.fhir:org.hl7.fhir.r5",
+      "cve": "CVE-2026-81875",
+      "operator_check": "Check whether ca.uhn.hapi.fhir:org.hl7.fhir.r5 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ca.uhn.hapi.fhir:org.hl7.fhir.r5. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-81875",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3w98-rrpr-fprr",
+          "url": "https://github.com/advisories/GHSA-3w98-rrpr-fprr"
+        },
+        {
+          "title": "NVD — CVE-2026-81875",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81875"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/hapifhir/org.hl7.fhir.core/security/advisories/GHSA-3w98-rrpr-fprr"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-81876",
+      "slug": "2026-09-maven-cve-2026-81876",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-81876.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "HAPI FHIR: SHCParser DEFLATE infinite loop causes denial of service",
+      "summary": "HAPI FHIR: SHCParser DEFLATE infinite loop causes denial of service",
+      "vendor": "Maven",
+      "product": "ca.uhn.hapi.fhir:org.hl7.fhir.r5",
+      "cve": "CVE-2026-81876",
+      "operator_check": "Check whether ca.uhn.hapi.fhir:org.hl7.fhir.r5 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ca.uhn.hapi.fhir:org.hl7.fhir.r5. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-81876",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gq9c-wmrm-5hvr",
+          "url": "https://github.com/advisories/GHSA-gq9c-wmrm-5hvr"
+        },
+        {
+          "title": "NVD — CVE-2026-81876",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81876"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/hapifhir/org.hl7.fhir.core/security/advisories/GHSA-gq9c-wmrm-5hvr"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-63472",
+      "slug": "2026-09-npm-cve-2026-63472",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-63472.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Vendure affected by external-authentication account takeover: external login linked to a pre-existing account by emai...",
+      "summary": "Vendure affected by external-authentication account takeover: external login linked to a pre-existing account by email without verification",
+      "vendor": "npm",
+      "product": "@vendure/core",
+      "cve": "CVE-2026-63472",
+      "operator_check": "Check whether @vendure/core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @vendure/core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-63472",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6j36-r6pr-59x4",
+          "url": "https://github.com/advisories/GHSA-6j36-r6pr-59x4"
+        },
+        {
+          "title": "NVD — CVE-2026-63472",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63472"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/vendurehq/vendure/security/advisories/GHSA-6j36-r6pr-59x4"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-nuget-cve-2026-75513",
+      "slug": "2026-09-nuget-cve-2026-75513",
+      "url": "https://www.patchbrief.org/items/2026-09-nuget-cve-2026-75513.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Marten's LINQ provider has SQL injection via unescaped string literals",
+      "summary": "Marten's LINQ provider has SQL injection via unescaped string literals",
+      "vendor": "NuGet",
+      "product": "Marten",
+      "cve": "CVE-2026-75513",
+      "operator_check": "Check whether Marten is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Marten. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-75513",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rfx3-98h7-v3xp",
+          "url": "https://github.com/advisories/GHSA-rfx3-98h7-v3xp"
+        },
+        {
+          "title": "NVD — CVE-2026-75513",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75513"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/JasperFx/marten/security/advisories/GHSA-rfx3-98h7-v3xp"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-nuget-cve-2026-81515",
+      "slug": "2026-09-nuget-cve-2026-81515",
+      "url": "https://www.patchbrief.org/items/2026-09-nuget-cve-2026-81515.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Steeltoe.Discovery.Eureka: malformed enum/bool/timestamp field aborts entire registry fetch (DoS)",
+      "summary": "Steeltoe.Discovery.Eureka: malformed enum/bool/timestamp field aborts entire registry fetch (DoS)",
+      "vendor": "NuGet",
+      "product": "Steeltoe.Discovery.Eureka",
+      "cve": "CVE-2026-81515",
+      "operator_check": "Check whether Steeltoe.Discovery.Eureka is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Steeltoe.Discovery.Eureka. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-81515",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hr73-3gpv-hh6q",
+          "url": "https://github.com/advisories/GHSA-hr73-3gpv-hh6q"
+        },
+        {
+          "title": "NVD — CVE-2026-81515",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81515"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SteeltoeOSS/security-advisories/security/advisories/GHSA-hr73-3gpv-hh6q"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-nuget-cve-2026-81516",
+      "slug": "2026-09-nuget-cve-2026-81516",
+      "url": "https://www.patchbrief.org/items/2026-09-nuget-cve-2026-81516.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Steeltoe.Discovery.Consul: malformed 'secure' metadata aborts service instance lookup (DoS)",
+      "summary": "Steeltoe.Discovery.Consul: malformed 'secure' metadata aborts service instance lookup (DoS)",
+      "vendor": "NuGet",
+      "product": "Steeltoe.Discovery.Consul",
+      "cve": "CVE-2026-81516",
+      "operator_check": "Check whether Steeltoe.Discovery.Consul is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Steeltoe.Discovery.Consul. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-81516",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-67c9-f6v2-qv86",
+          "url": "https://github.com/advisories/GHSA-67c9-f6v2-qv86"
+        },
+        {
+          "title": "NVD — CVE-2026-81516",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81516"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SteeltoeOSS/security-advisories/security/advisories/GHSA-67c9-f6v2-qv86"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-cve-2026-86049",
+      "slug": "2026-09-pypi-cve-2026-86049",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-86049.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Jupyter Server: 5xx request logging leaks token-bearing Referer header values",
+      "summary": "Jupyter Server: 5xx request logging leaks token-bearing Referer header values",
+      "vendor": "PyPI",
+      "product": "jupyter_server",
+      "cve": "CVE-2026-86049",
+      "operator_check": "Check whether jupyter_server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for jupyter_server. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-86049",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c3mw-737p-c7g2",
+          "url": "https://github.com/advisories/GHSA-c3mw-737p-c7g2"
+        },
+        {
+          "title": "NVD — CVE-2026-86049",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86049"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jupyter-server/jupyter_server/security/advisories/GHSA-c3mw-737p-c7g2"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-ghsa-9395-2g46-rj3f",
+      "slug": "2026-09-pypi-ghsa-9395-2g46-rj3f",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-ghsa-9395-2g46-rj3f.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust: Six template-layer defects emit attacker-controlled markup unescaped (XSS)",
+      "summary": "djust: Six template-layer defects emit attacker-controlled markup unescaped (XSS)",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": null,
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-9395-2g46-rj3f",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9395-2g46-rj3f",
+          "url": "https://github.com/advisories/GHSA-9395-2g46-rj3f"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-9395-2g46-rj3f"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-ghsa-xjw9-38cr-6372",
+      "slug": "2026-09-pypi-ghsa-xjw9-38cr-6372",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-ghsa-xjw9-38cr-6372.html",
+      "date": "2026-09-17",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "djust: A template binding inherits a context safety grant it never earned (XSS)",
+      "summary": "djust: A template binding inherits a context safety grant it never earned (XSS)",
+      "vendor": "PyPI",
+      "product": "djust",
+      "cve": null,
+      "operator_check": "Check whether djust is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for djust. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-xjw9-38cr-6372",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xjw9-38cr-6372",
+          "url": "https://github.com/advisories/GHSA-xjw9-38cr-6372"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djust-org/djust/security/advisories/GHSA-xjw9-38cr-6372"
+        }
+      ]
+    },
     {
       "id": "2026-09-acronis-cve-2026-87886",
       "slug": "2026-09-acronis-cve-2026-87886",
