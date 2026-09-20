@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-19T12:54:59Z",
-  "total_items": 1630,
+  "generated": "2026-09-20T13:28:38Z",
+  "total_items": 1633,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-19T12:54:59Z",
+    "generated": "2026-09-20T13:28:38Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 6,
-        "started_at": "2026-09-19T12:54:40Z",
-        "finished_at": "2026-09-19T12:54:40Z"
+        "items_seen": 3,
+        "started_at": "2026-09-20T13:28:24Z",
+        "finished_at": "2026-09-20T13:28:24Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-19T12:54:40Z",
-        "finished_at": "2026-09-19T12:54:41Z"
+        "started_at": "2026-09-20T13:28:24Z",
+        "finished_at": "2026-09-20T13:28:25Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-19T12:54:41Z",
-        "finished_at": "2026-09-19T12:54:48Z"
+        "started_at": "2026-09-20T13:28:25Z",
+        "finished_at": "2026-09-20T13:28:31Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-09-19T12:54:48Z",
-        "finished_at": "2026-09-19T12:54:49Z"
+        "started_at": "2026-09-20T13:28:31Z",
+        "finished_at": "2026-09-20T13:28:32Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-09-19T12:54:49Z",
-        "finished_at": "2026-09-19T12:54:51Z"
+        "items_seen": 1,
+        "started_at": "2026-09-20T13:28:32Z",
+        "finished_at": "2026-09-20T13:28:33Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,52 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-19T12:54:51Z",
-        "finished_at": "2026-09-19T12:54:51Z"
+        "started_at": "2026-09-20T13:28:33Z",
+        "finished_at": "2026-09-20T13:28:34Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 18,
-        "started_at": "2026-09-19T12:54:51Z",
-        "finished_at": "2026-09-19T12:54:52Z"
+        "items_seen": 28,
+        "started_at": "2026-09-20T13:28:34Z",
+        "finished_at": "2026-09-20T13:28:34Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-composer-ghsa-jr78-w6w5-m8f8",
+      "slug": "2026-09-composer-ghsa-jr78-w6w5-m8f8",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-ghsa-jr78-w6w5-m8f8.html",
+      "date": "2026-09-18",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Semantic MediaWiki'a missing authorization in the smwtask API module allows unauthenticated access to admin-only main...",
+      "summary": "Semantic MediaWiki'a missing authorization in the smwtask API module allows unauthenticated access to admin-only maintenance tasks",
+      "vendor": "Composer",
+      "product": "mediawiki/semantic-media-wiki",
+      "cve": null,
+      "operator_check": "Check whether mediawiki/semantic-media-wiki is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mediawiki/semantic-media-wiki. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-jr78-w6w5-m8f8",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jr78-w6w5-m8f8",
+          "url": "https://github.com/advisories/GHSA-jr78-w6w5-m8f8"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SemanticMediaWiki/SemanticMediaWiki/security/advisories/GHSA-jr78-w6w5-m8f8"
+        }
+      ]
+    },
     {
       "id": "2026-09-go-cve-2026-58197",
       "slug": "2026-09-go-cve-2026-58197",
@@ -724,6 +755,41 @@
       ]
     },
     {
+      "id": "2026-09-pypi-cve-2026-33625",
+      "slug": "2026-09-pypi-cve-2026-33625",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-33625.html",
+      "date": "2026-09-18",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LMDeploy vulnerable to arbitrary code execution via eval() of untrusted quant_dtype in model config loading",
+      "summary": "LMDeploy vulnerable to arbitrary code execution via eval() of untrusted quant_dtype in model config loading",
+      "vendor": "PyPI",
+      "product": "lmdeploy",
+      "cve": "CVE-2026-33625",
+      "operator_check": "Check whether lmdeploy is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for lmdeploy. Prioritize it with other application dependency updates, especially because EPSS places it in the 16% percentile.",
+      "tags": [
+        "cve-2026-33625",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3hmm-rh5q-gwwr",
+          "url": "https://github.com/advisories/GHSA-3hmm-rh5q-gwwr"
+        },
+        {
+          "title": "NVD — CVE-2026-33625",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33625"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/InternLM/lmdeploy/security/advisories/GHSA-3hmm-rh5q-gwwr"
+        }
+      ]
+    },
+    {
       "id": "2026-09-pypi-cve-2026-59163",
       "slug": "2026-09-pypi-cve-2026-59163",
       "url": "https://www.patchbrief.org/items/2026-09-pypi-cve-2026-59163.html",
@@ -825,6 +891,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/agronholm/anyio/security/advisories/GHSA-82r6-8w77-94w6"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-pypi-ghsa-39wr-7q6h-cf68",
+      "slug": "2026-09-pypi-ghsa-39wr-7q6h-cf68",
+      "url": "https://www.patchbrief.org/items/2026-09-pypi-ghsa-39wr-7q6h-cf68.html",
+      "date": "2026-09-18",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LMDeploy has an SSRF bypass",
+      "summary": "LMDeploy has an SSRF bypass",
+      "vendor": "PyPI",
+      "product": "lmdeploy",
+      "cve": null,
+      "operator_check": "Check whether lmdeploy is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for lmdeploy. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-39wr-7q6h-cf68",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-39wr-7q6h-cf68",
+          "url": "https://github.com/advisories/GHSA-39wr-7q6h-cf68"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/InternLM/lmdeploy/security/advisories/GHSA-39wr-7q6h-cf68"
         }
       ]
     },
