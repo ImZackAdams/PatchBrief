@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-20T13:28:38Z",
-  "total_items": 1633,
+  "generated": "2026-09-21T15:41:59Z",
+  "total_items": 1634,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-20T13:28:38Z",
+    "generated": "2026-09-21T15:41:59Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 3,
-        "started_at": "2026-09-20T13:28:24Z",
-        "finished_at": "2026-09-20T13:28:24Z"
+        "started_at": "2026-09-21T15:41:46Z",
+        "finished_at": "2026-09-21T15:41:47Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-20T13:28:24Z",
-        "finished_at": "2026-09-20T13:28:25Z"
+        "started_at": "2026-09-21T15:41:47Z",
+        "finished_at": "2026-09-21T15:41:47Z"
       },
       {
         "id": "nvd",
@@ -36,26 +36,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-20T13:28:25Z",
-        "finished_at": "2026-09-20T13:28:31Z"
+        "started_at": "2026-09-21T15:41:47Z",
+        "finished_at": "2026-09-21T15:41:54Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 30,
-        "started_at": "2026-09-20T13:28:31Z",
-        "finished_at": "2026-09-20T13:28:32Z"
+        "items_seen": 23,
+        "started_at": "2026-09-21T15:41:54Z",
+        "finished_at": "2026-09-21T15:41:54Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-09-20T13:28:32Z",
-        "finished_at": "2026-09-20T13:28:33Z"
+        "items_seen": 0,
+        "started_at": "2026-09-21T15:41:54Z",
+        "finished_at": "2026-09-21T15:41:55Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,56 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-20T13:28:33Z",
-        "finished_at": "2026-09-20T13:28:34Z"
+        "started_at": "2026-09-21T15:41:55Z",
+        "finished_at": "2026-09-21T15:41:55Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 28,
-        "started_at": "2026-09-20T13:28:34Z",
-        "finished_at": "2026-09-20T13:28:34Z"
+        "items_seen": 21,
+        "started_at": "2026-09-21T15:41:55Z",
+        "finished_at": "2026-09-21T15:41:56Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-composer-cve-2025-61682",
+      "slug": "2026-09-composer-cve-2025-61682",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2025-61682.html",
+      "date": "2026-09-18",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Semantic MediaWiki vulnerable to stored XSS through wikitext via improper use of non-reserved data attributes",
+      "summary": "Semantic MediaWiki vulnerable to stored XSS through wikitext via improper use of non-reserved data attributes",
+      "vendor": "Composer",
+      "product": "mediawiki/semantic-media-wiki",
+      "cve": "CVE-2025-61682",
+      "operator_check": "Check whether mediawiki/semantic-media-wiki is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 22%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mediawiki/semantic-media-wiki. Prioritize it with other application dependency updates, especially because EPSS places it in the 22% percentile.",
+      "tags": [
+        "cve-2025-61682",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hg8h-557g-q8pp",
+          "url": "https://github.com/advisories/GHSA-hg8h-557g-q8pp"
+        },
+        {
+          "title": "NVD — CVE-2025-61682",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61682"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SemanticMediaWiki/SemanticMediaWiki/security/advisories/GHSA-hg8h-557g-q8pp"
+        }
+      ]
+    },
     {
       "id": "2026-09-composer-ghsa-jr78-w6w5-m8f8",
       "slug": "2026-09-composer-ghsa-jr78-w6w5-m8f8",
