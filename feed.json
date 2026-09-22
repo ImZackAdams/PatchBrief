@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-21T16:09:53Z",
-  "total_items": 1634,
+  "generated": "2026-09-22T13:55:37Z",
+  "total_items": 1638,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-21T16:09:53Z",
+    "generated": "2026-09-22T13:55:37Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-09-21T15:41:46Z",
-        "finished_at": "2026-09-21T15:41:47Z"
+        "items_seen": 1,
+        "started_at": "2026-09-22T13:55:24Z",
+        "finished_at": "2026-09-22T13:55:24Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-21T15:41:47Z",
-        "finished_at": "2026-09-21T15:41:47Z"
+        "started_at": "2026-09-22T13:55:24Z",
+        "finished_at": "2026-09-22T13:55:25Z"
       },
       {
         "id": "nvd",
@@ -36,17 +36,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-21T15:41:47Z",
-        "finished_at": "2026-09-21T15:41:54Z"
+        "started_at": "2026-09-22T13:55:25Z",
+        "finished_at": "2026-09-22T13:55:32Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 23,
-        "started_at": "2026-09-21T15:41:54Z",
-        "finished_at": "2026-09-21T15:41:54Z"
+        "items_seen": 3,
+        "started_at": "2026-09-22T13:55:32Z",
+        "finished_at": "2026-09-22T13:55:32Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-21T15:41:54Z",
-        "finished_at": "2026-09-21T15:41:55Z"
+        "started_at": "2026-09-22T13:55:32Z",
+        "finished_at": "2026-09-22T13:55:32Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,157 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-21T15:41:55Z",
-        "finished_at": "2026-09-21T15:41:55Z"
+        "started_at": "2026-09-22T13:55:32Z",
+        "finished_at": "2026-09-22T13:55:33Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 21,
-        "started_at": "2026-09-21T15:41:55Z",
-        "finished_at": "2026-09-21T15:41:56Z"
+        "items_seen": 1,
+        "started_at": "2026-09-22T13:55:33Z",
+        "finished_at": "2026-09-22T13:55:33Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-go-cve-2026-61628",
+      "slug": "2026-09-go-cve-2026-61628",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-61628.html",
+      "date": "2026-09-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "nginx ignition has Unauthenticated Admin Account Creation via Onboarding Race Condition",
+      "summary": "nginx ignition has Unauthenticated Admin Account Creation via Onboarding Race Condition",
+      "vendor": "Go",
+      "product": "github.com/lucasdillmann/nginx-ignition",
+      "cve": "CVE-2026-61628",
+      "operator_check": "Check whether github.com/lucasdillmann/nginx-ignition is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/lucasdillmann/nginx-ignition. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61628",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pxcx-fv34-x9p5",
+          "url": "https://github.com/advisories/GHSA-pxcx-fv34-x9p5"
+        },
+        {
+          "title": "NVD — CVE-2026-61628",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61628"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/lucasdillmann/nginx-ignition/security/advisories/GHSA-pxcx-fv34-x9p5"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-61629",
+      "slug": "2026-09-go-cve-2026-61629",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-61629.html",
+      "date": "2026-09-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "nginx ignition has  ParseAcceptLanguage `_` separator bypass that enables ~75x CPU amplification via Accept-Language ...",
+      "summary": "nginx ignition has ParseAcceptLanguage `_` separator bypass that enables ~75x CPU amplification via Accept-Language header in i18nMiddleware",
+      "vendor": "Go",
+      "product": "github.com/lucasdillmann/nginx-ignition",
+      "cve": "CVE-2026-61629",
+      "operator_check": "Check whether github.com/lucasdillmann/nginx-ignition is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/lucasdillmann/nginx-ignition. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61629",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jr34-h97m-9hpx",
+          "url": "https://github.com/advisories/GHSA-jr34-h97m-9hpx"
+        },
+        {
+          "title": "NVD — CVE-2026-61629",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61629"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/lucasdillmann/nginx-ignition/security/advisories/GHSA-jr34-h97m-9hpx"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-61687",
+      "slug": "2026-09-go-cve-2026-61687",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-61687.html",
+      "date": "2026-09-21",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Hatchet - Unauthenticated OAuth state CSRF / login-CSRF via empty-state collision in ValidateOAuthState",
+      "summary": "Hatchet - Unauthenticated OAuth state CSRF / login-CSRF via empty-state collision in ValidateOAuthState",
+      "vendor": "Go",
+      "product": "hatchet",
+      "cve": "CVE-2026-61687",
+      "operator_check": "Check whether hatchet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for hatchet. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61687",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-phg3-3g28-wq9v",
+          "url": "https://github.com/advisories/GHSA-phg3-3g28-wq9v"
+        },
+        {
+          "title": "NVD — CVE-2026-61687",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61687"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/hatchet-dev/hatchet/security/advisories/GHSA-phg3-3g28-wq9v"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-zyxel-cve-2026-7273",
+      "slug": "2026-09-zyxel-cve-2026-7273",
+      "url": "https://www.patchbrief.org/items/2026-09-zyxel-cve-2026-7273.html",
+      "date": "2026-09-21",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
+      "summary": "Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
+      "vendor": "Zyxel",
+      "product": "GS1900 Series Switches",
+      "cve": "CVE-2026-7273",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-7273 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-24. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-7273",
+        "kev",
+        "zyxel",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-7273",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7273"
+        }
+      ]
+    },
     {
       "id": "2026-09-composer-cve-2025-61682",
       "slug": "2026-09-composer-cve-2025-61682",
