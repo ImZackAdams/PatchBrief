@@ -1,0 +1,37 @@
+id: 2026-09-uefi-vu-738147
+slug: 2026-09-uefi-vu-738147
+external_id: VU-738147
+source: cert_vu
+date: '2026-09-22'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#738147: Vendor-signed UEFI Shell applications allow Secure Boot bypass'
+summary: Overview Vendor-signed UEFI Shell applications may allow an attacker to bypass
+  Secure Boot protections by abusing commands such as mm (Memory Modify). On systems
+  that trust the affected vendor’s certificate or include the application’s Authenticode
+  hash in the UEFI Authorized Signature Database (DB), an attacker with sufficient
+  access could use the application’s direct memory-access capabilities to disable
+  or circumvent Secure Boot enforcement and execute untrusted UEFI code. To mitigate
+  this risk, system administrators should apply available firmware and software updates
+  from affected hardware vendors. Description The Unified Extensible Firmware Interface
+  ( UEFI ) standard defines the firmware architecture used to initialize hardware
+  and transfer control to modern operating systems during system startup. On systems
+  with Secure Boot...
+vendor: UEFI
+product: applications and drivers must be cryptographically signed and verified
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for applications and drivers must be cryptographically signed and verified where
+  available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#738147
+  url: https://kb.cert.org/vuls/id/738147
+tags:
+- vu-738147
+- coordinated-disclosure
+- uefi
+- cert-vu
+is_sample: false
