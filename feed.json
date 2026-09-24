@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-23T14:06:03Z",
-  "total_items": 1674,
+  "generated": "2026-09-24T14:03:39Z",
+  "total_items": 1705,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-23T14:06:03Z",
+    "generated": "2026-09-24T14:03:39Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 5,
-        "started_at": "2026-09-23T14:05:50Z",
-        "finished_at": "2026-09-23T14:05:50Z"
+        "started_at": "2026-09-24T14:03:27Z",
+        "finished_at": "2026-09-24T14:03:27Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-23T14:05:50Z",
-        "finished_at": "2026-09-23T14:05:51Z"
+        "started_at": "2026-09-24T14:03:27Z",
+        "finished_at": "2026-09-24T14:03:27Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-09-23T14:05:51Z",
-        "finished_at": "2026-09-23T14:05:57Z"
+        "items_seen": 7,
+        "started_at": "2026-09-24T14:03:27Z",
+        "finished_at": "2026-09-24T14:03:34Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-09-23T14:05:57Z",
-        "finished_at": "2026-09-23T14:05:59Z"
+        "started_at": "2026-09-24T14:03:34Z",
+        "finished_at": "2026-09-24T14:03:35Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-09-23T14:05:59Z",
-        "finished_at": "2026-09-23T14:05:59Z"
+        "items_seen": 3,
+        "started_at": "2026-09-24T14:03:35Z",
+        "finished_at": "2026-09-24T14:03:35Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,153 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-23T14:05:59Z",
-        "finished_at": "2026-09-23T14:05:59Z"
+        "started_at": "2026-09-24T14:03:35Z",
+        "finished_at": "2026-09-24T14:03:36Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 10,
-        "started_at": "2026-09-23T14:05:59Z",
-        "finished_at": "2026-09-23T14:06:00Z"
+        "items_seen": 24,
+        "started_at": "2026-09-24T14:03:36Z",
+        "finished_at": "2026-09-24T14:03:36Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-composer-cve-2026-76086",
+      "slug": "2026-09-composer-cve-2026-76086",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-76086.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Formie: Integration form-settings action allows SSRF and exfiltration of stored integration credentials",
+      "summary": "Formie: Integration form-settings action allows SSRF and exfiltration of stored integration credentials",
+      "vendor": "Composer",
+      "product": "verbb/formie",
+      "cve": "CVE-2026-76086",
+      "operator_check": "Check whether verbb/formie is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for verbb/formie. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-76086",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v3f3-cmj4-cvj9",
+          "url": "https://github.com/advisories/GHSA-v3f3-cmj4-cvj9"
+        },
+        {
+          "title": "NVD — CVE-2026-76086",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76086"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/verbb/formie/security/advisories/GHSA-v3f3-cmj4-cvj9"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-76087",
+      "slug": "2026-09-composer-cve-2026-76087",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-76087.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Formie: Unauthenticated users can overwrite incomplete submissions via submit action",
+      "summary": "Formie: Unauthenticated users can overwrite incomplete submissions via submit action",
+      "vendor": "Composer",
+      "product": "verbb/formie",
+      "cve": "CVE-2026-76087",
+      "operator_check": "Check whether verbb/formie is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for verbb/formie. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-76087",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-584p-f93j-wpgc",
+          "url": "https://github.com/advisories/GHSA-584p-f93j-wpgc"
+        },
+        {
+          "title": "NVD — CVE-2026-76087",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76087"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/verbb/formie/security/advisories/GHSA-584p-f93j-wpgc"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-composer-cve-2026-76089",
+      "slug": "2026-09-composer-cve-2026-76089",
+      "url": "https://www.patchbrief.org/items/2026-09-composer-cve-2026-76089.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Formie: Missing authorization on sent notification resend modal exposes submission PII",
+      "summary": "Formie: Missing authorization on sent notification resend modal exposes submission PII",
+      "vendor": "Composer",
+      "product": "verbb/formie",
+      "cve": "CVE-2026-76089",
+      "operator_check": "Check whether verbb/formie is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for verbb/formie. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-76089",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9rg8-2wvr-fgjh",
+          "url": "https://github.com/advisories/GHSA-9rg8-2wvr-fgjh"
+        },
+        {
+          "title": "NVD — CVE-2026-76089",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76089"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/verbb/formie/security/advisories/GHSA-9rg8-2wvr-fgjh"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-enterprise-vu-273940",
+      "slug": "2026-09-enterprise-vu-273940",
+      "url": "https://www.patchbrief.org/items/2026-09-enterprise-vu-273940.html",
+      "date": "2026-09-23",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#273940: Enterprise Access Management EAM does not rotate RSA keys",
+      "summary": "Overview Imprivata Enterprise Access Management (EAM), an authentication and single sign-on platform for enterprise and clinical environments, contains a vulnerability in versions 26.2.6 and below. The product provides no supported mechanism to rotate its RSA key pair after deployment, meaning the same key pair is used indefinitely to generate the appliance's X.509 certificate. Description CVE-2026-82356 Imprivata EAM uses an RSA key pair to generate the X.509 certificate that identifies the appliance to the clinical workstations, Electronic Health Record (EHR) platforms, and shared-device workflows that rely on it for authentication. After reviewing the product documentation and engaging Imprivata support, it was confirmed that no supported mechanism exists to rotate this RSA key pair after deployment. Using a single RSA key pair... Related CVEs: CVE-2026-82356.",
+      "vendor": "Enterprise",
+      "product": "Access Management EAM",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Access Management EAM where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-273940",
+        "coordinated-disclosure",
+        "enterprise",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#273940",
+          "url": "https://kb.cert.org/vuls/id/273940"
+        }
+      ]
+    },
     {
       "id": "2026-09-erlang-cve-2026-54892",
       "slug": "2026-09-erlang-cve-2026-54892",
@@ -110,6 +242,593 @@
         {
           "title": "Source reference",
           "url": "https://github.com/elixir-plug/plug/security/advisories/GHSA-j43x-5hjq-rgxf"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-82405",
+      "slug": "2026-09-go-cve-2026-82405",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-82405.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Klever-Go Account takeover: `kleverUpdateAccountPermission` authorizes on attacker-controlled `RecipientAddr` instead...",
+      "summary": "Klever-Go Account takeover: `kleverUpdateAccountPermission` authorizes on attacker-controlled `RecipientAddr` instead of the authenticated caller",
+      "vendor": "Go",
+      "product": "github.com/klever-io/klever-go",
+      "cve": "CVE-2026-82405",
+      "operator_check": "Check whether github.com/klever-io/klever-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/klever-io/klever-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-82405",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-97cv-x867-6xhm",
+          "url": "https://github.com/advisories/GHSA-97cv-x867-6xhm"
+        },
+        {
+          "title": "NVD — CVE-2026-82405",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82405"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/klever-io/klever-go/security/advisories/GHSA-97cv-x867-6xhm"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-82406",
+      "slug": "2026-09-go-cve-2026-82406",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-82406.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Klever-Go: Zombie-order theft: `Buy` missing `IsClaimed` guard in native marketplace",
+      "summary": "Klever-Go: Zombie-order theft: `Buy` missing `IsClaimed` guard in native marketplace",
+      "vendor": "Go",
+      "product": "github.com/klever-io/klever-go",
+      "cve": "CVE-2026-82406",
+      "operator_check": "Check whether github.com/klever-io/klever-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/klever-io/klever-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-82406",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-26r5-4mm2-px5c",
+          "url": "https://github.com/advisories/GHSA-26r5-4mm2-px5c"
+        },
+        {
+          "title": "NVD — CVE-2026-82406",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82406"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/klever-io/klever-go/security/advisories/GHSA-26r5-4mm2-px5c"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-82407",
+      "slug": "2026-09-go-cve-2026-82407",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-82407.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Klever-Go: Validator registration accepts an unvalidated BLS public key → consensus liveness DoS",
+      "summary": "Klever-Go: Validator registration accepts an unvalidated BLS public key → consensus liveness DoS",
+      "vendor": "Go",
+      "product": "github.com/klever-io/klever-go",
+      "cve": "CVE-2026-82407",
+      "operator_check": "Check whether github.com/klever-io/klever-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.0.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/klever-io/klever-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-82407",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9wh6-9hq7-9688",
+          "url": "https://github.com/advisories/GHSA-9wh6-9hq7-9688"
+        },
+        {
+          "title": "NVD — CVE-2026-82407",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82407"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/klever-io/klever-go/security/advisories/GHSA-9wh6-9hq7-9688"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-82409",
+      "slug": "2026-09-go-cve-2026-82409",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-82409.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Klever-Go: Elasticsearch bulk / painless injection via on-chain account name -> explorer/indexer data forgery",
+      "summary": "Klever-Go: Elasticsearch bulk / painless injection via on-chain account name -> explorer/indexer data forgery",
+      "vendor": "Go",
+      "product": "github.com/klever-io/klever-go",
+      "cve": "CVE-2026-82409",
+      "operator_check": "Check whether github.com/klever-io/klever-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.4.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/klever-io/klever-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-82409",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7c7c-373r-gfjj",
+          "url": "https://github.com/advisories/GHSA-7c7c-373r-gfjj"
+        },
+        {
+          "title": "NVD — CVE-2026-82409",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82409"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/klever-io/klever-go/security/advisories/GHSA-7c7c-373r-gfjj"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-86064",
+      "slug": "2026-09-go-cve-2026-86064",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-86064.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Klever-Go: /log controls global node logging",
+      "summary": "Klever-Go: /log controls global node logging",
+      "vendor": "Go",
+      "product": "github.com/klever-io/klever-go",
+      "cve": "CVE-2026-86064",
+      "operator_check": "Check whether github.com/klever-io/klever-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/klever-io/klever-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-86064",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9v8p-frvj-2pcm",
+          "url": "https://github.com/advisories/GHSA-9v8p-frvj-2pcm"
+        },
+        {
+          "title": "NVD — CVE-2026-86064",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86064"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/klever-io/klever-go/security/advisories/GHSA-9v8p-frvj-2pcm"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-go-cve-2026-86065",
+      "slug": "2026-09-go-cve-2026-86065",
+      "url": "https://www.patchbrief.org/items/2026-09-go-cve-2026-86065.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Klever-Go: Unauthenticated WebSocket /subscribe: no read-size limit, no connection cap, permissive origin -> remote n...",
+      "summary": "Klever-Go: Unauthenticated WebSocket /subscribe: no read-size limit, no connection cap, permissive origin -> remote node memory/goroutine exhaustion (DoS)",
+      "vendor": "Go",
+      "product": "github.com/klever-io/klever-go",
+      "cve": "CVE-2026-86065",
+      "operator_check": "Check whether github.com/klever-io/klever-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/klever-io/klever-go. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-86065",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4fwh-wrm6-97xm",
+          "url": "https://github.com/advisories/GHSA-4fwh-wrm6-97xm"
+        },
+        {
+          "title": "NVD — CVE-2026-86065",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86065"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/klever-io/klever-go/security/advisories/GHSA-4fwh-wrm6-97xm"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-kotaemon-vu-754548",
+      "slug": "2026-09-kotaemon-vu-754548",
+      "url": "https://www.patchbrief.org/items/2026-09-kotaemon-vu-754548.html",
+      "date": "2026-09-23",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#754548: Cinnamon's Kotaemon contains improper authorization checks in Kotaemon multi‑user chat handlers",
+      "summary": "Overview Cinnamon's Kotaemon (all versions up to v0.12.0) multi‑user chat interface does not verify conversation ownership when loading a conversation. Any authenticated user can read, delete, rename, or overwrite another user’s conversation data by supplying the correct ID. This results in high‑impact confidentiality, integrity, and availability violations. Description Cinnamon's Kotaemon is an open‑source, retrieval‑augmented generation (RAG) based tool that lets you build a chatbot capable of \"chatting with your documents\". As discussed in CVE-2026-86867 , all versions up to v0.12.0 fail to verify conversation ownership when loading a conversation. In multi‑user mode, each conversation row includes a user field that identifies its owner. The four affected handlers, select_conv, delete_conv, rename_conv, and persist_chat_suggestions... Related CVEs: CVE-2026-86867.",
+      "vendor": "Kotaemon",
+      "product": "multi",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for multi where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-754548",
+        "coordinated-disclosure",
+        "kotaemon",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#754548",
+          "url": "https://kb.cert.org/vuls/id/754548"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-59990",
+      "slug": "2026-09-maven-cve-2026-59990",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-59990.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Jawn: Uncontrolled nesting depth in JSON parser",
+      "summary": "Jawn: Uncontrolled nesting depth in JSON parser",
+      "vendor": "Maven",
+      "product": "org.typelevel:jawn-parser_2.12",
+      "cve": "CVE-2026-59990",
+      "operator_check": "Check whether org.typelevel:jawn-parser_2.12 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.typelevel:jawn-parser_2.12. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-59990",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cc4v-rvgp-2pf3",
+          "url": "https://github.com/advisories/GHSA-cc4v-rvgp-2pf3"
+        },
+        {
+          "title": "NVD — CVE-2026-59990",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59990"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/typelevel/jawn/security/advisories/GHSA-cc4v-rvgp-2pf3"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-61814",
+      "slug": "2026-09-maven-cve-2026-61814",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-61814.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Jawn: Quadratic parsing effort in AsyncParser",
+      "summary": "Jawn: Quadratic parsing effort in AsyncParser",
+      "vendor": "Maven",
+      "product": "org.typelevel:jawn-parser_2.12",
+      "cve": "CVE-2026-61814",
+      "operator_check": "Check whether org.typelevel:jawn-parser_2.12 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.typelevel:jawn-parser_2.12. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61814",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w4cm-gvhj-cgw6",
+          "url": "https://github.com/advisories/GHSA-w4cm-gvhj-cgw6"
+        },
+        {
+          "title": "NVD — CVE-2026-61814",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61814"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/typelevel/jawn/security/advisories/GHSA-w4cm-gvhj-cgw6"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-77422",
+      "slug": "2026-09-maven-cve-2026-77422",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-77422.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "JLine: ReDoS in Built-in grep Command Amplified by Automatic `.*` Wrapping",
+      "summary": "JLine: ReDoS in Built-in grep Command Amplified by Automatic `.*` Wrapping",
+      "vendor": "Maven",
+      "product": "org.jline:jline-builtins",
+      "cve": "CVE-2026-77422",
+      "operator_check": "Check whether org.jline:jline-builtins is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.jline:jline-builtins. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-77422",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r2xf-8xr9-62gw",
+          "url": "https://github.com/advisories/GHSA-r2xf-8xr9-62gw"
+        },
+        {
+          "title": "NVD — CVE-2026-77422",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77422"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jline/jline3/security/advisories/GHSA-r2xf-8xr9-62gw"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-85724",
+      "slug": "2026-09-maven-cve-2026-85724",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-85724.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Moquette: Pattern-ACL wildcard injection (cross-tenant authorization bypass) plus a remote-unauthenticated DoS cluste...",
+      "summary": "Moquette: Pattern-ACL wildcard injection (cross-tenant authorization bypass) plus a remote-unauthenticated DoS cluster, a Will-message authorization bypass, and a cross-session durable-corruption bug",
+      "vendor": "Maven",
+      "product": "io.moquette:moquette-broker",
+      "cve": "CVE-2026-85724",
+      "operator_check": "Check whether io.moquette:moquette-broker is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for io.moquette:moquette-broker. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-85724",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5f42-97gr-vfhq",
+          "url": "https://github.com/advisories/GHSA-5f42-97gr-vfhq"
+        },
+        {
+          "title": "NVD — CVE-2026-85724",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85724"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/moquette-io/moquette/security/advisories/GHSA-5f42-97gr-vfhq"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-56669",
+      "slug": "2026-09-npm-cve-2026-56669",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-56669.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "elysia has Inefficient Algorithmic Complexity and Interpretation Conflict",
+      "summary": "elysia has Inefficient Algorithmic Complexity and Interpretation Conflict",
+      "vendor": "npm",
+      "product": "elysia",
+      "cve": "CVE-2026-56669",
+      "operator_check": "Check whether elysia is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 49%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for elysia. Prioritize it with other application dependency updates, especially because EPSS places it in the 49% percentile.",
+      "tags": [
+        "cve-2026-56669",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9643-4qgh-g8mx",
+          "url": "https://github.com/advisories/GHSA-9643-4qgh-g8mx"
+        },
+        {
+          "title": "NVD — CVE-2026-56669",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56669"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/elysiajs/elysia/security/advisories/GHSA-9643-4qgh-g8mx"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-56675",
+      "slug": "2026-09-npm-cve-2026-56675",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-56675.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "9router /v1 APIs has unauthenticated access via reverse proxy locality collapse",
+      "summary": "9router /v1 APIs has unauthenticated access via reverse proxy locality collapse",
+      "vendor": "npm",
+      "product": "9router",
+      "cve": "CVE-2026-56675",
+      "operator_check": "Check whether 9router is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 42%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for 9router. Prioritize it with other application dependency updates, especially because EPSS places it in the 42% percentile.",
+      "tags": [
+        "cve-2026-56675",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x5c9-v98j-722r",
+          "url": "https://github.com/advisories/GHSA-x5c9-v98j-722r"
+        },
+        {
+          "title": "NVD — CVE-2026-56675",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56675"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/decolua/9router/security/advisories/GHSA-x5c9-v98j-722r"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-56676",
+      "slug": "2026-09-npm-cve-2026-56676",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-56676.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "9router: Image prefetch DNS rebinding allows SSRF to internal services",
+      "summary": "9router: Image prefetch DNS rebinding allows SSRF to internal services",
+      "vendor": "npm",
+      "product": "9router",
+      "cve": "CVE-2026-56676",
+      "operator_check": "Check whether 9router is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for 9router. Prioritize it with other application dependency updates, especially because EPSS places it in the 18% percentile.",
+      "tags": [
+        "cve-2026-56676",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cmhj-wh2f-9cgx",
+          "url": "https://github.com/advisories/GHSA-cmhj-wh2f-9cgx"
+        },
+        {
+          "title": "NVD — CVE-2026-56676",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56676"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/decolua/9router/security/advisories/GHSA-cmhj-wh2f-9cgx"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-56679",
+      "slug": "2026-09-npm-cve-2026-56679",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-56679.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "9router: Mass assignment in PATCH /api/settings allows authenticated authorization downgrade",
+      "summary": "9router: Mass assignment in PATCH /api/settings allows authenticated authorization downgrade",
+      "vendor": "npm",
+      "product": "9router",
+      "cve": "CVE-2026-56679",
+      "operator_check": "Check whether 9router is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 43%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for 9router. Prioritize it with other application dependency updates, especially because EPSS places it in the 43% percentile.",
+      "tags": [
+        "cve-2026-56679",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vmjq-hvgq-2wv4",
+          "url": "https://github.com/advisories/GHSA-vmjq-hvgq-2wv4"
+        },
+        {
+          "title": "NVD — CVE-2026-56679",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56679"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/decolua/9router/security/advisories/GHSA-vmjq-hvgq-2wv4"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-61685",
+      "slug": "2026-09-npm-cve-2026-61685",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-61685.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ReactPress has SQL injection via dynamic column names in TypeORM query builders",
+      "summary": "ReactPress has SQL injection via dynamic column names in TypeORM query builders",
+      "vendor": "npm",
+      "product": "@fecommunity/reactpress",
+      "cve": "CVE-2026-61685",
+      "operator_check": "Check whether @fecommunity/reactpress is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 44%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @fecommunity/reactpress. Prioritize it with other application dependency updates, especially because EPSS places it in the 44% percentile.",
+      "tags": [
+        "cve-2026-61685",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wmw4-mw6x-6vfm",
+          "url": "https://github.com/advisories/GHSA-wmw4-mw6x-6vfm"
+        },
+        {
+          "title": "NVD — CVE-2026-61685",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61685"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fecommunity/reactpress/security/advisories/GHSA-wmw4-mw6x-6vfm"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-77394",
+      "slug": "2026-09-npm-cve-2026-77394",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-77394.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenC3 COSMOS: Stored, cross-user XSS via Telemetry screen BUTTON widget",
+      "summary": "OpenC3 COSMOS: Stored, cross-user XSS via Telemetry screen BUTTON widget",
+      "vendor": "npm",
+      "product": "@openc3/vue-common",
+      "cve": "CVE-2026-77394",
+      "operator_check": "Check whether @openc3/vue-common is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @openc3/vue-common. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-77394",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gvf2-2rh5-mpgf",
+          "url": "https://github.com/advisories/GHSA-gvf2-2rh5-mpgf"
+        },
+        {
+          "title": "NVD — CVE-2026-77394",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77394"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OpenC3/cosmos/security/advisories/GHSA-gvf2-2rh5-mpgf"
         }
       ]
     },
@@ -180,6 +899,328 @@
         {
           "title": "Source reference",
           "url": "https://github.com/kap-sh/zapros/security/advisories/GHSA-6cp7-3m3c-5x5c"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rubygems-cve-2026-77601",
+      "slug": "2026-09-rubygems-cve-2026-77601",
+      "url": "https://www.patchbrief.org/items/2026-09-rubygems-cve-2026-77601.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenC3 COSMOS: Authenticated OS command injection via the `pypi_url` setting",
+      "summary": "OpenC3 COSMOS: Authenticated OS command injection via the `pypi_url` setting",
+      "vendor": "RubyGems",
+      "product": "openc3",
+      "cve": "CVE-2026-77601",
+      "operator_check": "Check whether openc3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for openc3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-77601",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vp3w-52v9-q57f",
+          "url": "https://github.com/advisories/GHSA-vp3w-52v9-q57f"
+        },
+        {
+          "title": "NVD — CVE-2026-77601",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77601"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OpenC3/cosmos/security/advisories/GHSA-vp3w-52v9-q57f"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-rubygems-cve-2026-77602",
+      "slug": "2026-09-rubygems-cve-2026-77602",
+      "url": "https://www.patchbrief.org/items/2026-09-rubygems-cve-2026-77602.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OpenC3 COSMOS: Authenticated remote code execution via the user-writable config overlay (table definitions, cmd/tlm d...",
+      "summary": "OpenC3 COSMOS: Authenticated remote code execution via the user-writable config overlay (table definitions, cmd/tlm definitions, and script suites)",
+      "vendor": "RubyGems",
+      "product": "openc3",
+      "cve": "CVE-2026-77602",
+      "operator_check": "Check whether openc3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for openc3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-77602",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jjq7-m736-w977",
+          "url": "https://github.com/advisories/GHSA-jjq7-m736-w977"
+        },
+        {
+          "title": "NVD — CVE-2026-77602",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77602"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OpenC3/cosmos/security/advisories/GHSA-jjq7-m736-w977"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-swift-cve-2026-61695",
+      "slug": "2026-09-swift-cve-2026-61695",
+      "url": "https://www.patchbrief.org/items/2026-09-swift-cve-2026-61695.html",
+      "date": "2026-09-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Wire Swift runtime: negative LENGTH_DELIMITED length in skipGroup() crashes any protobuf-decoding service",
+      "summary": "Wire Swift runtime: negative LENGTH_DELIMITED length in skipGroup() crashes any protobuf-decoding service",
+      "vendor": "Swift",
+      "product": "github.com/square/wire",
+      "cve": "CVE-2026-61695",
+      "operator_check": "Check whether github.com/square/wire is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/square/wire. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-61695",
+        "vendor-advisory",
+        "swift",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-86wm-r4c5-2rc9",
+          "url": "https://github.com/advisories/GHSA-86wm-r4c5-2rc9"
+        },
+        {
+          "title": "NVD — CVE-2026-61695",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61695"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/square/wire/security/advisories/GHSA-86wm-r4c5-2rc9"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-adobe-cve-2026-75699",
+      "slug": "2026-09-adobe-cve-2026-75699",
+      "url": "https://www.patchbrief.org/items/2026-09-adobe-cve-2026-75699.html",
+      "date": "2026-09-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Adobe Campaign — CVE-2026-75699 (Critical)",
+      "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "vendor": "Adobe",
+      "product": "Campaign",
+      "cve": "CVE-2026-75699",
+      "operator_check": "Review CVE-2026-75699 in your asset inventory. Apply patches per vendor guidance and verify Campaign is not exposed. CVSS score: 10.0. EPSS probability: 1.2%; percentile: 68%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 10.0) in Adobe Campaign. Patch or mitigate promptly. EPSS percentile: 68%.",
+      "tags": [
+        "cve-2026-75699",
+        "vendor-advisory",
+        "adobe",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-75699",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75699"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-adobe-cve-2026-75721",
+      "slug": "2026-09-adobe-cve-2026-75721",
+      "url": "https://www.patchbrief.org/items/2026-09-adobe-cve-2026-75721.html",
+      "date": "2026-09-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Adobe Campaign — CVE-2026-75721 (Critical)",
+      "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "vendor": "Adobe",
+      "product": "Campaign",
+      "cve": "CVE-2026-75721",
+      "operator_check": "Review CVE-2026-75721 in your asset inventory. Apply patches per vendor guidance and verify Campaign is not exposed. CVSS score: 10.0. EPSS probability: 1.2%; percentile: 68%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 10.0) in Adobe Campaign. Patch or mitigate promptly. EPSS percentile: 68%.",
+      "tags": [
+        "cve-2026-75721",
+        "vendor-advisory",
+        "adobe",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-75721",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75721"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-adobe-cve-2026-82009",
+      "slug": "2026-09-adobe-cve-2026-82009",
+      "url": "https://www.patchbrief.org/items/2026-09-adobe-cve-2026-82009.html",
+      "date": "2026-09-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Adobe Campaign — CVE-2026-82009 (Critical)",
+      "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker with high privileges could exploit this vulnerability to execute arbitrary SQL commands. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "vendor": "Adobe",
+      "product": "Campaign",
+      "cve": "CVE-2026-82009",
+      "operator_check": "Review CVE-2026-82009 in your asset inventory. Apply patches per vendor guidance and verify Campaign is not exposed. CVSS score: 9.1. EPSS probability: 1.0%; percentile: 61%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Adobe Campaign. Patch or mitigate promptly. EPSS percentile: 61%.",
+      "tags": [
+        "cve-2026-82009",
+        "vendor-advisory",
+        "adobe",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-82009",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82009"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-adobe-cve-2026-82013",
+      "slug": "2026-09-adobe-cve-2026-82013",
+      "url": "https://www.patchbrief.org/items/2026-09-adobe-cve-2026-82013.html",
+      "date": "2026-09-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Adobe Campaign — CVE-2026-82013 (Critical)",
+      "summary": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. A low-privileged attacker could exploit this vulnerability to gain elevated access to internal resources. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "vendor": "Adobe",
+      "product": "Campaign",
+      "cve": "CVE-2026-82013",
+      "operator_check": "Review CVE-2026-82013 in your asset inventory. Apply patches per vendor guidance and verify Campaign is not exposed. CVSS score: 9.9. EPSS probability: 0.8%; percentile: 56%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in Adobe Campaign. Patch or mitigate promptly. EPSS percentile: 56%.",
+      "tags": [
+        "cve-2026-82013",
+        "vendor-advisory",
+        "adobe",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-82013",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82013"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-adobe-cve-2026-82443",
+      "slug": "2026-09-adobe-cve-2026-82443",
+      "url": "https://www.patchbrief.org/items/2026-09-adobe-cve-2026-82443.html",
+      "date": "2026-09-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Adobe Campaign — CVE-2026-82443 (Critical)",
+      "summary": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. A low-privileged attacker could exploit this vulnerability to gain elevated access to internal resources. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "vendor": "Adobe",
+      "product": "Campaign",
+      "cve": "CVE-2026-82443",
+      "operator_check": "Review CVE-2026-82443 in your asset inventory. Apply patches per vendor guidance and verify Campaign is not exposed. CVSS score: 9.6. EPSS probability: 0.7%; percentile: 53%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.6) in Adobe Campaign. Patch or mitigate promptly. EPSS percentile: 53%.",
+      "tags": [
+        "cve-2026-82443",
+        "vendor-advisory",
+        "adobe",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-82443",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82443"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-adobe-cve-2026-83660",
+      "slug": "2026-09-adobe-cve-2026-83660",
+      "url": "https://www.patchbrief.org/items/2026-09-adobe-cve-2026-83660.html",
+      "date": "2026-09-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Adobe Campaign — CVE-2026-83660 (Critical)",
+      "summary": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "vendor": "Adobe",
+      "product": "Campaign",
+      "cve": "CVE-2026-83660",
+      "operator_check": "Review CVE-2026-83660 in your asset inventory. Apply patches per vendor guidance and verify Campaign is not exposed. CVSS score: 9.9. EPSS probability: 0.7%; percentile: 51%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in Adobe Campaign. Patch or mitigate promptly. EPSS percentile: 51%.",
+      "tags": [
+        "cve-2026-83660",
+        "vendor-advisory",
+        "adobe",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-83660",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83660"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-adobe-cve-2026-89276",
+      "slug": "2026-09-adobe-cve-2026-89276",
+      "url": "https://www.patchbrief.org/items/2026-09-adobe-cve-2026-89276.html",
+      "date": "2026-09-22",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Adobe Campaign — CVE-2026-89276 (Critical)",
+      "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "vendor": "Adobe",
+      "product": "Campaign",
+      "cve": "CVE-2026-89276",
+      "operator_check": "Review CVE-2026-89276 in your asset inventory. Apply patches per vendor guidance and verify Campaign is not exposed. CVSS score: 9.9. EPSS probability: 1.0%; percentile: 61%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in Adobe Campaign. Patch or mitigate promptly. EPSS percentile: 61%.",
+      "tags": [
+        "cve-2026-89276",
+        "vendor-advisory",
+        "adobe",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-89276",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89276"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
         }
       ]
     },

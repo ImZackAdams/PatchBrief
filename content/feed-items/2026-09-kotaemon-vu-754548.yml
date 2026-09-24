@@ -1,0 +1,37 @@
+id: 2026-09-kotaemon-vu-754548
+slug: 2026-09-kotaemon-vu-754548
+external_id: VU-754548
+source: cert_vu
+date: '2026-09-23'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#754548: Cinnamon''s Kotaemon contains improper authorization checks in
+  Kotaemon multi‑user chat handlers'
+summary: 'Overview Cinnamon''s Kotaemon (all versions up to v0.12.0) multi‑user chat
+  interface does not verify conversation ownership when loading a conversation. Any
+  authenticated user can read, delete, rename, or overwrite another user’s conversation
+  data by supplying the correct ID. This results in high‑impact confidentiality, integrity,
+  and availability violations. Description Cinnamon''s Kotaemon is an open‑source,
+  retrieval‑augmented generation (RAG) based tool that lets you build a chatbot capable
+  of "chatting with your documents". As discussed in CVE-2026-86867 , all versions
+  up to v0.12.0 fail to verify conversation ownership when loading a conversation.
+  In multi‑user mode, each conversation row includes a user field that identifies
+  its owner. The four affected handlers, select_conv, delete_conv, rename_conv, and
+  persist_chat_suggestions... Related CVEs: CVE-2026-86867.'
+vendor: Kotaemon
+product: multi
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for multi where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#754548
+  url: https://kb.cert.org/vuls/id/754548
+tags:
+- vu-754548
+- coordinated-disclosure
+- kotaemon
+- cert-vu
+is_sample: false
