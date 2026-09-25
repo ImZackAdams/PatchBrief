@@ -1,0 +1,37 @@
+id: 2026-09-norwegian-vu-676317
+slug: 2026-09-norwegian-vu-676317
+external_id: VU-676317
+source: cert_vu
+date: '2026-09-24'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#676317: Norwegian Cruise Line door access controller contains an improper
+  authentication vulnerability'
+summary: 'Overview Door access controllers used on Norwegian Cruise Line (NCL) ships
+  contain an improper authentication vulnerability that permits a replayed unique
+  identifer (UID) from a radio-frequency identification (RFID) device to grant unauthorized
+  entry to areas secured by these controllers. Description Norwegian Cruise Line is
+  a global cruise company that operates a modern fleet sailing to destinations worldwide.
+  As described in CVE-2026-75907 , the affected card reader authenticates NFC credentials
+  only by checking their static 7-byte UID. A UID is not a secret and does not support
+  cryptographic challenge‑response operations, so it cannot serve as a reliable authentication
+  factor. Although the keycard''s NTAG212 tag contains a memory block with a printed
+  serial number and a value resembling a signature, the reader does not inspect this...
+  Related CVEs: CVE-2026-75907.'
+vendor: Norwegian
+product: Cruise Line door access controller
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Cruise Line door access controller where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#676317
+  url: https://kb.cert.org/vuls/id/676317
+tags:
+- vu-676317
+- coordinated-disclosure
+- norwegian
+- cert-vu
+is_sample: false

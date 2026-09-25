@@ -1,0 +1,37 @@
+id: 2026-09-viewsonic-vu-234131
+slug: 2026-09-viewsonic-vu-234131
+external_id: VU-234131
+source: cert_vu
+date: '2026-09-24'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#234131: ViewSonic vCast media streaming service allows unauthenticated
+  screen exfiltration and device compromise'
+summary: 'Overview ViewSonic vCast software, which is included in ViewBoard smartboard
+  devices, contains multiple vulnerabilities that an attacker can chained to achieve
+  full device compromise. Description ViewSonic ViewBoards are widely used smart display
+  devices (smartboard), typically deoloyed in enterprise and educational environments.
+  vCast is ViewSonic’s proprietary software suite for wireless connection between
+  smartboards, which are Android-based systems, and devices running a client application.
+  Three distinct vulnerabilities, all invoking unauthenticated endpoints, have been
+  identified within the vCast suite. CVE-2026-82989 vCast’s media streaming service
+  allows a remote attacker to exfiltrate JPEG images of screen content via GET requests
+  to an unauthenticated /snapshot or /screen API endpoint. CVE-2026-82988 vCast’s
+  Android Package Kit... Related CVEs: CVE-2026-82987, CVE-2026-82988, CVE-2026-82989.'
+vendor: ViewSonic
+product: vCast media streaming service
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for vCast media streaming service where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#234131
+  url: https://kb.cert.org/vuls/id/234131
+tags:
+- vu-234131
+- coordinated-disclosure
+- viewsonic
+- cert-vu
+is_sample: false
