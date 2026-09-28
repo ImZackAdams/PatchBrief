@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-27T14:34:36Z",
-  "total_items": 1748,
+  "generated": "2026-09-28T17:24:08Z",
+  "total_items": 1753,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-27T14:34:36Z",
+    "generated": "2026-09-28T17:24:08Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 5,
-        "started_at": "2026-09-27T14:34:24Z",
-        "finished_at": "2026-09-27T14:34:24Z"
+        "started_at": "2026-09-28T17:23:54Z",
+        "finished_at": "2026-09-28T17:23:54Z"
       },
       {
         "id": "msrc",
@@ -27,35 +27,35 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-27T14:34:24Z",
-        "finished_at": "2026-09-27T14:34:25Z"
+        "started_at": "2026-09-28T17:23:54Z",
+        "finished_at": "2026-09-28T17:23:54Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-09-27T14:34:25Z",
-        "finished_at": "2026-09-27T14:34:31Z"
+        "items_seen": 3,
+        "started_at": "2026-09-28T17:23:54Z",
+        "finished_at": "2026-09-28T17:24:01Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 30,
-        "started_at": "2026-09-27T14:34:31Z",
-        "finished_at": "2026-09-27T14:34:32Z"
+        "items_seen": 13,
+        "started_at": "2026-09-28T17:24:01Z",
+        "finished_at": "2026-09-28T17:24:02Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-09-27T14:34:32Z",
-        "finished_at": "2026-09-27T14:34:32Z"
+        "items_seen": 1,
+        "started_at": "2026-09-28T17:24:02Z",
+        "finished_at": "2026-09-28T17:24:03Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,176 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-27T14:34:32Z",
-        "finished_at": "2026-09-27T14:34:32Z"
+        "started_at": "2026-09-28T17:24:03Z",
+        "finished_at": "2026-09-28T17:24:03Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 31,
-        "started_at": "2026-09-27T14:34:32Z",
-        "finished_at": "2026-09-27T14:34:33Z"
+        "items_seen": 0,
+        "started_at": "2026-09-28T17:24:03Z",
+        "finished_at": "2026-09-28T17:24:04Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-npm-ghsa-456v-xq2p-r4cj",
+      "slug": "2026-09-npm-ghsa-456v-xq2p-r4cj",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-ghsa-456v-xq2p-r4cj.html",
+      "date": "2026-09-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "code-ollama: `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78)",
+      "summary": "code-ollama: `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78)",
+      "vendor": "npm",
+      "product": "code-ollama",
+      "cve": null,
+      "operator_check": "Check whether code-ollama is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code-ollama. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-456v-xq2p-r4cj",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-456v-xq2p-r4cj",
+          "url": "https://github.com/advisories/GHSA-456v-xq2p-r4cj"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ai-action/code-ollama/security/advisories/GHSA-456v-xq2p-r4cj"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-citrix-cve-2026-88771",
+      "slug": "2026-09-citrix-cve-2026-88771",
+      "url": "https://www.patchbrief.org/items/2026-09-citrix-cve-2026-88771.html",
+      "date": "2026-09-27",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Citrix NetScaler Improper Input Validation Vulnerability",
+      "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "cve": "CVE-2026-88771",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-88771 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-30. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-88771",
+        "kev",
+        "citrix",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-88771",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-citrix-cve-2026-88772",
+      "slug": "2026-09-citrix-cve-2026-88772",
+      "url": "https://www.patchbrief.org/items/2026-09-citrix-cve-2026-88772.html",
+      "date": "2026-09-27",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+      "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "cve": "CVE-2026-88772",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-88772 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-09-30. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-88772",
+        "kev",
+        "citrix",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-88772",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-citrix-cve-2026-88773",
+      "slug": "2026-09-citrix-cve-2026-88773",
+      "url": "https://www.patchbrief.org/items/2026-09-citrix-cve-2026-88773.html",
+      "date": "2026-09-27",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Citrix Netscaler Application Delivery Controller — CVE-2026-88773 (Critical)",
+      "summary": "Inconsistent interpretation of HTTP requests ('HTTP Request/Response smuggling') vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1-37.279 and NDcPP; Gateway: before 14.1-73.37 FIPS and before 13.1-64.23.",
+      "vendor": "Citrix",
+      "product": "Netscaler Application Delivery Controller",
+      "cve": "CVE-2026-88773",
+      "operator_check": "Review CVE-2026-88773 in your asset inventory. Apply patches per vendor guidance and verify Netscaler Application Delivery Controller is not exposed. CVSS score: 10.0.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 10.0) in Citrix Netscaler Application Delivery Controller. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-88773",
+        "vendor-advisory",
+        "citrix",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-88773",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88773"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-citrix-cve-2026-88775",
+      "slug": "2026-09-citrix-cve-2026-88775",
+      "url": "https://www.patchbrief.org/items/2026-09-citrix-cve-2026-88775.html",
+      "date": "2026-09-27",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Citrix Netscaler Application Delivery Controller — CVE-2026-88775 (Critical)",
+      "summary": "Memory overflow vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading Memory overflow vulnerability leading to unpredictable or erroneous behavior or Denial of Service",
+      "vendor": "Citrix",
+      "product": "Netscaler Application Delivery Controller",
+      "cve": "CVE-2026-88775",
+      "operator_check": "Review CVE-2026-88775 in your asset inventory. Apply patches per vendor guidance and verify Netscaler Application Delivery Controller is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Citrix Netscaler Application Delivery Controller. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-88775",
+        "vendor-advisory",
+        "citrix",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-88775",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88775"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778"
+        }
+      ]
+    },
     {
       "id": "2026-09-composer-cve-2026-57440",
       "slug": "2026-09-composer-cve-2026-57440",
