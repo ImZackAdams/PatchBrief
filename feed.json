@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-09-28T17:56:00Z",
-  "total_items": 1753,
+  "generated": "2026-09-29T15:24:26Z",
+  "total_items": 1762,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-09-28T17:56:00Z",
+    "generated": "2026-09-29T15:24:26Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-09-28T17:23:54Z",
-        "finished_at": "2026-09-28T17:23:54Z"
+        "items_seen": 3,
+        "started_at": "2026-09-29T15:24:14Z",
+        "finished_at": "2026-09-29T15:24:15Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-28T17:23:54Z",
-        "finished_at": "2026-09-28T17:23:54Z"
+        "started_at": "2026-09-29T15:24:15Z",
+        "finished_at": "2026-09-29T15:24:15Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-09-28T17:23:54Z",
-        "finished_at": "2026-09-28T17:24:01Z"
+        "items_seen": 5,
+        "started_at": "2026-09-29T15:24:15Z",
+        "finished_at": "2026-09-29T15:24:22Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 13,
-        "started_at": "2026-09-28T17:24:01Z",
-        "finished_at": "2026-09-28T17:24:02Z"
+        "items_seen": 6,
+        "started_at": "2026-09-29T15:24:22Z",
+        "finished_at": "2026-09-29T15:24:23Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-09-28T17:24:02Z",
-        "finished_at": "2026-09-28T17:24:03Z"
+        "started_at": "2026-09-29T15:24:23Z",
+        "finished_at": "2026-09-29T15:24:23Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,254 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-09-28T17:24:03Z",
-        "finished_at": "2026-09-28T17:24:03Z"
+        "started_at": "2026-09-29T15:24:23Z",
+        "finished_at": "2026-09-29T15:24:24Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-09-28T17:24:03Z",
-        "finished_at": "2026-09-28T17:24:04Z"
+        "items_seen": 11,
+        "started_at": "2026-09-29T15:24:24Z",
+        "finished_at": "2026-09-29T15:24:24Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-09-apple-cve-2026-86950",
+      "slug": "2026-09-apple-cve-2026-86950",
+      "url": "https://www.patchbrief.org/items/2026-09-apple-cve-2026-86950.html",
+      "date": "2026-09-29",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
+      "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+      "vendor": "Apple",
+      "product": "Multiple Products",
+      "cve": "CVE-2026-86950",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-86950 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-02. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-86950",
+        "kev",
+        "apple",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-86950",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86950"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-authlib-vu-762428",
+      "slug": "2026-09-authlib-vu-762428",
+      "url": "https://www.patchbrief.org/items/2026-09-authlib-vu-762428.html",
+      "date": "2026-09-28",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#762428: Authlib library contains a signature‑verification bypass vulnerability",
+      "summary": "Overview Authlib (versions up to and including 1.7.2) contain a signature‑verification bypass in the JSON Web Signature (JWS) general JSON serialization handling. The JsonWebSignature.deserialize_json() function accepts a JWS object with an empty \"signatures\" array and treats the payload as successfully verified, allowing attackers to supply arbitrary forged content without possessing any key material. Description Authlib is a Python library that provides tools for implementing OAuth, OpenID Connect, JWT/JWS/JWE (JSON Web Token / JSON Web Signature / JSON Web Encryption), and other modern authentication and authorization standards. It’s widely used in web applications and microservices to handle token creation, cryptographic validation, and secure communication. As discussed in CVE-2026-96760 , a security flaw in Authlib’s handling of... Related CVEs: CVE-2026-96760.",
+      "vendor": "Authlib",
+      "product": "library",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for library where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-762428",
+        "coordinated-disclosure",
+        "authlib",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#762428",
+          "url": "https://kb.cert.org/vuls/id/762428"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-maven-cve-2026-68497",
+      "slug": "2026-09-maven-cve-2026-68497",
+      "url": "https://www.patchbrief.org/items/2026-09-maven-cve-2026-68497.html",
+      "date": "2026-09-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "jackson-databind: Duration XMLGregorianCalendar Unbounded Number Parse DoS",
+      "summary": "jackson-databind: Duration XMLGregorianCalendar Unbounded Number Parse DoS",
+      "vendor": "Maven",
+      "product": "tools.jackson.core:jackson-databind",
+      "cve": "CVE-2026-68497",
+      "operator_check": "Check whether tools.jackson.core:jackson-databind is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 46%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for tools.jackson.core:jackson-databind. Prioritize it with other application dependency updates, especially because EPSS places it in the 46% percentile.",
+      "tags": [
+        "cve-2026-68497",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q4xh-88c3-wmh7",
+          "url": "https://github.com/advisories/GHSA-q4xh-88c3-wmh7"
+        },
+        {
+          "title": "NVD — CVE-2026-68497",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68497"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-q4xh-88c3-wmh7"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-101895",
+      "slug": "2026-09-npm-cve-2026-101895",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-101895.html",
+      "date": "2026-09-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Angular SSR: Denial of Service (DoS) via Infinite Loop on Malformed DOCTYPE",
+      "summary": "Angular SSR: Denial of Service (DoS) via Infinite Loop on Malformed DOCTYPE",
+      "vendor": "npm",
+      "product": "@angular/platform-server",
+      "cve": "CVE-2026-101895",
+      "operator_check": "Check whether @angular/platform-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @angular/platform-server. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-101895",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f67j-2jqw-jpq7",
+          "url": "https://github.com/advisories/GHSA-f67j-2jqw-jpq7"
+        },
+        {
+          "title": "NVD — CVE-2026-101895",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101895"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/angular/angular/security/advisories/GHSA-f67j-2jqw-jpq7"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-84292",
+      "slug": "2026-09-npm-cve-2026-84292",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-84292.html",
+      "date": "2026-09-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "fast-uri vulnerable to authority injection via an unvalidated port in serialize",
+      "summary": "fast-uri vulnerable to authority injection via an unvalidated port in serialize",
+      "vendor": "npm",
+      "product": "fast-uri",
+      "cve": "CVE-2026-84292",
+      "operator_check": "Check whether fast-uri is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for fast-uri. Prioritize it with other application dependency updates, especially because EPSS places it in the 13% percentile.",
+      "tags": [
+        "cve-2026-84292",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qw65-cvwx-89v3",
+          "url": "https://github.com/advisories/GHSA-qw65-cvwx-89v3"
+        },
+        {
+          "title": "NVD — CVE-2026-84292",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84292"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-qw65-cvwx-89v3"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-84394",
+      "slug": "2026-09-npm-cve-2026-84394",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-84394.html",
+      "date": "2026-09-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "fast-uri vulnerable to host confusion via an unclosed bracket in the URI authority",
+      "summary": "fast-uri vulnerable to host confusion via an unclosed bracket in the URI authority",
+      "vendor": "npm",
+      "product": "fast-uri",
+      "cve": "CVE-2026-84394",
+      "operator_check": "Check whether fast-uri is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for fast-uri. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-84394",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-58mr-gqgx-xq4g",
+          "url": "https://github.com/advisories/GHSA-58mr-gqgx-xq4g"
+        },
+        {
+          "title": "NVD — CVE-2026-84394",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84394"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-58mr-gqgx-xq4g"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-npm-cve-2026-88058",
+      "slug": "2026-09-npm-cve-2026-88058",
+      "url": "https://www.patchbrief.org/items/2026-09-npm-cve-2026-88058.html",
+      "date": "2026-09-28",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Angular SSR: XSS via Unescaped Processing Instruction (<?...?>) Nodes in Fallback Raw-Content Elements",
+      "summary": "Angular SSR: XSS via Unescaped Processing Instruction (<?...?>) Nodes in Fallback Raw-Content Elements",
+      "vendor": "npm",
+      "product": "@angular/platform-server",
+      "cve": "CVE-2026-88058",
+      "operator_check": "Check whether @angular/platform-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6. EPSS probability: 0.9%; percentile: 57%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @angular/platform-server. Prioritize it with other application dependency updates, especially because EPSS places it in the 57% percentile.",
+      "tags": [
+        "cve-2026-88058",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j3r3-mxqp-r2p4",
+          "url": "https://github.com/advisories/GHSA-j3r3-mxqp-r2p4"
+        },
+        {
+          "title": "NVD — CVE-2026-88058",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88058"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/angular/angular/security/advisories/GHSA-j3r3-mxqp-r2p4"
+        }
+      ]
+    },
     {
       "id": "2026-09-npm-ghsa-456v-xq2p-r4cj",
       "slug": "2026-09-npm-ghsa-456v-xq2p-r4cj",
@@ -226,6 +459,68 @@
         {
           "title": "NVD — CVE-2026-88775",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88775"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-citrix-cve-2026-88776",
+      "slug": "2026-09-citrix-cve-2026-88776",
+      "url": "https://www.patchbrief.org/items/2026-09-citrix-cve-2026-88776.html",
+      "date": "2026-09-27",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Citrix Netscaler Application Delivery Controller — CVE-2026-88776 (Critical)",
+      "summary": "Memory overflow vulnerability vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to unpredictable or erroneous behavior or Denial of Service",
+      "vendor": "Citrix",
+      "product": "Netscaler Application Delivery Controller",
+      "cve": "CVE-2026-88776",
+      "operator_check": "Review CVE-2026-88776 in your asset inventory. Apply patches per vendor guidance and verify Netscaler Application Delivery Controller is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Citrix Netscaler Application Delivery Controller. Patch or mitigate promptly. EPSS percentile: 30%.",
+      "tags": [
+        "cve-2026-88776",
+        "vendor-advisory",
+        "citrix",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-88776",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88776"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-citrix-cve-2026-88777",
+      "slug": "2026-09-citrix-cve-2026-88777",
+      "url": "https://www.patchbrief.org/items/2026-09-citrix-cve-2026-88777.html",
+      "date": "2026-09-27",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Citrix Netscaler Application Delivery Controller — CVE-2026-88777 (Critical)",
+      "summary": "Memory overflow vulnerability vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to unpredictable or erroneous behavior or Denial of Service",
+      "vendor": "Citrix",
+      "product": "Netscaler Application Delivery Controller",
+      "cve": "CVE-2026-88777",
+      "operator_check": "Review CVE-2026-88777 in your asset inventory. Apply patches per vendor guidance and verify Netscaler Application Delivery Controller is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Citrix Netscaler Application Delivery Controller. Patch or mitigate promptly. EPSS percentile: 30%.",
+      "tags": [
+        "cve-2026-88777",
+        "vendor-advisory",
+        "citrix",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-88777",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88777"
         },
         {
           "title": "Source reference",

@@ -1,0 +1,36 @@
+id: 2026-09-authlib-vu-762428
+slug: 2026-09-authlib-vu-762428
+external_id: VU-762428
+source: cert_vu
+date: '2026-09-28'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#762428: Authlib library contains a signature‑verification bypass vulnerability'
+summary: 'Overview Authlib (versions up to and including 1.7.2) contain a signature‑verification
+  bypass in the JSON Web Signature (JWS) general JSON serialization handling. The
+  JsonWebSignature.deserialize_json() function accepts a JWS object with an empty
+  "signatures" array and treats the payload as successfully verified, allowing attackers
+  to supply arbitrary forged content without possessing any key material. Description
+  Authlib is a Python library that provides tools for implementing OAuth, OpenID Connect,
+  JWT/JWS/JWE (JSON Web Token / JSON Web Signature / JSON Web Encryption), and other
+  modern authentication and authorization standards. It’s widely used in web applications
+  and microservices to handle token creation, cryptographic validation, and secure
+  communication. As discussed in CVE-2026-96760 , a security flaw in Authlib’s handling
+  of... Related CVEs: CVE-2026-96760.'
+vendor: Authlib
+product: library
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for library where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#762428
+  url: https://kb.cert.org/vuls/id/762428
+tags:
+- vu-762428
+- coordinated-disclosure
+- authlib
+- cert-vu
+is_sample: false
