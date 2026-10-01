@@ -239,10 +239,648 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1793 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1823 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Unauthenticated SQL injection in searchDocs via unescaped keyword (publish mode): cross-notebook read/write w..." data-vendor="Go" data-cve="CVE-2026-69085">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-69085</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-go-cve-2026-69085.html">SiYuan: Unauthenticated SQL injection in searchDocs via unescaped keyword (publish mode): cross-notebook read/write w...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: Unauthenticated SQL injection in searchDocs via unescaped keyword (publish mode): cross-notebook read/write with statement stacking</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 1.5%; percentile: 73%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-33jq-p8c2-q3q4">GitHub Advisory GHSA-33jq-p8c2-q3q4</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69085">NVD — CVE-2026-69085</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-33jq-p8c2-q3q4">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-go-cve-2026-69085.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#553437: InsydeH2O IHISI SMM is vulnerable to unsafe memory write operations" data-vendor="InsydeH2O">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-insydeh2o-vu-553437.html">VU#553437: InsydeH2O IHISI SMM is vulnerable to unsafe memory write operations</a>
+              </h2>
+              <p class="feed-vendor">InsydeH2O · IHISI SMM</p>
+              <p class="feed-summary">Overview An Out-of-bounds Write vulnerability in the InsydeH2O IHISI software used by HP PC BIOS can allow a local attacker with OS kernel privileges to perform arbitrary physical memory writes, including writes to System Management RAM (SMRAM). Because the vulnerable code executes in System Management Mode (SMM), successful exploitation can allow an attacker to modify SMM-protected memory and potentially achieve arbitrary code execution in SMM. Depending on the platform&#x27;s memory and firmware configuration, the arbitrary physical memory write primitive may also have implications for UEFI firmware update or flash-related operations. Description HP PC BIOS is firmware that initializes and manages hardware components during the boot process and provides runtime services to the operating system and provide the ability to update firmware. The... Related CVEs: CVE-2026-12855.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for IHISI SMM where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/553437">CERT/CC Vulnerability Note VU#553437</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-insydeh2o-vu-553437.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="jackson-core: ReDoS: quadratic backtracking in NumberInput.PATTERN_FLOAT via looksLikeValidNumber()" data-vendor="Maven" data-cve="CVE-2026-89407">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-89407</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-maven-cve-2026-89407.html">jackson-core: ReDoS: quadratic backtracking in NumberInput.PATTERN_FLOAT via looksLikeValidNumber()</a>
+              </h2>
+              <p class="feed-vendor">Maven · com.fasterxml.jackson.core:jackson-core</p>
+              <p class="feed-summary">jackson-core: ReDoS: quadratic backtracking in NumberInput.PATTERN_FLOAT via looksLikeValidNumber()</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether com.fasterxml.jackson.core:jackson-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 48%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-p6pp-m3f8-5c89">GitHub Advisory GHSA-p6pp-m3f8-5c89</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-89407">NVD — CVE-2026-89407</a><a href="https://github.com/FasterXML/jackson-core/security/advisories/GHSA-p6pp-m3f8-5c89">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-maven-cve-2026-89407.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="jackson-core: UTF8DataInputJsonParser._reportInvalidToken() missing maxErrorTokenLength limit -&gt; unbounded StringBuil..." data-vendor="Maven" data-cve="CVE-2026-89425">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-89425</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-maven-cve-2026-89425.html">jackson-core: UTF8DataInputJsonParser._reportInvalidToken() missing maxErrorTokenLength limit -&gt; unbounded StringBuil...</a>
+              </h2>
+              <p class="feed-vendor">Maven · com.fasterxml.jackson.core:jackson-core</p>
+              <p class="feed-summary">jackson-core: UTF8DataInputJsonParser._reportInvalidToken() missing maxErrorTokenLength limit -&gt; unbounded StringBuilder growth (DoS)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether com.fasterxml.jackson.core:jackson-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 40%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-7hhh-6rmp-j9qf">GitHub Advisory GHSA-7hhh-6rmp-j9qf</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-89425">NVD — CVE-2026-89425</a><a href="https://github.com/FasterXML/jackson-core/security/advisories/GHSA-7hhh-6rmp-j9qf">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-maven-cve-2026-89425.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="piscina: Prototype-pollution gadget in ThreadPool.options allows RCE via execArgv / loadBalancer / env" data-vendor="npm" data-cve="CVE-2026-102992">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-102992</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-102992.html">piscina: Prototype-pollution gadget in ThreadPool.options allows RCE via execArgv / loadBalancer / env</a>
+              </h2>
+              <p class="feed-vendor">npm · piscina</p>
+              <p class="feed-summary">piscina: Prototype-pollution gadget in ThreadPool.options allows RCE via execArgv / loadBalancer / env</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether piscina is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2. EPSS probability: 0.6%; percentile: 44%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-67c8-pqhq-4rmx">GitHub Advisory GHSA-67c8-pqhq-4rmx</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102992">NVD — CVE-2026-102992</a><a href="https://github.com/piscinajs/piscina/security/advisories/GHSA-67c8-pqhq-4rmx">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-102992.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="devalue: `stringify`/`uneval` serialize shared memory" data-vendor="npm" data-cve="CVE-2026-92708">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92708</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92708.html">devalue: `stringify`/`uneval` serialize shared memory</a>
+              </h2>
+              <p class="feed-vendor">npm · devalue</p>
+              <p class="feed-summary">devalue: `stringify`/`uneval` serialize shared memory</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether devalue is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.7%; percentile: 52%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-j22f-vq7h-c4qm">GitHub Advisory GHSA-j22f-vq7h-c4qm</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92708">NVD — CVE-2026-92708</a><a href="https://github.com/sveltejs/devalue/security/advisories/GHSA-j22f-vq7h-c4qm">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92708.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2: NodeVM nesting guard accepts array-shaped require and permits host RCE" data-vendor="npm" data-cve="CVE-2026-92935">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92935</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92935.html">vm2: NodeVM nesting guard accepts array-shaped require and permits host RCE</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2: NodeVM nesting guard accepts array-shaped require and permits host RCE</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.7%; percentile: 50%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-8hr7-r645-pc6w">GitHub Advisory GHSA-8hr7-r645-pc6w</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92935">NVD — CVE-2026-92935</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-8hr7-r645-pc6w">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92935.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2: GHSA-m283-3h24-438v fix bypass leads to host RCE via call/apply indirection" data-vendor="npm" data-cve="CVE-2026-92937">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92937</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92937.html">vm2: GHSA-m283-3h24-438v fix bypass leads to host RCE via call/apply indirection</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2: GHSA-m283-3h24-438v fix bypass leads to host RCE via call/apply indirection</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 1.0%; percentile: 63%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-647f-g98j-qq25">GitHub Advisory GHSA-647f-g98j-qq25</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92937">NVD — CVE-2026-92937</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-647f-g98j-qq25">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92937.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2 allows a sandboxed plugin to execute native code through `node:sqlite`" data-vendor="npm" data-cve="CVE-2026-92938">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92938</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92938.html">vm2 allows a sandboxed plugin to execute native code through `node:sqlite`</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2 allows a sandboxed plugin to execute native code through `node:sqlite`</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 48%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-6w8r-xxw2-g3hx">GitHub Advisory GHSA-6w8r-xxw2-g3hx</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92938">NVD — CVE-2026-92938</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-6w8r-xxw2-g3hx">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92938.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2 crypto builtin loads attacker native code through setEngine" data-vendor="npm" data-cve="CVE-2026-92939">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92939</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92939.html">vm2 crypto builtin loads attacker native code through setEngine</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2 crypto builtin loads attacker native code through setEngine</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 48%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-46pr-c5wc-xffx">GitHub Advisory GHSA-46pr-c5wc-xffx</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92939">NVD — CVE-2026-92939</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-46pr-c5wc-xffx">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92939.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2 exposes host HTTPS credentials and TLS traffic through globalAgent" data-vendor="npm" data-cve="CVE-2026-92940">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92940</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92940.html">vm2 exposes host HTTPS credentials and TLS traffic through globalAgent</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2 exposes host HTTPS credentials and TLS traffic through globalAgent</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 39%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-h85j-hv3c-qfgq">GitHub Advisory GHSA-h85j-hv3c-qfgq</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92940">NVD — CVE-2026-92940</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-h85j-hv3c-qfgq">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92940.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2 NodeVM can replace the host process TLS trust store" data-vendor="npm" data-cve="CVE-2026-92941">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92941</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92941.html">vm2 NodeVM can replace the host process TLS trust store</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2 NodeVM can replace the host process TLS trust store</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 19%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-98xx-8mx4-x7cm">GitHub Advisory GHSA-98xx-8mx4-x7cm</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92941">NVD — CVE-2026-92941</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-98xx-8mx4-x7cm">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92941.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2 sandbox escape on Node.js 26 through a stale PromiseThenLookupChain protector" data-vendor="npm" data-cve="CVE-2026-92944">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92944</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92944.html">vm2 sandbox escape on Node.js 26 through a stale PromiseThenLookupChain protector</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2 sandbox escape on Node.js 26 through a stale PromiseThenLookupChain protector</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.8%; percentile: 56%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-27g9-p43v-cw3v">GitHub Advisory GHSA-27g9-p43v-cw3v</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92944">NVD — CVE-2026-92944</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-27g9-p43v-cw3v">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92944.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2: NodeVM builtin allowlist bypass via node:test.run() execArgv allows sandbox escape" data-vendor="npm" data-cve="CVE-2026-92948">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92948</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92948.html">vm2: NodeVM builtin allowlist bypass via node:test.run() execArgv allows sandbox escape</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2: NodeVM builtin allowlist bypass via node:test.run() execArgv allows sandbox escape</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.7%; percentile: 49%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-qhwx-74w5-xhxq">GitHub Advisory GHSA-qhwx-74w5-xhxq</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92948">NVD — CVE-2026-92948</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-qhwx-74w5-xhxq">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92948.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2 CLI provides no sandbox isolation - host-realm require() is reachable from sandboxed scripts" data-vendor="npm" data-cve="CVE-2026-92950">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92950</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92950.html">vm2 CLI provides no sandbox isolation - host-realm require() is reachable from sandboxed scripts</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2 CLI provides no sandbox isolation - host-realm require() is reachable from sandboxed scripts</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 9%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-jxxv-8r27-vm4p">GitHub Advisory GHSA-jxxv-8r27-vm4p</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92950">NVD — CVE-2026-92950</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-jxxv-8r27-vm4p">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92950.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2 Custom Module Resolver Can Bypass the External Package Allowlist by Loading a Colliding Host Package" data-vendor="npm" data-cve="CVE-2026-92951">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92951</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92951.html">vm2 Custom Module Resolver Can Bypass the External Package Allowlist by Loading a Colliding Host Package</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2 Custom Module Resolver Can Bypass the External Package Allowlist by Loading a Colliding Host Package</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 43%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-c48m-32m9-vx93">GitHub Advisory GHSA-c48m-32m9-vx93</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92951">NVD — CVE-2026-92951</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-c48m-32m9-vx93">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92951.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2: NodeVM node:-prefixed negative builtin deny bypass exposes child_process" data-vendor="npm" data-cve="CVE-2026-92957">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92957</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92957.html">vm2: NodeVM node:-prefixed negative builtin deny bypass exposes child_process</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2: NodeVM node:-prefixed negative builtin deny bypass exposes child_process</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 43%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-8686-vhfx-7r3j">GitHub Advisory GHSA-8686-vhfx-7r3j</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92957">NVD — CVE-2026-92957</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-8686-vhfx-7r3j">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92957.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="vm2: NodeVM builtin denylist bypass via fs/promises despite -fs, allowing host filesystem writes" data-vendor="npm" data-cve="CVE-2026-92958">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-92958</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-cve-2026-92958.html">vm2: NodeVM builtin denylist bypass via fs/promises despite -fs, allowing host filesystem writes</a>
+              </h2>
+              <p class="feed-vendor">npm · vm2</p>
+              <p class="feed-summary">vm2: NodeVM builtin denylist bypass via fs/promises despite -fs, allowing host filesystem writes</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether vm2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 30%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-6rh5-qq4q-97xh">GitHub Advisory GHSA-6rh5-qq4q-97xh</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92958">NVD — CVE-2026-92958</a><a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-6rh5-qq4q-97xh">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-cve-2026-92958.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="devalue: Repeated primitive strings cause quadratic expansion in uneval" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-ghsa-mcm9-63f2-9j32.html">devalue: Repeated primitive strings cause quadratic expansion in uneval</a>
+              </h2>
+              <p class="feed-vendor">npm · devalue</p>
+              <p class="feed-summary">devalue: Repeated primitive strings cause quadratic expansion in uneval</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether devalue is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-mcm9-63f2-9j32">GitHub Advisory GHSA-mcm9-63f2-9j32</a><a href="https://github.com/sveltejs/devalue/security/advisories/GHSA-mcm9-63f2-9j32">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-ghsa-mcm9-63f2-9j32.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="devalue: stringifyAsync can cause an unhandled rejection despite a caught returned promise" data-vendor="npm">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-npm-ghsa-x5rw-q4pp-hg5g.html">devalue: stringifyAsync can cause an unhandled rejection despite a caught returned promise</a>
+              </h2>
+              <p class="feed-vendor">npm · devalue</p>
+              <p class="feed-summary">devalue: stringifyAsync can cause an unhandled rejection despite a caught returned promise</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether devalue is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-x5rw-q4pp-hg5g">GitHub Advisory GHSA-x5rw-q4pp-hg5g</a><a href="https://github.com/sveltejs/devalue/security/advisories/GHSA-x5rw-q4pp-hg5g">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-npm-ghsa-x5rw-q4pp-hg5g.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="JupyterLab: Cross-site scripting (XSS) in JupyterLab via notebook cells pasted from the system clipboard" data-vendor="PyPI" data-cve="CVE-2026-102831">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-102831</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-cve-2026-102831.html">JupyterLab: Cross-site scripting (XSS) in JupyterLab via notebook cells pasted from the system clipboard</a>
+              </h2>
+              <p class="feed-vendor">PyPI · jupyterlab</p>
+              <p class="feed-summary">JupyterLab: Cross-site scripting (XSS) in JupyterLab via notebook cells pasted from the system clipboard</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether jupyterlab is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 8%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-6966-vjj6-99xv">GitHub Advisory GHSA-6966-vjj6-99xv</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102831">NVD — CVE-2026-102831</a><a href="https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-6966-vjj6-99xv">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-cve-2026-102831.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="virtualenv bash and fish activation scripts execute commands embedded in paths" data-vendor="PyPI" data-cve="CVE-2026-102925">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-102925</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-cve-2026-102925.html">virtualenv bash and fish activation scripts execute commands embedded in paths</a>
+              </h2>
+              <p class="feed-vendor">PyPI · virtualenv</p>
+              <p class="feed-summary">virtualenv bash and fish activation scripts execute commands embedded in paths</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether virtualenv is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 4%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-p58f-9548-mpm2">GitHub Advisory GHSA-p58f-9548-mpm2</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102925">NVD — CVE-2026-102925</a><a href="https://github.com/pypa/virtualenv/security/advisories/GHSA-p58f-9548-mpm2">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-cve-2026-102925.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="virtualenv: Command injection via --prompt in activate.bat (batch activator)" data-vendor="PyPI" data-cve="CVE-2026-102937">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-102937</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-cve-2026-102937.html">virtualenv: Command injection via --prompt in activate.bat (batch activator)</a>
+              </h2>
+              <p class="feed-vendor">PyPI · virtualenv</p>
+              <p class="feed-summary">virtualenv: Command injection via --prompt in activate.bat (batch activator)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether virtualenv is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.3. EPSS probability: 0.1%; percentile: 3%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-x78j-v8h9-3j2q">GitHub Advisory GHSA-x78j-v8h9-3j2q</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102937">NVD — CVE-2026-102937</a><a href="https://github.com/pypa/virtualenv/security/advisories/GHSA-x78j-v8h9-3j2q">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-cve-2026-102937.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="pypdf: Possible large memory usage when parsing font data" data-vendor="PyPI" data-cve="CVE-2026-102996">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-102996</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-cve-2026-102996.html">pypdf: Possible large memory usage when parsing font data</a>
+              </h2>
+              <p class="feed-vendor">PyPI · pypdf</p>
+              <p class="feed-summary">pypdf: Possible large memory usage when parsing font data</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether pypdf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 42%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-g9cg-prrw-2r8q">GitHub Advisory GHSA-g9cg-prrw-2r8q</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102996">NVD — CVE-2026-102996</a><a href="https://github.com/py-pdf/pypdf/security/advisories/GHSA-g9cg-prrw-2r8q">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-cve-2026-102996.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="pypdf: Possible long runtimes for partially malformed FlateDecode streams (Follow-up)" data-vendor="PyPI" data-cve="CVE-2026-102997">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-102997</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-cve-2026-102997.html">pypdf: Possible long runtimes for partially malformed FlateDecode streams (Follow-up)</a>
+              </h2>
+              <p class="feed-vendor">PyPI · pypdf</p>
+              <p class="feed-summary">pypdf: Possible long runtimes for partially malformed FlateDecode streams (Follow-up)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether pypdf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 42%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-jw7q-gvrg-4vj3">GitHub Advisory GHSA-jw7q-gvrg-4vj3</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102997">NVD — CVE-2026-102997</a><a href="https://github.com/py-pdf/pypdf/security/advisories/GHSA-jw7q-gvrg-4vj3">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-cve-2026-102997.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="pypdf: Possible long runtimes when generating appearance streams" data-vendor="PyPI" data-cve="CVE-2026-102998">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-102998</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-cve-2026-102998.html">pypdf: Possible long runtimes when generating appearance streams</a>
+              </h2>
+              <p class="feed-vendor">PyPI · pypdf</p>
+              <p class="feed-summary">pypdf: Possible long runtimes when generating appearance streams</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether pypdf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 42%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-php9-fj8v-98fj">GitHub Advisory GHSA-php9-fj8v-98fj</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102998">NVD — CVE-2026-102998</a><a href="https://github.com/py-pdf/pypdf/security/advisories/GHSA-php9-fj8v-98fj">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-cve-2026-102998.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="pypdf: Possible long runtimes with large amount of embedded files" data-vendor="PyPI" data-cve="CVE-2026-102999">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-102999</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-cve-2026-102999.html">pypdf: Possible long runtimes with large amount of embedded files</a>
+              </h2>
+              <p class="feed-vendor">PyPI · pypdf</p>
+              <p class="feed-summary">pypdf: Possible long runtimes with large amount of embedded files</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether pypdf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 42%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-v247-6f48-mgcj">GitHub Advisory GHSA-v247-6f48-mgcj</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102999">NVD — CVE-2026-102999</a><a href="https://github.com/py-pdf/pypdf/security/advisories/GHSA-v247-6f48-mgcj">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-cve-2026-102999.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="pypdf: Possible large memory usage when retrieving alphabetical page labels" data-vendor="PyPI" data-cve="CVE-2026-103000">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-103000</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-cve-2026-103000.html">pypdf: Possible large memory usage when retrieving alphabetical page labels</a>
+              </h2>
+              <p class="feed-vendor">PyPI · pypdf</p>
+              <p class="feed-summary">pypdf: Possible large memory usage when retrieving alphabetical page labels</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether pypdf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 42%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-w23x-9jrw-r45c">GitHub Advisory GHSA-w23x-9jrw-r45c</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-103000">NVD — CVE-2026-103000</a><a href="https://github.com/py-pdf/pypdf/security/advisories/GHSA-w23x-9jrw-r45c">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-cve-2026-103000.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability" data-vendor="Cisco" data-cve="CVE-2026-76504">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 30, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-76504</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-cisco-cve-2026-76504.html">Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Cisco · Catalyst SD-WAN Manager</p>
+              <p class="feed-summary">Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76504">NVD — CVE-2026-76504</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-cisco-cve-2026-76504.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="league/commonmark: Quadratic-time denial of service in the GitHub Flavored Markdown Table extension block-start scan" data-vendor="Composer">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -571,6 +1209,28 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-vcvr-r3jv-pc5j">GitHub Advisory GHSA-vcvr-r3jv-pc5j</a><a href="https://github.com/vercel/next.js/security/advisories/GHSA-vcvr-r3jv-pc5j">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-09-npm-ghsa-vcvr-r3jv-pc5j.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Ordasoft Joomla Cck — CVE-2026-102427 (Critical)" data-vendor="Ordasoft" data-cve="CVE-2026-102427">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Sep 30, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-102427</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-09-ordasoft-cve-2026-102427.html">Ordasoft Joomla Cck — CVE-2026-102427 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Ordasoft · Joomla Cck</p>
+              <p class="feed-summary">Joomla Extension - ordasoft.com - Unauthenticated Remote Code Execution in OrdaSoft Joomla CCK &lt; 8.3.16 - site/uploader.php is reached through the component’s normal frontend routing (task=getContent), a task with no authentication or ACL check anywhere in the dispatch chain. The handler validates the uploaded file’s content with a real magic-byte MIME check, but the extension allow-list that would otherwise restrict the saved file’s extension was present in the source and commented out. The saved file’s extension was taken directly from the attacker-supplied filename with no validation, and t</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-102427 in your asset inventory. Apply patches per vendor guidance and verify Joomla Cck is not exposed. CVSS score: 10.0. EPSS probability: 0.8%; percentile: 56%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102427">NVD — CVE-2026-102427</a><a href="https://www.ordasoft.com/">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-09-ordasoft-cve-2026-102427.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="urllib3: HTTPS proxy TLS configuration may be ignored or overridden" data-vendor="PyPI" data-cve="CVE-2026-97687">

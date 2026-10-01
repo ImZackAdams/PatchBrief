@@ -1,0 +1,36 @@
+id: 2026-10-insydeh2o-vu-553437
+slug: 2026-10-insydeh2o-vu-553437
+external_id: VU-553437
+source: cert_vu
+date: '2026-10-01'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#553437: InsydeH2O IHISI SMM is vulnerable to unsafe memory write operations'
+summary: 'Overview An Out-of-bounds Write vulnerability in the InsydeH2O IHISI software
+  used by HP PC BIOS can allow a local attacker with OS kernel privileges to perform
+  arbitrary physical memory writes, including writes to System Management RAM (SMRAM).
+  Because the vulnerable code executes in System Management Mode (SMM), successful
+  exploitation can allow an attacker to modify SMM-protected memory and potentially
+  achieve arbitrary code execution in SMM. Depending on the platform''s memory and
+  firmware configuration, the arbitrary physical memory write primitive may also have
+  implications for UEFI firmware update or flash-related operations. Description HP
+  PC BIOS is firmware that initializes and manages hardware components during the
+  boot process and provides runtime services to the operating system and provide the
+  ability to update firmware. The... Related CVEs: CVE-2026-12855.'
+vendor: InsydeH2O
+product: IHISI SMM
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for IHISI SMM where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#553437
+  url: https://kb.cert.org/vuls/id/553437
+tags:
+- vu-553437
+- coordinated-disclosure
+- insydeh2o
+- cert-vu
+is_sample: false
