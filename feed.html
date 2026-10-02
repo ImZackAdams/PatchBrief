@@ -239,10 +239,32 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1823 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1825 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Fortinet FortiMail Path Traversal Vulnerability" data-vendor="Fortinet" data-cve="CVE-2026-104286">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-104286</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-fortinet-cve-2026-104286.html">Fortinet FortiMail Path Traversal Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Fortinet · FortiMail</p>
+              <p class="feed-summary">Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104286">NVD — CVE-2026-104286</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-fortinet-cve-2026-104286.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: Unauthenticated SQL injection in searchDocs via unescaped keyword (publish mode): cross-notebook read/write w..." data-vendor="Go" data-cve="CVE-2026-69085">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -263,6 +285,28 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-33jq-p8c2-q3q4">GitHub Advisory GHSA-33jq-p8c2-q3q4</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-69085">NVD — CVE-2026-69085</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-33jq-p8c2-q3q4">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-10-go-cve-2026-69085.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SiYuan: getAttributeViewSearchTarget returns database row content to anonymous readers with no publish-access check, ..." data-vendor="Go">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 1, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-go-ghsa-9cqf-hhrq-7v45.html">SiYuan: getAttributeViewSearchTarget returns database row content to anonymous readers with no publish-access check, ...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/siyuan-note/siyuan/kernel</p>
+              <p class="feed-summary">SiYuan: getAttributeViewSearchTarget returns database row content to anonymous readers with no publish-access check, reopening the class closed one day earlier at the adjacent route</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/siyuan-note/siyuan/kernel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-9cqf-hhrq-7v45">GitHub Advisory GHSA-9cqf-hhrq-7v45</a><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-9cqf-hhrq-7v45">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-go-ghsa-9cqf-hhrq-7v45.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#553437: InsydeH2O IHISI SMM is vulnerable to unsafe memory write operations" data-vendor="InsydeH2O">
