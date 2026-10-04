@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-03T14:09:38Z",
-  "total_items": 1848,
+  "generated": "2026-10-04T14:39:18Z",
+  "total_items": 1849,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-03T14:09:38Z",
+    "generated": "2026-10-04T14:39:18Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-10-03T14:09:21Z",
-        "finished_at": "2026-10-03T14:09:22Z"
+        "items_seen": 3,
+        "started_at": "2026-10-04T14:39:03Z",
+        "finished_at": "2026-10-04T14:39:04Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-10-03T14:09:22Z",
-        "finished_at": "2026-10-03T14:09:23Z"
+        "started_at": "2026-10-04T14:39:04Z",
+        "finished_at": "2026-10-04T14:39:04Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 6,
-        "started_at": "2026-10-03T14:09:23Z",
-        "finished_at": "2026-10-03T14:09:30Z"
+        "items_seen": 0,
+        "started_at": "2026-10-04T14:39:04Z",
+        "finished_at": "2026-10-04T14:39:12Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-10-03T14:09:30Z",
-        "finished_at": "2026-10-03T14:09:31Z"
+        "started_at": "2026-10-04T14:39:12Z",
+        "finished_at": "2026-10-04T14:39:12Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-10-03T14:09:31Z",
-        "finished_at": "2026-10-03T14:09:33Z"
+        "started_at": "2026-10-04T14:39:12Z",
+        "finished_at": "2026-10-04T14:39:13Z"
       },
       {
         "id": "exploitdb",
@@ -63,17 +63,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-03T14:09:33Z",
-        "finished_at": "2026-10-03T14:09:34Z"
+        "started_at": "2026-10-04T14:39:13Z",
+        "finished_at": "2026-10-04T14:39:13Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 27,
-        "started_at": "2026-10-03T14:09:34Z",
-        "finished_at": "2026-10-03T14:09:35Z"
+        "items_seen": 24,
+        "started_at": "2026-10-04T14:39:13Z",
+        "finished_at": "2026-10-04T14:39:14Z"
       }
     ]
   },
@@ -145,6 +145,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-4vpg-gwqq-w44c"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-ghsa-5wf9-h793-w73c",
+      "slug": "2026-10-go-ghsa-5wf9-h793-w73c",
+      "url": "https://www.patchbrief.org/items/2026-10-go-ghsa-5wf9-h793-w73c.html",
+      "date": "2026-10-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Xray-core: Pinning a CA certificate via pinnedPeerCertSha256 can lead to the success of MITM attacks",
+      "summary": "Xray-core: Pinning a CA certificate via pinnedPeerCertSha256 can lead to the success of MITM attacks",
+      "vendor": "Go",
+      "product": "github.com/xtls/xray-core",
+      "cve": null,
+      "operator_check": "Check whether github.com/xtls/xray-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/xtls/xray-core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-5wf9-h793-w73c",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5wf9-h793-w73c",
+          "url": "https://github.com/advisories/GHSA-5wf9-h793-w73c"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/XTLS/Xray-core/security/advisories/GHSA-5wf9-h793-w73c"
         }
       ]
     },
