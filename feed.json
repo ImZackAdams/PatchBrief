@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-06T15:43:13Z",
-  "total_items": 1887,
+  "generated": "2026-10-07T16:07:42Z",
+  "total_items": 1899,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-06T15:43:13Z",
+    "generated": "2026-10-07T16:07:42Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-10-06T15:43:00Z",
-        "finished_at": "2026-10-06T15:43:01Z"
+        "started_at": "2026-10-07T16:07:24Z",
+        "finished_at": "2026-10-07T16:07:24Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-06T15:43:01Z",
-        "finished_at": "2026-10-06T15:43:01Z"
+        "started_at": "2026-10-07T16:07:24Z",
+        "finished_at": "2026-10-07T16:07:25Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-10-06T15:43:01Z",
-        "finished_at": "2026-10-06T15:43:08Z"
+        "items_seen": 2,
+        "started_at": "2026-10-07T16:07:25Z",
+        "finished_at": "2026-10-07T16:07:35Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-10-06T15:43:08Z",
-        "finished_at": "2026-10-06T15:43:10Z"
+        "started_at": "2026-10-07T16:07:35Z",
+        "finished_at": "2026-10-07T16:07:37Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-06T15:43:10Z",
-        "finished_at": "2026-10-06T15:43:10Z"
+        "started_at": "2026-10-07T16:07:37Z",
+        "finished_at": "2026-10-07T16:07:38Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,231 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-06T15:43:10Z",
-        "finished_at": "2026-10-06T15:43:11Z"
+        "started_at": "2026-10-07T16:07:38Z",
+        "finished_at": "2026-10-07T16:07:39Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 25,
-        "started_at": "2026-10-06T15:43:11Z",
-        "finished_at": "2026-10-06T15:43:11Z"
+        "items_seen": 29,
+        "started_at": "2026-10-07T16:07:39Z",
+        "finished_at": "2026-10-07T16:07:39Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-npm-cve-2026-57449",
+      "slug": "2026-10-npm-cve-2026-57449",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-57449.html",
+      "date": "2026-10-07",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Actual Sync Server: CORS Proxy GitHub API Allowlist Prefix Bypass Leaks Private Repositories Through the Server GitHu...",
+      "summary": "Actual Sync Server: CORS Proxy GitHub API Allowlist Prefix Bypass Leaks Private Repositories Through the Server GitHub Token",
+      "vendor": "npm",
+      "product": "@actual-app/sync-server",
+      "cve": "CVE-2026-57449",
+      "operator_check": "Check whether @actual-app/sync-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.2%; percentile: 10%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @actual-app/sync-server. Prioritize it with other application dependency updates, especially because EPSS places it in the 10% percentile.",
+      "tags": [
+        "cve-2026-57449",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m62c-5q34-f3cf",
+          "url": "https://github.com/advisories/GHSA-m62c-5q34-f3cf"
+        },
+        {
+          "title": "NVD — CVE-2026-57449",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57449"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/actualbudget/actual/security/advisories/GHSA-m62c-5q34-f3cf"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-43976",
+      "slug": "2026-10-pypi-cve-2026-43976",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-43976.html",
+      "date": "2026-10-07",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "wger: cross-tenant admin notes/contracts leak via gym=None bypass (5 views)",
+      "summary": "wger: cross-tenant admin notes/contracts leak via gym=None bypass (5 views)",
+      "vendor": "PyPI",
+      "product": "wger",
+      "cve": "CVE-2026-43976",
+      "operator_check": "Check whether wger is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for wger. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-43976",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c72h-82w6-rqfp",
+          "url": "https://github.com/advisories/GHSA-c72h-82w6-rqfp"
+        },
+        {
+          "title": "NVD — CVE-2026-43976",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43976"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/wger-project/wger/security/advisories/GHSA-c72h-82w6-rqfp"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-46434",
+      "slug": "2026-10-pypi-cve-2026-46434",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-46434.html",
+      "date": "2026-10-07",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "wger: Trainer Privilege Escalation - Improper Privilege Management",
+      "summary": "wger: Trainer Privilege Escalation - Improper Privilege Management",
+      "vendor": "PyPI",
+      "product": "wger",
+      "cve": "CVE-2026-46434",
+      "operator_check": "Check whether wger is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for wger. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-46434",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x249-cx55-2h87",
+          "url": "https://github.com/advisories/GHSA-x249-cx55-2h87"
+        },
+        {
+          "title": "NVD — CVE-2026-46434",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46434"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/wger-project/wger/security/advisories/GHSA-x249-cx55-2h87"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-61428",
+      "slug": "2026-10-pypi-cve-2026-61428",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-61428.html",
+      "date": "2026-10-07",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PraisonAI: AgentMail webhook lacks signature verification, allowing unauthenticated message injection and sender spoo...",
+      "summary": "PraisonAI: AgentMail webhook lacks signature verification, allowing unauthenticated message injection and sender spoofing",
+      "vendor": "PyPI",
+      "product": "praisonai",
+      "cve": "CVE-2026-61428",
+      "operator_check": "Check whether praisonai is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for praisonai. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-61428",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qj9c-59p6-8cgx",
+          "url": "https://github.com/advisories/GHSA-qj9c-59p6-8cgx"
+        },
+        {
+          "title": "NVD — CVE-2026-61428",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61428"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-qj9c-59p6-8cgx"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-61436",
+      "slug": "2026-10-pypi-cve-2026-61436",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-61436.html",
+      "date": "2026-10-07",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PraisonAI: AgentMail webhook mode accepts forged unsigned message.received events and invokes agents",
+      "summary": "PraisonAI: AgentMail webhook mode accepts forged unsigned message.received events and invokes agents",
+      "vendor": "PyPI",
+      "product": "praisonai",
+      "cve": "CVE-2026-61436",
+      "operator_check": "Check whether praisonai is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 42%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for praisonai. Prioritize it with other application dependency updates, especially because EPSS places it in the 42% percentile.",
+      "tags": [
+        "cve-2026-61436",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7c92-x8vg-4258",
+          "url": "https://github.com/advisories/GHSA-7c92-x8vg-4258"
+        },
+        {
+          "title": "NVD — CVE-2026-61436",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61436"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-7c92-x8vg-4258"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-62176",
+      "slug": "2026-10-pypi-cve-2026-62176",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-62176.html",
+      "date": "2026-10-07",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PraisonAI: Code Injection via f-string Interpolation in Deploy API Server Generation",
+      "summary": "PraisonAI: Code Injection via f-string Interpolation in Deploy API Server Generation",
+      "vendor": "PyPI",
+      "product": "PraisonAI",
+      "cve": "CVE-2026-62176",
+      "operator_check": "Check whether PraisonAI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for PraisonAI. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-62176",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g6j7-pffp-8whg",
+          "url": "https://github.com/advisories/GHSA-g6j7-pffp-8whg"
+        },
+        {
+          "title": "NVD — CVE-2026-62176",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62176"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-g6j7-pffp-8whg"
+        }
+      ]
+    },
     {
       "id": "2026-10-go-cve-2026-26287",
       "slug": "2026-10-go-cve-2026-26287",
@@ -110,6 +320,76 @@
         {
           "title": "Source reference",
           "url": "https://github.com/external-secrets/external-secrets/security/advisories/GHSA-q7hv-xx6h-q2x8"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-41510",
+      "slug": "2026-10-go-cve-2026-41510",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-41510.html",
+      "date": "2026-10-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Coraza: Silent argument drop at ArgumentLimit allows bypass of ARGS-targeted rules via parameter flooding",
+      "summary": "Coraza: Silent argument drop at ArgumentLimit allows bypass of ARGS-targeted rules via parameter flooding",
+      "vendor": "Go",
+      "product": "github.com/corazawaf/coraza/v3",
+      "cve": "CVE-2026-41510",
+      "operator_check": "Check whether github.com/corazawaf/coraza/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/corazawaf/coraza/v3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-41510",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6r3q-mjv7-xr8m",
+          "url": "https://github.com/advisories/GHSA-6r3q-mjv7-xr8m"
+        },
+        {
+          "title": "NVD — CVE-2026-41510",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41510"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/corazawaf/coraza/security/advisories/GHSA-6r3q-mjv7-xr8m"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-google-cve-2026-106237",
+      "slug": "2026-10-google-cve-2026-106237",
+      "url": "https://www.patchbrief.org/items/2026-10-google-cve-2026-106237.html",
+      "date": "2026-10-06",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Google Chrome — CVE-2026-106237 (Critical)",
+      "summary": "Information leak in Permissions in Google Chrome prior to 155.0.8059.39 allowed a remote attacker to bypass site isolation via a crafted HTML page. (Chromium security severity: Low)",
+      "vendor": "Google",
+      "product": "Chrome",
+      "cve": "CVE-2026-106237",
+      "operator_check": "Review CVE-2026-106237 in your asset inventory. Apply patches per vendor guidance and verify Chrome is not exposed. CVSS score: 9.6. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.6) in Google Chrome. Patch or mitigate promptly. EPSS percentile: 7%.",
+      "tags": [
+        "cve-2026-106237",
+        "vendor-advisory",
+        "google",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-106237",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106237"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_086471744.html"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://issues.chromium.org/issues/553255283"
         }
       ]
     },
@@ -180,6 +460,111 @@
         {
           "title": "Source reference",
           "url": "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories/GHSA-6qxp-vccf-f47h"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-105844",
+      "slug": "2026-10-npm-cve-2026-105844",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-105844.html",
+      "date": "2026-10-06",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Payload: Prototype pollution in Payload Import Export plugin",
+      "summary": "Payload: Prototype pollution in Payload Import Export plugin",
+      "vendor": "npm",
+      "product": "@payloadcms/plugin-import-export",
+      "cve": "CVE-2026-105844",
+      "operator_check": "Check whether @payloadcms/plugin-import-export is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 42%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @payloadcms/plugin-import-export. Prioritize it with other application dependency updates, especially because EPSS places it in the 42% percentile.",
+      "tags": [
+        "cve-2026-105844",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qf28-8hc6-vwrp",
+          "url": "https://github.com/advisories/GHSA-qf28-8hc6-vwrp"
+        },
+        {
+          "title": "NVD — CVE-2026-105844",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105844"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/payloadcms/payload/security/advisories/GHSA-qf28-8hc6-vwrp"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-105845",
+      "slug": "2026-10-npm-cve-2026-105845",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-105845.html",
+      "date": "2026-10-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Payload: SQL Injection in SQLite and Postgres",
+      "summary": "Payload: SQL Injection in SQLite and Postgres",
+      "vendor": "npm",
+      "product": "payload",
+      "cve": "CVE-2026-105845",
+      "operator_check": "Check whether payload is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for payload. Prioritize it with other application dependency updates, especially because EPSS places it in the 30% percentile.",
+      "tags": [
+        "cve-2026-105845",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v49j-62m6-pgrr",
+          "url": "https://github.com/advisories/GHSA-v49j-62m6-pgrr"
+        },
+        {
+          "title": "NVD — CVE-2026-105845",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105845"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/payloadcms/payload/security/advisories/GHSA-v49j-62m6-pgrr"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-105851",
+      "slug": "2026-10-npm-cve-2026-105851",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-105851.html",
+      "date": "2026-10-06",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Payload: Field access control bypass on auth collections",
+      "summary": "Payload: Field access control bypass on auth collections",
+      "vendor": "npm",
+      "product": "payload",
+      "cve": "CVE-2026-105851",
+      "operator_check": "Check whether payload is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.3%; percentile: 22%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for payload. Prioritize it with other application dependency updates, especially because EPSS places it in the 22% percentile.",
+      "tags": [
+        "cve-2026-105851",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vc4h-q48j-5hcx",
+          "url": "https://github.com/advisories/GHSA-vc4h-q48j-5hcx"
+        },
+        {
+          "title": "NVD — CVE-2026-105851",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105851"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/payloadcms/payload/security/advisories/GHSA-vc4h-q48j-5hcx"
         }
       ]
     },
@@ -351,6 +736,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/openapi-generators/openapi-python-client/security/advisories/GHSA-5293-mq8x-g3xj"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-the-cve-2026-104070",
+      "slug": "2026-10-the-cve-2026-104070",
+      "url": "https://www.patchbrief.org/items/2026-10-the-cve-2026-104070.html",
+      "date": "2026-10-06",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "The Crayons plugin for SPIP — CVE-2026-104070 (Critical)",
+      "summary": "The Crayons plugin for SPIP before 3.5.0 contains a missing authorization vulnerability that allows unauthenticated attackers to modify arbitrary editable object fields by omitting the secu_ anti-forgery parameter in crayons_store.php, causing the authorization dispatcher to resolve an unconditionally-true handler instead of the proper modification check. Attackers can chain this flaw to write a malicious .html skeleton file, disclose sensitive configuration files containing the site secret, and forge a signed ajax context to execute the uploaded skeleton, achieving arbitrary PHP code executio",
+      "vendor": "The",
+      "product": "Crayons plugin for SPIP",
+      "cve": "CVE-2026-104070",
+      "operator_check": "Review CVE-2026-104070 in your asset inventory. Apply patches per vendor guidance and verify Crayons plugin for SPIP is not exposed. CVSS score: 9.8. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in The Crayons plugin for SPIP. Patch or mitigate promptly. EPSS percentile: 45%.",
+      "tags": [
+        "cve-2026-104070",
+        "vendor-advisory",
+        "the",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-104070",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104070"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://blog.spip.net/Mises-a-jour-de-securite-critique-plugins-Crayons-et-Simplog.html?lang=fr"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://plugins.spip.net/crayons.html?lang=fr"
         }
       ]
     },
