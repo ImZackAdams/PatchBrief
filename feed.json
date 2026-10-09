@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-08T16:09:37Z",
-  "total_items": 1913,
+  "generated": "2026-10-09T15:51:07Z",
+  "total_items": 1938,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-08T16:09:37Z",
+    "generated": "2026-10-09T15:51:07Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-10-08T16:09:23Z",
-        "finished_at": "2026-10-08T16:09:24Z"
+        "items_seen": 5,
+        "started_at": "2026-10-09T15:50:54Z",
+        "finished_at": "2026-10-09T15:50:54Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-08T16:09:24Z",
-        "finished_at": "2026-10-08T16:09:24Z"
+        "started_at": "2026-10-09T15:50:54Z",
+        "finished_at": "2026-10-09T15:50:55Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-10-08T16:09:24Z",
-        "finished_at": "2026-10-08T16:09:31Z"
+        "items_seen": 11,
+        "started_at": "2026-10-09T15:50:55Z",
+        "finished_at": "2026-10-09T15:51:02Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-10-08T16:09:31Z",
-        "finished_at": "2026-10-08T16:09:32Z"
+        "started_at": "2026-10-09T15:51:02Z",
+        "finished_at": "2026-10-09T15:51:03Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-08T16:09:32Z",
-        "finished_at": "2026-10-08T16:09:32Z"
+        "started_at": "2026-10-09T15:51:03Z",
+        "finished_at": "2026-10-09T15:51:03Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,282 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-08T16:09:32Z",
-        "finished_at": "2026-10-08T16:09:32Z"
+        "started_at": "2026-10-09T15:51:03Z",
+        "finished_at": "2026-10-09T15:51:03Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 34,
-        "started_at": "2026-10-08T16:09:32Z",
-        "finished_at": "2026-10-08T16:09:32Z"
+        "items_seen": 46,
+        "started_at": "2026-10-09T15:51:03Z",
+        "finished_at": "2026-10-09T15:51:04Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-pypi-cve-2026-107728",
+      "slug": "2026-10-pypi-cve-2026-107728",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-107728.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Strawberry GraphQL: Synchronous permission checks can treat an awaitable authorization result as truthy",
+      "summary": "Strawberry GraphQL: Synchronous permission checks can treat an awaitable authorization result as truthy",
+      "vendor": "PyPI",
+      "product": "strawberry-graphql",
+      "cve": "CVE-2026-107728",
+      "operator_check": "Check whether strawberry-graphql is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for strawberry-graphql. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-107728",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pfvf-fwfp-25mp",
+          "url": "https://github.com/advisories/GHSA-pfvf-fwfp-25mp"
+        },
+        {
+          "title": "NVD — CVE-2026-107728",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107728"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/strawberry-graphql/strawberry/security/advisories/GHSA-pfvf-fwfp-25mp"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-apache-cve-2016-3081",
+      "slug": "2026-10-apache-cve-2016-3081",
+      "url": "https://www.patchbrief.org/items/2026-10-apache-cve-2016-3081.html",
+      "date": "2026-10-08",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Apache Struts Command Injection Vulnerability",
+      "summary": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.",
+      "vendor": "Apache",
+      "product": "Struts",
+      "cve": "CVE-2016-3081",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2016-3081 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-11. Treat remediation as urgent.",
+      "tags": [
+        "cve-2016-3081",
+        "kev",
+        "apache",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2016-3081",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3081"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-dromara-cve-2026-107779",
+      "slug": "2026-10-dromara-cve-2026-107779",
+      "url": "https://www.patchbrief.org/items/2026-10-dromara-cve-2026-107779.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Dromara Skyeye — CVE-2026-107779 (Critical)",
+      "summary": "Dromara Skyeye through commit 003549ae5615bd114ba5bb8ddf6a8e8ead97c321 contains a missing authentication vulnerability in bundled xxl-job-admin JobInfoController endpoints annotated with @PermissionLimit(limit = false). Unauthenticated attackers can POST GLUE_SHELL, GLUE_PYTHON, or GLUE_POWERSHELL jobs with attacker-supplied glueSource to /jobinfo/addAndStart, executing commands on the executor host or stopping and deleting jobs.",
+      "vendor": "Dromara",
+      "product": "Skyeye",
+      "cve": "CVE-2026-107779",
+      "operator_check": "Review CVE-2026-107779 in your asset inventory. Apply patches per vendor guidance and verify Skyeye is not exposed. CVSS score: 9.8. EPSS probability: 0.5%; percentile: 44%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Dromara Skyeye. Patch or mitigate promptly. EPSS percentile: 44%.",
+      "tags": [
+        "cve-2026-107779",
+        "vendor-advisory",
+        "dromara",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-107779",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107779"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dromara/skyeye"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dromara/skyeye/blob/003549ae5615bd114ba5bb8ddf6a8e8ead97c321/xxl-job-2.3.0/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobInfoController.java#L183-L231"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-dromara-cve-2026-107780",
+      "slug": "2026-10-dromara-cve-2026-107780",
+      "url": "https://www.patchbrief.org/items/2026-10-dromara-cve-2026-107780.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Dromara Skyeye — CVE-2026-107780 (Critical)",
+      "summary": "Dromara Skyeye through commit 003549ae5615bd114ba5bb8ddf6a8e8ead97c321 contains an OS command injection vulnerability in the unauthenticated /post/TtsController/textToSpeech endpoint via the format parameter. Attackers can inject a single quote into format to break out of the PowerShell string and execute commands as the Skyeye service account on Windows.",
+      "vendor": "Dromara",
+      "product": "Skyeye",
+      "cve": "CVE-2026-107780",
+      "operator_check": "Review CVE-2026-107780 in your asset inventory. Apply patches per vendor guidance and verify Skyeye is not exposed. CVSS score: 9.8. EPSS probability: 2.1%; percentile: 81%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Dromara Skyeye. Patch or mitigate promptly. EPSS percentile: 81%.",
+      "tags": [
+        "cve-2026-107780",
+        "vendor-advisory",
+        "dromara",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-107780",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107780"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dromara/skyeye"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dromara/skyeye/blob/003549ae5615bd114ba5bb8ddf6a8e8ead97c321/skyeye-promote/skyeye-common/src/main/java/com/skyeye/common/service/impl/TtsServiceImpl.java#L105-L166"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-ibm-cve-2026-78401",
+      "slug": "2026-10-ibm-cve-2026-78401",
+      "url": "https://www.patchbrief.org/items/2026-10-ibm-cve-2026-78401.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ibm Security Verify Access — CVE-2026-78401 (Critical)",
+      "summary": "IBM Security Verify Access 10.0 through 10.0.9.2 and IBM Verify Identity Access 11.0 through 11.0.3 could allow a remote unauthenticated attacker to execute arbitrary code on the system due to the deserialization of untrusted data.",
+      "vendor": "Ibm",
+      "product": "Security Verify Access",
+      "cve": "CVE-2026-78401",
+      "operator_check": "Review CVE-2026-78401 in your asset inventory. Apply patches per vendor guidance and verify Security Verify Access is not exposed. CVSS score: 9.8. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Ibm Security Verify Access. Patch or mitigate promptly. EPSS percentile: 45%.",
+      "tags": [
+        "cve-2026-78401",
+        "vendor-advisory",
+        "ibm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-78401",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78401"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7291628"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-ibm-cve-2026-82335",
+      "slug": "2026-10-ibm-cve-2026-82335",
+      "url": "https://www.patchbrief.org/items/2026-10-ibm-cve-2026-82335.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ibm Guardium Data Protection — CVE-2026-82335 (Critical)",
+      "summary": "IBM Guardium Data Protection 12.0, 12.1, 12.2 is vulnerable to a heap-based buffer overflow in the MongoDB protocol parser. A remote attacker could send a specially crafted MongoDB SCRAM username containing an excessive length and cause memory corruption, potentially resulting in denial of service or arbitrary code execution.",
+      "vendor": "Ibm",
+      "product": "Guardium Data Protection",
+      "cve": "CVE-2026-82335",
+      "operator_check": "Review CVE-2026-82335 in your asset inventory. Apply patches per vendor guidance and verify Guardium Data Protection is not exposed. CVSS score: 8.1. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.1) in Ibm Guardium Data Protection. Patch or mitigate promptly. EPSS percentile: 29%.",
+      "tags": [
+        "cve-2026-82335",
+        "vendor-advisory",
+        "ibm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-82335",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82335"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7291674"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-ibm-cve-2026-82344",
+      "slug": "2026-10-ibm-cve-2026-82344",
+      "url": "https://www.patchbrief.org/items/2026-10-ibm-cve-2026-82344.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ibm Guardium Data Protection — CVE-2026-82344 (Critical)",
+      "summary": "IBM Guardium Data Protection 12.0, 12.1 is vulnerable to a heap-based buffer overflow in the S-TAP TrafficTap TDS login reassembly functionality. An unauthenticated remote attacker can send crafted TDS login fragments that exceed the fixed-size reassembly buffer, potentially resulting in denial of service or arbitrary code execution on the affected system.",
+      "vendor": "Ibm",
+      "product": "Guardium Data Protection",
+      "cve": "CVE-2026-82344",
+      "operator_check": "Review CVE-2026-82344 in your asset inventory. Apply patches per vendor guidance and verify Guardium Data Protection is not exposed. CVSS score: 8.1. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.1) in Ibm Guardium Data Protection. Patch or mitigate promptly. EPSS percentile: 30%.",
+      "tags": [
+        "cve-2026-82344",
+        "vendor-advisory",
+        "ibm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-82344",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82344"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7291670"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-ibm-cve-2026-84272",
+      "slug": "2026-10-ibm-cve-2026-84272",
+      "url": "https://www.patchbrief.org/items/2026-10-ibm-cve-2026-84272.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ibm Guardium Data Protection — CVE-2026-84272 (Critical)",
+      "summary": "IBM Guardium Data Protection 12.1 and 12.2.2 are vulnerable to missing authentication in the edge-controller component. An unauthenticated remote attacker could exploit this vulnerability to execute arbitrary container images and gain control of managed edge clusters.",
+      "vendor": "Ibm",
+      "product": "Guardium Data Protection",
+      "cve": "CVE-2026-84272",
+      "operator_check": "Review CVE-2026-84272 in your asset inventory. Apply patches per vendor guidance and verify Guardium Data Protection is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Ibm Guardium Data Protection. Patch or mitigate promptly. EPSS percentile: 32%.",
+      "tags": [
+        "cve-2026-84272",
+        "vendor-advisory",
+        "ibm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-84272",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84272"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7288832"
+        }
+      ]
+    },
     {
       "id": "2026-10-integrics-cve-2026-107640",
       "slug": "2026-10-integrics-cve-2026-107640",
@@ -110,6 +371,553 @@
         {
           "title": "Source reference",
           "url": "https://www.integrics.com/enswitch/"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-isc-cve-2015-5477",
+      "slug": "2026-10-isc-cve-2015-5477",
+      "url": "https://www.patchbrief.org/items/2026-10-isc-cve-2015-5477.html",
+      "date": "2026-10-08",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "ISC BIND Data Processing Errors Vulnerability",
+      "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
+      "vendor": "ISC",
+      "product": "BIND",
+      "cve": "CVE-2015-5477",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2015-5477 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-11. Treat remediation as urgent.",
+      "tags": [
+        "cve-2015-5477",
+        "kev",
+        "isc",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2015-5477",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-maven-cve-2026-107282",
+      "slug": "2026-10-maven-cve-2026-107282",
+      "url": "https://www.patchbrief.org/items/2026-10-maven-cve-2026-107282.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "AsyncHttpClient: Replay to a different host sends the original host request and credentials to the new host",
+      "summary": "AsyncHttpClient: Replay to a different host sends the original host request and credentials to the new host",
+      "vendor": "Maven",
+      "product": "org.asynchttpclient:async-http-client",
+      "cve": "CVE-2026-107282",
+      "operator_check": "Check whether org.asynchttpclient:async-http-client is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.4. EPSS probability: 0.2%; percentile: 8%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.asynchttpclient:async-http-client. Prioritize it with other application dependency updates, especially because EPSS places it in the 8% percentile.",
+      "tags": [
+        "cve-2026-107282",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jmqq-x5g9-9p2w",
+          "url": "https://github.com/advisories/GHSA-jmqq-x5g9-9p2w"
+        },
+        {
+          "title": "NVD — CVE-2026-107282",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107282"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/AsyncHttpClient/async-http-client/security/advisories/GHSA-jmqq-x5g9-9p2w"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-maven-cve-2026-107725",
+      "slug": "2026-10-maven-cve-2026-107725",
+      "url": "https://www.patchbrief.org/items/2026-10-maven-cve-2026-107725.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Hazelcast has an authorization bypass in IMap Predicates API",
+      "summary": "Hazelcast has an authorization bypass in IMap Predicates API",
+      "vendor": "Maven",
+      "product": "com.hazelcast:hazelcast",
+      "cve": "CVE-2026-107725",
+      "operator_check": "Check whether com.hazelcast:hazelcast is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for com.hazelcast:hazelcast. Prioritize it with other application dependency updates, especially because EPSS places it in the 30% percentile.",
+      "tags": [
+        "cve-2026-107725",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w294-6q5q-53p8",
+          "url": "https://github.com/advisories/GHSA-w294-6q5q-53p8"
+        },
+        {
+          "title": "NVD — CVE-2026-107725",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107725"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/hazelcast/hazelcast/security/advisories/GHSA-w294-6q5q-53p8"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-maven-cve-2026-107726",
+      "slug": "2026-10-maven-cve-2026-107726",
+      "url": "https://www.patchbrief.org/items/2026-10-maven-cve-2026-107726.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Hazelcast allows arbitrary member memory access by low-privileged client",
+      "summary": "Hazelcast allows arbitrary member memory access by low-privileged client",
+      "vendor": "Maven",
+      "product": "com.hazelcast:hazelcast",
+      "cve": "CVE-2026-107726",
+      "operator_check": "Check whether com.hazelcast:hazelcast is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for com.hazelcast:hazelcast. Prioritize it with other application dependency updates, especially because EPSS places it in the 30% percentile.",
+      "tags": [
+        "cve-2026-107726",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6v25-8wq6-xq4j",
+          "url": "https://github.com/advisories/GHSA-6v25-8wq6-xq4j"
+        },
+        {
+          "title": "NVD — CVE-2026-107726",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107726"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/hazelcast/hazelcast/security/advisories/GHSA-6v25-8wq6-xq4j"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-106445",
+      "slug": "2026-10-npm-cve-2026-106445",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-106445.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Handlebars: JavaScript Injection via Own Property Check Bypass",
+      "summary": "Handlebars: JavaScript Injection via Own Property Check Bypass",
+      "vendor": "npm",
+      "product": "handlebars",
+      "cve": "CVE-2026-106445",
+      "operator_check": "Check whether handlebars is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for handlebars. Prioritize it with other application dependency updates, especially because EPSS places it in the 33% percentile.",
+      "tags": [
+        "cve-2026-106445",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p8wg-vrv2-v86f",
+          "url": "https://github.com/advisories/GHSA-p8wg-vrv2-v86f"
+        },
+        {
+          "title": "NVD — CVE-2026-106445",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106445"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-p8wg-vrv2-v86f"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-106446",
+      "slug": "2026-10-npm-cve-2026-106446",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-106446.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Handlebars: JavaScript Injection via AST Type Confusion in compile (bypass of CVE-2026-33937)",
+      "summary": "Handlebars: JavaScript Injection via AST Type Confusion in compile (bypass of CVE-2026-33937)",
+      "vendor": "npm",
+      "product": "handlebars",
+      "cve": "CVE-2026-106446",
+      "operator_check": "Check whether handlebars is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 49%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for handlebars. Prioritize it with other application dependency updates, especially because EPSS places it in the 49% percentile.",
+      "tags": [
+        "cve-2026-106446",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8r5x-fm3f-whwj",
+          "url": "https://github.com/advisories/GHSA-8r5x-fm3f-whwj"
+        },
+        {
+          "title": "NVD — CVE-2026-106446",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106446"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-8r5x-fm3f-whwj"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-107720",
+      "slug": "2026-10-npm-cve-2026-107720",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-107720.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "fast-jwt: createVerifier accepts unsigned JWTs when key is '' or null and algorithms is explicitly set",
+      "summary": "fast-jwt: createVerifier accepts unsigned JWTs when key is '' or null and algorithms is explicitly set",
+      "vendor": "npm",
+      "product": "fast-jwt",
+      "cve": "CVE-2026-107720",
+      "operator_check": "Check whether fast-jwt is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 16%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for fast-jwt. Prioritize it with other application dependency updates, especially because EPSS places it in the 16% percentile.",
+      "tags": [
+        "cve-2026-107720",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8wpc-h4q6-8fxv",
+          "url": "https://github.com/advisories/GHSA-8wpc-h4q6-8fxv"
+        },
+        {
+          "title": "NVD — CVE-2026-107720",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107720"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nearform/fast-jwt/security/advisories/GHSA-8wpc-h4q6-8fxv"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-107722",
+      "slug": "2026-10-npm-cve-2026-107722",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-107722.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "fast-jwt: Incomplete patch of CVE-2026-34950: Non-whitespace key-prefix re-enables RSA→HS256 algorithm confusion",
+      "summary": "fast-jwt: Incomplete patch of CVE-2026-34950: Non-whitespace key-prefix re-enables RSA→HS256 algorithm confusion",
+      "vendor": "npm",
+      "product": "fast-jwt",
+      "cve": "CVE-2026-107722",
+      "operator_check": "Check whether fast-jwt is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for fast-jwt. Prioritize it with other application dependency updates, especially because EPSS places it in the 18% percentile.",
+      "tags": [
+        "cve-2026-107722",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-ww5h-9m49-7xx4",
+          "url": "https://github.com/advisories/GHSA-ww5h-9m49-7xx4"
+        },
+        {
+          "title": "NVD — CVE-2026-107722",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107722"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nearform/fast-jwt/security/advisories/GHSA-ww5h-9m49-7xx4"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-107723",
+      "slug": "2026-10-npm-cve-2026-107723",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-107723.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "fast-jwt : Silent claim-validator bypass when JWT payload is a JSON array",
+      "summary": "fast-jwt : Silent claim-validator bypass when JWT payload is a JSON array",
+      "vendor": "npm",
+      "product": "fast-jwt",
+      "cve": "CVE-2026-107723",
+      "operator_check": "Check whether fast-jwt is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 28%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for fast-jwt. Prioritize it with other application dependency updates, especially because EPSS places it in the 28% percentile.",
+      "tags": [
+        "cve-2026-107723",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5hjw-83fp-phq9",
+          "url": "https://github.com/advisories/GHSA-5hjw-83fp-phq9"
+        },
+        {
+          "title": "NVD — CVE-2026-107723",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107723"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nearform/fast-jwt/security/advisories/GHSA-5hjw-83fp-phq9"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-107724",
+      "slug": "2026-10-npm-cve-2026-107724",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-107724.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "fast-jwt treats raw public JWK JSON as an HMAC secret, enabling HS256 token forgery",
+      "summary": "fast-jwt treats raw public JWK JSON as an HMAC secret, enabling HS256 token forgery",
+      "vendor": "npm",
+      "product": "fast-jwt",
+      "cve": "CVE-2026-107724",
+      "operator_check": "Check whether fast-jwt is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 12%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for fast-jwt. Prioritize it with other application dependency updates, especially because EPSS places it in the 12% percentile.",
+      "tags": [
+        "cve-2026-107724",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g3jj-5cmm-3hxx",
+          "url": "https://github.com/advisories/GHSA-g3jj-5cmm-3hxx"
+        },
+        {
+          "title": "NVD — CVE-2026-107724",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107724"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nearform/fast-jwt/security/advisories/GHSA-g3jj-5cmm-3hxx"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-onlyoffice-cve-2021-3199",
+      "slug": "2026-10-onlyoffice-cve-2021-3199",
+      "url": "https://www.patchbrief.org/items/2026-10-onlyoffice-cve-2021-3199.html",
+      "date": "2026-10-08",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "ONLYOFFICE Docs Server Path Traversal Vulnerability",
+      "summary": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
+      "vendor": "ONLYOFFICE",
+      "product": "Docs",
+      "cve": "CVE-2021-3199",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2021-3199 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-11. Treat remediation as urgent.",
+      "tags": [
+        "cve-2021-3199",
+        "kev",
+        "onlyoffice",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2021-3199",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-proftpd-cve-2015-3306",
+      "slug": "2026-10-proftpd-cve-2015-3306",
+      "url": "https://www.patchbrief.org/items/2026-10-proftpd-cve-2015-3306.html",
+      "date": "2026-10-08",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "ProFTPD Improper Access Control Vulnerability",
+      "summary": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
+      "vendor": "ProFTPD",
+      "product": "ProFTPD",
+      "cve": "CVE-2015-3306",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2015-3306 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-11. Treat remediation as urgent.",
+      "tags": [
+        "cve-2015-3306",
+        "kev",
+        "proftpd",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2015-3306",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-61445",
+      "slug": "2026-10-pypi-cve-2026-61445",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-61445.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PraisonAI: AICoder Arbitrary File Write and Command Execution via LLM Tool Calls",
+      "summary": "PraisonAI: AICoder Arbitrary File Write and Command Execution via LLM Tool Calls",
+      "vendor": "PyPI",
+      "product": "praisonai",
+      "cve": "CVE-2026-61445",
+      "operator_check": "Check whether praisonai is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.9%; percentile: 58%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for praisonai. Prioritize it with other application dependency updates, especially because EPSS places it in the 58% percentile.",
+      "tags": [
+        "cve-2026-61445",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9mp3-24cc-77mg",
+          "url": "https://github.com/advisories/GHSA-9mp3-24cc-77mg"
+        },
+        {
+          "title": "NVD — CVE-2026-61445",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61445"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-9mp3-24cc-77mg"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-61447",
+      "slug": "2026-10-pypi-cve-2026-61447",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-61447.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PraisonAI: CodeAgent Executes LLM-Generated Code Without Sandboxing and Leaks All Environment Secrets",
+      "summary": "PraisonAI: CodeAgent Executes LLM-Generated Code Without Sandboxing and Leaks All Environment Secrets",
+      "vendor": "PyPI",
+      "product": "praisonaiagents",
+      "cve": "CVE-2026-61447",
+      "operator_check": "Check whether praisonaiagents is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 2.5%; percentile: 84%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for praisonaiagents. Prioritize it with other application dependency updates, especially because EPSS places it in the 84% percentile.",
+      "tags": [
+        "cve-2026-61447",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2xv2-w8cq-5gxw",
+          "url": "https://github.com/advisories/GHSA-2xv2-w8cq-5gxw"
+        },
+        {
+          "title": "NVD — CVE-2026-61447",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61447"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-2xv2-w8cq-5gxw"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-strapi-cve-2023-22894",
+      "slug": "2026-10-strapi-cve-2023-22894",
+      "url": "https://www.patchbrief.org/items/2026-10-strapi-cve-2023-22894.html",
+      "date": "2026-10-08",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
+      "summary": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with CVE-2023-22621 to achieve remote code execution.",
+      "vendor": "Strapi",
+      "product": "Strapi",
+      "cve": "CVE-2023-22894",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2023-22894 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-11. Treat remediation as urgent.",
+      "tags": [
+        "cve-2023-22894",
+        "kev",
+        "strapi",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2023-22894",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22894"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-tvu-cve-2026-104075",
+      "slug": "2026-10-tvu-cve-2026-104075",
+      "url": "https://www.patchbrief.org/items/2026-10-tvu-cve-2026-104075.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "TVU Networks Receiver/Transceiver devices running firmware — CVE-2026-104075 (Critical)",
+      "summary": "TVU Networks Receiver/Transceiver devices running firmware before version 7.9 contain an authentication bypass vulnerability in the web management login endpoint POST /tvu/Login that allows remote unauthenticated attackers to obtain an administrative session by submitting an empty or absent UserName parameter. Attackers can send a crafted HTTP request directly, bypassing client-side JavaScript validation, to receive a valid session cookie regardless of the password value and gain full administrative control of the device's web management interface.",
+      "vendor": "TVU",
+      "product": "Networks Receiver/Transceiver devices running firmware",
+      "cve": "CVE-2026-104075",
+      "operator_check": "Review CVE-2026-104075 in your asset inventory. Apply patches per vendor guidance and verify Networks Receiver/Transceiver devices running firmware is not exposed. CVSS score: 9.8. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in TVU Networks Receiver/Transceiver devices running firmware. Patch or mitigate promptly. EPSS percentile: 45%.",
+      "tags": [
+        "cve-2026-104075",
+        "vendor-advisory",
+        "tvu",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-104075",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104075"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://code-white.com/public-vulnerability-list/#authentication-bypass-in-tvu-receiver-transceiver-web-management-interface"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/tvu-networks-receiver-transceiver-authentication-bypass-via-tvu-login"
         }
       ]
     },
@@ -180,6 +988,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/sipcapture/homer/security/advisories/GHSA-rqcc-94gv-wjm9"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-langflow-cve-2026-93675",
+      "slug": "2026-10-langflow-cve-2026-93675",
+      "url": "https://www.patchbrief.org/items/2026-10-langflow-cve-2026-93675.html",
+      "date": "2026-10-07",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Langflow Langflow — CVE-2026-93675 (Critical)",
+      "summary": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote attacker to execute arbitrary code due to an expected dependency confusion.",
+      "vendor": "Langflow",
+      "product": "Langflow",
+      "cve": "CVE-2026-93675",
+      "operator_check": "Review CVE-2026-93675 in your asset inventory. Apply patches per vendor guidance and verify Langflow is not exposed. CVSS score: 8.8. EPSS probability: 0.8%; percentile: 54%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.8) in Langflow Langflow. Patch or mitigate promptly. EPSS percentile: 54%.",
+      "tags": [
+        "cve-2026-93675",
+        "vendor-advisory",
+        "langflow",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-93675",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93675"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7290694"
         }
       ]
     },
