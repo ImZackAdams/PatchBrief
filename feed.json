@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-09T15:51:07Z",
-  "total_items": 1938,
+  "generated": "2026-10-10T15:04:47Z",
+  "total_items": 1950,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-09T15:51:07Z",
+    "generated": "2026-10-10T15:04:47Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 5,
-        "started_at": "2026-10-09T15:50:54Z",
-        "finished_at": "2026-10-09T15:50:54Z"
+        "started_at": "2026-10-10T15:04:32Z",
+        "finished_at": "2026-10-10T15:04:32Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-09T15:50:54Z",
-        "finished_at": "2026-10-09T15:50:55Z"
+        "started_at": "2026-10-10T15:04:32Z",
+        "finished_at": "2026-10-10T15:04:33Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 11,
-        "started_at": "2026-10-09T15:50:55Z",
-        "finished_at": "2026-10-09T15:51:02Z"
+        "items_seen": 6,
+        "started_at": "2026-10-10T15:04:33Z",
+        "finished_at": "2026-10-10T15:04:40Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-10-09T15:51:02Z",
-        "finished_at": "2026-10-09T15:51:03Z"
+        "started_at": "2026-10-10T15:04:40Z",
+        "finished_at": "2026-10-10T15:04:41Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-09T15:51:03Z",
-        "finished_at": "2026-10-09T15:51:03Z"
+        "started_at": "2026-10-10T15:04:41Z",
+        "finished_at": "2026-10-10T15:04:41Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,402 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-09T15:51:03Z",
-        "finished_at": "2026-10-09T15:51:03Z"
+        "started_at": "2026-10-10T15:04:41Z",
+        "finished_at": "2026-10-10T15:04:42Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 46,
-        "started_at": "2026-10-09T15:51:03Z",
-        "finished_at": "2026-10-09T15:51:04Z"
+        "items_seen": 40,
+        "started_at": "2026-10-10T15:04:42Z",
+        "finished_at": "2026-10-10T15:04:42Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-composer-cve-2026-107845",
+      "slug": "2026-10-composer-cve-2026-107845",
+      "url": "https://www.patchbrief.org/items/2026-10-composer-cve-2026-107845.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Contao: Cross-site scripting in the comments bundle",
+      "summary": "Contao: Cross-site scripting in the comments bundle",
+      "vendor": "Composer",
+      "product": "contao/comments-bundle",
+      "cve": "CVE-2026-107845",
+      "operator_check": "Check whether contao/comments-bundle is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for contao/comments-bundle. Prioritize it with other application dependency updates, especially because EPSS places it in the 18% percentile.",
+      "tags": [
+        "cve-2026-107845",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-628f-v4f6-p37r",
+          "url": "https://github.com/advisories/GHSA-628f-v4f6-p37r"
+        },
+        {
+          "title": "NVD — CVE-2026-107845",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107845"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/contao/contao/security/advisories/GHSA-628f-v4f6-p37r"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-107805",
+      "slug": "2026-10-go-cve-2026-107805",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-107805.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nginx UI: Unauthenticated signed-request body staging can exhaust temporary storage",
+      "summary": "Nginx UI: Unauthenticated signed-request body staging can exhaust temporary storage",
+      "vendor": "Go",
+      "product": "github.com/0xJacky/Nginx-UI",
+      "cve": "CVE-2026-107805",
+      "operator_check": "Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 37%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/0xJacky/Nginx-UI. Prioritize it with other application dependency updates, especially because EPSS places it in the 37% percentile.",
+      "tags": [
+        "cve-2026-107805",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j3hg-9rp3-5hw9",
+          "url": "https://github.com/advisories/GHSA-j3hg-9rp3-5hw9"
+        },
+        {
+          "title": "NVD — CVE-2026-107805",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107805"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-j3hg-9rp3-5hw9"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-107806",
+      "slug": "2026-10-go-cve-2026-107806",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-107806.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Nginx UI: Authenticated Remote Code Execution via Backup Restore App Config Overwrite",
+      "summary": "Nginx UI: Authenticated Remote Code Execution via Backup Restore App Config Overwrite",
+      "vendor": "Go",
+      "product": "github.com/0xJacky/Nginx-UI",
+      "cve": "CVE-2026-107806",
+      "operator_check": "Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.0. EPSS probability: 0.3%; percentile: 25%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/0xJacky/Nginx-UI. Prioritize it with other application dependency updates, especially because EPSS places it in the 25% percentile.",
+      "tags": [
+        "cve-2026-107806",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p393-cf76-4jmr",
+          "url": "https://github.com/advisories/GHSA-p393-cf76-4jmr"
+        },
+        {
+          "title": "NVD — CVE-2026-107806",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107806"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-p393-cf76-4jmr"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-68582",
+      "slug": "2026-10-go-cve-2026-68582",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-68582.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Vikunja: Link-share token reads any tenant's kanban buckets and enumerates usernames/IDs instance-wide (BOLA)",
+      "summary": "Vikunja: Link-share token reads any tenant's kanban buckets and enumerates usernames/IDs instance-wide (BOLA)",
+      "vendor": "Go",
+      "product": "code.vikunja.io/api",
+      "cve": "CVE-2026-68582",
+      "operator_check": "Check whether code.vikunja.io/api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.vikunja.io/api. Prioritize it with other application dependency updates, especially because EPSS places it in the 17% percentile.",
+      "tags": [
+        "cve-2026-68582",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rj9j-8772-4h6c",
+          "url": "https://github.com/advisories/GHSA-rj9j-8772-4h6c"
+        },
+        {
+          "title": "NVD — CVE-2026-68582",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68582"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-rj9j-8772-4h6c"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-91968",
+      "slug": "2026-10-go-cve-2026-91968",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-91968.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Vikunja: Unbounded nested task-filter recursion permits API process termination",
+      "summary": "Vikunja: Unbounded nested task-filter recursion permits API process termination",
+      "vendor": "Go",
+      "product": "code.vikunja.io/api",
+      "cve": "CVE-2026-91968",
+      "operator_check": "Check whether code.vikunja.io/api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.4%; percentile: 36%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.vikunja.io/api. Prioritize it with other application dependency updates, especially because EPSS places it in the 36% percentile.",
+      "tags": [
+        "cve-2026-91968",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xxc3-xpmc-vmvr",
+          "url": "https://github.com/advisories/GHSA-xxc3-xpmc-vmvr"
+        },
+        {
+          "title": "NVD — CVE-2026-91968",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91968"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-xxc3-xpmc-vmvr"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-91969",
+      "slug": "2026-10-go-cve-2026-91969",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-91969.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Vikunja: Unbounded CSV row cardinality permits API process termination",
+      "summary": "Vikunja: Unbounded CSV row cardinality permits API process termination",
+      "vendor": "Go",
+      "product": "code.vikunja.io/api",
+      "cve": "CVE-2026-91969",
+      "operator_check": "Check whether code.vikunja.io/api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.3%; percentile: 26%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.vikunja.io/api. Prioritize it with other application dependency updates, especially because EPSS places it in the 26% percentile.",
+      "tags": [
+        "cve-2026-91969",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pqf9-h8g4-8gmh",
+          "url": "https://github.com/advisories/GHSA-pqf9-h8g4-8gmh"
+        },
+        {
+          "title": "NVD — CVE-2026-91969",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91969"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-pqf9-h8g4-8gmh"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-91970",
+      "slug": "2026-10-go-cve-2026-91970",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-91970.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Vikunja: Planka migration retains an unbounded aggregate of attacker-served attachments and can OOM the API",
+      "summary": "Vikunja: Planka migration retains an unbounded aggregate of attacker-served attachments and can OOM the API",
+      "vendor": "Go",
+      "product": "code.vikunja.io/api",
+      "cve": "CVE-2026-91970",
+      "operator_check": "Check whether code.vikunja.io/api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.vikunja.io/api. Prioritize it with other application dependency updates, especially because EPSS places it in the 30% percentile.",
+      "tags": [
+        "cve-2026-91970",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wq92-8x3r-fm38",
+          "url": "https://github.com/advisories/GHSA-wq92-8x3r-fm38"
+        },
+        {
+          "title": "NVD — CVE-2026-91970",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91970"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-wq92-8x3r-fm38"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-ghsa-m687-p538-r5hp",
+      "slug": "2026-10-go-ghsa-m687-p538-r5hp",
+      "url": "https://www.patchbrief.org/items/2026-10-go-ghsa-m687-p538-r5hp.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Vikunja: Permissive Cross-domain Security Policy trusts every localhost origin which should not be trusted",
+      "summary": "Vikunja: Permissive Cross-domain Security Policy trusts every localhost origin which should not be trusted",
+      "vendor": "Go",
+      "product": "code.vikunja.io/api",
+      "cve": null,
+      "operator_check": "Check whether code.vikunja.io/api is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code.vikunja.io/api. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-m687-p538-r5hp",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m687-p538-r5hp",
+          "url": "https://github.com/advisories/GHSA-m687-p538-r5hp"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-m687-p538-r5hp"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-108259",
+      "slug": "2026-10-npm-cve-2026-108259",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-108259.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Tina: Code injection via unescaped Git branch name in generated client source",
+      "summary": "Tina: Code injection via unescaped Git branch name in generated client source",
+      "vendor": "npm",
+      "product": "@tinacms/cli",
+      "cve": "CVE-2026-108259",
+      "operator_check": "Check whether @tinacms/cli is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 15%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @tinacms/cli. Prioritize it with other application dependency updates, especially because EPSS places it in the 15% percentile.",
+      "tags": [
+        "cve-2026-108259",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pwhx-cvv3-qj5c",
+          "url": "https://github.com/advisories/GHSA-pwhx-cvv3-qj5c"
+        },
+        {
+          "title": "NVD — CVE-2026-108259",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108259"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/tinacms/tinacms/security/advisories/GHSA-pwhx-cvv3-qj5c"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-108260",
+      "slug": "2026-10-npm-cve-2026-108260",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-108260.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@tinacms/web-components: `tina-markdown` writes rich-text link URLs into `href` without scheme validation, allowing s...",
+      "summary": "@tinacms/web-components: `tina-markdown` writes rich-text link URLs into `href` without scheme validation, allowing stored XSS",
+      "vendor": "npm",
+      "product": "@tinacms/web-components",
+      "cve": "CVE-2026-108260",
+      "operator_check": "Check whether @tinacms/web-components is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 10%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @tinacms/web-components. Prioritize it with other application dependency updates, especially because EPSS places it in the 10% percentile.",
+      "tags": [
+        "cve-2026-108260",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c42q-qvc3-j6vg",
+          "url": "https://github.com/advisories/GHSA-c42q-qvc3-j6vg"
+        },
+        {
+          "title": "NVD — CVE-2026-108260",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108260"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/tinacms/tinacms/security/advisories/GHSA-c42q-qvc3-j6vg"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-108261",
+      "slug": "2026-10-npm-cve-2026-108261",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-108261.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment",
+      "summary": "TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment",
+      "vendor": "npm",
+      "product": "tinacms",
+      "cve": "CVE-2026-108261",
+      "operator_check": "Check whether tinacms is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 5%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for tinacms. Prioritize it with other application dependency updates, especially because EPSS places it in the 5% percentile.",
+      "tags": [
+        "cve-2026-108261",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x34j-47hf-4xg7",
+          "url": "https://github.com/advisories/GHSA-x34j-47hf-4xg7"
+        },
+        {
+          "title": "NVD — CVE-2026-108261",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108261"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/tinacms/tinacms/security/advisories/GHSA-x34j-47hf-4xg7"
+        }
+      ]
+    },
     {
       "id": "2026-10-pypi-cve-2026-107728",
       "slug": "2026-10-pypi-cve-2026-107728",
@@ -243,6 +624,37 @@
         {
           "title": "Source reference",
           "url": "https://www.ibm.com/support/pages/node/7291628"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-ibm-cve-2026-82334",
+      "slug": "2026-10-ibm-cve-2026-82334",
+      "url": "https://www.patchbrief.org/items/2026-10-ibm-cve-2026-82334.html",
+      "date": "2026-10-08",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ibm Guardium Data Protection — CVE-2026-82334 (Critical)",
+      "summary": "IBM Guardium Data Protection 12.0, 12.1, 12.2 is vulnerable to a heap-based out-of-bounds read in the TDS7 LOGIN7 protocol parser. A remote attacker could send a specially crafted TDS LOGIN7 packet containing invalid offset or length values, potentially causing information disclosure or denial of service.",
+      "vendor": "Ibm",
+      "product": "Guardium Data Protection",
+      "cve": "CVE-2026-82334",
+      "operator_check": "Review CVE-2026-82334 in your asset inventory. Apply patches per vendor guidance and verify Guardium Data Protection is not exposed. CVSS score: 8.1. EPSS probability: 0.3%; percentile: 21%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.1) in Ibm Guardium Data Protection. Patch or mitigate promptly. EPSS percentile: 21%.",
+      "tags": [
+        "cve-2026-82334",
+        "vendor-advisory",
+        "ibm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-82334",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82334"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.ibm.com/support/pages/node/7291670"
         }
       ]
     },
