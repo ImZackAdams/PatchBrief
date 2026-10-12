@@ -1,0 +1,36 @@
+id: 2026-10-thelia-vu-162329
+slug: 2026-10-thelia-vu-162329
+external_id: VU-162329
+source: cert_vu
+date: '2026-10-12'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#162329: Multiple vulnerabilities in Thelia 2.6.0 and 2.6.1'
+summary: 'Overview Thelia versions 2.6.0 and 2.6.1 contain multiple vulnerabilities
+  relating to file management, Smarty templating, module installation, and administrative
+  workflows. Successful exploitation of these issues could enable remote code execution
+  (RCE), server-side template injection (SSTI), stored and reflected cross-site scripting
+  (XSS), unauthorized URL redirection, and other risks that expose both server-side
+  and client-side attack surfaces. Description Thelia is an open-source e-commerce
+  platform designed to provide merchants with customizable online storefronts, product
+  management workflows, and administrative functionalities. It utilizes the Smarty
+  template engine and provides administrators with broad control over templates, content,
+  and modules. CVE-2026-103521 In Thelia v2.6.0, the document upload endpoint properly
+  blocks the... Related CVEs: CVE-2026-103521, CVE-2026-103522, CVE-2026-103523, CVE-2026-103524.'
+vendor: Thelia
+product: 2.6.0 and 2.6.1
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for 2.6.0 and 2.6.1 where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#162329
+  url: https://kb.cert.org/vuls/id/162329
+tags:
+- vu-162329
+- coordinated-disclosure
+- thelia
+- cert-vu
+is_sample: false

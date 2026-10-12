@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-11T15:21:40Z",
-  "total_items": 1962,
+  "generated": "2026-10-12T18:40:06Z",
+  "total_items": 1970,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-11T15:21:40Z",
+    "generated": "2026-10-12T18:40:06Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-10-11T15:21:21Z",
-        "finished_at": "2026-10-11T15:21:22Z"
+        "items_seen": 0,
+        "started_at": "2026-10-12T18:39:51Z",
+        "finished_at": "2026-10-12T18:39:51Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-11T15:21:22Z",
-        "finished_at": "2026-10-11T15:21:22Z"
+        "started_at": "2026-10-12T18:39:51Z",
+        "finished_at": "2026-10-12T18:39:51Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 6,
-        "started_at": "2026-10-11T15:21:22Z",
-        "finished_at": "2026-10-11T15:21:30Z"
+        "items_seen": 0,
+        "started_at": "2026-10-12T18:39:51Z",
+        "finished_at": "2026-10-12T18:39:58Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-10-11T15:21:30Z",
-        "finished_at": "2026-10-11T15:21:31Z"
+        "started_at": "2026-10-12T18:39:58Z",
+        "finished_at": "2026-10-12T18:39:59Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-10-11T15:21:31Z",
-        "finished_at": "2026-10-11T15:21:34Z"
+        "items_seen": 1,
+        "started_at": "2026-10-12T18:39:59Z",
+        "finished_at": "2026-10-12T18:40:00Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,48 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-11T15:21:34Z",
-        "finished_at": "2026-10-11T15:21:35Z"
+        "started_at": "2026-10-12T18:40:00Z",
+        "finished_at": "2026-10-12T18:40:01Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 39,
-        "started_at": "2026-10-11T15:21:35Z",
-        "finished_at": "2026-10-11T15:21:36Z"
+        "items_seen": 25,
+        "started_at": "2026-10-12T18:40:01Z",
+        "finished_at": "2026-10-12T18:40:01Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-thelia-vu-162329",
+      "slug": "2026-10-thelia-vu-162329",
+      "url": "https://www.patchbrief.org/items/2026-10-thelia-vu-162329.html",
+      "date": "2026-10-12",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#162329: Multiple vulnerabilities in Thelia 2.6.0 and 2.6.1",
+      "summary": "Overview Thelia versions 2.6.0 and 2.6.1 contain multiple vulnerabilities relating to file management, Smarty templating, module installation, and administrative workflows. Successful exploitation of these issues could enable remote code execution (RCE), server-side template injection (SSTI), stored and reflected cross-site scripting (XSS), unauthorized URL redirection, and other risks that expose both server-side and client-side attack surfaces. Description Thelia is an open-source e-commerce platform designed to provide merchants with customizable online storefronts, product management workflows, and administrative functionalities. It utilizes the Smarty template engine and provides administrators with broad control over templates, content, and modules. CVE-2026-103521 In Thelia v2.6.0, the document upload endpoint properly blocks the... Related CVEs: CVE-2026-103521, CVE-2026-103522, CVE-2026-103523, CVE-2026-103524.",
+      "vendor": "Thelia",
+      "product": "2.6.0 and 2.6.1",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for 2.6.0 and 2.6.1 where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-162329",
+        "coordinated-disclosure",
+        "thelia",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#162329",
+          "url": "https://kb.cert.org/vuls/id/162329"
+        }
+      ]
+    },
     {
       "id": "2026-10-composer-cve-2026-107845",
       "slug": "2026-10-composer-cve-2026-107845",
@@ -180,6 +207,146 @@
         {
           "title": "Source reference",
           "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-p393-cf76-4jmr"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-107808",
+      "slug": "2026-10-go-cve-2026-107808",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-107808.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nginx UI: Authentication bypass: password login does not enforce a passkey-only second factor (2FA bypass)",
+      "summary": "Nginx UI: Authentication bypass: password login does not enforce a passkey-only second factor (2FA bypass)",
+      "vendor": "Go",
+      "product": "github.com/0xJacky/Nginx-UI",
+      "cve": "CVE-2026-107808",
+      "operator_check": "Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/0xJacky/Nginx-UI. Prioritize it with other application dependency updates, especially because EPSS places it in the 33% percentile.",
+      "tags": [
+        "cve-2026-107808",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-45gv-9wjv-xh7p",
+          "url": "https://github.com/advisories/GHSA-45gv-9wjv-xh7p"
+        },
+        {
+          "title": "NVD — CVE-2026-107808",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107808"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-45gv-9wjv-xh7p"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-107809",
+      "slug": "2026-10-go-cve-2026-107809",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-107809.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nginx-UI AuthRequired token cookie fallback enables CSRF against management APIs",
+      "summary": "Nginx-UI AuthRequired token cookie fallback enables CSRF against management APIs",
+      "vendor": "Go",
+      "product": "github.com/0xJacky/Nginx-UI",
+      "cve": "CVE-2026-107809",
+      "operator_check": "Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/0xJacky/Nginx-UI. Prioritize it with other application dependency updates, especially because EPSS places it in the 7% percentile.",
+      "tags": [
+        "cve-2026-107809",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-33rr-wq23-g6gg",
+          "url": "https://github.com/advisories/GHSA-33rr-wq23-g6gg"
+        },
+        {
+          "title": "NVD — CVE-2026-107809",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107809"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-33rr-wq23-g6gg"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-107812",
+      "slug": "2026-10-go-cve-2026-107812",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-107812.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nginx UI: Self-upgrade runs an unsigned binary verified only by a same-origin digest → RCE via a compromised mirror o...",
+      "summary": "Nginx UI: Self-upgrade runs an unsigned binary verified only by a same-origin digest → RCE via a compromised mirror or MITM",
+      "vendor": "Go",
+      "product": "github.com/0xJacky/Nginx-UI",
+      "cve": "CVE-2026-107812",
+      "operator_check": "Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 6%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/0xJacky/Nginx-UI. Prioritize it with other application dependency updates, especially because EPSS places it in the 6% percentile.",
+      "tags": [
+        "cve-2026-107812",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-662p-52hx-cmh2",
+          "url": "https://github.com/advisories/GHSA-662p-52hx-cmh2"
+        },
+        {
+          "title": "NVD — CVE-2026-107812",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107812"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-662p-52hx-cmh2"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-107813",
+      "slug": "2026-10-go-cve-2026-107813",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-107813.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Nginx UI: Incomplete fix of CVE-2026-84315 - the api/cluster router was not -  wrapped in RequireSecureSession, so th...",
+      "summary": "Nginx UI: Incomplete fix of CVE-2026-84315 - the api/cluster router was not - wrapped in RequireSecureSession, so those sensitive mutations run without OTP step-up",
+      "vendor": "Go",
+      "product": "github.com/0xJacky/Nginx-UI",
+      "cve": "CVE-2026-107813",
+      "operator_check": "Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 21%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/0xJacky/Nginx-UI. Prioritize it with other application dependency updates, especially because EPSS places it in the 21% percentile.",
+      "tags": [
+        "cve-2026-107813",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h246-wpgf-vmq5",
+          "url": "https://github.com/advisories/GHSA-h246-wpgf-vmq5"
+        },
+        {
+          "title": "NVD — CVE-2026-107813",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107813"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-h246-wpgf-vmq5"
         }
       ]
     },
@@ -907,6 +1074,99 @@
         {
           "title": "Source reference",
           "url": "https://github.com/pyload/pyload/security/advisories/GHSA-68w4-83fh-f2w8"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-ghsa-889w-m37p-88m5",
+      "slug": "2026-10-pypi-ghsa-889w-m37p-88m5",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-ghsa-889w-m37p-88m5.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pyLoad: Api.set_user_permission never invalidates the target's session",
+      "summary": "pyLoad: Api.set_user_permission never invalidates the target's session",
+      "vendor": "PyPI",
+      "product": "pyload-ng",
+      "cve": null,
+      "operator_check": "Check whether pyload-ng is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pyload-ng. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-889w-m37p-88m5",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-889w-m37p-88m5",
+          "url": "https://github.com/advisories/GHSA-889w-m37p-88m5"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pyload/pyload/security/advisories/GHSA-889w-m37p-88m5"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-ghsa-fr26-jjhm-638c",
+      "slug": "2026-10-pypi-ghsa-fr26-jjhm-638c",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-ghsa-fr26-jjhm-638c.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pyLoad: Tar extraction creates device nodes and FIFOs (member types not filtered; tarfile extractall without filter=)",
+      "summary": "pyLoad: Tar extraction creates device nodes and FIFOs (member types not filtered; tarfile extractall without filter=)",
+      "vendor": "PyPI",
+      "product": "pyload-ng",
+      "cve": null,
+      "operator_check": "Check whether pyload-ng is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pyload-ng. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-fr26-jjhm-638c",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fr26-jjhm-638c",
+          "url": "https://github.com/advisories/GHSA-fr26-jjhm-638c"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pyload/pyload/security/advisories/GHSA-fr26-jjhm-638c"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-ghsa-jq7h-wrvp-3rgx",
+      "slug": "2026-10-pypi-ghsa-jq7h-wrvp-3rgx",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-ghsa-jq7h-wrvp-3rgx.html",
+      "date": "2026-10-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pyLoad: Privilege revocation and password change through the REST API do not invalidate the user's session",
+      "summary": "pyLoad: Privilege revocation and password change through the REST API do not invalidate the user's session",
+      "vendor": "PyPI",
+      "product": "pyload-ng",
+      "cve": null,
+      "operator_check": "Check whether pyload-ng is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for pyload-ng. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-jq7h-wrvp-3rgx",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jq7h-wrvp-3rgx",
+          "url": "https://github.com/advisories/GHSA-jq7h-wrvp-3rgx"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pyload/pyload/security/advisories/GHSA-jq7h-wrvp-3rgx"
         }
       ]
     },

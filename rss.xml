@@ -4,8 +4,15 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Sun, 11 Oct 2026 15:21:40 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 18:40:06 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>VU#162329: Multiple vulnerabilities in Thelia 2.6.0 and 2.6.1</title>
+      <link>https://www.patchbrief.org/items/2026-10-thelia-vu-162329.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-thelia-vu-162329.html</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Overview Thelia versions 2.6.0 and 2.6.1 contain multiple vulnerabilities relating to file management, Smarty templating, module installation, and administrative workflows. Successful exploitation of these issues could enable remote code execution (RCE), server-side template injection (SSTI), stored and reflected cross-site scripting (XSS), unauthorized URL redirection, and other risks that expose both server-side and client-side attack surfaces. Description Thelia is an open-source e-commerce platform designed to provide merchants with customizable online storefronts, product management workflows, and administrative functionalities. It utilizes the Smarty template engine and provides administrators with broad control over templates, content, and modules. CVE-2026-103521 In Thelia v2.6.0, the document upload endpoint properly blocks the... Related CVEs: CVE-2026-103521, CVE-2026-103522, CVE-2026-103523, CVE-2026-103524.</description>
+    </item>
     <item>
       <title>Contao: Cross-site scripting in the comments bundle</title>
       <link>https://www.patchbrief.org/items/2026-10-composer-cve-2026-107845.html</link>
@@ -26,6 +33,34 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-go-cve-2026-107806.html</guid>
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
       <description>Nginx UI: Authenticated Remote Code Execution via Backup Restore App Config Overwrite</description>
+    </item>
+    <item>
+      <title>Nginx UI: Authentication bypass: password login does not enforce a passkey-only second factor (2FA bypass)</title>
+      <link>https://www.patchbrief.org/items/2026-10-go-cve-2026-107808.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-go-cve-2026-107808.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Nginx UI: Authentication bypass: password login does not enforce a passkey-only second factor (2FA bypass)</description>
+    </item>
+    <item>
+      <title>Nginx-UI AuthRequired token cookie fallback enables CSRF against management APIs</title>
+      <link>https://www.patchbrief.org/items/2026-10-go-cve-2026-107809.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-go-cve-2026-107809.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Nginx-UI AuthRequired token cookie fallback enables CSRF against management APIs</description>
+    </item>
+    <item>
+      <title>Nginx UI: Self-upgrade runs an unsigned binary verified only by a same-origin digest → RCE via a compromised mirror o...</title>
+      <link>https://www.patchbrief.org/items/2026-10-go-cve-2026-107812.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-go-cve-2026-107812.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Nginx UI: Self-upgrade runs an unsigned binary verified only by a same-origin digest → RCE via a compromised mirror or MITM</description>
+    </item>
+    <item>
+      <title>Nginx UI: Incomplete fix of CVE-2026-84315 - the api/cluster router was not -  wrapped in RequireSecureSession, so th...</title>
+      <link>https://www.patchbrief.org/items/2026-10-go-cve-2026-107813.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-go-cve-2026-107813.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Nginx UI: Incomplete fix of CVE-2026-84315 - the api/cluster router was not - wrapped in RequireSecureSession, so those sensitive mutations run without OTP step-up</description>
     </item>
     <item>
       <title>ageLANServer: Unbounded JSON Array Allocation in AoE3 Cloud `getFileURL` Endpoint Leads to Remote Denial of Service</title>
@@ -173,6 +208,27 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-pypi-ghsa-68w4-83fh-f2w8.html</guid>
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
       <description>pyload-ng: getUserData/get_userdata exposed at Perms.ANY allow any authenticated account to brute-force the administrator password</description>
+    </item>
+    <item>
+      <title>pyLoad: Api.set_user_permission never invalidates the target's session</title>
+      <link>https://www.patchbrief.org/items/2026-10-pypi-ghsa-889w-m37p-88m5.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-pypi-ghsa-889w-m37p-88m5.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <description>pyLoad: Api.set_user_permission never invalidates the target's session</description>
+    </item>
+    <item>
+      <title>pyLoad: Tar extraction creates device nodes and FIFOs (member types not filtered; tarfile extractall without filter=)</title>
+      <link>https://www.patchbrief.org/items/2026-10-pypi-ghsa-fr26-jjhm-638c.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-pypi-ghsa-fr26-jjhm-638c.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <description>pyLoad: Tar extraction creates device nodes and FIFOs (member types not filtered; tarfile extractall without filter=)</description>
+    </item>
+    <item>
+      <title>pyLoad: Privilege revocation and password change through the REST API do not invalidate the user's session</title>
+      <link>https://www.patchbrief.org/items/2026-10-pypi-ghsa-jq7h-wrvp-3rgx.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-pypi-ghsa-jq7h-wrvp-3rgx.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <description>pyLoad: Privilege revocation and password change through the REST API do not invalidate the user's session</description>
     </item>
     <item>
       <title>Apache Struts Command Injection Vulnerability</title>

@@ -239,10 +239,32 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1962 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1970 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#162329: Multiple vulnerabilities in Thelia 2.6.0 and 2.6.1" data-vendor="Thelia">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 12, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-thelia-vu-162329.html">VU#162329: Multiple vulnerabilities in Thelia 2.6.0 and 2.6.1</a>
+              </h2>
+              <p class="feed-vendor">Thelia · 2.6.0 and 2.6.1</p>
+              <p class="feed-summary">Overview Thelia versions 2.6.0 and 2.6.1 contain multiple vulnerabilities relating to file management, Smarty templating, module installation, and administrative workflows. Successful exploitation of these issues could enable remote code execution (RCE), server-side template injection (SSTI), stored and reflected cross-site scripting (XSS), unauthorized URL redirection, and other risks that expose both server-side and client-side attack surfaces. Description Thelia is an open-source e-commerce platform designed to provide merchants with customizable online storefronts, product management workflows, and administrative functionalities. It utilizes the Smarty template engine and provides administrators with broad control over templates, content, and modules. CVE-2026-103521 In Thelia v2.6.0, the document upload endpoint properly blocks the... Related CVEs: CVE-2026-103521, CVE-2026-103522, CVE-2026-103523, CVE-2026-103524.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for 2.6.0 and 2.6.1 where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/162329">CERT/CC Vulnerability Note VU#162329</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-thelia-vu-162329.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Contao: Cross-site scripting in the comments bundle" data-vendor="Composer" data-cve="CVE-2026-107845">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -307,6 +329,94 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-p393-cf76-4jmr">GitHub Advisory GHSA-p393-cf76-4jmr</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107806">NVD — CVE-2026-107806</a><a href="https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-p393-cf76-4jmr">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-10-go-cve-2026-107806.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Nginx UI: Authentication bypass: password login does not enforce a passkey-only second factor (2FA bypass)" data-vendor="Go" data-cve="CVE-2026-107808">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-107808</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-go-cve-2026-107808.html">Nginx UI: Authentication bypass: password login does not enforce a passkey-only second factor (2FA bypass)</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/0xJacky/Nginx-UI</p>
+              <p class="feed-summary">Nginx UI: Authentication bypass: password login does not enforce a passkey-only second factor (2FA bypass)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 33%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-45gv-9wjv-xh7p">GitHub Advisory GHSA-45gv-9wjv-xh7p</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107808">NVD — CVE-2026-107808</a><a href="https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-45gv-9wjv-xh7p">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-go-cve-2026-107808.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Nginx-UI AuthRequired token cookie fallback enables CSRF against management APIs" data-vendor="Go" data-cve="CVE-2026-107809">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-107809</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-go-cve-2026-107809.html">Nginx-UI AuthRequired token cookie fallback enables CSRF against management APIs</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/0xJacky/Nginx-UI</p>
+              <p class="feed-summary">Nginx-UI AuthRequired token cookie fallback enables CSRF against management APIs</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 7%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-33rr-wq23-g6gg">GitHub Advisory GHSA-33rr-wq23-g6gg</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107809">NVD — CVE-2026-107809</a><a href="https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-33rr-wq23-g6gg">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-go-cve-2026-107809.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Nginx UI: Self-upgrade runs an unsigned binary verified only by a same-origin digest → RCE via a compromised mirror o..." data-vendor="Go" data-cve="CVE-2026-107812">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-107812</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-go-cve-2026-107812.html">Nginx UI: Self-upgrade runs an unsigned binary verified only by a same-origin digest → RCE via a compromised mirror o...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/0xJacky/Nginx-UI</p>
+              <p class="feed-summary">Nginx UI: Self-upgrade runs an unsigned binary verified only by a same-origin digest → RCE via a compromised mirror or MITM</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 6%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-662p-52hx-cmh2">GitHub Advisory GHSA-662p-52hx-cmh2</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107812">NVD — CVE-2026-107812</a><a href="https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-662p-52hx-cmh2">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-go-cve-2026-107812.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Nginx UI: Incomplete fix of CVE-2026-84315 - the api/cluster router was not -  wrapped in RequireSecureSession, so th..." data-vendor="Go" data-cve="CVE-2026-107813">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-107813</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-go-cve-2026-107813.html">Nginx UI: Incomplete fix of CVE-2026-84315 - the api/cluster router was not -  wrapped in RequireSecureSession, so th...</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/0xJacky/Nginx-UI</p>
+              <p class="feed-summary">Nginx UI: Incomplete fix of CVE-2026-84315 - the api/cluster router was not - wrapped in RequireSecureSession, so those sensitive mutations run without OTP step-up</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/0xJacky/Nginx-UI is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 21%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-h246-wpgf-vmq5">GitHub Advisory GHSA-h246-wpgf-vmq5</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107813">NVD — CVE-2026-107813</a><a href="https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-h246-wpgf-vmq5">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-go-cve-2026-107813.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="ageLANServer: Unbounded JSON Array Allocation in AoE3 Cloud `getFileURL` Endpoint Leads to Remote Denial of Service" data-vendor="Go" data-cve="CVE-2026-107839">
@@ -769,6 +879,72 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-68w4-83fh-f2w8">GitHub Advisory GHSA-68w4-83fh-f2w8</a><a href="https://github.com/pyload/pyload/security/advisories/GHSA-68w4-83fh-f2w8">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-10-pypi-ghsa-68w4-83fh-f2w8.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="pyLoad: Api.set_user_permission never invalidates the target&#x27;s session" data-vendor="PyPI">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-ghsa-889w-m37p-88m5.html">pyLoad: Api.set_user_permission never invalidates the target&#x27;s session</a>
+              </h2>
+              <p class="feed-vendor">PyPI · pyload-ng</p>
+              <p class="feed-summary">pyLoad: Api.set_user_permission never invalidates the target&#x27;s session</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether pyload-ng is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-889w-m37p-88m5">GitHub Advisory GHSA-889w-m37p-88m5</a><a href="https://github.com/pyload/pyload/security/advisories/GHSA-889w-m37p-88m5">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-ghsa-889w-m37p-88m5.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="pyLoad: Tar extraction creates device nodes and FIFOs (member types not filtered; tarfile extractall without filter=)" data-vendor="PyPI">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-ghsa-fr26-jjhm-638c.html">pyLoad: Tar extraction creates device nodes and FIFOs (member types not filtered; tarfile extractall without filter=)</a>
+              </h2>
+              <p class="feed-vendor">PyPI · pyload-ng</p>
+              <p class="feed-summary">pyLoad: Tar extraction creates device nodes and FIFOs (member types not filtered; tarfile extractall without filter=)</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether pyload-ng is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.7.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-fr26-jjhm-638c">GitHub Advisory GHSA-fr26-jjhm-638c</a><a href="https://github.com/pyload/pyload/security/advisories/GHSA-fr26-jjhm-638c">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-ghsa-fr26-jjhm-638c.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="pyLoad: Privilege revocation and password change through the REST API do not invalidate the user&#x27;s session" data-vendor="PyPI">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 9, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-pypi-ghsa-jq7h-wrvp-3rgx.html">pyLoad: Privilege revocation and password change through the REST API do not invalidate the user&#x27;s session</a>
+              </h2>
+              <p class="feed-vendor">PyPI · pyload-ng</p>
+              <p class="feed-summary">pyLoad: Privilege revocation and password change through the REST API do not invalidate the user&#x27;s session</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether pyload-ng is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-jq7h-wrvp-3rgx">GitHub Advisory GHSA-jq7h-wrvp-3rgx</a><a href="https://github.com/pyload/pyload/security/advisories/GHSA-jq7h-wrvp-3rgx">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-pypi-ghsa-jq7h-wrvp-3rgx.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Apache Struts Command Injection Vulnerability" data-vendor="Apache" data-cve="CVE-2016-3081">
