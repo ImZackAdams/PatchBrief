@@ -239,10 +239,54 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">1970 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">1972 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability" data-vendor="Ivanti" data-cve="CVE-2026-104935">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 13, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-104935</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-ivanti-cve-2026-104935.html">Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Ivanti · Connect Secure</p>
+              <p class="feed-summary">Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104935">NVD — CVE-2026-104935</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-ivanti-cve-2026-104935.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Rapyd Admin from 9.0.0 — CVE-2026-109566 (Critical)" data-vendor="Rapyd" data-cve="CVE-2026-109566">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Oct 12, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-109566</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-10-rapyd-cve-2026-109566.html">Rapyd Admin from 9.0.0 — CVE-2026-109566 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Rapyd · Admin from 9.0.0</p>
+              <p class="feed-summary">Rapyd Admin from 9.0.0 before 9.20.0 contains a hard-coded credentials vulnerability that allows remote unauthenticated attackers to gain super-admin access through an AuthSeeder-created admin@laravel account with password admin. The account is seeded by the setup installer and silently re-created on every rpd:make run, letting attackers log in as a global super admin bypassing per-record authorization and tenant scoping.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-109566 in your asset inventory. Apply patches per vendor guidance and verify Admin from 9.0.0 is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 36%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109566">NVD — CVE-2026-109566</a><a href="https://github.com/zofe/rapyd-admin">Source reference</a><a href="https://github.com/zofe/rapyd-admin/blob/v9.19.0/src/Modules/Auth/Database/Seeders/AuthSeeder.php#L29-L34">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-10-rapyd-cve-2026-109566.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#162329: Multiple vulnerabilities in Thelia 2.6.0 and 2.6.1" data-vendor="Thelia">
               <div class="feed-item-top">
                 <div class="feed-item-meta">

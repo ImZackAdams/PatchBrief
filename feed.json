@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-12T19:34:55Z",
-  "total_items": 1970,
+  "generated": "2026-10-13T16:45:01Z",
+  "total_items": 1972,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-12T19:34:55Z",
+    "generated": "2026-10-13T16:45:01Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-10-12T18:39:51Z",
-        "finished_at": "2026-10-12T18:39:51Z"
+        "items_seen": 1,
+        "started_at": "2026-10-13T16:44:47Z",
+        "finished_at": "2026-10-13T16:44:48Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-12T18:39:51Z",
-        "finished_at": "2026-10-12T18:39:51Z"
+        "started_at": "2026-10-13T16:44:48Z",
+        "finished_at": "2026-10-13T16:44:48Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-10-12T18:39:51Z",
-        "finished_at": "2026-10-12T18:39:58Z"
+        "items_seen": 1,
+        "started_at": "2026-10-13T16:44:48Z",
+        "finished_at": "2026-10-13T16:44:55Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 30,
-        "started_at": "2026-10-12T18:39:58Z",
-        "finished_at": "2026-10-12T18:39:59Z"
+        "items_seen": 0,
+        "started_at": "2026-10-13T16:44:55Z",
+        "finished_at": "2026-10-13T16:44:55Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-10-12T18:39:59Z",
-        "finished_at": "2026-10-12T18:40:00Z"
+        "started_at": "2026-10-13T16:44:55Z",
+        "finished_at": "2026-10-13T16:44:56Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,87 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-12T18:40:00Z",
-        "finished_at": "2026-10-12T18:40:01Z"
+        "started_at": "2026-10-13T16:44:56Z",
+        "finished_at": "2026-10-13T16:44:57Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 25,
-        "started_at": "2026-10-12T18:40:01Z",
-        "finished_at": "2026-10-12T18:40:01Z"
+        "items_seen": 1,
+        "started_at": "2026-10-13T16:44:57Z",
+        "finished_at": "2026-10-13T16:44:57Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-ivanti-cve-2026-104935",
+      "slug": "2026-10-ivanti-cve-2026-104935",
+      "url": "https://www.patchbrief.org/items/2026-10-ivanti-cve-2026-104935.html",
+      "date": "2026-10-13",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+      "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
+      "vendor": "Ivanti",
+      "product": "Connect Secure",
+      "cve": "CVE-2026-104935",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-104935 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-16. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-104935",
+        "kev",
+        "ivanti",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-104935",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-rapyd-cve-2026-109566",
+      "slug": "2026-10-rapyd-cve-2026-109566",
+      "url": "https://www.patchbrief.org/items/2026-10-rapyd-cve-2026-109566.html",
+      "date": "2026-10-12",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Rapyd Admin from 9.0.0 — CVE-2026-109566 (Critical)",
+      "summary": "Rapyd Admin from 9.0.0 before 9.20.0 contains a hard-coded credentials vulnerability that allows remote unauthenticated attackers to gain super-admin access through an AuthSeeder-created admin@laravel account with password admin. The account is seeded by the setup installer and silently re-created on every rpd:make run, letting attackers log in as a global super admin bypassing per-record authorization and tenant scoping.",
+      "vendor": "Rapyd",
+      "product": "Admin from 9.0.0",
+      "cve": "CVE-2026-109566",
+      "operator_check": "Review CVE-2026-109566 in your asset inventory. Apply patches per vendor guidance and verify Admin from 9.0.0 is not exposed. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 36%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Rapyd Admin from 9.0.0. Patch or mitigate promptly. EPSS percentile: 36%.",
+      "tags": [
+        "cve-2026-109566",
+        "vendor-advisory",
+        "rapyd",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-109566",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109566"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zofe/rapyd-admin"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zofe/rapyd-admin/blob/v9.19.0/src/Modules/Auth/Database/Seeders/AuthSeeder.php#L29-L34"
+        }
+      ]
+    },
     {
       "id": "2026-10-thelia-vu-162329",
       "slug": "2026-10-thelia-vu-162329",
