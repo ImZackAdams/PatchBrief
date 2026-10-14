@@ -1,0 +1,36 @@
+id: 2026-10-komodo-vu-456950
+slug: 2026-10-komodo-vu-456950
+external_id: VU-456950
+source: cert_vu
+date: '2026-10-13'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#456950: Komodo Periphery Agent Contains an OS Command Injection Vulnerability'
+summary: 'Overview Versions root on the underlying host, enabling persistent compromise
+  of infrastructure. Description Komodo is an open-source server and deployment manager,
+  maintained by mogh.tech, widely used in self-hosted and Docker multi-server environments.
+  Periphery is an agent service installed on servers to give Komodo control over Docker
+  environments. In vulnerable versions of Komodo, Periphery does not properly validate
+  user-supplied Docker container names before those values are interpolated into shell
+  commands used by the agent. Two operations exhibit this vulnerability: container
+  destruction ( DestroyContainer / RemoveContainer ) and container log searches (
+  SearchContainerLog / GetContainerLogSearch ). Through both avenues, raw container
+  names are directly inserted into sh -c command lines without any shell escaping
+  or validation...'
+vendor: Komodo
+product: control over Docker environments. In
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for control over Docker environments. In where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#456950
+  url: https://kb.cert.org/vuls/id/456950
+tags:
+- vu-456950
+- coordinated-disclosure
+- komodo
+- cert-vu
+is_sample: false

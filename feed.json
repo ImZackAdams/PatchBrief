@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-13T16:45:01Z",
-  "total_items": 1972,
+  "generated": "2026-10-14T14:21:39Z",
+  "total_items": 2033,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-13T16:45:01Z",
+    "generated": "2026-10-14T14:21:39Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,18 +17,18 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-10-13T16:44:47Z",
-        "finished_at": "2026-10-13T16:44:48Z"
+        "items_seen": 2,
+        "started_at": "2026-10-14T14:21:19Z",
+        "finished_at": "2026-10-14T14:21:20Z"
       },
       {
         "id": "msrc",
         "label": "Microsoft Security Update Guide",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-10-13T16:44:48Z",
-        "finished_at": "2026-10-13T16:44:48Z"
+        "items_seen": 25,
+        "started_at": "2026-10-14T14:21:20Z",
+        "finished_at": "2026-10-14T14:21:26Z"
       },
       {
         "id": "nvd",
@@ -36,26 +36,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-10-13T16:44:48Z",
-        "finished_at": "2026-10-13T16:44:55Z"
+        "started_at": "2026-10-14T14:21:26Z",
+        "finished_at": "2026-10-14T14:21:33Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-10-13T16:44:55Z",
-        "finished_at": "2026-10-13T16:44:55Z"
+        "items_seen": 30,
+        "started_at": "2026-10-14T14:21:33Z",
+        "finished_at": "2026-10-14T14:21:34Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-10-13T16:44:55Z",
-        "finished_at": "2026-10-13T16:44:56Z"
+        "items_seen": 6,
+        "started_at": "2026-10-14T14:21:34Z",
+        "finished_at": "2026-10-14T14:21:35Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,48 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-13T16:44:56Z",
-        "finished_at": "2026-10-13T16:44:57Z"
+        "started_at": "2026-10-14T14:21:35Z",
+        "finished_at": "2026-10-14T14:21:36Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-10-13T16:44:57Z",
-        "finished_at": "2026-10-13T16:44:57Z"
+        "items_seen": 26,
+        "started_at": "2026-10-14T14:21:36Z",
+        "finished_at": "2026-10-14T14:21:36Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-bisheng-vu-166125",
+      "slug": "2026-10-bisheng-vu-166125",
+      "url": "https://www.patchbrief.org/items/2026-10-bisheng-vu-166125.html",
+      "date": "2026-10-14",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#166125: Bisheng has authentication bypass vulnerabilities",
+      "summary": "Overview Bisheng contains three vulnerabilities: a pre-authentication account takeover mechanism via a legacy single sign-on (SSO) endpoint; an Insecure Direct Object Reference (IDOR) vulnerability that exposes cross-user workflow data; and prior to version 2.5.0, authenticated attackers could perform cross-user LLM credential abuse and data disclosure due to missing service-layer access checks. Together, these flaws could allow unauthenticated attackers to gain administrative control while enabling authenticated users access to sensitive data and hardcoded credentials. Description Bisheng is an open-source Large Language Model (LLM) application DevOps platform, developed by DataElement, designed to assist in building, managing, and scaling LLMs. CVE-2026-96679 (Legacy SSO Bypass) A vulnerability resides in the legacy SSO endpoint ( POST... Related CVEs: CVE-2026-100156, CVE-2026-96679, CVE-2026-96681.",
+      "vendor": "Bisheng",
+      "product": "Bisheng",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Bisheng where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-166125",
+        "coordinated-disclosure",
+        "bisheng",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#166125",
+          "url": "https://kb.cert.org/vuls/id/166125"
+        }
+      ]
+    },
     {
       "id": "2026-10-ivanti-cve-2026-104935",
       "slug": "2026-10-ivanti-cve-2026-104935",
@@ -106,6 +133,2070 @@
         {
           "title": "NVD — CVE-2026-104935",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-komodo-vu-456950",
+      "slug": "2026-10-komodo-vu-456950",
+      "url": "https://www.patchbrief.org/items/2026-10-komodo-vu-456950.html",
+      "date": "2026-10-13",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#456950: Komodo Periphery Agent Contains an OS Command Injection Vulnerability",
+      "summary": "Overview Versions root on the underlying host, enabling persistent compromise of infrastructure. Description Komodo is an open-source server and deployment manager, maintained by mogh.tech, widely used in self-hosted and Docker multi-server environments. Periphery is an agent service installed on servers to give Komodo control over Docker environments. In vulnerable versions of Komodo, Periphery does not properly validate user-supplied Docker container names before those values are interpolated into shell commands used by the agent. Two operations exhibit this vulnerability: container destruction ( DestroyContainer / RemoveContainer ) and container log searches ( SearchContainerLog / GetContainerLogSearch ). Through both avenues, raw container names are directly inserted into sh -c command lines without any shell escaping or validation...",
+      "vendor": "Komodo",
+      "product": "control over Docker environments. In",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for control over Docker environments. In where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-456950",
+        "coordinated-disclosure",
+        "komodo",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#456950",
+          "url": "https://kb.cert.org/vuls/id/456950"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-lowcoder-vu-382143",
+      "slug": "2026-10-lowcoder-vu-382143",
+      "url": "https://www.patchbrief.org/items/2026-10-lowcoder-vu-382143.html",
+      "date": "2026-10-13",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#382143: Lowcoder Query Library API contains cross-tenant authorization bypass allowing for data exfiltration",
+      "summary": "Overview Lowcoder, version 2.4.10, contains an authorization bypass vulnerability in its Query Library feature’s API. Authenticated users with an admin or dev role can access private library-query data from other organizations within a multi-tenant Lowcoder instance. Description CVE-2026-16753 Lowcoder is an open-source low-code platform that allows individuals with minimal coding experience to build web applications through a visual drag-and-drop interface. Each Lowcoder project contains a centralized Query Library which stores the workspace’s data queries and sources for quick reuse; however, the LibraryQuery API service layer lacks organization-scope checks at two endpoints: metadata retrieval and query execution. While the application features a role-based access mechanism (requires admin or dev ), it only checks the role’s validity... Related CVEs: CVE-2026-16753.",
+      "vendor": "Lowcoder",
+      "product": "Query Library API",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for Query Library API where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-382143",
+        "coordinated-disclosure",
+        "lowcoder",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#382143",
+          "url": "https://kb.cert.org/vuls/id/382143"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-108266",
+      "slug": "2026-10-microsoft-cve-2026-108266",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-108266.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Privasys rustls fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session",
+      "summary": "Privasys rustls fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-108266",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-108266. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 2%.",
+      "tags": [
+        "cve-2026-108266",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-108266"
+        },
+        {
+          "title": "NVD — CVE-2026-108266",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108266"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-108267",
+      "slug": "2026-10-microsoft-cve-2026-108267",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-108267.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Privasys Go fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session",
+      "summary": "Privasys Go fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-108267",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-108267. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 2%.",
+      "tags": [
+        "cve-2026-108267",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-108267"
+        },
+        {
+          "title": "NVD — CVE-2026-108267",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108267"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-56153",
+      "slug": "2026-10-microsoft-cve-2026-56153",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-56153.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Apache HTTP Server: mod_charset_lite: Heap overflow in finish_partial_char",
+      "summary": "Apache HTTP Server: mod_charset_lite: Heap overflow in finish_partial_char Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-56153",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-56153. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.4. EPSS probability: 0.5%; percentile: 41%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 41%.",
+      "tags": [
+        "cve-2026-56153",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-56153"
+        },
+        {
+          "title": "NVD — CVE-2026-56153",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56153"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-56154",
+      "slug": "2026-10-microsoft-cve-2026-56154",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-56154.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Apache HTTP Server: mod_rewrite use-after-free via %{LA-U:HTTP:...}",
+      "summary": "Apache HTTP Server: mod_rewrite use-after-free via %{LA-U:HTTP:...} Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-56154",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-56154. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.6%; percentile: 45%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 45%.",
+      "tags": [
+        "cve-2026-56154",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-56154"
+        },
+        {
+          "title": "NVD — CVE-2026-56154",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56154"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-56857",
+      "slug": "2026-10-microsoft-cve-2026-56857",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-56857.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Root.Mkdir(All) can follow junctions out of the root on Windows in os",
+      "summary": "Root.Mkdir(All) can follow junctions out of the root on Windows in os Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-56857",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-56857. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.5%; percentile: 41%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 41%.",
+      "tags": [
+        "cve-2026-56857",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-56857"
+        },
+        {
+          "title": "NVD — CVE-2026-56857",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56857"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-57941",
+      "slug": "2026-10-microsoft-cve-2026-57941",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-57941.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Apache HTTP Server: mod_http2 use-after-free / wild write via shared session->bbtmp re-entrancy",
+      "summary": "Apache HTTP Server: mod_http2 use-after-free / wild write via shared session->bbtmp re-entrancy Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-57941",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-57941. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.6%; percentile: 47%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 47%.",
+      "tags": [
+        "cve-2026-57941",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-57941"
+        },
+        {
+          "title": "NVD — CVE-2026-57941",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57941"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-59797",
+      "slug": "2026-10-microsoft-cve-2026-59797",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-59797.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Apache HTTP Server: mod_ssl SSLRequire allows .htaccess ap_expr file-function",
+      "summary": "Apache HTTP Server: mod_ssl SSLRequire allows .htaccess ap_expr file-function Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-59797",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-59797. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.5%; percentile: 43%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 43%.",
+      "tags": [
+        "cve-2026-59797",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-59797"
+        },
+        {
+          "title": "NVD — CVE-2026-59797",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59797"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-78663",
+      "slug": "2026-10-microsoft-cve-2026-78663",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-78663.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Double flow control refund on HTTP/2 server streams in net/http",
+      "summary": "Double flow control refund on HTTP/2 server streams in net/http Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-78663",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-78663. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.6%; percentile: 46%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 46%.",
+      "tags": [
+        "cve-2026-78663",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-78663"
+        },
+        {
+          "title": "NVD — CVE-2026-78663",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78663"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-83632",
+      "slug": "2026-10-microsoft-cve-2026-83632",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-83632.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Apache Thrift: C++ THttpTransport grows its line buffer without bound",
+      "summary": "Apache Thrift: C++ THttpTransport grows its line buffer without bound Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-83632",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-83632. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 30%.",
+      "tags": [
+        "cve-2026-83632",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-83632"
+        },
+        {
+          "title": "NVD — CVE-2026-83632",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83632"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-89091",
+      "slug": "2026-10-microsoft-cve-2026-89091",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-89091.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Ansible-core: ansible-core: ansible-galaxy collection install symlink path escape allows arbitrary file write / code ...",
+      "summary": "Ansible-core: ansible-core: ansible-galaxy collection install symlink path escape allows arbitrary file write / code execution Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-89091",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-89091. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 40%.",
+      "tags": [
+        "cve-2026-89091",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-89091"
+        },
+        {
+          "title": "NVD — CVE-2026-89091",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89091"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-93546",
+      "slug": "2026-10-microsoft-cve-2026-93546",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-93546.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Apache HTTP Server: mod_dav_fs namespace overflow",
+      "summary": "Apache HTTP Server: mod_dav_fs namespace overflow Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-93546",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-93546. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.4%; percentile: 36%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 36%.",
+      "tags": [
+        "cve-2026-93546",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-93546"
+        },
+        {
+          "title": "NVD — CVE-2026-93546",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93546"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-96951",
+      "slug": "2026-10-microsoft-cve-2026-96951",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-96951.html",
+      "date": "2026-10-13",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Microsoft Windows Command Injection Vulnerability",
+      "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
+      "vendor": "Microsoft",
+      "product": "Windows",
+      "cve": "CVE-2026-96951",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-96951 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-16. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-96951",
+        "kev",
+        "microsoft",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-96951",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98167",
+      "slug": "2026-10-microsoft-cve-2026-98167",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98167.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "smb: client: fix server->total_read for compound encrypted PDUs",
+      "summary": "smb: client: fix server->total_read for compound encrypted PDUs Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98167",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98167. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 11%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 11%.",
+      "tags": [
+        "cve-2026-98167",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98167"
+        },
+        {
+          "title": "NVD — CVE-2026-98167",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98167"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98168",
+      "slug": "2026-10-microsoft-cve-2026-98168",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98168.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "smb: client: fix reparse buffer bounds in cifs_query_reparse_point()",
+      "summary": "smb: client: fix reparse buffer bounds in cifs_query_reparse_point() Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98168",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98168. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 9%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 9%.",
+      "tags": [
+        "cve-2026-98168",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98168"
+        },
+        {
+          "title": "NVD — CVE-2026-98168",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98168"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98170",
+      "slug": "2026-10-microsoft-cve-2026-98170",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98170.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "smb: client: fix OOB struct field reads in move_smb2_ea_to_cifs()",
+      "summary": "smb: client: fix OOB struct field reads in move_smb2_ea_to_cifs() Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98170",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98170. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 9%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 9%.",
+      "tags": [
+        "cve-2026-98170",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98170"
+        },
+        {
+          "title": "NVD — CVE-2026-98170",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98170"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98171",
+      "slug": "2026-10-microsoft-cve-2026-98171",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98171.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "smb: client: fix next_buffer UAF and NextCommand bounds in compound PDUs",
+      "summary": "smb: client: fix next_buffer UAF and NextCommand bounds in compound PDUs Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98171",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98171. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.5%; percentile: 42%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 42%.",
+      "tags": [
+        "cve-2026-98171",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98171"
+        },
+        {
+          "title": "NVD — CVE-2026-98171",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98171"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98172",
+      "slug": "2026-10-microsoft-cve-2026-98172",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98172.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "smb: client: fix smbd_connection leak on cifs_get_tcp_session() error",
+      "summary": "smb: client: fix smbd_connection leak on cifs_get_tcp_session() error Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98172",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98172. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 6%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 6%.",
+      "tags": [
+        "cve-2026-98172",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98172"
+        },
+        {
+          "title": "NVD — CVE-2026-98172",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98172"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98174",
+      "slug": "2026-10-microsoft-cve-2026-98174",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98174.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "smb: client: fix rlist race and missing initialization",
+      "summary": "smb: client: fix rlist race and missing initialization Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98174",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98174. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 29%.",
+      "tags": [
+        "cve-2026-98174",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98174"
+        },
+        {
+          "title": "NVD — CVE-2026-98174",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98174"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98176",
+      "slug": "2026-10-microsoft-cve-2026-98176",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98176.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "drm/amdkfd: Avoid integer underflow with ffs in EOP ring size calc",
+      "summary": "drm/amdkfd: Avoid integer underflow with ffs in EOP ring size calc Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98176",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98176. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 5%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 5%.",
+      "tags": [
+        "cve-2026-98176",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98176"
+        },
+        {
+          "title": "NVD — CVE-2026-98176",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98176"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98177",
+      "slug": "2026-10-microsoft-cve-2026-98177",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98177.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "drm/amdkfd: Avoid integer underflow in EOP ring size calculation.",
+      "summary": "drm/amdkfd: Avoid integer underflow in EOP ring size calculation. Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98177",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98177. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 4%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 4%.",
+      "tags": [
+        "cve-2026-98177",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98177"
+        },
+        {
+          "title": "NVD — CVE-2026-98177",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98177"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98179",
+      "slug": "2026-10-microsoft-cve-2026-98179",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98179.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "drm/amdgpu: fix rmmio iounmap skipped on device removal",
+      "summary": "drm/amdgpu: fix rmmio iounmap skipped on device removal Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98179",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98179. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 7%.",
+      "tags": [
+        "cve-2026-98179",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98179"
+        },
+        {
+          "title": "NVD — CVE-2026-98179",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98179"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98180",
+      "slug": "2026-10-microsoft-cve-2026-98180",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98180.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "drm/msm: RCU-free the scheduler-containing ring and VM objects",
+      "summary": "drm/msm: RCU-free the scheduler-containing ring and VM objects Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98180",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98180. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 2%.",
+      "tags": [
+        "cve-2026-98180",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98180"
+        },
+        {
+          "title": "NVD — CVE-2026-98180",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98180"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98181",
+      "slug": "2026-10-microsoft-cve-2026-98181",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98181.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "drm/gud: fix out-of-bounds write in gud_plane_atomic_check()",
+      "summary": "drm/gud: fix out-of-bounds write in gud_plane_atomic_check() Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98181",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98181. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 6%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 6%.",
+      "tags": [
+        "cve-2026-98181",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98181"
+        },
+        {
+          "title": "NVD — CVE-2026-98181",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98181"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98186",
+      "slug": "2026-10-microsoft-cve-2026-98186",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98186.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "wifi: mwifiex: bound the pairwise-cipher OUI walk to the IE length",
+      "summary": "wifi: mwifiex: bound the pairwise-cipher OUI walk to the IE length Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98186",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98186. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 7%.",
+      "tags": [
+        "cve-2026-98186",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98186"
+        },
+        {
+          "title": "NVD — CVE-2026-98186",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98186"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98187",
+      "slug": "2026-10-microsoft-cve-2026-98187",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98187.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "wifi: p54: require a full exp_if record in PDR_INTERFACE_LIST",
+      "summary": "wifi: p54: require a full exp_if record in PDR_INTERFACE_LIST Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98187",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98187. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 7%.",
+      "tags": [
+        "cve-2026-98187",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98187"
+        },
+        {
+          "title": "NVD — CVE-2026-98187",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98187"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-microsoft-cve-2026-98188",
+      "slug": "2026-10-microsoft-cve-2026-98188",
+      "url": "https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98188.html",
+      "date": "2026-10-13",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "wifi: p54: validate curve data length in the calibration curve converters",
+      "summary": "wifi: p54: validate curve data length in the calibration curve converters Published in October 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-98188",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-98188. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 7%.",
+      "tags": [
+        "cve-2026-98188",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Oct Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-98188"
+        },
+        {
+          "title": "NVD — CVE-2026-98188",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98188"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-102870",
+      "slug": "2026-10-nuget-cve-2026-102870",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-102870.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-102870 - ASP.NET Core Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-102870 - ASP.NET Core Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.Components.WebAssembly.Server",
+      "cve": "CVE-2026-102870",
+      "operator_check": "Check whether Microsoft.AspNetCore.Components.WebAssembly.Server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.Components.WebAssembly.Server. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-102870",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g27p-qf6j-c96c",
+          "url": "https://github.com/advisories/GHSA-g27p-qf6j-c96c"
+        },
+        {
+          "title": "NVD — CVE-2026-102870",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102870"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-g27p-qf6j-c96c"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-105016",
+      "slug": "2026-10-nuget-cve-2026-105016",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-105016.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-105016 - Microsoft QUIC Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-105016 - Microsoft QUIC Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.Native.Quic.MsQuic.Schannel",
+      "cve": "CVE-2026-105016",
+      "operator_check": "Check whether Microsoft.Native.Quic.MsQuic.Schannel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.Native.Quic.MsQuic.Schannel. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-105016",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5gjq-3f94-rcf7",
+          "url": "https://github.com/advisories/GHSA-5gjq-3f94-rcf7"
+        },
+        {
+          "title": "NVD — CVE-2026-105016",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105016"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-5gjq-3f94-rcf7"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-58280",
+      "slug": "2026-10-nuget-cve-2026-58280",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-58280.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-58280 - .NET and Visual Studio Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-58280 - .NET and Visual Studio Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-58280",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-58280",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mc4q-93x5-f6hj",
+          "url": "https://github.com/advisories/GHSA-mc4q-93x5-f6hj"
+        },
+        {
+          "title": "NVD — CVE-2026-58280",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58280"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-mc4q-93x5-f6hj"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-69651",
+      "slug": "2026-10-nuget-cve-2026-69651",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-69651.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-69651 - .NET and Visual Studio Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-69651 - .NET and Visual Studio Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-69651",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-69651",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3rxq-g8rj-r2cf",
+          "url": "https://github.com/advisories/GHSA-3rxq-g8rj-r2cf"
+        },
+        {
+          "title": "NVD — CVE-2026-69651",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69651"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-3rxq-g8rj-r2cf"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-70007",
+      "slug": "2026-10-nuget-cve-2026-70007",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70007.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-70007 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-70007 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
+      "cve": "CVE-2026-70007",
+      "operator_check": "Check whether Microsoft.WindowsDesktop.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.WindowsDesktop.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70007",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pfwj-2f93-rf42",
+          "url": "https://github.com/advisories/GHSA-pfwj-2f93-rf42"
+        },
+        {
+          "title": "NVD — CVE-2026-70007",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70007"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/wpf/security/advisories/GHSA-pfwj-2f93-rf42"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-70035",
+      "slug": "2026-10-nuget-cve-2026-70035",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70035.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-70035 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-70035 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
+      "cve": "CVE-2026-70035",
+      "operator_check": "Check whether Microsoft.WindowsDesktop.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.WindowsDesktop.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70035",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4j9v-h7pp-725h",
+          "url": "https://github.com/advisories/GHSA-4j9v-h7pp-725h"
+        },
+        {
+          "title": "NVD — CVE-2026-70035",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70035"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/wpf/security/advisories/GHSA-4j9v-h7pp-725h"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-70174",
+      "slug": "2026-10-nuget-cve-2026-70174",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70174.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-70174 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-70174 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
+      "cve": "CVE-2026-70174",
+      "operator_check": "Check whether Microsoft.WindowsDesktop.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.WindowsDesktop.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70174",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f749-vhgx-39h6",
+          "url": "https://github.com/advisories/GHSA-f749-vhgx-39h6"
+        },
+        {
+          "title": "NVD — CVE-2026-70174",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70174"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/wpf/security/advisories/GHSA-f749-vhgx-39h6"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-70179",
+      "slug": "2026-10-nuget-cve-2026-70179",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70179.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-70179 - ASP.NET Core Elevation of Privilege Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-70179 - ASP.NET Core Elevation of Privilege Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.Authentication.Negotiate",
+      "cve": "CVE-2026-70179",
+      "operator_check": "Check whether Microsoft.AspNetCore.Authentication.Negotiate is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.Authentication.Negotiate. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70179",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vrrp-6v32-2p8g",
+          "url": "https://github.com/advisories/GHSA-vrrp-6v32-2p8g"
+        },
+        {
+          "title": "NVD — CVE-2026-70179",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70179"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-vrrp-6v32-2p8g"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-70181",
+      "slug": "2026-10-nuget-cve-2026-70181",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70181.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-70181 - ASP.NET Core Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-70181 - ASP.NET Core Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-70181",
+      "operator_check": "Check whether Microsoft.AspNetCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70181",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w5qq-qrpp-rf4c",
+          "url": "https://github.com/advisories/GHSA-w5qq-qrpp-rf4c"
+        },
+        {
+          "title": "NVD — CVE-2026-70181",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70181"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-w5qq-qrpp-rf4c"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-70183",
+      "slug": "2026-10-nuget-cve-2026-70183",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70183.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-70183 - ASP.NET Core Security Feature Bypass Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-70183 - ASP.NET Core Security Feature Bypass Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-70183",
+      "operator_check": "Check whether Microsoft.AspNetCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70183",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-494h-xx7x-5frh",
+          "url": "https://github.com/advisories/GHSA-494h-xx7x-5frh"
+        },
+        {
+          "title": "NVD — CVE-2026-70183",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70183"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-494h-xx7x-5frh"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-70186",
+      "slug": "2026-10-nuget-cve-2026-70186",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70186.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-70186 - ASP.NET Core Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-70186 - ASP.NET Core Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-70186",
+      "operator_check": "Check whether Microsoft.AspNetCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70186",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mf4x-w4gh-4656",
+          "url": "https://github.com/advisories/GHSA-mf4x-w4gh-4656"
+        },
+        {
+          "title": "NVD — CVE-2026-70186",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70186"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-mf4x-w4gh-4656"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-70188",
+      "slug": "2026-10-nuget-cve-2026-70188",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70188.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-70188 - ASP.NET Core Security Feature Bypass Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-70188 - ASP.NET Core Security Feature Bypass Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-70188",
+      "operator_check": "Check whether Microsoft.AspNetCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70188",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fpq8-4vhr-rcxx",
+          "url": "https://github.com/advisories/GHSA-fpq8-4vhr-rcxx"
+        },
+        {
+          "title": "NVD — CVE-2026-70188",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70188"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-fpq8-4vhr-rcxx"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-70197",
+      "slug": "2026-10-nuget-cve-2026-70197",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70197.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-70197 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-70197 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.win-arm64",
+      "cve": "CVE-2026-70197",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-70197",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4mpw-cpwj-hxxj",
+          "url": "https://github.com/advisories/GHSA-4mpw-cpwj-hxxj"
+        },
+        {
+          "title": "NVD — CVE-2026-70197",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70197"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-4mpw-cpwj-hxxj"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-83520",
+      "slug": "2026-10-nuget-cve-2026-83520",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-83520.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-83520 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-83520 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
+      "cve": "CVE-2026-83520",
+      "operator_check": "Check whether Microsoft.WindowsDesktop.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.WindowsDesktop.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-83520",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4w5f-7jp2-w48g",
+          "url": "https://github.com/advisories/GHSA-4w5f-7jp2-w48g"
+        },
+        {
+          "title": "NVD — CVE-2026-83520",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83520"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/wpf/security/advisories/GHSA-4w5f-7jp2-w48g"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-84008",
+      "slug": "2026-10-nuget-cve-2026-84008",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-84008.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-84008 - .NET Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-84008 - .NET Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "System.Security.Cryptography.Pkcs",
+      "cve": "CVE-2026-84008",
+      "operator_check": "Check whether System.Security.Cryptography.Pkcs is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for System.Security.Cryptography.Pkcs. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-84008",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-846f-f764-76mx",
+          "url": "https://github.com/advisories/GHSA-846f-f764-76mx"
+        },
+        {
+          "title": "NVD — CVE-2026-84008",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84008"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-846f-f764-76mx"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-85363",
+      "slug": "2026-10-nuget-cve-2026-85363",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-85363.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-85363 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-85363 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
+      "cve": "CVE-2026-85363",
+      "operator_check": "Check whether Microsoft.WindowsDesktop.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.WindowsDesktop.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-85363",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f63g-mx39-3r38",
+          "url": "https://github.com/advisories/GHSA-f63g-mx39-3r38"
+        },
+        {
+          "title": "NVD — CVE-2026-85363",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85363"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/wpf/security/advisories/GHSA-f63g-mx39-3r38"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-87697",
+      "slug": "2026-10-nuget-cve-2026-87697",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-87697.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-87697 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-87697 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
+      "cve": "CVE-2026-87697",
+      "operator_check": "Check whether Microsoft.WindowsDesktop.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.WindowsDesktop.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-87697",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c27m-942f-rcfh",
+          "url": "https://github.com/advisories/GHSA-c27m-942f-rcfh"
+        },
+        {
+          "title": "NVD — CVE-2026-87697",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87697"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/wpf/security/advisories/GHSA-c27m-942f-rcfh"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-88092",
+      "slug": "2026-10-nuget-cve-2026-88092",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-88092.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-88092 - ASP.NET Core Security Feature Bypass Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-88092 - ASP.NET Core Security Feature Bypass Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-88092",
+      "operator_check": "Check whether Microsoft.AspNetCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-88092",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rv87-ccxw-8ggf",
+          "url": "https://github.com/advisories/GHSA-rv87-ccxw-8ggf"
+        },
+        {
+          "title": "NVD — CVE-2026-88092",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88092"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-rv87-ccxw-8ggf"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96222",
+      "slug": "2026-10-nuget-cve-2026-96222",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96222.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96222 - .NET Spoofing Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96222 - .NET Spoofing Vulnerability",
+      "vendor": "NuGet",
+      "product": "System.Security.Cryptography.Xml",
+      "cve": "CVE-2026-96222",
+      "operator_check": "Check whether System.Security.Cryptography.Xml is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for System.Security.Cryptography.Xml. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96222",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vrv5-2jg9-4mmr",
+          "url": "https://github.com/advisories/GHSA-vrv5-2jg9-4mmr"
+        },
+        {
+          "title": "NVD — CVE-2026-96222",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96222"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-vrv5-2jg9-4mmr"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96224",
+      "slug": "2026-10-nuget-cve-2026-96224",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96224.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96224 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96224 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
+      "cve": "CVE-2026-96224",
+      "operator_check": "Check whether Microsoft.WindowsDesktop.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.WindowsDesktop.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96224",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xq57-crx4-g373",
+          "url": "https://github.com/advisories/GHSA-xq57-crx4-g373"
+        },
+        {
+          "title": "NVD — CVE-2026-96224",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96224"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/wpf/security/advisories/GHSA-xq57-crx4-g373"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96225",
+      "slug": "2026-10-nuget-cve-2026-96225",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96225.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96225 - .NET and Visual Studio Elevation of Privilege Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96225 - .NET and Visual Studio Elevation of Privilege Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-96225",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96225",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w6wh-p4g7-mpj2",
+          "url": "https://github.com/advisories/GHSA-w6wh-p4g7-mpj2"
+        },
+        {
+          "title": "NVD — CVE-2026-96225",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96225"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-w6wh-p4g7-mpj2"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96230",
+      "slug": "2026-10-nuget-cve-2026-96230",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96230.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96230 - ASP.NET Core Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96230 - ASP.NET Core Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.Components.WebAssembly.Server",
+      "cve": "CVE-2026-96230",
+      "operator_check": "Check whether Microsoft.AspNetCore.Components.WebAssembly.Server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.Components.WebAssembly.Server. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96230",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qjpx-jqm5-h2c4",
+          "url": "https://github.com/advisories/GHSA-qjpx-jqm5-h2c4"
+        },
+        {
+          "title": "NVD — CVE-2026-96230",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96230"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-qjpx-jqm5-h2c4"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96231",
+      "slug": "2026-10-nuget-cve-2026-96231",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96231.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96231 - .NET and Visual Studio Elevation of Privilege Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96231 - .NET and Visual Studio Elevation of Privilege Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-96231",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96231",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2j93-m82w-73j2",
+          "url": "https://github.com/advisories/GHSA-2j93-m82w-73j2"
+        },
+        {
+          "title": "NVD — CVE-2026-96231",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96231"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-2j93-m82w-73j2"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96232",
+      "slug": "2026-10-nuget-cve-2026-96232",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96232.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96232 - .NET and Visual Studio Information Disclosure Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96232 - .NET and Visual Studio Information Disclosure Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
+      "cve": "CVE-2026-96232",
+      "operator_check": "Check whether Microsoft.WindowsDesktop.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.WindowsDesktop.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96232",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f8qh-mqg4-9939",
+          "url": "https://github.com/advisories/GHSA-f8qh-mqg4-9939"
+        },
+        {
+          "title": "NVD — CVE-2026-96232",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96232"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/wpf/security/advisories/GHSA-f8qh-mqg4-9939"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96233",
+      "slug": "2026-10-nuget-cve-2026-96233",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96233.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96233 - .NET and Visual Studio Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96233 - .NET and Visual Studio Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-96233",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96233",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-87vj-4hqv-22p9",
+          "url": "https://github.com/advisories/GHSA-87vj-4hqv-22p9"
+        },
+        {
+          "title": "NVD — CVE-2026-96233",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96233"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-87vj-4hqv-22p9"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96235",
+      "slug": "2026-10-nuget-cve-2026-96235",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96235.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96235 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96235 - .NET and Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
+      "cve": "CVE-2026-96235",
+      "operator_check": "Check whether Microsoft.WindowsDesktop.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.WindowsDesktop.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96235",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g44w-h65v-4cw9",
+          "url": "https://github.com/advisories/GHSA-g44w-h65v-4cw9"
+        },
+        {
+          "title": "NVD — CVE-2026-96235",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96235"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/wpf/security/advisories/GHSA-g44w-h65v-4cw9"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96236",
+      "slug": "2026-10-nuget-cve-2026-96236",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96236.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96236 - ASP.NET Core Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96236 - ASP.NET Core Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-96236",
+      "operator_check": "Check whether Microsoft.AspNetCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96236",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f4g7-52wc-p8x7",
+          "url": "https://github.com/advisories/GHSA-f4g7-52wc-p8x7"
+        },
+        {
+          "title": "NVD — CVE-2026-96236",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96236"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-f4g7-52wc-p8x7"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96958",
+      "slug": "2026-10-nuget-cve-2026-96958",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96958.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96958 - .NET and Visual Studio Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96958 - .NET and Visual Studio Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "System.Security.Cryptography.Xml",
+      "cve": "CVE-2026-96958",
+      "operator_check": "Check whether System.Security.Cryptography.Xml is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for System.Security.Cryptography.Xml. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96958",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r955-8q5j-3h83",
+          "url": "https://github.com/advisories/GHSA-r955-8q5j-3h83"
+        },
+        {
+          "title": "NVD — CVE-2026-96958",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96958"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-r955-8q5j-3h83"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96959",
+      "slug": "2026-10-nuget-cve-2026-96959",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96959.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96959 - .NET and Visual Studio Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96959 - .NET and Visual Studio Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "System.Security.Cryptography.Xml",
+      "cve": "CVE-2026-96959",
+      "operator_check": "Check whether System.Security.Cryptography.Xml is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for System.Security.Cryptography.Xml. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96959",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c399-9853-6jmj",
+          "url": "https://github.com/advisories/GHSA-c399-9853-6jmj"
+        },
+        {
+          "title": "NVD — CVE-2026-96959",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96959"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-c399-9853-6jmj"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-nuget-cve-2026-96960",
+      "slug": "2026-10-nuget-cve-2026-96960",
+      "url": "https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96960.html",
+      "date": "2026-10-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-96960 - .NET and Visual Studio Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-96960 - .NET and Visual Studio Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "System.Security.Cryptography.Xml",
+      "cve": "CVE-2026-96960",
+      "operator_check": "Check whether System.Security.Cryptography.Xml is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for System.Security.Cryptography.Xml. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96960",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7hqp-7c5m-4vq6",
+          "url": "https://github.com/advisories/GHSA-7hqp-7c5m-4vq6"
+        },
+        {
+          "title": "NVD — CVE-2026-96960",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96960"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-7hqp-7c5m-4vq6"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-rfc-vu-573195",
+      "slug": "2026-10-rfc-vu-573195",
+      "url": "https://www.patchbrief.org/items/2026-10-rfc-vu-573195.html",
+      "date": "2026-10-13",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#573195: Go, OpenSSL, Apple, LibreSSL, pyca, wolfSSL Name-Constraint Inconsistency in RFC 5280 Implementation",
+      "summary": "Overview This note covers differences in how TLS libraries interpret X.509 Name Constraints. A certificate that one library accepts may be rejected by another. Some of those differences are defects; others follow from behavior that RFC 5280 does not fully specify. Description The observed differences concern DNS name comparison, IP address handling, URI-authority parsing, and wildcard matching. These include both implementation defects and behavior not fully specified by RFC 5280. DNS-name comparison. RFC 5280 requires case-insensitive matching for DNS names. GnuTLS compared some names' case-sensitivity at the time of reporting (CVE-2026-3833, later fixed in 3.8.13). A distinct Go report concerns case handling in wildcard parent-constraint lookup, not ordinary hostname comparison. IP address handling. RFC 5280 defines separate IPv4 and... Related CVEs: CVE-2026-34073, CVE-2026-3833.",
+      "vendor": "RFC",
+      "product": "5280 Implementation",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for 5280 Implementation where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-573195",
+        "coordinated-disclosure",
+        "rfc",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#573195",
+          "url": "https://kb.cert.org/vuls/id/573195"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-shopware-vu-157374",
+      "slug": "2026-10-shopware-vu-157374",
+      "url": "https://www.patchbrief.org/items/2026-10-shopware-vu-157374.html",
+      "date": "2026-10-13",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#157374: XSS vulnerability in Shopware 6 enables Admin Token Theft and RCE",
+      "summary": "Overview Shopware 6.7 contains a stored cross-site scripting (XSS) vulnerability in its media upload functionality that can lead to administrator credential compromise and remote code execution. Description Shopware is an open-source e-commerce platform used to build and manage online stores. It provides merchants with customizable product pages, administrative interfaces, plugin functionality, and a media management system that allows users to upload and serve files. CVE-2026-104937 In affected versions, Shopware’s media upload API accepts HTML files that are later served as text/html without effective Content-Security-Policy or X-Content-Type-Options security headers. An attacker with access to the media upload capability can therefore upload an HTML file with malicious embedded JavaScript, and if an administrator opens the... Related CVEs: CVE-2026-104937.",
+      "vendor": "Shopware",
+      "product": "6 enables Admin Token Theft and RCE",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for 6 enables Admin Token Theft and RCE where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-157374",
+        "coordinated-disclosure",
+        "shopware",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#157374",
+          "url": "https://kb.cert.org/vuls/id/157374"
         }
       ]
     },

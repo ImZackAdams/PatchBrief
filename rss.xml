@@ -4,14 +4,441 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Tue, 13 Oct 2026 16:45:01 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 14:21:39 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>VU#166125: Bisheng has authentication bypass vulnerabilities</title>
+      <link>https://www.patchbrief.org/items/2026-10-bisheng-vu-166125.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-bisheng-vu-166125.html</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Overview Bisheng contains three vulnerabilities: a pre-authentication account takeover mechanism via a legacy single sign-on (SSO) endpoint; an Insecure Direct Object Reference (IDOR) vulnerability that exposes cross-user workflow data; and prior to version 2.5.0, authenticated attackers could perform cross-user LLM credential abuse and data disclosure due to missing service-layer access checks. Together, these flaws could allow unauthenticated attackers to gain administrative control while enabling authenticated users access to sensitive data and hardcoded credentials. Description Bisheng is an open-source Large Language Model (LLM) application DevOps platform, developed by DataElement, designed to assist in building, managing, and scaling LLMs. CVE-2026-96679 (Legacy SSO Bypass) A vulnerability resides in the legacy SSO endpoint ( POST... Related CVEs: CVE-2026-100156, CVE-2026-96679, CVE-2026-96681.</description>
+    </item>
     <item>
       <title>Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-10-ivanti-cve-2026-104935.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-ivanti-cve-2026-104935.html</guid>
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
       <description>Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.</description>
+    </item>
+    <item>
+      <title>VU#456950: Komodo Periphery Agent Contains an OS Command Injection Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-komodo-vu-456950.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-komodo-vu-456950.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Overview Versions root on the underlying host, enabling persistent compromise of infrastructure. Description Komodo is an open-source server and deployment manager, maintained by mogh.tech, widely used in self-hosted and Docker multi-server environments. Periphery is an agent service installed on servers to give Komodo control over Docker environments. In vulnerable versions of Komodo, Periphery does not properly validate user-supplied Docker container names before those values are interpolated into shell commands used by the agent. Two operations exhibit this vulnerability: container destruction ( DestroyContainer / RemoveContainer ) and container log searches ( SearchContainerLog / GetContainerLogSearch ). Through both avenues, raw container names are directly inserted into sh -c command lines without any shell escaping or validation...</description>
+    </item>
+    <item>
+      <title>VU#382143: Lowcoder Query Library API contains cross-tenant authorization bypass allowing for data exfiltration</title>
+      <link>https://www.patchbrief.org/items/2026-10-lowcoder-vu-382143.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-lowcoder-vu-382143.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Overview Lowcoder, version 2.4.10, contains an authorization bypass vulnerability in its Query Library feature’s API. Authenticated users with an admin or dev role can access private library-query data from other organizations within a multi-tenant Lowcoder instance. Description CVE-2026-16753 Lowcoder is an open-source low-code platform that allows individuals with minimal coding experience to build web applications through a visual drag-and-drop interface. Each Lowcoder project contains a centralized Query Library which stores the workspace’s data queries and sources for quick reuse; however, the LibraryQuery API service layer lacks organization-scope checks at two endpoints: metadata retrieval and query execution. While the application features a role-based access mechanism (requires admin or dev ), it only checks the role’s validity... Related CVEs: CVE-2026-16753.</description>
+    </item>
+    <item>
+      <title>Privasys rustls fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-108266.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-108266.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Privasys rustls fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Privasys Go fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-108267.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-108267.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Privasys Go fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Apache HTTP Server: mod_charset_lite: Heap overflow in finish_partial_char</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-56153.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-56153.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Apache HTTP Server: mod_charset_lite: Heap overflow in finish_partial_char Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Apache HTTP Server: mod_rewrite use-after-free via %{LA-U:HTTP:...}</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-56154.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-56154.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Apache HTTP Server: mod_rewrite use-after-free via %{LA-U:HTTP:...} Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Root.Mkdir(All) can follow junctions out of the root on Windows in os</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-56857.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-56857.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Root.Mkdir(All) can follow junctions out of the root on Windows in os Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Apache HTTP Server: mod_http2 use-after-free / wild write via shared session-&gt;bbtmp re-entrancy</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-57941.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-57941.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Apache HTTP Server: mod_http2 use-after-free / wild write via shared session-&gt;bbtmp re-entrancy Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Apache HTTP Server: mod_ssl SSLRequire allows .htaccess ap_expr file-function</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-59797.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-59797.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Apache HTTP Server: mod_ssl SSLRequire allows .htaccess ap_expr file-function Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Double flow control refund on HTTP/2 server streams in net/http</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-78663.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-78663.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Double flow control refund on HTTP/2 server streams in net/http Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Apache Thrift: C++ THttpTransport grows its line buffer without bound</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-83632.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-83632.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Apache Thrift: C++ THttpTransport grows its line buffer without bound Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Ansible-core: ansible-core: ansible-galaxy collection install symlink path escape allows arbitrary file write / code ...</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-89091.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-89091.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Ansible-core: ansible-core: ansible-galaxy collection install symlink path escape allows arbitrary file write / code execution Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Apache HTTP Server: mod_dav_fs namespace overflow</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-93546.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-93546.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Apache HTTP Server: mod_dav_fs namespace overflow Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Microsoft Windows Command Injection Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-96951.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-96951.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.</description>
+    </item>
+    <item>
+      <title>smb: client: fix server-&gt;total_read for compound encrypted PDUs</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98167.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98167.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>smb: client: fix server-&gt;total_read for compound encrypted PDUs Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>smb: client: fix reparse buffer bounds in cifs_query_reparse_point()</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98168.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98168.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>smb: client: fix reparse buffer bounds in cifs_query_reparse_point() Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>smb: client: fix OOB struct field reads in move_smb2_ea_to_cifs()</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98170.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98170.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>smb: client: fix OOB struct field reads in move_smb2_ea_to_cifs() Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>smb: client: fix next_buffer UAF and NextCommand bounds in compound PDUs</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98171.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98171.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>smb: client: fix next_buffer UAF and NextCommand bounds in compound PDUs Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>smb: client: fix smbd_connection leak on cifs_get_tcp_session() error</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98172.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98172.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>smb: client: fix smbd_connection leak on cifs_get_tcp_session() error Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>smb: client: fix rlist race and missing initialization</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98174.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98174.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>smb: client: fix rlist race and missing initialization Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>drm/amdkfd: Avoid integer underflow with ffs in EOP ring size calc</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98176.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98176.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>drm/amdkfd: Avoid integer underflow with ffs in EOP ring size calc Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>drm/amdkfd: Avoid integer underflow in EOP ring size calculation.</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98177.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98177.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>drm/amdkfd: Avoid integer underflow in EOP ring size calculation. Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>drm/amdgpu: fix rmmio iounmap skipped on device removal</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98179.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98179.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>drm/amdgpu: fix rmmio iounmap skipped on device removal Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>drm/msm: RCU-free the scheduler-containing ring and VM objects</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98180.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98180.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>drm/msm: RCU-free the scheduler-containing ring and VM objects Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>drm/gud: fix out-of-bounds write in gud_plane_atomic_check()</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98181.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98181.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>drm/gud: fix out-of-bounds write in gud_plane_atomic_check() Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>wifi: mwifiex: bound the pairwise-cipher OUI walk to the IE length</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98186.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98186.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>wifi: mwifiex: bound the pairwise-cipher OUI walk to the IE length Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>wifi: p54: require a full exp_if record in PDR_INTERFACE_LIST</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98187.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98187.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>wifi: p54: require a full exp_if record in PDR_INTERFACE_LIST Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>wifi: p54: validate curve data length in the calibration curve converters</title>
+      <link>https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98188.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-microsoft-cve-2026-98188.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>wifi: p54: validate curve data length in the calibration curve converters Published in October 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-102870 - ASP.NET Core Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-102870.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-102870.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-102870 - ASP.NET Core Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-105016 - Microsoft QUIC Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-105016.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-105016.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-105016 - Microsoft QUIC Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-58280 - .NET and Visual Studio Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-58280.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-58280.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-58280 - .NET and Visual Studio Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-69651 - .NET and Visual Studio Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-69651.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-69651.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-69651 - .NET and Visual Studio Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-70007 - .NET and Visual Studio Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70007.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70007.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-70007 - .NET and Visual Studio Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-70035 - .NET and Visual Studio Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70035.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70035.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-70035 - .NET and Visual Studio Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-70174 - .NET and Visual Studio Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70174.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70174.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-70174 - .NET and Visual Studio Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-70179 - ASP.NET Core Elevation of Privilege Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70179.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70179.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-70179 - ASP.NET Core Elevation of Privilege Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-70181 - ASP.NET Core Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70181.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70181.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-70181 - ASP.NET Core Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-70183 - ASP.NET Core Security Feature Bypass Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70183.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70183.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-70183 - ASP.NET Core Security Feature Bypass Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-70186 - ASP.NET Core Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70186.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70186.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-70186 - ASP.NET Core Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-70188 - ASP.NET Core Security Feature Bypass Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70188.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70188.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-70188 - ASP.NET Core Security Feature Bypass Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-70197 - .NET and Visual Studio Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70197.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-70197.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-70197 - .NET and Visual Studio Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-83520 - .NET and Visual Studio Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-83520.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-83520.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-83520 - .NET and Visual Studio Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-84008 - .NET Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-84008.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-84008.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-84008 - .NET Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-85363 - .NET and Visual Studio Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-85363.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-85363.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-85363 - .NET and Visual Studio Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-87697 - .NET and Visual Studio Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-87697.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-87697.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-87697 - .NET and Visual Studio Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-88092 - ASP.NET Core Security Feature Bypass Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-88092.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-88092.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-88092 - ASP.NET Core Security Feature Bypass Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96222 - .NET Spoofing Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96222.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96222.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96222 - .NET Spoofing Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96224 - .NET and Visual Studio Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96224.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96224.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96224 - .NET and Visual Studio Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96225 - .NET and Visual Studio Elevation of Privilege Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96225.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96225.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96225 - .NET and Visual Studio Elevation of Privilege Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96230 - ASP.NET Core Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96230.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96230.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96230 - ASP.NET Core Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96231 - .NET and Visual Studio Elevation of Privilege Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96231.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96231.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96231 - .NET and Visual Studio Elevation of Privilege Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96232 - .NET and Visual Studio Information Disclosure Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96232.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96232.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96232 - .NET and Visual Studio Information Disclosure Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96233 - .NET and Visual Studio Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96233.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96233.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96233 - .NET and Visual Studio Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96235 - .NET and Visual Studio Remote Code Execution Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96235.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96235.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96235 - .NET and Visual Studio Remote Code Execution Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96236 - ASP.NET Core Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96236.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96236.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96236 - ASP.NET Core Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96958 - .NET and Visual Studio Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96958.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96958.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96958 - .NET and Visual Studio Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96959 - .NET and Visual Studio Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96959.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96959.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96959 - .NET and Visual Studio Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>Microsoft Security Advisory CVE-2026-96960 - .NET and Visual Studio Denial of Service Vulnerability</title>
+      <link>https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96960.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-nuget-cve-2026-96960.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Security Advisory CVE-2026-96960 - .NET and Visual Studio Denial of Service Vulnerability</description>
+    </item>
+    <item>
+      <title>VU#573195: Go, OpenSSL, Apple, LibreSSL, pyca, wolfSSL Name-Constraint Inconsistency in RFC 5280 Implementation</title>
+      <link>https://www.patchbrief.org/items/2026-10-rfc-vu-573195.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-rfc-vu-573195.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Overview This note covers differences in how TLS libraries interpret X.509 Name Constraints. A certificate that one library accepts may be rejected by another. Some of those differences are defects; others follow from behavior that RFC 5280 does not fully specify. Description The observed differences concern DNS name comparison, IP address handling, URI-authority parsing, and wildcard matching. These include both implementation defects and behavior not fully specified by RFC 5280. DNS-name comparison. RFC 5280 requires case-insensitive matching for DNS names. GnuTLS compared some names' case-sensitivity at the time of reporting (CVE-2026-3833, later fixed in 3.8.13). A distinct Go report concerns case handling in wildcard parent-constraint lookup, not ordinary hostname comparison. IP address handling. RFC 5280 defines separate IPv4 and... Related CVEs: CVE-2026-34073, CVE-2026-3833.</description>
+    </item>
+    <item>
+      <title>VU#157374: XSS vulnerability in Shopware 6 enables Admin Token Theft and RCE</title>
+      <link>https://www.patchbrief.org/items/2026-10-shopware-vu-157374.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-10-shopware-vu-157374.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Overview Shopware 6.7 contains a stored cross-site scripting (XSS) vulnerability in its media upload functionality that can lead to administrator credential compromise and remote code execution. Description Shopware is an open-source e-commerce platform used to build and manage online stores. It provides merchants with customizable product pages, administrative interfaces, plugin functionality, and a media management system that allows users to upload and serve files. CVE-2026-104937 In affected versions, Shopware’s media upload API accepts HTML files that are later served as text/html without effective Content-Security-Policy or X-Content-Type-Options security headers. An attacker with access to the media upload capability can therefore upload an HTML file with malicious embedded JavaScript, and if an administrator opens the... Related CVEs: CVE-2026-104937.</description>
     </item>
     <item>
       <title>Rapyd Admin from 9.0.0 — CVE-2026-109566 (Critical)</title>

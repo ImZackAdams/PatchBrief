@@ -1,0 +1,37 @@
+id: 2026-10-lowcoder-vu-382143
+slug: 2026-10-lowcoder-vu-382143
+external_id: VU-382143
+source: cert_vu
+date: '2026-10-13'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#382143: Lowcoder Query Library API contains cross-tenant authorization
+  bypass allowing for data exfiltration'
+summary: 'Overview Lowcoder, version 2.4.10, contains an authorization bypass vulnerability
+  in its Query Library feature’s API. Authenticated users with an admin or dev role
+  can access private library-query data from other organizations within a multi-tenant
+  Lowcoder instance. Description CVE-2026-16753 Lowcoder is an open-source low-code
+  platform that allows individuals with minimal coding experience to build web applications
+  through a visual drag-and-drop interface. Each Lowcoder project contains a centralized
+  Query Library which stores the workspace’s data queries and sources for quick reuse;
+  however, the LibraryQuery API service layer lacks organization-scope checks at two
+  endpoints: metadata retrieval and query execution. While the application features
+  a role-based access mechanism (requires admin or dev ), it only checks the role’s
+  validity... Related CVEs: CVE-2026-16753.'
+vendor: Lowcoder
+product: Query Library API
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Query Library API where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#382143
+  url: https://kb.cert.org/vuls/id/382143
+tags:
+- vu-382143
+- coordinated-disclosure
+- lowcoder
+- cert-vu
+is_sample: false

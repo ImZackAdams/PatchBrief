@@ -1,0 +1,37 @@
+id: 2026-10-rfc-vu-573195
+slug: 2026-10-rfc-vu-573195
+external_id: VU-573195
+source: cert_vu
+date: '2026-10-13'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#573195: Go, OpenSSL, Apple, LibreSSL, pyca, wolfSSL Name-Constraint Inconsistency
+  in RFC 5280 Implementation'
+summary: 'Overview This note covers differences in how TLS libraries interpret X.509
+  Name Constraints. A certificate that one library accepts may be rejected by another.
+  Some of those differences are defects; others follow from behavior that RFC 5280
+  does not fully specify. Description The observed differences concern DNS name comparison,
+  IP address handling, URI-authority parsing, and wildcard matching. These include
+  both implementation defects and behavior not fully specified by RFC 5280. DNS-name
+  comparison. RFC 5280 requires case-insensitive matching for DNS names. GnuTLS compared
+  some names'' case-sensitivity at the time of reporting (CVE-2026-3833, later fixed
+  in 3.8.13). A distinct Go report concerns case handling in wildcard parent-constraint
+  lookup, not ordinary hostname comparison. IP address handling. RFC 5280 defines
+  separate IPv4 and... Related CVEs: CVE-2026-34073, CVE-2026-3833.'
+vendor: RFC
+product: 5280 Implementation
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for 5280 Implementation where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#573195
+  url: https://kb.cert.org/vuls/id/573195
+tags:
+- vu-573195
+- coordinated-disclosure
+- rfc
+- cert-vu
+is_sample: false

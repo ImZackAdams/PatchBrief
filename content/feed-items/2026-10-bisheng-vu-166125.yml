@@ -1,0 +1,36 @@
+id: 2026-10-bisheng-vu-166125
+slug: 2026-10-bisheng-vu-166125
+external_id: VU-166125
+source: cert_vu
+date: '2026-10-14'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#166125: Bisheng has authentication bypass vulnerabilities'
+summary: 'Overview Bisheng contains three vulnerabilities: a pre-authentication account
+  takeover mechanism via a legacy single sign-on (SSO) endpoint; an Insecure Direct
+  Object Reference (IDOR) vulnerability that exposes cross-user workflow data; and
+  prior to version 2.5.0, authenticated attackers could perform cross-user LLM credential
+  abuse and data disclosure due to missing service-layer access checks. Together,
+  these flaws could allow unauthenticated attackers to gain administrative control
+  while enabling authenticated users access to sensitive data and hardcoded credentials.
+  Description Bisheng is an open-source Large Language Model (LLM) application DevOps
+  platform, developed by DataElement, designed to assist in building, managing, and
+  scaling LLMs. CVE-2026-96679 (Legacy SSO Bypass) A vulnerability resides in the
+  legacy SSO endpoint ( POST... Related CVEs: CVE-2026-100156, CVE-2026-96679, CVE-2026-96681.'
+vendor: Bisheng
+product: Bisheng
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Bisheng where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#166125
+  url: https://kb.cert.org/vuls/id/166125
+tags:
+- vu-166125
+- coordinated-disclosure
+- bisheng
+- cert-vu
+is_sample: false
