@@ -1,0 +1,36 @@
+id: 2026-10-san-vu-410595
+slug: 2026-10-san-vu-410595
+external_id: VU-410595
+source: cert_vu
+date: '2026-10-14'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#410595: Google BoringSSL Name Constraints Bypass in SAN Validation Logic'
+summary: 'Overview Five Name Constraints findings in BoringSSL (VU#410595.8–.12) describe
+  cases where certificate names may not be constrained as intended. Records .8, .9,
+  .10 and .12 concern the legacy crypto/x509 path; .11 concerns the newer pki path.
+  Two have been fixed, one is accepted, one is disputed, and one was declined. Description
+  Name Constraints limit the names a subordinate certificate authority may issue.
+  The reports concern how BoringSSL applies those limits to certain SAN (Subject Alternative
+  Name) forms. The records do not share one status, and they do not all affect the
+  same validation path. VU#410595.8 ( Fixed 2026-03-04 ): A wildcard DNS name may
+  not be treated as covering a specifically excluded host. VU#410595.9 ( Accepted
+  ): A URI with a colon before @ may cause the wrong host to be used when matching
+  URI constraints...'
+vendor: SAN
+product: Validation Logic
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Validation Logic where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#410595
+  url: https://kb.cert.org/vuls/id/410595
+tags:
+- vu-410595
+- coordinated-disclosure
+- san
+- cert-vu
+is_sample: false
