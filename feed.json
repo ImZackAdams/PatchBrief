@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-16T13:46:25Z",
-  "total_items": 2098,
+  "generated": "2026-10-17T12:43:24Z",
+  "total_items": 2110,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-16T13:46:25Z",
+    "generated": "2026-10-17T12:43:24Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,26 +18,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 7,
-        "started_at": "2026-10-16T13:46:01Z",
-        "finished_at": "2026-10-16T13:46:01Z"
+        "started_at": "2026-10-17T12:43:12Z",
+        "finished_at": "2026-10-17T12:43:12Z"
       },
       {
         "id": "msrc",
         "label": "Microsoft Security Update Guide",
         "role": "source",
         "status": "ok",
-        "items_seen": 25,
-        "started_at": "2026-10-16T13:46:01Z",
-        "finished_at": "2026-10-16T13:46:08Z"
+        "items_seen": 0,
+        "started_at": "2026-10-17T12:43:12Z",
+        "finished_at": "2026-10-17T12:43:13Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-10-16T13:46:08Z",
-        "finished_at": "2026-10-16T13:46:15Z"
+        "items_seen": 4,
+        "started_at": "2026-10-17T12:43:13Z",
+        "finished_at": "2026-10-17T12:43:20Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-10-16T13:46:15Z",
-        "finished_at": "2026-10-16T13:46:17Z"
+        "started_at": "2026-10-17T12:43:20Z",
+        "finished_at": "2026-10-17T12:43:21Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 7,
-        "started_at": "2026-10-16T13:46:17Z",
-        "finished_at": "2026-10-16T13:46:18Z"
+        "items_seen": 3,
+        "started_at": "2026-10-17T12:43:21Z",
+        "finished_at": "2026-10-17T12:43:21Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,394 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-16T13:46:18Z",
-        "finished_at": "2026-10-16T13:46:19Z"
+        "started_at": "2026-10-17T12:43:21Z",
+        "finished_at": "2026-10-17T12:43:21Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 58,
-        "started_at": "2026-10-16T13:46:19Z",
-        "finished_at": "2026-10-16T13:46:20Z"
+        "items_seen": 33,
+        "started_at": "2026-10-17T12:43:21Z",
+        "finished_at": "2026-10-17T12:43:22Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-beyondtrust-cve-2026-102764",
+      "slug": "2026-10-beyondtrust-cve-2026-102764",
+      "url": "https://www.patchbrief.org/items/2026-10-beyondtrust-cve-2026-102764.html",
+      "date": "2026-10-16",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+      "summary": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.",
+      "vendor": "BeyondTrust",
+      "product": "Remote Support",
+      "cve": "CVE-2026-102764",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-102764 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-19. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-102764",
+        "kev",
+        "beyondtrust",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-102764",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-fortinet-cve-2025-61624",
+      "slug": "2026-10-fortinet-cve-2025-61624",
+      "url": "https://www.patchbrief.org/items/2026-10-fortinet-cve-2025-61624.html",
+      "date": "2026-10-16",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Fortinet Multiple Products Path Traversal Vulnerability",
+      "summary": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
+      "vendor": "Fortinet",
+      "product": "Multiple Products",
+      "cve": "CVE-2025-61624",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2025-61624 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-10-19. Treat remediation as urgent.",
+      "tags": [
+        "cve-2025-61624",
+        "kev",
+        "fortinet",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2025-61624",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-100349",
+      "slug": "2026-10-go-cve-2026-100349",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-100349.html",
+      "date": "2026-10-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
+      "summary": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
+      "vendor": "Go",
+      "product": "github.com/getkin/kin-openapi",
+      "cve": "CVE-2026-100349",
+      "operator_check": "Check whether github.com/getkin/kin-openapi is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/getkin/kin-openapi. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-100349",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-74vm-87hj-r66f",
+          "url": "https://github.com/advisories/GHSA-74vm-87hj-r66f"
+        },
+        {
+          "title": "NVD — CVE-2026-100349",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100349"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getkin/kin-openapi/security/advisories/GHSA-74vm-87hj-r66f"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-102941",
+      "slug": "2026-10-go-cve-2026-102941",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-102941.html",
+      "date": "2026-10-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "gomarkdown/markdown IsSafeURL panics on short URLs",
+      "summary": "gomarkdown/markdown IsSafeURL panics on short URLs",
+      "vendor": "Go",
+      "product": "github.com/gomarkdown/markdown",
+      "cve": "CVE-2026-102941",
+      "operator_check": "Check whether github.com/gomarkdown/markdown is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/gomarkdown/markdown. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-102941",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cv23-7vc5-jfh7",
+          "url": "https://github.com/advisories/GHSA-cv23-7vc5-jfh7"
+        },
+        {
+          "title": "NVD — CVE-2026-102941",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102941"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/gomarkdown/markdown/security/advisories/GHSA-cv23-7vc5-jfh7"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-96627",
+      "slug": "2026-10-go-cve-2026-96627",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-96627.html",
+      "date": "2026-10-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy ch...",
+      "summary": "Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)",
+      "vendor": "Go",
+      "product": "github.com/getarcaneapp/arcane/backend/v2",
+      "cve": "CVE-2026-96627",
+      "operator_check": "Check whether github.com/getarcaneapp/arcane/backend/v2 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/getarcaneapp/arcane/backend/v2. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96627",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pw5q-rjx4-7f7p",
+          "url": "https://github.com/advisories/GHSA-pw5q-rjx4-7f7p"
+        },
+        {
+          "title": "NVD — CVE-2026-96627",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96627"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/getarcaneapp/arcane/security/advisories/GHSA-pw5q-rjx4-7f7p"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-maven-cve-2026-102834",
+      "slug": "2026-10-maven-cve-2026-102834",
+      "url": "https://www.patchbrief.org/items/2026-10-maven-cve-2026-102834.html",
+      "date": "2026-10-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
+      "summary": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
+      "vendor": "Maven",
+      "product": "org.bytedeco:javacv",
+      "cve": "CVE-2026-102834",
+      "operator_check": "Check whether org.bytedeco:javacv is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.bytedeco:javacv. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-102834",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rxjv-24xq-76wc",
+          "url": "https://github.com/advisories/GHSA-rxjv-24xq-76wc"
+        },
+        {
+          "title": "NVD — CVE-2026-102834",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102834"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/bytedeco/javacv/security/advisories/GHSA-rxjv-24xq-76wc"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-misaka-cve-2026-111643",
+      "slug": "2026-10-misaka-cve-2026-111643",
+      "url": "https://www.patchbrief.org/items/2026-10-misaka-cve-2026-111643.html",
+      "date": "2026-10-16",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Misaka Danmu Server — CVE-2026-111643 (Critical)",
+      "summary": "Misaka Danmu Server through 2.8.9 contains an authentication bypass vulnerability that allows unauthenticated attackers to write arbitrary configuration keys via the unprotected POST /api/ui/config-history/rollback endpoint. Attackers can set the ipWhitelist key to their own /32 address, or alter trustedProxies and webhookApiKey, to access every protected endpoint as the administrator.",
+      "vendor": "Misaka",
+      "product": "Danmu Server",
+      "cve": "CVE-2026-111643",
+      "operator_check": "Review CVE-2026-111643 in your asset inventory. Apply patches per vendor guidance and verify Danmu Server is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Misaka Danmu Server. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-111643",
+        "vendor-advisory",
+        "misaka",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-111643",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111643"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/l429609201/misaka_danmu_server/blob/v2.8.9/src/api/ui/config_history.py#L51-L66"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/l429609201/misaka_danmu_server/blob/v2.8.9/src/security.py#L136-L182"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-105192",
+      "slug": "2026-10-pypi-cve-2026-105192",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-105192.html",
+      "date": "2026-10-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
+      "summary": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
+      "vendor": "PyPI",
+      "product": "lmcache",
+      "cve": "CVE-2026-105192",
+      "operator_check": "Check whether lmcache is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for lmcache. Prioritize it with other application dependency updates, especially because EPSS places it in the 40% percentile.",
+      "tags": [
+        "cve-2026-105192",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w5f2-9q9c-ff4h",
+          "url": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h"
+        },
+        {
+          "title": "NVD — CVE-2026-105192",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105192"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/LMCache/LMCache/security/advisories/GHSA-w5f2-9q9c-ff4h"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-96620",
+      "slug": "2026-10-pypi-cve-2026-96620",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-96620.html",
+      "date": "2026-10-16",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
+      "summary": "Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
+      "vendor": "PyPI",
+      "product": "claude-agent-sdk",
+      "cve": "CVE-2026-96620",
+      "operator_check": "Check whether claude-agent-sdk is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for claude-agent-sdk. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-96620",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h4mw-j7qp-8mwm",
+          "url": "https://github.com/advisories/GHSA-h4mw-j7qp-8mwm"
+        },
+        {
+          "title": "NVD — CVE-2026-96620",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96620"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/anthropics/claude-agent-sdk-python/security/advisories/GHSA-h4mw-j7qp-8mwm"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-rust-ghsa-6fj4-rcr3-r7rr",
+      "slug": "2026-10-rust-ghsa-6fj4-rcr3-r7rr",
+      "url": "https://www.patchbrief.org/items/2026-10-rust-ghsa-6fj4-rcr3-r7rr.html",
+      "date": "2026-10-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "lopdf has a stack overflow via deeply nested PDF objects",
+      "summary": "lopdf has a stack overflow via deeply nested PDF objects",
+      "vendor": "Rust",
+      "product": "lopdf",
+      "cve": null,
+      "operator_check": "Check whether lopdf is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for lopdf. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-6fj4-rcr3-r7rr",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6fj4-rcr3-r7rr",
+          "url": "https://github.com/advisories/GHSA-6fj4-rcr3-r7rr"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/J-F-Liu/lopdf/issues/502"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-simple-cve-2026-111690",
+      "slug": "2026-10-simple-cve-2026-111690",
+      "url": "https://www.patchbrief.org/items/2026-10-simple-cve-2026-111690.html",
+      "date": "2026-10-16",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Simple Admin Core — CVE-2026-111690 (Critical)",
+      "summary": "Simple Admin Core through 1.8.7 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge super administrator tokens by using the hard-coded Auth.AccessSecret in api/etc/core.yaml. Attackers can sign a JWT with the public secret and roleId claim 001 to gain full administrative control over users, roles, menus, API authorities, configuration and tokens.",
+      "vendor": "Simple",
+      "product": "Admin Core",
+      "cve": "CVE-2026-111690",
+      "operator_check": "Review CVE-2026-111690 in your asset inventory. Apply patches per vendor guidance and verify Admin Core is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Simple Admin Core. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-111690",
+        "vendor-advisory",
+        "simple",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-111690",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111690"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/suyuan32/simple-admin-core/blob/v1.8.7/api/etc/core.yaml#L6-L8"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/suyuan32/simple-admin-core/pull/382"
+        }
+      ]
+    },
     {
       "id": "2026-10-atlassian-cve-2026-21589",
       "slug": "2026-10-atlassian-cve-2026-21589",
@@ -876,6 +1249,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/getkin/kin-openapi/security/advisories/GHSA-p6wj-qrr4-pgh5"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-jetbrains-cve-2026-111094",
+      "slug": "2026-10-jetbrains-cve-2026-111094",
+      "url": "https://www.patchbrief.org/items/2026-10-jetbrains-cve-2026-111094.html",
+      "date": "2026-10-15",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Jetbrains Teamcity — CVE-2026-111094 (Critical)",
+      "summary": "In JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 remote code execution via a whitelist bypass in the build messages protocol was possible",
+      "vendor": "Jetbrains",
+      "product": "Teamcity",
+      "cve": "CVE-2026-111094",
+      "operator_check": "Review CVE-2026-111094 in your asset inventory. Apply patches per vendor guidance and verify Teamcity is not exposed. CVSS score: 8.1. EPSS probability: 0.4%; percentile: 31%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.1) in Jetbrains Teamcity. Patch or mitigate promptly. EPSS percentile: 31%.",
+      "tags": [
+        "cve-2026-111094",
+        "vendor-advisory",
+        "jetbrains",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-111094",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111094"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
         }
       ]
     },
