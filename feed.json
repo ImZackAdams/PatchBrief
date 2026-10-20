@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-19T16:45:41Z",
-  "total_items": 2111,
+  "generated": "2026-10-20T14:08:20Z",
+  "total_items": 2116,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-19T16:45:41Z",
+    "generated": "2026-10-20T14:08:20Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-10-19T16:14:11Z",
-        "finished_at": "2026-10-19T16:14:11Z"
+        "items_seen": 0,
+        "started_at": "2026-10-20T14:08:06Z",
+        "finished_at": "2026-10-20T14:08:06Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-19T16:14:11Z",
-        "finished_at": "2026-10-19T16:14:11Z"
+        "started_at": "2026-10-20T14:08:06Z",
+        "finished_at": "2026-10-20T14:08:07Z"
       },
       {
         "id": "nvd",
@@ -36,17 +36,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-10-19T16:14:11Z",
-        "finished_at": "2026-10-19T16:14:18Z"
+        "started_at": "2026-10-20T14:08:07Z",
+        "finished_at": "2026-10-20T14:08:14Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 8,
-        "started_at": "2026-10-19T16:14:18Z",
-        "finished_at": "2026-10-19T16:14:19Z"
+        "items_seen": 5,
+        "started_at": "2026-10-20T14:08:14Z",
+        "finished_at": "2026-10-20T14:08:15Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-19T16:14:19Z",
-        "finished_at": "2026-10-19T16:14:20Z"
+        "started_at": "2026-10-20T14:08:15Z",
+        "finished_at": "2026-10-20T14:08:15Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,56 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-19T16:14:20Z",
-        "finished_at": "2026-10-19T16:14:20Z"
+        "started_at": "2026-10-20T14:08:15Z",
+        "finished_at": "2026-10-20T14:08:15Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 10,
-        "started_at": "2026-10-19T16:14:20Z",
-        "finished_at": "2026-10-19T16:14:21Z"
+        "items_seen": 1,
+        "started_at": "2026-10-20T14:08:15Z",
+        "finished_at": "2026-10-20T14:08:15Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-craft-cve-2026-112776",
+      "slug": "2026-10-craft-cve-2026-112776",
+      "url": "https://www.patchbrief.org/items/2026-10-craft-cve-2026-112776.html",
+      "date": "2026-10-19",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Craft CMS from 5.0.0 — CVE-2026-112776 (Critical)",
+      "summary": "Craft CMS from 5.0.0 before 5.11.0 contains an authorization bypass vulnerability that allows site-scoped GraphQL tokens to mutate other sites' content because requireAllowedSite() is not enforced. Attackers holding a site-A token can create entries in site B via supplied siteId and delete entries, categories, tags, and assets shared across sites.",
+      "vendor": "Craft",
+      "product": "CMS from 5.0.0",
+      "cve": "CVE-2026-112776",
+      "operator_check": "Review CVE-2026-112776 in your asset inventory. Apply patches per vendor guidance and verify CMS from 5.0.0 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Craft CMS from 5.0.0. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-112776",
+        "vendor-advisory",
+        "craft",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-112776",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112776"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/craftcms/cms/security/advisories/GHSA-7rr3-4jcm-x526"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/craft-cms-5.0.0-before-5.11.0-graphql-site-scope-bypass-via-mutations"
+        }
+      ]
+    },
     {
       "id": "2026-10-pypi-cve-2026-108372",
       "slug": "2026-10-pypi-cve-2026-108372",
@@ -110,6 +145,142 @@
         {
           "title": "Source reference",
           "url": "https://github.com/huangruiteng/loopx/security/advisories/GHSA-vx2m-gpq4-8j5q"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-111057",
+      "slug": "2026-10-pypi-cve-2026-111057",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-111057.html",
+      "date": "2026-10-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Mercury: Unauthenticated Remote Code Execution in /api/terminals - access control bypass",
+      "summary": "Mercury: Unauthenticated Remote Code Execution in /api/terminals - access control bypass",
+      "vendor": "PyPI",
+      "product": "mercury",
+      "cve": "CVE-2026-111057",
+      "operator_check": "Check whether mercury is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mercury. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-111057",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f8c7-rwf9-fmgm",
+          "url": "https://github.com/advisories/GHSA-f8c7-rwf9-fmgm"
+        },
+        {
+          "title": "NVD — CVE-2026-111057",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111057"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mljar/mercury/security/advisories/GHSA-f8c7-rwf9-fmgm"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-111058",
+      "slug": "2026-10-pypi-cve-2026-111058",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-111058.html",
+      "date": "2026-10-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Mercury: Unauthenticated Remote Code Execution via /api/kernels",
+      "summary": "Mercury: Unauthenticated Remote Code Execution via /api/kernels",
+      "vendor": "PyPI",
+      "product": "mercury",
+      "cve": "CVE-2026-111058",
+      "operator_check": "Check whether mercury is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mercury. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-111058",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rv4m-xm3f-3ccq",
+          "url": "https://github.com/advisories/GHSA-rv4m-xm3f-3ccq"
+        },
+        {
+          "title": "NVD — CVE-2026-111058",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111058"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mljar/mercury/security/advisories/GHSA-rv4m-xm3f-3ccq"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-111064",
+      "slug": "2026-10-pypi-cve-2026-111064",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-111064.html",
+      "date": "2026-10-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "aiohttp server lacks an initial request/header timeout",
+      "summary": "aiohttp server lacks an initial request/header timeout",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": "CVE-2026-111064",
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-111064",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5wr8-gcqf-gqf3",
+          "url": "https://github.com/advisories/GHSA-5wr8-gcqf-gqf3"
+        },
+        {
+          "title": "NVD — CVE-2026-111064",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111064"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5wr8-gcqf-gqf3"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-ghsa-2g87-pp6c-29x5",
+      "slug": "2026-10-pypi-ghsa-2g87-pp6c-29x5",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-ghsa-2g87-pp6c-29x5.html",
+      "date": "2026-10-19",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+      "summary": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": null,
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-2g87-pp6c-29x5",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2g87-pp6c-29x5",
+          "url": "https://github.com/advisories/GHSA-2g87-pp6c-29x5"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-2g87-pp6c-29x5"
         }
       ]
     },
