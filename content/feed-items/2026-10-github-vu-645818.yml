@@ -1,0 +1,37 @@
+id: 2026-10-github-vu-645818
+slug: 2026-10-github-vu-645818
+external_id: VU-645818
+source: cert_vu
+date: '2026-10-20'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#645818: Xerj Console API Authentication Bypass Leads to Unauthorized Credential
+  Minting'
+summary: 'Overview An authentication bypass vulnerability in the Xerj Console API
+  allows sessions to bypass passkey-backed requirements during token issuance. By
+  exploiting this flaw, an attacker with an existing valid token can create independent,
+  persistent successor credentials directly through the console API. This allows the
+  attacker to maintain access and potentially escalate privileges within the Xerj
+  ecosystem, even if the initial token is revoked. Description Xerj is an open-source
+  search and indexing engine tailored specifically for AI agents utilizing the Elasticsearch
+  API, allowing AI models to query a structured index. The vulnerability, CVE-2026-97406
+  , stems from a flaw in how session states are authenticated and handled within the
+  Xerj system architecture. According to the documented security contract, the issuance
+  of new API... Related CVEs: CVE-2026-97406.'
+vendor: GitHub
+product: repository for updates and install the latest
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for repository for updates and install the latest where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#645818
+  url: https://kb.cert.org/vuls/id/645818
+tags:
+- vu-645818
+- coordinated-disclosure
+- github
+- cert-vu
+is_sample: false
