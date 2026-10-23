@@ -1,0 +1,36 @@
+id: 2026-10-overview-vu-763488
+slug: 2026-10-overview-vu-763488
+external_id: VU-763488
+source: cert_vu
+date: '2026-10-22'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#763488: Memory corruption vulnerabilities in PHP'
+summary: 'Overview Two memory-related vulnerabilities have been identified in PHP
+  versions prior to 8.2.35, 8.3.36, 8.4.27, and 8.5.12. An unauthenticated remote
+  attacker with network access to PHP web services can exploit these vulnerabilities
+  via specially crafted HTTP requests to potentially achieve arbitrary code execution.
+  Description PHP is a widely used open-source scripting language designed for web
+  development and server-side applications. It powers millions of websites and web
+  applications worldwide and can be deployed through a variety of server configurations,
+  including PHP-FPM, Apache with mod_php, php-cgi, FrankenPHP, and LiteSpeed. CVE-2026-109618
+  : A memory corruption vulnerability exists in the out-of-memory (OOM) handling mechanism
+  of PHP versions prior to 8.2.35, 8.3.36, 8.4.27, and 8.5.12. The vulnerability occurs
+  when an OOM... Related CVEs: CVE-2026-109618, CVE-2026-109619.'
+vendor: Overview
+product: Two memory-related vulnerabilities have been identified in PHP
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for Two memory-related vulnerabilities have been identified in PHP where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#763488
+  url: https://kb.cert.org/vuls/id/763488
+tags:
+- vu-763488
+- coordinated-disclosure
+- overview
+- cert-vu
+is_sample: false

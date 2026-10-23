@@ -1,0 +1,30 @@
+id: 2026-10-pypi-ghsa-78g4-xqwv-q3g8
+slug: 2026-10-pypi-ghsa-78g4-xqwv-q3g8
+external_id: GHSA-78g4-xqwv-q3g8
+source: github_advisory
+date: '2026-10-22'
+type: Vendor advisory
+signal: High-risk advisory
+title: 'Pillow: Bundled libopenjp2 2.5.4 in all wheels since 11.1.0 carries OSV-2025-219
+  heap-buffer-overflow write reachable...'
+summary: 'Pillow: Bundled libopenjp2 2.5.4 in all wheels since 11.1.0 carries OSV-2025-219
+  heap-buffer-overflow write reachable from Image.open().load()'
+vendor: PyPI
+product: pillow
+cve: null
+operator_check: Check whether pillow is present in application dependency manifests,
+  lockfiles, or build images. Review the GitHub advisory and upgrade to a patched
+  version where available.
+why_it_matters: GitHub has published a reviewed security advisory for pillow. Prioritize
+  it with other application dependency updates.
+sources:
+- title: GitHub Advisory GHSA-78g4-xqwv-q3g8
+  url: https://github.com/advisories/GHSA-78g4-xqwv-q3g8
+- title: Source reference
+  url: https://github.com/python-pillow/Pillow/security/advisories/GHSA-78g4-xqwv-q3g8
+tags:
+- ghsa-78g4-xqwv-q3g8
+- vendor-advisory
+- pypi
+- github-advisory
+is_sample: false
