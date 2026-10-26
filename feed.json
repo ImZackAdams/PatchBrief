@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-25T13:35:11Z",
-  "total_items": 2223,
+  "generated": "2026-10-26T15:53:48Z",
+  "total_items": 2230,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-25T13:35:11Z",
+    "generated": "2026-10-26T15:53:48Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-10-25T13:34:56Z",
-        "finished_at": "2026-10-25T13:34:56Z"
+        "started_at": "2026-10-26T15:53:33Z",
+        "finished_at": "2026-10-26T15:53:33Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-25T13:34:56Z",
-        "finished_at": "2026-10-25T13:34:57Z"
+        "started_at": "2026-10-26T15:53:33Z",
+        "finished_at": "2026-10-26T15:53:34Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-25T13:34:57Z",
-        "finished_at": "2026-10-25T13:35:03Z"
+        "started_at": "2026-10-26T15:53:34Z",
+        "finished_at": "2026-10-26T15:53:41Z"
       },
       {
         "id": "github_advisory",
@@ -45,35 +45,35 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-10-25T13:35:03Z",
-        "finished_at": "2026-10-25T13:35:05Z"
+        "started_at": "2026-10-26T15:53:41Z",
+        "finished_at": "2026-10-26T15:53:43Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-10-25T13:35:05Z",
-        "finished_at": "2026-10-25T13:35:07Z"
+        "items_seen": 0,
+        "started_at": "2026-10-26T15:53:43Z",
+        "finished_at": "2026-10-26T15:53:44Z"
       },
       {
         "id": "exploitdb",
         "label": "Exploit-DB verified exploits",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-10-25T13:35:07Z",
-        "finished_at": "2026-10-25T13:35:07Z"
+        "items_seen": 0,
+        "started_at": "2026-10-26T15:53:44Z",
+        "finished_at": "2026-10-26T15:53:44Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 24,
-        "started_at": "2026-10-25T13:35:07Z",
-        "finished_at": "2026-10-25T13:35:08Z"
+        "items_seen": 26,
+        "started_at": "2026-10-26T15:53:44Z",
+        "finished_at": "2026-10-26T15:53:45Z"
       }
     ]
   },
@@ -234,6 +234,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/labstack/echo/security/advisories/GHSA-cxf3-9h37-7rr8"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-ghsa-f48p-c9v4-h7xv",
+      "slug": "2026-10-go-ghsa-f48p-c9v4-h7xv",
+      "url": "https://www.patchbrief.org/items/2026-10-go-ghsa-f48p-c9v4-h7xv.html",
+      "date": "2026-10-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Echo: BodyDump captures request and response bodies without size limits in v4",
+      "summary": "Echo: BodyDump captures request and response bodies without size limits in v4",
+      "vendor": "Go",
+      "product": "github.com/labstack/echo/v4",
+      "cve": null,
+      "operator_check": "Check whether github.com/labstack/echo/v4 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/labstack/echo/v4. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-f48p-c9v4-h7xv",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f48p-c9v4-h7xv",
+          "url": "https://github.com/advisories/GHSA-f48p-c9v4-h7xv"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/labstack/echo/security/advisories/GHSA-f48p-c9v4-h7xv"
         }
       ]
     },
@@ -755,6 +786,76 @@
       ]
     },
     {
+      "id": "2026-10-pypi-cve-2026-115355",
+      "slug": "2026-10-pypi-cve-2026-115355",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-115355.html",
+      "date": "2026-10-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Mistune: Path Traversal and XSS in Include directive",
+      "summary": "Mistune: Path Traversal and XSS in Include directive",
+      "vendor": "PyPI",
+      "product": "mistune",
+      "cve": "CVE-2026-115355",
+      "operator_check": "Check whether mistune is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mistune. Prioritize it with other application dependency updates, especially because EPSS places it in the 40% percentile.",
+      "tags": [
+        "cve-2026-115355",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h7ww-273w-6cm8",
+          "url": "https://github.com/advisories/GHSA-h7ww-273w-6cm8"
+        },
+        {
+          "title": "NVD — CVE-2026-115355",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115355"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/lepture/mistune/security/advisories/GHSA-h7ww-273w-6cm8"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-115419",
+      "slug": "2026-10-pypi-cve-2026-115419",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-115419.html",
+      "date": "2026-10-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Strands Agents SDK: Exposure of data element to wrong session in the A2A Server",
+      "summary": "Strands Agents SDK: Exposure of data element to wrong session in the A2A Server",
+      "vendor": "PyPI",
+      "product": "strands-agents",
+      "cve": "CVE-2026-115419",
+      "operator_check": "Check whether strands-agents is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6. EPSS probability: 0.4%; percentile: 37%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for strands-agents. Prioritize it with other application dependency updates, especially because EPSS places it in the 37% percentile.",
+      "tags": [
+        "cve-2026-115419",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4v6f-7vjh-6x4m",
+          "url": "https://github.com/advisories/GHSA-4v6f-7vjh-6x4m"
+        },
+        {
+          "title": "NVD — CVE-2026-115419",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115419"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/strands-agents/harness-sdk/security/advisories/GHSA-4v6f-7vjh-6x4m"
+        }
+      ]
+    },
+    {
       "id": "2026-10-pypi-cve-2026-115572",
       "slug": "2026-10-pypi-cve-2026-115572",
       "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-115572.html",
@@ -856,6 +957,146 @@
         {
           "title": "Source reference",
           "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-jr96-gvgh-j3r4"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-115586",
+      "slug": "2026-10-pypi-cve-2026-115586",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-115586.html",
+      "date": "2026-10-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "virtualenv: Bash activator leaves the --prompt value unescaped in PS1 when promptvars is off, so prompt expansion lat...",
+      "summary": "virtualenv: Bash activator leaves the --prompt value unescaped in PS1 when promptvars is off, so prompt expansion later executes it (regression in 21.14.9)",
+      "vendor": "PyPI",
+      "product": "virtualenv",
+      "cve": "CVE-2026-115586",
+      "operator_check": "Check whether virtualenv is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.2%; percentile: 10%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for virtualenv. Prioritize it with other application dependency updates, especially because EPSS places it in the 10% percentile.",
+      "tags": [
+        "cve-2026-115586",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cx6f-vjhg-g3cc",
+          "url": "https://github.com/advisories/GHSA-cx6f-vjhg-g3cc"
+        },
+        {
+          "title": "NVD — CVE-2026-115586",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115586"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-cx6f-vjhg-g3cc"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-115775",
+      "slug": "2026-10-pypi-cve-2026-115775",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-115775.html",
+      "date": "2026-10-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Twisted: Unauthenticated Remote Denial of Service in the Twisted words domish XML Element Stream via an Unbounded Ele...",
+      "summary": "Twisted: Unauthenticated Remote Denial of Service in the Twisted words domish XML Element Stream via an Unbounded Element Tree",
+      "vendor": "PyPI",
+      "product": "Twisted",
+      "cve": "CVE-2026-115775",
+      "operator_check": "Check whether Twisted is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 38%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Twisted. Prioritize it with other application dependency updates, especially because EPSS places it in the 38% percentile.",
+      "tags": [
+        "cve-2026-115775",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3476-c5c2-fr73",
+          "url": "https://github.com/advisories/GHSA-3476-c5c2-fr73"
+        },
+        {
+          "title": "NVD — CVE-2026-115775",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115775"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/twisted/twisted/security/advisories/GHSA-3476-c5c2-fr73"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-115776",
+      "slug": "2026-10-pypi-cve-2026-115776",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-115776.html",
+      "date": "2026-10-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Twisted: Unauthenticated Remote Denial of Service in the Twisted IRC Server via an Unbounded Line Buffer",
+      "summary": "Twisted: Unauthenticated Remote Denial of Service in the Twisted IRC Server via an Unbounded Line Buffer",
+      "vendor": "PyPI",
+      "product": "Twisted",
+      "cve": "CVE-2026-115776",
+      "operator_check": "Check whether Twisted is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 43%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Twisted. Prioritize it with other application dependency updates, especially because EPSS places it in the 43% percentile.",
+      "tags": [
+        "cve-2026-115776",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-53xc-49m8-p798",
+          "url": "https://github.com/advisories/GHSA-53xc-49m8-p798"
+        },
+        {
+          "title": "NVD — CVE-2026-115776",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115776"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/twisted/twisted/security/advisories/GHSA-53xc-49m8-p798"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-115778",
+      "slug": "2026-10-pypi-cve-2026-115778",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-115778.html",
+      "date": "2026-10-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Twisted: Unauthenticated Remote Denial of Service in the Twisted conch Telnet Transport via an Unbounded Subnegotiati...",
+      "summary": "Twisted: Unauthenticated Remote Denial of Service in the Twisted conch Telnet Transport via an Unbounded Subnegotiation Buffer",
+      "vendor": "PyPI",
+      "product": "Twisted",
+      "cve": "CVE-2026-115778",
+      "operator_check": "Check whether Twisted is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 45%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Twisted. Prioritize it with other application dependency updates, especially because EPSS places it in the 45% percentile.",
+      "tags": [
+        "cve-2026-115778",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cwm5-jh59-mwxr",
+          "url": "https://github.com/advisories/GHSA-cwm5-jh59-mwxr"
+        },
+        {
+          "title": "NVD — CVE-2026-115778",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115778"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/twisted/twisted/security/advisories/GHSA-cwm5-jh59-mwxr"
         }
       ]
     },
