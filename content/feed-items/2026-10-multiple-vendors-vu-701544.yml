@@ -1,0 +1,36 @@
+id: 2026-10-multiple-vendors-vu-701544
+slug: 2026-10-multiple-vendors-vu-701544
+external_id: VU-701544
+source: cert_vu
+date: '2026-10-26'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#701544: mpc-lib hardened derivation fails to protect ancestor isolation'
+summary: 'Overview Fireblocks'' mpc-lib library contains a cryptographic fail-open
+  vulnerability in its BIP32 hardened derivation implementation in the case of a missing
+  private parent key. This breaks the ancestor isolation property of hardened derivation,
+  allowing an attacker with a compromised lower-level signer share to recover the
+  higher-level share it was derived from. Description Fireblocks is a digital-asset
+  custody and wallet platform that secures the private keys behind cryptocurrency
+  wallets for institutions and exchanges, using multi-party computation (MPC) so that
+  no single machine ever holds a complete key. Fireblocks’ key security pipeline contains
+  two layers: MPC, which splits a single key into shares, and hardened derivation,
+  which mathematically isolates each share from its key hierarchy. Normally, the derivation
+  delta between... Related CVEs: CVE-2026-90975.'
+vendor: Multiple vendors
+product: mpc-lib hardened derivation fails to protect ancestor isolation
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for mpc-lib hardened derivation fails to protect ancestor isolation where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#701544
+  url: https://kb.cert.org/vuls/id/701544
+tags:
+- vu-701544
+- coordinated-disclosure
+- multiple-vendors
+- cert-vu
+is_sample: false

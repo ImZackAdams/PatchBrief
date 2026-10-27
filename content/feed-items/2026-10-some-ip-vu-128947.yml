@@ -1,0 +1,38 @@
+id: 2026-10-some-ip-vu-128947
+slug: 2026-10-some-ip-vu-128947
+external_id: VU-128947
+source: cert_vu
+date: '2026-10-26'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#128947: COVESA vsomeip excessive memory allocation in reliable (TCP) endpoint
+  buffer handling'
+summary: 'Overview vsomeip, COVESA''s open source implementation of the SOME/IP automotive
+  communication middleware, contained a memory allocation vulnerability present in
+  versions 3.7.3 and below. A vsomeip reliable (TCP) SOME/IP endpoint grows its receive
+  buffer to an attacker-declared message size before validating that the declared
+  bytes have actually been received, allowing a remote, unauthenticated peer to exhaust
+  host memory and deny service. The issue was reported publicly as COVESA/vsomeip
+  issue #1009 and fixed in release 3.7.4 (2026-07-06). Description CVE-2026-91141
+  vsomeip is a middleware implementation of the Scalable service-Oriented MiddlewarE
+  over IP (SOME/IP) protocol, widely used for service-oriented communication between
+  electronic control units (ECUs) in automotive and other embedded environments. A
+  SOME/IP message begins with a... Related CVEs: CVE-2026-91141.'
+vendor: SOME/IP
+product: endpoint grows its receive buffer to an attacker-declared message size
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for endpoint grows its receive buffer to an attacker-declared message size where
+  available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#128947
+  url: https://kb.cert.org/vuls/id/128947
+tags:
+- vu-128947
+- coordinated-disclosure
+- some-ip
+- cert-vu
+is_sample: false
