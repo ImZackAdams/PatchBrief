@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-27T15:09:45Z",
-  "total_items": 2247,
+  "generated": "2026-10-28T15:45:24Z",
+  "total_items": 2277,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-27T15:09:45Z",
+    "generated": "2026-10-28T15:45:24Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-10-27T15:09:31Z",
-        "finished_at": "2026-10-27T15:09:32Z"
+        "items_seen": 4,
+        "started_at": "2026-10-28T15:45:07Z",
+        "finished_at": "2026-10-28T15:45:07Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-27T15:09:32Z",
-        "finished_at": "2026-10-27T15:09:32Z"
+        "started_at": "2026-10-28T15:45:07Z",
+        "finished_at": "2026-10-28T15:45:08Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-10-27T15:09:32Z",
-        "finished_at": "2026-10-27T15:09:40Z"
+        "items_seen": 3,
+        "started_at": "2026-10-28T15:45:08Z",
+        "finished_at": "2026-10-28T15:45:14Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 13,
-        "started_at": "2026-10-27T15:09:40Z",
-        "finished_at": "2026-10-27T15:09:41Z"
+        "items_seen": 30,
+        "started_at": "2026-10-28T15:45:14Z",
+        "finished_at": "2026-10-28T15:45:16Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-10-27T15:09:41Z",
-        "finished_at": "2026-10-27T15:09:41Z"
+        "started_at": "2026-10-28T15:45:16Z",
+        "finished_at": "2026-10-28T15:45:17Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,196 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-27T15:09:41Z",
-        "finished_at": "2026-10-27T15:09:41Z"
+        "started_at": "2026-10-28T15:45:17Z",
+        "finished_at": "2026-10-28T15:45:18Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 10,
-        "started_at": "2026-10-27T15:09:41Z",
-        "finished_at": "2026-10-27T15:09:42Z"
+        "items_seen": 34,
+        "started_at": "2026-10-28T15:45:18Z",
+        "finished_at": "2026-10-28T15:45:18Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-composer-cve-2026-108082",
+      "slug": "2026-10-composer-cve-2026-108082",
+      "url": "https://www.patchbrief.org/items/2026-10-composer-cve-2026-108082.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Symfony: ReDoS in HeaderUtils::split() Reachable Through the Cache-Control Request Header",
+      "summary": "Symfony: ReDoS in HeaderUtils::split() Reachable Through the Cache-Control Request Header",
+      "vendor": "Composer",
+      "product": "symfony/http-foundation",
+      "cve": "CVE-2026-108082",
+      "operator_check": "Check whether symfony/http-foundation is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 41%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for symfony/http-foundation. Prioritize it with other application dependency updates, especially because EPSS places it in the 41% percentile.",
+      "tags": [
+        "cve-2026-108082",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r925-mgvr-h9cc",
+          "url": "https://github.com/advisories/GHSA-r925-mgvr-h9cc"
+        },
+        {
+          "title": "NVD — CVE-2026-108082",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108082"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/symfony/symfony/security/advisories/GHSA-r925-mgvr-h9cc"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-composer-cve-2026-108357",
+      "slug": "2026-10-composer-cve-2026-108357",
+      "url": "https://www.patchbrief.org/items/2026-10-composer-cve-2026-108357.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PhpSpreadsheet: XmlScanner Bypass via Double-Encoded unentity() TOCTOU Allows XXE and Denial of Service",
+      "summary": "PhpSpreadsheet: XmlScanner Bypass via Double-Encoded unentity() TOCTOU Allows XXE and Denial of Service",
+      "vendor": "Composer",
+      "product": "phpoffice/phpspreadsheet",
+      "cve": "CVE-2026-108357",
+      "operator_check": "Check whether phpoffice/phpspreadsheet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for phpoffice/phpspreadsheet. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-108357",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rxj4-h86g-25gc",
+          "url": "https://github.com/advisories/GHSA-rxj4-h86g-25gc"
+        },
+        {
+          "title": "NVD — CVE-2026-108357",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108357"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-rxj4-h86g-25gc"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-composer-cve-2026-108358",
+      "slug": "2026-10-composer-cve-2026-108358",
+      "url": "https://www.patchbrief.org/items/2026-10-composer-cve-2026-108358.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PhpSpreadsheet: XmlScanner Bypass via ISO-2022 Escape Sequences Allows XXE and Denial of Service",
+      "summary": "PhpSpreadsheet: XmlScanner Bypass via ISO-2022 Escape Sequences Allows XXE and Denial of Service",
+      "vendor": "Composer",
+      "product": "phpoffice/phpspreadsheet",
+      "cve": "CVE-2026-108358",
+      "operator_check": "Check whether phpoffice/phpspreadsheet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.8. EPSS probability: 0.5%; percentile: 41%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for phpoffice/phpspreadsheet. Prioritize it with other application dependency updates, especially because EPSS places it in the 41% percentile.",
+      "tags": [
+        "cve-2026-108358",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3x94-m842-937c",
+          "url": "https://github.com/advisories/GHSA-3x94-m842-937c"
+        },
+        {
+          "title": "NVD — CVE-2026-108358",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108358"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-3x94-m842-937c"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-composer-cve-2026-108359",
+      "slug": "2026-10-composer-cve-2026-108359",
+      "url": "https://www.patchbrief.org/items/2026-10-composer-cve-2026-108359.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PhpSpreadsheet ODS Reader: Unbounded number-rows-repeated → CPU & Memory Exhaustion (DoS)",
+      "summary": "PhpSpreadsheet ODS Reader: Unbounded number-rows-repeated → CPU & Memory Exhaustion (DoS)",
+      "vendor": "Composer",
+      "product": "phpoffice/phpspreadsheet",
+      "cve": "CVE-2026-108359",
+      "operator_check": "Check whether phpoffice/phpspreadsheet is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 35%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for phpoffice/phpspreadsheet. Prioritize it with other application dependency updates, especially because EPSS places it in the 35% percentile.",
+      "tags": [
+        "cve-2026-108359",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j2w7-387v-m2rq",
+          "url": "https://github.com/advisories/GHSA-j2w7-387v-m2rq"
+        },
+        {
+          "title": "NVD — CVE-2026-108359",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108359"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-j2w7-387v-m2rq"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-composer-cve-2026-109413",
+      "slug": "2026-10-composer-cve-2026-109413",
+      "url": "https://www.patchbrief.org/items/2026-10-composer-cve-2026-109413.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Symfony: Unbounded Recursion in the YAML Inline Lexer Lets a Single Document Crash the Process",
+      "summary": "Symfony: Unbounded Recursion in the YAML Inline Lexer Lets a Single Document Crash the Process",
+      "vendor": "Composer",
+      "product": "symfony/symfony",
+      "cve": "CVE-2026-109413",
+      "operator_check": "Check whether symfony/symfony is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 34%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for symfony/symfony. Prioritize it with other application dependency updates, especially because EPSS places it in the 34% percentile.",
+      "tags": [
+        "cve-2026-109413",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2v3c-qxhr-7vpv",
+          "url": "https://github.com/advisories/GHSA-2v3c-qxhr-7vpv"
+        },
+        {
+          "title": "NVD — CVE-2026-109413",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109413"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/symfony/symfony/security/advisories/GHSA-2v3c-qxhr-7vpv"
+        }
+      ]
+    },
     {
       "id": "2026-10-composer-cve-2026-33944",
       "slug": "2026-10-composer-cve-2026-33944",
@@ -110,6 +285,181 @@
         {
           "title": "Source reference",
           "url": "https://github.com/Dolibarr/dolibarr/security/advisories/GHSA-v5fq-cf5m-vwv7"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-116587",
+      "slug": "2026-10-go-cve-2026-116587",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-116587.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Go JOSE: DoS when parsing JWKs that contain RSA keys",
+      "summary": "Go JOSE: DoS when parsing JWKs that contain RSA keys",
+      "vendor": "Go",
+      "product": "github.com/go-jose/go-jose/v4",
+      "cve": "CVE-2026-116587",
+      "operator_check": "Check whether github.com/go-jose/go-jose/v4 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 30%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/go-jose/go-jose/v4. Prioritize it with other application dependency updates, especially because EPSS places it in the 30% percentile.",
+      "tags": [
+        "cve-2026-116587",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mgcc-cww5-fp2q",
+          "url": "https://github.com/advisories/GHSA-mgcc-cww5-fp2q"
+        },
+        {
+          "title": "NVD — CVE-2026-116587",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116587"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/go-jose/go-jose/security/advisories/GHSA-mgcc-cww5-fp2q"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-116591",
+      "slug": "2026-10-go-cve-2026-116591",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-116591.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "compress zstd: Panic on two-block frames",
+      "summary": "compress zstd: Panic on two-block frames",
+      "vendor": "Go",
+      "product": "github.com/klauspost/compress/zstd",
+      "cve": "CVE-2026-116591",
+      "operator_check": "Check whether github.com/klauspost/compress/zstd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.3%; percentile: 26%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/klauspost/compress/zstd. Prioritize it with other application dependency updates, especially because EPSS places it in the 26% percentile.",
+      "tags": [
+        "cve-2026-116591",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fpmh-frq8-7rj8",
+          "url": "https://github.com/advisories/GHSA-fpmh-frq8-7rj8"
+        },
+        {
+          "title": "NVD — CVE-2026-116591",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116591"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/klauspost/compress/security/advisories/GHSA-fpmh-frq8-7rj8"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-116676",
+      "slug": "2026-10-go-cve-2026-116676",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-116676.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Atlantis: OS command injection through PR-controlled Terraform workspace enables RCE during plan",
+      "summary": "Atlantis: OS command injection through PR-controlled Terraform workspace enables RCE during plan",
+      "vendor": "Go",
+      "product": "github.com/runatlantis/atlantis",
+      "cve": "CVE-2026-116676",
+      "operator_check": "Check whether github.com/runatlantis/atlantis is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/runatlantis/atlantis. Prioritize it with other application dependency updates, especially because EPSS places it in the 40% percentile.",
+      "tags": [
+        "cve-2026-116676",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rjh2-4xgw-p2hj",
+          "url": "https://github.com/advisories/GHSA-rjh2-4xgw-p2hj"
+        },
+        {
+          "title": "NVD — CVE-2026-116676",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116676"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/runatlantis/atlantis/security/advisories/GHSA-rjh2-4xgw-p2hj"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-116682",
+      "slug": "2026-10-go-cve-2026-116682",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-116682.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "FileBrowser: Symlink following escapes user scope allowing arbitrary file read outside the served directory",
+      "summary": "FileBrowser: Symlink following escapes user scope allowing arbitrary file read outside the served directory",
+      "vendor": "Go",
+      "product": "github.com/gtsteffaniak/filebrowser/backend",
+      "cve": "CVE-2026-116682",
+      "operator_check": "Check whether github.com/gtsteffaniak/filebrowser/backend is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 45%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/gtsteffaniak/filebrowser/backend. Prioritize it with other application dependency updates, especially because EPSS places it in the 45% percentile.",
+      "tags": [
+        "cve-2026-116682",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mgqf-5mf5-prfj",
+          "url": "https://github.com/advisories/GHSA-mgqf-5mf5-prfj"
+        },
+        {
+          "title": "NVD — CVE-2026-116682",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116682"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/gtsteffaniak/filebrowser/security/advisories/GHSA-mgqf-5mf5-prfj"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-116683",
+      "slug": "2026-10-go-cve-2026-116683",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-116683.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CTFer.io's CTFd Terraform Provider allows a local or remote attacker to read team passwords in state as non sensitive...",
+      "summary": "CTFer.io's CTFd Terraform Provider allows a local or remote attacker to read team passwords in state as non sensitive values",
+      "vendor": "Go",
+      "product": "github.com/ctfer-io/terraform-provider-ctfd",
+      "cve": "CVE-2026-116683",
+      "operator_check": "Check whether github.com/ctfer-io/terraform-provider-ctfd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/ctfer-io/terraform-provider-ctfd. Prioritize it with other application dependency updates, especially because EPSS places it in the 32% percentile.",
+      "tags": [
+        "cve-2026-116683",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vg84-c5mg-76xh",
+          "url": "https://github.com/advisories/GHSA-vg84-c5mg-76xh"
+        },
+        {
+          "title": "NVD — CVE-2026-116683",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116683"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ctfer-io/terraform-provider-ctfd/security/advisories/GHSA-vg84-c5mg-76xh"
         }
       ]
     },
@@ -149,6 +499,38 @@
       ]
     },
     {
+      "id": "2026-10-google-cve-2026-111497",
+      "slug": "2026-10-google-cve-2026-111497",
+      "url": "https://www.patchbrief.org/items/2026-10-google-cve-2026-111497.html",
+      "date": "2026-10-27",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Google Brotli Unchecked Return Value Vulnerability",
+      "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
+      "vendor": "Google",
+      "product": "Brotli",
+      "cve": "CVE-2026-111497",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-111497 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-10. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-111497",
+        "kev",
+        "google",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-111497",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
+        }
+      ]
+    },
+    {
       "id": "2026-10-maven-cve-2026-102554",
       "slug": "2026-10-maven-cve-2026-102554",
       "url": "https://www.patchbrief.org/items/2026-10-maven-cve-2026-102554.html",
@@ -184,6 +566,317 @@
       ]
     },
     {
+      "id": "2026-10-npm-cve-2026-109383",
+      "slug": "2026-10-npm-cve-2026-109383",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-109383.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "undici vulnerable to TLS certificate validation bypass via dropped tls options in Agent",
+      "summary": "undici vulnerable to TLS certificate validation bypass via dropped tls options in Agent",
+      "vendor": "npm",
+      "product": "undici",
+      "cve": "CVE-2026-109383",
+      "operator_check": "Check whether undici is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 8%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for undici. Prioritize it with other application dependency updates, especially because EPSS places it in the 8% percentile.",
+      "tags": [
+        "cve-2026-109383",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2m5v-pch6-74hx",
+          "url": "https://github.com/advisories/GHSA-2m5v-pch6-74hx"
+        },
+        {
+          "title": "NVD — CVE-2026-109383",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109383"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-2m5v-pch6-74hx"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-109829",
+      "slug": "2026-10-npm-cve-2026-109829",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-109829.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "undici vulnerable to cache poisoning and cross-user disclosure via cross-origin redirects",
+      "summary": "undici vulnerable to cache poisoning and cross-user disclosure via cross-origin redirects",
+      "vendor": "npm",
+      "product": "undici",
+      "cve": "CVE-2026-109829",
+      "operator_check": "Check whether undici is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.1%; percentile: 4%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for undici. Prioritize it with other application dependency updates, especially because EPSS places it in the 4% percentile.",
+      "tags": [
+        "cve-2026-109829",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4w7w-5xrc-9h26",
+          "url": "https://github.com/advisories/GHSA-4w7w-5xrc-9h26"
+        },
+        {
+          "title": "NVD — CVE-2026-109829",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109829"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-4w7w-5xrc-9h26"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-109855",
+      "slug": "2026-10-npm-cve-2026-109855",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-109855.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "undici WebSocket client vulnerable to Denial of Service via failed HTTP/2 handshake",
+      "summary": "undici WebSocket client vulnerable to Denial of Service via failed HTTP/2 handshake",
+      "vendor": "npm",
+      "product": "undici",
+      "cve": "CVE-2026-109855",
+      "operator_check": "Check whether undici is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 20%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for undici. Prioritize it with other application dependency updates, especially because EPSS places it in the 20% percentile.",
+      "tags": [
+        "cve-2026-109855",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qq8j-7v2v-3rwp",
+          "url": "https://github.com/advisories/GHSA-qq8j-7v2v-3rwp"
+        },
+        {
+          "title": "NVD — CVE-2026-109855",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109855"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-qq8j-7v2v-3rwp"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-114607",
+      "slug": "2026-10-npm-cve-2026-114607",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-114607.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "better-auth: OAuth state can be used as a Magic Link to sign in as another user",
+      "summary": "better-auth: OAuth state can be used as a Magic Link to sign in as another user",
+      "vendor": "npm",
+      "product": "better-auth",
+      "cve": "CVE-2026-114607",
+      "operator_check": "Check whether better-auth is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 36%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for better-auth. Prioritize it with other application dependency updates, especially because EPSS places it in the 36% percentile.",
+      "tags": [
+        "cve-2026-114607",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-965c-763c-88jm",
+          "url": "https://github.com/advisories/GHSA-965c-763c-88jm"
+        },
+        {
+          "title": "NVD — CVE-2026-114607",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114607"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-116675",
+      "slug": "2026-10-npm-cve-2026-116675",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-116675.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "TinyMCE Cross-Site Scripting (XSS) vulnerability using media plugin `data-mce-object` serialization",
+      "summary": "TinyMCE Cross-Site Scripting (XSS) vulnerability using media plugin `data-mce-object` serialization",
+      "vendor": "npm",
+      "product": "tinymce",
+      "cve": "CVE-2026-116675",
+      "operator_check": "Check whether tinymce is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.5. EPSS probability: 0.3%; percentile: 28%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for tinymce. Prioritize it with other application dependency updates, especially because EPSS places it in the 28% percentile.",
+      "tags": [
+        "cve-2026-116675",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mf2p-h6hf-fcwm",
+          "url": "https://github.com/advisories/GHSA-mf2p-h6hf-fcwm"
+        },
+        {
+          "title": "NVD — CVE-2026-116675",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116675"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/tinymce/tinymce/security/advisories/GHSA-mf2p-h6hf-fcwm"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-116688",
+      "slug": "2026-10-npm-cve-2026-116688",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-116688.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "CKEditor: Cross-site scripting (XSS) in the engine package",
+      "summary": "CKEditor: Cross-site scripting (XSS) in the engine package",
+      "vendor": "npm",
+      "product": "ckeditor5",
+      "cve": "CVE-2026-116688",
+      "operator_check": "Check whether ckeditor5 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 43%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ckeditor5. Prioritize it with other application dependency updates, especially because EPSS places it in the 43% percentile.",
+      "tags": [
+        "cve-2026-116688",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rh54-vffm-5fvp",
+          "url": "https://github.com/advisories/GHSA-rh54-vffm-5fvp"
+        },
+        {
+          "title": "NVD — CVE-2026-116688",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116688"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ckeditor/ckeditor5/security/advisories/GHSA-rh54-vffm-5fvp"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-116693",
+      "slug": "2026-10-npm-cve-2026-116693",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-116693.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "dd-trace: ReDOS in URL query string obfuscation",
+      "summary": "dd-trace: ReDOS in URL query string obfuscation",
+      "vendor": "npm",
+      "product": "dd-trace",
+      "cve": "CVE-2026-116693",
+      "operator_check": "Check whether dd-trace is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 39%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for dd-trace. Prioritize it with other application dependency updates, especially because EPSS places it in the 39% percentile.",
+      "tags": [
+        "cve-2026-116693",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x94g-w73q-hpcw",
+          "url": "https://github.com/advisories/GHSA-x94g-w73q-hpcw"
+        },
+        {
+          "title": "NVD — CVE-2026-116693",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116693"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/DataDog/dd-trace-js/security/advisories/GHSA-x94g-w73q-hpcw"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-87018",
+      "slug": "2026-10-npm-cve-2026-87018",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-87018.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "undici vulnerable to Denial of Service via TLS 1.2 certificate-changing renegotiation",
+      "summary": "undici vulnerable to Denial of Service via TLS 1.2 certificate-changing renegotiation",
+      "vendor": "npm",
+      "product": "undici",
+      "cve": "CVE-2026-87018",
+      "operator_check": "Check whether undici is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 8%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for undici. Prioritize it with other application dependency updates, especially because EPSS places it in the 8% percentile.",
+      "tags": [
+        "cve-2026-87018",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qrxm-fqhp-jwvm",
+          "url": "https://github.com/advisories/GHSA-qrxm-fqhp-jwvm"
+        },
+        {
+          "title": "NVD — CVE-2026-87018",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87018"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-qrxm-fqhp-jwvm"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-ghsa-f897-62hf-6gxq",
+      "slug": "2026-10-npm-ghsa-f897-62hf-6gxq",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-ghsa-f897-62hf-6gxq.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MCP TypeScript SDK: HTTP server transports and handlers did not limit request body size or JSON-RPC batch length",
+      "summary": "MCP TypeScript SDK: HTTP server transports and handlers did not limit request body size or JSON-RPC batch length",
+      "vendor": "npm",
+      "product": "@modelcontextprotocol/sdk",
+      "cve": null,
+      "operator_check": "Check whether @modelcontextprotocol/sdk is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @modelcontextprotocol/sdk. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-f897-62hf-6gxq",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f897-62hf-6gxq",
+          "url": "https://github.com/advisories/GHSA-f897-62hf-6gxq"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories/GHSA-f897-62hf-6gxq"
+        }
+      ]
+    },
+    {
       "id": "2026-10-npm-ghsa-q84f-53jg-9ppm",
       "slug": "2026-10-npm-ghsa-q84f-53jg-9ppm",
       "url": "https://www.patchbrief.org/items/2026-10-npm-ghsa-q84f-53jg-9ppm.html",
@@ -211,6 +904,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/better-auth/better-auth/security/advisories/GHSA-q84f-53jg-9ppm"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-114605",
+      "slug": "2026-10-pypi-cve-2026-114605",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-114605.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "dnspython dns.name.from_wire_parser() excessive CPU use",
+      "summary": "dnspython dns.name.from_wire_parser() excessive CPU use",
+      "vendor": "PyPI",
+      "product": "dnspython",
+      "cve": "CVE-2026-114605",
+      "operator_check": "Check whether dnspython is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 27%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for dnspython. Prioritize it with other application dependency updates, especially because EPSS places it in the 27% percentile.",
+      "tags": [
+        "cve-2026-114605",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-45c3-73f7-pv4m",
+          "url": "https://github.com/advisories/GHSA-45c3-73f7-pv4m"
+        },
+        {
+          "title": "NVD — CVE-2026-114605",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114605"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rthalley/dnspython/security/advisories/GHSA-45c3-73f7-pv4m"
         }
       ]
     },
@@ -285,6 +1013,76 @@
       ]
     },
     {
+      "id": "2026-10-pypi-cve-2026-114615",
+      "slug": "2026-10-pypi-cve-2026-114615",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-114615.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Authlib incomplete algorithm-confusion fix permits HMAC forgery with prefixed public keys",
+      "summary": "Authlib incomplete algorithm-confusion fix permits HMAC forgery with prefixed public keys",
+      "vendor": "PyPI",
+      "product": "authlib",
+      "cve": "CVE-2026-114615",
+      "operator_check": "Check whether authlib is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for authlib. Prioritize it with other application dependency updates, especially because EPSS places it in the 2% percentile.",
+      "tags": [
+        "cve-2026-114615",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7vr2-2fgp-9w7p",
+          "url": "https://github.com/advisories/GHSA-7vr2-2fgp-9w7p"
+        },
+        {
+          "title": "NVD — CVE-2026-114615",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114615"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/authlib/authlib/security/advisories/GHSA-7vr2-2fgp-9w7p"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-114616",
+      "slug": "2026-10-pypi-cve-2026-114616",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-114616.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Authlib accepts an empty HMAC key, allowing JWS/JWT signature forgery (HS256/HS384/HS512)",
+      "summary": "Authlib accepts an empty HMAC key, allowing JWS/JWT signature forgery (HS256/HS384/HS512)",
+      "vendor": "PyPI",
+      "product": "Authlib",
+      "cve": "CVE-2026-114616",
+      "operator_check": "Check whether Authlib is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 11%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Authlib. Prioritize it with other application dependency updates, especially because EPSS places it in the 11% percentile.",
+      "tags": [
+        "cve-2026-114616",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8m4g-j4wp-wgcg",
+          "url": "https://github.com/advisories/GHSA-8m4g-j4wp-wgcg"
+        },
+        {
+          "title": "NVD — CVE-2026-114616",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114616"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/authlib/authlib/security/advisories/GHSA-8m4g-j4wp-wgcg"
+        }
+      ]
+    },
+    {
       "id": "2026-10-pypi-cve-2026-115924",
       "slug": "2026-10-pypi-cve-2026-115924",
       "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-115924.html",
@@ -316,6 +1114,146 @@
         {
           "title": "Source reference",
           "url": "https://github.com/danielgatis/rembg/security/advisories/GHSA-qr6x-7v33-6qmg"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-116588",
+      "slug": "2026-10-pypi-cve-2026-116588",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-116588.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Datadog dd-trace-py: ReDoS in URL query string obfuscation",
+      "summary": "Datadog dd-trace-py: ReDoS in URL query string obfuscation",
+      "vendor": "PyPI",
+      "product": "ddtrace",
+      "cve": "CVE-2026-116588",
+      "operator_check": "Check whether ddtrace is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ddtrace. Prioritize it with other application dependency updates, especially because EPSS places it in the 40% percentile.",
+      "tags": [
+        "cve-2026-116588",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3633-r77q-h3v3",
+          "url": "https://github.com/advisories/GHSA-3633-r77q-h3v3"
+        },
+        {
+          "title": "NVD — CVE-2026-116588",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116588"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/DataDog/dd-trace-py/security/advisories/GHSA-3633-r77q-h3v3"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-116589",
+      "slug": "2026-10-pypi-cve-2026-116589",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-116589.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Datadog dd-trace-py: IAST instrumentation can lead to application DOS",
+      "summary": "Datadog dd-trace-py: IAST instrumentation can lead to application DOS",
+      "vendor": "PyPI",
+      "product": "ddtrace",
+      "cve": "CVE-2026-116589",
+      "operator_check": "Check whether ddtrace is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2. EPSS probability: 0.3%; percentile: 26%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ddtrace. Prioritize it with other application dependency updates, especially because EPSS places it in the 26% percentile.",
+      "tags": [
+        "cve-2026-116589",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p3m5-h5v9-vqj6",
+          "url": "https://github.com/advisories/GHSA-p3m5-h5v9-vqj6"
+        },
+        {
+          "title": "NVD — CVE-2026-116589",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116589"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/DataDog/dd-trace-py/security/advisories/GHSA-p3m5-h5v9-vqj6"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-116690",
+      "slug": "2026-10-pypi-cve-2026-116690",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-116690.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MLflow vulnerable to arbitrary file read on unauthenticated servers via prompt model version source",
+      "summary": "MLflow vulnerable to arbitrary file read on unauthenticated servers via prompt model version source",
+      "vendor": "PyPI",
+      "product": "mlflow",
+      "cve": "CVE-2026-116690",
+      "operator_check": "Check whether mlflow is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 46%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mlflow. Prioritize it with other application dependency updates, especially because EPSS places it in the 46% percentile.",
+      "tags": [
+        "cve-2026-116690",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m65p-9j7q-6w33",
+          "url": "https://github.com/advisories/GHSA-m65p-9j7q-6w33"
+        },
+        {
+          "title": "NVD — CVE-2026-116690",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116690"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-m65p-9j7q-6w33"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-116692",
+      "slug": "2026-10-pypi-cve-2026-116692",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-116692.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "MLflow vulnerable to remote code execution on unauthenticated servers via third-party scorer deserialization importin...",
+      "summary": "MLflow vulnerable to remote code execution on unauthenticated servers via third-party scorer deserialization importing caller-placed artifact modules",
+      "vendor": "PyPI",
+      "product": "mlflow",
+      "cve": "CVE-2026-116692",
+      "operator_check": "Check whether mlflow is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.7%; percentile: 53%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mlflow. Prioritize it with other application dependency updates, especially because EPSS places it in the 53% percentile.",
+      "tags": [
+        "cve-2026-116692",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-26p8-2jq9-3vq9",
+          "url": "https://github.com/advisories/GHSA-26p8-2jq9-3vq9"
+        },
+        {
+          "title": "NVD — CVE-2026-116692",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116692"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-26p8-2jq9-3vq9"
         }
       ]
     },
@@ -526,6 +1464,72 @@
       ]
     },
     {
+      "id": "2026-10-pypi-ghsa-wf6j-7hvr-gr93",
+      "slug": "2026-10-pypi-ghsa-wf6j-7hvr-gr93",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-ghsa-wf6j-7hvr-gr93.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Hydra legacy target blacklist permits unsafe PyYAML loading",
+      "summary": "Hydra legacy target blacklist permits unsafe PyYAML loading",
+      "vendor": "PyPI",
+      "product": "hydra-core",
+      "cve": null,
+      "operator_check": "Check whether hydra-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for hydra-core. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-wf6j-7hvr-gr93",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wf6j-7hvr-gr93",
+          "url": "https://github.com/advisories/GHSA-wf6j-7hvr-gr93"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/hydra-ecosystem/hydra/security/advisories/GHSA-757g-8w3h-hp29"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-sunhillo-cve-2026-112352",
+      "slug": "2026-10-sunhillo-cve-2026-112352",
+      "url": "https://www.patchbrief.org/items/2026-10-sunhillo-cve-2026-112352.html",
+      "date": "2026-10-27",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Sunhillo SureLine — CVE-2026-112352 (Critical)",
+      "summary": "Sunhillo SureLine before 9.1.5 contains an authentication bypass vulnerability that allows an unauthenticated remote attacker to impersonate any user with an active web session by forging a session cookie containing only a cleartext username with no random identifier or integrity protection. Attackers can guess default account names such as Admin or sftp_user and submit a forged username cookie to satisfy the login check in checkLogin (libwebcmn.so) and networkDiag.cgi, chaining into root command execution.",
+      "vendor": "Sunhillo",
+      "product": "SureLine",
+      "cve": "CVE-2026-112352",
+      "operator_check": "Review CVE-2026-112352 in your asset inventory. Apply patches per vendor guidance and verify SureLine is not exposed. CVSS score: 9.1. EPSS probability: 1.3%; percentile: 71%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Sunhillo SureLine. Patch or mitigate promptly. EPSS percentile: 71%.",
+      "tags": [
+        "cve-2026-112352",
+        "vendor-advisory",
+        "sunhillo",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-112352",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112352"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.sunhillo.com/product/sureline/"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/sunhillo-sureline-authentication-bypass-via-session-cookie"
+        }
+      ]
+    },
+    {
       "id": "2026-10-multiple-vendors-vu-701544",
       "slug": "2026-10-multiple-vendors-vu-701544",
       "url": "https://www.patchbrief.org/items/2026-10-multiple-vendors-vu-701544.html",
@@ -643,6 +1647,41 @@
         {
           "title": "CERT/CC Vulnerability Note VU#128947",
           "url": "https://kb.cert.org/vuls/id/128947"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-vllm-cve-2026-115915",
+      "slug": "2026-10-vllm-cve-2026-115915",
+      "url": "https://www.patchbrief.org/items/2026-10-vllm-cve-2026-115915.html",
+      "date": "2026-10-26",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Vllm Vllm — CVE-2026-115915 (Critical)",
+      "summary": "vLLM is an inference and serving engine for large language models. Prior to 0.32.0, ImageMediaIO passes attacker-controlled image bytes to Pillow through Image.open(BytesIO(data)) without restricting decoder selection, and the MIME label does not constrain the selected format. Image-capable request paths through parse_image() and fetch_image() can therefore dispatch an EPS payload to host components. A host with Ghostscript affected by CVE-2024-29510 can execute commands with the vLLM process's privileges, while environments using Pillow 12.0.0 through 12.2.0 can trigger CVE-2026-59203 and exh",
+      "vendor": "Vllm",
+      "product": "Vllm",
+      "cve": "CVE-2026-115915",
+      "operator_check": "Review CVE-2026-115915 in your asset inventory. Apply patches per vendor guidance and verify Vllm is not exposed. CVSS score: 8.1. EPSS probability: 0.6%; percentile: 50%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.1) in Vllm Vllm. Patch or mitigate promptly. EPSS percentile: 50%.",
+      "tags": [
+        "cve-2026-115915",
+        "vendor-advisory",
+        "vllm",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-115915",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115915"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/vllm-project/vllm/commit/710ac56e691d4713feca50a43e6c440f07d373fd"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/vllm-project/vllm/pull/60022"
         }
       ]
     },
