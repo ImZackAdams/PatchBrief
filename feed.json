@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-29T15:53:50Z",
-  "total_items": 2305,
+  "generated": "2026-10-30T15:36:06Z",
+  "total_items": 2322,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-29T15:53:50Z",
+    "generated": "2026-10-30T15:36:06Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 6,
-        "started_at": "2026-10-29T15:53:37Z",
-        "finished_at": "2026-10-29T15:53:38Z"
+        "started_at": "2026-10-30T15:35:49Z",
+        "finished_at": "2026-10-30T15:35:49Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-29T15:53:38Z",
-        "finished_at": "2026-10-29T15:53:38Z"
+        "started_at": "2026-10-30T15:35:49Z",
+        "finished_at": "2026-10-30T15:35:50Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-10-29T15:53:38Z",
-        "finished_at": "2026-10-29T15:53:45Z"
+        "items_seen": 0,
+        "started_at": "2026-10-30T15:35:50Z",
+        "finished_at": "2026-10-30T15:35:59Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-10-29T15:53:45Z",
-        "finished_at": "2026-10-29T15:53:46Z"
+        "started_at": "2026-10-30T15:35:59Z",
+        "finished_at": "2026-10-30T15:36:00Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-10-29T15:53:46Z",
-        "finished_at": "2026-10-29T15:53:47Z"
+        "items_seen": 0,
+        "started_at": "2026-10-30T15:36:00Z",
+        "finished_at": "2026-10-30T15:36:01Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,601 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-29T15:53:47Z",
-        "finished_at": "2026-10-29T15:53:47Z"
+        "started_at": "2026-10-30T15:36:01Z",
+        "finished_at": "2026-10-30T15:36:02Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 38,
-        "started_at": "2026-10-29T15:53:47Z",
-        "finished_at": "2026-10-29T15:53:48Z"
+        "items_seen": 30,
+        "started_at": "2026-10-30T15:36:02Z",
+        "finished_at": "2026-10-30T15:36:02Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-10-npm-cve-2026-119282",
+      "slug": "2026-10-npm-cve-2026-119282",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-119282.html",
+      "date": "2026-10-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@nx/maven and @nx/gradle have OS command injection via nx.json plugin options",
+      "summary": "@nx/maven and @nx/gradle have OS command injection via nx.json plugin options",
+      "vendor": "npm",
+      "product": "@nx/maven",
+      "cve": "CVE-2026-119282",
+      "operator_check": "Check whether @nx/maven is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.3. EPSS probability: 0.1%; percentile: 3%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @nx/maven. Prioritize it with other application dependency updates, especially because EPSS places it in the 3% percentile.",
+      "tags": [
+        "cve-2026-119282",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qm8w-vx34-5j9j",
+          "url": "https://github.com/advisories/GHSA-qm8w-vx34-5j9j"
+        },
+        {
+          "title": "NVD — CVE-2026-119282",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119282"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nrwl/nx/security/advisories/GHSA-qm8w-vx34-5j9j"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-119283",
+      "slug": "2026-10-pypi-cve-2026-119283",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-119283.html",
+      "date": "2026-10-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "joserfc: Unbounded JWE General JSON `recipients` Array Leads to CPU Exhaustion (DoS) via Repeated RSA Private-Key Dec...",
+      "summary": "joserfc: Unbounded JWE General JSON `recipients` Array Leads to CPU Exhaustion (DoS) via Repeated RSA Private-Key Decryption",
+      "vendor": "PyPI",
+      "product": "joserfc",
+      "cve": "CVE-2026-119283",
+      "operator_check": "Check whether joserfc is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 14%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for joserfc. Prioritize it with other application dependency updates, especially because EPSS places it in the 14% percentile.",
+      "tags": [
+        "cve-2026-119283",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jpxq-7h8p-2q76",
+          "url": "https://github.com/advisories/GHSA-jpxq-7h8p-2q76"
+        },
+        {
+          "title": "NVD — CVE-2026-119283",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119283"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/authlib/joserfc/security/advisories/GHSA-jpxq-7h8p-2q76"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-cisco-cve-2026-76418",
+      "slug": "2026-10-cisco-cve-2026-76418",
+      "url": "https://www.patchbrief.org/items/2026-10-cisco-cve-2026-76418.html",
+      "date": "2026-10-29",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference V...",
+      "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+      "vendor": "Cisco",
+      "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
+      "cve": "CVE-2026-76418",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-76418 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-01. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-76418",
+        "kev",
+        "cisco",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-76418",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-gitlab-cve-2026-97229",
+      "slug": "2026-10-gitlab-cve-2026-97229",
+      "url": "https://www.patchbrief.org/items/2026-10-gitlab-cve-2026-97229.html",
+      "date": "2026-10-29",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+      "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+      "vendor": "GitLab",
+      "product": "Community Edition and Enterprise Edition",
+      "cve": "CVE-2026-97229",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-97229 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-01. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-97229",
+        "kev",
+        "gitlab",
+        "cisa-kev",
+        "high-epss"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-97229",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-62160",
+      "slug": "2026-10-go-cve-2026-62160",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-62160.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Daptin: ParseAcceptLanguage `_` separator bypass enables >250x CPU amplification via Accept-Language header in Langua...",
+      "summary": "Daptin: ParseAcceptLanguage `_` separator bypass enables >250x CPU amplification via Accept-Language header in LanguageMiddleware",
+      "vendor": "Go",
+      "product": "github.com/daptin/daptin",
+      "cve": "CVE-2026-62160",
+      "operator_check": "Check whether github.com/daptin/daptin is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/daptin/daptin. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-62160",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-rhj7-vh3v-mcq6",
+          "url": "https://github.com/advisories/GHSA-rhj7-vh3v-mcq6"
+        },
+        {
+          "title": "NVD — CVE-2026-62160",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62160"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/daptin/daptin/security/advisories/GHSA-rhj7-vh3v-mcq6"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-cve-2026-62290",
+      "slug": "2026-10-go-cve-2026-62290",
+      "url": "https://www.patchbrief.org/items/2026-10-go-cve-2026-62290.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "cert-manager: Direct ACME Challenge resources can bypass Issuer DNS01 solver policy and use ClusterIssuer DNS credent...",
+      "summary": "cert-manager: Direct ACME Challenge resources can bypass Issuer DNS01 solver policy and use ClusterIssuer DNS credentials",
+      "vendor": "Go",
+      "product": "github.com/cert-manager/cert-manager",
+      "cve": "CVE-2026-62290",
+      "operator_check": "Check whether github.com/cert-manager/cert-manager is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.1%; percentile: 1%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/cert-manager/cert-manager. Prioritize it with other application dependency updates, especially because EPSS places it in the 1% percentile.",
+      "tags": [
+        "cve-2026-62290",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8rvj-mm4h-c258",
+          "url": "https://github.com/advisories/GHSA-8rvj-mm4h-c258"
+        },
+        {
+          "title": "NVD — CVE-2026-62290",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62290"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/cert-manager/cert-manager/security/advisories/GHSA-8rvj-mm4h-c258"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-maven-cve-2026-9086",
+      "slug": "2026-10-maven-cve-2026-9086",
+      "url": "https://www.patchbrief.org/items/2026-10-maven-cve-2026-9086.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Keycloak vulnerable to cross-site scripting (xss) via case-insensitive uri validation bypass",
+      "summary": "Keycloak vulnerable to cross-site scripting (xss) via case-insensitive uri validation bypass",
+      "vendor": "Maven",
+      "product": "org.keycloak:keycloak-services",
+      "cve": "CVE-2026-9086",
+      "operator_check": "Check whether org.keycloak:keycloak-services is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.8%; percentile: 56%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.keycloak:keycloak-services. Prioritize it with other application dependency updates, especially because EPSS places it in the 56% percentile.",
+      "tags": [
+        "cve-2026-9086",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v3f7-2p4r-mwfw",
+          "url": "https://github.com/advisories/GHSA-v3f7-2p4r-mwfw"
+        },
+        {
+          "title": "NVD — CVE-2026-9086",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9086"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/keycloak/keycloak/security/advisories/GHSA-v3f7-2p4r-mwfw"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-maven-cve-2026-9800",
+      "slug": "2026-10-maven-cve-2026-9800",
+      "url": "https://www.patchbrief.org/items/2026-10-maven-cve-2026-9800.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Keycloak vulnerable to authorization bypass via incorrect uri comparison",
+      "summary": "Keycloak vulnerable to authorization bypass via incorrect uri comparison",
+      "vendor": "Maven",
+      "product": "org.keycloak:keycloak-services",
+      "cve": "CVE-2026-9800",
+      "operator_check": "Check whether org.keycloak:keycloak-services is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.7%; percentile: 51%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.keycloak:keycloak-services. Prioritize it with other application dependency updates, especially because EPSS places it in the 51% percentile.",
+      "tags": [
+        "cve-2026-9800",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f5p5-6xmx-p252",
+          "url": "https://github.com/advisories/GHSA-f5p5-6xmx-p252"
+        },
+        {
+          "title": "NVD — CVE-2026-9800",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9800"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/keycloak/keycloak/security/advisories/GHSA-f5p5-6xmx-p252"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-118664",
+      "slug": "2026-10-npm-cve-2026-118664",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-118664.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "decode-uri-component vulnerable to denial of service via quadratic replacement of percent-encoded runs",
+      "summary": "decode-uri-component vulnerable to denial of service via quadratic replacement of percent-encoded runs",
+      "vendor": "npm",
+      "product": "decode-uri-component",
+      "cve": "CVE-2026-118664",
+      "operator_check": "Check whether decode-uri-component is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2. EPSS probability: 0.3%; percentile: 25%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for decode-uri-component. Prioritize it with other application dependency updates, especially because EPSS places it in the 25% percentile.",
+      "tags": [
+        "cve-2026-118664",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qr28-fpjm-wq7f",
+          "url": "https://github.com/advisories/GHSA-qr28-fpjm-wq7f"
+        },
+        {
+          "title": "NVD — CVE-2026-118664",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118664"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SamVerschueren/decode-uri-component/security/advisories/GHSA-qr28-fpjm-wq7f"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-cve-2026-62264",
+      "slug": "2026-10-npm-cve-2026-62264",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-cve-2026-62264.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@sylphx/pdf-reader-mcp: HTTP transport accepts unauthenticated requests despite a configured MCP_API_KEY",
+      "summary": "@sylphx/pdf-reader-mcp: HTTP transport accepts unauthenticated requests despite a configured MCP_API_KEY",
+      "vendor": "npm",
+      "product": "@sylphx/pdf-reader-mcp",
+      "cve": "CVE-2026-62264",
+      "operator_check": "Check whether @sylphx/pdf-reader-mcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @sylphx/pdf-reader-mcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-62264",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q344-5v34-gm84",
+          "url": "https://github.com/advisories/GHSA-q344-5v34-gm84"
+        },
+        {
+          "title": "NVD — CVE-2026-62264",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62264"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SylphxAI/pdf-reader-mcp/security/advisories/GHSA-q344-5v34-gm84"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-npm-ghsa-w9x9-j56r-h98r",
+      "slug": "2026-10-npm-ghsa-w9x9-j56r-h98r",
+      "url": "https://www.patchbrief.org/items/2026-10-npm-ghsa-w9x9-j56r-h98r.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@eeacms/volto-chatbot has Unauthenticated Danswer API Confused Deputy Proxy",
+      "summary": "@eeacms/volto-chatbot has Unauthenticated Danswer API Confused Deputy Proxy",
+      "vendor": "npm",
+      "product": "@eeacms/volto-chatbot",
+      "cve": null,
+      "operator_check": "Check whether @eeacms/volto-chatbot is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @eeacms/volto-chatbot. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-w9x9-j56r-h98r",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w9x9-j56r-h98r",
+          "url": "https://github.com/advisories/GHSA-w9x9-j56r-h98r"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/eea/volto-chatbot/security/advisories/GHSA-w9x9-j56r-h98r"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-61438",
+      "slug": "2026-10-pypi-cve-2026-61438",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-61438.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "PraisonAI vulnerable to Remote Code Execution via Broken AST Sandbox",
+      "summary": "PraisonAI vulnerable to Remote Code Execution via Broken AST Sandbox",
+      "vendor": "PyPI",
+      "product": "praisonai",
+      "cve": "CVE-2026-61438",
+      "operator_check": "Check whether praisonai is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 24%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for praisonai. Prioritize it with other application dependency updates, especially because EPSS places it in the 24% percentile.",
+      "tags": [
+        "cve-2026-61438",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-26mh-57q7-jfvr",
+          "url": "https://github.com/advisories/GHSA-26mh-57q7-jfvr"
+        },
+        {
+          "title": "NVD — CVE-2026-61438",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61438"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-26mh-57q7-jfvr"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-ghsa-vpp8-g58w-m8mp",
+      "slug": "2026-10-pypi-ghsa-vpp8-g58w-m8mp",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-ghsa-vpp8-g58w-m8mp.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset",
+      "summary": "Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset",
+      "vendor": "PyPI",
+      "product": "Twisted",
+      "cve": null,
+      "operator_check": "Check whether Twisted is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Twisted. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-vpp8-g58w-m8mp",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vpp8-g58w-m8mp",
+          "url": "https://github.com/advisories/GHSA-vpp8-g58w-m8mp"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/twisted/twisted/security/advisories/GHSA-vpp8-g58w-m8mp"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-rubygems-cve-2026-63414",
+      "slug": "2026-10-rubygems-cve-2026-63414",
+      "url": "https://www.patchbrief.org/items/2026-10-rubygems-cve-2026-63414.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Shopify App: Token exchange shop context confusion may allow cross-shop authorization bypass in affected apps",
+      "summary": "Shopify App: Token exchange shop context confusion may allow cross-shop authorization bypass in affected apps",
+      "vendor": "RubyGems",
+      "product": "shopify_app",
+      "cve": "CVE-2026-63414",
+      "operator_check": "Check whether shopify_app is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.6.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for shopify_app. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-63414",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6j52-38f8-qhxr",
+          "url": "https://github.com/advisories/GHSA-6j52-38f8-qhxr"
+        },
+        {
+          "title": "NVD — CVE-2026-63414",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63414"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Shopify/shopify_app/security/advisories/GHSA-6j52-38f8-qhxr"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-rust-cve-2026-115907",
+      "slug": "2026-10-rust-cve-2026-115907",
+      "url": "https://www.patchbrief.org/items/2026-10-rust-cve-2026-115907.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "zip: legacy Shrink/Reduce/Implode decoder: denial of service from attacker-controlled ZIP64 uncompressed size",
+      "summary": "zip: legacy Shrink/Reduce/Implode decoder: denial of service from attacker-controlled ZIP64 uncompressed size",
+      "vendor": "Rust",
+      "product": "zip",
+      "cve": "CVE-2026-115907",
+      "operator_check": "Check whether zip is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for zip. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-115907",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9hj8-73fh-9963",
+          "url": "https://github.com/advisories/GHSA-9hj8-73fh-9963"
+        },
+        {
+          "title": "NVD — CVE-2026-115907",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115907"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zip-rs/zip2/security/advisories/GHSA-9hj8-73fh-9963"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-rust-cve-2026-115908",
+      "slug": "2026-10-rust-cve-2026-115908",
+      "url": "https://www.patchbrief.org/items/2026-10-rust-cve-2026-115908.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "zip: Arbitrary file write outside the extraction directory, because ZipArchive::extract validates symlink targets lex...",
+      "summary": "zip: Arbitrary file write outside the extraction directory, because ZipArchive::extract validates symlink targets lexically.",
+      "vendor": "Rust",
+      "product": "zip",
+      "cve": "CVE-2026-115908",
+      "operator_check": "Check whether zip is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 38%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for zip. Prioritize it with other application dependency updates, especially because EPSS places it in the 38% percentile.",
+      "tags": [
+        "cve-2026-115908",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hjqx-j4rw-g7xv",
+          "url": "https://github.com/advisories/GHSA-hjqx-j4rw-g7xv"
+        },
+        {
+          "title": "NVD — CVE-2026-115908",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115908"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zip-rs/zip2/security/advisories/GHSA-hjqx-j4rw-g7xv"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-rust-cve-2026-115909",
+      "slug": "2026-10-rust-cve-2026-115909",
+      "url": "https://www.patchbrief.org/items/2026-10-rust-cve-2026-115909.html",
+      "date": "2026-10-29",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "zip: Unbounded Symlink-Target Handling Can Abort Or Exhaust Memory During Extraction",
+      "summary": "zip: Unbounded Symlink-Target Handling Can Abort Or Exhaust Memory During Extraction",
+      "vendor": "Rust",
+      "product": "zip",
+      "cve": "CVE-2026-115909",
+      "operator_check": "Check whether zip is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for zip. Prioritize it with other application dependency updates, especially because EPSS places it in the 40% percentile.",
+      "tags": [
+        "cve-2026-115909",
+        "vendor-advisory",
+        "rust",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q7v9-x93c-xqv3",
+          "url": "https://github.com/advisories/GHSA-q7v9-x93c-xqv3"
+        },
+        {
+          "title": "NVD — CVE-2026-115909",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115909"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zip-rs/zip2/security/advisories/GHSA-q7v9-x93c-xqv3"
+        }
+      ]
+    },
     {
       "id": "2026-10-broadcom-cve-2026-41709",
       "slug": "2026-10-broadcom-cve-2026-41709",
