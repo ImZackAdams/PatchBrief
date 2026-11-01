@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-10-31T15:06:06Z",
-  "total_items": 2354,
+  "generated": "2026-11-01T15:48:53Z",
+  "total_items": 2357,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-10-31T15:06:06Z",
+    "generated": "2026-11-01T15:48:53Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 6,
-        "started_at": "2026-10-31T15:05:49Z",
-        "finished_at": "2026-10-31T15:05:49Z"
+        "items_seen": 4,
+        "started_at": "2026-11-01T15:48:40Z",
+        "finished_at": "2026-11-01T15:48:40Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-31T15:05:49Z",
-        "finished_at": "2026-10-31T15:05:49Z"
+        "started_at": "2026-11-01T15:48:40Z",
+        "finished_at": "2026-11-01T15:48:40Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 3,
-        "started_at": "2026-10-31T15:05:49Z",
-        "finished_at": "2026-10-31T15:05:57Z"
+        "started_at": "2026-11-01T15:48:40Z",
+        "finished_at": "2026-11-01T15:48:47Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-10-31T15:05:57Z",
-        "finished_at": "2026-10-31T15:05:58Z"
+        "started_at": "2026-11-01T15:48:47Z",
+        "finished_at": "2026-11-01T15:48:48Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-31T15:05:58Z",
-        "finished_at": "2026-10-31T15:05:59Z"
+        "started_at": "2026-11-01T15:48:48Z",
+        "finished_at": "2026-11-01T15:48:50Z"
       },
       {
         "id": "exploitdb",
@@ -63,17 +63,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-10-31T15:05:59Z",
-        "finished_at": "2026-10-31T15:05:59Z"
+        "started_at": "2026-11-01T15:48:50Z",
+        "finished_at": "2026-11-01T15:48:50Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 35,
-        "started_at": "2026-10-31T15:05:59Z",
-        "finished_at": "2026-10-31T15:06:00Z"
+        "items_seen": 32,
+        "started_at": "2026-11-01T15:48:50Z",
+        "finished_at": "2026-11-01T15:48:50Z"
       }
     ]
   },
@@ -176,6 +176,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/kubeflow/pipelines/security/advisories/GHSA-8fmv-6rg5-5924"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-go-ghsa-494m-4556-wf5p",
+      "slug": "2026-10-go-ghsa-494m-4556-wf5p",
+      "url": "https://www.patchbrief.org/items/2026-10-go-ghsa-494m-4556-wf5p.html",
+      "date": "2026-10-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "imgproxy has out-of-bounds heap read/write in ICO loader BMP header reconstruction that allows unauthenticated remote...",
+      "summary": "imgproxy has out-of-bounds heap read/write in ICO loader BMP header reconstruction that allows unauthenticated remote worker crash",
+      "vendor": "Go",
+      "product": "github.com/imgproxy/imgproxy/v3",
+      "cve": null,
+      "operator_check": "Check whether github.com/imgproxy/imgproxy/v3 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/imgproxy/imgproxy/v3. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-494m-4556-wf5p",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-494m-4556-wf5p",
+          "url": "https://github.com/advisories/GHSA-494m-4556-wf5p"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/imgproxy/imgproxy/security/advisories/GHSA-494m-4556-wf5p"
         }
       ]
     },
@@ -724,6 +755,41 @@
       ]
     },
     {
+      "id": "2026-10-pypi-cve-2026-118669",
+      "slug": "2026-10-pypi-cve-2026-118669",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-118669.html",
+      "date": "2026-10-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OAuthLib: Token grants can use attacker-supplied client_id for authorization after authenticating a different client",
+      "summary": "OAuthLib: Token grants can use attacker-supplied client_id for authorization after authenticating a different client",
+      "vendor": "PyPI",
+      "product": "oauthlib",
+      "cve": "CVE-2026-118669",
+      "operator_check": "Check whether oauthlib is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.4. EPSS probability: 0.3%; percentile: 24%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for oauthlib. Prioritize it with other application dependency updates, especially because EPSS places it in the 24% percentile.",
+      "tags": [
+        "cve-2026-118669",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7984-qgvg-3j9c",
+          "url": "https://github.com/advisories/GHSA-7984-qgvg-3j9c"
+        },
+        {
+          "title": "NVD — CVE-2026-118669",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118669"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-7984-qgvg-3j9c"
+        }
+      ]
+    },
+    {
       "id": "2026-10-pypi-cve-2026-119194",
       "slug": "2026-10-pypi-cve-2026-119194",
       "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-119194.html",
@@ -1140,6 +1206,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/authlib/joserfc/security/advisories/GHSA-jpxq-7h8p-2q76"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-pypi-cve-2026-119286",
+      "slug": "2026-10-pypi-cve-2026-119286",
+      "url": "https://www.patchbrief.org/items/2026-10-pypi-cve-2026-119286.html",
+      "date": "2026-10-30",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "GraphQL-core has denial of service via memory leak in aborted validations",
+      "summary": "GraphQL-core has denial of service via memory leak in aborted validations",
+      "vendor": "PyPI",
+      "product": "graphql-core",
+      "cve": "CVE-2026-119286",
+      "operator_check": "Check whether graphql-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 36%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for graphql-core. Prioritize it with other application dependency updates, especially because EPSS places it in the 36% percentile.",
+      "tags": [
+        "cve-2026-119286",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mpqx-q82w-9x46",
+          "url": "https://github.com/advisories/GHSA-mpqx-q82w-9x46"
+        },
+        {
+          "title": "NVD — CVE-2026-119286",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119286"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/graphql-python/graphql-core/security/advisories/GHSA-mpqx-q82w-9x46"
         }
       ]
     },
