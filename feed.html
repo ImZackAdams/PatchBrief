@@ -239,10 +239,54 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">2357 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">2359 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SD JWT JS: Tampered disclosures silently dropped instead of rejected" data-vendor="npm" data-cve="CVE-2026-62374">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 2, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-62374</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-npm-cve-2026-62374.html">SD JWT JS: Tampered disclosures silently dropped instead of rejected</a>
+              </h2>
+              <p class="feed-vendor">npm · @sd-jwt/decode</p>
+              <p class="feed-summary">SD JWT JS: Tampered disclosures silently dropped instead of rejected</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether @sd-jwt/decode is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.2%; percentile: 13%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-f9j6-8p6x-r9j6">GitHub Advisory GHSA-f9j6-8p6x-r9j6</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-62374">NVD — CVE-2026-62374</a><a href="https://github.com/openwallet-foundation/sd-jwt-js/security/advisories/GHSA-f9j6-8p6x-r9j6">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-npm-cve-2026-62374.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#203719: INFINITT PACS System Manager Contains Multiple Code Execution Vulnerabilities" data-vendor="Overview">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 2, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-overview-vu-203719.html">VU#203719: INFINITT PACS System Manager Contains Multiple Code Execution Vulnerabilities</a>
+              </h2>
+              <p class="feed-vendor">Overview · INFINITT PACS installations using System Manager</p>
+              <p class="feed-summary">Overview INFINITT PACS installations using System Manager versions 3.0.11.3 and 3.0.11.5 contain vulnerabilities that may allow an attacker to execute arbitrary code. INFINITT Healthcare has remediated the issues in System Manager versions 3.0.12.3 and 3.0.12.5. Description INFINITT PACS is an enterprise web-based medical imaging platform that stores, retrieves, and displays patient scans. CVE-2026-16305 An improperly protected update manifest may allow a local attacker to execute commands with administrative privileges when an update is approved. SmartExecute.exe reads and runs commands from execlist.txt after an update. Because of insecure file permissions on execlist.txt , a low-privileged attacker can modify the file before it is processed to add arbitrary malicious commands. After SmartUpdate.exe launches, it runs SmartExecute.exe... Related CVEs: CVE-2026-16305, CVE-2026-16306.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for INFINITT PACS installations using System Manager where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/203719">CERT/CC Vulnerability Note VU#203719</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-overview-vu-203719.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="pypi-publish action revocation of CA in the chain that Sigstore uses in Trusted Publishing and Digital Attestations f..." data-vendor="GitHub Actions">
               <div class="feed-item-top">
                 <div class="feed-item-meta">

@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-01T15:48:53Z",
-  "total_items": 2357,
+  "generated": "2026-11-02T19:13:47Z",
+  "total_items": 2359,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-01T15:48:53Z",
+    "generated": "2026-11-02T19:13:47Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-11-01T15:48:40Z",
-        "finished_at": "2026-11-01T15:48:40Z"
+        "items_seen": 2,
+        "started_at": "2026-11-02T19:13:34Z",
+        "finished_at": "2026-11-02T19:13:34Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-01T15:48:40Z",
-        "finished_at": "2026-11-01T15:48:40Z"
+        "started_at": "2026-11-02T19:13:34Z",
+        "finished_at": "2026-11-02T19:13:34Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 3,
-        "started_at": "2026-11-01T15:48:40Z",
-        "finished_at": "2026-11-01T15:48:47Z"
+        "items_seen": 0,
+        "started_at": "2026-11-02T19:13:34Z",
+        "finished_at": "2026-11-02T19:13:42Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-11-01T15:48:47Z",
-        "finished_at": "2026-11-01T15:48:48Z"
+        "started_at": "2026-11-02T19:13:42Z",
+        "finished_at": "2026-11-02T19:13:43Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-11-01T15:48:48Z",
-        "finished_at": "2026-11-01T15:48:50Z"
+        "items_seen": 1,
+        "started_at": "2026-11-02T19:13:43Z",
+        "finished_at": "2026-11-02T19:13:43Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,83 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-01T15:48:50Z",
-        "finished_at": "2026-11-01T15:48:50Z"
+        "started_at": "2026-11-02T19:13:43Z",
+        "finished_at": "2026-11-02T19:13:44Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 32,
-        "started_at": "2026-11-01T15:48:50Z",
-        "finished_at": "2026-11-01T15:48:50Z"
+        "items_seen": 28,
+        "started_at": "2026-11-02T19:13:44Z",
+        "finished_at": "2026-11-02T19:13:44Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-npm-cve-2026-62374",
+      "slug": "2026-11-npm-cve-2026-62374",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-62374.html",
+      "date": "2026-11-02",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SD JWT JS: Tampered disclosures silently dropped instead of rejected",
+      "summary": "SD JWT JS: Tampered disclosures silently dropped instead of rejected",
+      "vendor": "npm",
+      "product": "@sd-jwt/decode",
+      "cve": "CVE-2026-62374",
+      "operator_check": "Check whether @sd-jwt/decode is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @sd-jwt/decode. Prioritize it with other application dependency updates, especially because EPSS places it in the 13% percentile.",
+      "tags": [
+        "cve-2026-62374",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f9j6-8p6x-r9j6",
+          "url": "https://github.com/advisories/GHSA-f9j6-8p6x-r9j6"
+        },
+        {
+          "title": "NVD — CVE-2026-62374",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62374"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/openwallet-foundation/sd-jwt-js/security/advisories/GHSA-f9j6-8p6x-r9j6"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-overview-vu-203719",
+      "slug": "2026-11-overview-vu-203719",
+      "url": "https://www.patchbrief.org/items/2026-11-overview-vu-203719.html",
+      "date": "2026-11-02",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#203719: INFINITT PACS System Manager Contains Multiple Code Execution Vulnerabilities",
+      "summary": "Overview INFINITT PACS installations using System Manager versions 3.0.11.3 and 3.0.11.5 contain vulnerabilities that may allow an attacker to execute arbitrary code. INFINITT Healthcare has remediated the issues in System Manager versions 3.0.12.3 and 3.0.12.5. Description INFINITT PACS is an enterprise web-based medical imaging platform that stores, retrieves, and displays patient scans. CVE-2026-16305 An improperly protected update manifest may allow a local attacker to execute commands with administrative privileges when an update is approved. SmartExecute.exe reads and runs commands from execlist.txt after an update. Because of insecure file permissions on execlist.txt , a low-privileged attacker can modify the file before it is processed to add arbitrary malicious commands. After SmartUpdate.exe launches, it runs SmartExecute.exe... Related CVEs: CVE-2026-16305, CVE-2026-16306.",
+      "vendor": "Overview",
+      "product": "INFINITT PACS installations using System Manager",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for INFINITT PACS installations using System Manager where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-203719",
+        "coordinated-disclosure",
+        "overview",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#203719",
+          "url": "https://kb.cert.org/vuls/id/203719"
+        }
+      ]
+    },
     {
       "id": "2026-10-github-actions-ghsa-5xjx-3w67-w9x9",
       "slug": "2026-10-github-actions-ghsa-5xjx-3w67-w9x9",

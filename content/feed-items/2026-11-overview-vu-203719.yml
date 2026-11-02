@@ -1,0 +1,36 @@
+id: 2026-11-overview-vu-203719
+slug: 2026-11-overview-vu-203719
+external_id: VU-203719
+source: cert_vu
+date: '2026-11-02'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#203719: INFINITT PACS System Manager Contains Multiple Code Execution Vulnerabilities'
+summary: 'Overview INFINITT PACS installations using System Manager versions 3.0.11.3
+  and 3.0.11.5 contain vulnerabilities that may allow an attacker to execute arbitrary
+  code. INFINITT Healthcare has remediated the issues in System Manager versions 3.0.12.3
+  and 3.0.12.5. Description INFINITT PACS is an enterprise web-based medical imaging
+  platform that stores, retrieves, and displays patient scans. CVE-2026-16305 An improperly
+  protected update manifest may allow a local attacker to execute commands with administrative
+  privileges when an update is approved. SmartExecute.exe reads and runs commands
+  from execlist.txt after an update. Because of insecure file permissions on execlist.txt
+  , a low-privileged attacker can modify the file before it is processed to add arbitrary
+  malicious commands. After SmartUpdate.exe launches, it runs SmartExecute.exe...
+  Related CVEs: CVE-2026-16305, CVE-2026-16306.'
+vendor: Overview
+product: INFINITT PACS installations using System Manager
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for INFINITT PACS installations using System Manager where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#203719
+  url: https://kb.cert.org/vuls/id/203719
+tags:
+- vu-203719
+- coordinated-disclosure
+- overview
+- cert-vu
+is_sample: false
