@@ -1,0 +1,36 @@
+id: 2026-11-msisdn-vu-124705
+slug: 2026-11-msisdn-vu-124705
+external_id: VU-124705
+source: cert_vu
+date: '2026-11-03'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#124705: BaseChat – Audio Dating App, Android version 9.8.1, contains multiple
+  vulnerabilities'
+summary: 'Overview Multiple vulnerabilities have been identified in the Android application,
+  BaseChat – Audio Dating App, version 9.8.1, which ultimately compromise the privacy
+  of users’ personal data and activity. Description BaseChat is an online dating platform
+  built in Flutter and targeted toward users over 18. It facilitates anonymous, voice-first
+  interaction between users. Three distinct vulnerabilities have been identified within
+  the shipped Android application. VU#124705.1: The application fails open when validating
+  TLS server certificates for connections to its backend API host. The application
+  allows any self-signed certificate to bypass standard TLS security checks. VU#124705.2:
+  Paid user accounts are mapped to a third-party RevenueCat subscriber database using
+  raw MSISDNs (phone numbers), which are a guessable public identifier...'
+vendor: MSISDN
+product: MSISDN
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for MSISDN where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#124705
+  url: https://kb.cert.org/vuls/id/124705
+tags:
+- vu-124705
+- coordinated-disclosure
+- msisdn
+- cert-vu
+is_sample: false

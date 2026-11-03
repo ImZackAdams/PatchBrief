@@ -239,10 +239,54 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">2359 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">2361 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="Coordinated disclosure" data-signal="patch" data-title="VU#124705: BaseChat – Audio Dating App, Android version 9.8.1, contains multiple vulnerabilities" data-vendor="MSISDN">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 3, 2026</span>
+                  <span class="type-badge">Coordinated disclosure</span>
+                  <span class="signal-badge patch">Patch review</span>
+                  
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-msisdn-vu-124705.html">VU#124705: BaseChat – Audio Dating App, Android version 9.8.1, contains multiple vulnerabilities</a>
+              </h2>
+              <p class="feed-vendor">MSISDN · MSISDN</p>
+              <p class="feed-summary">Overview Multiple vulnerabilities have been identified in the Android application, BaseChat – Audio Dating App, version 9.8.1, which ultimately compromise the privacy of users’ personal data and activity. Description BaseChat is an online dating platform built in Flutter and targeted toward users over 18. It facilitates anonymous, voice-first interaction between users. Three distinct vulnerabilities have been identified within the shipped Android application. VU#124705.1: The application fails open when validating TLS server certificates for connections to its backend API host. The application allows any self-signed certificate to bypass standard TLS security checks. VU#124705.2: Paid user accounts are mapped to a third-party RevenueCat subscriber database using raw MSISDNs (phone numbers), which are a guessable public identifier...</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for MSISDN where available.</p>
+                <div class="feed-sources"><a href="https://kb.cert.org/vuls/id/124705">CERT/CC Vulnerability Note VU#124705</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-msisdn-vu-124705.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Metalama: Unsafe deserialization over Metalama&#x27;s Visual Studio inter-process named pipe enables local code execution" data-vendor="NuGet" data-cve="CVE-2026-62848">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 3, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-62848</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-nuget-cve-2026-62848.html">Metalama: Unsafe deserialization over Metalama&#x27;s Visual Studio inter-process named pipe enables local code execution</a>
+              </h2>
+              <p class="feed-vendor">NuGet · Metalama.Framework</p>
+              <p class="feed-summary">Metalama: Unsafe deserialization over Metalama&#x27;s Visual Studio inter-process named pipe enables local code execution</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether Metalama.Framework is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 8%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-h26j-4vp7-x9w2">GitHub Advisory GHSA-h26j-4vp7-x9w2</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-62848">NVD — CVE-2026-62848</a><a href="https://github.com/metalama/Metalama/security/advisories/GHSA-h26j-4vp7-x9w2">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-nuget-cve-2026-62848.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="SD JWT JS: Tampered disclosures silently dropped instead of rejected" data-vendor="npm" data-cve="CVE-2026-62374">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
