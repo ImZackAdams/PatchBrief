@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-03T16:51:26Z",
-  "total_items": 2361,
+  "generated": "2026-11-04T16:53:38Z",
+  "total_items": 2370,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-03T16:51:26Z",
+    "generated": "2026-11-04T16:53:38Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-11-03T16:51:11Z",
-        "finished_at": "2026-11-03T16:51:12Z"
+        "items_seen": 1,
+        "started_at": "2026-11-04T16:53:25Z",
+        "finished_at": "2026-11-04T16:53:25Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-03T16:51:12Z",
-        "finished_at": "2026-11-03T16:51:12Z"
+        "started_at": "2026-11-04T16:53:25Z",
+        "finished_at": "2026-11-04T16:53:26Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-11-03T16:51:12Z",
-        "finished_at": "2026-11-03T16:51:19Z"
+        "items_seen": 1,
+        "started_at": "2026-11-04T16:53:26Z",
+        "finished_at": "2026-11-04T16:53:33Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-03T16:51:19Z",
-        "finished_at": "2026-11-03T16:51:20Z"
+        "items_seen": 9,
+        "started_at": "2026-11-04T16:53:33Z",
+        "finished_at": "2026-11-04T16:53:34Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-11-03T16:51:20Z",
-        "finished_at": "2026-11-03T16:51:21Z"
+        "started_at": "2026-11-04T16:53:34Z",
+        "finished_at": "2026-11-04T16:53:35Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,126 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-03T16:51:21Z",
-        "finished_at": "2026-11-03T16:51:21Z"
+        "started_at": "2026-11-04T16:53:35Z",
+        "finished_at": "2026-11-04T16:53:35Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-03T16:51:21Z",
-        "finished_at": "2026-11-03T16:51:21Z"
+        "items_seen": 10,
+        "started_at": "2026-11-04T16:53:35Z",
+        "finished_at": "2026-11-04T16:53:35Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-etrel-cve-2026-112354",
+      "slug": "2026-11-etrel-cve-2026-112354",
+      "url": "https://www.patchbrief.org/items/2026-11-etrel-cve-2026-112354.html",
+      "date": "2026-11-03",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Etrel INCH AC charging station management web interface — CVE-2026-112354 (Critical)",
+      "summary": "Etrel INCH AC charging station management web interface prior to firmware versions 7.1.2 and 8.0.1 contains a hard-coded default credentials vulnerability that allows remote attackers to gain full Administrator access by authenticating with the factory-default account. Attackers can log in over cleartext HTTP to obtain complete charger configuration, OCPP ChargePoint Identity, and CSMS WebSocket connection details, enabling unauthorized administrative control of the charging station.",
+      "vendor": "Etrel",
+      "product": "INCH AC charging station management web interface",
+      "cve": "CVE-2026-112354",
+      "operator_check": "Review CVE-2026-112354 in your asset inventory. Apply patches per vendor guidance and verify INCH AC charging station management web interface is not exposed. CVSS score: 9.8. EPSS probability: 0.5%; percentile: 46%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Etrel INCH AC charging station management web interface. Patch or mitigate promptly. EPSS percentile: 46%.",
+      "tags": [
+        "cve-2026-112354",
+        "vendor-advisory",
+        "etrel",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-112354",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112354"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://etrel.atlassian.net/wiki/spaces/EKC/pages/5064097853/Etrel+INCH+Firmware"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://etrel.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-cve-2026-62331",
+      "slug": "2026-11-go-cve-2026-62331",
+      "url": "https://www.patchbrief.org/items/2026-11-go-cve-2026-62331.html",
+      "date": "2026-11-03",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "praktor: Path traversal in Telegram file uploads allows writing outside the agent workspace uploads/ directory (store...",
+      "summary": "praktor: Path traversal in Telegram file uploads allows writing outside the agent workspace uploads/ directory (stored instruction injection)",
+      "vendor": "Go",
+      "product": "github.com/mtzanidakis/praktor",
+      "cve": "CVE-2026-62331",
+      "operator_check": "Check whether github.com/mtzanidakis/praktor is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.8%; percentile: 56%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/mtzanidakis/praktor. Prioritize it with other application dependency updates, especially because EPSS places it in the 56% percentile.",
+      "tags": [
+        "cve-2026-62331",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-48v2-6jcm-fc99",
+          "url": "https://github.com/advisories/GHSA-48v2-6jcm-fc99"
+        },
+        {
+          "title": "NVD — CVE-2026-62331",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62331"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/mtzanidakis/praktor/security/advisories/GHSA-48v2-6jcm-fc99"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-maven-cve-2026-11800",
+      "slug": "2026-11-maven-cve-2026-11800",
+      "url": "https://www.patchbrief.org/items/2026-11-maven-cve-2026-11800.html",
+      "date": "2026-11-03",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Keycloak has authentication bypass via jwt algorithm confusion",
+      "summary": "Keycloak has authentication bypass via jwt algorithm confusion",
+      "vendor": "Maven",
+      "product": "org.keycloak:keycloak-services",
+      "cve": "CVE-2026-11800",
+      "operator_check": "Check whether org.keycloak:keycloak-services is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 23%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.keycloak:keycloak-services. Prioritize it with other application dependency updates, especially because EPSS places it in the 23% percentile.",
+      "tags": [
+        "cve-2026-11800",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j97h-3f8r-mrjr",
+          "url": "https://github.com/advisories/GHSA-j97h-3f8r-mrjr"
+        },
+        {
+          "title": "NVD — CVE-2026-11800",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11800"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/keycloak/keycloak/security/advisories/GHSA-j97h-3f8r-mrjr"
+        }
+      ]
+    },
     {
       "id": "2026-11-msisdn-vu-124705",
       "slug": "2026-11-msisdn-vu-124705",
@@ -102,6 +207,111 @@
         {
           "title": "CERT/CC Vulnerability Note VU#124705",
           "url": "https://kb.cert.org/vuls/id/124705"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-44265",
+      "slug": "2026-11-npm-cve-2026-44265",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-44265.html",
+      "date": "2026-11-03",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Elo backends have code injection via unvalidated emission of programmatic AST fields",
+      "summary": "Elo backends have code injection via unvalidated emission of programmatic AST fields",
+      "vendor": "npm",
+      "product": "@enspirit/elo",
+      "cve": "CVE-2026-44265",
+      "operator_check": "Check whether @enspirit/elo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @enspirit/elo. Prioritize it with other application dependency updates, especially because EPSS places it in the 16% percentile.",
+      "tags": [
+        "cve-2026-44265",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x9rp-7wh3-2rj5",
+          "url": "https://github.com/advisories/GHSA-x9rp-7wh3-2rj5"
+        },
+        {
+          "title": "NVD — CVE-2026-44265",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44265"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/enspirit/elo/security/advisories/GHSA-x9rp-7wh3-2rj5"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-44266",
+      "slug": "2026-11-npm-cve-2026-44266",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-44266.html",
+      "date": "2026-11-03",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Elo Ruby backend has Remote Code Execution via unescaped `#{...}` interpolation in emitted string literals and subtyp...",
+      "summary": "Elo Ruby backend has Remote Code Execution via unescaped `#{...}` interpolation in emitted string literals and subtype-constraint labels",
+      "vendor": "npm",
+      "product": "@enspirit/elo",
+      "cve": "CVE-2026-44266",
+      "operator_check": "Check whether @enspirit/elo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 1.0%; percentile: 63%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @enspirit/elo. Prioritize it with other application dependency updates, especially because EPSS places it in the 63% percentile.",
+      "tags": [
+        "cve-2026-44266",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7w38-ggh5-v542",
+          "url": "https://github.com/advisories/GHSA-7w38-ggh5-v542"
+        },
+        {
+          "title": "NVD — CVE-2026-44266",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44266"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/enspirit/elo/security/advisories/GHSA-7w38-ggh5-v542"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-44267",
+      "slug": "2026-11-npm-cve-2026-44267",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-44267.html",
+      "date": "2026-11-03",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Elo JavaScript emitter has sandbox escape to arbitrary Node.js / browser code execution via unfiltered `.constructor`...",
+      "summary": "Elo JavaScript emitter has sandbox escape to arbitrary Node.js / browser code execution via unfiltered `.constructor` member access",
+      "vendor": "npm",
+      "product": "@enspirit/elo",
+      "cve": "CVE-2026-44267",
+      "operator_check": "Check whether @enspirit/elo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.8%; percentile: 58%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @enspirit/elo. Prioritize it with other application dependency updates, especially because EPSS places it in the 58% percentile.",
+      "tags": [
+        "cve-2026-44267",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-33r5-xmm8-v6x5",
+          "url": "https://github.com/advisories/GHSA-33r5-xmm8-v6x5"
+        },
+        {
+          "title": "NVD — CVE-2026-44267",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44267"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/enspirit/elo/security/advisories/GHSA-33r5-xmm8-v6x5"
         }
       ]
     },
@@ -137,6 +347,103 @@
         {
           "title": "Source reference",
           "url": "https://github.com/metalama/Metalama/security/advisories/GHSA-h26j-4vp7-x9w2"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-ghsa-p3jp-9v83-76w9",
+      "slug": "2026-11-nuget-ghsa-p3jp-9v83-76w9",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-ghsa-p3jp-9v83-76w9.html",
+      "date": "2026-11-03",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-111497 - .NET Brotli Decoder Out-of-bounds Write Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-111497 - .NET Brotli Decoder Out-of-bounds Write Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.DotNet.ILCompiler",
+      "cve": null,
+      "operator_check": "Check whether Microsoft.DotNet.ILCompiler is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.DotNet.ILCompiler. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-p3jp-9v83-76w9",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-p3jp-9v83-76w9",
+          "url": "https://github.com/advisories/GHSA-p3jp-9v83-76w9"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-p3jp-9v83-76w9"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-115878",
+      "slug": "2026-11-pypi-cve-2026-115878",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-115878.html",
+      "date": "2026-11-03",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Stanza: RCE via pickle deserialization in the lemmatizer",
+      "summary": "Stanza: RCE via pickle deserialization in the lemmatizer",
+      "vendor": "PyPI",
+      "product": "stanza",
+      "cve": "CVE-2026-115878",
+      "operator_check": "Check whether stanza is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 49%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for stanza. Prioritize it with other application dependency updates, especially because EPSS places it in the 49% percentile.",
+      "tags": [
+        "cve-2026-115878",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-gh9r-c94j-cmp5",
+          "url": "https://github.com/advisories/GHSA-gh9r-c94j-cmp5"
+        },
+        {
+          "title": "NVD — CVE-2026-115878",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115878"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/stanfordnlp/stanza/security/advisories/GHSA-gh9r-c94j-cmp5"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-wordpress-cve-2026-119977",
+      "slug": "2026-11-wordpress-cve-2026-119977",
+      "url": "https://www.patchbrief.org/items/2026-11-wordpress-cve-2026-119977.html",
+      "date": "2026-11-03",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+      "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
+      "vendor": "WordPress",
+      "product": "WordPress Core",
+      "cve": "CVE-2026-119977",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-119977 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-06. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-119977",
+        "kev",
+        "wordpress",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-119977",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977"
         }
       ]
     },
