@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-04T16:53:38Z",
-  "total_items": 2370,
+  "generated": "2026-11-05T17:08:39Z",
+  "total_items": 2393,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-04T16:53:38Z",
+    "generated": "2026-11-05T17:08:39Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,18 +17,18 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-11-04T16:53:25Z",
-        "finished_at": "2026-11-04T16:53:25Z"
+        "items_seen": 2,
+        "started_at": "2026-11-05T17:08:24Z",
+        "finished_at": "2026-11-05T17:08:24Z"
       },
       {
         "id": "msrc",
         "label": "Microsoft Security Update Guide",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-11-04T16:53:25Z",
-        "finished_at": "2026-11-04T16:53:26Z"
+        "items_seen": 22,
+        "started_at": "2026-11-05T17:08:24Z",
+        "finished_at": "2026-11-05T17:08:25Z"
       },
       {
         "id": "nvd",
@@ -36,8 +36,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-11-04T16:53:26Z",
-        "finished_at": "2026-11-04T16:53:33Z"
+        "started_at": "2026-11-05T17:08:25Z",
+        "finished_at": "2026-11-05T17:08:32Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 9,
-        "started_at": "2026-11-04T16:53:33Z",
-        "finished_at": "2026-11-04T16:53:34Z"
+        "started_at": "2026-11-05T17:08:32Z",
+        "finished_at": "2026-11-05T17:08:33Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-11-04T16:53:34Z",
-        "finished_at": "2026-11-04T16:53:35Z"
+        "started_at": "2026-11-05T17:08:33Z",
+        "finished_at": "2026-11-05T17:08:34Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,822 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-04T16:53:35Z",
-        "finished_at": "2026-11-04T16:53:35Z"
+        "started_at": "2026-11-05T17:08:34Z",
+        "finished_at": "2026-11-05T17:08:35Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 10,
-        "started_at": "2026-11-04T16:53:35Z",
-        "finished_at": "2026-11-04T16:53:35Z"
+        "items_seen": 33,
+        "started_at": "2026-11-05T17:08:35Z",
+        "finished_at": "2026-11-05T17:08:35Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-apple-cve-2024-27834",
+      "slug": "2026-11-apple-cve-2024-27834",
+      "url": "https://www.patchbrief.org/items/2026-11-apple-cve-2024-27834.html",
+      "date": "2026-11-04",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Apple Multiple Products Improper Authentication Vulnerability",
+      "summary": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+      "vendor": "Apple",
+      "product": "Multiple Products",
+      "cve": "CVE-2024-27834",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2024-27834 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-18. Treat remediation as urgent.",
+      "tags": [
+        "cve-2024-27834",
+        "kev",
+        "apple",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2024-27834",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27834"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-118309",
+      "slug": "2026-11-microsoft-cve-2026-118309",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-118309.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Chromium CVE-2026-118309: Incorrect reference resolution",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-118309",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-118309. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 9.6. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 17%.",
+      "tags": [
+        "cve-2026-118309",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-118309"
+        },
+        {
+          "title": "NVD — CVE-2026-118309",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118309"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-118314",
+      "slug": "2026-11-microsoft-cve-2026-118314",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-118314.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-118314: Incorrect reference resolution",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-118314",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-118314. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 6%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 6%.",
+      "tags": [
+        "cve-2026-118314",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-118314"
+        },
+        {
+          "title": "NVD — CVE-2026-118314",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118314"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-118321",
+      "slug": "2026-11-microsoft-cve-2026-118321",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-118321.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Chromium CVE-2026-118321: Use after free",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-118321",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-118321. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 9.6. EPSS probability: 0.4%; percentile: 29%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 29%.",
+      "tags": [
+        "cve-2026-118321",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-118321"
+        },
+        {
+          "title": "NVD — CVE-2026-118321",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118321"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119260",
+      "slug": "2026-11-microsoft-cve-2026-119260",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119260.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119260: Use after free",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119260",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119260. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 16%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 16%.",
+      "tags": [
+        "cve-2026-119260",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119260"
+        },
+        {
+          "title": "NVD — CVE-2026-119260",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119260"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119261",
+      "slug": "2026-11-microsoft-cve-2026-119261",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119261.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Chromium CVE-2026-119261: Improper input validation",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119261",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119261. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 9.6. EPSS probability: 0.3%; percentile: 25%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 25%.",
+      "tags": [
+        "cve-2026-119261",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119261"
+        },
+        {
+          "title": "NVD — CVE-2026-119261",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119261"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119262",
+      "slug": "2026-11-microsoft-cve-2026-119262",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119262.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119262: Improper input validation",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119262",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119262. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 21%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 21%.",
+      "tags": [
+        "cve-2026-119262",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119262"
+        },
+        {
+          "title": "NVD — CVE-2026-119262",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119262"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119263",
+      "slug": "2026-11-microsoft-cve-2026-119263",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119263.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Chromium CVE-2026-119263: Memory corruption",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119263",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119263. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 9.6. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 19%.",
+      "tags": [
+        "cve-2026-119263",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119263"
+        },
+        {
+          "title": "NVD — CVE-2026-119263",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119263"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119264",
+      "slug": "2026-11-microsoft-cve-2026-119264",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119264.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119264: Memory corruption",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119264",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119264. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 15%.",
+      "tags": [
+        "cve-2026-119264",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119264"
+        },
+        {
+          "title": "NVD — CVE-2026-119264",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119264"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119265",
+      "slug": "2026-11-microsoft-cve-2026-119265",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119265.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119265: Memory corruption",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119265",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119265. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 13%.",
+      "tags": [
+        "cve-2026-119265",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119265"
+        },
+        {
+          "title": "NVD — CVE-2026-119265",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119265"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119266",
+      "slug": "2026-11-microsoft-cve-2026-119266",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119266.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119266: Use after free",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119266",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119266. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 18%.",
+      "tags": [
+        "cve-2026-119266",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119266"
+        },
+        {
+          "title": "NVD — CVE-2026-119266",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119266"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119267",
+      "slug": "2026-11-microsoft-cve-2026-119267",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119267.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119267: Memory corruption",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119267",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119267. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 15%.",
+      "tags": [
+        "cve-2026-119267",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119267"
+        },
+        {
+          "title": "NVD — CVE-2026-119267",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119267"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119268",
+      "slug": "2026-11-microsoft-cve-2026-119268",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119268.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119268: Integer overflow",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119268",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119268. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 15%.",
+      "tags": [
+        "cve-2026-119268",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119268"
+        },
+        {
+          "title": "NVD — CVE-2026-119268",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119268"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119269",
+      "slug": "2026-11-microsoft-cve-2026-119269",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119269.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119269: Use after free",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119269",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119269. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 11%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 11%.",
+      "tags": [
+        "cve-2026-119269",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119269"
+        },
+        {
+          "title": "NVD — CVE-2026-119269",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119269"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119270",
+      "slug": "2026-11-microsoft-cve-2026-119270",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119270.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119270: Improper input validation",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119270",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119270. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 14%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 14%.",
+      "tags": [
+        "cve-2026-119270",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119270"
+        },
+        {
+          "title": "NVD — CVE-2026-119270",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119270"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-119271",
+      "slug": "2026-11-microsoft-cve-2026-119271",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119271.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-119271: Use after free",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-119271",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119271. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 13%.",
+      "tags": [
+        "cve-2026-119271",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119271"
+        },
+        {
+          "title": "NVD — CVE-2026-119271",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119271"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-76024",
+      "slug": "2026-11-microsoft-cve-2026-76024",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-76024.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-76024: Memory corruption",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-76024",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-76024. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 6.5. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 18%.",
+      "tags": [
+        "cve-2026-76024",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-76024"
+        },
+        {
+          "title": "NVD — CVE-2026-76024",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76024"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-76025",
+      "slug": "2026-11-microsoft-cve-2026-76025",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-76025.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-76025: Use after free",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-76025",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-76025. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 22%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 22%.",
+      "tags": [
+        "cve-2026-76025",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-76025"
+        },
+        {
+          "title": "NVD — CVE-2026-76025",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76025"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-76026",
+      "slug": "2026-11-microsoft-cve-2026-76026",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-76026.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-76026: Memory corruption",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-76026",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-76026. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 6%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 6%.",
+      "tags": [
+        "cve-2026-76026",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-76026"
+        },
+        {
+          "title": "NVD — CVE-2026-76026",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76026"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-76028",
+      "slug": "2026-11-microsoft-cve-2026-76028",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-76028.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-76028: Use after free",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-76028",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-76028. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 14%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 14%.",
+      "tags": [
+        "cve-2026-76028",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-76028"
+        },
+        {
+          "title": "NVD — CVE-2026-76028",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76028"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-76029",
+      "slug": "2026-11-microsoft-cve-2026-76029",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-76029.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-76029: Memory corruption",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-76029",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-76029. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 13%.",
+      "tags": [
+        "cve-2026-76029",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-76029"
+        },
+        {
+          "title": "NVD — CVE-2026-76029",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76029"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-76030",
+      "slug": "2026-11-microsoft-cve-2026-76030",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-76030.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-76030: Memory corruption",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-76030",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-76030. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 14%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 14%.",
+      "tags": [
+        "cve-2026-76030",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-76030"
+        },
+        {
+          "title": "NVD — CVE-2026-76030",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76030"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-76031",
+      "slug": "2026-11-microsoft-cve-2026-76031",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-76031.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Chromium CVE-2026-76031: Use after free",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information. Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Edge (Chromium-based)",
+      "cve": "CVE-2026-76031",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-76031. Confirm whether Microsoft Edge (Chromium-based) is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 18%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 18%.",
+      "tags": [
+        "cve-2026-76031",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-76031"
+        },
+        {
+          "title": "NVD — CVE-2026-76031",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76031"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
     {
       "id": "2026-11-etrel-cve-2026-112354",
       "slug": "2026-11-etrel-cve-2026-112354",
