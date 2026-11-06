@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-05T17:08:39Z",
-  "total_items": 2393,
+  "generated": "2026-11-06T16:37:19Z",
+  "total_items": 2396,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-05T17:08:39Z",
+    "generated": "2026-11-06T16:37:19Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-11-05T17:08:24Z",
-        "finished_at": "2026-11-05T17:08:24Z"
+        "started_at": "2026-11-06T16:36:55Z",
+        "finished_at": "2026-11-06T16:36:56Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 22,
-        "started_at": "2026-11-05T17:08:24Z",
-        "finished_at": "2026-11-05T17:08:25Z"
+        "started_at": "2026-11-06T16:36:56Z",
+        "finished_at": "2026-11-06T16:36:57Z"
       },
       {
         "id": "nvd",
@@ -36,26 +36,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-11-05T17:08:25Z",
-        "finished_at": "2026-11-05T17:08:32Z"
+        "started_at": "2026-11-06T16:36:57Z",
+        "finished_at": "2026-11-06T16:37:14Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 9,
-        "started_at": "2026-11-05T17:08:32Z",
-        "finished_at": "2026-11-05T17:08:33Z"
+        "items_seen": 11,
+        "started_at": "2026-11-06T16:37:14Z",
+        "finished_at": "2026-11-06T16:37:15Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-05T17:08:33Z",
-        "finished_at": "2026-11-05T17:08:34Z"
+        "items_seen": 1,
+        "started_at": "2026-11-06T16:37:15Z",
+        "finished_at": "2026-11-06T16:37:15Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,126 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-05T17:08:34Z",
-        "finished_at": "2026-11-05T17:08:35Z"
+        "started_at": "2026-11-06T16:37:15Z",
+        "finished_at": "2026-11-06T16:37:16Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 33,
-        "started_at": "2026-11-05T17:08:35Z",
-        "finished_at": "2026-11-05T17:08:35Z"
+        "items_seen": 35,
+        "started_at": "2026-11-06T16:37:16Z",
+        "finished_at": "2026-11-06T16:37:16Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-go-cve-2026-105769",
+      "slug": "2026-11-go-cve-2026-105769",
+      "url": "https://www.patchbrief.org/items/2026-11-go-cve-2026-105769.html",
+      "date": "2026-11-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "kaniko can send the build's Azure (Entra ID) access token to lookalike ACR registry hosts",
+      "summary": "kaniko can send the build's Azure (Entra ID) access token to lookalike ACR registry hosts",
+      "vendor": "Go",
+      "product": "github.com/chainguard-dev/kaniko",
+      "cve": "CVE-2026-105769",
+      "operator_check": "Check whether github.com/chainguard-dev/kaniko is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 9%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/chainguard-dev/kaniko. Prioritize it with other application dependency updates, especially because EPSS places it in the 9% percentile.",
+      "tags": [
+        "cve-2026-105769",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5q7h-w9jf-cx97",
+          "url": "https://github.com/advisories/GHSA-5q7h-w9jf-cx97"
+        },
+        {
+          "title": "NVD — CVE-2026-105769",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105769"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/chainguard-forks/kaniko/security/advisories/GHSA-5q7h-w9jf-cx97"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-cve-2026-12411",
+      "slug": "2026-11-go-cve-2026-12411",
+      "url": "https://www.patchbrief.org/items/2026-11-go-cve-2026-12411.html",
+      "date": "2026-11-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "lxd allows Cross-guest volume hijack via DevLXD device patch",
+      "summary": "lxd allows Cross-guest volume hijack via DevLXD device patch",
+      "vendor": "Go",
+      "product": "github.com/canonical/lxd",
+      "cve": "CVE-2026-12411",
+      "operator_check": "Check whether github.com/canonical/lxd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/canonical/lxd. Prioritize it with other application dependency updates, especially because EPSS places it in the 15% percentile.",
+      "tags": [
+        "cve-2026-12411",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hhf9-qw4v-72xp",
+          "url": "https://github.com/advisories/GHSA-hhf9-qw4v-72xp"
+        },
+        {
+          "title": "NVD — CVE-2026-12411",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12411"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/canonical/lxd/security/advisories/GHSA-hhf9-qw4v-72xp"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-61536",
+      "slug": "2026-11-pypi-cve-2026-61536",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-61536.html",
+      "date": "2026-11-05",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE",
+      "summary": "Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE",
+      "vendor": "PyPI",
+      "product": "banks",
+      "cve": "CVE-2026-61536",
+      "operator_check": "Check whether banks is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 32%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for banks. Prioritize it with other application dependency updates, especially because EPSS places it in the 32% percentile.",
+      "tags": [
+        "cve-2026-61536",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-64vx-6h2c-rjh7",
+          "url": "https://github.com/advisories/GHSA-64vx-6h2c-rjh7"
+        },
+        {
+          "title": "NVD — CVE-2026-61536",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61536"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/masci/banks/security/advisories/GHSA-64vx-6h2c-rjh7"
+        }
+      ]
+    },
     {
       "id": "2026-11-apple-cve-2024-27834",
       "slug": "2026-11-apple-cve-2024-27834",
