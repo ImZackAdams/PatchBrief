@@ -1,0 +1,28 @@
+id: 2026-11-go-ghsa-pjff-c2wc-f6jm
+slug: 2026-11-go-ghsa-pjff-c2wc-f6jm
+external_id: GHSA-pjff-c2wc-f6jm
+source: github_advisory
+date: '2026-11-06'
+type: Vendor advisory
+signal: High-risk advisory
+title: LXD has arbitrary file write on client due to trusted image hash
+summary: LXD has arbitrary file write on client due to trusted image hash
+vendor: Go
+product: github.com/canonical/lxd
+cve: null
+operator_check: Check whether github.com/canonical/lxd is present in application dependency
+  manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to
+  a patched version where available.
+why_it_matters: GitHub has published a reviewed security advisory for github.com/canonical/lxd.
+  Prioritize it with other application dependency updates.
+sources:
+- title: GitHub Advisory GHSA-pjff-c2wc-f6jm
+  url: https://github.com/advisories/GHSA-pjff-c2wc-f6jm
+- title: Source reference
+  url: https://github.com/canonical/lxd/security/advisories/GHSA-pjff-c2wc-f6jm
+tags:
+- ghsa-pjff-c2wc-f6jm
+- vendor-advisory
+- go
+- github-advisory
+is_sample: false

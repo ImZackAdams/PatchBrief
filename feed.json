@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-06T16:37:19Z",
-  "total_items": 2396,
+  "generated": "2026-11-07T15:28:09Z",
+  "total_items": 2412,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-06T16:37:19Z",
+    "generated": "2026-11-07T15:28:09Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,17 +18,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-11-06T16:36:55Z",
-        "finished_at": "2026-11-06T16:36:56Z"
+        "started_at": "2026-11-07T15:27:56Z",
+        "finished_at": "2026-11-07T15:27:57Z"
       },
       {
         "id": "msrc",
         "label": "Microsoft Security Update Guide",
         "role": "source",
         "status": "ok",
-        "items_seen": 22,
-        "started_at": "2026-11-06T16:36:56Z",
-        "finished_at": "2026-11-06T16:36:57Z"
+        "items_seen": 25,
+        "started_at": "2026-11-07T15:27:57Z",
+        "finished_at": "2026-11-07T15:27:57Z"
       },
       {
         "id": "nvd",
@@ -36,26 +36,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 1,
-        "started_at": "2026-11-06T16:36:57Z",
-        "finished_at": "2026-11-06T16:37:14Z"
+        "started_at": "2026-11-07T15:27:57Z",
+        "finished_at": "2026-11-07T15:28:04Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 11,
-        "started_at": "2026-11-06T16:37:14Z",
-        "finished_at": "2026-11-06T16:37:15Z"
+        "items_seen": 13,
+        "started_at": "2026-11-07T15:28:04Z",
+        "finished_at": "2026-11-07T15:28:05Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-11-06T16:37:15Z",
-        "finished_at": "2026-11-06T16:37:15Z"
+        "items_seen": 0,
+        "started_at": "2026-11-07T15:28:05Z",
+        "finished_at": "2026-11-07T15:28:05Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,405 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-06T16:37:15Z",
-        "finished_at": "2026-11-06T16:37:16Z"
+        "started_at": "2026-11-07T15:28:05Z",
+        "finished_at": "2026-11-07T15:28:05Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 35,
-        "started_at": "2026-11-06T16:37:16Z",
-        "finished_at": "2026-11-06T16:37:16Z"
+        "items_seen": 33,
+        "started_at": "2026-11-07T15:28:05Z",
+        "finished_at": "2026-11-07T15:28:05Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-craft-cve-2026-123488",
+      "slug": "2026-11-craft-cve-2026-123488",
+      "url": "https://www.patchbrief.org/items/2026-11-craft-cve-2026-123488.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Craft CMS 4.0.0 — CVE-2026-123488 (Critical)",
+      "summary": "Craft CMS 4.0.0 before 4.18.9 and 5.0.0 before 5.11.2 contains an unauthenticated SQL injection vulnerability in the element search endpoint because the attribute parameter is concatenated into the query unsanitized and emulated PDO prepares allow stacked statements. Remote attackers can read and write the database, setting the admin flag or overwriting password hashes in the users table to gain administrator access.",
+      "vendor": "Craft",
+      "product": "CMS 4.0.0",
+      "cve": "CVE-2026-123488",
+      "operator_check": "Review CVE-2026-123488 in your asset inventory. Apply patches per vendor guidance and verify CMS 4.0.0 is not exposed. CVSS score: 9.8. EPSS probability: 0.5%; percentile: 41%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Craft CMS 4.0.0. Patch or mitigate promptly. EPSS percentile: 41%.",
+      "tags": [
+        "cve-2026-123488",
+        "vendor-advisory",
+        "craft",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-123488",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123488"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/craftcms/cms/security/advisories/GHSA-qcvp-ggx3-97r6"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/craft-cms-4.0.0-before-4.18.9-sql-injection-via-element-search-endpoint"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-cve-2026-62284",
+      "slug": "2026-11-go-cve-2026-62284",
+      "url": "https://www.patchbrief.org/items/2026-11-go-cve-2026-62284.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "OSAC operator: Kubeconfig credential-plugin execution and SSRF in console proxy",
+      "summary": "OSAC operator: Kubeconfig credential-plugin execution and SSRF in console proxy",
+      "vendor": "Go",
+      "product": "github.com/osac-project/osac-operator",
+      "cve": "CVE-2026-62284",
+      "operator_check": "Check whether github.com/osac-project/osac-operator is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6. EPSS probability: 0.5%; percentile: 43%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/osac-project/osac-operator. Prioritize it with other application dependency updates, especially because EPSS places it in the 43% percentile.",
+      "tags": [
+        "cve-2026-62284",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5w5g-j6hw-6p8f",
+          "url": "https://github.com/advisories/GHSA-5w5g-j6hw-6p8f"
+        },
+        {
+          "title": "NVD — CVE-2026-62284",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62284"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/osac-project/osac-operator/security/advisories/GHSA-5w5g-j6hw-6p8f"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-ghsa-47w9-6r3f-938g",
+      "slug": "2026-11-go-ghsa-47w9-6r3f-938g",
+      "url": "https://www.patchbrief.org/items/2026-11-go-ghsa-47w9-6r3f-938g.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LXD has restricted project bypass leading to arbitrary command execution",
+      "summary": "LXD has restricted project bypass leading to arbitrary command execution",
+      "vendor": "Go",
+      "product": "github.com/canonical/lxd",
+      "cve": null,
+      "operator_check": "Check whether github.com/canonical/lxd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/canonical/lxd. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-47w9-6r3f-938g",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-47w9-6r3f-938g",
+          "url": "https://github.com/advisories/GHSA-47w9-6r3f-938g"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/canonical/lxd/security/advisories/GHSA-47w9-6r3f-938g"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-ghsa-7mr3-28h5-m5vx",
+      "slug": "2026-11-go-ghsa-7mr3-28h5-m5vx",
+      "url": "https://www.patchbrief.org/items/2026-11-go-ghsa-7mr3-28h5-m5vx.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LXD has project restriction bypass for custom volume copy across projects",
+      "summary": "LXD has project restriction bypass for custom volume copy across projects",
+      "vendor": "Go",
+      "product": "github.com/canonical/lxd",
+      "cve": null,
+      "operator_check": "Check whether github.com/canonical/lxd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/canonical/lxd. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-7mr3-28h5-m5vx",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7mr3-28h5-m5vx",
+          "url": "https://github.com/advisories/GHSA-7mr3-28h5-m5vx"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/canonical/lxd/security/advisories/GHSA-7mr3-28h5-m5vx"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-ghsa-9j25-mm2h-2f76",
+      "slug": "2026-11-go-ghsa-9j25-mm2h-2f76",
+      "url": "https://www.patchbrief.org/items/2026-11-go-ghsa-9j25-mm2h-2f76.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LXD has arbitrary file write on host via `exec-output` symlink in crafted image",
+      "summary": "LXD has arbitrary file write on host via `exec-output` symlink in crafted image",
+      "vendor": "Go",
+      "product": "github.com/canonical/lxd",
+      "cve": null,
+      "operator_check": "Check whether github.com/canonical/lxd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/canonical/lxd. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-9j25-mm2h-2f76",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9j25-mm2h-2f76",
+          "url": "https://github.com/advisories/GHSA-9j25-mm2h-2f76"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/canonical/lxd/security/advisories/GHSA-9j25-mm2h-2f76"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-ghsa-fmc8-p6q7-75cc",
+      "slug": "2026-11-go-ghsa-fmc8-p6q7-75cc",
+      "url": "https://www.patchbrief.org/items/2026-11-go-ghsa-fmc8-p6q7-75cc.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LXD has argument injection in backup compression algorithm leading to AFW and ACE",
+      "summary": "LXD has argument injection in backup compression algorithm leading to AFW and ACE",
+      "vendor": "Go",
+      "product": "github.com/canonical/lxd",
+      "cve": null,
+      "operator_check": "Check whether github.com/canonical/lxd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/canonical/lxd. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-fmc8-p6q7-75cc",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fmc8-p6q7-75cc",
+          "url": "https://github.com/advisories/GHSA-fmc8-p6q7-75cc"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/canonical/lxd/security/advisories/GHSA-fmc8-p6q7-75cc"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-ghsa-jpf8-86f3-wp38",
+      "slug": "2026-11-go-ghsa-jpf8-86f3-wp38",
+      "url": "https://www.patchbrief.org/items/2026-11-go-ghsa-jpf8-86f3-wp38.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LXD has arbitrary file read+write on host via templates/ symlink in malicious image",
+      "summary": "LXD has arbitrary file read+write on host via templates/ symlink in malicious image",
+      "vendor": "Go",
+      "product": "github.com/canonical/lxd",
+      "cve": null,
+      "operator_check": "Check whether github.com/canonical/lxd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/canonical/lxd. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-jpf8-86f3-wp38",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jpf8-86f3-wp38",
+          "url": "https://github.com/advisories/GHSA-jpf8-86f3-wp38"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/canonical/lxd/security/advisories/GHSA-jpf8-86f3-wp38"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-ghsa-pjff-c2wc-f6jm",
+      "slug": "2026-11-go-ghsa-pjff-c2wc-f6jm",
+      "url": "https://www.patchbrief.org/items/2026-11-go-ghsa-pjff-c2wc-f6jm.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LXD has arbitrary file write on client due to trusted image hash",
+      "summary": "LXD has arbitrary file write on client due to trusted image hash",
+      "vendor": "Go",
+      "product": "github.com/canonical/lxd",
+      "cve": null,
+      "operator_check": "Check whether github.com/canonical/lxd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/canonical/lxd. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-pjff-c2wc-f6jm",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pjff-c2wc-f6jm",
+          "url": "https://github.com/advisories/GHSA-pjff-c2wc-f6jm"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/canonical/lxd/security/advisories/GHSA-pjff-c2wc-f6jm"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-ghsa-qx75-2p3r-pwm5",
+      "slug": "2026-11-go-ghsa-qx75-2p3r-pwm5",
+      "url": "https://www.patchbrief.org/items/2026-11-go-ghsa-qx75-2p3r-pwm5.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LXD has project restriction bypass in instance copy across projects",
+      "summary": "LXD has project restriction bypass in instance copy across projects",
+      "vendor": "Go",
+      "product": "github.com/canonical/lxd",
+      "cve": null,
+      "operator_check": "Check whether github.com/canonical/lxd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/canonical/lxd. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-qx75-2p3r-pwm5",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-qx75-2p3r-pwm5",
+          "url": "https://github.com/advisories/GHSA-qx75-2p3r-pwm5"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/canonical/lxd/security/advisories/GHSA-qx75-2p3r-pwm5"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-ghsa-vghh-5rfx-xhq8",
+      "slug": "2026-11-go-ghsa-vghh-5rfx-xhq8",
+      "url": "https://www.patchbrief.org/items/2026-11-go-ghsa-vghh-5rfx-xhq8.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "LXD has arbitrary file read+write on host via rootfs/ symlink in malicious image",
+      "summary": "LXD has arbitrary file read+write on host via rootfs/ symlink in malicious image",
+      "vendor": "Go",
+      "product": "github.com/canonical/lxd",
+      "cve": null,
+      "operator_check": "Check whether github.com/canonical/lxd is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/canonical/lxd. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-vghh-5rfx-xhq8",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vghh-5rfx-xhq8",
+          "url": "https://github.com/advisories/GHSA-vghh-5rfx-xhq8"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/canonical/lxd/security/advisories/GHSA-vghh-5rfx-xhq8"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-33050",
+      "slug": "2026-11-pypi-cve-2026-33050",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-33050.html",
+      "date": "2026-11-06",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "GeoNode has OS command injection via uploaded file layer name",
+      "summary": "GeoNode has OS command injection via uploaded file layer name",
+      "vendor": "PyPI",
+      "product": "GeoNode",
+      "cve": "CVE-2026-33050",
+      "operator_check": "Check whether GeoNode is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.7%; percentile: 52%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for GeoNode. Prioritize it with other application dependency updates, especially because EPSS places it in the 52% percentile.",
+      "tags": [
+        "cve-2026-33050",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-9fpx-fr6j-2vh6",
+          "url": "https://github.com/advisories/GHSA-9fpx-fr6j-2vh6"
+        },
+        {
+          "title": "NVD — CVE-2026-33050",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33050"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/GeoNode/geonode/security/advisories/GHSA-9fpx-fr6j-2vh6"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-sonicwall-cve-2026-19868",
+      "slug": "2026-11-sonicwall-cve-2026-19868",
+      "url": "https://www.patchbrief.org/items/2026-11-sonicwall-cve-2026-19868.html",
+      "date": "2026-11-06",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+      "summary": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+      "vendor": "SonicWall",
+      "product": "SonicOS SSLVPN",
+      "cve": "CVE-2026-19868",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-19868 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-20. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-19868",
+        "kev",
+        "sonicwall",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-19868",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868"
+        }
+      ]
+    },
     {
       "id": "2026-11-go-cve-2026-105769",
       "slug": "2026-11-go-cve-2026-105769",
@@ -211,6 +595,37 @@
         {
           "title": "NVD — CVE-2024-27834",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27834"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-109469",
+      "slug": "2026-11-microsoft-cve-2026-109469",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-109469.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Entra Device Registration Elevation of Privilege Vulnerability",
+      "summary": "Authorization bypass through user-controlled key in Entra Device Registration allows an unauthorized attacker to elevate privileges over a network. Published in November 2026 Early Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Entra Device Registration",
+      "cve": "CVE-2026-109469",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-109469. Confirm whether Entra Device Registration is deployed, then apply the current security update or documented mitigation. CVSS score: 10.0. EPSS probability: 0.7%; percentile: 52%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 52%.",
+      "tags": [
+        "cve-2026-109469",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-109469"
+        },
+        {
+          "title": "NVD — CVE-2026-109469",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109469"
         }
       ]
     },
@@ -740,6 +1155,76 @@
       ]
     },
     {
+      "id": "2026-11-microsoft-cve-2026-120640",
+      "slug": "2026-11-microsoft-cve-2026-120640",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-120640.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "CGI versions before 5.00 for Perl allow the POSTDATA, PUTDATA, PATCHDATA and XForms:Model parameters to be set from t...",
+      "summary": "CGI versions before 5.00 for Perl allow the POSTDATA, PUTDATA, PATCHDATA and XForms:Model parameters to be set from the query string or form fields Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-120640",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-120640. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.1%; percentile: 3%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 3%.",
+      "tags": [
+        "cve-2026-120640",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-120640"
+        },
+        {
+          "title": "NVD — CVE-2026-120640",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120640"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-120641",
+      "slug": "2026-11-microsoft-cve-2026-120641",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-120641.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "CGI versions before 5.00 for Perl return upload filenames with any client-supplied path, including ../ and Windows paths",
+      "summary": "CGI versions before 5.00 for Perl return upload filenames with any client-supplied path, including ../ and Windows paths Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-120641",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-120641. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.2%; percentile: 9%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 9%.",
+      "tags": [
+        "cve-2026-120641",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-120641"
+        },
+        {
+          "title": "NVD — CVE-2026-120641",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120641"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
       "id": "2026-11-microsoft-cve-2026-76024",
       "slug": "2026-11-microsoft-cve-2026-76024",
       "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-76024.html",
@@ -981,6 +1466,41 @@
         {
           "title": "Source reference",
           "url": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-82413",
+      "slug": "2026-11-microsoft-cve-2026-82413",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-82413.html",
+      "date": "2026-11-04",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "ntopng: authenticated (non-admin) OS command injection via the vulnerability-scan `scan_ports` parameter (`nmap` argu...",
+      "summary": "ntopng: authenticated (non-admin) OS command injection via the vulnerability-scan `scan_ports` parameter (`nmap` argument reaches `popen`) Published in November 2026 Early Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-82413",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-82413. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 1.1%; percentile: 65%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 65%.",
+      "tags": [
+        "cve-2026-82413",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-82413"
+        },
+        {
+          "title": "NVD — CVE-2026-82413",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82413"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
         }
       ]
     },
