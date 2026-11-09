@@ -1,0 +1,37 @@
+id: 2026-11-debug-vu-385711
+slug: 2026-11-debug-vu-385711
+external_id: VU-385711
+source: cert_vu
+date: '2026-11-09'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#385711: PrestaShop Performance Debug Configuration Contains a PHP Code
+  Injection Vulnerability'
+summary: Overview PrestaShop's back-office Performance > Debug mode functionality
+  contains a PHP code injection vulnerability. An authenticated attacker with permission
+  to modify debug-mode configuration can submit crafted cookie configuration values
+  that are written into an executable PHP configuration file. Successful exploitation
+  could allow arbitrary code execution with the privileges of the PHP process. Description
+  PrestaShop is an open-source e-commerce platform for creating and managing online
+  stores. Its back-office Performance configuration includes a Debug mode for developers,
+  which is enabled based on a specified cookie name and value. PrestaShop's debug-mode
+  configuration code inserts the user-controlled values debug_cookie_name and debug_cookie_value
+  into a PHP expression without adequately escaping or sanitizing them for use in
+  PHP...
+vendor: Debug
+product: mode functionality
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for mode functionality where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#385711
+  url: https://kb.cert.org/vuls/id/385711
+tags:
+- vu-385711
+- coordinated-disclosure
+- debug
+- cert-vu
+is_sample: false

@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-08T15:49:25Z",
-  "total_items": 2412,
+  "generated": "2026-11-09T19:31:58Z",
+  "total_items": 2420,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-08T15:49:25Z",
+    "generated": "2026-11-09T19:31:58Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-11-08T15:49:11Z",
-        "finished_at": "2026-11-08T15:49:11Z"
+        "items_seen": 4,
+        "started_at": "2026-11-09T19:31:46Z",
+        "finished_at": "2026-11-09T19:31:46Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-08T15:49:11Z",
-        "finished_at": "2026-11-08T15:49:12Z"
+        "started_at": "2026-11-09T19:31:46Z",
+        "finished_at": "2026-11-09T19:31:47Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-11-08T15:49:12Z",
-        "finished_at": "2026-11-08T15:49:18Z"
+        "items_seen": 0,
+        "started_at": "2026-11-09T19:31:47Z",
+        "finished_at": "2026-11-09T19:31:53Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 13,
-        "started_at": "2026-11-08T15:49:18Z",
-        "finished_at": "2026-11-08T15:49:19Z"
+        "started_at": "2026-11-09T19:31:53Z",
+        "finished_at": "2026-11-09T19:31:54Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-11-08T15:49:19Z",
-        "finished_at": "2026-11-08T15:49:19Z"
+        "items_seen": 2,
+        "started_at": "2026-11-09T19:31:54Z",
+        "finished_at": "2026-11-09T19:31:54Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,273 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-08T15:49:19Z",
-        "finished_at": "2026-11-08T15:49:20Z"
+        "started_at": "2026-11-09T19:31:54Z",
+        "finished_at": "2026-11-09T19:31:54Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 7,
-        "started_at": "2026-11-08T15:49:20Z",
-        "finished_at": "2026-11-08T15:49:20Z"
+        "items_seen": 9,
+        "started_at": "2026-11-09T19:31:54Z",
+        "finished_at": "2026-11-09T19:31:55Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-debug-vu-385711",
+      "slug": "2026-11-debug-vu-385711",
+      "url": "https://www.patchbrief.org/items/2026-11-debug-vu-385711.html",
+      "date": "2026-11-09",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#385711: PrestaShop Performance Debug Configuration Contains a PHP Code Injection Vulnerability",
+      "summary": "Overview PrestaShop's back-office Performance > Debug mode functionality contains a PHP code injection vulnerability. An authenticated attacker with permission to modify debug-mode configuration can submit crafted cookie configuration values that are written into an executable PHP configuration file. Successful exploitation could allow arbitrary code execution with the privileges of the PHP process. Description PrestaShop is an open-source e-commerce platform for creating and managing online stores. Its back-office Performance configuration includes a Debug mode for developers, which is enabled based on a specified cookie name and value. PrestaShop's debug-mode configuration code inserts the user-controlled values debug_cookie_name and debug_cookie_value into a PHP expression without adequately escaping or sanitizing them for use in PHP...",
+      "vendor": "Debug",
+      "product": "mode functionality",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for mode functionality where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-385711",
+        "coordinated-disclosure",
+        "debug",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#385711",
+          "url": "https://kb.cert.org/vuls/id/385711"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-frodobots-vu-188754",
+      "slug": "2026-11-frodobots-vu-188754",
+      "url": "https://www.patchbrief.org/items/2026-11-frodobots-vu-188754.html",
+      "date": "2026-11-09",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#188754: FrodoBots EarthRover Mini+ firmware contains multiple vulnerabilities",
+      "summary": "Overview Multiple vulnerabilities in the FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) may allow remote code execution, unauthorized access to onboard sensors, disclosure of sensitive information, and full compromise of affected devices. Exploitation may enable an attacker to remotely control the rover, access audiovisual streams, or pivot into the user’s network. Description The FrodoBots EarthRover Mini+ is a compact, internet‑connected mobile robot used in educational and consumer environments. The device includes a camera, microphone, motor controllers, and multiple onboard services. Multiple vulnerabilities in the EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) can allow remote code execution, unauthorized access to onboard sensors, exposure of sensitive data, and complete device compromise. An attacker... Related CVEs: CVE-2026-121685, CVE-2026-121686, CVE-2026-121687, CVE-2026-121688.",
+      "vendor": "FrodoBots",
+      "product": "EarthRover Mini+ firmware",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for EarthRover Mini+ firmware where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-188754",
+        "coordinated-disclosure",
+        "frodobots",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#188754",
+          "url": "https://kb.cert.org/vuls/id/188754"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-gpustack-cve-2026-102895",
+      "slug": "2026-11-gpustack-cve-2026-102895",
+      "url": "https://www.patchbrief.org/items/2026-11-gpustack-cve-2026-102895.html",
+      "date": "2026-11-09",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "GPUStack Improper Authentication Vulnerability",
+      "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
+      "vendor": "GPUStack",
+      "product": "GPUStack",
+      "cve": "CVE-2026-102895",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-102895 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-12. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-102895",
+        "kev",
+        "gpustack",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-102895",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102895"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-maven-cve-2026-63436",
+      "slug": "2026-11-maven-cve-2026-63436",
+      "url": "https://www.patchbrief.org/items/2026-11-maven-cve-2026-63436.html",
+      "date": "2026-11-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "zt-zip: Path traversal in fluent API unpack",
+      "summary": "zt-zip: Path traversal in fluent API unpack",
+      "vendor": "Maven",
+      "product": "org.zeroturnaround:zt-zip",
+      "cve": "CVE-2026-63436",
+      "operator_check": "Check whether org.zeroturnaround:zt-zip is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.zeroturnaround:zt-zip. Prioritize it with other application dependency updates, especially because EPSS places it in the 15% percentile.",
+      "tags": [
+        "cve-2026-63436",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-52c6-99qm-3hqr",
+          "url": "https://github.com/advisories/GHSA-52c6-99qm-3hqr"
+        },
+        {
+          "title": "NVD — CVE-2026-63436",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63436"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/zeroturnaround/zt-zip/security/advisories/GHSA-52c6-99qm-3hqr"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-openbsd-cve-2026-123158",
+      "slug": "2026-11-openbsd-cve-2026-123158",
+      "url": "https://www.patchbrief.org/items/2026-11-openbsd-cve-2026-123158.html",
+      "date": "2026-11-09",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+      "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+      "vendor": "OpenBSD",
+      "product": "OpenSSH",
+      "cve": "CVE-2026-123158",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-123158 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-12. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-123158",
+        "kev",
+        "openbsd",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-123158",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-63417",
+      "slug": "2026-11-pypi-cve-2026-63417",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-63417.html",
+      "date": "2026-11-09",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Logging Redactor: PII data in str/repr of non primitive objects was not being redacted",
+      "summary": "Logging Redactor: PII data in str/repr of non primitive objects was not being redacted",
+      "vendor": "PyPI",
+      "product": "loggingredactor",
+      "cve": "CVE-2026-63417",
+      "operator_check": "Check whether loggingredactor is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2. EPSS probability: 0.3%; percentile: 23%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for loggingredactor. Prioritize it with other application dependency updates, especially because EPSS places it in the 23% percentile.",
+      "tags": [
+        "cve-2026-63417",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w7qv-268h-9h3f",
+          "url": "https://github.com/advisories/GHSA-w7qv-268h-9h3f"
+        },
+        {
+          "title": "NVD — CVE-2026-63417",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63417"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/armurox/loggingredactor/security/advisories/GHSA-w7qv-268h-9h3f"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-63470",
+      "slug": "2026-11-pypi-cve-2026-63470",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-63470.html",
+      "date": "2026-11-09",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "fastapi-code-generator: Call-time RCE via operation summary -> unescaped route-handler docstring",
+      "summary": "fastapi-code-generator: Call-time RCE via operation summary -> unescaped route-handler docstring",
+      "vendor": "PyPI",
+      "product": "fastapi-code-generator",
+      "cve": "CVE-2026-63470",
+      "operator_check": "Check whether fastapi-code-generator is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.3. EPSS probability: 0.5%; percentile: 41%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for fastapi-code-generator. Prioritize it with other application dependency updates, especially because EPSS places it in the 41% percentile.",
+      "tags": [
+        "cve-2026-63470",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h667-4jj2-cgv4",
+          "url": "https://github.com/advisories/GHSA-h667-4jj2-cgv4"
+        },
+        {
+          "title": "NVD — CVE-2026-63470",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63470"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/koxudaxi/fastapi-code-generator/security/advisories/GHSA-h667-4jj2-cgv4"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-signalwire-cve-2026-116779",
+      "slug": "2026-11-signalwire-cve-2026-116779",
+      "url": "https://www.patchbrief.org/items/2026-11-signalwire-cve-2026-116779.html",
+      "date": "2026-11-09",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "SignalWire FreeSwitch Code Injection Vulnerability",
+      "summary": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+      "vendor": "SignalWire",
+      "product": "FreeSwitch",
+      "cve": "CVE-2026-116779",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-116779 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-12. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-116779",
+        "kev",
+        "signalwire",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-116779",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779"
+        }
+      ]
+    },
     {
       "id": "2026-11-craft-cve-2026-123488",
       "slug": "2026-11-craft-cve-2026-123488",
