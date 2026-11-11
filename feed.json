@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-10T16:48:59Z",
-  "total_items": 2451,
+  "generated": "2026-11-11T16:55:34Z",
+  "total_items": 2504,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-10T16:48:59Z",
+    "generated": "2026-11-11T16:55:34Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,27 +17,27 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-11-10T16:48:45Z",
-        "finished_at": "2026-11-10T16:48:45Z"
+        "items_seen": 10,
+        "started_at": "2026-11-11T16:55:17Z",
+        "finished_at": "2026-11-11T16:55:17Z"
       },
       {
         "id": "msrc",
         "label": "Microsoft Security Update Guide",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-11-10T16:48:45Z",
-        "finished_at": "2026-11-10T16:48:45Z"
+        "items_seen": 25,
+        "started_at": "2026-11-11T16:55:17Z",
+        "finished_at": "2026-11-11T16:55:22Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-10T16:48:45Z",
-        "finished_at": "2026-11-10T16:48:52Z"
+        "items_seen": 1,
+        "started_at": "2026-11-11T16:55:22Z",
+        "finished_at": "2026-11-11T16:55:29Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-11-10T16:48:52Z",
-        "finished_at": "2026-11-10T16:48:53Z"
+        "started_at": "2026-11-11T16:55:29Z",
+        "finished_at": "2026-11-11T16:55:30Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-11-10T16:48:53Z",
-        "finished_at": "2026-11-10T16:48:54Z"
+        "started_at": "2026-11-11T16:55:30Z",
+        "finished_at": "2026-11-11T16:55:30Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,464 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-10T16:48:54Z",
-        "finished_at": "2026-11-10T16:48:55Z"
+        "started_at": "2026-11-11T16:55:30Z",
+        "finished_at": "2026-11-11T16:55:30Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 34,
-        "started_at": "2026-11-10T16:48:55Z",
-        "finished_at": "2026-11-10T16:48:55Z"
+        "items_seen": 17,
+        "started_at": "2026-11-11T16:55:30Z",
+        "finished_at": "2026-11-11T16:55:31Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-nuget-cve-2026-114146",
+      "slug": "2026-11-nuget-cve-2026-114146",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-114146.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-114146 - ASP.NET Core Elevation of Privilege Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-114146 - ASP.NET Core Elevation of Privilege Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.Http.Connections",
+      "cve": "CVE-2026-114146",
+      "operator_check": "Check whether Microsoft.AspNetCore.Http.Connections is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.Http.Connections. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-114146",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-67wp-ghc2-fw2g",
+          "url": "https://github.com/advisories/GHSA-67wp-ghc2-fw2g"
+        },
+        {
+          "title": "NVD — CVE-2026-114146",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114146"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-67wp-ghc2-fw2g"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-114147",
+      "slug": "2026-11-nuget-cve-2026-114147",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-114147.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-114147 - ASP.NET Core Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-114147 - ASP.NET Core Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.SignalR.StackExchangeRedis",
+      "cve": "CVE-2026-114147",
+      "operator_check": "Check whether Microsoft.AspNetCore.SignalR.StackExchangeRedis is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.SignalR.StackExchangeRedis. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-114147",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wr8v-9x5q-ggcm",
+          "url": "https://github.com/advisories/GHSA-wr8v-9x5q-ggcm"
+        },
+        {
+          "title": "NVD — CVE-2026-114147",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114147"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-wr8v-9x5q-ggcm"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-114151",
+      "slug": "2026-11-nuget-cve-2026-114151",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-114151.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-114151 - Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-114151 - Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.win-x86",
+      "cve": "CVE-2026-114151",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.win-x86 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.win-x86. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-114151",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fpxj-5c99-g7vj",
+          "url": "https://github.com/advisories/GHSA-fpxj-5c99-g7vj"
+        },
+        {
+          "title": "NVD — CVE-2026-114151",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114151"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-fpxj-5c99-g7vj"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-114152",
+      "slug": "2026-11-nuget-cve-2026-114152",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-114152.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-114152 - Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-114152 - Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.win-x86",
+      "cve": "CVE-2026-114152",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.win-x86 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.win-x86. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-114152",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xf35-v9jh-g65w",
+          "url": "https://github.com/advisories/GHSA-xf35-v9jh-g65w"
+        },
+        {
+          "title": "NVD — CVE-2026-114152",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114152"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-xf35-v9jh-g65w"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-114158",
+      "slug": "2026-11-nuget-cve-2026-114158",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-114158.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-114158 - Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-114158 - Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.win-x86",
+      "cve": "CVE-2026-114158",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.win-x86 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.win-x86. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-114158",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r8h3-p8p6-ggp7",
+          "url": "https://github.com/advisories/GHSA-r8h3-p8p6-ggp7"
+        },
+        {
+          "title": "NVD — CVE-2026-114158",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114158"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-r8h3-p8p6-ggp7"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-114159",
+      "slug": "2026-11-nuget-cve-2026-114159",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-114159.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-114159 - Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-114159 - Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.win-x86",
+      "cve": "CVE-2026-114159",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.win-x86 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.win-x86. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-114159",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3cgx-w6gm-fqrx",
+          "url": "https://github.com/advisories/GHSA-3cgx-w6gm-fqrx"
+        },
+        {
+          "title": "NVD — CVE-2026-114159",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114159"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-3cgx-w6gm-fqrx"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-118745",
+      "slug": "2026-11-nuget-cve-2026-118745",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-118745.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-118745 - Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-118745 - Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.win-x86",
+      "cve": "CVE-2026-118745",
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.win-x86 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.win-x86. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-118745",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x8x8-p968-x646",
+          "url": "https://github.com/advisories/GHSA-x8x8-p968-x646"
+        },
+        {
+          "title": "NVD — CVE-2026-118745",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118745"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-x8x8-p968-x646"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-120778",
+      "slug": "2026-11-nuget-cve-2026-120778",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-120778.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-120778 - Aspire Elevation of Privilege Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-120778 - Aspire Elevation of Privilege Vulnerability",
+      "vendor": "NuGet",
+      "product": "Aspire.Cli",
+      "cve": "CVE-2026-120778",
+      "operator_check": "Check whether Aspire.Cli is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Aspire.Cli. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-120778",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m63f-xhvm-6mv5",
+          "url": "https://github.com/advisories/GHSA-m63f-xhvm-6mv5"
+        },
+        {
+          "title": "NVD — CVE-2026-120778",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120778"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/microsoft/aspire/security/advisories/GHSA-m63f-xhvm-6mv5"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-120792",
+      "slug": "2026-11-nuget-cve-2026-120792",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-120792.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-120792 - Aspire Information Disclosure Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-120792 - Aspire Information Disclosure Vulnerability",
+      "vendor": "NuGet",
+      "product": "Aspire.Cli",
+      "cve": "CVE-2026-120792",
+      "operator_check": "Check whether Aspire.Cli is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Aspire.Cli. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-120792",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-q6jf-24jf-m3cg",
+          "url": "https://github.com/advisories/GHSA-q6jf-24jf-m3cg"
+        },
+        {
+          "title": "NVD — CVE-2026-120792",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120792"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/microsoft/aspire/security/advisories/GHSA-q6jf-24jf-m3cg"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-wwbn-cve-2026-126542",
+      "slug": "2026-11-wwbn-cve-2026-126542",
+      "url": "https://www.patchbrief.org/items/2026-11-wwbn-cve-2026-126542.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "WWBN AVideo 6.5 — CVE-2026-126542 (Critical)",
+      "summary": "WWBN AVideo 6.5 through 29.7.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to log in as any user via Hybridauth social login display names. Attackers can set their X, Facebook, Yahoo or LinkedIn display name to a victim's username and withhold email, causing login.json.php or oauth2.php to log them in as that account, including administrators, without a password.",
+      "vendor": "WWBN",
+      "product": "AVideo 6.5",
+      "cve": "CVE-2026-126542",
+      "operator_check": "Review CVE-2026-126542 in your asset inventory. Apply patches per vendor guidance and verify AVideo 6.5 is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in WWBN AVideo 6.5. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-126542",
+        "vendor-advisory",
+        "wwbn",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-126542",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126542"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/WWBN/AVideo/blob/v29.7.1/objects/login.json.php#L133-L145"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/WWBN/AVideo/blob/v29.7.1/plugin/MobileManager/oauth2.php#L90-L102"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-barracuda-networks-cve-2026-111560",
+      "slug": "2026-11-barracuda-networks-cve-2026-111560",
+      "url": "https://www.patchbrief.org/items/2026-11-barracuda-networks-cve-2026-111560.html",
+      "date": "2026-11-10",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
+      "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+      "vendor": "Barracuda Networks",
+      "product": "Multiple Products",
+      "cve": "CVE-2026-111560",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-111560 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-13. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-111560",
+        "kev",
+        "barracuda-networks",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-111560",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111560"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-barracuda-networks-cve-2026-116606",
+      "slug": "2026-11-barracuda-networks-cve-2026-116606",
+      "url": "https://www.patchbrief.org/items/2026-11-barracuda-networks-cve-2026-116606.html",
+      "date": "2026-11-10",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
+      "vendor": "Barracuda Networks",
+      "product": "Barracuda Email Security Gateway (ESG)",
+      "cve": "CVE-2026-116606",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-116606 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-13. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-116606",
+        "kev",
+        "barracuda-networks",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-116606",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116606"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-cisco-cve-2026-20320",
+      "slug": "2026-11-cisco-cve-2026-20320",
+      "url": "https://www.patchbrief.org/items/2026-11-cisco-cve-2026-20320.html",
+      "date": "2026-11-10",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
+      "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
+      "vendor": "Cisco",
+      "product": "BroadWorks",
+      "cve": "CVE-2026-20320",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-20320 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-24. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-20320",
+        "kev",
+        "cisco",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-20320",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20320"
+        }
+      ]
+    },
     {
       "id": "2026-11-go-cve-2026-119345",
       "slug": "2026-11-go-cve-2026-119345",
@@ -114,6 +557,37 @@
       ]
     },
     {
+      "id": "2026-11-google-cve-2026-125350",
+      "slug": "2026-11-google-cve-2026-125350",
+      "url": "https://www.patchbrief.org/items/2026-11-google-cve-2026-125350.html",
+      "date": "2026-11-10",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Google Chromium Use-After-Free Vulnerability",
+      "summary": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+      "vendor": "Google",
+      "product": "Chromium",
+      "cve": "CVE-2026-125350",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-125350 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-24. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-125350",
+        "kev",
+        "google",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-125350",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125350"
+        }
+      ]
+    },
+    {
       "id": "2026-11-indotalent-cve-2026-125384",
       "slug": "2026-11-indotalent-cve-2026-125384",
       "url": "https://www.patchbrief.org/items/2026-11-indotalent-cve-2026-125384.html",
@@ -145,6 +619,912 @@
         {
           "title": "Source reference",
           "url": "https://github.com/go2ismail/Asp.Net-Core-Inventory-Order-Management-System/blob/v9.20250118/Infrastructure/Infrastructure/SeedManager/Systems/UserAdminSeeder.cs"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105020",
+      "slug": "2026-11-microsoft-cve-2026-105020",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105020.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105020",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105020. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105020",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105020"
+        },
+        {
+          "title": "NVD — CVE-2026-105020",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105020"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105021",
+      "slug": "2026-11-microsoft-cve-2026-105021",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105021.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105021",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105021. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105021",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105021"
+        },
+        {
+          "title": "NVD — CVE-2026-105021",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105021"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105023",
+      "slug": "2026-11-microsoft-cve-2026-105023",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105023.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105023",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105023. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105023",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105023"
+        },
+        {
+          "title": "NVD — CVE-2026-105023",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105023"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105026",
+      "slug": "2026-11-microsoft-cve-2026-105026",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105026.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105026",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105026. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105026",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105026"
+        },
+        {
+          "title": "NVD — CVE-2026-105026",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105026"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105490",
+      "slug": "2026-11-microsoft-cve-2026-105490",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105490.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Stack-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105490",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105490. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105490",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105490"
+        },
+        {
+          "title": "NVD — CVE-2026-105490",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105490"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105491",
+      "slug": "2026-11-microsoft-cve-2026-105491",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105491.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105491",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105491. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105491",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105491"
+        },
+        {
+          "title": "NVD — CVE-2026-105491",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105491"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105493",
+      "slug": "2026-11-microsoft-cve-2026-105493",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105493.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Stack-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105493",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105493. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105493",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105493"
+        },
+        {
+          "title": "NVD — CVE-2026-105493",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105493"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105495",
+      "slug": "2026-11-microsoft-cve-2026-105495",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105495.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105495",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105495. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105495",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105495"
+        },
+        {
+          "title": "NVD — CVE-2026-105495",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105495"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105496",
+      "slug": "2026-11-microsoft-cve-2026-105496",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105496.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Double free in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105496",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105496. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105496",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105496"
+        },
+        {
+          "title": "NVD — CVE-2026-105496",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105496"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105497",
+      "slug": "2026-11-microsoft-cve-2026-105497",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105497.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105497",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105497. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105497",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105497"
+        },
+        {
+          "title": "NVD — CVE-2026-105497",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105497"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105498",
+      "slug": "2026-11-microsoft-cve-2026-105498",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105498.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105498",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105498. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105498",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105498"
+        },
+        {
+          "title": "NVD — CVE-2026-105498",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105498"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5127648"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105499",
+      "slug": "2026-11-microsoft-cve-2026-105499",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105499.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Advanced Rasterization Platform Elevation of Privilege Vulnerability",
+      "summary": "Out-of-bounds read in Windows Advanced Rasterization Platform allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Advanced Rasterization Platform",
+      "cve": "CVE-2026-105499",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105499. Confirm whether Windows Advanced Rasterization Platform is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105499",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105499"
+        },
+        {
+          "title": "NVD — CVE-2026-105499",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105499"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126651"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105501",
+      "slug": "2026-11-microsoft-cve-2026-105501",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105501.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Installer Elevation of Privilege Vulnerability",
+      "summary": "Incorrect authorization in Windows Installer allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation More Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Installer",
+      "cve": "CVE-2026-105501",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105501. Confirm whether Windows Installer is deployed, then apply the current security update or documented mitigation. CVSS score: 7.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105501",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105501"
+        },
+        {
+          "title": "NVD — CVE-2026-105501",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105501"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5131291"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105518",
+      "slug": "2026-11-microsoft-cve-2026-105518",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105518.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows iSCSI Remote Code Execution Vulnerability",
+      "summary": "Use after free in Windows iSCSI allows an unauthorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows iSCSI",
+      "cve": "CVE-2026-105518",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105518. Confirm whether Windows iSCSI is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105518",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105518"
+        },
+        {
+          "title": "NVD — CVE-2026-105518",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105518"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5131291"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105524",
+      "slug": "2026-11-microsoft-cve-2026-105524",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105524.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Management Instrumentation Elevation of Privilege Vulnerability",
+      "summary": "Weak authentication in Windows Management Instrumentation allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation More Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Management Instrumentation",
+      "cve": "CVE-2026-105524",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105524. Confirm whether Windows Management Instrumentation is deployed, then apply the current security update or documented mitigation. CVSS score: 7.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105524",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105524"
+        },
+        {
+          "title": "NVD — CVE-2026-105524",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105524"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5131291"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105534",
+      "slug": "2026-11-microsoft-cve-2026-105534",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105534.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Storage Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Storage allows an unauthorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Storage",
+      "cve": "CVE-2026-105534",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105534. Confirm whether Windows Storage is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105534",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105534"
+        },
+        {
+          "title": "NVD — CVE-2026-105534",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105534"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5131291"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105542",
+      "slug": "2026-11-microsoft-cve-2026-105542",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105542.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows NTFS Remote Code Execution Vulnerability",
+      "summary": "Untrusted pointer dereference in Windows NTFS allows an unauthorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Unlikely.",
+      "vendor": "Microsoft",
+      "product": "Windows NTFS",
+      "cve": "CVE-2026-105542",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105542. Confirm whether Windows NTFS is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105542",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105542"
+        },
+        {
+          "title": "NVD — CVE-2026-105542",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105542"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5131291"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-105581",
+      "slug": "2026-11-microsoft-cve-2026-105581",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-105581.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Desktop Window Manager Elevation of Privilege Vulnerability",
+      "summary": "Stack-based buffer overflow in Desktop Window Manager allows an authorized attacker to elevate privileges locally. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Desktop Window Manager",
+      "cve": "CVE-2026-105581",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-105581. Confirm whether Desktop Window Manager is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-105581",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-105581"
+        },
+        {
+          "title": "NVD — CVE-2026-105581",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105581"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5132061"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-108401",
+      "slug": "2026-11-microsoft-cve-2026-108401",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-108401.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Remote Desktop Services Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Remote Desktop Services allows an authorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Remote Desktop Services",
+      "cve": "CVE-2026-108401",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-108401. Confirm whether Windows Remote Desktop Services is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-108401",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-108401"
+        },
+        {
+          "title": "NVD — CVE-2026-108401",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108401"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5131291"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-108411",
+      "slug": "2026-11-microsoft-cve-2026-108411",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-108411.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft ODBC Driver Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows ODBC Driver allows an unauthorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows ODBC Driver",
+      "cve": "CVE-2026-108411",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-108411. Confirm whether Windows ODBC Driver is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-108411",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-108411"
+        },
+        {
+          "title": "NVD — CVE-2026-108411",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108411"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5131291"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-109454",
+      "slug": "2026-11-microsoft-cve-2026-109454",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-109454.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Microsoft Office SharePoint Spoofing Vulnerability",
+      "summary": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Office SharePoint",
+      "cve": "CVE-2026-109454",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-109454. Confirm whether Microsoft Office SharePoint is deployed, then apply the current security update or documented mitigation. CVSS score: 9.0.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-109454",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-109454"
+        },
+        {
+          "title": "NVD — CVE-2026-109454",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109454"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.microsoft.com/en-us/download/details.aspx?id=108898"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-109459",
+      "slug": "2026-11-microsoft-cve-2026-109459",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-109459.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows Message Queuing Queue Manager Remote Code Execution Vulnerability",
+      "summary": "Heap-based buffer overflow in Windows Message Queuing Queue Manager allows an unauthorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows Message Queuing Queue Manager",
+      "cve": "CVE-2026-109459",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-109459. Confirm whether Windows Message Queuing Queue Manager is deployed, then apply the current security update or documented mitigation. CVSS score: 8.1.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-109459",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-109459"
+        },
+        {
+          "title": "NVD — CVE-2026-109459",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109459"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5131291"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-109463",
+      "slug": "2026-11-microsoft-cve-2026-109463",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-109463.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Windows DNS Remote Code Execution Vulnerability",
+      "summary": "Deserialization of untrusted data in Windows DNS allows an unauthorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Windows DNS",
+      "cve": "CVE-2026-109463",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-109463. Confirm whether Windows DNS is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-109463",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-109463"
+        },
+        {
+          "title": "NVD — CVE-2026-109463",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109463"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5126835"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-109464",
+      "slug": "2026-11-microsoft-cve-2026-109464",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-109464.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Office SharePoint Remote Code Execution Vulnerability",
+      "summary": "Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:Exploitation Less Likely.",
+      "vendor": "Microsoft",
+      "product": "Microsoft Office SharePoint",
+      "cve": "CVE-2026-109464",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-109464. Confirm whether Microsoft Office SharePoint is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-109464",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-109464"
+        },
+        {
+          "title": "NVD — CVE-2026-109464",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109464"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.microsoft.com/en-us/download/details.aspx?id=108898"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-109467",
+      "slug": "2026-11-microsoft-cve-2026-109467",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-109467.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Azure DevOps Server Remote Code Execution Vulnerability",
+      "summary": "Improper authentication in Azure DevOps allows an authorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.",
+      "vendor": "Microsoft",
+      "product": "Azure DevOps",
+      "cve": "CVE-2026-109467",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-109467. Confirm whether Azure DevOps is deployed, then apply the current security update or documented mitigation. CVSS score: 9.9.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates.",
+      "tags": [
+        "cve-2026-109467",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-109467"
+        },
+        {
+          "title": "NVD — CVE-2026-109467",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109467"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://aka.ms/devopsserverpatch9"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-124194",
+      "slug": "2026-11-microsoft-cve-2026-124194",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-124194.html",
+      "date": "2026-11-10",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+      "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+      "vendor": "Microsoft",
+      "product": "Office",
+      "cve": "CVE-2026-124194",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-124194 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-24. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-124194",
+        "kev",
+        "microsoft",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-124194",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124194"
         }
       ]
     },
@@ -324,6 +1704,76 @@
       ]
     },
     {
+      "id": "2026-11-npm-cve-2026-125120",
+      "slug": "2026-11-npm-cve-2026-125120",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-125120.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Mongoose: sanitizeFilter not applied on countDocuments",
+      "summary": "Mongoose: sanitizeFilter not applied on countDocuments",
+      "vendor": "npm",
+      "product": "mongoose",
+      "cve": "CVE-2026-125120",
+      "operator_check": "Check whether mongoose is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 47%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mongoose. Prioritize it with other application dependency updates, especially because EPSS places it in the 47% percentile.",
+      "tags": [
+        "cve-2026-125120",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pcrw-h46h-c93h",
+          "url": "https://github.com/advisories/GHSA-pcrw-h46h-c93h"
+        },
+        {
+          "title": "NVD — CVE-2026-125120",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125120"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Automattic/mongoose/security/advisories/GHSA-pcrw-h46h-c93h"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-126187",
+      "slug": "2026-11-npm-cve-2026-126187",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-126187.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "React: Unauthenticated Remote Code Execution in React Server Components",
+      "summary": "React: Unauthenticated Remote Code Execution in React Server Components",
+      "vendor": "npm",
+      "product": "react-server-dom-parcel",
+      "cve": "CVE-2026-126187",
+      "operator_check": "Check whether react-server-dom-parcel is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 9.5.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for react-server-dom-parcel. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-126187",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xqc2-xf4c-x3h3",
+          "url": "https://github.com/advisories/GHSA-xqc2-xf4c-x3h3"
+        },
+        {
+          "title": "NVD — CVE-2026-126187",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126187"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/react/react/security/advisories/GHSA-xqc2-xf4c-x3h3"
+        }
+      ]
+    },
+    {
       "id": "2026-11-npm-cve-2026-95860",
       "slug": "2026-11-npm-cve-2026-95860",
       "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-95860.html",
@@ -355,6 +1805,293 @@
         {
           "title": "Source reference",
           "url": "https://github.com/node-opcua/node-opcua/security/advisories/GHSA-xggf-m53x-jc3f"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-114149",
+      "slug": "2026-11-nuget-cve-2026-114149",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-114149.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-114149 - ASP.NET Core Denial of Service Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-114149 - ASP.NET Core Denial of Service Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+      "cve": "CVE-2026-114149",
+      "operator_check": "Check whether Microsoft.AspNetCore.App.Runtime.linux-arm is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.App.Runtime.linux-arm. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-114149",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x33c-w48q-qrgc",
+          "url": "https://github.com/advisories/GHSA-x33c-w48q-qrgc"
+        },
+        {
+          "title": "NVD — CVE-2026-114149",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114149"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-x33c-w48q-qrgc"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-120006",
+      "slug": "2026-11-nuget-cve-2026-120006",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-120006.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-120006 - Aspire Elevation of Privilege Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-120006 - Aspire Elevation of Privilege Vulnerability",
+      "vendor": "NuGet",
+      "product": "Aspire.Hosting.AppHost",
+      "cve": "CVE-2026-120006",
+      "operator_check": "Check whether Aspire.Hosting.AppHost is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Aspire.Hosting.AppHost. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-120006",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f7vh-h5g3-7jrh",
+          "url": "https://github.com/advisories/GHSA-f7vh-h5g3-7jrh"
+        },
+        {
+          "title": "NVD — CVE-2026-120006",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120006"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/microsoft/aspire/security/advisories/GHSA-f7vh-h5g3-7jrh"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-ghsa-6rff-vv3p-7mrw",
+      "slug": "2026-11-nuget-ghsa-6rff-vv3p-7mrw",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-ghsa-6rff-vv3p-7mrw.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-114159 - Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-114159 - Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.win-x86",
+      "cve": null,
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.win-x86 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.win-x86. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-6rff-vv3p-7mrw",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6rff-vv3p-7mrw",
+          "url": "https://github.com/advisories/GHSA-6rff-vv3p-7mrw"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114159"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-ghsa-95x6-7hq8-2c37",
+      "slug": "2026-11-nuget-ghsa-95x6-7hq8-2c37",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-ghsa-95x6-7hq8-2c37.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-114157 - ASP.NET Core Security Feature Bypass Vulnerability",
+      "summary": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-114157 - ASP.NET Core Security Feature Bypass Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.AspNetCore.App.Runtime.win-arm64",
+      "cve": null,
+      "operator_check": "Check whether Microsoft.AspNetCore.App.Runtime.win-arm64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.AspNetCore.App.Runtime.win-arm64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-95x6-7hq8-2c37",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-95x6-7hq8-2c37",
+          "url": "https://github.com/advisories/GHSA-95x6-7hq8-2c37"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114157"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-ghsa-cfv6-4v53-fff6",
+      "slug": "2026-11-nuget-ghsa-cfv6-4v53-fff6",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-ghsa-cfv6-4v53-fff6.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-118745 - Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-118745 - Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.win-x86",
+      "cve": null,
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.win-x86 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.win-x86. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-cfv6-4v53-fff6",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cfv6-4v53-fff6",
+          "url": "https://github.com/advisories/GHSA-cfv6-4v53-fff6"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118745"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-ghsa-cjjx-gv54-83qh",
+      "slug": "2026-11-nuget-ghsa-cjjx-gv54-83qh",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-ghsa-cjjx-gv54-83qh.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-114158 - Visual Studio Remote Code Execution Vulnerability",
+      "summary": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-114158 - Visual Studio Remote Code Execution Vulnerability",
+      "vendor": "NuGet",
+      "product": "Microsoft.NETCore.App.Runtime.win-x86",
+      "cve": null,
+      "operator_check": "Check whether Microsoft.NETCore.App.Runtime.win-x86 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Microsoft.NETCore.App.Runtime.win-x86. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-cjjx-gv54-83qh",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-cjjx-gv54-83qh",
+          "url": "https://github.com/advisories/GHSA-cjjx-gv54-83qh"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114158"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-ghsa-fgfw-85w4-gx99",
+      "slug": "2026-11-nuget-ghsa-fgfw-85w4-gx99",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-ghsa-fgfw-85w4-gx99.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-120792 - Aspire Information Disclosure Vulnerability",
+      "summary": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-120792 - Aspire Information Disclosure Vulnerability",
+      "vendor": "NuGet",
+      "product": "Aspire.Cli",
+      "cve": null,
+      "operator_check": "Check whether Aspire.Cli is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Aspire.Cli. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-fgfw-85w4-gx99",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-fgfw-85w4-gx99",
+          "url": "https://github.com/advisories/GHSA-fgfw-85w4-gx99"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120792"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-ghsa-hfpm-4fc4-g2wc",
+      "slug": "2026-11-nuget-ghsa-hfpm-4fc4-g2wc",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-ghsa-hfpm-4fc4-g2wc.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-120778 - Aspire Elevation of Privilege Vulnerability",
+      "summary": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-120778 - Aspire Elevation of Privilege Vulnerability",
+      "vendor": "NuGet",
+      "product": "Aspire.Cli",
+      "cve": null,
+      "operator_check": "Check whether Aspire.Cli is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Aspire.Cli. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-hfpm-4fc4-g2wc",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-hfpm-4fc4-g2wc",
+          "url": "https://github.com/advisories/GHSA-hfpm-4fc4-g2wc"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120778"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-openwave-messaging-l-cve-2026-111793",
+      "slug": "2026-11-openwave-messaging-l-cve-2026-111793",
+      "url": "https://www.patchbrief.org/items/2026-11-openwave-messaging-l-cve-2026-111793.html",
+      "date": "2026-11-10",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
+      "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
+      "vendor": "Openwave Messaging Limited",
+      "product": "Webtop Media Transcoder",
+      "cve": "CVE-2026-111793",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-111793 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-24. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-111793",
+        "kev",
+        "openwave-messaging-limited",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-111793",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111793"
         }
       ]
     },
@@ -460,6 +2197,76 @@
         {
           "title": "Source reference",
           "url": "https://github.com/ag2ai/ag2/security/advisories/GHSA-2h4w-29cv-2cmv"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-rubygems-cve-2026-126080",
+      "slug": "2026-11-rubygems-cve-2026-126080",
+      "url": "https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-126080.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Active Support: Possible DoS vulnerability in Active Support safe_constantize",
+      "summary": "Active Support: Possible DoS vulnerability in Active Support safe_constantize",
+      "vendor": "RubyGems",
+      "product": "activesupport",
+      "cve": "CVE-2026-126080",
+      "operator_check": "Check whether activesupport is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for activesupport. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-126080",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8474-xrp6-wh69",
+          "url": "https://github.com/advisories/GHSA-8474-xrp6-wh69"
+        },
+        {
+          "title": "NVD — CVE-2026-126080",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126080"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rails/rails/security/advisories/GHSA-8474-xrp6-wh69"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-rubygems-cve-2026-126186",
+      "slug": "2026-11-rubygems-cve-2026-126186",
+      "url": "https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-126186.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Active Storage: Possible arbitrary file read and remote code execution in video previews, analysis and image processing",
+      "summary": "Active Storage: Possible arbitrary file read and remote code execution in video previews, analysis and image processing",
+      "vendor": "RubyGems",
+      "product": "activestorage",
+      "cve": "CVE-2026-126186",
+      "operator_check": "Check whether activestorage is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for activestorage. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-126186",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-v924-7rp8-4mxh",
+          "url": "https://github.com/advisories/GHSA-v924-7rp8-4mxh"
+        },
+        {
+          "title": "NVD — CVE-2026-126186",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126186"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rails/rails/security/advisories/GHSA-v924-7rp8-4mxh"
         }
       ]
     },
