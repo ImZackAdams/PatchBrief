@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-11T16:55:34Z",
-  "total_items": 2504,
+  "generated": "2026-11-12T17:23:43Z",
+  "total_items": 2509,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-11T16:55:34Z",
+    "generated": "2026-11-12T17:23:43Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 10,
-        "started_at": "2026-11-11T16:55:17Z",
-        "finished_at": "2026-11-11T16:55:17Z"
+        "started_at": "2026-11-12T17:23:26Z",
+        "finished_at": "2026-11-12T17:23:26Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 25,
-        "started_at": "2026-11-11T16:55:17Z",
-        "finished_at": "2026-11-11T16:55:22Z"
+        "started_at": "2026-11-12T17:23:26Z",
+        "finished_at": "2026-11-12T17:23:29Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-11-11T16:55:22Z",
-        "finished_at": "2026-11-11T16:55:29Z"
+        "items_seen": 2,
+        "started_at": "2026-11-12T17:23:29Z",
+        "finished_at": "2026-11-12T17:23:36Z"
       },
       {
         "id": "github_advisory",
@@ -45,17 +45,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-11-11T16:55:29Z",
-        "finished_at": "2026-11-11T16:55:30Z"
+        "started_at": "2026-11-12T17:23:36Z",
+        "finished_at": "2026-11-12T17:23:37Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-11T16:55:30Z",
-        "finished_at": "2026-11-11T16:55:30Z"
+        "items_seen": 4,
+        "started_at": "2026-11-12T17:23:37Z",
+        "finished_at": "2026-11-12T17:23:37Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,110 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-11T16:55:30Z",
-        "finished_at": "2026-11-11T16:55:30Z"
+        "started_at": "2026-11-12T17:23:37Z",
+        "finished_at": "2026-11-12T17:23:38Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 17,
-        "started_at": "2026-11-11T16:55:30Z",
-        "finished_at": "2026-11-11T16:55:31Z"
+        "items_seen": 61,
+        "started_at": "2026-11-12T17:23:38Z",
+        "finished_at": "2026-11-12T17:23:38Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-comfyui-easy-use-vu-944667",
+      "slug": "2026-11-comfyui-easy-use-vu-944667",
+      "url": "https://www.patchbrief.org/items/2026-11-comfyui-easy-use-vu-944667.html",
+      "date": "2026-11-12",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#944667: ComfyUI-Easy-Use contains unauthenticated path traversal vulnerability",
+      "summary": "Overview ComfyUI-Easy-Use version 1.4.1 and earlier contains a vulnerability in its save_preview() handler that allows an unauthenticated attacker to overwrite an installed custom node’s Python file. An attacker who can reach the affected ComfyUI instance over the network can use the overwrite to execute arbitrary code when ComfyUI restarts. Description ComfyUI is a node-based interface for building generative AI workflows. ComfyUI-Easy-Use is an extension that adds custom nodes and workflow utilities. An attacker can upload a Python file to ComfyUI’s input directory then use save_preview() to copy that file over an installed custom node’s __init__.py . Upon restart, ComfyUI will import and execute the modified node. Remote exploitation requires a deployment that exposes the affected routes to the attacker without authentication. Impact...",
+      "vendor": "ComfyUI-Easy-Use",
+      "product": "ComfyUI-Easy-Use",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for ComfyUI-Easy-Use where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-944667",
+        "coordinated-disclosure",
+        "comfyui-easy-use",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#944667",
+          "url": "https://kb.cert.org/vuls/id/944667"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-multiple-vendors-vu-685399",
+      "slug": "2026-11-multiple-vendors-vu-685399",
+      "url": "https://www.patchbrief.org/items/2026-11-multiple-vendors-vu-685399.html",
+      "date": "2026-11-12",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#685399: PromZard context key code injection leads to remote code execution",
+      "summary": "Overview The npm library promzard , versions 4.0.0 and earlier, is vulnerable to remote code execution due to direct string interpolation of context object keys, which allows unsanitized JavaScript code injection. Description promzard is a Node.js library designed to automate configuration workflows by evaluating template modules and generating data objects via interactive prompting. The library allows users to provide a context object ctx to expose specific data to the template module. promzard builds an object by walking the template module for prompt() and asynchronous functions. The keys of ctx , however, are treated as raw JavaScript source code instead of inert data. The implementation performs direct string interpolation of ctx keys, without validation or sanitization, into the parameter list of a function-expression source string...",
+      "vendor": "Multiple vendors",
+      "product": "PromZard context key code injection leads to remote code execution",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for PromZard context key code injection leads to remote code execution where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-685399",
+        "coordinated-disclosure",
+        "multiple-vendors",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#685399",
+          "url": "https://kb.cert.org/vuls/id/685399"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-cve-2026-118740",
+      "slug": "2026-11-nuget-cve-2026-118740",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-118740.html",
+      "date": "2026-11-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Microsoft Security Advisory CVE-2026-118740 - Aspire Security Feature Bypass Vulnerability",
+      "summary": "Microsoft Security Advisory CVE-2026-118740 - Aspire Security Feature Bypass Vulnerability",
+      "vendor": "NuGet",
+      "product": "Aspire.Dashboard.Sdk.linux-x64",
+      "cve": "CVE-2026-118740",
+      "operator_check": "Check whether Aspire.Dashboard.Sdk.linux-x64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.9%; percentile: 61%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Aspire.Dashboard.Sdk.linux-x64. Prioritize it with other application dependency updates, especially because EPSS places it in the 61% percentile.",
+      "tags": [
+        "cve-2026-118740",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-4g86-54fm-h9h8",
+          "url": "https://github.com/advisories/GHSA-4g86-54fm-h9h8"
+        },
+        {
+          "title": "NVD — CVE-2026-118740",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118740"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/microsoft/aspire/security/advisories/GHSA-4g86-54fm-h9h8"
+        }
+      ]
+    },
     {
       "id": "2026-11-nuget-cve-2026-114146",
       "slug": "2026-11-nuget-cve-2026-114146",
@@ -390,6 +479,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/microsoft/aspire/security/advisories/GHSA-q6jf-24jf-m3cg"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-opstree-cve-2026-126768",
+      "slug": "2026-11-opstree-cve-2026-126768",
+      "url": "https://www.patchbrief.org/items/2026-11-opstree-cve-2026-126768.html",
+      "date": "2026-11-11",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "OpsTree REMS — CVE-2026-126768 (Critical)",
+      "summary": "OpsTree REMS through 1.0.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain valid JWTs by setting the client-controlled is_local_auth field. Attackers can send a POST /api/v1/user/login/ request for the admin account with an invalid password and is_local_auth true to gain SuperUser administrative access.",
+      "vendor": "OpsTree",
+      "product": "REMS",
+      "cve": "CVE-2026-126768",
+      "operator_check": "Review CVE-2026-126768 in your asset inventory. Apply patches per vendor guidance and verify REMS is not exposed. CVSS score: 9.8. EPSS probability: 0.8%; percentile: 56%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in OpsTree REMS. Patch or mitigate promptly. EPSS percentile: 56%.",
+      "tags": [
+        "cve-2026-126768",
+        "vendor-advisory",
+        "opstree",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-126768",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126768"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://gist.github.com/neelkotnis/4676fe10859d84900025cf52188dae46"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://opstree.com/rems-ai-powered-observability/"
         }
       ]
     },
@@ -1875,6 +1999,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/microsoft/aspire/security/advisories/GHSA-f7vh-h5g3-7jrh"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-nuget-ghsa-2f3w-v7f5-vpgx",
+      "slug": "2026-11-nuget-ghsa-2f3w-v7f5-vpgx",
+      "url": "https://www.patchbrief.org/items/2026-11-nuget-ghsa-2f3w-v7f5-vpgx.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-118740 - Aspire Security Feature Bypass Vulnerability",
+      "summary": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-118740 - Aspire Security Feature Bypass Vulnerability",
+      "vendor": "NuGet",
+      "product": "Aspire.Dashboard.Sdk.linux-x64",
+      "cve": null,
+      "operator_check": "Check whether Aspire.Dashboard.Sdk.linux-x64 is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Aspire.Dashboard.Sdk.linux-x64. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-2f3w-v7f5-vpgx",
+        "vendor-advisory",
+        "nuget",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2f3w-v7f5-vpgx",
+          "url": "https://github.com/advisories/GHSA-2f3w-v7f5-vpgx"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118740"
         }
       ]
     },

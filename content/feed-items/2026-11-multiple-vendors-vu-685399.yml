@@ -1,0 +1,36 @@
+id: 2026-11-multiple-vendors-vu-685399
+slug: 2026-11-multiple-vendors-vu-685399
+external_id: VU-685399
+source: cert_vu
+date: '2026-11-12'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#685399: PromZard context key code injection leads to remote code execution'
+summary: Overview The npm library promzard , versions 4.0.0 and earlier, is vulnerable
+  to remote code execution due to direct string interpolation of context object keys,
+  which allows unsanitized JavaScript code injection. Description promzard is a Node.js
+  library designed to automate configuration workflows by evaluating template modules
+  and generating data objects via interactive prompting. The library allows users
+  to provide a context object ctx to expose specific data to the template module.
+  promzard builds an object by walking the template module for prompt() and asynchronous
+  functions. The keys of ctx , however, are treated as raw JavaScript source code
+  instead of inert data. The implementation performs direct string interpolation of
+  ctx keys, without validation or sanitization, into the parameter list of a function-expression
+  source string...
+vendor: Multiple vendors
+product: PromZard context key code injection leads to remote code execution
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for PromZard context key code injection leads to remote code execution where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#685399
+  url: https://kb.cert.org/vuls/id/685399
+tags:
+- vu-685399
+- coordinated-disclosure
+- multiple-vendors
+- cert-vu
+is_sample: false
