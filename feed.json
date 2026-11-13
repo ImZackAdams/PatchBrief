@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-12T17:23:43Z",
-  "total_items": 2509,
+  "generated": "2026-11-13T16:58:26Z",
+  "total_items": 2531,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-12T17:23:43Z",
+    "generated": "2026-11-13T16:58:26Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 10,
-        "started_at": "2026-11-12T17:23:26Z",
-        "finished_at": "2026-11-12T17:23:26Z"
+        "items_seen": 6,
+        "started_at": "2026-11-13T16:58:03Z",
+        "finished_at": "2026-11-13T16:58:03Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 25,
-        "started_at": "2026-11-12T17:23:26Z",
-        "finished_at": "2026-11-12T17:23:29Z"
+        "started_at": "2026-11-13T16:58:03Z",
+        "finished_at": "2026-11-13T16:58:09Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-12T17:23:29Z",
-        "finished_at": "2026-11-12T17:23:36Z"
+        "items_seen": 5,
+        "started_at": "2026-11-13T16:58:09Z",
+        "finished_at": "2026-11-13T16:58:20Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-11-12T17:23:36Z",
-        "finished_at": "2026-11-12T17:23:37Z"
+        "started_at": "2026-11-13T16:58:20Z",
+        "finished_at": "2026-11-13T16:58:22Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 4,
-        "started_at": "2026-11-12T17:23:37Z",
-        "finished_at": "2026-11-12T17:23:37Z"
+        "started_at": "2026-11-13T16:58:22Z",
+        "finished_at": "2026-11-13T16:58:22Z"
       },
       {
         "id": "exploitdb",
@@ -63,8 +63,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-12T17:23:37Z",
-        "finished_at": "2026-11-12T17:23:38Z"
+        "started_at": "2026-11-13T16:58:22Z",
+        "finished_at": "2026-11-13T16:58:22Z"
       },
       {
         "id": "epss",
@@ -72,12 +72,249 @@
         "role": "enrichment",
         "status": "ok",
         "items_seen": 61,
-        "started_at": "2026-11-12T17:23:38Z",
-        "finished_at": "2026-11-12T17:23:38Z"
+        "started_at": "2026-11-13T16:58:22Z",
+        "finished_at": "2026-11-13T16:58:22Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-openmage-cve-2026-128049",
+      "slug": "2026-11-openmage-cve-2026-128049",
+      "url": "https://www.patchbrief.org/items/2026-11-openmage-cve-2026-128049.html",
+      "date": "2026-11-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "OpenMage Magento LTS — CVE-2026-128049 (Critical)",
+      "summary": "OpenMage Magento LTS before 20.18.2 and 21.0.0-beta1 before 21.0.0-beta3 contains a cross-site request forgery vulnerability in the admin and storefront OAuth confirm and confirmSimple actions, which accept GET requests without form-key validation. Attackers holding OAuth consumer credentials can lure a logged-in administrator or customer to a crafted confirm URL that authorizes the attacker's request token, then exchange it at /oauth/token for a persistent REST API access token bound to the victim.",
+      "vendor": "OpenMage",
+      "product": "Magento LTS",
+      "cve": "CVE-2026-128049",
+      "operator_check": "Review CVE-2026-128049 in your asset inventory. Apply patches per vendor guidance and verify Magento LTS is not exposed. CVSS score: 9.0. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.0) in OpenMage Magento LTS. Patch or mitigate promptly. EPSS percentile: 13%.",
+      "tags": [
+        "cve-2026-128049",
+        "vendor-advisory",
+        "openmage",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-128049",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128049"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OpenMage/magento-lts/commit/1f83e49b60e08aa7ba89dcc2d41ea21f62c0b796"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/OpenMage/magento-lts/security/advisories/GHSA-grrq-9gq2-vm55"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-opstree-cve-2026-127073",
+      "slug": "2026-11-opstree-cve-2026-127073",
+      "url": "https://www.patchbrief.org/items/2026-11-opstree-cve-2026-127073.html",
+      "date": "2026-11-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "OpsTree BuildPiper — CVE-2026-127073 (Critical)",
+      "summary": "OpsTree BuildPiper before 2.7.0 contains a privilege escalation vulnerability that allows project users to gain Kubernetes cluster-admin rights by submitting unrestricted manifests through the Additional Manifest feature. Attackers can deploy a ClusterRoleBinding binding a service account to cluster-admin, which the pipeline applies with cluster-wide credentials, granting control over all workloads and secrets.",
+      "vendor": "OpsTree",
+      "product": "BuildPiper",
+      "cve": "CVE-2026-127073",
+      "operator_check": "Review CVE-2026-127073 in your asset inventory. Apply patches per vendor guidance and verify BuildPiper is not exposed. CVSS score: 9.9. EPSS probability: 0.5%; percentile: 44%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in OpsTree BuildPiper. Patch or mitigate promptly. EPSS percentile: 44%.",
+      "tags": [
+        "cve-2026-127073",
+        "vendor-advisory",
+        "opstree",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-127073",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-127073"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://gist.github.com/neelkotnis/7bc715e190e5be2c2fc5be15c4035ce7"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.buildpiper.io/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-opstree-cve-2026-127080",
+      "slug": "2026-11-opstree-cve-2026-127080",
+      "url": "https://www.patchbrief.org/items/2026-11-opstree-cve-2026-127080.html",
+      "date": "2026-11-13",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "OpsTree BuildPiper — CVE-2026-127080 (Critical)",
+      "summary": "OpsTree BuildPiper before 2.7.0 contains an improper authorization vulnerability that allows authenticated deploy users to define arbitrary Kubernetes hostPath volumes without allow-list or policy checks. Attackers can set the host path to / in the Define HostPath Volume configuration to mount the worker node root filesystem read-write, breaking container isolation and enabling node and cluster compromise.",
+      "vendor": "OpsTree",
+      "product": "BuildPiper",
+      "cve": "CVE-2026-127080",
+      "operator_check": "Review CVE-2026-127080 in your asset inventory. Apply patches per vendor guidance and verify BuildPiper is not exposed. CVSS score: 9.9. EPSS probability: 0.5%; percentile: 44%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.9) in OpsTree BuildPiper. Patch or mitigate promptly. EPSS percentile: 44%.",
+      "tags": [
+        "cve-2026-127080",
+        "vendor-advisory",
+        "opstree",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-127080",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-127080"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://gist.github.com/neelkotnis/b8c1cf47f829c28086fe78d8187eb938"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.buildpiper.io/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-100397",
+      "slug": "2026-11-pypi-cve-2026-100397",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-100397.html",
+      "date": "2026-11-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Rucio: Unauthenticated administrator impersonation through SSH challenge tokens",
+      "summary": "Rucio: Unauthenticated administrator impersonation through SSH challenge tokens",
+      "vendor": "PyPI",
+      "product": "rucio",
+      "cve": "CVE-2026-100397",
+      "operator_check": "Check whether rucio is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for rucio. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-100397",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-x585-4vv8-2mh2",
+          "url": "https://github.com/advisories/GHSA-x585-4vv8-2mh2"
+        },
+        {
+          "title": "NVD — CVE-2026-100397",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100397"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rucio/rucio/security/advisories/GHSA-x585-4vv8-2mh2"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-126190",
+      "slug": "2026-11-pypi-cve-2026-126190",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-126190.html",
+      "date": "2026-11-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Soup Sieve: Polynomial-time denial of service in the descendant combinator",
+      "summary": "Soup Sieve: Polynomial-time denial of service in the descendant combinator",
+      "vendor": "PyPI",
+      "product": "soupsieve",
+      "cve": "CVE-2026-126190",
+      "operator_check": "Check whether soupsieve is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 46%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for soupsieve. Prioritize it with other application dependency updates, especially because EPSS places it in the 46% percentile.",
+      "tags": [
+        "cve-2026-126190",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mmhr-3c5m-f64f",
+          "url": "https://github.com/advisories/GHSA-mmhr-3c5m-f64f"
+        },
+        {
+          "title": "NVD — CVE-2026-126190",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126190"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/facelessuser/soupsieve/security/advisories/GHSA-mmhr-3c5m-f64f"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-126191",
+      "slug": "2026-11-pypi-cve-2026-126191",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-126191.html",
+      "date": "2026-11-13",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Soup Sieve: Exponential ReDoS in selector compilation via \\9-run in CSS_ESCAPES/IDENTIFIER",
+      "summary": "Soup Sieve: Exponential ReDoS in selector compilation via \\9-run in CSS_ESCAPES/IDENTIFIER",
+      "vendor": "PyPI",
+      "product": "soupsieve",
+      "cve": "CVE-2026-126191",
+      "operator_check": "Check whether soupsieve is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 38%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for soupsieve. Prioritize it with other application dependency updates, especially because EPSS places it in the 38% percentile.",
+      "tags": [
+        "cve-2026-126191",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-6655-6qjp-jx7x",
+          "url": "https://github.com/advisories/GHSA-6655-6qjp-jx7x"
+        },
+        {
+          "title": "NVD — CVE-2026-126191",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126191"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/facelessuser/soupsieve/security/advisories/GHSA-6655-6qjp-jx7x"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-tightvnc-vu-644655",
+      "slug": "2026-11-tightvnc-vu-644655",
+      "url": "https://www.patchbrief.org/items/2026-11-tightvnc-vu-644655.html",
+      "date": "2026-11-13",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#644655: TightVNC and UltraVNC Viewer contains a heap-based buffer overflow",
+      "summary": "Overview A heap-based buffer overflow exists in the Tight JPEG decoding component of the TightVNC Windows Viewer version 1.3.10 and affected UltraVNC Windows Viewers. An attacker controlling a malicious VNC server can trigger memory corruption by sending a specially crafted screen update. Successful exploitation can crash the viewer and may allow arbitrary code execution, although only denial of service conditions were demonstrated during testing. Description TightVNC and UltraVNC provide remote desktop access using the Remote Framebuffer (RFB) protocol. Their viewer applications connect to VNC servers and decode screen updates for local display. Tight encoding supports JPEG compression of image data within these updates. The Windows viewer function DecompressJpegRect() allocates a heap buffer using a hardcoded maximum row width of 8,192...",
+      "vendor": "TightVNC",
+      "product": "and UltraVNC Viewer",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for and UltraVNC Viewer where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-644655",
+        "coordinated-disclosure",
+        "tightvnc",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#644655",
+          "url": "https://kb.cert.org/vuls/id/644655"
+        }
+      ]
+    },
     {
       "id": "2026-11-comfyui-easy-use-vu-944667",
       "slug": "2026-11-comfyui-easy-use-vu-944667",
@@ -102,6 +339,103 @@
         {
           "title": "CERT/CC Vulnerability Note VU#944667",
           "url": "https://kb.cert.org/vuls/id/944667"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-cve-2026-125323",
+      "slug": "2026-11-go-cve-2026-125323",
+      "url": "https://www.patchbrief.org/items/2026-11-go-cve-2026-125323.html",
+      "date": "2026-11-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pgEdge Control Plane generates pg_hba.conf with trust authentication for local and loopback connections",
+      "summary": "pgEdge Control Plane generates pg_hba.conf with trust authentication for local and loopback connections",
+      "vendor": "Go",
+      "product": "github.com/pgEdge/control-plane",
+      "cve": "CVE-2026-125323",
+      "operator_check": "Check whether github.com/pgEdge/control-plane is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.1%; percentile: 2%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/pgEdge/control-plane. Prioritize it with other application dependency updates, especially because EPSS places it in the 2% percentile.",
+      "tags": [
+        "cve-2026-125323",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-vq9p-w6wv-cr25",
+          "url": "https://github.com/advisories/GHSA-vq9p-w6wv-cr25"
+        },
+        {
+          "title": "NVD — CVE-2026-125323",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125323"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pgEdge/control-plane/security/advisories/GHSA-vq9p-w6wv-cr25"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-cve-2026-125327",
+      "slug": "2026-11-go-cve-2026-125327",
+      "url": "https://www.patchbrief.org/items/2026-11-go-cve-2026-125327.html",
+      "date": "2026-11-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "pgEdge RAG Server unbounded corpus read allows resource exhaustion from unauthenticated requests",
+      "summary": "pgEdge RAG Server unbounded corpus read allows resource exhaustion from unauthenticated requests",
+      "vendor": "Go",
+      "product": "github.com/pgEdge/pgedge-rag-server",
+      "cve": "CVE-2026-125327",
+      "operator_check": "Check whether github.com/pgEdge/pgedge-rag-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 39%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/pgEdge/pgedge-rag-server. Prioritize it with other application dependency updates, especially because EPSS places it in the 39% percentile.",
+      "tags": [
+        "cve-2026-125327",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5qg5-rgp6-j5m5",
+          "url": "https://github.com/advisories/GHSA-5qg5-rgp6-j5m5"
+        },
+        {
+          "title": "NVD — CVE-2026-125327",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125327"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/pgEdge/pgedge-rag-server/security/advisories/GHSA-5qg5-rgp6-j5m5"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-imagemagick-based-vu-580079",
+      "slug": "2026-11-imagemagick-based-vu-580079",
+      "url": "https://www.patchbrief.org/items/2026-11-imagemagick-based-vu-580079.html",
+      "date": "2026-11-12",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#580079: Arbitrary file read/write vulnerability in ImageMagick-based applications with default configuration",
+      "summary": "Overview Multiple arbitrary file read and write vulnerabilities have been identified in applications that use ImageMagick with insufficiently restrictive security policies. Collectively referred to as ImageTragick2 , these issues arise when ImageMagick processes attacker-controlled SVG or PostScript content using dangerous coders or delegates permitted by its default or application-supplied configuration. An attacker who can upload an image, or otherwise cause an application to process crafted image content, may be able to read or write files accessible to the ImageMagick process. In some deployments, these capabilities may be chained to achieve arbitrary code execution, compromising the confidentiality, integrity, and availability of the affected application and host. Description ImageMagick is a widely used open-source image-processing... Related CVEs: CVE-2026-65640.",
+      "vendor": "ImageMagick-based",
+      "product": "applications with default configuration",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for applications with default configuration where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-580079",
+        "coordinated-disclosure",
+        "imagemagick-based",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#580079",
+          "url": "https://kb.cert.org/vuls/id/580079"
         }
       ]
     },
@@ -164,6 +498,146 @@
         {
           "title": "Source reference",
           "url": "https://github.com/microsoft/aspire/security/advisories/GHSA-4g86-54fm-h9h8"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128067",
+      "slug": "2026-11-pypi-cve-2026-128067",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128067.html",
+      "date": "2026-11-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size",
+      "summary": "Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size",
+      "vendor": "PyPI",
+      "product": "Pillow",
+      "cve": "CVE-2026-128067",
+      "operator_check": "Check whether Pillow is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.4. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for Pillow. Prioritize it with other application dependency updates, especially because EPSS places it in the 40% percentile.",
+      "tags": [
+        "cve-2026-128067",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xcvg-w56q-r89m",
+          "url": "https://github.com/advisories/GHSA-xcvg-w56q-r89m"
+        },
+        {
+          "title": "NVD — CVE-2026-128067",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128067"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xcvg-w56q-r89m"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-rubygems-cve-2026-122006",
+      "slug": "2026-11-rubygems-cve-2026-122006",
+      "url": "https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-122006.html",
+      "date": "2026-11-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Active Storage: Possible arbitrary file write and read in image analysis",
+      "summary": "Active Storage: Possible arbitrary file write and read in image analysis",
+      "vendor": "RubyGems",
+      "product": "activestorage",
+      "cve": "CVE-2026-122006",
+      "operator_check": "Check whether activestorage is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.7%; percentile: 55%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for activestorage. Prioritize it with other application dependency updates, especially because EPSS places it in the 55% percentile.",
+      "tags": [
+        "cve-2026-122006",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f3w6-w445-fwh9",
+          "url": "https://github.com/advisories/GHSA-f3w6-w445-fwh9"
+        },
+        {
+          "title": "NVD — CVE-2026-122006",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122006"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rails/rails/security/advisories/GHSA-f3w6-w445-fwh9"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-rubygems-cve-2026-126081",
+      "slug": "2026-11-rubygems-cve-2026-126081",
+      "url": "https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-126081.html",
+      "date": "2026-11-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Action Pack: Possible Strong Parameters Bypass in Parameters#each_key",
+      "summary": "Action Pack: Possible Strong Parameters Bypass in Parameters#each_key",
+      "vendor": "RubyGems",
+      "product": "actionpack",
+      "cve": "CVE-2026-126081",
+      "operator_check": "Check whether actionpack is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 51%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for actionpack. Prioritize it with other application dependency updates, especially because EPSS places it in the 51% percentile.",
+      "tags": [
+        "cve-2026-126081",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-wm3x-v3qw-4jh3",
+          "url": "https://github.com/advisories/GHSA-wm3x-v3qw-4jh3"
+        },
+        {
+          "title": "NVD — CVE-2026-126081",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126081"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/rails/rails/security/advisories/GHSA-wm3x-v3qw-4jh3"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-rubygems-cve-2026-126366",
+      "slug": "2026-11-rubygems-cve-2026-126366",
+      "url": "https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-126366.html",
+      "date": "2026-11-12",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "msgpack-ruby JRuby decoder makes uncapped header-count allocations; a 5-byte message forces multi-GiB OOM",
+      "summary": "msgpack-ruby JRuby decoder makes uncapped header-count allocations; a 5-byte message forces multi-GiB OOM",
+      "vendor": "RubyGems",
+      "product": "msgpack",
+      "cve": "CVE-2026-126366",
+      "operator_check": "Check whether msgpack is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 45%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for msgpack. Prioritize it with other application dependency updates, especially because EPSS places it in the 45% percentile.",
+      "tags": [
+        "cve-2026-126366",
+        "vendor-advisory",
+        "rubygems",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-73v3-wf97-vpgj",
+          "url": "https://github.com/advisories/GHSA-73v3-wf97-vpgj"
+        },
+        {
+          "title": "NVD — CVE-2026-126366",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126366"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/msgpack/msgpack-ruby/security/advisories/GHSA-73v3-wf97-vpgj"
         }
       ]
     },
@@ -1622,6 +2096,181 @@
       ]
     },
     {
+      "id": "2026-11-microsoft-cve-2026-119078",
+      "slug": "2026-11-microsoft-cve-2026-119078",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119078.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Apache Commons Codec: Blake3 doFinalize is stateless; the documented KDF example derives identical keys",
+      "summary": "Apache Commons Codec: Blake3 doFinalize is stateless; the documented KDF example derives identical keys Published in November 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-119078",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-119078. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.1. EPSS probability: 0.4%; percentile: 34%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 34%.",
+      "tags": [
+        "cve-2026-119078",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-119078"
+        },
+        {
+          "title": "NVD — CVE-2026-119078",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119078"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-121994",
+      "slug": "2026-11-microsoft-cve-2026-121994",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-121994.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Gdb: gdb: stack buffer overflow in fetch_register_using_p via unchecked p-reply length",
+      "summary": "Gdb: gdb: stack buffer overflow in fetch_register_using_p via unchecked p-reply length Published in November 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-121994",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-121994. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.5%; percentile: 42%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 42%.",
+      "tags": [
+        "cve-2026-121994",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-121994"
+        },
+        {
+          "title": "NVD — CVE-2026-121994",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121994"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-123596",
+      "slug": "2026-11-microsoft-cve-2026-123596",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-123596.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Hickory DNS through 0.26.0-alpha.1 DNSSEC Validation Bypass via Ancestor-Delegation NSEC",
+      "summary": "Hickory DNS through 0.26.0-alpha.1 DNSSEC Validation Bypass via Ancestor-Delegation NSEC Published in November 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-123596",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-123596. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 8%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 8%.",
+      "tags": [
+        "cve-2026-123596",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-123596"
+        },
+        {
+          "title": "NVD — CVE-2026-123596",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123596"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-123605",
+      "slug": "2026-11-microsoft-cve-2026-123605",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-123605.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Hickory DNS through 0.25.0-alpha.3 DNSSEC Validation Bypass via RRSIG Signer's Name",
+      "summary": "Hickory DNS through 0.25.0-alpha.3 DNSSEC Validation Bypass via RRSIG Signer's Name Published in November 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-123605",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-123605. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.2%; percentile: 15%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 15%.",
+      "tags": [
+        "cve-2026-123605",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-123605"
+        },
+        {
+          "title": "NVD — CVE-2026-123605",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123605"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-124040",
+      "slug": "2026-11-microsoft-cve-2026-124040",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-124040.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "CivetWeb through 1.16 HTTP/2 Use-After-Free via Stale Pseudo-Header State",
+      "summary": "CivetWeb through 1.16 HTTP/2 Use-After-Free via Stale Pseudo-Header State Published in November 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-124040",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-124040. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.1. EPSS probability: 0.5%; percentile: 44%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 44%.",
+      "tags": [
+        "cve-2026-124040",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-124040"
+        },
+        {
+          "title": "NVD — CVE-2026-124040",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124040"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
       "id": "2026-11-microsoft-cve-2026-124194",
       "slug": "2026-11-microsoft-cve-2026-124194",
       "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-124194.html",
@@ -1649,6 +2298,111 @@
         {
           "title": "NVD — CVE-2026-124194",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124194"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-97033",
+      "slug": "2026-11-microsoft-cve-2026-97033",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-97033.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "Critical vendor advisory",
+      "title": "Unexpected code execution via --sysroot, -target, -isysroot, -Wl,-syslibroot, and -x cgo flags in cmd/go",
+      "summary": "Unexpected code execution via --sysroot, -target, -isysroot, -Wl,-syslibroot, and -x cgo flags in cmd/go Published in November 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-97033",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-97033. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 9.8. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 17%.",
+      "tags": [
+        "cve-2026-97033",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-97033"
+        },
+        {
+          "title": "NVD — CVE-2026-97033",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97033"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-97038",
+      "slug": "2026-11-microsoft-cve-2026-97038",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-97038.html",
+      "date": "2026-11-10",
+      "type": "Patch Tuesday",
+      "signal": "High-risk advisory",
+      "title": "Arbitrary code execution via crafted .syso files and cgo linker input files in cmd/go",
+      "summary": "Arbitrary code execution via crafted .syso files and cgo linker input files in cmd/go Published in November 2026 Security Updates.",
+      "vendor": "Microsoft",
+      "product": "Mariner",
+      "cve": "CVE-2026-97038",
+      "operator_check": "Review the Microsoft Security Update Guide entry for CVE-2026-97038. Confirm whether Mariner is deployed, then apply the current security update or documented mitigation. CVSS score: 8.8. EPSS probability: 0.3%; percentile: 17%.",
+      "why_it_matters": "Microsoft published this item through its Security Update Guide, making it part of Patch Tuesday triage for affected Windows, cloud, or application estates. EPSS percentile: 17%.",
+      "tags": [
+        "cve-2026-97038",
+        "patch-tuesday",
+        "microsoft",
+        "msrc"
+      ],
+      "sources": [
+        {
+          "title": "MSRC 2026-Nov Security Update Guide",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-97038"
+        },
+        {
+          "title": "NVD — CVE-2026-97038",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97038"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://learn.microsoft.com/en-us/azure/azure-linux/tutorial-azure-linux-upgrade"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-mongodb-cve-2026-118383",
+      "slug": "2026-11-mongodb-cve-2026-118383",
+      "url": "https://www.patchbrief.org/items/2026-11-mongodb-cve-2026-118383.html",
+      "date": "2026-11-10",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Mongodb Mongodb — CVE-2026-118383 (Critical)",
+      "summary": "A use-after-free in the replication component of MongoDB Server can occur when a newly elected replica set primary completes catch-up. The condition can be caused by requests that do not require authentication, and may result in the server terminating unexpectedly or, under certain conditions, arbitrary code execution in the context of the server process. Replica set members are affected, including the shard and config server replica set members of sharded clusters; standalone mongod instances are not.",
+      "vendor": "Mongodb",
+      "product": "Mongodb",
+      "cve": "CVE-2026-118383",
+      "operator_check": "Review CVE-2026-118383 in your asset inventory. Apply patches per vendor guidance and verify Mongodb is not exposed. CVSS score: 9.0. EPSS probability: 0.7%; percentile: 54%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.0) in Mongodb Mongodb. Patch or mitigate promptly. EPSS percentile: 54%.",
+      "tags": [
+        "cve-2026-118383",
+        "vendor-advisory",
+        "mongodb",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-118383",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://jira.mongodb.org/browse/SERVER-138119"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://jira.mongodb.org/browse/SERVER-138175"
         }
       ]
     },

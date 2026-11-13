@@ -4,14 +4,84 @@
     <title>PatchBrief</title>
     <link>https://www.patchbrief.org/feed.html</link>
     <description>Short operator-ready briefs on public vulnerability advisories, known exploited vulnerabilities, vendor updates, and threat activity.</description>
-    <lastBuildDate>Thu, 12 Nov 2026 17:23:43 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 16:58:26 +0000</lastBuildDate>
     <language>en</language>
+    <item>
+      <title>OpenMage Magento LTS — CVE-2026-128049 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-11-openmage-cve-2026-128049.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-openmage-cve-2026-128049.html</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <description>OpenMage Magento LTS before 20.18.2 and 21.0.0-beta1 before 21.0.0-beta3 contains a cross-site request forgery vulnerability in the admin and storefront OAuth confirm and confirmSimple actions, which accept GET requests without form-key validation. Attackers holding OAuth consumer credentials can lure a logged-in administrator or customer to a crafted confirm URL that authorizes the attacker's request token, then exchange it at /oauth/token for a persistent REST API access token bound to the victim.</description>
+    </item>
+    <item>
+      <title>OpsTree BuildPiper — CVE-2026-127073 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-11-opstree-cve-2026-127073.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-opstree-cve-2026-127073.html</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <description>OpsTree BuildPiper before 2.7.0 contains a privilege escalation vulnerability that allows project users to gain Kubernetes cluster-admin rights by submitting unrestricted manifests through the Additional Manifest feature. Attackers can deploy a ClusterRoleBinding binding a service account to cluster-admin, which the pipeline applies with cluster-wide credentials, granting control over all workloads and secrets.</description>
+    </item>
+    <item>
+      <title>OpsTree BuildPiper — CVE-2026-127080 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-11-opstree-cve-2026-127080.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-opstree-cve-2026-127080.html</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <description>OpsTree BuildPiper before 2.7.0 contains an improper authorization vulnerability that allows authenticated deploy users to define arbitrary Kubernetes hostPath volumes without allow-list or policy checks. Attackers can set the host path to / in the Define HostPath Volume configuration to mount the worker node root filesystem read-write, breaking container isolation and enabling node and cluster compromise.</description>
+    </item>
+    <item>
+      <title>Rucio: Unauthenticated administrator impersonation through SSH challenge tokens</title>
+      <link>https://www.patchbrief.org/items/2026-11-pypi-cve-2026-100397.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-pypi-cve-2026-100397.html</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Rucio: Unauthenticated administrator impersonation through SSH challenge tokens</description>
+    </item>
+    <item>
+      <title>Soup Sieve: Polynomial-time denial of service in the descendant combinator</title>
+      <link>https://www.patchbrief.org/items/2026-11-pypi-cve-2026-126190.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-pypi-cve-2026-126190.html</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Soup Sieve: Polynomial-time denial of service in the descendant combinator</description>
+    </item>
+    <item>
+      <title>Soup Sieve: Exponential ReDoS in selector compilation via \9-run in CSS_ESCAPES/IDENTIFIER</title>
+      <link>https://www.patchbrief.org/items/2026-11-pypi-cve-2026-126191.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-pypi-cve-2026-126191.html</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Soup Sieve: Exponential ReDoS in selector compilation via \9-run in CSS_ESCAPES/IDENTIFIER</description>
+    </item>
+    <item>
+      <title>VU#644655: TightVNC and UltraVNC Viewer contains a heap-based buffer overflow</title>
+      <link>https://www.patchbrief.org/items/2026-11-tightvnc-vu-644655.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-tightvnc-vu-644655.html</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Overview A heap-based buffer overflow exists in the Tight JPEG decoding component of the TightVNC Windows Viewer version 1.3.10 and affected UltraVNC Windows Viewers. An attacker controlling a malicious VNC server can trigger memory corruption by sending a specially crafted screen update. Successful exploitation can crash the viewer and may allow arbitrary code execution, although only denial of service conditions were demonstrated during testing. Description TightVNC and UltraVNC provide remote desktop access using the Remote Framebuffer (RFB) protocol. Their viewer applications connect to VNC servers and decode screen updates for local display. Tight encoding supports JPEG compression of image data within these updates. The Windows viewer function DecompressJpegRect() allocates a heap buffer using a hardcoded maximum row width of 8,192...</description>
+    </item>
     <item>
       <title>VU#944667: ComfyUI-Easy-Use contains unauthenticated path traversal vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-11-comfyui-easy-use-vu-944667.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-comfyui-easy-use-vu-944667.html</guid>
       <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
       <description>Overview ComfyUI-Easy-Use version 1.4.1 and earlier contains a vulnerability in its save_preview() handler that allows an unauthenticated attacker to overwrite an installed custom node’s Python file. An attacker who can reach the affected ComfyUI instance over the network can use the overwrite to execute arbitrary code when ComfyUI restarts. Description ComfyUI is a node-based interface for building generative AI workflows. ComfyUI-Easy-Use is an extension that adds custom nodes and workflow utilities. An attacker can upload a Python file to ComfyUI’s input directory then use save_preview() to copy that file over an installed custom node’s __init__.py . Upon restart, ComfyUI will import and execute the modified node. Remote exploitation requires a deployment that exposes the affected routes to the attacker without authentication. Impact...</description>
+    </item>
+    <item>
+      <title>pgEdge Control Plane generates pg_hba.conf with trust authentication for local and loopback connections</title>
+      <link>https://www.patchbrief.org/items/2026-11-go-cve-2026-125323.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-go-cve-2026-125323.html</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <description>pgEdge Control Plane generates pg_hba.conf with trust authentication for local and loopback connections</description>
+    </item>
+    <item>
+      <title>pgEdge RAG Server unbounded corpus read allows resource exhaustion from unauthenticated requests</title>
+      <link>https://www.patchbrief.org/items/2026-11-go-cve-2026-125327.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-go-cve-2026-125327.html</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <description>pgEdge RAG Server unbounded corpus read allows resource exhaustion from unauthenticated requests</description>
+    </item>
+    <item>
+      <title>VU#580079: Arbitrary file read/write vulnerability in ImageMagick-based applications with default configuration</title>
+      <link>https://www.patchbrief.org/items/2026-11-imagemagick-based-vu-580079.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-imagemagick-based-vu-580079.html</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Overview Multiple arbitrary file read and write vulnerabilities have been identified in applications that use ImageMagick with insufficiently restrictive security policies. Collectively referred to as ImageTragick2 , these issues arise when ImageMagick processes attacker-controlled SVG or PostScript content using dangerous coders or delegates permitted by its default or application-supplied configuration. An attacker who can upload an image, or otherwise cause an application to process crafted image content, may be able to read or write files accessible to the ImageMagick process. In some deployments, these capabilities may be chained to achieve arbitrary code execution, compromising the confidentiality, integrity, and availability of the affected application and host. Description ImageMagick is a widely used open-source image-processing... Related CVEs: CVE-2026-65640.</description>
     </item>
     <item>
       <title>VU#685399: PromZard context key code injection leads to remote code execution</title>
@@ -26,6 +96,34 @@
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-nuget-cve-2026-118740.html</guid>
       <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
       <description>Microsoft Security Advisory CVE-2026-118740 - Aspire Security Feature Bypass Vulnerability</description>
+    </item>
+    <item>
+      <title>Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size</title>
+      <link>https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128067.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128067.html</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size</description>
+    </item>
+    <item>
+      <title>Active Storage: Possible arbitrary file write and read in image analysis</title>
+      <link>https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-122006.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-122006.html</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Active Storage: Possible arbitrary file write and read in image analysis</description>
+    </item>
+    <item>
+      <title>Action Pack: Possible Strong Parameters Bypass in Parameters#each_key</title>
+      <link>https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-126081.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-126081.html</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Action Pack: Possible Strong Parameters Bypass in Parameters#each_key</description>
+    </item>
+    <item>
+      <title>msgpack-ruby JRuby decoder makes uncapped header-count allocations; a 5-byte message forces multi-GiB OOM</title>
+      <link>https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-126366.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-rubygems-cve-2026-126366.html</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <description>msgpack-ruby JRuby decoder makes uncapped header-count allocations; a 5-byte message forces multi-GiB OOM</description>
     </item>
     <item>
       <title>Microsoft Security Advisory CVE-2026-114146 - ASP.NET Core Elevation of Privilege Vulnerability</title>
@@ -322,11 +420,67 @@
       <description>Improper authentication in Azure DevOps allows an authorized attacker to execute code over a network. Published in November 2026 Security Updates. MSRC exploitability: Publicly Disclosed:No;Exploited:No;Latest Software Release:N/A.</description>
     </item>
     <item>
+      <title>Apache Commons Codec: Blake3 doFinalize is stateless; the documented KDF example derives identical keys</title>
+      <link>https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119078.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-119078.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Apache Commons Codec: Blake3 doFinalize is stateless; the documented KDF example derives identical keys Published in November 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Gdb: gdb: stack buffer overflow in fetch_register_using_p via unchecked p-reply length</title>
+      <link>https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-121994.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-121994.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Gdb: gdb: stack buffer overflow in fetch_register_using_p via unchecked p-reply length Published in November 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Hickory DNS through 0.26.0-alpha.1 DNSSEC Validation Bypass via Ancestor-Delegation NSEC</title>
+      <link>https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-123596.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-123596.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Hickory DNS through 0.26.0-alpha.1 DNSSEC Validation Bypass via Ancestor-Delegation NSEC Published in November 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Hickory DNS through 0.25.0-alpha.3 DNSSEC Validation Bypass via RRSIG Signer's Name</title>
+      <link>https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-123605.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-123605.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Hickory DNS through 0.25.0-alpha.3 DNSSEC Validation Bypass via RRSIG Signer's Name Published in November 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>CivetWeb through 1.16 HTTP/2 Use-After-Free via Stale Pseudo-Header State</title>
+      <link>https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-124040.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-124040.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <description>CivetWeb through 1.16 HTTP/2 Use-After-Free via Stale Pseudo-Header State Published in November 2026 Security Updates.</description>
+    </item>
+    <item>
       <title>Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability</title>
       <link>https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-124194.html</link>
       <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-124194.html</guid>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <description>Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.</description>
+    </item>
+    <item>
+      <title>Unexpected code execution via --sysroot, -target, -isysroot, -Wl,-syslibroot, and -x cgo flags in cmd/go</title>
+      <link>https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-97033.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-97033.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Unexpected code execution via --sysroot, -target, -isysroot, -Wl,-syslibroot, and -x cgo flags in cmd/go Published in November 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Arbitrary code execution via crafted .syso files and cgo linker input files in cmd/go</title>
+      <link>https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-97038.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-97038.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Arbitrary code execution via crafted .syso files and cgo linker input files in cmd/go Published in November 2026 Security Updates.</description>
+    </item>
+    <item>
+      <title>Mongodb Mongodb — CVE-2026-118383 (Critical)</title>
+      <link>https://www.patchbrief.org/items/2026-11-mongodb-cve-2026-118383.html</link>
+      <guid isPermaLink="true">https://www.patchbrief.org/items/2026-11-mongodb-cve-2026-118383.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <description>A use-after-free in the replication component of MongoDB Server can occur when a newly elected replica set primary completes catch-up. The condition can be caused by requests that do not require authentication, and may result in the server terminating unexpectedly or, under certain conditions, arbitrary code execution in the context of the server process. Replica set members are affected, including the shard and config server replica set members of sharded clusters; standalone mongod instances are not.</description>
     </item>
     <item>
       <title>Nuxt Content: Unauthenticated SQLite Function DoS via Content Query API</title>

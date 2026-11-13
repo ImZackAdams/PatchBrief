@@ -1,0 +1,37 @@
+id: 2026-11-imagemagick-based-vu-580079
+slug: 2026-11-imagemagick-based-vu-580079
+external_id: VU-580079
+source: cert_vu
+date: '2026-11-12'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#580079: Arbitrary file read/write vulnerability in ImageMagick-based applications
+  with default configuration'
+summary: 'Overview Multiple arbitrary file read and write vulnerabilities have been
+  identified in applications that use ImageMagick with insufficiently restrictive
+  security policies. Collectively referred to as ImageTragick2 , these issues arise
+  when ImageMagick processes attacker-controlled SVG or PostScript content using dangerous
+  coders or delegates permitted by its default or application-supplied configuration.
+  An attacker who can upload an image, or otherwise cause an application to process
+  crafted image content, may be able to read or write files accessible to the ImageMagick
+  process. In some deployments, these capabilities may be chained to achieve arbitrary
+  code execution, compromising the confidentiality, integrity, and availability of
+  the affected application and host. Description ImageMagick is a widely used open-source
+  image-processing... Related CVEs: CVE-2026-65640.'
+vendor: ImageMagick-based
+product: applications with default configuration
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for applications with default configuration where available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#580079
+  url: https://kb.cert.org/vuls/id/580079
+tags:
+- vu-580079
+- coordinated-disclosure
+- imagemagick-based
+- cert-vu
+is_sample: false
