@@ -1,0 +1,39 @@
+id: 2026-11-unicode-vu-604762
+slug: 2026-11-unicode-vu-604762
+external_id: VU-604762
+source: cert_vu
+date: '2026-11-16'
+type: Coordinated disclosure
+signal: Patch review
+title: 'VU#604762: Multiple vendors vulnerable to Unicode Normalization Collision
+  on macOS (APFS)'
+summary: 'Overview A mismatch between Apple File System (APFS) filesystem and path
+  resolution for multiple applications allows attackers to bypass security exclusions
+  using alternative Unicode spellings. By supplying an alternative Unicode spelling
+  or case-folded variant (such as ß versus ss ) that bypasses the application''s file
+  write checks, a local attacker can overwrite files wherever the process has write
+  permissions, potentially leading to data corruption, configuration hijacking, or
+  code execution. Multiple vendors have assigned CVEs and issued patches to address
+  this flaw. Description Several archive tools, packaging systems, and runtimes enforce
+  exclusion filters using pathname comparisons that do not match the underlying filesystem''s
+  resolution behavior. By using a byte-for-byte comparison (such as ß versus ss ),
+  rather than full case... Related CVEs: CVE-2026-14978, CVE-2026-45110, CVE-2026-49401,
+  CVE-2026-59890.'
+vendor: Unicode
+product: spellings of the same name as the same file. CVE-2026-45110 Libarchive
+cve: null
+operator_check: Review the CERT/CC Vulnerability Note and compare the affected vendor
+  and product list against your inventory. Apply vendor fixes or compensating controls
+  for spellings of the same name as the same file. CVE-2026-45110 Libarchive where
+  available.
+why_it_matters: CERT/CC notes often cover coordinated disclosures, multi-vendor exposure,
+  infrastructure risk, or cases where remediation guidance is still developing.
+sources:
+- title: CERT/CC Vulnerability Note VU#604762
+  url: https://kb.cert.org/vuls/id/604762
+tags:
+- vu-604762
+- coordinated-disclosure
+- unicode
+- cert-vu
+is_sample: false

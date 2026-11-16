@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-15T16:06:47Z",
-  "total_items": 2552,
+  "generated": "2026-11-16T19:18:40Z",
+  "total_items": 2565,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-15T16:06:47Z",
+    "generated": "2026-11-16T19:18:40Z",
     "source_count": 7,
     "sources": [
       {
@@ -18,8 +18,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-11-15T16:05:50Z",
-        "finished_at": "2026-11-15T16:05:50Z"
+        "started_at": "2026-11-16T19:18:25Z",
+        "finished_at": "2026-11-16T19:18:26Z"
       },
       {
         "id": "msrc",
@@ -27,35 +27,35 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-15T16:05:50Z",
-        "finished_at": "2026-11-15T16:05:51Z"
+        "started_at": "2026-11-16T19:18:26Z",
+        "finished_at": "2026-11-16T19:18:26Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-11-15T16:05:51Z",
-        "finished_at": "2026-11-15T16:06:42Z"
+        "items_seen": 2,
+        "started_at": "2026-11-16T19:18:26Z",
+        "finished_at": "2026-11-16T19:18:34Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 25,
-        "started_at": "2026-11-15T16:06:42Z",
-        "finished_at": "2026-11-15T16:06:43Z"
+        "items_seen": 29,
+        "started_at": "2026-11-16T19:18:34Z",
+        "finished_at": "2026-11-16T19:18:35Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-11-15T16:06:43Z",
-        "finished_at": "2026-11-15T16:06:43Z"
+        "items_seen": 2,
+        "started_at": "2026-11-16T19:18:35Z",
+        "finished_at": "2026-11-16T19:18:35Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,468 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-15T16:06:43Z",
-        "finished_at": "2026-11-15T16:06:44Z"
+        "started_at": "2026-11-16T19:18:35Z",
+        "finished_at": "2026-11-16T19:18:36Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 25,
-        "started_at": "2026-11-15T16:06:44Z",
-        "finished_at": "2026-11-15T16:06:44Z"
+        "items_seen": 26,
+        "started_at": "2026-11-16T19:18:36Z",
+        "finished_at": "2026-11-16T19:18:37Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-npm-cve-2026-128118",
+      "slug": "2026-11-npm-cve-2026-128118",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-128118.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SvelteKit: Build-time server-only module import guard could fail, resulting in server secrets being statically replac...",
+      "summary": "SvelteKit: Build-time server-only module import guard could fail, resulting in server secrets being statically replaced in client bundle",
+      "vendor": "npm",
+      "product": "@sveltejs/kit",
+      "cve": "CVE-2026-128118",
+      "operator_check": "Check whether @sveltejs/kit is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 21%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @sveltejs/kit. Prioritize it with other application dependency updates, especially because EPSS places it in the 21% percentile.",
+      "tags": [
+        "cve-2026-128118",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-m9j8-jcmv-hp69",
+          "url": "https://github.com/advisories/GHSA-m9j8-jcmv-hp69"
+        },
+        {
+          "title": "NVD — CVE-2026-128118",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128118"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sveltejs/kit/security/advisories/GHSA-m9j8-jcmv-hp69"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-128120",
+      "slug": "2026-11-npm-cve-2026-128120",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-128120.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "SvelteKit: DoS while parsing form data from a remote functions `form`",
+      "summary": "SvelteKit: DoS while parsing form data from a remote functions `form`",
+      "vendor": "npm",
+      "product": "@sveltejs/kit",
+      "cve": "CVE-2026-128120",
+      "operator_check": "Check whether @sveltejs/kit is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 29%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @sveltejs/kit. Prioritize it with other application dependency updates, especially because EPSS places it in the 29% percentile.",
+      "tags": [
+        "cve-2026-128120",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3r8g-jcqq-3p5j",
+          "url": "https://github.com/advisories/GHSA-3r8g-jcqq-3p5j"
+        },
+        {
+          "title": "NVD — CVE-2026-128120",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128120"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/sveltejs/kit/security/advisories/GHSA-3r8g-jcqq-3p5j"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128124",
+      "slug": "2026-11-pypi-cve-2026-128124",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128124.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AIOHTTP: Event loop stall in add_domain() wildcard matching",
+      "summary": "AIOHTTP: Event loop stall in add_domain() wildcard matching",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": "CVE-2026-128124",
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2. EPSS probability: 0.5%; percentile: 45%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates, especially because EPSS places it in the 45% percentile.",
+      "tags": [
+        "cve-2026-128124",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jm3w-gw2p-xjfj",
+          "url": "https://github.com/advisories/GHSA-jm3w-gw2p-xjfj"
+        },
+        {
+          "title": "NVD — CVE-2026-128124",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128124"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-jm3w-gw2p-xjfj"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128126",
+      "slug": "2026-11-pypi-cve-2026-128126",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128126.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AIOHTTP: Too many URL-encoded form fields block the event loop",
+      "summary": "AIOHTTP: Too many URL-encoded form fields block the event loop",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": "CVE-2026-128126",
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 45%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates, especially because EPSS places it in the 45% percentile.",
+      "tags": [
+        "cve-2026-128126",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xgw8-8ccx-rmqh",
+          "url": "https://github.com/advisories/GHSA-xgw8-8ccx-rmqh"
+        },
+        {
+          "title": "NVD — CVE-2026-128126",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128126"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-xgw8-8ccx-rmqh"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128127",
+      "slug": "2026-11-pypi-cve-2026-128127",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128127.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AIOHTTP: Base64 multipart parts bypass client_max_size",
+      "summary": "AIOHTTP: Base64 multipart parts bypass client_max_size",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": "CVE-2026-128127",
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 46%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates, especially because EPSS places it in the 46% percentile.",
+      "tags": [
+        "cve-2026-128127",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-24c4-3p7v-29cm",
+          "url": "https://github.com/advisories/GHSA-24c4-3p7v-29cm"
+        },
+        {
+          "title": "NVD — CVE-2026-128127",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128127"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-24c4-3p7v-29cm"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128128",
+      "slug": "2026-11-pypi-cve-2026-128128",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128128.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AIOHTTP: WebSocket max_msg_size bypass via integer overflow",
+      "summary": "AIOHTTP: WebSocket max_msg_size bypass via integer overflow",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": "CVE-2026-128128",
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 42%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates, especially because EPSS places it in the 42% percentile.",
+      "tags": [
+        "cve-2026-128128",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-3rp8-rxj8-mvjw",
+          "url": "https://github.com/advisories/GHSA-3rp8-rxj8-mvjw"
+        },
+        {
+          "title": "NVD — CVE-2026-128128",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128128"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-3rp8-rxj8-mvjw"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128129",
+      "slug": "2026-11-pypi-cve-2026-128129",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128129.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AIOHTTP: Unbounded buffering of data received during an upgrade request",
+      "summary": "AIOHTTP: Unbounded buffering of data received during an upgrade request",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": "CVE-2026-128129",
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.2. EPSS probability: 0.6%; percentile: 51%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates, especially because EPSS places it in the 51% percentile.",
+      "tags": [
+        "cve-2026-128129",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-pw86-h8fm-j323",
+          "url": "https://github.com/advisories/GHSA-pw86-h8fm-j323"
+        },
+        {
+          "title": "NVD — CVE-2026-128129",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128129"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-pw86-h8fm-j323"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128130",
+      "slug": "2026-11-pypi-cve-2026-128130",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128130.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AIOHTTP: Pure-Python parser request replay and buffer growth behind a declined upgrade",
+      "summary": "AIOHTTP: Pure-Python parser request replay and buffer growth behind a declined upgrade",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": "CVE-2026-128130",
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.3. EPSS probability: 0.4%; percentile: 37%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates, especially because EPSS places it in the 37% percentile.",
+      "tags": [
+        "cve-2026-128130",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-28qf-cpwq-vmc2",
+          "url": "https://github.com/advisories/GHSA-28qf-cpwq-vmc2"
+        },
+        {
+          "title": "NVD — CVE-2026-128130",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128130"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-28qf-cpwq-vmc2"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128131",
+      "slug": "2026-11-pypi-cve-2026-128131",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128131.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AIOHTTP: Concatenated compressed streams cause excessive CPU use",
+      "summary": "AIOHTTP: Concatenated compressed streams cause excessive CPU use",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": "CVE-2026-128131",
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.5%; percentile: 45%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates, especially because EPSS places it in the 45% percentile.",
+      "tags": [
+        "cve-2026-128131",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-h4cc-hm5h-fmm9",
+          "url": "https://github.com/advisories/GHSA-h4cc-hm5h-fmm9"
+        },
+        {
+          "title": "NVD — CVE-2026-128131",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128131"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-h4cc-hm5h-fmm9"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128132",
+      "slug": "2026-11-pypi-cve-2026-128132",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128132.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AIOHTTP: WebSocket receive queue limits bypassed by small or compressed messages",
+      "summary": "AIOHTTP: WebSocket receive queue limits bypassed by small or compressed messages",
+      "vendor": "PyPI",
+      "product": "aiohttp",
+      "cve": "CVE-2026-128132",
+      "operator_check": "Check whether aiohttp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 39%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aiohttp. Prioritize it with other application dependency updates, especially because EPSS places it in the 39% percentile.",
+      "tags": [
+        "cve-2026-128132",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-5rmc-48h2-hvcm",
+          "url": "https://github.com/advisories/GHSA-5rmc-48h2-hvcm"
+        },
+        {
+          "title": "NVD — CVE-2026-128132",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128132"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5rmc-48h2-hvcm"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-128134",
+      "slug": "2026-11-pypi-cve-2026-128134",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-128134.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "NLTK dot2img runs Graphviz 'dot' without the trusted-exec chokepoint, enabling local code execution via a writable PA...",
+      "summary": "NLTK dot2img runs Graphviz 'dot' without the trusted-exec chokepoint, enabling local code execution via a writable PATH element",
+      "vendor": "PyPI",
+      "product": "nltk",
+      "cve": "CVE-2026-128134",
+      "operator_check": "Check whether nltk is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 8%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for nltk. Prioritize it with other application dependency updates, especially because EPSS places it in the 8% percentile.",
+      "tags": [
+        "cve-2026-128134",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-7mxv-7h3q-9324",
+          "url": "https://github.com/advisories/GHSA-7mxv-7h3q-9324"
+        },
+        {
+          "title": "NVD — CVE-2026-128134",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128134"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/nltk/nltk/security/advisories/GHSA-7mxv-7h3q-9324"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-unicode-vu-604762",
+      "slug": "2026-11-unicode-vu-604762",
+      "url": "https://www.patchbrief.org/items/2026-11-unicode-vu-604762.html",
+      "date": "2026-11-16",
+      "type": "Coordinated disclosure",
+      "signal": "Patch review",
+      "title": "VU#604762: Multiple vendors vulnerable to Unicode Normalization Collision on macOS (APFS)",
+      "summary": "Overview A mismatch between Apple File System (APFS) filesystem and path resolution for multiple applications allows attackers to bypass security exclusions using alternative Unicode spellings. By supplying an alternative Unicode spelling or case-folded variant (such as ß versus ss ) that bypasses the application's file write checks, a local attacker can overwrite files wherever the process has write permissions, potentially leading to data corruption, configuration hijacking, or code execution. Multiple vendors have assigned CVEs and issued patches to address this flaw. Description Several archive tools, packaging systems, and runtimes enforce exclusion filters using pathname comparisons that do not match the underlying filesystem's resolution behavior. By using a byte-for-byte comparison (such as ß versus ss ), rather than full case... Related CVEs: CVE-2026-14978, CVE-2026-45110, CVE-2026-49401, CVE-2026-59890.",
+      "vendor": "Unicode",
+      "product": "spellings of the same name as the same file. CVE-2026-45110 Libarchive",
+      "cve": null,
+      "operator_check": "Review the CERT/CC Vulnerability Note and compare the affected vendor and product list against your inventory. Apply vendor fixes or compensating controls for spellings of the same name as the same file. CVE-2026-45110 Libarchive where available.",
+      "why_it_matters": "CERT/CC notes often cover coordinated disclosures, multi-vendor exposure, infrastructure risk, or cases where remediation guidance is still developing.",
+      "tags": [
+        "vu-604762",
+        "coordinated-disclosure",
+        "unicode",
+        "cert-vu"
+      ],
+      "sources": [
+        {
+          "title": "CERT/CC Vulnerability Note VU#604762",
+          "url": "https://kb.cert.org/vuls/id/604762"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-cyrus-cve-2026-129483",
+      "slug": "2026-11-cyrus-cve-2026-129483",
+      "url": "https://www.patchbrief.org/items/2026-11-cyrus-cve-2026-129483.html",
+      "date": "2026-11-15",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Cyrus SASL — CVE-2026-129483 (Critical)",
+      "summary": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerability in the SRP server mechanism because srp_server_mech_step2 does not reject client public values A that are multiples of N. Unauthenticated network clients can send A equal to N to force a zero shared secret, authenticating as any existing user without the password and learning session keys.",
+      "vendor": "Cyrus",
+      "product": "SASL",
+      "cve": "CVE-2026-129483",
+      "operator_check": "Review CVE-2026-129483 in your asset inventory. Apply patches per vendor guidance and verify SASL is not exposed. CVSS score: 9.1. EPSS probability: 0.4%; percentile: 33%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Cyrus SASL. Patch or mitigate promptly. EPSS percentile: 33%.",
+      "tags": [
+        "cve-2026-129483",
+        "vendor-advisory",
+        "cyrus",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-129483",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129483"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://gist.github.com/afldl/18d15d3f5a1df99411e35000c7de80db"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/cyrusimap/cyrus-sasl/blob/cyrus-sasl-2.1.28/plugins/srp.c#L2046-L2050"
+        }
+      ]
+    },
     {
       "id": "2026-11-pypi-cve-2026-126297",
       "slug": "2026-11-pypi-cve-2026-126297",
