@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-16T19:58:25Z",
-  "total_items": 2565,
+  "generated": "2026-11-17T18:12:20Z",
+  "total_items": 2574,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-16T19:58:25Z",
+    "generated": "2026-11-17T18:12:20Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-16T19:18:25Z",
-        "finished_at": "2026-11-16T19:18:26Z"
+        "items_seen": 0,
+        "started_at": "2026-11-17T18:12:07Z",
+        "finished_at": "2026-11-17T18:12:07Z"
       },
       {
         "id": "msrc",
@@ -27,35 +27,35 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-16T19:18:26Z",
-        "finished_at": "2026-11-16T19:18:26Z"
+        "started_at": "2026-11-17T18:12:07Z",
+        "finished_at": "2026-11-17T18:12:08Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-16T19:18:26Z",
-        "finished_at": "2026-11-16T19:18:34Z"
+        "items_seen": 3,
+        "started_at": "2026-11-17T18:12:08Z",
+        "finished_at": "2026-11-17T18:12:15Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 29,
-        "started_at": "2026-11-16T19:18:34Z",
-        "finished_at": "2026-11-16T19:18:35Z"
+        "items_seen": 21,
+        "started_at": "2026-11-17T18:12:15Z",
+        "finished_at": "2026-11-17T18:12:15Z"
       },
       {
         "id": "cert_vu",
         "label": "CERT/CC Vulnerability Notes",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-16T19:18:35Z",
-        "finished_at": "2026-11-16T19:18:35Z"
+        "items_seen": 1,
+        "started_at": "2026-11-17T18:12:15Z",
+        "finished_at": "2026-11-17T18:12:16Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,196 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-16T19:18:35Z",
-        "finished_at": "2026-11-16T19:18:36Z"
+        "started_at": "2026-11-17T18:12:16Z",
+        "finished_at": "2026-11-17T18:12:16Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 26,
-        "started_at": "2026-11-16T19:18:36Z",
-        "finished_at": "2026-11-16T19:18:37Z"
+        "items_seen": 23,
+        "started_at": "2026-11-17T18:12:16Z",
+        "finished_at": "2026-11-17T18:12:16Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-rootways-cve-2026-130583",
+      "slug": "2026-11-rootways-cve-2026-130583",
+      "url": "https://www.patchbrief.org/items/2026-11-rootways-cve-2026-130583.html",
+      "date": "2026-11-17",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Rootways Authorize.net CIM Pro extension for Magento 2 — CVE-2026-130583 (Critical)",
+      "summary": "Rootways Authorize.net CIM Pro extension for Magento 2 before 4.1.5 contains an unauthenticated server-side request forgery vulnerability in the Apple Pay merchant validation controller. Attackers can supply file://, gopher://, or dict:// URLs in the validationUrl parameter to read app/etc/env.php credentials and encryption keys or reach internal services and cloud metadata endpoints.",
+      "vendor": "Rootways",
+      "product": "Authorize.net CIM Pro extension for Magento 2",
+      "cve": "CVE-2026-130583",
+      "operator_check": "Review CVE-2026-130583 in your asset inventory. Apply patches per vendor guidance and verify Authorize.net CIM Pro extension for Magento 2 is not exposed. CVSS score: 9.3.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.3) in Rootways Authorize.net CIM Pro extension for Magento 2. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-130583",
+        "vendor-advisory",
+        "rootways",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-130583",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130583"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://sansec.io/research/rootways-authorize-net-apple-pay-ssrf"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.rootways.com/blog/security-update-authorizenet-cim-pro-extension-v415-apple-pay"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-cloud-cve-2026-130072",
+      "slug": "2026-11-cloud-cve-2026-130072",
+      "url": "https://www.patchbrief.org/items/2026-11-cloud-cve-2026-130072.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Cloud Commander (cloudcmd) — CVE-2026-130072 (Critical)",
+      "summary": "Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to rename files by sending PUT /rename requests handled before authentication middleware. Attackers can supply absolute or ../ paths in the from and to arrays to move any file the Node.js process can access outside the configured root, causing data loss or denial of service.",
+      "vendor": "Cloud",
+      "product": "Commander (cloudcmd)",
+      "cve": "CVE-2026-130072",
+      "operator_check": "Review CVE-2026-130072 in your asset inventory. Apply patches per vendor guidance and verify Commander (cloudcmd) is not exposed. CVSS score: 9.1. EPSS probability: 0.4%; percentile: 38%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.1) in Cloud Commander (cloudcmd). Patch or mitigate promptly. EPSS percentile: 38%.",
+      "tags": [
+        "cve-2026-130072",
+        "vendor-advisory",
+        "cloud",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-130072",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130072"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coderaiser/cloudcmd/blob/v19.21.2/server/cloudcmd.js#L253-L258"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/coderaiser/cloudcmd/commit/25f496ff1c0d512354de92cb7f76c6e86c16aa8f"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-composer-cve-2026-63182",
+      "slug": "2026-11-composer-cve-2026-63182",
+      "url": "https://www.patchbrief.org/items/2026-11-composer-cve-2026-63182.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "lightsaml allows Signature wrapping bypass",
+      "summary": "lightsaml allows Signature wrapping bypass",
+      "vendor": "Composer",
+      "product": "litesaml/lightsaml",
+      "cve": "CVE-2026-63182",
+      "operator_check": "Check whether litesaml/lightsaml is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 9%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for litesaml/lightsaml. Prioritize it with other application dependency updates, especially because EPSS places it in the 9% percentile.",
+      "tags": [
+        "cve-2026-63182",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w553-pwx6-3mg9",
+          "url": "https://github.com/advisories/GHSA-w553-pwx6-3mg9"
+        },
+        {
+          "title": "NVD — CVE-2026-63182",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63182"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/litesaml/lightsaml/security/advisories/GHSA-w553-pwx6-3mg9"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-composer-cve-2026-91115",
+      "slug": "2026-11-composer-cve-2026-91115",
+      "url": "https://www.patchbrief.org/items/2026-11-composer-cve-2026-91115.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Silverstripe Framework: RCE via i18nTextCollectorTask writer parameter",
+      "summary": "Silverstripe Framework: RCE via i18nTextCollectorTask writer parameter",
+      "vendor": "Composer",
+      "product": "silverstripe/framework",
+      "cve": "CVE-2026-91115",
+      "operator_check": "Check whether silverstripe/framework is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.6%; percentile: 51%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for silverstripe/framework. Prioritize it with other application dependency updates, especially because EPSS places it in the 51% percentile.",
+      "tags": [
+        "cve-2026-91115",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c94f-87xg-65wf",
+          "url": "https://github.com/advisories/GHSA-c94f-87xg-65wf"
+        },
+        {
+          "title": "NVD — CVE-2026-91115",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91115"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/silverstripe/silverstripe-framework/security/advisories/GHSA-c94f-87xg-65wf"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-cve-2026-129236",
+      "slug": "2026-11-go-cve-2026-129236",
+      "url": "https://www.patchbrief.org/items/2026-11-go-cve-2026-129236.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Kubeshark: MCP `start_kubeshark` argument injection via `pod_regex` → image redirect → cluster takeover",
+      "summary": "Kubeshark: MCP `start_kubeshark` argument injection via `pod_regex` → image redirect → cluster takeover",
+      "vendor": "Go",
+      "product": "github.com/kubeshark/kubeshark",
+      "cve": "CVE-2026-129236",
+      "operator_check": "Check whether github.com/kubeshark/kubeshark is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 13%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/kubeshark/kubeshark. Prioritize it with other application dependency updates, especially because EPSS places it in the 13% percentile.",
+      "tags": [
+        "cve-2026-129236",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-8vf2-hxg5-crqh",
+          "url": "https://github.com/advisories/GHSA-8vf2-hxg5-crqh"
+        },
+        {
+          "title": "NVD — CVE-2026-129236",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129236"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/kubeshark/kubeshark/security/advisories/GHSA-8vf2-hxg5-crqh"
+        }
+      ]
+    },
     {
       "id": "2026-11-npm-cve-2026-128118",
       "slug": "2026-11-npm-cve-2026-128118",
@@ -145,6 +320,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/sveltejs/kit/security/advisories/GHSA-3r8g-jcqq-3p5j"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-68934",
+      "slug": "2026-11-npm-cve-2026-68934",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-68934.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "code-review-mcp-server: Command injection via unsanitized folderPath/baseBranch parameters",
+      "summary": "code-review-mcp-server: Command injection via unsanitized folderPath/baseBranch parameters",
+      "vendor": "npm",
+      "product": "code-review-mcp-server",
+      "cve": "CVE-2026-68934",
+      "operator_check": "Check whether code-review-mcp-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.7. EPSS probability: 0.4%; percentile: 38%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for code-review-mcp-server. Prioritize it with other application dependency updates, especially because EPSS places it in the 38% percentile.",
+      "tags": [
+        "cve-2026-68934",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jq3q-62jc-fqq9",
+          "url": "https://github.com/advisories/GHSA-jq3q-62jc-fqq9"
+        },
+        {
+          "title": "NVD — CVE-2026-68934",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68934"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Orcus2021/code-review-mcp-server/security/advisories/GHSA-jq3q-62jc-fqq9"
         }
       ]
     },
@@ -460,6 +670,111 @@
         {
           "title": "Source reference",
           "url": "https://github.com/nltk/nltk/security/advisories/GHSA-7mxv-7h3q-9324"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-129295",
+      "slug": "2026-11-pypi-cve-2026-129295",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-129295.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "mail-parser is vulnerable to polynomial ReDoS in email header parsing",
+      "summary": "mail-parser is vulnerable to polynomial ReDoS in email header parsing",
+      "vendor": "PyPI",
+      "product": "mail-parser",
+      "cve": "CVE-2026-129295",
+      "operator_check": "Check whether mail-parser is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 43%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mail-parser. Prioritize it with other application dependency updates, especially because EPSS places it in the 43% percentile.",
+      "tags": [
+        "cve-2026-129295",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r7w7-vpq8-c5vv",
+          "url": "https://github.com/advisories/GHSA-r7w7-vpq8-c5vv"
+        },
+        {
+          "title": "NVD — CVE-2026-129295",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129295"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SpamScope/mail-parser/security/advisories/GHSA-r7w7-vpq8-c5vv"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-129297",
+      "slug": "2026-11-pypi-cve-2026-129297",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-129297.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "mail-parser: Sender IP address spoofing in get_server_ipaddress()",
+      "summary": "mail-parser: Sender IP address spoofing in get_server_ipaddress()",
+      "vendor": "PyPI",
+      "product": "mail-parser",
+      "cve": "CVE-2026-129297",
+      "operator_check": "Check whether mail-parser is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 10%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for mail-parser. Prioritize it with other application dependency updates, especially because EPSS places it in the 10% percentile.",
+      "tags": [
+        "cve-2026-129297",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-72px-j8gh-p79x",
+          "url": "https://github.com/advisories/GHSA-72px-j8gh-p79x"
+        },
+        {
+          "title": "NVD — CVE-2026-129297",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129297"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/SpamScope/mail-parser/security/advisories/GHSA-72px-j8gh-p79x"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-86046",
+      "slug": "2026-11-pypi-cve-2026-86046",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-86046.html",
+      "date": "2026-11-16",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "termux-sync: Arbitrary file write during restore via attacker-controlled manifest source path",
+      "summary": "termux-sync: Arbitrary file write during restore via attacker-controlled manifest source path",
+      "vendor": "PyPI",
+      "product": "termux-sync",
+      "cve": "CVE-2026-86046",
+      "operator_check": "Check whether termux-sync is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.3%; percentile: 19%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for termux-sync. Prioritize it with other application dependency updates, especially because EPSS places it in the 19% percentile.",
+      "tags": [
+        "cve-2026-86046",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-259w-wmqg-fp76",
+          "url": "https://github.com/advisories/GHSA-259w-wmqg-fp76"
+        },
+        {
+          "title": "NVD — CVE-2026-86046",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86046"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/djunekz/termux-sync/security/advisories/GHSA-259w-wmqg-fp76"
         }
       ]
     },
