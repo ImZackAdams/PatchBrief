@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-20T17:34:37Z",
-  "total_items": 2631,
+  "generated": "2026-11-21T16:37:58Z",
+  "total_items": 2641,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-20T17:34:37Z",
+    "generated": "2026-11-21T16:37:58Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-11-20T17:34:19Z",
-        "finished_at": "2026-11-20T17:34:20Z"
+        "items_seen": 8,
+        "started_at": "2026-11-21T16:37:43Z",
+        "finished_at": "2026-11-21T16:37:43Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-20T17:34:20Z",
-        "finished_at": "2026-11-20T17:34:20Z"
+        "started_at": "2026-11-21T16:37:43Z",
+        "finished_at": "2026-11-21T16:37:44Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-20T17:34:20Z",
-        "finished_at": "2026-11-20T17:34:27Z"
+        "items_seen": 0,
+        "started_at": "2026-11-21T16:37:44Z",
+        "finished_at": "2026-11-21T16:37:51Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-11-20T17:34:27Z",
-        "finished_at": "2026-11-20T17:34:29Z"
+        "started_at": "2026-11-21T16:37:51Z",
+        "finished_at": "2026-11-21T16:37:52Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-20T17:34:29Z",
-        "finished_at": "2026-11-20T17:34:30Z"
+        "started_at": "2026-11-21T16:37:52Z",
+        "finished_at": "2026-11-21T16:37:53Z"
       },
       {
         "id": "exploitdb",
@@ -63,8 +63,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-20T17:34:30Z",
-        "finished_at": "2026-11-20T17:34:30Z"
+        "started_at": "2026-11-21T16:37:53Z",
+        "finished_at": "2026-11-21T16:37:54Z"
       },
       {
         "id": "epss",
@@ -72,12 +72,105 @@
         "role": "enrichment",
         "status": "ok",
         "items_seen": 36,
-        "started_at": "2026-11-20T17:34:30Z",
-        "finished_at": "2026-11-20T17:34:31Z"
+        "started_at": "2026-11-21T16:37:54Z",
+        "finished_at": "2026-11-21T16:37:54Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-apache-cve-2026-129448",
+      "slug": "2026-11-apache-cve-2026-129448",
+      "url": "https://www.patchbrief.org/items/2026-11-apache-cve-2026-129448.html",
+      "date": "2026-11-20",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Apache Roller Deserialization of Untrusted Data Vulnerability",
+      "summary": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.",
+      "vendor": "Apache",
+      "product": "Roller",
+      "cve": "CVE-2026-129448",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-129448 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-23. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-129448",
+        "kev",
+        "apache",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-129448",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-broadcom-cve-2026-123890",
+      "slug": "2026-11-broadcom-cve-2026-123890",
+      "url": "https://www.patchbrief.org/items/2026-11-broadcom-cve-2026-123890.html",
+      "date": "2026-11-20",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "summary": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
+      "vendor": "Broadcom",
+      "product": "VMware vCenter",
+      "cve": "CVE-2026-123890",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines",
+      "why_it_matters": "CVE-2026-123890 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-23. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-123890",
+        "kev",
+        "broadcom",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-123890",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-cisco-cve-2026-76466",
+      "slug": "2026-11-cisco-cve-2026-76466",
+      "url": "https://www.patchbrief.org/items/2026-11-cisco-cve-2026-76466.html",
+      "date": "2026-11-20",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability",
+      "summary": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
+      "vendor": "Cisco",
+      "product": "Expressway Series",
+      "cve": "CVE-2026-76466",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-76466 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-23. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-76466",
+        "kev",
+        "cisco",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-76466",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466"
+        }
+      ]
+    },
     {
       "id": "2026-11-composer-cve-2026-103026",
       "slug": "2026-11-composer-cve-2026-103026",
@@ -145,6 +238,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/nilsteampassnet/TeamPass/security/advisories/GHSA-66q9-mxf2-xqw6"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-composer-cve-2026-104883",
+      "slug": "2026-11-composer-cve-2026-104883",
+      "url": "https://www.patchbrief.org/items/2026-11-composer-cve-2026-104883.html",
+      "date": "2026-11-20",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "contao/core-bundle: Non-admin users can self-grant permissions that implicitly make them administrators",
+      "summary": "contao/core-bundle: Non-admin users can self-grant permissions that implicitly make them administrators",
+      "vendor": "Composer",
+      "product": "contao/core-bundle",
+      "cve": "CVE-2026-104883",
+      "operator_check": "Check whether contao/core-bundle is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for contao/core-bundle. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-104883",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r9qp-pqx5-8369",
+          "url": "https://github.com/advisories/GHSA-r9qp-pqx5-8369"
+        },
+        {
+          "title": "NVD — CVE-2026-104883",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104883"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/contao/contao/security/advisories/GHSA-r9qp-pqx5-8369"
         }
       ]
     },
@@ -534,6 +662,111 @@
       ]
     },
     {
+      "id": "2026-11-npm-cve-2026-122244",
+      "slug": "2026-11-npm-cve-2026-122244",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-122244.html",
+      "date": "2026-11-20",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Budibase: Cross-privilege Stored XSS in the Budibase Builder via broken HTML-escaping in `jsonFormatter.format()` ren...",
+      "summary": "Budibase: Cross-privilege Stored XSS in the Budibase Builder via broken HTML-escaping in `jsonFormatter.format()` rendered through `{@html}` in the CSP-less Builder origin",
+      "vendor": "npm",
+      "product": "@budibase/server",
+      "cve": "CVE-2026-122244",
+      "operator_check": "Check whether @budibase/server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.7%; percentile: 53%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @budibase/server. Prioritize it with other application dependency updates, especially because EPSS places it in the 53% percentile.",
+      "tags": [
+        "cve-2026-122244",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-r2q3-7m4h-63qg",
+          "url": "https://github.com/advisories/GHSA-r2q3-7m4h-63qg"
+        },
+        {
+          "title": "NVD — CVE-2026-122244",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122244"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-r2q3-7m4h-63qg"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-122247",
+      "slug": "2026-11-npm-cve-2026-122247",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-122247.html",
+      "date": "2026-11-20",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Budibase: Unauthenticated global-admin & database creation via tenant-confusion bypass of the one-time init guard (`P...",
+      "summary": "Budibase: Unauthenticated global-admin & database creation via tenant-confusion bypass of the one-time init guard (`POST /api/global/users/init`)",
+      "vendor": "npm",
+      "product": "@budibase/server",
+      "cve": "CVE-2026-122247",
+      "operator_check": "Check whether @budibase/server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.8%; percentile: 59%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @budibase/server. Prioritize it with other application dependency updates, especially because EPSS places it in the 59% percentile.",
+      "tags": [
+        "cve-2026-122247",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-25qc-m4pw-2w8r",
+          "url": "https://github.com/advisories/GHSA-25qc-m4pw-2w8r"
+        },
+        {
+          "title": "NVD — CVE-2026-122247",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122247"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-25qc-m4pw-2w8r"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-63341",
+      "slug": "2026-11-npm-cve-2026-63341",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-63341.html",
+      "date": "2026-11-20",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Aedes has Uncaught Exception and Uncontrolled Resource Consumption",
+      "summary": "Aedes has Uncaught Exception and Uncontrolled Resource Consumption",
+      "vendor": "npm",
+      "product": "aedes",
+      "cve": "CVE-2026-63341",
+      "operator_check": "Check whether aedes is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 47%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for aedes. Prioritize it with other application dependency updates, especially because EPSS places it in the 47% percentile.",
+      "tags": [
+        "cve-2026-63341",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-xxqp-5qx8-gj5q",
+          "url": "https://github.com/advisories/GHSA-xxqp-5qx8-gj5q"
+        },
+        {
+          "title": "NVD — CVE-2026-63341",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63341"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/moscajs/aedes/security/advisories/GHSA-xxqp-5qx8-gj5q"
+        }
+      ]
+    },
+    {
       "id": "2026-11-nuget-cve-2026-63184",
       "slug": "2026-11-nuget-cve-2026-63184",
       "url": "https://www.patchbrief.org/items/2026-11-nuget-cve-2026-63184.html",
@@ -744,6 +977,76 @@
       ]
     },
     {
+      "id": "2026-11-pypi-cve-2026-132275",
+      "slug": "2026-11-pypi-cve-2026-132275",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-132275.html",
+      "date": "2026-11-20",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "svglib: Exponential resource consumption via nested <use> references in svg2rlg",
+      "summary": "svglib: Exponential resource consumption via nested <use> references in svg2rlg",
+      "vendor": "PyPI",
+      "product": "svglib",
+      "cve": "CVE-2026-132275",
+      "operator_check": "Check whether svglib is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 1.1%; percentile: 65%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for svglib. Prioritize it with other application dependency updates, especially because EPSS places it in the 65% percentile.",
+      "tags": [
+        "cve-2026-132275",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-555j-qj3j-c8jv",
+          "url": "https://github.com/advisories/GHSA-555j-qj3j-c8jv"
+        },
+        {
+          "title": "NVD — CVE-2026-132275",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132275"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/deeplook/svglib/security/advisories/GHSA-555j-qj3j-c8jv"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-77309",
+      "slug": "2026-11-pypi-cve-2026-77309",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-77309.html",
+      "date": "2026-11-20",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AIT-GUI route chain allows unauthenticated Python execution in server process",
+      "summary": "AIT-GUI route chain allows unauthenticated Python execution in server process",
+      "vendor": "PyPI",
+      "product": "ait-gui",
+      "cve": "CVE-2026-77309",
+      "operator_check": "Check whether ait-gui is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 1.1%; percentile: 65%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ait-gui. Prioritize it with other application dependency updates, especially because EPSS places it in the 65% percentile.",
+      "tags": [
+        "cve-2026-77309",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jrjx-9jjw-747m",
+          "url": "https://github.com/advisories/GHSA-jrjx-9jjw-747m"
+        },
+        {
+          "title": "NVD — CVE-2026-77309",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77309"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/NASA-AMMOS/AIT-GUI/security/advisories/GHSA-jrjx-9jjw-747m"
+        }
+      ]
+    },
+    {
       "id": "2026-11-pypi-cve-2026-77312",
       "slug": "2026-11-pypi-cve-2026-77312",
       "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-77312.html",
@@ -810,6 +1113,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/datalayer/jupyter-mcp-server/security/advisories/GHSA-9x8x-crjq-g64h"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-sap-cve-2025-42884",
+      "slug": "2026-11-sap-cve-2025-42884",
+      "url": "https://www.patchbrief.org/items/2026-11-sap-cve-2025-42884.html",
+      "date": "2026-11-20",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
+      "summary": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
+      "vendor": "SAP",
+      "product": "NetWeaver",
+      "cve": "CVE-2025-42884",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2025-42884 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-23. Treat remediation as urgent.",
+      "tags": [
+        "cve-2025-42884",
+        "kev",
+        "sap",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2025-42884",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-42884"
         }
       ]
     },
