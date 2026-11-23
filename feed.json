@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-22T16:55:17Z",
-  "total_items": 2641,
+  "generated": "2026-11-23T20:54:53Z",
+  "total_items": 2647,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-22T16:55:17Z",
+    "generated": "2026-11-23T20:54:53Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 4,
-        "started_at": "2026-11-22T16:55:04Z",
-        "finished_at": "2026-11-22T16:55:04Z"
+        "items_seen": 6,
+        "started_at": "2026-11-23T20:54:35Z",
+        "finished_at": "2026-11-23T20:54:35Z"
       },
       {
         "id": "msrc",
@@ -27,17 +27,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-22T16:55:04Z",
-        "finished_at": "2026-11-22T16:55:05Z"
+        "started_at": "2026-11-23T20:54:35Z",
+        "finished_at": "2026-11-23T20:54:36Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 0,
-        "started_at": "2026-11-22T16:55:05Z",
-        "finished_at": "2026-11-22T16:55:12Z"
+        "items_seen": 1,
+        "started_at": "2026-11-23T20:54:36Z",
+        "finished_at": "2026-11-23T20:54:45Z"
       },
       {
         "id": "github_advisory",
@@ -45,8 +45,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 30,
-        "started_at": "2026-11-22T16:55:12Z",
-        "finished_at": "2026-11-22T16:55:13Z"
+        "started_at": "2026-11-23T20:54:45Z",
+        "finished_at": "2026-11-23T20:54:46Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-22T16:55:13Z",
-        "finished_at": "2026-11-22T16:55:13Z"
+        "started_at": "2026-11-23T20:54:46Z",
+        "finished_at": "2026-11-23T20:54:46Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,223 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-22T16:55:13Z",
-        "finished_at": "2026-11-22T16:55:14Z"
+        "started_at": "2026-11-23T20:54:46Z",
+        "finished_at": "2026-11-23T20:54:47Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 33,
-        "started_at": "2026-11-22T16:55:14Z",
-        "finished_at": "2026-11-22T16:55:14Z"
+        "items_seen": 34,
+        "started_at": "2026-11-23T20:54:47Z",
+        "finished_at": "2026-11-23T20:54:47Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-kerberos-cve-2026-135208",
+      "slug": "2026-11-kerberos-cve-2026-135208",
+      "url": "https://www.patchbrief.org/items/2026-11-kerberos-cve-2026-135208.html",
+      "date": "2026-11-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Kerberos Agent — CVE-2026-135208 (Critical)",
+      "summary": "Kerberos Agent before 3.14.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens because JWTMiddleWare() falls back to the hard-coded key TOBECHANGED. Attackers can sign HS256 tokens with arbitrary username and role claims to access /api and /config routes, exposing RTSP, ONVIF, Hub and encryption keys, rewriting configuration, and stopping the camera.",
+      "vendor": "Kerberos",
+      "product": "Agent",
+      "cve": "CVE-2026-135208",
+      "operator_check": "Review CVE-2026-135208 in your asset inventory. Apply patches per vendor guidance and verify Agent is not exposed. CVSS score: 9.8.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 9.8) in Kerberos Agent. Patch or mitigate promptly.",
+      "tags": [
+        "cve-2026-135208",
+        "vendor-advisory",
+        "kerberos",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-135208",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135208"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/kerberos-io/agent/blob/v3.14.1/machinery/src/routers/http/jwt_middleware.go#L17-L28"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/kerberos-io/agent/commit/c0baade8fd6e21ed1b9a834d9ae6b4eaaa67b3b6"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-maven-cve-2026-22816",
+      "slug": "2026-11-maven-cve-2026-22816",
+      "url": "https://www.patchbrief.org/items/2026-11-maven-cve-2026-22816.html",
+      "date": "2026-11-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gradle causes Failure to disable repositories can expose builds to malicious artifacts",
+      "summary": "Gradle causes Failure to disable repositories can expose builds to malicious artifacts",
+      "vendor": "Maven",
+      "product": "org.gradle:gradle-core",
+      "cve": "CVE-2026-22816",
+      "operator_check": "Check whether org.gradle:gradle-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6. EPSS probability: 0.2%; percentile: 7%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.gradle:gradle-core. Prioritize it with other application dependency updates, especially because EPSS places it in the 7% percentile.",
+      "tags": [
+        "cve-2026-22816",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-w78c-w6vf-rw82",
+          "url": "https://github.com/advisories/GHSA-w78c-w6vf-rw82"
+        },
+        {
+          "title": "NVD — CVE-2026-22816",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22816"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/gradle/gradle/security/advisories/GHSA-w78c-w6vf-rw82"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-maven-cve-2026-22865",
+      "slug": "2026-11-maven-cve-2026-22865",
+      "url": "https://www.patchbrief.org/items/2026-11-maven-cve-2026-22865.html",
+      "date": "2026-11-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Gradle causes failure to disable repositories exposing builds to malicious artifacts",
+      "summary": "Gradle causes failure to disable repositories exposing builds to malicious artifacts",
+      "vendor": "Maven",
+      "product": "org.gradle:gradle-core",
+      "cve": "CVE-2026-22865",
+      "operator_check": "Check whether org.gradle:gradle-core is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 8.6. EPSS probability: 0.2%; percentile: 5%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.gradle:gradle-core. Prioritize it with other application dependency updates, especially because EPSS places it in the 5% percentile.",
+      "tags": [
+        "cve-2026-22865",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-mqwm-5m85-gmcv",
+          "url": "https://github.com/advisories/GHSA-mqwm-5m85-gmcv"
+        },
+        {
+          "title": "NVD — CVE-2026-22865",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22865"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/gradle/gradle/security/advisories/GHSA-mqwm-5m85-gmcv"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-n-able-cve-2026-134624",
+      "slug": "2026-11-n-able-cve-2026-134624",
+      "url": "https://www.patchbrief.org/items/2026-11-n-able-cve-2026-134624.html",
+      "date": "2026-11-23",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+      "summary": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+      "vendor": "N-able",
+      "product": "MailAssure",
+      "cve": "CVE-2026-134624",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-134624 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-26. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-134624",
+        "kev",
+        "n-able",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-134624",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134624"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-133469",
+      "slug": "2026-11-npm-cve-2026-133469",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-133469.html",
+      "date": "2026-11-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Xen Orchestra: Empty-object login token",
+      "summary": "Xen Orchestra: Empty-object login token",
+      "vendor": "npm",
+      "product": "xo-server",
+      "cve": "CVE-2026-133469",
+      "operator_check": "Check whether xo-server is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for xo-server. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-133469",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2r3w-c2vx-fv5g",
+          "url": "https://github.com/advisories/GHSA-2r3w-c2vx-fv5g"
+        },
+        {
+          "title": "NVD — CVE-2026-133469",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133469"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/vatesfr/xen-orchestra/security/advisories/GHSA-2r3w-c2vx-fv5g"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-project-monai-cve-2026-133968",
+      "slug": "2026-11-project-monai-cve-2026-133968",
+      "url": "https://www.patchbrief.org/items/2026-11-project-monai-cve-2026-133968.html",
+      "date": "2026-11-23",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Project MONAI MONAI Label Path Traversal Vulnerability",
+      "summary": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
+      "vendor": "Project MONAI",
+      "product": "MONAI Label",
+      "cve": "CVE-2026-133968",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-133968 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-26. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-133968",
+        "kev",
+        "project-monai",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-133968",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968"
+        }
+      ]
+    },
     {
       "id": "2026-11-apache-cve-2026-129448",
       "slug": "2026-11-apache-cve-2026-129448",
