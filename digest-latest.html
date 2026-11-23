@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>PatchBrief #98 — Weekly Digest</title>
+  <title>PatchBrief #99 — Weekly Digest</title>
   <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
   <style>
     body { margin:0;padding:0;background:#fbfbf8; }
@@ -19,7 +19,7 @@
 
   <!-- Preheader -->
   <div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">
-    PatchBrief #98 &middot; 8 security briefs &middot; November 16, 2026
+    PatchBrief #99 &middot; 8 security briefs &middot; November 23, 2026
     &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
   </div>
 
@@ -48,7 +48,7 @@
                           </table>
                         </td>
                         <td align="right">
-                          <span style="font-size:12px;color:#66706d;">Weekly Digest &middot; #98</span>
+                          <span style="font-size:12px;color:#66706d;">Weekly Digest &middot; #99</span>
                         </td>
                       </tr>
                     </table>
@@ -58,7 +58,7 @@
                   <td style="padding:16px 24px 18px;">
                     <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Security intel feed</p>
                     <h1 style="margin:0 0 8px;font-size:22px;font-weight:800;color:#111816;line-height:1.15;">This week in exploited vulnerabilities</h1>
-                    <p style="margin:0;font-size:13px;color:#66706d;">November 16, 2026 &middot; 8 items from 152 in the feed</p>
+                    <p style="margin:0;font-size:13px;color:#66706d;">November 23, 2026 &middot; 8 items from 94 in the feed</p>
                   </td>
                 </tr>
               </table>
@@ -74,30 +74,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 9, 2026 &middot; CVE-2026-102895</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 17, 2026 &middot; CVE-2026-115731</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-11-gpustack-cve-2026-102895.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">GPUStack Improper Authentication Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-11-perforce-cve-2026-115731.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">GPUStack &middot; GPUStack</span>
+              <span style="font-size:12px;color:#66706d;">Perforce &middot; Puppet Enterprise</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
               <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-102895</a>
-              <a href="https://www.patchbrief.org/items/2026-11-gpustack-cve-2026-102895.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-115731" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-115731</a>
+              <a href="https://www.patchbrief.org/items/2026-11-perforce-cve-2026-115731.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -111,30 +111,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 9, 2026 &middot; CVE-2026-123218</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 18, 2026 &middot; CVE-2026-90436</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-11-ibm-cve-2026-123218.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">IBM Aspera Faspex Incorrect Authorization Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-11-apache-cve-2026-90436.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Apache Axis Unsafe Reflection Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">IBM &middot; Aspera Faspex</span>
+              <span style="font-size:12px;color:#66706d;">Apache &middot; Axis</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
               <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123218" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-123218</a>
-              <a href="https://www.patchbrief.org/items/2026-11-ibm-cve-2026-123218.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90436" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-90436</a>
+              <a href="https://www.patchbrief.org/items/2026-11-apache-cve-2026-90436.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -148,30 +148,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 9, 2026 &middot; CVE-2026-123158</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 18, 2026 &middot; CVE-2026-40217</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-11-openbsd-cve-2026-123158.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-11-berriai-cve-2026-40217.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">BerriAI LiteLLM Unprotected Alternate Channel Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">OpenBSD &middot; OpenSSH</span>
+              <span style="font-size:12px;color:#66706d;">BerriAI &middot; LiteLLM</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
               <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-123158</a>
-              <a href="https://www.patchbrief.org/items/2026-11-openbsd-cve-2026-123158.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40217" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-40217</a>
+              <a href="https://www.patchbrief.org/items/2026-11-berriai-cve-2026-40217.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -185,30 +185,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 9, 2026 &middot; CVE-2026-116779</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 18, 2026 &middot; CVE-2024-10441</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-11-signalwire-cve-2026-116779.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">SignalWire FreeSwitch Code Injection Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-11-synology-cve-2024-10441.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">SignalWire &middot; FreeSwitch</span>
+              <span style="font-size:12px;color:#66706d;">Synology &middot; DiskStation Manager (DSM)</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
               <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116779" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-116779</a>
-              <a href="https://www.patchbrief.org/items/2026-11-signalwire-cve-2026-116779.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10441" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2024-10441</a>
+              <a href="https://www.patchbrief.org/items/2026-11-synology-cve-2024-10441.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -222,30 +222,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 10, 2026 &middot; CVE-2026-111560</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 18, 2026 &middot; CVE-2026-90817</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-11-barracuda-networks-cve-2026-111560.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Barracuda Networks Multiple Products OS Command Injection Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-11-vanderbilt-universit-cve-2026-90817.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Barracuda Networks &middot; Multiple Products</span>
+              <span style="font-size:12px;color:#66706d;">Vanderbilt University &middot; Research Electronic Data Capture (REDCap)</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
               <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111560" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-111560</a>
-              <a href="https://www.patchbrief.org/items/2026-11-barracuda-networks-cve-2026-111560.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90817" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-90817</a>
+              <a href="https://www.patchbrief.org/items/2026-11-vanderbilt-universit-cve-2026-90817.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -259,30 +259,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 10, 2026 &middot; CVE-2026-116606</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 20, 2026 &middot; CVE-2026-129448</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-11-barracuda-networks-cve-2026-116606.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-11-apache-cve-2026-129448.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Apache Roller Deserialization of Untrusted Data Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Barracuda Networks &middot; Barracuda Email Security Gateway (ESG)</span>
+              <span style="font-size:12px;color:#66706d;">Apache &middot; Roller</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
               <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116606" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-116606</a>
-              <a href="https://www.patchbrief.org/items/2026-11-barracuda-networks-cve-2026-116606.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129448" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-129448</a>
+              <a href="https://www.patchbrief.org/items/2026-11-apache-cve-2026-129448.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -296,30 +296,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 10, 2026 &middot; CVE-2026-20320</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 20, 2026 &middot; CVE-2026-123890</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-11-cisco-cve-2026-20320.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-11-broadcom-cve-2026-123890.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Cisco &middot; BroadWorks</span>
+              <span style="font-size:12px;color:#66706d;">Broadcom &middot; VMware vCenter</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
-              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20320" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-20320</a>
-              <a href="https://www.patchbrief.org/items/2026-11-cisco-cve-2026-20320.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines</p>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123890" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-123890</a>
+              <a href="https://www.patchbrief.org/items/2026-11-broadcom-cve-2026-123890.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
@@ -333,30 +333,30 @@
           <tr>
             <td style="padding:4px 16px;background:#edf7f4;">
               <span style="font-size:11px;font-weight:700;color:#0f766e;letter-spacing:0.04em;text-transform:uppercase;">Known exploited</span>
-              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 10, 2026 &middot; CVE-2026-125350</span>
+              <span style="font-size:11px;color:#0f766e;opacity:0.7;margin-left:8px;">Nov 20, 2026 &middot; CVE-2026-76466</span>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px 4px;">
-              <a href="https://www.patchbrief.org/items/2026-11-google-cve-2026-125350.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Google Chromium Use-After-Free Vulnerability</a>
+              <a href="https://www.patchbrief.org/items/2026-11-cisco-cve-2026-76466.html" style="font-size:15px;font-weight:700;color:#111816;text-decoration:none;line-height:1.3;display:block;">Cisco Expressway Series Use of Hard-coded Credentials Vulnerability</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 16px 6px;">
-              <span style="font-size:12px;color:#66706d;">Google &middot; Chromium</span>
+              <span style="font-size:12px;color:#66706d;">Cisco &middot; Expressway Series</span>
             </td>
           </tr>
           <tr>
             <td style="padding:0 16px 10px;">
-              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.</p>
+              <p style="margin:0;font-size:13px;color:#2e3936;line-height:1.55;">Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.</p>
             </td>
           </tr>
           <tr>
             <td style="padding:10px 16px;border-top:1px solid #e2e5df;background:#fbfbf8;">
               <p style="margin:0 0 4px;font-size:10px;font-weight:700;color:#66706d;letter-spacing:0.05em;text-transform:uppercase;">Operator check</p>
               <p style="margin:0 0 10px;font-size:12px;color:#2e3936;line-height:1.55;">Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
-              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125350" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-125350</a>
-              <a href="https://www.patchbrief.org/items/2026-11-google-cve-2026-125350.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
+              <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76466" style="color:#0f766e;text-decoration:none;font-size:12px;margin-right:8px;">NVD — CVE-2026-76466</a>
+              <a href="https://www.patchbrief.org/items/2026-11-cisco-cve-2026-76466.html" style="display:inline-block;margin-top:6px;font-size:12px;color:#0f766e;font-weight:700;text-decoration:none;">Read full brief &rarr;</a>
             </td>
           </tr>
         </table>
