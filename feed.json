@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-23T21:52:08Z",
-  "total_items": 2647,
+  "generated": "2026-11-24T19:58:23Z",
+  "total_items": 2654,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-23T21:52:08Z",
+    "generated": "2026-11-24T19:58:23Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 6,
-        "started_at": "2026-11-23T20:54:35Z",
-        "finished_at": "2026-11-23T20:54:35Z"
+        "items_seen": 5,
+        "started_at": "2026-11-24T19:58:08Z",
+        "finished_at": "2026-11-24T19:58:08Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-23T20:54:35Z",
-        "finished_at": "2026-11-23T20:54:36Z"
+        "started_at": "2026-11-24T19:58:08Z",
+        "finished_at": "2026-11-24T19:58:09Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 1,
-        "started_at": "2026-11-23T20:54:36Z",
-        "finished_at": "2026-11-23T20:54:45Z"
+        "items_seen": 2,
+        "started_at": "2026-11-24T19:58:09Z",
+        "finished_at": "2026-11-24T19:58:16Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 30,
-        "started_at": "2026-11-23T20:54:45Z",
-        "finished_at": "2026-11-23T20:54:46Z"
+        "items_seen": 6,
+        "started_at": "2026-11-24T19:58:16Z",
+        "finished_at": "2026-11-24T19:58:17Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-23T20:54:46Z",
-        "finished_at": "2026-11-23T20:54:46Z"
+        "started_at": "2026-11-24T19:58:17Z",
+        "finished_at": "2026-11-24T19:58:18Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,219 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-23T20:54:46Z",
-        "finished_at": "2026-11-23T20:54:47Z"
+        "started_at": "2026-11-24T19:58:18Z",
+        "finished_at": "2026-11-24T19:58:18Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 34,
-        "started_at": "2026-11-23T20:54:47Z",
-        "finished_at": "2026-11-23T20:54:47Z"
+        "items_seen": 11,
+        "started_at": "2026-11-24T19:58:18Z",
+        "finished_at": "2026-11-24T19:58:19Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-drupal-cve-2026-132165",
+      "slug": "2026-11-drupal-cve-2026-132165",
+      "url": "https://www.patchbrief.org/items/2026-11-drupal-cve-2026-132165.html",
+      "date": "2026-11-24",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Drupal Core Remote Code Execution Vulnerability",
+      "summary": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
+      "vendor": "Drupal",
+      "product": "Core",
+      "cve": "CVE-2026-132165",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-132165 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-27. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-132165",
+        "kev",
+        "drupal",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-132165",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-ffmpeg-cve-2026-135736",
+      "slug": "2026-11-ffmpeg-cve-2026-135736",
+      "url": "https://www.patchbrief.org/items/2026-11-ffmpeg-cve-2026-135736.html",
+      "date": "2026-11-24",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Ffmpeg Ffmpeg — CVE-2026-135736 (Critical)",
+      "summary": "FFmpeg 4.4 before 9.1 contains a heap out-of-bounds read and write vulnerability in libavfilter/vf_deband.c that allows attackers to corrupt heap memory by sending a runtime coupling command. Attackers can send a 'deband coupling 1' command via sendcmd or an unauthenticated zmq filter, making chroma planes be processed at luma dimensions to crash the process or potentially execute code.",
+      "vendor": "Ffmpeg",
+      "product": "Ffmpeg",
+      "cve": "CVE-2026-135736",
+      "operator_check": "Review CVE-2026-135736 in your asset inventory. Apply patches per vendor guidance and verify Ffmpeg is not exposed. CVSS score: 8.1. EPSS probability: 0.7%; percentile: 53%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.1) in Ffmpeg Ffmpeg. Patch or mitigate promptly. EPSS percentile: 53%.",
+      "tags": [
+        "cve-2026-135736",
+        "vendor-advisory",
+        "ffmpeg",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-135736",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135736"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/26081"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/FFmpeg/FFmpeg"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-idunno-cve-2026-131914",
+      "slug": "2026-11-idunno-cve-2026-131914",
+      "url": "https://www.patchbrief.org/items/2026-11-idunno-cve-2026-131914.html",
+      "date": "2026-11-24",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
+      "summary": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+      "vendor": "Idunno",
+      "product": "AntiCsrf",
+      "cve": "CVE-2026-131914",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-131914 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-27. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-131914",
+        "kev",
+        "idunno",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-131914",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131914"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-optimizely-cve-2026-132224",
+      "slug": "2026-11-optimizely-cve-2026-132224",
+      "url": "https://www.patchbrief.org/items/2026-11-optimizely-cve-2026-132224.html",
+      "date": "2026-11-24",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
+      "summary": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.",
+      "vendor": "Optimizely",
+      "product": "Web Experimentation",
+      "cve": "CVE-2026-132224",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-132224 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-27. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-132224",
+        "kev",
+        "optimizely",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-132224",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-composer-cve-2026-63492",
+      "slug": "2026-11-composer-cve-2026-63492",
+      "url": "https://www.patchbrief.org/items/2026-11-composer-cve-2026-63492.html",
+      "date": "2026-11-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword",
+      "summary": "AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword",
+      "vendor": "Composer",
+      "product": "wwbn/avideo",
+      "cve": "CVE-2026-63492",
+      "operator_check": "Check whether wwbn/avideo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for wwbn/avideo. Prioritize it with other application dependency updates.",
+      "tags": [
+        "cve-2026-63492",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j44m-77cc-p3cc",
+          "url": "https://github.com/advisories/GHSA-j44m-77cc-p3cc"
+        },
+        {
+          "title": "NVD — CVE-2026-63492",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63492"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-j44m-77cc-p3cc"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-go-cve-2026-58262",
+      "slug": "2026-11-go-cve-2026-58262",
+      "url": "https://www.patchbrief.org/items/2026-11-go-cve-2026-58262.html",
+      "date": "2026-11-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "Klever Go counts bitmap padding bits toward BLS quorum, allowing blocks with insufficient signatures",
+      "summary": "Klever Go counts bitmap padding bits toward BLS quorum, allowing blocks with insufficient signatures",
+      "vendor": "Go",
+      "product": "github.com/klever-io/klever-go",
+      "cve": "CVE-2026-58262",
+      "operator_check": "Check whether github.com/klever-io/klever-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.2%; percentile: 5%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/klever-io/klever-go. Prioritize it with other application dependency updates, especially because EPSS places it in the 5% percentile.",
+      "tags": [
+        "cve-2026-58262",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-f9h7-4mmq-vgcq",
+          "url": "https://github.com/advisories/GHSA-f9h7-4mmq-vgcq"
+        },
+        {
+          "title": "NVD — CVE-2026-58262",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58262"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/klever-io/klever-go/security/advisories/GHSA-f9h7-4mmq-vgcq"
+        }
+      ]
+    },
     {
       "id": "2026-11-kerberos-cve-2026-135208",
       "slug": "2026-11-kerberos-cve-2026-135208",
@@ -180,6 +378,41 @@
         {
           "title": "Source reference",
           "url": "https://github.com/gradle/gradle/security/advisories/GHSA-mqwm-5m85-gmcv"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-maven-cve-2026-77423",
+      "slug": "2026-11-maven-cve-2026-77423",
+      "url": "https://www.patchbrief.org/items/2026-11-maven-cve-2026-77423.html",
+      "date": "2026-11-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "jline3 leads to ReDoS in Built-in Less Viewer Search",
+      "summary": "jline3 leads to ReDoS in Built-in Less Viewer Search",
+      "vendor": "Maven",
+      "product": "org.jline:jline-builtins",
+      "cve": "CVE-2026-77423",
+      "operator_check": "Check whether org.jline:jline-builtins is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 40%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for org.jline:jline-builtins. Prioritize it with other application dependency updates, especially because EPSS places it in the 40% percentile.",
+      "tags": [
+        "cve-2026-77423",
+        "vendor-advisory",
+        "maven",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-2v9w-34q6-wpqx",
+          "url": "https://github.com/advisories/GHSA-2v9w-34q6-wpqx"
+        },
+        {
+          "title": "NVD — CVE-2026-77423",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77423"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/jline/jline3/security/advisories/GHSA-2v9w-34q6-wpqx"
         }
       ]
     },

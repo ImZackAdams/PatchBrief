@@ -239,10 +239,142 @@
       <section class="feed-section">
         <div class="wrap">
           <div class="feed-meta-row">
-            <span class="feed-count" id="feed-count" aria-live="polite">2647 items</span>
+            <span class="feed-count" id="feed-count" aria-live="polite">2654 items</span>
           </div>
           <div class="feed-list" id="feed-list" aria-label="PatchBrief security feed">
             
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Drupal Core Remote Code Execution Vulnerability" data-vendor="Drupal" data-cve="CVE-2026-132165">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 24, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-132165</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-drupal-cve-2026-132165.html">Drupal Core Remote Code Execution Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Drupal · Core</p>
+              <p class="feed-summary">Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132165">NVD — CVE-2026-132165</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-drupal-cve-2026-132165.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Ffmpeg Ffmpeg — CVE-2026-135736 (Critical)" data-vendor="Ffmpeg" data-cve="CVE-2026-135736">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 24, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">Critical vendor advisory</span>
+                  <span class="cve-tag">CVE-2026-135736</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-ffmpeg-cve-2026-135736.html">Ffmpeg Ffmpeg — CVE-2026-135736 (Critical)</a>
+              </h2>
+              <p class="feed-vendor">Ffmpeg · Ffmpeg</p>
+              <p class="feed-summary">FFmpeg 4.4 before 9.1 contains a heap out-of-bounds read and write vulnerability in libavfilter/vf_deband.c that allows attackers to corrupt heap memory by sending a runtime coupling command. Attackers can send a &#x27;deband coupling 1&#x27; command via sendcmd or an unauthenticated zmq filter, making chroma planes be processed at luma dimensions to crash the process or potentially execute code.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Review CVE-2026-135736 in your asset inventory. Apply patches per vendor guidance and verify Ffmpeg is not exposed. CVSS score: 8.1. EPSS probability: 0.7%; percentile: 53%.</p>
+                <div class="feed-sources"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135736">NVD — CVE-2026-135736</a><a href="https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/26081">Source reference</a><a href="https://github.com/FFmpeg/FFmpeg">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-ffmpeg-cve-2026-135736.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability" data-vendor="Idunno" data-cve="CVE-2026-131914">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 24, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-131914</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-idunno-cve-2026-131914.html">Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Idunno · AntiCsrf</p>
+              <p class="feed-summary">Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131914">NVD — CVE-2026-131914</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-idunno-cve-2026-131914.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="Optimizely Web Experimentation External Control of Critical State Data Vulnerability" data-vendor="Optimizely" data-cve="CVE-2026-132224">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 24, 2026</span>
+                  <span class="type-badge">KEV</span>
+                  <span class="signal-badge exploited">Known exploited</span>
+                  <span class="cve-tag">CVE-2026-132224</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-optimizely-cve-2026-132224.html">Optimizely Web Experimentation External Control of Critical State Data Vulnerability</a>
+              </h2>
+              <p class="feed-vendor">Optimizely · Web Experimentation</p>
+              <p class="feed-summary">Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#x27;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.</p>
+                <div class="feed-sources"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132224">NVD — CVE-2026-132224</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-optimizely-cve-2026-132224.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword" data-vendor="Composer" data-cve="CVE-2026-63492">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 23, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-63492</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-composer-cve-2026-63492.html">AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword</a>
+              </h2>
+              <p class="feed-vendor">Composer · wwbn/avideo</p>
+              <p class="feed-summary">AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether wwbn/avideo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-j44m-77cc-p3cc">GitHub Advisory GHSA-j44m-77cc-p3cc</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63492">NVD — CVE-2026-63492</a><a href="https://github.com/WWBN/AVideo/security/advisories/GHSA-j44m-77cc-p3cc">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-composer-cve-2026-63492.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Klever Go counts bitmap padding bits toward BLS quorum, allowing blocks with insufficient signatures" data-vendor="Go" data-cve="CVE-2026-58262">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 23, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-58262</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-go-cve-2026-58262.html">Klever Go counts bitmap padding bits toward BLS quorum, allowing blocks with insufficient signatures</a>
+              </h2>
+              <p class="feed-vendor">Go · github.com/klever-io/klever-go</p>
+              <p class="feed-summary">Klever Go counts bitmap padding bits toward BLS quorum, allowing blocks with insufficient signatures</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether github.com/klever-io/klever-go is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1. EPSS probability: 0.2%; percentile: 5%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-f9h7-4mmq-vgcq">GitHub Advisory GHSA-f9h7-4mmq-vgcq</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58262">NVD — CVE-2026-58262</a><a href="https://github.com/klever-io/klever-go/security/advisories/GHSA-f9h7-4mmq-vgcq">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-go-cve-2026-58262.html">Read brief →</a>
+            </article>
+
             <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="Kerberos Agent — CVE-2026-135208 (Critical)" data-vendor="Kerberos" data-cve="CVE-2026-135208">
               <div class="feed-item-top">
                 <div class="feed-item-meta">
@@ -307,6 +439,28 @@
                 <div class="feed-sources"><a href="https://github.com/advisories/GHSA-mqwm-5m85-gmcv">GitHub Advisory GHSA-mqwm-5m85-gmcv</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22865">NVD — CVE-2026-22865</a><a href="https://github.com/gradle/gradle/security/advisories/GHSA-mqwm-5m85-gmcv">Source reference</a></div>
               </div>
               <a class="feed-read-link" href="items/2026-11-maven-cve-2026-22865.html">Read brief →</a>
+            </article>
+
+            <article class="feed-item" data-type="Vendor advisory" data-signal="critical" data-title="jline3 leads to ReDoS in Built-in Less Viewer Search" data-vendor="Maven" data-cve="CVE-2026-77423">
+              <div class="feed-item-top">
+                <div class="feed-item-meta">
+                  <span class="feed-date">Nov 23, 2026</span>
+                  <span class="type-badge">Vendor advisory</span>
+                  <span class="signal-badge critical">High-risk advisory</span>
+                  <span class="cve-tag">CVE-2026-77423</span>
+                </div>
+              </div>
+              <h2 class="feed-item-title">
+                <a href="items/2026-11-maven-cve-2026-77423.html">jline3 leads to ReDoS in Built-in Less Viewer Search</a>
+              </h2>
+              <p class="feed-vendor">Maven · org.jline:jline-builtins</p>
+              <p class="feed-summary">jline3 leads to ReDoS in Built-in Less Viewer Search</p>
+              <div class="feed-check">
+                <p class="feed-check-label">Operator check</p>
+                <p>Check whether org.jline:jline-builtins is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.5%; percentile: 40%.</p>
+                <div class="feed-sources"><a href="https://github.com/advisories/GHSA-2v9w-34q6-wpqx">GitHub Advisory GHSA-2v9w-34q6-wpqx</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77423">NVD — CVE-2026-77423</a><a href="https://github.com/jline/jline3/security/advisories/GHSA-2v9w-34q6-wpqx">Source reference</a></div>
+              </div>
+              <a class="feed-read-link" href="items/2026-11-maven-cve-2026-77423.html">Read brief →</a>
             </article>
 
             <article class="feed-item" data-type="KEV" data-signal="exploited" data-title="N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability" data-vendor="N-able" data-cve="CVE-2026-134624">
