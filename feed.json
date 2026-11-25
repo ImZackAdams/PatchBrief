@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-24T19:58:23Z",
-  "total_items": 2654,
+  "generated": "2026-11-25T18:59:33Z",
+  "total_items": 2662,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-24T19:58:23Z",
+    "generated": "2026-11-25T18:59:33Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 5,
-        "started_at": "2026-11-24T19:58:08Z",
-        "finished_at": "2026-11-24T19:58:08Z"
+        "items_seen": 6,
+        "started_at": "2026-11-25T18:59:18Z",
+        "finished_at": "2026-11-25T18:59:19Z"
       },
       {
         "id": "msrc",
@@ -27,26 +27,26 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-24T19:58:08Z",
-        "finished_at": "2026-11-24T19:58:09Z"
+        "started_at": "2026-11-25T18:59:19Z",
+        "finished_at": "2026-11-25T18:59:20Z"
       },
       {
         "id": "nvd",
         "label": "NVD critical CVEs",
         "role": "source",
         "status": "ok",
-        "items_seen": 2,
-        "started_at": "2026-11-24T19:58:09Z",
-        "finished_at": "2026-11-24T19:58:16Z"
+        "items_seen": 3,
+        "started_at": "2026-11-25T18:59:20Z",
+        "finished_at": "2026-11-25T18:59:27Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 6,
-        "started_at": "2026-11-24T19:58:16Z",
-        "finished_at": "2026-11-24T19:58:17Z"
+        "items_seen": 11,
+        "started_at": "2026-11-25T18:59:27Z",
+        "finished_at": "2026-11-25T18:59:28Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-24T19:58:17Z",
-        "finished_at": "2026-11-24T19:58:18Z"
+        "started_at": "2026-11-25T18:59:28Z",
+        "finished_at": "2026-11-25T18:59:29Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,122 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-24T19:58:18Z",
-        "finished_at": "2026-11-24T19:58:18Z"
+        "started_at": "2026-11-25T18:59:29Z",
+        "finished_at": "2026-11-25T18:59:30Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 11,
-        "started_at": "2026-11-24T19:58:18Z",
-        "finished_at": "2026-11-24T19:58:19Z"
+        "items_seen": 18,
+        "started_at": "2026-11-25T18:59:30Z",
+        "finished_at": "2026-11-25T18:59:30Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-hewlett-packard-ente-cve-2026-103406",
+      "slug": "2026-11-hewlett-packard-ente-cve-2026-103406",
+      "url": "https://www.patchbrief.org/items/2026-11-hewlett-packard-ente-cve-2026-103406.html",
+      "date": "2026-11-25",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulner...",
+      "summary": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+      "vendor": "Hewlett Packard Enterprise (HPE)",
+      "product": "Juniper Session Smart Conductor and Session Smart Router",
+      "cve": "CVE-2026-103406",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-103406 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-28. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-103406",
+        "kev",
+        "hewlett-packard-enterprise-hpe",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-103406",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103406"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-npm-cve-2026-64670",
+      "slug": "2026-11-npm-cve-2026-64670",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-64670.html",
+      "date": "2026-11-25",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "@waline/client vulnerable to stored XSS through unsanitized comment edit previews",
+      "summary": "@waline/client vulnerable to stored XSS through unsanitized comment edit previews",
+      "vendor": "npm",
+      "product": "@waline/client",
+      "cve": "CVE-2026-64670",
+      "operator_check": "Check whether @waline/client is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.4%; percentile: 24%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for @waline/client. Prioritize it with other application dependency updates, especially because EPSS places it in the 24% percentile.",
+      "tags": [
+        "cve-2026-64670",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-crj3-q72p-ggqm",
+          "url": "https://github.com/advisories/GHSA-crj3-q72p-ggqm"
+        },
+        {
+          "title": "NVD — CVE-2026-64670",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64670"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/walinejs/waline/security/advisories/GHSA-crj3-q72p-ggqm"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-composer-cve-2026-63305",
+      "slug": "2026-11-composer-cve-2026-63305",
+      "url": "https://www.patchbrief.org/items/2026-11-composer-cve-2026-63305.html",
+      "date": "2026-11-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AVideo API FFmpeg process permits OS command injection via notifyCode/callback",
+      "summary": "AVideo API FFmpeg process permits OS command injection via notifyCode/callback",
+      "vendor": "Composer",
+      "product": "wwbn/avideo",
+      "cve": "CVE-2026-63305",
+      "operator_check": "Check whether wwbn/avideo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 2.5%; percentile: 85%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for wwbn/avideo. Prioritize it with other application dependency updates, especially because EPSS places it in the 85% percentile.",
+      "tags": [
+        "cve-2026-63305",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-g9x9-q7qj-6mv5",
+          "url": "https://github.com/advisories/GHSA-g9x9-q7qj-6mv5"
+        },
+        {
+          "title": "NVD — CVE-2026-63305",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63305"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-g9x9-q7qj-6mv5"
+        }
+      ]
+    },
     {
       "id": "2026-11-drupal-cve-2026-132165",
       "slug": "2026-11-drupal-cve-2026-132165",
@@ -145,6 +246,37 @@
       ]
     },
     {
+      "id": "2026-11-go-ghsa-jp3c-6v3g-mpxv",
+      "slug": "2026-11-go-ghsa-jp3c-6v3g-mpxv",
+      "url": "https://www.patchbrief.org/items/2026-11-go-ghsa-jp3c-6v3g-mpxv.html",
+      "date": "2026-11-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "github.com/insomniacslk/dhcp permits denial of service through a malformed IPv4 payload length",
+      "summary": "github.com/insomniacslk/dhcp permits denial of service through a malformed IPv4 payload length",
+      "vendor": "Go",
+      "product": "github.com/insomniacslk/dhcp",
+      "cve": null,
+      "operator_check": "Check whether github.com/insomniacslk/dhcp is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. CVSS score: 7.1.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for github.com/insomniacslk/dhcp. Prioritize it with other application dependency updates.",
+      "tags": [
+        "ghsa-jp3c-6v3g-mpxv",
+        "vendor-advisory",
+        "go",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-jp3c-6v3g-mpxv",
+          "url": "https://github.com/advisories/GHSA-jp3c-6v3g-mpxv"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/insomniacslk/dhcp/pull/583"
+        }
+      ]
+    },
+    {
       "id": "2026-11-idunno-cve-2026-131914",
       "slug": "2026-11-idunno-cve-2026-131914",
       "url": "https://www.patchbrief.org/items/2026-11-idunno-cve-2026-131914.html",
@@ -176,6 +308,41 @@
       ]
     },
     {
+      "id": "2026-11-npm-cve-2026-59726",
+      "slug": "2026-11-npm-cve-2026-59726",
+      "url": "https://www.patchbrief.org/items/2026-11-npm-cve-2026-59726.html",
+      "date": "2026-11-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "ruflo MCP bridge allows unauthenticated remote code execution in default Docker Compose deployments",
+      "summary": "ruflo MCP bridge allows unauthenticated remote code execution in default Docker Compose deployments",
+      "vendor": "npm",
+      "product": "ruflo",
+      "cve": "CVE-2026-59726",
+      "operator_check": "Check whether ruflo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 6.2%; percentile: 94%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for ruflo. Prioritize it with other application dependency updates, especially because EPSS places it in the 94% percentile.",
+      "tags": [
+        "cve-2026-59726",
+        "vendor-advisory",
+        "npm",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-c4hm-4h84-2cf3",
+          "url": "https://github.com/advisories/GHSA-c4hm-4h84-2cf3"
+        },
+        {
+          "title": "NVD — CVE-2026-59726",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59726"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/ruvnet/ruflo/security/advisories/GHSA-c4hm-4h84-2cf3"
+        }
+      ]
+    },
+    {
       "id": "2026-11-optimizely-cve-2026-132224",
       "slug": "2026-11-optimizely-cve-2026-132224",
       "url": "https://www.patchbrief.org/items/2026-11-optimizely-cve-2026-132224.html",
@@ -203,6 +370,76 @@
         {
           "title": "NVD — CVE-2026-132224",
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-pypi-cve-2026-64855",
+      "slug": "2026-11-pypi-cve-2026-64855",
+      "url": "https://www.patchbrief.org/items/2026-11-pypi-cve-2026-64855.html",
+      "date": "2026-11-24",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "soapbar: verify_envelope_bsp accepts an unauthenticated embedded certificate (signature forgery / authentication bypass)",
+      "summary": "soapbar: verify_envelope_bsp accepts an unauthenticated embedded certificate (signature forgery / authentication bypass)",
+      "vendor": "PyPI",
+      "product": "soapbar",
+      "cve": "CVE-2026-64855",
+      "operator_check": "Check whether soapbar is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 0.2%; percentile: 8%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for soapbar. Prioritize it with other application dependency updates, especially because EPSS places it in the 8% percentile.",
+      "tags": [
+        "cve-2026-64855",
+        "vendor-advisory",
+        "pypi",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-859w-52fx-hcm6",
+          "url": "https://github.com/advisories/GHSA-859w-52fx-hcm6"
+        },
+        {
+          "title": "NVD — CVE-2026-64855",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64855"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/hitoshyamamoto/soapbar/security/advisories/GHSA-859w-52fx-hcm6"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-composer-cve-2026-63304",
+      "slug": "2026-11-composer-cve-2026-63304",
+      "url": "https://www.patchbrief.org/items/2026-11-composer-cve-2026-63304.html",
+      "date": "2026-11-23",
+      "type": "Vendor advisory",
+      "signal": "High-risk advisory",
+      "title": "AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword",
+      "summary": "AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword",
+      "vendor": "Composer",
+      "product": "wwbn/avideo",
+      "cve": "CVE-2026-63304",
+      "operator_check": "Check whether wwbn/avideo is present in application dependency manifests, lockfiles, or build images. Review the GitHub advisory and upgrade to a patched version where available. EPSS probability: 2.5%; percentile: 85%.",
+      "why_it_matters": "GitHub has published a reviewed security advisory for wwbn/avideo. Prioritize it with other application dependency updates, especially because EPSS places it in the 85% percentile.",
+      "tags": [
+        "cve-2026-63304",
+        "vendor-advisory",
+        "composer",
+        "github-advisory"
+      ],
+      "sources": [
+        {
+          "title": "GitHub Advisory GHSA-j44m-77cc-p3cc",
+          "url": "https://github.com/advisories/GHSA-j44m-77cc-p3cc"
+        },
+        {
+          "title": "NVD — CVE-2026-63304",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63304"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-j44m-77cc-p3cc"
         }
       ]
     },
@@ -413,6 +650,37 @@
         {
           "title": "Source reference",
           "url": "https://github.com/jline/jline3/security/advisories/GHSA-2v9w-34q6-wpqx"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-microsoft-cve-2026-65817",
+      "slug": "2026-11-microsoft-cve-2026-65817",
+      "url": "https://www.patchbrief.org/items/2026-11-microsoft-cve-2026-65817.html",
+      "date": "2026-11-23",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Microsoft Azure Managed Instance For Apache Cassandra — CVE-2026-65817 (Critical)",
+      "summary": "Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an unauthorized attacker to execute code over an adjacent network.",
+      "vendor": "Microsoft",
+      "product": "Azure Managed Instance For Apache Cassandra",
+      "cve": "CVE-2026-65817",
+      "operator_check": "Review CVE-2026-65817 in your asset inventory. Apply patches per vendor guidance and verify Azure Managed Instance For Apache Cassandra is not exposed. CVSS score: 8.3. EPSS probability: 2.7%; percentile: 86%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 8.3) in Microsoft Azure Managed Instance For Apache Cassandra. Patch or mitigate promptly. EPSS percentile: 86%.",
+      "tags": [
+        "cve-2026-65817",
+        "vendor-advisory",
+        "microsoft",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-65817",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65817"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65817"
         }
       ]
     },
