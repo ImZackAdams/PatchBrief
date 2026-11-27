@@ -4,12 +4,12 @@
   "home_page_url": "https://www.patchbrief.org/feed.html",
   "feed_url": "https://www.patchbrief.org/feed.json",
   "description": "Short operator-ready briefs on exploited vulnerabilities, critical advisories, and threat activity.",
-  "generated": "2026-11-26T18:51:36Z",
-  "total_items": 2675,
+  "generated": "2026-11-27T18:42:56Z",
+  "total_items": 2679,
   "archived_items": 9,
   "public_window_days": 365,
   "pipeline": {
-    "generated": "2026-11-26T18:51:36Z",
+    "generated": "2026-11-27T18:42:56Z",
     "source_count": 7,
     "sources": [
       {
@@ -17,9 +17,9 @@
         "label": "CISA Known Exploited Vulnerabilities",
         "role": "source",
         "status": "ok",
-        "items_seen": 15,
-        "started_at": "2026-11-26T18:51:10Z",
-        "finished_at": "2026-11-26T18:51:10Z"
+        "items_seen": 16,
+        "started_at": "2026-11-27T18:42:39Z",
+        "finished_at": "2026-11-27T18:42:40Z"
       },
       {
         "id": "msrc",
@@ -27,8 +27,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-26T18:51:10Z",
-        "finished_at": "2026-11-26T18:51:11Z"
+        "started_at": "2026-11-27T18:42:40Z",
+        "finished_at": "2026-11-27T18:42:41Z"
       },
       {
         "id": "nvd",
@@ -36,17 +36,17 @@
         "role": "source",
         "status": "ok",
         "items_seen": 2,
-        "started_at": "2026-11-26T18:51:11Z",
-        "finished_at": "2026-11-26T18:51:26Z"
+        "started_at": "2026-11-27T18:42:41Z",
+        "finished_at": "2026-11-27T18:42:48Z"
       },
       {
         "id": "github_advisory",
         "label": "GitHub Security Advisories",
         "role": "source",
         "status": "ok",
-        "items_seen": 16,
-        "started_at": "2026-11-26T18:51:26Z",
-        "finished_at": "2026-11-26T18:51:27Z"
+        "items_seen": 10,
+        "started_at": "2026-11-27T18:42:48Z",
+        "finished_at": "2026-11-27T18:42:48Z"
       },
       {
         "id": "cert_vu",
@@ -54,8 +54,8 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-26T18:51:27Z",
-        "finished_at": "2026-11-26T18:51:28Z"
+        "started_at": "2026-11-27T18:42:48Z",
+        "finished_at": "2026-11-27T18:42:49Z"
       },
       {
         "id": "exploitdb",
@@ -63,21 +63,149 @@
         "role": "source",
         "status": "ok",
         "items_seen": 0,
-        "started_at": "2026-11-26T18:51:28Z",
-        "finished_at": "2026-11-26T18:51:29Z"
+        "started_at": "2026-11-27T18:42:49Z",
+        "finished_at": "2026-11-27T18:42:50Z"
       },
       {
         "id": "epss",
         "label": "FIRST EPSS enrichment",
         "role": "enrichment",
         "status": "ok",
-        "items_seen": 28,
-        "started_at": "2026-11-26T18:51:29Z",
-        "finished_at": "2026-11-26T18:51:29Z"
+        "items_seen": 21,
+        "started_at": "2026-11-27T18:42:50Z",
+        "finished_at": "2026-11-27T18:42:50Z"
       }
     ]
   },
   "items": [
+    {
+      "id": "2026-11-drupal-cve-2026-136716",
+      "slug": "2026-11-drupal-cve-2026-136716",
+      "url": "https://www.patchbrief.org/items/2026-11-drupal-cve-2026-136716.html",
+      "date": "2026-11-27",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability",
+      "summary": "Drupal Core contains an improper check for unusual or exceptional conditions vulnerability that allows an unauthenticated remote attacker to take over a site via the exposed Drupal installer when the site is in one of the affected unusual or incomplete installation states.",
+      "vendor": "Drupal",
+      "product": "Core",
+      "cve": "CVE-2026-136716",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-136716 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-30. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-136716",
+        "kev",
+        "drupal",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-136716",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136716"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-osgeo-cve-2026-120705",
+      "slug": "2026-11-osgeo-cve-2026-120705",
+      "url": "https://www.patchbrief.org/items/2026-11-osgeo-cve-2026-120705.html",
+      "date": "2026-11-27",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "OSGeo GeoServer XML Injection Vulnerability",
+      "summary": "OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-specified HTTP or HTTPS URLs via a crafted ID parameter in the WFS 2.0 GetFeatureById stored query. This vulnerability can be chained with CVE-2026-129244, CVE-2026-129243, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.",
+      "vendor": "OSGeo",
+      "product": "GeoServer",
+      "cve": "CVE-2026-120705",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-120705 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-30. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-120705",
+        "kev",
+        "osgeo",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-120705",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120705"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-osgeo-cve-2026-129243",
+      "slug": "2026-11-osgeo-cve-2026-129243",
+      "url": "https://www.patchbrief.org/items/2026-11-osgeo-cve-2026-129243.html",
+      "date": "2026-11-27",
+      "type": "KEV",
+      "signal": "Known exploited",
+      "title": "OSGeo GeoServer Incorrect Authorization Vulnerability",
+      "summary": "GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service parameter. This vulnerability can be chained with CVE-2026-129244, CVE-2026-120705, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.",
+      "vendor": "OSGeo",
+      "product": "GeoServer",
+      "cve": "CVE-2026-129243",
+      "operator_check": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "why_it_matters": "CVE-2026-129243 is listed in CISA's Known Exploited Vulnerabilities catalog, confirming active exploitation in the wild. CISA remediation deadline: 2026-11-30. Treat remediation as urgent.",
+      "tags": [
+        "cve-2026-129243",
+        "kev",
+        "osgeo",
+        "cisa-kev"
+      ],
+      "sources": [
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "title": "NVD — CVE-2026-129243",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129243"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-budibase-cve-2026-137498",
+      "slug": "2026-11-budibase-cve-2026-137498",
+      "url": "https://www.patchbrief.org/items/2026-11-budibase-cve-2026-137498.html",
+      "date": "2026-11-26",
+      "type": "Vendor advisory",
+      "signal": "Critical vendor advisory",
+      "title": "Budibase Server from 3.39.18 — CVE-2026-137498 (Critical)",
+      "summary": "Budibase Server from 3.39.18 before 4.0.0 contains a prototype pollution vulnerability that allows unauthenticated attackers to erase MongoDB query filters by supplying __proto__ as a dynamic JSON key in PUBLIC queries. Attackers can send a single request to the query execution endpoint, reducing the filter to {} to read, update, or delete every document in the collection.",
+      "vendor": "Budibase",
+      "product": "Server from 3.39.18",
+      "cve": "CVE-2026-137498",
+      "operator_check": "Review CVE-2026-137498 in your asset inventory. Apply patches per vendor guidance and verify Server from 3.39.18 is not exposed. CVSS score: 10.0. EPSS probability: 1.1%; percentile: 65%.",
+      "why_it_matters": "This CVE carries a CRITICAL severity rating (CVSS 10.0) in Budibase Server from 3.39.18. Patch or mitigate promptly. EPSS percentile: 65%.",
+      "tags": [
+        "cve-2026-137498",
+        "vendor-advisory",
+        "budibase",
+        "nvd"
+      ],
+      "sources": [
+        {
+          "title": "NVD — CVE-2026-137498",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137498"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-x4w8-596q-fmh7"
+        },
+        {
+          "title": "Source reference",
+          "url": "https://www.vulncheck.com/advisories/budibase-server-3.39.18-before-4.0.0-mongodb-filter-erasure-via-proto-keys"
+        }
+      ]
+    },
     {
       "id": "2026-11-composer-cve-2026-65971",
       "slug": "2026-11-composer-cve-2026-65971",
